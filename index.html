@@ -3,34 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="VELNAR Intelligence Radar — AI Industry Signals & Strategic Analysis">
 <title>VELNAR Intelligence Radar</title>
 <link rel="icon" href="./assets/velnar-symbol.svg" type="image/svg+xml">
 <style>
-:root{--bg:#f5f5f7;--card:#fff;--text:#111214;--muted:#78787e;--line:#e5e5ea;--brand:#080c43}
+:root{
+  --bg:#f5f5f7;
+  --card:#fff;
+  --text:#111214;
+  --muted:#78787e;
+  --line:#e5e5ea;
+  --brand:#080c43;
+  --ease-velnar:cubic-bezier(.23,1,.32,1);
+  --dur-press:120ms;
+  --dur-hover:160ms;
+  --dur-state:220ms;
+  --dur-enter:240ms;
+  --dur-brand:560ms;
+}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.skip-link{position:fixed;left:14px;top:10px;z-index:1000;transform:translateY(-140%);background:#111;color:#fff;padding:8px 11px;border-radius:8px;font-size:12px;text-decoration:none;transition:transform var(--dur-state) var(--ease-velnar)}.skip-link:focus{transform:translateY(0)}
 main{max-width:900px;margin:0 auto;padding:24px 16px 72px}
-.brandbar{display:flex;align-items:center;gap:10px;margin-bottom:34px;opacity:0;transform:translateY(4px);animation:brandIn .62s cubic-bezier(.22,1,.36,1) .08s forwards}.brandmark{width:34px;height:34px;display:block;transform:scale(.96);animation:markIn .7s cubic-bezier(.22,1,.36,1) .08s forwards}.brandname{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--brand)}
+.brandbar{display:flex;align-items:center;gap:10px;margin-bottom:34px;opacity:0;transform:translateY(4px);animation:brandIn var(--dur-brand) var(--ease-velnar) 60ms forwards}.brandmark{width:34px;height:34px;display:block;transform:scale(.96);animation:markIn var(--dur-brand) var(--ease-velnar) 60ms forwards}.brandname{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--brand)}
 header{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;flex-wrap:wrap;margin-bottom:28px}
-h1{font-size:34px;line-height:1.04;letter-spacing:-1.15px;margin:0 0 8px;color:#101114}.subtitle{font-size:13px;color:#56565c;line-height:1.55}.updated{margin-top:5px;font-size:11px;color:var(--muted)}
-.counter{display:flex;gap:8px;flex-wrap:wrap}.pill{font-size:12px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 10px}
-section{margin-top:26px}.section-head{display:flex;justify-content:space-between;align-items:center;padding:0 2px 9px}.section-title{font-size:12px;font-weight:760;letter-spacing:.08em;color:var(--muted)}.section-count{font-size:12px;color:var(--muted)}
+h1{font-size:34px;line-height:1.04;letter-spacing:-1.15px;margin:0 0 8px;color:#101114;text-wrap:balance}.subtitle{font-size:13px;color:#56565c;line-height:1.55}.updated{margin-top:5px;font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.counter{display:flex;gap:8px;flex-wrap:wrap}.pill{font-size:12px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 10px;font-variant-numeric:tabular-nums}
+section{margin-top:26px}.section-head{display:flex;justify-content:space-between;align-items:center;padding:0 2px 9px}.section-title{font-size:12px;font-weight:760;letter-spacing:.08em;color:var(--muted)}.section-count{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
 .list{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}.empty{padding:22px;color:var(--muted);font-size:13px;text-align:center}
-.item{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:12px;align-items:center;padding:15px 16px;border-bottom:1px solid var(--line);cursor:pointer;opacity:1;transform:none;transition:background .2s ease,transform .22s cubic-bezier(.22,1,.36,1),opacity .3s ease}.item:last-child{border-bottom:0}.item.reveal{animation:itemReveal .42s cubic-bezier(.22,1,.36,1) calc(var(--i) * 38ms) backwards}.item:hover{background:#fafafa;transform:translateX(3px)}.item:active{transform:scale(.997)}
-.grade{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:#111;color:#fff;font-size:12px;font-weight:800;transition:transform .22s cubic-bezier(.22,1,.36,1)}.grade.A{background:#56565b}.grade.B{background:#909096}.item:hover .grade{transform:scale(1.035)}
-.title{font-size:15.5px;font-weight:650;line-height:1.45}.meta{margin-top:5px;font-size:10.5px;color:var(--muted);line-height:1.5}.arrow{font-size:20px;color:#a1a1a6;transition:transform .22s cubic-bezier(.22,1,.36,1)}.item:hover .arrow{transform:translateX(3px)}
-.read .item{opacity:.66}.read .title{font-weight:560}.read .item.just-read{animation:readTransition .68s cubic-bezier(.22,1,.36,1)}
+.item{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:12px;align-items:center;padding:15px 16px;border-bottom:1px solid var(--line);text-decoration:none;cursor:pointer;opacity:1;transform:none;transition:background var(--dur-hover) ease,transform var(--dur-hover) var(--ease-velnar),opacity var(--dur-state) ease;outline:none}.item:last-child{border-bottom:0}.item.reveal{animation:itemReveal var(--dur-enter) var(--ease-velnar) var(--delay,0ms) backwards}.item:active{transform:scale(.997)}.item:focus-visible{box-shadow:inset 0 0 0 2px rgba(57,110,227,.45);background:#fbfbfc}
+.grade{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:#111;color:#fff;font-size:12px;font-weight:800;transition:transform var(--dur-hover) var(--ease-velnar)}.grade.A{background:#56565b}.grade.B{background:#909096}
+.title{font-size:15.5px;font-weight:650;line-height:1.45;text-wrap:pretty}.meta{margin-top:5px;font-size:10.5px;color:var(--muted);line-height:1.5;font-variant-numeric:tabular-nums}.arrow{font-size:20px;color:#a1a1a6;transition:transform var(--dur-hover) var(--ease-velnar)}
+.read .item{opacity:.66}.read .title{font-weight:560}.read .item.just-read{animation:readTransition .52s var(--ease-velnar)}
 .legend{margin-top:20px;font-size:11px;color:var(--muted);line-height:1.65}.error{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;color:#666;font-size:13px}
 @keyframes brandIn{to{opacity:1;transform:translateY(0)}}
-@keyframes markIn{0%{transform:scale(.96)}100%{transform:scale(1)}}
+@keyframes markIn{to{transform:scale(1)}}
 @keyframes itemReveal{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 @keyframes readTransition{0%{opacity:1;background:#f7f9ff;transform:translateY(-2px)}45%{opacity:.82;background:#fafbff}100%{opacity:.66;background:transparent;transform:translateY(0)}}
+@media(hover:hover) and (pointer:fine){.item:hover{background:#fafafa;transform:translateX(3px)}.item:hover .grade{transform:scale(1.03)}.item:hover .arrow{transform:translateX(3px)}}
 @media(max-width:640px){main{padding:18px 12px 56px}.brandbar{margin-bottom:28px}.brandmark{width:30px;height:30px}.brandname{font-size:12px}h1{font-size:30px}.item{grid-template-columns:36px minmax(0,1fr) auto;padding:14px 13px}.counter{width:100%}}
-@media(prefers-reduced-motion:reduce){.brandbar,.brandmark,.item,.read .item.just-read{animation:none!important;transition:none!important;transform:none!important}.brandbar{opacity:1}.item{opacity:1}.read .item{opacity:.66}}
+@media(prefers-reduced-motion:reduce){.brandbar,.brandmark,.item,.read .item.just-read,.skip-link{animation:none!important;transition:none!important;transform:none!important}.brandbar{opacity:1}.item{opacity:1}.read .item{opacity:.66}}
 </style>
 </head>
 <body>
-<main>
+<a class="skip-link" href="#content">跳到内容</a>
+<main id="content">
 <div class="brandbar">
   <img class="brandmark" src="./assets/velnar-symbol.svg" alt="VELNAR">
   <div class="brandname">VELNAR</div>
@@ -43,12 +62,12 @@ section{margin-top:26px}.section-head{display:flex;justify-content:space-between
   </div>
   <div class="counter" id="counter"></div>
 </header>
-<section>
-  <div class="section-head"><div class="section-title">UNREAD · 未读</div><div class="section-count" id="unreadCount"></div></div>
+<section aria-labelledby="unreadHeading">
+  <div class="section-head"><div class="section-title" id="unreadHeading">UNREAD · 未读</div><div class="section-count" id="unreadCount"></div></div>
   <div class="list" id="unreadList"></div>
 </section>
-<section class="read">
-  <div class="section-head"><div class="section-title">READ · 已读</div><div class="section-count" id="readCount"></div></div>
+<section class="read" aria-labelledby="readHeading">
+  <div class="section-head"><div class="section-title" id="readHeading">READ · 已读</div><div class="section-count" id="readCount"></div></div>
   <div class="list" id="readList"></div>
 </section>
 <div class="legend">S = 可能改变产业地图 · A = 重要验证信号 · B = 值得保留的普通动态。打开文章即自动标记已读；阅读状态只保存在当前浏览器。</div>
@@ -60,18 +79,26 @@ let items=[];
 let readSet=new Set(JSON.parse(localStorage.getItem(READ_KEY)||'[]'));
 function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function saveRead(){localStorage.setItem(READ_KEY,JSON.stringify([...readSet]))}
-function openArticle(id){readSet.add(id);saveRead();sessionStorage.setItem(LAST_OPENED_KEY,id);location.href='./article.html?id='+encodeURIComponent(id)}
-function card(e,index,isRead,justReadId){const themes=(e.themes||[]).join(' · ');const cls='item '+(e.id===justReadId&&isRead?'just-read':'reveal');return '<article class="'+cls+'" style="--i:'+index+'" onclick="openArticle(\''+esc(e.id)+'\')"><div class="grade '+esc(e.grade)+'">'+esc(e.grade)+'</div><div><div class="title">'+esc(e.title)+'</div><div class="meta">'+esc(e.date)+(themes?' · '+esc(themes):'')+' · '+esc(e.id)+'</div></div><div class="arrow">›</div></article>'}
+function markRead(id){readSet.add(id);saveRead();sessionStorage.setItem(LAST_OPENED_KEY,id)}
+function card(e,index,isRead,justReadId){
+  const themes=(e.themes||[]).join(' · ');
+  const cls='item '+(e.id===justReadId&&isRead?'just-read':'reveal');
+  const delay=Math.min(index,5)*28;
+  const href='./article.html?id='+encodeURIComponent(e.id);
+  return '<a class="'+cls+'" style="--delay:'+delay+'ms" href="'+href+'" onclick="markRead(\''+esc(e.id)+'\')" aria-label="阅读 '+esc(e.title)+'"><div class="grade '+esc(e.grade)+'">'+esc(e.grade)+'</div><div><div class="title">'+esc(e.title)+'</div><div class="meta">'+esc(e.date)+(themes?' · '+esc(themes):'')+' · '+esc(e.id)+'</div></div><div class="arrow" aria-hidden="true">›</div></a>'
+}
 function render(){
- readSet=new Set(JSON.parse(localStorage.getItem(READ_KEY)||'[]'));
- const justReadId=sessionStorage.getItem(LAST_OPENED_KEY)||'';
- const sorted=[...items].sort((a,b)=>b.date.localeCompare(a.date)||({S:0,A:1,B:2}[a.grade]-{S:0,A:1,B:2}[b.grade]));
- const unread=sorted.filter(x=>!readSet.has(x.id)); const read=sorted.filter(x=>readSet.has(x.id));
- unreadList.innerHTML=unread.length?unread.map((x,i)=>card(x,i,false,justReadId)).join(''):'<div class="empty">暂无未读</div>';
- readList.innerHTML=read.length?read.map((x,i)=>card(x,i,true,justReadId)).join(''):'<div class="empty">暂无已读</div>';
- unreadCount.textContent=unread.length+' 条'; readCount.textContent=read.length+' 条';
- counter.innerHTML='<span class="pill">未读 <b>'+unread.length+'</b></span><span class="pill">已读 <b>'+read.length+'</b></span><span class="pill">总计 <b>'+items.length+'</b></span>';
- if(justReadId) setTimeout(()=>sessionStorage.removeItem(LAST_OPENED_KEY),900);
+  readSet=new Set(JSON.parse(localStorage.getItem(READ_KEY)||'[]'));
+  const justReadId=sessionStorage.getItem(LAST_OPENED_KEY)||'';
+  const sorted=[...items].sort((a,b)=>b.date.localeCompare(a.date)||({S:0,A:1,B:2}[a.grade]-{S:0,A:1,B:2}[b.grade]));
+  const unread=sorted.filter(x=>!readSet.has(x.id));
+  const read=sorted.filter(x=>readSet.has(x.id));
+  unreadList.innerHTML=unread.length?unread.map((x,i)=>card(x,i,false,justReadId)).join(''):'<div class="empty">暂无未读</div>';
+  readList.innerHTML=read.length?read.map((x,i)=>card(x,i,true,justReadId)).join(''):'<div class="empty">暂无已读</div>';
+  unreadCount.textContent=unread.length+' 条';
+  readCount.textContent=read.length+' 条';
+  counter.innerHTML='<span class="pill">未读 <b>'+unread.length+'</b></span><span class="pill">已读 <b>'+read.length+'</b></span><span class="pill">总计 <b>'+items.length+'</b></span>';
+  if(justReadId)setTimeout(()=>sessionStorage.removeItem(LAST_OPENED_KEY),700);
 }
 async function load(){try{const r=await fetch('./news.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const data=await r.json();items=data.items||[];updated.textContent='最近更新：'+(data.updated_at||'—');render()}catch(err){unreadList.innerHTML='<div class="error">新闻数据加载失败，请稍后刷新。 '+esc(err.message)+'</div>'}}
 window.addEventListener('pageshow',()=>{if(items.length)render()});
