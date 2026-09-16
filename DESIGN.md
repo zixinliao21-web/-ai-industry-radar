@@ -1,6 +1,6 @@
 # VELNAR Intelligence Radar — Design Language
 
-Version: **V0.1**  
+Version: **V0.2**  
 Status: **active**  
 Decision record: [`docs/plans/design-language.md`](docs/plans/design-language.md)
 
@@ -18,16 +18,16 @@ Implementation evidence:
 
 For future UI work:
 
-1. Preserve the product behavior first.
+1. Preserve product behavior first.
 2. Extend existing tokens before inventing new ones.
 3. Keep the current static HTML/CSS/JS stack unless a separate product requirement justifies migration.
-4. Do not restyle content data in `news.json` as part of a UI-only change.
+4. Do not alter `news.json` content or semantics as part of a UI-only change.
 
 ## 2. Typography — Precision Sans
 
 Approved direction: **Precision Sans**.
 
-Use the system-native stack already present in `index.html` and `article.html`:
+Use the system-native stack present in `index.html` and `article.html`:
 
 ```css
 -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", Arial, sans-serif
@@ -43,11 +43,12 @@ Rules:
 - Long-form article body measure stays near the current `660px` reading column.
 - Avoid typography that makes the site read as a magazine, Substack clone, or marketing landing page.
 
-Current examples:
+Current implementation:
 
-- Directory title: `34px`, tight line-height, negative tracking.
-- Article title: `34px` desktop / `28px` mobile.
-- Article body: `16px`, approximately `1.88` line-height.
+- Directory hero title: responsive `42–68px`, tight line-height, strong negative tracking.
+- Directory row title: approximately `16px`, medium/semi-bold weight.
+- Article title: responsive `34–48px` desktop, approximately `31px` mobile.
+- Article body: `16px`, approximately `1.92` line-height.
 - Metadata and section labels remain visually secondary.
 
 ## 3. Color system
@@ -55,12 +56,14 @@ Current examples:
 Current tokens:
 
 ```css
---bg: #f5f5f7;
+--bg: #f3f4f7;
 --card: #ffffff;
 --text: #111214;
---muted: #77777d / #78787e;
---line: #e5e5ea;
+--muted: approximately #767781 / #777983;
+--line: #e3e5ea;
+--line-strong: #d7d9e1;
 --brand: #080c43;
+--accent: #396ee3; /* directory unread state only */
 ```
 
 Principles:
@@ -68,7 +71,7 @@ Principles:
 - Neutral canvas and surfaces dominate.
 - Primary text is off-black, not pure black.
 - Borders are structural and quiet.
-- Accent color is scarce.
+- Accent color is scarce and state-driven.
 - Do not add multiple competing accent families.
 
 ### VELNAR gradient budget
@@ -88,6 +91,7 @@ Not allowed by default:
 - gradient cards
 - large blue-purple hero gradients
 - ambient blue-purple glow backgrounds
+- generic gradient state indicators
 
 ## 4. Surfaces and elevation
 
@@ -96,18 +100,22 @@ The Radar should remain visually flat and precise.
 Directory:
 
 - one-column information architecture
-- list-as-directory, not a dashboard card grid
+- one large editorial/product hero, followed by compact state statistics
+- list-as-directory rather than a dashboard-card content layout
 - `1px` structural borders
-- little or no shadow
+- almost no shadow
 - compact metadata
 - unread first, read second
+- unread state uses a narrow solid accent rule; read state uses reduced emphasis rather than recoloring the full row
 
 Article:
 
 - white article surface on neutral canvas
-- rounded outer shell, currently `22px` desktop / `18px` mobile
-- narrow reading measure inside a wider product shell
+- rounded outer shell, approximately `24px` desktop / `19px` mobile
+- narrow `660px` reading measure inside a wider product shell
 - no decorative card segmentation for every article section
+- section hierarchy comes from typography, spacing, short structural rules, and restrained tonal labels
+- Sources and Discussion Question may use dedicated presentation because they are distinct reading functions
 
 Use elevation only when it communicates hierarchy. Do not add generic shadows to make surfaces feel "premium."
 
@@ -116,13 +124,13 @@ Use elevation only when it communicates hierarchy. Do not add generic shadows to
 Directory shell:
 
 ```css
-max-width: 900px;
+max-width: 1040px;
 ```
 
 Article product shell:
 
 ```css
-max-width: 800px;
+max-width: 860px;
 ```
 
 Article reading column:
@@ -134,10 +142,12 @@ Article reading column:
 Rules:
 
 - Preserve generous whitespace.
-- Keep directory density compact enough for scanning.
+- The hero may be significantly more spacious than the article directory below it.
+- Keep directory rows compact enough for scanning.
 - Keep article rhythm materially more relaxed than directory rhythm.
 - Do not force symmetric spacing when optical balance calls for a small adjustment.
 - Mobile layouts should preserve hierarchy rather than merely shrink the desktop view.
+- Statistics may collapse from three columns to stacked rows on narrow mobile screens.
 
 ## 6. Motion — Precision Motion
 
@@ -231,6 +241,7 @@ Default brand expression:
 - deep navy brand color
 - signature gradient used sparingly
 - precise spacing and motion discipline
+- `Intelligence Radar` acts as the product identity; avoid inventing additional public-facing VELNAR sub-brand names without approval
 
 Avoid repeating the logo, gradient or brand name so often that the page becomes promotional.
 
@@ -247,7 +258,7 @@ Do not introduce by default:
 - gradient text
 - playful spring bounce
 - giant animated hero sections
-- generic three-card SaaS layouts
+- generic three-card SaaS feature layouts
 - excessive pill-shaped containers
 - motion that delays content access
 - a second typography family without explicit approval
