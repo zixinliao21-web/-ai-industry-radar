@@ -1,6 +1,6 @@
 # VELNAR Intelligence Radar — Design Language
 
-Version: **V0.2**  
+Version: **V0.3**  
 Status: **active**  
 Decision record: [`docs/plans/design-language.md`](docs/plans/design-language.md)
 
@@ -73,10 +73,11 @@ Principles:
 - Borders are structural and quiet.
 - Accent color is scarce and state-driven.
 - Do not add multiple competing accent families.
+- Do not introduce decorative status colors unless they communicate a real product state. A static archive must not imply a live-system status merely for visual interest.
 
 ### VELNAR gradient budget
 
-The blue-purple VELNAR gradient is a **signature brand asset**, not a general decoration language.
+The blue-purple VELNAR gradient is a **signature brand asset, not a general decoration language**.
 
 Allowed by default:
 
@@ -116,6 +117,7 @@ Article:
 - no decorative card segmentation for every article section
 - section hierarchy comes from typography, spacing, short structural rules, and restrained tonal labels
 - Sources and Discussion Question may use dedicated presentation because they are distinct reading functions
+- reading-time and source-count metadata are acceptable as derived utility metadata; they must stay visually secondary
 
 Use elevation only when it communicates hierarchy. Do not add generic shadows to make surfaces feel "premium."
 
@@ -147,7 +149,7 @@ Rules:
 - Keep article rhythm materially more relaxed than directory rhythm.
 - Do not force symmetric spacing when optical balance calls for a small adjustment.
 - Mobile layouts should preserve hierarchy rather than merely shrink the desktop view.
-- Statistics may collapse from three columns to stacked rows on narrow mobile screens.
+- Compact three-part statistics should remain visually compact on narrow mobile screens rather than becoming a long vertical dashboard.
 
 ## 6. Motion — Precision Motion
 
@@ -186,6 +188,7 @@ Rules:
 - Do not animate information merely for decoration.
 - No bounce unless a future direct-manipulation gesture genuinely carries momentum.
 - Do not introduce a motion library for effects CSS can handle.
+- High-frequency scroll-derived updates should be frame-throttled when JavaScript is required.
 
 ### Directory motion budget
 
@@ -227,6 +230,7 @@ These are design requirements, not later compliance work:
 - `prefers-reduced-motion` support
 - controls should provide immediate press feedback
 - local read/unread state remains browser-local
+- malformed local read-state storage must fail safely instead of breaking the directory or article page
 
 Do not remove browser-native behavior in the name of visual polish.
 
@@ -262,6 +266,7 @@ Do not introduce by default:
 - excessive pill-shaped containers
 - motion that delays content access
 - a second typography family without explicit approval
+- fake "live", "online", or health-status indicators without an actual live state behind them
 
 ## 10. Per-change checklist
 
@@ -277,6 +282,7 @@ Before shipping any UI change:
 - [ ] Hover movement is pointer-gated.
 - [ ] Reduced motion is handled.
 - [ ] Long-form article readability is not sacrificed for visual novelty.
+- [ ] Utility metadata is derived from existing article data rather than inventing facts.
 - [ ] No new dependency or framework was introduced without a product-level reason.
 
 ## 11. Open questions
