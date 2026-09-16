@@ -3,40 +3,46 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI Industry Radar</title>
+<title>VELNAR Intelligence Radar</title>
+<link rel="icon" href="./assets/velnar-symbol.svg" type="image/svg+xml">
 <style>
-:root{--bg:#f5f5f7;--card:#fff;--text:#111214;--muted:#78787e;--line:#e5e5ea}
+:root{--bg:#f5f5f7;--card:#fff;--text:#111214;--muted:#78787e;--line:#e5e5ea;--brand:#080c43}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif}
-main{max-width:900px;margin:0 auto;padding:28px 16px 72px}
-header{display:flex;justify-content:space-between;gap:16px;align-items:flex-end;flex-wrap:wrap;margin-bottom:26px}
-h1{font-size:32px;line-height:1.05;letter-spacing:-1px;margin:0 0 7px}.subtitle,.updated{font-size:12px;color:var(--muted)}
+main{max-width:900px;margin:0 auto;padding:24px 16px 72px}
+.brandbar{display:flex;align-items:center;gap:10px;margin-bottom:34px}.brandmark{width:34px;height:34px;display:block}.brandname{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--brand)}
+header{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;flex-wrap:wrap;margin-bottom:28px}
+h1{font-size:34px;line-height:1.04;letter-spacing:-1.15px;margin:0 0 8px;color:#101114}.subtitle{font-size:13px;color:#56565c;line-height:1.55}.updated{margin-top:5px;font-size:11px;color:var(--muted)}
 .counter{display:flex;gap:8px;flex-wrap:wrap}.pill{font-size:12px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 10px}
-section{margin-top:25px}.section-head{display:flex;justify-content:space-between;align-items:center;padding:0 2px 9px}.section-title{font-size:13px;font-weight:750;letter-spacing:.06em;color:var(--muted)}.section-count{font-size:12px;color:var(--muted)}
+section{margin-top:26px}.section-head{display:flex;justify-content:space-between;align-items:center;padding:0 2px 9px}.section-title{font-size:12px;font-weight:760;letter-spacing:.08em;color:var(--muted)}.section-count{font-size:12px;color:var(--muted)}
 .list{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}.empty{padding:22px;color:var(--muted);font-size:13px;text-align:center}
-.item{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:12px;align-items:center;padding:15px;border-bottom:1px solid var(--line);cursor:pointer}.item:last-child{border-bottom:0}.item:hover{background:#fafafa}
+.item{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:12px;align-items:center;padding:15px 16px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .15s ease}.item:last-child{border-bottom:0}.item:hover{background:#fafafa}
 .grade{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:#111;color:#fff;font-size:12px;font-weight:800}.grade.A{background:#56565b}.grade.B{background:#909096}
 .title{font-size:15.5px;font-weight:650;line-height:1.45}.meta{margin-top:5px;font-size:10.5px;color:var(--muted);line-height:1.5}.arrow{font-size:20px;color:#a1a1a6}
-.read .item{opacity:.68}.read .title{font-weight:560}.legend{margin-top:18px;font-size:11px;color:var(--muted);line-height:1.6}.error{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;color:#666;font-size:13px}
-@media(max-width:640px){main{padding:22px 12px 60px}h1{font-size:29px}.item{grid-template-columns:36px minmax(0,1fr) auto;padding:14px 13px}}
+.read .item{opacity:.66}.read .title{font-weight:560}.legend{margin-top:20px;font-size:11px;color:var(--muted);line-height:1.65}.error{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;color:#666;font-size:13px}
+@media(max-width:640px){main{padding:18px 12px 56px}.brandbar{margin-bottom:28px}.brandmark{width:30px;height:30px}.brandname{font-size:12px}h1{font-size:30px}.item{grid-template-columns:36px minmax(0,1fr) auto;padding:14px 13px}.counter{width:100%}}
 </style>
 </head>
 <body>
 <main>
+<div class="brandbar">
+  <img class="brandmark" src="./assets/velnar-symbol.svg" alt="VELNAR">
+  <div class="brandname">VELNAR</div>
+</div>
 <header>
   <div>
-    <h1>AI Industry Radar</h1>
-    <div class="subtitle">全球 AI 产业信号目录 · 点击进入完整文章</div>
+    <h1>Intelligence Radar</h1>
+    <div class="subtitle">AI Industry Signals &amp; Strategic Analysis<br>全球 AI 产业信号与战略研究</div>
     <div class="updated" id="updated"></div>
   </div>
   <div class="counter" id="counter"></div>
 </header>
 <section>
-  <div class="section-head"><div class="section-title">未读</div><div class="section-count" id="unreadCount"></div></div>
+  <div class="section-head"><div class="section-title">UNREAD · 未读</div><div class="section-count" id="unreadCount"></div></div>
   <div class="list" id="unreadList"></div>
 </section>
 <section class="read">
-  <div class="section-head"><div class="section-title">已读</div><div class="section-count" id="readCount"></div></div>
+  <div class="section-head"><div class="section-title">READ · 已读</div><div class="section-count" id="readCount"></div></div>
   <div class="list" id="readList"></div>
 </section>
 <div class="legend">S = 可能改变产业地图 · A = 重要验证信号 · B = 值得保留的普通动态。打开文章即自动标记已读；阅读状态只保存在当前浏览器。</div>
