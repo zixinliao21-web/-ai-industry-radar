@@ -3,29 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI Industry Radar Article</title>
+<title>VELNAR Intelligence Radar</title>
+<link rel="icon" href="./assets/velnar-symbol.svg" type="image/svg+xml">
 <style>
-:root{--bg:#f5f5f7;--card:#fff;--text:#111214;--muted:#77777d;--line:#e5e5ea;--soft:#f3f3f5}
+:root{--bg:#f5f5f7;--card:#fff;--text:#111214;--muted:#77777d;--line:#e5e5ea;--soft:#f3f3f5;--brand:#080c43}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif}
-main{max-width:780px;margin:0 auto;padding:22px 16px 72px}
-.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:28px}
-.back,.state{border:1px solid var(--line);background:#fff;color:#222;border-radius:999px;padding:9px 13px;font:inherit;font-size:12px;text-decoration:none;cursor:pointer}
-.back:hover,.state:hover{background:var(--soft)}
-.article{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px 26px 34px}
-.kicker{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:14px}.grade{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px;background:#111;color:#fff;font-size:12px;font-weight:800}.grade.A{background:#56565b}.grade.B{background:#909096}.meta{font-size:11px;color:var(--muted)}
+main{max-width:780px;margin:0 auto;padding:18px 16px 72px}
+.brandbar{display:flex;align-items:center;gap:9px;margin-bottom:20px}.brandmark{width:28px;height:28px;display:block}.brandname{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--brand)}.product{font-size:12px;color:var(--muted);margin-left:3px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}
+.back,.state{border:1px solid var(--line);background:#fff;color:#222;border-radius:999px;padding:9px 13px;font:inherit;font-size:12px;text-decoration:none;cursor:pointer}.back:hover,.state:hover{background:var(--soft)}
+.article{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px 28px 36px}.kicker{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:14px}.grade{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px;background:#111;color:#fff;font-size:12px;font-weight:800}.grade.A{background:#56565b}.grade.B{background:#909096}.meta{font-size:11px;color:var(--muted)}
 h1{font-size:34px;line-height:1.18;letter-spacing:-.8px;margin:0 0 10px}.themes{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:8px}.deck{font-size:16px;line-height:1.72;color:#3c3c41;margin:16px 0 0;padding-bottom:22px;border-bottom:1px solid var(--line)}
-.section{padding-top:26px}.section h2{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#6f6f75;margin:0 0 10px}.body{font-size:16px;line-height:1.9;color:#26262a;white-space:pre-line}.question{background:#f7f7f8;border-radius:14px;padding:16px}.sources{display:grid;gap:8px}.sources a{color:#222;text-decoration:underline;text-underline-offset:3px;font-size:14px;line-height:1.5}.legacy{font-size:13px;color:var(--muted);background:#f8f8f9;padding:12px 14px;border-radius:12px;margin-top:18px}.error{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;color:#666}
-@media(max-width:640px){main{padding:14px 10px 48px}.article{padding:22px 18px 28px;border-radius:18px}h1{font-size:28px}.body{font-size:15.5px;line-height:1.85}.topbar{margin-bottom:16px}}
+.section{padding-top:28px}.section h2{font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:#6f6f75;margin:0 0 10px}.body{font-size:16px;line-height:1.9;color:#26262a;white-space:pre-line}.question{background:#f7f7f8;border-radius:14px;padding:16px}.sources{display:grid;gap:8px}.sources a{color:#222;text-decoration:underline;text-underline-offset:3px;font-size:14px;line-height:1.5}.legacy{font-size:13px;color:var(--muted);background:#f8f8f9;padding:12px 14px;border-radius:12px;margin-top:18px}.error{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;color:#666}
+.footerbrand{display:flex;justify-content:center;align-items:center;gap:7px;margin-top:26px;color:#8a8a90;font-size:10px;letter-spacing:.08em}.footerbrand img{width:18px;height:18px;opacity:.9}
+@media(max-width:640px){main{padding:12px 10px 48px}.brandbar{margin:2px 4px 16px}.article{padding:22px 18px 28px;border-radius:18px}h1{font-size:28px}.body{font-size:15.5px;line-height:1.85}.topbar{margin-bottom:16px}.product{display:none}}
 </style>
 </head>
 <body>
 <main>
+  <div class="brandbar">
+    <img class="brandmark" src="./assets/velnar-symbol.svg" alt="VELNAR">
+    <span class="brandname">VELNAR</span><span class="product">Intelligence Radar</span>
+  </div>
   <div class="topbar">
     <a class="back" href="./index.html">← 返回目录</a>
     <button class="state" id="stateBtn" type="button">标记未读</button>
   </div>
   <div id="root"></div>
+  <div class="footerbrand"><img src="./assets/velnar-symbol.svg" alt=""><span>VELNAR · INTELLIGENCE RADAR</span></div>
 </main>
 <script>
 const READ_KEY='ai-industry-radar-read-v1';
@@ -36,7 +42,7 @@ function saveRead(){localStorage.setItem(READ_KEY,JSON.stringify([...readSet]))}
 function sec(title,text,cls=''){if(!text)return '';return '<section class="section"><h2>'+esc(title)+'</h2><div class="body '+cls+'">'+esc(text)+'</div></section>'}
 function sourceHtml(s){if(typeof s==='string')return '<a href="'+esc(s)+'" target="_blank" rel="noopener">'+esc(s)+'</a>';if(s&&s.url)return '<a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.label||s.url)+'</a>';return ''}
 function render(e){
-  document.title=e.title+' · AI Industry Radar';
+  document.title=e.title+' · VELNAR Intelligence Radar';
   const themes=(e.themes||[]).join(' · ');
   const sources=(e.sources||[]).map(sourceHtml).filter(Boolean).join('');
   const hasDeep=e.map_change||e.challenges_existing_assumptions||e.startup_implications||e.prediction;
@@ -59,11 +65,7 @@ function render(e){
   '</article>';
 }
 stateBtn.addEventListener('click',()=>{if(!id)return;readSet.delete(id);saveRead();stateBtn.textContent='已标记未读'});
-async function load(){
-  if(!id){root.innerHTML='<div class="error">缺少文章 ID。</div>';return}
-  readSet.add(id);saveRead();
-  try{const r=await fetch('./news.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const data=await r.json();const e=(data.items||[]).find(x=>x.id===id);if(!e)throw new Error('未找到该文章');render(e)}catch(err){root.innerHTML='<div class="error">文章加载失败：'+esc(err.message)+'</div>'}
-}
+async function load(){if(!id){root.innerHTML='<div class="error">缺少文章 ID。</div>';return}readSet.add(id);saveRead();try{const r=await fetch('./news.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const data=await r.json();const e=(data.items||[]).find(x=>x.id===id);if(!e)throw new Error('未找到该文章');render(e)}catch(err){root.innerHTML='<div class="error">文章加载失败：'+esc(err.message)+'</div>'}}
 load();
 </script>
 </body>
