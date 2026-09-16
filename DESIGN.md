@@ -1,6 +1,6 @@
 # VELNAR Intelligence Radar — Design Language
 
-Version: **V0.4**  
+Version: **V0.5**  
 Status: **active**  
 Decision record: [`docs/plans/design-language.md`](docs/plans/design-language.md)
 
@@ -13,7 +13,7 @@ This document governs visual and interaction changes to the Radar.
 Implementation evidence:
 
 - [`index.html`](index.html) — directory, read state, directory motion, return-position behavior
-- [`article.html`](article.html) — long-form reading surface, section navigation, share/read controls, progress, archive traversal
+- [`article.html`](article.html) — long-form reading surface, section navigation, share/read controls, progress, archive traversal, Share Card generation
 - [`assets/velnar-symbol.svg`](assets/velnar-symbol.svg) — VELNAR brand symbol and signature gradient
 
 For future UI work:
@@ -83,7 +83,7 @@ Allowed by default:
 
 1. VELNAR symbol
 2. article reading-progress indicator
-3. rare future brand-signature states with explicit justification
+3. rare brand-signature artifacts with explicit product purpose
 
 Not allowed by default:
 
@@ -213,6 +213,7 @@ Allowed:
 - restrained active-section underline
 - subtle archive-navigation hover
 - small back-to-top reveal
+- restrained Share Card modal entrance
 
 Default prohibited:
 
@@ -234,7 +235,6 @@ Required behaviors:
 - Stable deep-link anchors for article sections.
 - Active section indication driven by `IntersectionObserver`, not manual scroll polling.
 - Reading progress indicator at the top of the page.
-- Share control uses the native Web Share API when available, clipboard fallback otherwise.
 - Read/unread control is a true toggle in the current session.
 - Newer/older article navigation is derived from the same archive ordering as the directory.
 - Back-to-top appears only after meaningful scroll depth.
@@ -242,7 +242,32 @@ Required behaviors:
 
 Utility metadata and navigation must be derived from real data; never invent live status, popularity, completion rate, or other unsupported claims.
 
-## 8. Interaction and accessibility
+## 8. Share Artifact System
+
+Article sharing is a product surface, not merely a copied URL.
+
+Current Share Card contract:
+
+- Clicking **分享** opens a VELNAR Share Card before any external share action.
+- The card is generated entirely from the current article data already loaded in the browser.
+- Card content may include VELNAR identity, grade, date, article title, up to three themes, deck, article URL, and Radar signature.
+- The preview and exported PNG should remain visually consistent enough to be recognizable as the same artifact.
+- Export target is `1200 × 630` PNG for broad social compatibility.
+- On platforms supporting file-based Web Share, **分享卡片** shares the PNG directly.
+- Unsupported browsers fall back to saving the PNG rather than silently failing.
+- **保存 PNG** and **复制链接** remain explicit independent actions.
+- Article content is not uploaded to a rendering service; Share Card generation is local in the browser.
+- Long URLs may be shown as compact link text. A dynamic QR code may be added later if it can remain reliable and privacy-preserving without introducing a fragile third-party dependency.
+
+Visual rules:
+
+- Share Cards use the same Precision Sans system.
+- The VELNAR symbol is the main branded visual anchor.
+- The card should read as a research artifact, not a social-media marketing poster.
+- Avoid decorative statistics, fake popularity indicators, slogans, or exaggerated calls to action.
+- Brand navy and neutral surfaces dominate; gradients remain scarce.
+
+## 9. Interaction and accessibility
 
 These are design requirements, not later compliance work:
 
@@ -256,10 +281,11 @@ These are design requirements, not later compliance work:
 - local read/unread state remains browser-local
 - local/session storage access must fail safely if browser storage is malformed or unavailable
 - navigation utilities must retain readable labels and not depend on icon-only interpretation
+- Share Card modal closes via an explicit close control, backdrop interaction, and Escape key; focus returns to the originating control
 
 Do not remove browser-native behavior in the name of visual polish.
 
-## 9. Brand presence
+## 10. Brand presence
 
 VELNAR should be recognizable without dominating the research content.
 
@@ -274,7 +300,7 @@ Default brand expression:
 
 Avoid repeating the logo, gradient or brand name so often that the page becomes promotional.
 
-## 10. Explicit anti-patterns
+## 11. Explicit anti-patterns
 
 Do not introduce by default:
 
@@ -293,8 +319,9 @@ Do not introduce by default:
 - a second typography family without explicit approval
 - fake online/live/health indicators used only as decoration
 - fabricated utility metadata
+- marketing-style Share Cards that overpower the article itself
 
-## 11. Per-change checklist
+## 12. Per-change checklist
 
 Before shipping any UI change:
 
@@ -311,9 +338,10 @@ Before shipping any UI change:
 - [ ] Long-form article readability is not sacrificed for visual novelty.
 - [ ] Section navigation and article traversal are derived from real article data.
 - [ ] Storage failures do not break the primary reading flow.
+- [ ] Share Card data is derived from the current article and remains local unless the user explicitly shares it.
 - [ ] No new dependency or framework was introduced without a product-level reason.
 
-## 12. Open questions
+## 13. Open questions
 
 These are intentionally **not** decisions yet:
 
@@ -322,5 +350,6 @@ These are intentionally **not** decisions yet:
 - whether a shared VELNAR design system should be extracted across multiple products
 - whether article imagery / diagrams should gain a standardized treatment
 - whether archive scale will eventually justify topic filtering or search
+- whether article-specific dynamic QR codes should become a permanent Share Card element
 
 Do not resolve these by inference. They require a future explicit design decision when the product need appears.
