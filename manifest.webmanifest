@@ -1,0 +1,19 @@
+{
+  "name": "VELNAR Intelligence Radar",
+  "short_name": "VELNAR Radar",
+  "description": "AI Industry Signals & Strategic Analysis",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f4f7",
+  "theme_color": "#f3f4f7",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "./assets/velnar-symbol.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
