@@ -5,51 +5,20 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AI Industry Radar</title>
 <style>
-:root{--bg:#f5f5f7;--card:#fff;--text:#111214;--muted:#78787e;--line:#e5e5ea;--soft:#f0f0f2}
+:root{--bg:#f5f5f7;--card:#fff;--text:#111214;--muted:#78787e;--line:#e5e5ea}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif}
 main{max-width:900px;margin:0 auto;padding:28px 16px 72px}
 header{display:flex;justify-content:space-between;gap:16px;align-items:flex-end;flex-wrap:wrap;margin-bottom:26px}
-h1{font-size:32px;line-height:1.05;letter-spacing:-1px;margin:0 0 7px}
-.subtitle,.updated{font-size:12px;color:var(--muted)}
-.counter{display:flex;gap:8px;flex-wrap:wrap}
-.pill{font-size:12px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 10px}
-section{margin-top:25px}
-.section-head{display:flex;justify-content:space-between;align-items:center;padding:0 2px 9px}
-.section-title{font-size:13px;font-weight:750;letter-spacing:.06em;color:var(--muted)}
-.section-count{font-size:12px;color:var(--muted)}
-.list{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
-.empty{padding:22px;color:var(--muted);font-size:13px;text-align:center}
-.item{border-bottom:1px solid var(--line)}
-.item:last-child{border-bottom:0}
-.row{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:11px;align-items:center;padding:14px 15px;cursor:pointer}
-.row:hover{background:#fafafa}
-.grade{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:#111;color:white;font-size:12px;font-weight:800}
-.grade.A{background:#56565b}.grade.B{background:#909096}
-.title{font-size:15px;font-weight:650;line-height:1.42}
-.meta{margin-top:4px;font-size:10.5px;color:var(--muted);line-height:1.4}
-.right{display:flex;align-items:center;gap:8px}
-.state-btn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 8px;font:inherit;font-size:11px;color:#47474c;cursor:pointer}
-.state-btn:hover{background:var(--soft)}
-.chev{font-size:15px;color:#9a9aa0;transition:.15s transform}
-.item.open .chev{transform:rotate(90deg)}
-.detail{display:none;padding:0 15px 16px 66px}
-.item.open .detail{display:block}
-.block{font-size:13px;line-height:1.72;color:#303034;margin-top:12px;white-space:pre-line}
-.label{font-weight:700;color:#111}
-.question{padding:10px 12px;background:#f7f7f8;border-radius:10px}
-.sources a{color:#333;text-decoration:underline;text-underline-offset:2px}
-.read .row{opacity:.68}
-.read .title{font-weight:560}
-.legend{margin-top:18px;font-size:11px;color:var(--muted);line-height:1.6}
-.error{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;color:#666;font-size:13px}
-@media(max-width:640px){
-  main{padding:22px 12px 60px}
-  h1{font-size:29px}
-  .row{grid-template-columns:36px minmax(0,1fr);align-items:start}
-  .right{grid-column:2;justify-content:flex-start}
-  .detail{padding-left:62px}
-}
+h1{font-size:32px;line-height:1.05;letter-spacing:-1px;margin:0 0 7px}.subtitle,.updated{font-size:12px;color:var(--muted)}
+.counter{display:flex;gap:8px;flex-wrap:wrap}.pill{font-size:12px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 10px}
+section{margin-top:25px}.section-head{display:flex;justify-content:space-between;align-items:center;padding:0 2px 9px}.section-title{font-size:13px;font-weight:750;letter-spacing:.06em;color:var(--muted)}.section-count{font-size:12px;color:var(--muted)}
+.list{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}.empty{padding:22px;color:var(--muted);font-size:13px;text-align:center}
+.item{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:12px;align-items:center;padding:15px;border-bottom:1px solid var(--line);cursor:pointer}.item:last-child{border-bottom:0}.item:hover{background:#fafafa}
+.grade{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:#111;color:#fff;font-size:12px;font-weight:800}.grade.A{background:#56565b}.grade.B{background:#909096}
+.title{font-size:15.5px;font-weight:650;line-height:1.45}.meta{margin-top:5px;font-size:10.5px;color:var(--muted);line-height:1.5}.arrow{font-size:20px;color:#a1a1a6}
+.read .item{opacity:.68}.read .title{font-weight:560}.legend{margin-top:18px;font-size:11px;color:var(--muted);line-height:1.6}.error{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;color:#666;font-size:13px}
+@media(max-width:640px){main{padding:22px 12px 60px}h1{font-size:29px}.item{grid-template-columns:36px minmax(0,1fr) auto;padding:14px 13px}}
 </style>
 </head>
 <body>
@@ -57,95 +26,38 @@ section{margin-top:25px}
 <header>
   <div>
     <h1>AI Industry Radar</h1>
-    <div class="subtitle">全球 AI 产业信号目录 · 新闻归档与本地阅读状态</div>
+    <div class="subtitle">全球 AI 产业信号目录 · 点击进入完整文章</div>
     <div class="updated" id="updated"></div>
   </div>
   <div class="counter" id="counter"></div>
 </header>
-
 <section>
-  <div class="section-head">
-    <div class="section-title">未读</div>
-    <div class="section-count" id="unreadCount"></div>
-  </div>
+  <div class="section-head"><div class="section-title">未读</div><div class="section-count" id="unreadCount"></div></div>
   <div class="list" id="unreadList"></div>
 </section>
-
-<section>
-  <div class="section-head">
-    <div class="section-title">已读</div>
-    <div class="section-count" id="readCount"></div>
-  </div>
+<section class="read">
+  <div class="section-head"><div class="section-title">已读</div><div class="section-count" id="readCount"></div></div>
   <div class="list" id="readList"></div>
 </section>
-
-<div class="legend">S = 可能改变产业地图 · A = 重要验证信号 · B = 值得保留的普通动态。已读/未读只保存在当前浏览器，不上传 GitHub。</div>
+<div class="legend">S = 可能改变产业地图 · A = 重要验证信号 · B = 值得保留的普通动态。打开文章即自动标记已读；阅读状态只保存在当前浏览器。</div>
 </main>
-
 <script>
 const READ_KEY='ai-industry-radar-read-v1';
 let items=[];
 let readSet=new Set(JSON.parse(localStorage.getItem(READ_KEY)||'[]'));
-
 function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function saveRead(){localStorage.setItem(READ_KEY,JSON.stringify([...readSet]))}
-function toggleRead(id,ev){
-  ev.stopPropagation();
-  readSet.has(id)?readSet.delete(id):readSet.add(id);
-  saveRead(); render();
-}
-function toggleOpen(el){el.classList.toggle('open')}
-function sourceHtml(s){
-  if(typeof s==='string') return '<a href="'+esc(s)+'" target="_blank" rel="noopener">来源</a>';
-  if(s && s.url) return '<a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+esc(s.label||s.url)+'</a>';
-  return '';
-}
-function detailBlock(label,text,cls=''){
-  if(!text) return '';
-  return '<div class="block '+cls+'"><span class="label">'+label+'：</span>'+esc(text)+'</div>';
-}
-function card(e,isRead){
-  const themes=(e.themes||[]).join(' · ');
-  const sources=(e.sources||[]).map(sourceHtml).filter(Boolean).join(' · ');
-  return '<article class="item '+(isRead?'read':'')+'" onclick="toggleOpen(this)">'+
-    '<div class="row">'+
-      '<div class="grade '+esc(e.grade)+'">'+esc(e.grade)+'</div>'+
-      '<div><div class="title">'+esc(e.title)+'</div><div class="meta">'+esc(e.date)+(themes?' · '+esc(themes):'')+' · '+esc(e.id)+'</div></div>'+
-      '<div class="right"><button class="state-btn" onclick="toggleRead(\''+esc(e.id)+'\',event)">'+(isRead?'标记未读':'标记已读')+'</button><span class="chev">›</span></div>'+
-    '</div>'+
-    '<div class="detail">'+
-      detailBlock('Fact',e.fact)+
-      detailBlock('为什么重要',e.why_it_matters)+
-      detailBlock('真正新增',e.what_is_new)+
-      detailBlock('可能的 hype / 不确定性',e.hype_uncertainty)+
-      detailBlock('讨论问题',e.discussion_question,'question')+
-      ((!e.what_is_new && !e.hype_uncertainty && !e.discussion_question)?'<div class="block" style="color:#8a8a90">历史迁移条目：目前只保存了摘要；后续新条目会完整保存 Fact / 新增信息 / 不确定性 / 讨论问题 / 来源。</div>':'')+
-      (sources?'<div class="block sources"><span class="label">来源：</span>'+sources+'</div>':'')+
-    '</div>'+
-  '</article>';
-}
+function openArticle(id){readSet.add(id);saveRead();location.href='./article.html?id='+encodeURIComponent(id)}
+function card(e){const themes=(e.themes||[]).join(' · ');return '<article class="item" onclick="openArticle(\''+esc(e.id)+'\')"><div class="grade '+esc(e.grade)+'">'+esc(e.grade)+'</div><div><div class="title">'+esc(e.title)+'</div><div class="meta">'+esc(e.date)+(themes?' · '+esc(themes):'')+' · '+esc(e.id)+'</div></div><div class="arrow">›</div></article>'}
 function render(){
-  const sorted=[...items].sort((a,b)=>b.date.localeCompare(a.date)||({S:0,A:1,B:2}[a.grade]-{S:0,A:1,B:2}[b.grade]));
-  const unread=sorted.filter(x=>!readSet.has(x.id));
-  const read=sorted.filter(x=>readSet.has(x.id));
-  document.getElementById('unreadList').innerHTML=unread.length?unread.map(x=>card(x,false)).join(''):'<div class="empty">暂无未读</div>';
-  document.getElementById('readList').innerHTML=read.length?read.map(x=>card(x,true)).join(''):'<div class="empty">暂无已读</div>';
-  document.getElementById('unreadCount').textContent=unread.length+' 条';
-  document.getElementById('readCount').textContent=read.length+' 条';
-  document.getElementById('counter').innerHTML='<span class="pill">未读 <b>'+unread.length+'</b></span><span class="pill">已读 <b>'+read.length+'</b></span><span class="pill">总计 <b>'+items.length+'</b></span>';
+ const sorted=[...items].sort((a,b)=>b.date.localeCompare(a.date)||({S:0,A:1,B:2}[a.grade]-{S:0,A:1,B:2}[b.grade]));
+ const unread=sorted.filter(x=>!readSet.has(x.id)); const read=sorted.filter(x=>readSet.has(x.id));
+ unreadList.innerHTML=unread.length?unread.map(card).join(''):'<div class="empty">暂无未读</div>';
+ readList.innerHTML=read.length?read.map(card).join(''):'<div class="empty">暂无已读</div>';
+ unreadCount.textContent=unread.length+' 条'; readCount.textContent=read.length+' 条';
+ counter.innerHTML='<span class="pill">未读 <b>'+unread.length+'</b></span><span class="pill">已读 <b>'+read.length+'</b></span><span class="pill">总计 <b>'+items.length+'</b></span>';
 }
-async function load(){
-  try{
-    const r=await fetch('./news.json?ts='+Date.now(),{cache:'no-store'});
-    if(!r.ok) throw new Error('HTTP '+r.status);
-    const data=await r.json();
-    items=data.items||[];
-    document.getElementById('updated').textContent='最近更新：'+(data.updated_at||'—');
-    render();
-  }catch(err){
-    document.getElementById('unreadList').innerHTML='<div class="error">新闻数据加载失败，请稍后刷新。 '+esc(err.message)+'</div>';
-  }
-}
+async function load(){try{const r=await fetch('./news.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const data=await r.json();items=data.items||[];updated.textContent='最近更新：'+(data.updated_at||'—');render()}catch(err){unreadList.innerHTML='<div class="error">新闻数据加载失败，请稍后刷新。 '+esc(err.message)+'</div>'}}
 load();
 </script>
 </body>
