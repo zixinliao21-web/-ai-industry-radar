@@ -35,7 +35,7 @@ section{margin-top:25px}
 .item.open .chev{transform:rotate(90deg)}
 .detail{display:none;padding:0 15px 16px 66px}
 .item.open .detail{display:block}
-.block{font-size:13px;line-height:1.68;color:#303034;margin-top:10px}
+.block{font-size:13px;line-height:1.72;color:#303034;margin-top:12px;white-space:pre-line}
 .label{font-weight:700;color:#111}
 .question{padding:10px 12px;background:#f7f7f8;border-radius:10px}
 .sources a{color:#333;text-decoration:underline;text-underline-offset:2px}
@@ -119,6 +119,7 @@ function card(e,isRead){
       detailBlock('真正新增',e.what_is_new)+
       detailBlock('可能的 hype / 不确定性',e.hype_uncertainty)+
       detailBlock('讨论问题',e.discussion_question,'question')+
+      ((!e.what_is_new && !e.hype_uncertainty && !e.discussion_question)?'<div class="block" style="color:#8a8a90">历史迁移条目：目前只保存了摘要；后续新条目会完整保存 Fact / 新增信息 / 不确定性 / 讨论问题 / 来源。</div>':'')+
       (sources?'<div class="block sources"><span class="label">来源：</span>'+sources+'</div>':'')+
     '</div>'+
   '</article>';
