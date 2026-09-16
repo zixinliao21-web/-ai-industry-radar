@@ -1,8 +1,8 @@
 # VELNAR Intelligence Radar — Design Language Proposal
 
-Status: **proposal, not yet the final `DESIGN.md`**
+Status: **approved — Direction A / Precision Sans**
 
-This document captures the direction already visible in `index.html` and `article.html`, plus the remaining brand-level choice that should be approved before the design language is frozen.
+Approved on 2026-09-16. This proposal is now the decision record behind the root `DESIGN.md`.
 
 > **Precision Editorial × Quiet Technology** — VELNAR Intelligence Radar should feel like a serious research publication operating inside a precise software product: restrained, information-first, responsive, and recognizably VELNAR without turning into an AI-SaaS landing page.
 
@@ -131,8 +131,6 @@ Default prohibited:
 
 ### Directory
 
-Current structure is deliberately simple:
-
 - one primary column
 - unread first, read second
 - list-as-directory rather than dashboard cards
@@ -144,11 +142,9 @@ The UI should remain navigational rather than promotional.
 
 ### Long-form article
 
-Current evidence: `article.html`.
-
 - outer product shell: approximately `800px` maximum
 - reading column: `660px` maximum
-- generous line-height (`~1.88` desktop)
+- generous body line-height (`~1.88` desktop)
 - section labels small and secondary
 - body content carries the visual weight
 - title and deck are allowed stronger hierarchy
@@ -156,10 +152,8 @@ Current evidence: `article.html`.
 
 ## 5. Accessibility and interaction quality
 
-Current requirements:
-
 - semantic anchors for article navigation
-- normal browser link behaviors preserved (new tab, keyboard activation, context menu)
+- normal browser link behaviors preserved
 - visible `:focus-visible` treatment
 - skip-to-content / skip-to-article link
 - reduced-motion handling
@@ -168,11 +162,7 @@ Current requirements:
 
 Accessibility is part of visual quality, not a later compliance pass.
 
-## 6. Typography — approval gate
-
-This is the remaining major visual decision before freezing the first VELNAR Radar `DESIGN.md`.
-
-### Direction A — Precision Sans (current)
+## 6. Approved typography — Precision Sans
 
 Use the native/system sans stack throughout:
 
@@ -182,31 +172,17 @@ Use the native/system sans stack throughout:
 
 Character:
 
-- closer to a product / intelligence terminal
-- more Apple-like and technical
+- product / intelligence-system first
+- precise and technical
 - strongest continuity between directory and article
-- less risk of looking like a magazine or Substack publication
+- avoids drifting into magazine / Substack styling
 
-Article differentiation comes from scale, line-height, spacing and weight rather than a second type family.
+Article differentiation comes from scale, line-height, spacing, measure and weight — not a second type family.
 
-### Direction B — Editorial Display Hybrid
+No serif display face should be introduced into the Radar without a new explicit design decision.
 
-Keep the UI and body in system sans, but introduce a restrained editorial display face for article titles / rare pull-quote moments only.
+## 7. Decision record
 
-Character:
+**Selected: A — Precision Sans.**
 
-- stronger research-publication identity
-- more separation between interface and reading surface
-- potentially more distinctive
-- higher risk of weakening the precise technology-product character if the serif is too expressive
-
-If selected, the display face should be limited to one role and the site should still use no more than two families.
-
-## 7. Proposed decision
-
-Before creating the final root `DESIGN.md`, approve one typography direction:
-
-- **A — Precision Sans**
-- **B — Editorial Display Hybrid**
-
-Everything else in this proposal is already grounded in the current implementation and can be documented as the V0.1 design language after that choice.
+The root `DESIGN.md` is the operational design contract. This file remains as the approval history and rationale.
