@@ -1,6 +1,6 @@
 # VELNAR Intelligence Radar — Design Language
 
-Version: **V0.3**  
+Version: **V0.4**  
 Status: **active**  
 Decision record: [`docs/plans/design-language.md`](docs/plans/design-language.md)
 
@@ -12,8 +12,8 @@ This document governs visual and interaction changes to the Radar.
 
 Implementation evidence:
 
-- [`index.html`](index.html) — directory, read state, directory motion, interaction patterns
-- [`article.html`](article.html) — long-form reading surface, progress indicator, article controls
+- [`index.html`](index.html) — directory, read state, directory motion, return-position behavior
+- [`article.html`](article.html) — long-form reading surface, section navigation, share/read controls, progress, archive traversal
 - [`assets/velnar-symbol.svg`](assets/velnar-symbol.svg) — VELNAR brand symbol and signature gradient
 
 For future UI work:
@@ -63,7 +63,7 @@ Current tokens:
 --line: #e3e5ea;
 --line-strong: #d7d9e1;
 --brand: #080c43;
---accent: #396ee3; /* directory unread state only */
+--accent: #396ee3;
 ```
 
 Principles:
@@ -73,7 +73,7 @@ Principles:
 - Borders are structural and quiet.
 - Accent color is scarce and state-driven.
 - Do not add multiple competing accent families.
-- Do not introduce decorative status colors unless they communicate a real product state. A static archive must not imply a live-system status merely for visual interest.
+- Do not introduce decorative status colors unless they communicate a real product state.
 
 ### VELNAR gradient budget
 
@@ -117,9 +117,9 @@ Article:
 - no decorative card segmentation for every article section
 - section hierarchy comes from typography, spacing, short structural rules, and restrained tonal labels
 - Sources and Discussion Question may use dedicated presentation because they are distinct reading functions
-- reading-time and source-count metadata are acceptable as derived utility metadata; they must stay visually secondary
+- sticky section navigation may use translucent material because it is functional chrome, not decorative glassmorphism
 
-Use elevation only when it communicates hierarchy. Do not add generic shadows to make surfaces feel "premium."
+Use elevation only when it communicates hierarchy. Do not add generic shadows to make surfaces feel “premium.”
 
 ## 5. Layout and spacing
 
@@ -132,7 +132,7 @@ max-width: 1040px;
 Article product shell:
 
 ```css
-max-width: 860px;
+max-width: approximately 900px;
 ```
 
 Article reading column:
@@ -149,7 +149,8 @@ Rules:
 - Keep article rhythm materially more relaxed than directory rhythm.
 - Do not force symmetric spacing when optical balance calls for a small adjustment.
 - Mobile layouts should preserve hierarchy rather than merely shrink the desktop view.
-- Compact three-part statistics should remain visually compact on narrow mobile screens rather than becoming a long vertical dashboard.
+- Statistics should stay compact on narrow screens.
+- Article archive navigation collapses from two columns to one column on mobile.
 
 ## 6. Motion — Precision Motion
 
@@ -209,6 +210,9 @@ Allowed:
 - restrained brand entrance
 - linear reading-progress indicator
 - micro hover/focus feedback on controls and sources
+- restrained active-section underline
+- subtle archive-navigation hover
+- small back-to-top reveal
 
 Default prohibited:
 
@@ -218,7 +222,27 @@ Default prohibited:
 - cinematic page transitions
 - ambient looping motion that competes with reading
 
-## 7. Interaction and accessibility
+## 7. Long-form reading system
+
+The article page is a reading product, not only a styled document.
+
+Required behaviors:
+
+- Dynamic reading time derived from actual article text.
+- Dynamic section count and source count where present.
+- Sticky, horizontally scrollable section navigator only when an article has enough sections to justify it.
+- Stable deep-link anchors for article sections.
+- Active section indication driven by `IntersectionObserver`, not manual scroll polling.
+- Reading progress indicator at the top of the page.
+- Share control uses the native Web Share API when available, clipboard fallback otherwise.
+- Read/unread control is a true toggle in the current session.
+- Newer/older article navigation is derived from the same archive ordering as the directory.
+- Back-to-top appears only after meaningful scroll depth.
+- Returning to the directory restores the prior directory scroll position when possible.
+
+Utility metadata and navigation must be derived from real data; never invent live status, popularity, completion rate, or other unsupported claims.
+
+## 8. Interaction and accessibility
 
 These are design requirements, not later compliance work:
 
@@ -230,11 +254,12 @@ These are design requirements, not later compliance work:
 - `prefers-reduced-motion` support
 - controls should provide immediate press feedback
 - local read/unread state remains browser-local
-- malformed local read-state storage must fail safely instead of breaking the directory or article page
+- local/session storage access must fail safely if browser storage is malformed or unavailable
+- navigation utilities must retain readable labels and not depend on icon-only interpretation
 
 Do not remove browser-native behavior in the name of visual polish.
 
-## 8. Brand presence
+## 9. Brand presence
 
 VELNAR should be recognizable without dominating the research content.
 
@@ -249,7 +274,7 @@ Default brand expression:
 
 Avoid repeating the logo, gradient or brand name so often that the page becomes promotional.
 
-## 9. Explicit anti-patterns
+## 10. Explicit anti-patterns
 
 Do not introduce by default:
 
@@ -266,14 +291,16 @@ Do not introduce by default:
 - excessive pill-shaped containers
 - motion that delays content access
 - a second typography family without explicit approval
-- fake "live", "online", or health-status indicators without an actual live state behind them
+- fake online/live/health indicators used only as decoration
+- fabricated utility metadata
 
-## 10. Per-change checklist
+## 11. Per-change checklist
 
 Before shipping any UI change:
 
 - [ ] Existing read/unread behavior still works.
 - [ ] Article navigation still works with normal browser link behaviors.
+- [ ] Directory return position behaves sensibly.
 - [ ] Desktop and mobile hierarchy remain intact.
 - [ ] Typography remains Precision Sans.
 - [ ] New colors fit the neutral palette and accent budget.
@@ -282,10 +309,11 @@ Before shipping any UI change:
 - [ ] Hover movement is pointer-gated.
 - [ ] Reduced motion is handled.
 - [ ] Long-form article readability is not sacrificed for visual novelty.
-- [ ] Utility metadata is derived from existing article data rather than inventing facts.
+- [ ] Section navigation and article traversal are derived from real article data.
+- [ ] Storage failures do not break the primary reading flow.
 - [ ] No new dependency or framework was introduced without a product-level reason.
 
-## 11. Open questions
+## 12. Open questions
 
 These are intentionally **not** decisions yet:
 
@@ -293,5 +321,6 @@ These are intentionally **not** decisions yet:
 - whether Radar eventually needs a dark appearance
 - whether a shared VELNAR design system should be extracted across multiple products
 - whether article imagery / diagrams should gain a standardized treatment
+- whether archive scale will eventually justify topic filtering or search
 
 Do not resolve these by inference. They require a future explicit design decision when the product need appears.
