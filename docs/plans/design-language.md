@@ -1,0 +1,212 @@
+# VELNAR Intelligence Radar — Design Language Proposal
+
+Status: **proposal, not yet the final `DESIGN.md`**
+
+This document captures the direction already visible in `index.html` and `article.html`, plus the remaining brand-level choice that should be approved before the design language is frozen.
+
+> **Precision Editorial × Quiet Technology** — VELNAR Intelligence Radar should feel like a serious research publication operating inside a precise software product: restrained, information-first, responsive, and recognizably VELNAR without turning into an AI-SaaS landing page.
+
+## 1. Product character
+
+The Radar is neither a marketing website nor a generic blog. It is a persistent intelligence product.
+
+Desired qualities:
+
+- precise
+- calm
+- mature
+- research-first
+- technically credible
+- quietly branded
+- high signal-to-decoration ratio
+
+Avoid:
+
+- neon / glow-heavy AI aesthetics
+- decorative gradients outside branded moments
+- particle effects
+- large parallax scenes
+- 3D tilt cards
+- excessive glassmorphism
+- playful bounce
+- motion that competes with reading
+- generic SaaS dashboard chrome
+
+## 2. Color and brand accent budget
+
+Current evidence: `index.html`, `article.html`, `assets/velnar-symbol.svg`.
+
+Base system:
+
+- canvas: `#f5f5f7`
+- primary surface: `#ffffff`
+- primary text: `#111214`
+- muted text: approximately `#77777d` / `#78787e`
+- structural line: `#e5e5ea`
+- VELNAR deep brand navy: `#080c43`
+
+### Gradient rule
+
+The blue-purple VELNAR gradient is a **signature asset, not a general decoration system**.
+
+Allowed by default:
+
+1. VELNAR logo
+2. reading progress indicator
+3. rare future brand-signature states with explicit justification
+
+Not allowed by default:
+
+- gradient buttons
+- gradient text
+- gradient cards
+- large gradient hero backgrounds
+- blue-purple glow as ambient page decoration
+
+## 3. Motion language — Precision Motion
+
+Current evidence: motion tokens in `index.html` / `article.html`.
+
+Motion personality:
+
+- responsive
+- controlled
+- quiet
+- physical
+- intentional
+
+Primary easing:
+
+```css
+--ease-velnar: cubic-bezier(.23,1,.32,1);
+```
+
+Duration palette:
+
+```css
+--dur-press: 120ms;
+--dur-hover: 160ms;
+--dur-state: 220ms;
+--dur-enter: 240ms;
+--dur-brand: 560ms;
+```
+
+Rules:
+
+- Use the cheapest mechanism that works; prefer CSS for deterministic UI motion.
+- Prefer `transform` and `opacity` for spatial motion.
+- High-frequency interactions should be almost imperceptible.
+- Hover motion must be gated behind `(hover:hover) and (pointer:fine)`.
+- `prefers-reduced-motion` is mandatory.
+- No bounce unless a future direct-manipulation gesture genuinely creates momentum.
+- Article reading surfaces use materially less motion than the directory UI.
+- Never delay access to information for choreography.
+
+### Directory motion
+
+Allowed:
+
+- restrained brand entrance
+- short capped list cascade
+- subtle hover translation
+- press feedback
+- read-state transition
+
+### Article motion
+
+Allowed:
+
+- restrained VELNAR brand entrance
+- linear reading progress line
+- micro hover/focus feedback on controls and links
+
+Default prohibited:
+
+- per-section scroll reveals
+- article paragraph stagger
+- parallax
+- cinematic page transitions
+
+## 4. Layout and surfaces
+
+### Directory
+
+Current structure is deliberately simple:
+
+- one primary column
+- unread first, read second
+- list-as-directory rather than dashboard cards
+- thin structural borders
+- little or no elevation
+- compact metadata
+
+The UI should remain navigational rather than promotional.
+
+### Long-form article
+
+Current evidence: `article.html`.
+
+- outer product shell: approximately `800px` maximum
+- reading column: `660px` maximum
+- generous line-height (`~1.88` desktop)
+- section labels small and secondary
+- body content carries the visual weight
+- title and deck are allowed stronger hierarchy
+- sources remain visually quiet but clearly interactive
+
+## 5. Accessibility and interaction quality
+
+Current requirements:
+
+- semantic anchors for article navigation
+- normal browser link behaviors preserved (new tab, keyboard activation, context menu)
+- visible `:focus-visible` treatment
+- skip-to-content / skip-to-article link
+- reduced-motion handling
+- touch devices must not inherit desktop hover movement
+- local read state remains browser-local
+
+Accessibility is part of visual quality, not a later compliance pass.
+
+## 6. Typography — approval gate
+
+This is the remaining major visual decision before freezing the first VELNAR Radar `DESIGN.md`.
+
+### Direction A — Precision Sans (current)
+
+Use the native/system sans stack throughout:
+
+```css
+-apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", Arial, sans-serif
+```
+
+Character:
+
+- closer to a product / intelligence terminal
+- more Apple-like and technical
+- strongest continuity between directory and article
+- less risk of looking like a magazine or Substack publication
+
+Article differentiation comes from scale, line-height, spacing and weight rather than a second type family.
+
+### Direction B — Editorial Display Hybrid
+
+Keep the UI and body in system sans, but introduce a restrained editorial display face for article titles / rare pull-quote moments only.
+
+Character:
+
+- stronger research-publication identity
+- more separation between interface and reading surface
+- potentially more distinctive
+- higher risk of weakening the precise technology-product character if the serif is too expressive
+
+If selected, the display face should be limited to one role and the site should still use no more than two families.
+
+## 7. Proposed decision
+
+Before creating the final root `DESIGN.md`, approve one typography direction:
+
+- **A — Precision Sans**
+- **B — Editorial Display Hybrid**
+
+Everything else in this proposal is already grounded in the current implementation and can be documented as the V0.1 design language after that choice.
