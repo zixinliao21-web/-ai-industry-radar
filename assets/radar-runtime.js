@@ -56,7 +56,13 @@
     nav.innerHTML=links.map(x=>'<a class="velnar-collection-link" href="'+x.href+'"'+(x.active?' aria-current="page"':'')+'>'+x.label+'</a>').join('');
     bar.insertAdjacentElement('afterend',nav);
   }
-  function boot(){mountPicker();mountCollectionNav();apply(readMode())}
+  function loadCollectionBridge(){
+    const p=location.pathname;
+    const matches=p.endsWith('/consumer-radar.html')||p.endsWith('/consumer-article.html')||p.endsWith('/deep-read.html')||p.endsWith('/deep-read-article.html');
+    if(!matches||document.getElementById('velnar-collection-discussion-script')||document.querySelector('script[src="./assets/collection-discussion-bridge.js"]'))return;
+    const s=document.createElement('script');s.id='velnar-collection-discussion-script';s.src='./assets/collection-discussion-bridge.js';s.async=false;document.body.appendChild(s);
+  }
+  function boot(){mountPicker();mountCollectionNav();loadCollectionBridge();apply(readMode())}
   apply(readMode());
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});
   else boot();
