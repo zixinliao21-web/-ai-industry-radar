@@ -1,4 +1,4 @@
-const CACHE='velnar-radar-v4';
+const CACHE='velnar-radar-v5';
 const SHELL=['./','./index.html','./article.html','./manifest.webmanifest','./assets/velnar-symbol.svg','./assets/radar-qr.svg','./news.json'];
 const NEWS_URL=new URL('./news.json',self.registration.scope).href;
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()))});
