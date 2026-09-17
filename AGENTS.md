@@ -4,6 +4,7 @@ VELNAR Intelligence Radar is a lightweight static research product. Preserve its
 
 ## Quick links
 
+- [Product Contract](PRODUCT.md)
 - [Design Language](DESIGN.md)
 - [Design decision record](docs/plans/design-language.md)
 - [Frontend design craft skill](.agents/skills/frontend-design/SKILL.md)
@@ -13,9 +14,24 @@ VELNAR Intelligence Radar is a lightweight static research product. Preserve its
 - `index.html` — directory / read-state interface
 - `article.html` — long-form reading surface
 - `news.json` — canonical content archive
-- `assets/` — brand/static assets
+- `assets/radar-runtime.css` / `assets/radar-runtime.js` — shared appearance and sticky runtime behavior
+- `assets/research-discussion-bridge.js` — browser-local notebook, excerpt capture, discussion handoff and strategic article labels
+- `assets/share-export-fix.js` — Share Card export path
+- `service-worker.js` — PWA caching plus runtime asset injection
 
 Do not introduce React, Next.js, a backend, a database, or another framework unless a separate product requirement explicitly justifies the migration.
+
+## Product purpose
+
+Read `PRODUCT.md` before changing content behavior.
+
+The Radar is **not an AI news site**. Its loop is:
+
+```text
+Observe → Understand → Question → Discuss → Update judgment
+```
+
+The website is the research / reading surface. GPT is the discussion / reasoning surface. Preserve that separation.
 
 ## Design changes
 
@@ -34,28 +50,51 @@ Website design must not compress or rewrite research merely to fit UI.
 
 `news.json` is the canonical article archive. The directory may show concise metadata, but the article page should render the complete available analysis fields.
 
-Do not delete or rewrite historical items merely to restyle them. Factual corrections should be explicit rather than silently changing history.
+New articles should follow the strategic-observation contract in `PRODUCT.md`:
 
-## Read state
+- 发生了什么
+- 为什么值得我们注意
+- 它改变了我们什么判断
+- 我们不应该因此得出什么结论
+- 值得继续讨论的问题
 
-Read/unread state is browser-local.
+Facts are evidence; the value is the delta in our understanding. Avoid official news tone and generic “why the AI industry matters” prose.
 
-Preserve the current localStorage key:
+Do not delete or mass-rewrite historical items merely to restyle them. Factual corrections should be explicit rather than silently changing history.
+
+## Browser-local state
+
+Preserve these keys:
 
 ```text
 ai-industry-radar-read-v1
+velnar-radar-notes-v1
+velnar-radar-discussion-thread-v1
+velnar-radar-theme-v1
 ```
 
-Never write read state into `news.json`, GitHub commits, or server-side storage.
+Read state, notes, excerpts, discussion-thread settings and appearance are browser-local. Never write them into `news.json`, GitHub content commits, or server-side storage.
+
+Storage failures must not break primary reading.
+
+## Research → Discussion Bridge
+
+Preserve these behaviors:
+
+- article notebook control is icon-first
+- selected article text can be captured through the small notebook-style action
+- notes and excerpts auto-save locally per article
+- directory may show a small notebook marker for articles with local notes
+- **讨论** builds a Discussion Packet, copies it, then opens the configured ChatGPT thread or ChatGPT home as fallback
+- this bridge must remain lightweight; do not turn Radar into a chat app or general PKM system
 
 ## Safe change rule
 
 For UI-only work:
 
 - do not alter `news.json` content
-- do not change the article schema
 - do not change scanning cadence or notification behavior
-- do not change the local read-state model
+- do not change local-storage schemas without an explicit migration
 
 For content-only work:
 
