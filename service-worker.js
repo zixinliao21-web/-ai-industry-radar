@@ -1,4 +1,4 @@
-const CACHE='velnar-radar-v27';
+const CACHE='velnar-radar-v28';
 const SHELL=[
   './','./index.html','./article.html',
   './consumer-radar.html','./consumer-article.html',
@@ -6,23 +6,25 @@ const SHELL=[
   './manifest.webmanifest',
   './assets/velnar-symbol.svg','./assets/radar-qr.svg',
   './assets/qrcode.min.js','./assets/qrcodejs.LICENSE.txt',
-  './assets/share-export-fix.js','./assets/radar-runtime.css','./assets/radar-runtime.js','./assets/research-discussion-bridge.js',
+  './assets/share-export-fix.js','./assets/radar-runtime.css','./assets/radar-runtime.js','./assets/research-discussion-bridge.js','./assets/collection-discussion-bridge.js',
   './news.json','./consumer-radar.json','./deep-read.json'
 ];
 const DATA_FILES=['news.json','consumer-radar.json','deep-read.json'];
-const NETWORK_FIRST_ASSETS=['/assets/radar-runtime.js','/assets/research-discussion-bridge.js'];
+const NETWORK_FIRST_ASSETS=['/assets/radar-runtime.js','/assets/research-discussion-bridge.js','/assets/collection-discussion-bridge.js'];
 const SHARE_EXPORT_LOADER="\n;(function(){if(document.querySelector('script[data-velnar-share-export]'))return;var s=document.createElement('script');s.src='./assets/share-export-fix.js';s.async=false;s.setAttribute('data-velnar-share-export','1');document.head.appendChild(s)})();";
 const THEME_META='<meta name="color-scheme" content="light dark"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f4f7"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111318">';
 const RUNTIME_CSS='<link rel="stylesheet" href="./assets/radar-runtime.css">';
 const LATE_LOADER=`<script id="velnar-enhancement-loader">(function(){
 function add(src,id){if(document.getElementById(id)||document.querySelector('script[src="'+src+'"]'))return;var s=document.createElement('script');s.id=id;s.src=src;s.async=false;document.body.appendChild(s)}
+function waitForArticle(src,id){var tries=0,t=setInterval(function(){tries++;if(document.querySelector('#articleRoot .article')){clearInterval(t);add(src,id)}else if(tries>=100){clearInterval(t)}},120)}
 function boot(){
   add('./assets/radar-runtime.js','velnar-runtime-script');
   var p=location.pathname;
   var isIndustryIndex=p.endsWith('/')||p.endsWith('/index.html');
   if(isIndustryIndex){add('./assets/research-discussion-bridge.js','velnar-discussion-script');return}
-  if(!p.endsWith('/article.html'))return;
-  var tries=0,t=setInterval(function(){tries++;if(document.querySelector('#articleRoot .article')){clearInterval(t);add('./assets/research-discussion-bridge.js','velnar-discussion-script')}else if(tries>=100){clearInterval(t)}},120)
+  if(p.endsWith('/article.html')){waitForArticle('./assets/research-discussion-bridge.js','velnar-discussion-script');return}
+  if(p.endsWith('/consumer-radar.html')||p.endsWith('/deep-read.html')){add('./assets/collection-discussion-bridge.js','velnar-collection-discussion-script');return}
+  if(p.endsWith('/consumer-article.html')||p.endsWith('/deep-read-article.html')){waitForArticle('./assets/collection-discussion-bridge.js','velnar-collection-discussion-script')}
 }
 if(document.readyState==='complete')setTimeout(boot,0);else window.addEventListener('load',function(){setTimeout(boot,0)},{once:true});
 })();</script>`;
