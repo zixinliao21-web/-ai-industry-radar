@@ -1,4 +1,4 @@
-const CACHE='velnar-radar-v24';
+const CACHE='velnar-radar-v25';
 const SHELL=['./','./index.html','./article.html','./manifest.webmanifest','./assets/velnar-symbol.svg','./assets/radar-qr.svg','./assets/qrcode.min.js','./assets/qrcodejs.LICENSE.txt','./assets/share-export-fix.js','./assets/radar-runtime.css','./assets/radar-runtime.js','./assets/research-discussion-bridge.js','./news.json'];
 const NEWS_URL=new URL('./news.json',self.registration.scope).href;
 const SHARE_EXPORT_LOADER="\n;(function(){if(document.querySelector('script[data-velnar-share-export]'))return;var s=document.createElement('script');s.src='./assets/share-export-fix.js';s.async=false;s.setAttribute('data-velnar-share-export','1');document.head.appendChild(s)})();";
@@ -57,6 +57,19 @@ self.addEventListener('fetch',event=>{
         if(cached)return cached;
         return new Response(JSON.stringify({updated_at:'',items:[]}),{status:200,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}});
       }
+    })());
+    return;
+  }
+
+  if(url.pathname.endsWith('/assets/research-discussion-bridge.js')){
+    event.respondWith((async()=>{
+      const cache=await caches.open(CACHE);
+      try{
+        const fresh=await fetch(new Request(req,{cache:'no-store'}));
+        if(fresh.ok){await cache.put(req,fresh.clone());return fresh}
+      }catch{}
+      const cached=await cache.match(req);
+      return cached||new Response('/* discussion bridge unavailable */',{status:503,headers:{'Content-Type':'application/javascript; charset=utf-8'}});
     })());
     return;
   }
