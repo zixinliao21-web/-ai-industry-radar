@@ -56,13 +56,19 @@
     nav.innerHTML=links.map(x=>'<a class="velnar-collection-link" href="'+x.href+'"'+(x.active?' aria-current="page"':'')+'>'+x.label+'</a>').join('');
     bar.insertAdjacentElement('afterend',nav);
   }
+  function ensureToast(){
+    if(typeof window.showToast==='function')return;
+    if(!document.getElementById('velnar-global-toast-style')){const s=document.createElement('style');s.id='velnar-global-toast-style';s.textContent='.velnar-global-toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));z-index:1600;transform:translate(-50%,10px);opacity:0;pointer-events:none;padding:9px 12px;border-radius:999px;background:#15161a;color:#fff;font-size:11px;box-shadow:0 6px 24px rgba(0,0,0,.14);transition:opacity 220ms ease,transform 220ms cubic-bezier(.23,1,.32,1)}.velnar-global-toast.visible{opacity:1;transform:translate(-50%,0)}@media(prefers-reduced-motion:reduce){.velnar-global-toast{transition:none!important}}';document.head.appendChild(s)}
+    let el=document.getElementById('velnarGlobalToast');if(!el){el=document.createElement('div');el.id='velnarGlobalToast';el.className='velnar-global-toast';el.setAttribute('role','status');el.setAttribute('aria-live','polite');document.body.appendChild(el)}
+    let timer=null;window.showToast=function(text){el.textContent=String(text||'');el.classList.add('visible');clearTimeout(timer);timer=setTimeout(()=>el.classList.remove('visible'),1600)};
+  }
   function loadCollectionBridge(){
     const p=location.pathname;
     const matches=p.endsWith('/consumer-radar.html')||p.endsWith('/consumer-article.html')||p.endsWith('/deep-read.html')||p.endsWith('/deep-read-article.html');
     if(!matches||document.getElementById('velnar-collection-discussion-script')||document.querySelector('script[src="./assets/collection-discussion-bridge.js"]'))return;
     const s=document.createElement('script');s.id='velnar-collection-discussion-script';s.src='./assets/collection-discussion-bridge.js';s.async=false;document.body.appendChild(s);
   }
-  function boot(){mountPicker();mountCollectionNav();loadCollectionBridge();apply(readMode())}
+  function boot(){mountPicker();mountCollectionNav();ensureToast();loadCollectionBridge();apply(readMode())}
   apply(readMode());
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});
   else boot();
