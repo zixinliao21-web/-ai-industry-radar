@@ -1,4 +1,4 @@
-const CACHE='velnar-radar-v26';
+const CACHE='velnar-radar-v27';
 const SHELL=[
   './','./index.html','./article.html',
   './consumer-radar.html','./consumer-article.html',
@@ -10,6 +10,7 @@ const SHELL=[
   './news.json','./consumer-radar.json','./deep-read.json'
 ];
 const DATA_FILES=['news.json','consumer-radar.json','deep-read.json'];
+const NETWORK_FIRST_ASSETS=['/assets/radar-runtime.js','/assets/research-discussion-bridge.js'];
 const SHARE_EXPORT_LOADER="\n;(function(){if(document.querySelector('script[data-velnar-share-export]'))return;var s=document.createElement('script');s.src='./assets/share-export-fix.js';s.async=false;s.setAttribute('data-velnar-share-export','1');document.head.appendChild(s)})();";
 const THEME_META='<meta name="color-scheme" content="light dark"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f4f7"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111318">';
 const RUNTIME_CSS='<link rel="stylesheet" href="./assets/radar-runtime.css">';
@@ -51,6 +52,7 @@ function fallbackFor(pathname){
   if(pathname.endsWith('/deep-read.html'))return './deep-read.html';
   return './index.html';
 }
+function isNetworkFirstAsset(pathname){return NETWORK_FIRST_ASSETS.some(path=>pathname.endsWith(path))}
 
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()));
@@ -89,7 +91,7 @@ self.addEventListener('fetch',event=>{
     return;
   }
 
-  if(url.pathname.endsWith('/assets/research-discussion-bridge.js')){
+  if(isNetworkFirstAsset(url.pathname)){
     event.respondWith((async()=>{
       const cache=await caches.open(CACHE);
       try{
@@ -97,7 +99,7 @@ self.addEventListener('fetch',event=>{
         if(fresh.ok){await cache.put(req,fresh.clone());return fresh}
       }catch{}
       const cached=await cache.match(req);
-      return cached||new Response('/* discussion bridge unavailable */',{status:503,headers:{'Content-Type':'application/javascript; charset=utf-8'}});
+      return cached||new Response('/* VELNAR runtime unavailable */',{status:503,headers:{'Content-Type':'application/javascript; charset=utf-8'}});
     })());
     return;
   }
