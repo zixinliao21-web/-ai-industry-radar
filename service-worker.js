@@ -1,12 +1,13 @@
-const CACHE='velnar-radar-v19';
+const CACHE='velnar-radar-v20';
 const SHELL=['./','./index.html','./article.html','./manifest.webmanifest','./assets/velnar-symbol.svg','./assets/radar-qr.svg','./assets/qrcode.min.js','./assets/qrcodejs.LICENSE.txt','./assets/share-export-fix.js','./news.json'];
 const NEWS_URL=new URL('./news.json',self.registration.scope).href;
 const SHARE_EXPORT_LOADER="\n;(function(){if(document.querySelector('script[data-velnar-share-export]'))return;var s=document.createElement('script');s.src='./assets/share-export-fix.js';s.async=false;s.setAttribute('data-velnar-share-export','1');document.head.appendChild(s)})();";
 
 const THEME_META='<meta name="color-scheme" content="light dark"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f4f7"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111318">';
 
-const COMMON_STYLE=`<style id="velnar-theme-v19">
+const COMMON_STYLE=`<style id="velnar-theme-v20">
 .brandbar{top:0!important;border:0!important;border-bottom:1px solid rgba(17,18,20,.075)!important;border-radius:0!important;background:#f3f4f7!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.toc-shell{top:45px!important;margin-top:0!important;background:var(--bg)!important;padding-top:0!important;z-index:70!important}.toc{background:var(--bg)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}@media(max-width:640px){.toc-shell{top:43px!important}}
 .velnar-theme-select{appearance:auto;min-height:32px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--text);padding:5px 10px;font:600 10px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif;outline:none;cursor:pointer}.velnar-theme-select:focus-visible{box-shadow:0 0 0 3px rgba(57,110,227,.16),0 0 0 1px rgba(57,110,227,.48)}.velnar-theme-wrap{display:flex;align-items:center;gap:10px}
 @media(max-width:640px){.velnar-theme-select{max-width:78px;min-height:34px;padding:5px 7px;font-size:9.5px}.velnar-theme-wrap{gap:6px}.mode{display:none!important}}
 @media(prefers-color-scheme:dark){html:not([data-theme="light"]){--bg:#111318;--card:#181a20;--text:#f2f3f5;--muted:#969aa5;--line:#2a2d35;--line-strong:#393d47;--brand:#f2f4ff;--soft:#17191f;--accent:#7f9cff;color-scheme:dark}}
@@ -18,6 +19,7 @@ html[data-theme="dark"],html[data-theme="dark"] body{background:#111318!importan
 html:not([data-theme="light"]) .brandname{color:#f3f5ff!important}html:not([data-theme="light"]) .brandtag,html:not([data-theme="light"]) .product,html:not([data-theme="light"]) .mode,html:not([data-theme="light"]) .archive-mark{color:#9297a3!important}
 html:not([data-theme="light"]) .mobile-open,html:not([data-theme="light"]) .control,html:not([data-theme="light"]) .velnar-theme-select{background:#191c22!important;border-color:#30343d!important;color:#e7e9ee!important}
 html:not([data-theme="light"]) .stat,html:not([data-theme="light"]) .list,html:not([data-theme="light"]) .article,html:not([data-theme="light"]) .toc,html:not([data-theme="light"]) .archive-link{background:#17191f!important;border-color:#2a2d35!important;box-shadow:none!important}
+html:not([data-theme="light"]) .toc-shell{background:#111318!important}
 html:not([data-theme="light"]) .item{background:#17191f!important;border-color:#292c34!important;color:#eceef2!important}
 html:not([data-theme="light"]) .item .title{color:#eef1f6!important}
 html:not([data-theme="light"]) .item .meta,html:not([data-theme="light"]) .item .theme{color:#9ba1ad!important}
@@ -41,6 +43,7 @@ html:not([data-theme="light"]) .share-shell,html:not([data-theme="light"]) .qr-c
 html[data-theme="dark"] .brandname{color:#f3f5ff!important}html[data-theme="dark"] .brandtag,html[data-theme="dark"] .product,html[data-theme="dark"] .mode,html[data-theme="dark"] .archive-mark{color:#9297a3!important}
 html[data-theme="dark"] .mobile-open,html[data-theme="dark"] .control,html[data-theme="dark"] .velnar-theme-select{background:#191c22!important;border-color:#30343d!important;color:#e7e9ee!important}
 html[data-theme="dark"] .stat,html[data-theme="dark"] .list,html[data-theme="dark"] .article,html[data-theme="dark"] .toc,html[data-theme="dark"] .archive-link{background:#17191f!important;border-color:#2a2d35!important;box-shadow:none!important}
+html[data-theme="dark"] .toc-shell{background:#111318!important}
 html[data-theme="dark"] .item{background:#17191f!important;border-color:#292c34!important;color:#eceef2!important}
 html[data-theme="dark"] .item .title{color:#eef1f6!important}
 html[data-theme="dark"] .item .meta,html[data-theme="dark"] .item .theme{color:#9ba1ad!important}
@@ -63,7 +66,7 @@ html[data-theme="dark"] .share-shell,html[data-theme="dark"] .qr-card{background
 .share-card{background:#fff!important;color:#111214!important;color-scheme:light}.share-card .share-brand-name{color:#080c43!important}.share-card .share-title{color:#111214!important}.share-card .share-product,.share-card .share-card-meta,.share-card .share-deck,.share-card .share-url,.share-card .share-qr-copy{color:#777983!important}.share-card .share-qr,.qr-code{background:#fff!important;color-scheme:light}
 </style>`;
 
-const THEME_SCRIPT=`<script id="velnar-theme-runtime-v19">(function(){var K='velnar-radar-theme-v1';function get(){try{var v=localStorage.getItem(K);return v==='light'||v==='dark'||v==='system'?v:'system'}catch(e){return'system'}}function apply(v){if(v!=='light'&&v!=='dark')v='system';if(v==='system')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',v);var m=document.getElementById('velnar-theme-color-manual');if(v==='system'){if(m)m.remove()}else{if(!m){m=document.createElement('meta');m.id='velnar-theme-color-manual';m.name='theme-color';document.head.appendChild(m)}m.content=v==='dark'?'#111318':'#f3f4f7'}var s=document.getElementById('velnarThemeSelect');if(s)s.value=v}window.setVelnarTheme=function(v){try{localStorage.setItem(K,v)}catch(e){}apply(v)};apply(get());document.addEventListener('DOMContentLoaded',function(){var s=document.getElementById('velnarThemeSelect');if(s){s.value=get();s.addEventListener('change',function(){window.setVelnarTheme(this.value)})}});window.addEventListener('storage',function(e){if(e.key===K)apply(get())})})();</script>`;
+const THEME_SCRIPT=`<script id="velnar-theme-runtime-v20">(function(){var K='velnar-radar-theme-v1';function get(){try{var v=localStorage.getItem(K);return v==='light'||v==='dark'||v==='system'?v:'system'}catch(e){return'system'}}function apply(v){if(v!=='light'&&v!=='dark')v='system';if(v==='system')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',v);var m=document.getElementById('velnar-theme-color-manual');if(v==='system'){if(m)m.remove()}else{if(!m){m=document.createElement('meta');m.id='velnar-theme-color-manual';m.name='theme-color';document.head.appendChild(m)}m.content=v==='dark'?'#111318':'#f3f4f7'}var s=document.getElementById('velnarThemeSelect');if(s)s.value=v}window.setVelnarTheme=function(v){try{localStorage.setItem(K,v)}catch(e){}apply(v)};apply(get());document.addEventListener('DOMContentLoaded',function(){var s=document.getElementById('velnarThemeSelect');if(s){s.value=get();s.addEventListener('change',function(){window.setVelnarTheme(this.value)})}});window.addEventListener('storage',function(e){if(e.key===K)apply(get())})})();</script>`;
 
 function picker(){return '<select id="velnarThemeSelect" class="velnar-theme-select" aria-label="页面外观"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select>'}
 
@@ -73,7 +76,7 @@ function decorateHtml(res,isArticle){
   if(!type.includes('text/html'))return Promise.resolve(res);
   return res.text().then(text=>{
     text=text.replace('<meta name="theme-color" content="#f3f4f7">',THEME_META);
-    if(!text.includes('velnar-theme-v19')) text=text.replace('</head>',COMMON_STYLE+THEME_SCRIPT+'</head>');
+    if(!text.includes('velnar-theme-v20')) text=text.replace('</head>',COMMON_STYLE+THEME_SCRIPT+'</head>');
     if(!text.includes('id="velnarThemeSelect"')){
       if(isArticle) text=text.replace('<span class="mode">Research note</span>','<div class="velnar-theme-wrap"><span class="mode">Research note</span>'+picker()+'</div>');
       else text=text.replace('<span class="archive-mark">Research archive</span>','<span class="archive-mark">Research archive</span>'+picker());
