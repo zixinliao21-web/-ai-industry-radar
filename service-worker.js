@@ -1,11 +1,11 @@
-const CACHE='velnar-radar-v17';
+const CACHE='velnar-radar-v18';
 const SHELL=['./','./index.html','./article.html','./manifest.webmanifest','./assets/velnar-symbol.svg','./assets/radar-qr.svg','./assets/qrcode.min.js','./assets/qrcodejs.LICENSE.txt','./assets/share-export-fix.js','./news.json'];
 const NEWS_URL=new URL('./news.json',self.registration.scope).href;
 const SHARE_EXPORT_LOADER="\n;(function(){if(document.querySelector('script[data-velnar-share-export]'))return;var s=document.createElement('script');s.src='./assets/share-export-fix.js';s.async=false;s.setAttribute('data-velnar-share-export','1');document.head.appendChild(s)})();";
 
 const THEME_META='<meta name="color-scheme" content="light dark"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f4f7"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111318">';
 
-const COMMON_STYLE=`<style id="velnar-theme-v17">
+const COMMON_STYLE=`<style id="velnar-theme-v18">
 .brandbar{top:0!important;border:0!important;border-bottom:1px solid rgba(17,18,20,.075)!important;border-radius:0!important;background:#f3f4f7!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
 .velnar-theme-select{appearance:auto;min-height:32px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--text);padding:5px 10px;font:600 10px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif;outline:none;cursor:pointer}.velnar-theme-select:focus-visible{box-shadow:0 0 0 3px rgba(57,110,227,.16),0 0 0 1px rgba(57,110,227,.48)}.velnar-theme-wrap{display:flex;align-items:center;gap:10px}
 @media(max-width:640px){.velnar-theme-select{max-width:78px;min-height:34px;padding:5px 7px;font-size:9.5px}.velnar-theme-wrap{gap:6px}.mode{display:none!important}}
@@ -19,9 +19,9 @@ html[data-theme="dark"] .brandname{color:#f3f5ff!important}html[data-theme="dark
 .share-card{background:#fff!important;color:#111214!important;color-scheme:light}.share-card .share-brand-name{color:#080c43!important}.share-card .share-title{color:#111214!important}.share-card .share-product,.share-card .share-card-meta,.share-card .share-deck,.share-card .share-url,.share-card .share-qr-copy{color:#777983!important}.share-card .share-qr,.qr-code{background:#fff!important;color-scheme:light}
 </style>`;
 
-const THEME_SCRIPT=`<script id="velnar-theme-runtime-v17">(function(){var K='velnar-radar-theme-v1';function get(){try{var v=localStorage.getItem(K);return v==='light'||v==='dark'||v==='system'?v:'system'}catch(e){return'system'}}function apply(v){if(v!=='light'&&v!=='dark')v='system';if(v==='system')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',v);var m=document.getElementById('velnar-theme-color-manual');if(v==='system'){if(m)m.remove()}else{if(!m){m=document.createElement('meta');m.id='velnar-theme-color-manual';m.name='theme-color';document.head.appendChild(m)}m.content=v==='dark'?'#111318':'#f3f4f7'}var s=document.getElementById('velnarThemeSelect');if(s)s.value=v}window.setVelnarTheme=function(v){try{localStorage.setItem(K,v)}catch(e){}apply(v)};apply(get());document.addEventListener('DOMContentLoaded',function(){var s=document.getElementById('velnarThemeSelect');if(s){s.value=get();s.addEventListener('change',function(){window.setVelnarTheme(this.value)})}});window.addEventListener('storage',function(e){if(e.key===K)apply(get())})})();</script>`;
+const THEME_SCRIPT=`<script id="velnar-theme-runtime-v18">(function(){var K='velnar-radar-theme-v1';function get(){try{var v=localStorage.getItem(K);return v==='light'||v==='dark'||v==='system'?v:'system'}catch(e){return'system'}}function apply(v){if(v!=='light'&&v!=='dark')v='system';if(v==='system')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',v);var m=document.getElementById('velnar-theme-color-manual');if(v==='system'){if(m)m.remove()}else{if(!m){m=document.createElement('meta');m.id='velnar-theme-color-manual';m.name='theme-color';document.head.appendChild(m)}m.content=v==='dark'?'#111318':'#f3f4f7'}var s=document.getElementById('velnarThemeSelect');if(s)s.value=v}window.setVelnarTheme=function(v){try{localStorage.setItem(K,v)}catch(e){}apply(v)};apply(get());document.addEventListener('DOMContentLoaded',function(){var s=document.getElementById('velnarThemeSelect');if(s){s.value=get();s.addEventListener('change',function(){window.setVelnarTheme(this.value)})}});window.addEventListener('storage',function(e){if(e.key===K)apply(get())})})();</script>`;
 
-function picker(isArticle){return '<select id="velnarThemeSelect" class="velnar-theme-select" aria-label="页面外观"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select>'}
+function picker(){return '<select id="velnarThemeSelect" class="velnar-theme-select" aria-label="页面外观"><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select>'}
 
 function decorateHtml(res,isArticle){
   if(!res)return Promise.resolve(res);
@@ -29,23 +29,34 @@ function decorateHtml(res,isArticle){
   if(!type.includes('text/html'))return Promise.resolve(res);
   return res.text().then(text=>{
     text=text.replace('<meta name="theme-color" content="#f3f4f7">',THEME_META);
-    if(!text.includes('velnar-theme-v17')) text=text.replace('</head>',COMMON_STYLE+THEME_SCRIPT+'</head>');
+    if(!text.includes('velnar-theme-v18')) text=text.replace('</head>',COMMON_STYLE+THEME_SCRIPT+'</head>');
     if(!text.includes('id="velnarThemeSelect"')){
-      if(isArticle){
-        text=text.replace('<span class="mode">Research note</span>','<div class="velnar-theme-wrap"><span class="mode">Research note</span>'+picker(true)+'</div>');
-      }else{
-        text=text.replace('<span class="archive-mark">Research archive</span>','<span class="archive-mark">Research archive</span>'+picker(false));
-      }
+      if(isArticle) text=text.replace('<span class="mode">Research note</span>','<div class="velnar-theme-wrap"><span class="mode">Research note</span>'+picker()+'</div>');
+      else text=text.replace('<span class="archive-mark">Research archive</span>','<span class="archive-mark">Research archive</span>'+picker());
     }
     const headers=new Headers(res.headers);headers.set('Content-Type','text/html; charset=utf-8');headers.set('Cache-Control','no-store');headers.delete('Content-Length');return new Response(text,{status:res.status,statusText:res.statusText,headers});
   });
 }
 
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()))});
-self.addEventListener('activate',event=>{event.waitUntil((async()=>{const keys=await caches.keys();await Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)));await self.clients.claim();const clients=await self.clients.matchAll({type:'window',includeUncontrolled:true});await Promise.all(clients.map(c=>{try{return c.navigate(c.url)}catch(e){return null}}))})())});
+self.addEventListener('activate',event=>{event.waitUntil((async()=>{const keys=await caches.keys();await Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)));await self.clients.claim()})())});
 self.addEventListener('fetch',event=>{
   const req=event.request;if(req.method!=='GET')return;const url=new URL(req.url);if(url.origin!==location.origin)return;
-  if(url.pathname.endsWith('/news.json')){event.respondWith(fetch(req).then(res=>{if(res.ok)caches.open(CACHE).then(c=>c.put(NEWS_URL,res.clone()));return res}).catch(()=>caches.match(NEWS_URL)));return}
+  if(url.pathname.endsWith('/news.json')){
+    event.respondWith((async()=>{
+      const cache=await caches.open(CACHE);
+      const cached=await cache.match(NEWS_URL);
+      try{
+        const fresh=await fetch(new Request(NEWS_URL,{cache:'no-store',credentials:'same-origin'}));
+        if(fresh.ok){await cache.put(NEWS_URL,fresh.clone());return fresh}
+        if(cached)return cached;
+        return fresh;
+      }catch(err){
+        if(cached)return cached;
+        return new Response(JSON.stringify({updated_at:'',items:[]}),{status:200,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}});
+      }
+    })());return;
+  }
   if(url.pathname.endsWith('/assets/qrcode.min.js')){event.respondWith((async()=>{let res=null;try{const fresh=await fetch(req);if(fresh.ok){res=fresh;caches.open(CACHE).then(c=>c.put(req,fresh.clone()))}}catch{}if(!res)res=await caches.match(req);if(!res)return new Response('/* QRCode unavailable */',{status:503,headers:{'Content-Type':'application/javascript; charset=utf-8'}});const text=await res.text();return new Response(text+SHARE_EXPORT_LOADER,{status:res.status,statusText:res.statusText,headers:{'Content-Type':'application/javascript; charset=utf-8','Cache-Control':'no-store'}})})());return}
   if(req.mode==='navigate'){const isArticle=url.pathname.endsWith('/article.html'),fallback=isArticle?'./article.html':'./index.html';event.respondWith((async()=>{let res=null;try{const fresh=await fetch(req,{cache:'no-store'});if(fresh.ok){res=fresh;caches.open(CACHE).then(c=>c.put(req,fresh.clone()))}}catch{}if(!res)res=await caches.match(req).then(hit=>hit||caches.match(fallback));return decorateHtml(res,isArticle)})());return}
   event.respondWith(caches.match(req).then(hit=>hit||fetch(req).then(res=>{if(res.ok)caches.open(CACHE).then(c=>c.put(req,res.clone()));return res})));
