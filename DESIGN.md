@@ -1,33 +1,36 @@
 # VELNAR Intelligence Radar — Design Language
 
-Version: **V0.5**  
+Version: **V0.6**  
 Status: **active**  
-Decision record: [`docs/plans/design-language.md`](docs/plans/design-language.md)
+Product contract: [`PRODUCT.md`](PRODUCT.md)
 
-> **Precision Editorial × Quiet Technology.** The Radar is a persistent intelligence product: precise, calm, research-first, technically credible, and quietly branded. It should read like serious analysis inside a refined software product — never like a generic AI-SaaS landing page or a decorative magazine template.
+> **Precision Editorial × Quiet Technology.** Radar is a persistent intelligence product: precise, calm, research-first, technically credible, and quietly branded. It should feel like serious analysis inside a refined software product — never a generic AI-news site, AI-SaaS landing page, or decorative magazine template.
 
 ## 1. Source of truth
 
-This document governs visual and interaction changes to the Radar.
+This document governs visual and interaction changes. `PRODUCT.md` governs product purpose and editorial behavior.
 
 Implementation evidence:
 
-- [`index.html`](index.html) — directory, read state, directory motion, return-position behavior
-- [`article.html`](article.html) — long-form reading surface, section navigation, share/read controls, progress, archive traversal, Share Card generation
-- [`assets/velnar-symbol.svg`](assets/velnar-symbol.svg) — VELNAR brand symbol and signature gradient
+- `index.html` — directory / read-state surface
+- `article.html` — long-form reading surface
+- `assets/radar-runtime.css` / `assets/radar-runtime.js` — shared appearance and sticky runtime behavior
+- `assets/research-discussion-bridge.js` — notes, excerpt capture, strategic labels, GPT discussion handoff
+- `assets/share-export-fix.js` — Share Card export
+- `service-worker.js` — PWA cache and runtime injection
+- `news.json` — canonical research archive
 
-For future UI work:
+Rules:
 
-1. Preserve product behavior first.
+1. Preserve product behavior before visual polish.
 2. Extend existing tokens before inventing new ones.
-3. Keep the current static HTML/CSS/JS stack unless a separate product requirement justifies migration.
-4. Do not alter `news.json` content or semantics as part of a UI-only change.
+3. Keep the static HTML/CSS/JS architecture unless a real product requirement justifies migration.
+4. UI-only work must not compress research or mutate `news.json` semantics.
+5. Reading remains primary; utility controls remain compact and secondary.
 
 ## 2. Typography — Precision Sans
 
-Approved direction: **Precision Sans**.
-
-Use the system-native stack present in `index.html` and `article.html`:
+Approved stack:
 
 ```css
 -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", Arial, sans-serif
@@ -35,25 +38,16 @@ Use the system-native stack present in `index.html` and `article.html`:
 
 Rules:
 
-- No serif display face in the Radar without a new explicit design decision.
-- Hierarchy comes from size, weight, spacing, measure, tracking and line-height — not extra font families.
-- Large titles may use negative tracking and balanced wrapping.
-- Body copy stays near 16px with generous line-height.
-- Changing numbers and metadata use tabular figures.
-- Long-form article body measure stays near the current `660px` reading column.
-- Avoid typography that makes the site read as a magazine, Substack clone, or marketing landing page.
+- no serif display face without a new explicit decision
+- hierarchy comes from size, weight, spacing, measure and line-height
+- article body stays near `16px` with generous leading
+- article reading measure stays near `660px`
+- metadata remains visually secondary
+- avoid typography that makes Radar look like a magazine, Substack clone, or marketing page
 
-Current implementation:
+## 3. Color and appearance
 
-- Directory hero title: responsive `42–68px`, tight line-height, strong negative tracking.
-- Directory row title: approximately `16px`, medium/semi-bold weight.
-- Article title: responsive `34–48px` desktop, approximately `31px` mobile.
-- Article body: `16px`, approximately `1.92` line-height.
-- Metadata and section labels remain visually secondary.
-
-## 3. Color system
-
-Current tokens:
+Light baseline:
 
 ```css
 --bg: #f3f4f7;
@@ -66,62 +60,75 @@ Current tokens:
 --accent: #396ee3;
 ```
 
-Principles:
+Dark baseline is near:
 
-- Neutral canvas and surfaces dominate.
-- Primary text is off-black, not pure black.
-- Borders are structural and quiet.
-- Accent color is scarce and state-driven.
-- Do not add multiple competing accent families.
-- Do not introduce decorative status colors unless they communicate a real product state.
+```css
+--bg: #111318;
+--card: #17191f / #181a20;
+--text: #f2f3f5;
+--muted: #969aa5;
+--line: #2a2d35;
+--line-strong: #393d47;
+--accent: #7f9cff;
+```
+
+Appearance selector is a three-state control:
+
+- 跟随系统
+- 浅色
+- 深色
+
+The choice is browser-local under `velnar-radar-theme-v1`.
+
+Dark mode is not a simple inversion. Every interaction state must be checked independently: normal, read, unread, hover, focus-visible, active, sticky navigation, previous/next article cards, dialogs and note surfaces.
 
 ### VELNAR gradient budget
 
-The blue-purple VELNAR gradient is a **signature brand asset, not a general decoration language**.
+The blue-purple gradient is a signature brand asset, not a general decoration language.
 
 Allowed by default:
 
 1. VELNAR symbol
 2. article reading-progress indicator
-3. rare brand-signature artifacts with explicit product purpose
+3. rare brand-signature artifacts with clear product purpose
 
-Not allowed by default:
+Do not introduce gradient buttons, gradient text, ambient glows or generic gradient cards.
 
-- gradient buttons
-- gradient text
-- gradient cards
-- large blue-purple hero gradients
-- ambient blue-purple glow backgrounds
-- generic gradient state indicators
+## 4. Surfaces and sticky chrome
 
-## 4. Surfaces and elevation
+Radar should remain visually flat and precise.
 
-The Radar should remain visually flat and precise.
-
-Directory:
+### Directory
 
 - one-column information architecture
-- one large editorial/product hero, followed by compact state statistics
-- list-as-directory rather than a dashboard-card content layout
-- `1px` structural borders
-- almost no shadow
-- compact metadata
+- large editorial/product hero followed by compact state statistics
+- list-as-directory, not dashboard-card content layout
+- structural `1px` borders
+- minimal shadow
 - unread first, read second
-- unread state uses a narrow solid accent rule; read state uses reduced emphasis rather than recoloring the full row
+- unread uses a narrow accent rule; read uses reduced emphasis
 
-Article:
+### Article
 
-- white article surface on neutral canvas
-- rounded outer shell, approximately `24px` desktop / `19px` mobile
+- article surface on neutral canvas
+- rounded outer shell
 - narrow `660px` reading measure inside a wider product shell
-- no decorative card segmentation for every article section
-- section hierarchy comes from typography, spacing, short structural rules, and restrained tonal labels
-- Sources and Discussion Question may use dedicated presentation because they are distinct reading functions
-- sticky section navigation may use translucent material because it is functional chrome, not decorative glassmorphism
+- do not turn every section into a card
+- section hierarchy comes from typography, spacing and quiet rules
 
-Use elevation only when it communicates hierarchy. Do not add generic shadows to make surfaces feel “premium.”
+### Sticky hierarchy
 
-## 5. Layout and spacing
+The fixed reading stack is intentional:
+
+```text
+VELNAR header
+→ section guide
+→ article content
+```
+
+The header must sit flush to the viewport top and use an opaque background so article text never shows through. The section guide sits immediately beneath it without a transparent gap. Sticky chrome may use borders, but avoid unnecessary floating-card framing or glassmorphism.
+
+## 5. Layout
 
 Directory shell:
 
@@ -143,24 +150,13 @@ Article reading column:
 
 Rules:
 
-- Preserve generous whitespace.
-- The hero may be significantly more spacious than the article directory below it.
-- Keep directory rows compact enough for scanning.
-- Keep article rhythm materially more relaxed than directory rhythm.
-- Do not force symmetric spacing when optical balance calls for a small adjustment.
-- Mobile layouts should preserve hierarchy rather than merely shrink the desktop view.
-- Statistics should stay compact on narrow screens.
-- Article archive navigation collapses from two columns to one column on mobile.
+- preserve generous whitespace without creating dead zones
+- directory rows remain compact and scannable
+- article rhythm is materially calmer than directory rhythm
+- mobile preserves hierarchy rather than merely shrinking desktop
+- article archive navigation collapses to one column on narrow screens
 
 ## 6. Motion — Precision Motion
-
-Motion personality:
-
-- responsive
-- controlled
-- quiet
-- physical
-- intentional
 
 Canonical easing:
 
@@ -168,7 +164,7 @@ Canonical easing:
 --ease-velnar: cubic-bezier(.23,1,.32,1);
 ```
 
-Duration palette:
+Typical durations:
 
 ```css
 --dur-press: 120ms;
@@ -180,127 +176,133 @@ Duration palette:
 
 Rules:
 
-- Use the cheapest mechanism that works; prefer CSS for deterministic UI motion.
-- Use `transform` and `opacity` for spatial motion wherever practical.
-- High-frequency interactions should be almost imperceptible.
-- Never use `transition: all`.
-- Hover movement must be gated behind `(hover:hover) and (pointer:fine)`.
-- `prefers-reduced-motion` is mandatory.
-- Do not animate information merely for decoration.
-- No bounce unless a future direct-manipulation gesture genuinely carries momentum.
-- Do not introduce a motion library for effects CSS can handle.
-- High-frequency scroll-derived updates should be frame-throttled when JavaScript is required.
-
-### Directory motion budget
-
-Allowed:
-
-- restrained VELNAR brand entrance
-- short capped list cascade
-- subtle hover translation
-- press feedback
-- read-state transition
-
-The list cascade must not accumulate indefinitely. Current implementation caps delay after the first six items.
-
-### Article motion budget
-
-Allowed:
-
-- restrained brand entrance
-- linear reading-progress indicator
-- micro hover/focus feedback on controls and sources
-- restrained active-section underline
-- subtle archive-navigation hover
-- small back-to-top reveal
-- restrained Share Card modal entrance
-
-Default prohibited:
-
-- paragraph or section stagger
-- per-section scroll reveals
-- parallax
-- cinematic page transitions
-- ambient looping motion that competes with reading
+- use the cheapest mechanism that works
+- prefer transform / opacity for spatial motion
+- never use `transition: all`
+- gate hover movement behind `(hover:hover) and (pointer:fine)`
+- `prefers-reduced-motion` is mandatory
+- do not animate information for decoration
+- no paragraph stagger, per-section reveal, parallax or cinematic page transition
 
 ## 7. Long-form reading system
 
-The article page is a reading product, not only a styled document.
+Required article behaviors:
 
-Required behaviors:
+- reading time derived from actual text
+- section and source counts derived from real data
+- sticky horizontally scrollable section navigator when justified
+- stable section anchors
+- active section indication via `IntersectionObserver`
+- top reading-progress indicator
+- read/unread toggle
+- newer/older article navigation from the archive ordering
+- back-to-top only after meaningful scroll depth
+- directory return-position restoration where possible
 
-- Dynamic reading time derived from actual article text.
-- Dynamic section count and source count where present.
-- Sticky, horizontally scrollable section navigator only when an article has enough sections to justify it.
-- Stable deep-link anchors for article sections.
-- Active section indication driven by `IntersectionObserver`, not manual scroll polling.
-- Reading progress indicator at the top of the page.
-- Read/unread control is a true toggle in the current session.
-- Newer/older article navigation is derived from the same archive ordering as the directory.
-- Back-to-top appears only after meaningful scroll depth.
-- Returning to the directory restores the prior directory scroll position when possible.
+Strategic section labels should reinforce the product purpose. Preferred primary labels are:
 
-Utility metadata and navigation must be derived from real data; never invent live status, popularity, completion rate, or other unsupported claims.
+- 发生了什么
+- 为什么值得我们注意
+- 它改变了我们什么判断
+- 我们不应该因此得出什么结论
+- 值得继续讨论的问题
 
-## 8. Share Artifact System
+Optional sections may appear when they add genuine information.
+
+## 8. Research → Discussion Bridge
+
+Radar is intentionally not a chat application. The reading surface should help the user leave with better questions and move those questions into GPT.
+
+### Notebook
+
+- notebook control is icon-first
+- icon may show a small accent dot when an article has local notes
+- notes auto-save per article
+- notes remain browser-local
+- notebook opens as a restrained side sheet on desktop and a mobile-appropriate sheet on narrow screens
+
+### Selection capture
+
+When article text is selected, a small notebook-style icon may appear near the selection. Clicking it stores the excerpt in the article notebook.
+
+The action must be visually compact and should not cover the text being read.
+
+### Directory note marker
+
+Articles with local notes may show a very small notebook marker in directory metadata. This is a utility signal, not a new primary state.
+
+### Discussion handoff
+
+The **讨论** action:
+
+1. builds a Discussion Packet from article context + local notes / excerpts
+2. copies it to the clipboard
+3. opens a configured ChatGPT discussion-thread URL, or ChatGPT home as fallback
+
+A dedicated thread URL may be configured locally. The web page must never pretend it can send the message into ChatGPT automatically.
+
+## 9. Share Artifact System
 
 Article sharing is a product surface, not merely a copied URL.
 
 Current Share Card contract:
 
-- Clicking **分享** opens a VELNAR Share Card before any external share action.
-- The card is generated entirely from the current article data already loaded in the browser.
-- Card content may include VELNAR identity, grade, date, article title, up to three themes, deck, article URL, and Radar signature.
-- The preview and exported PNG should remain visually consistent enough to be recognizable as the same artifact.
-- Export target is `1200 × 630` PNG for broad social compatibility.
-- On platforms supporting file-based Web Share, **分享卡片** shares the PNG directly.
-- Unsupported browsers fall back to saving the PNG rather than silently failing.
-- **保存 PNG** and **复制链接** remain explicit independent actions.
-- Article content is not uploaded to a rendering service; Share Card generation is local in the browser.
-- Long URLs may be shown as compact link text. A dynamic QR code may be added later if it can remain reliable and privacy-preserving without introducing a fragile third-party dependency.
+- preview ratio: **4:3**
+- logical composition: approximately **1440 × 1080**
+- high-resolution PNG export: approximately **2880 × 2160**
+- local generation only
+- VELNAR identity, grade, date, title, themes, deck, article URL and Radar signature
+- dynamic article QR code integrated into the lower-right functional area
+- QR remains black-on-white for reliability
+- Share Card remains a stable light brand artifact even when the reading UI is dark
+- file-based Web Share is used where supported; otherwise save PNG
+- copy-link remains an independent fallback
 
-Visual rules:
+The card should read as a research artifact, not a social-media marketing poster.
 
-- Share Cards use the same Precision Sans system.
-- The VELNAR symbol is the main branded visual anchor.
-- The card should read as a research artifact, not a social-media marketing poster.
-- Avoid decorative statistics, fake popularity indicators, slogans, or exaggerated calls to action.
-- Brand navy and neutral surfaces dominate; gradients remain scarce.
+## 10. Interaction and accessibility
 
-## 9. Interaction and accessibility
+Requirements:
 
-These are design requirements, not later compliance work:
-
-- article entries are semantic anchors, not click-only containers
-- preserve normal browser link behavior: keyboard activation, context menu, open-in-new-tab
-- visible `:focus-visible` states
+- article entries remain semantic anchors
+- preserve normal browser behavior: keyboard activation, context menu, open-in-new-tab
+- visible `:focus-visible`
 - skip-to-content / skip-to-article links
-- touch devices must not inherit desktop hover movement
-- `prefers-reduced-motion` support
-- controls should provide immediate press feedback
-- local read/unread state remains browser-local
-- local/session storage access must fail safely if browser storage is malformed or unavailable
-- navigation utilities must retain readable labels and not depend on icon-only interpretation
-- Share Card modal closes via an explicit close control, backdrop interaction, and Escape key; focus returns to the originating control
+- touch devices do not inherit desktop hover motion
+- reduced-motion support
+- controls provide immediate press feedback
+- sticky chrome never hides target headings
+- storage failures do not break primary reading
+- Share Card modal and note sheet have explicit close paths
+- icon-only notebook controls always have accessible labels / titles
 
-Do not remove browser-native behavior in the name of visual polish.
+## 11. Browser-local state
 
-## 10. Brand presence
+These states remain local and must never enter `news.json`:
 
-VELNAR should be recognizable without dominating the research content.
+```text
+ai-industry-radar-read-v1
+velnar-radar-notes-v1
+velnar-radar-discussion-thread-v1
+velnar-radar-theme-v1
+```
 
-Default brand expression:
+## 12. Brand presence
+
+VELNAR should be recognizable without dominating research.
+
+Default expression:
 
 - VELNAR symbol
-- `VELNAR` wordmark text treatment
-- deep navy brand color
-- signature gradient used sparingly
+- `VELNAR` wordmark treatment
+- deep navy in light mode / calibrated light treatment in dark mode
+- scarce signature gradient
 - precise spacing and motion discipline
-- `Intelligence Radar` acts as the product identity; avoid inventing additional public-facing VELNAR sub-brand names without approval
+- `Intelligence Radar` remains the product identity
 
-Avoid repeating the logo, gradient or brand name so often that the page becomes promotional.
+Avoid repeating the logo, gradient or brand name so often that the product becomes promotional.
 
-## 11. Explicit anti-patterns
+## 13. Explicit anti-patterns
 
 Do not introduce by default:
 
@@ -312,44 +314,43 @@ Do not introduce by default:
 - decorative blur everywhere
 - gradient text
 - playful spring bounce
-- giant animated hero sections
-- generic three-card SaaS feature layouts
-- excessive pill-shaped containers
+- giant animated heroes
+- generic three-card SaaS layouts
+- excessive pill containers
 - motion that delays content access
-- a second typography family without explicit approval
-- fake online/live/health indicators used only as decoration
+- fake live / health indicators
 - fabricated utility metadata
-- marketing-style Share Cards that overpower the article itself
+- marketing-style Share Cards
+- a chat box embedded into Radar merely because GPT discussion exists elsewhere
+- full PKM / Notion-style complexity around the notebook
 
-## 12. Per-change checklist
+## 14. Per-change checklist
 
-Before shipping any UI change:
+Before shipping a UI change:
 
-- [ ] Existing read/unread behavior still works.
-- [ ] Article navigation still works with normal browser link behaviors.
-- [ ] Directory return position behaves sensibly.
-- [ ] Desktop and mobile hierarchy remain intact.
-- [ ] Typography remains Precision Sans.
-- [ ] New colors fit the neutral palette and accent budget.
-- [ ] VELNAR gradient is used only for a sanctioned brand-signature role.
-- [ ] Motion uses existing duration/easing tokens where applicable.
-- [ ] Hover movement is pointer-gated.
-- [ ] Reduced motion is handled.
-- [ ] Long-form article readability is not sacrificed for visual novelty.
-- [ ] Section navigation and article traversal are derived from real article data.
-- [ ] Storage failures do not break the primary reading flow.
-- [ ] Share Card data is derived from the current article and remains local unless the user explicitly shares it.
-- [ ] No new dependency or framework was introduced without a product-level reason.
+- [ ] read/unread still works
+- [ ] notes / excerpts remain local and safe
+- [ ] discussion handoff still builds a useful packet
+- [ ] normal browser link behavior still works
+- [ ] directory return position remains sensible
+- [ ] desktop and mobile hierarchy remain intact
+- [ ] light / dark / system modes all remain readable
+- [ ] typography remains Precision Sans
+- [ ] new colors fit the neutral palette and accent budget
+- [ ] motion stays inside existing duration/easing rules
+- [ ] reduced motion is handled
+- [ ] article readability is not sacrificed for utility UI
+- [ ] Share Card remains local, 4:3, high-resolution and QR-readable
+- [ ] no new framework or dependency was introduced without a product-level reason
 
-## 13. Open questions
+## 15. Open questions
 
-These are intentionally **not** decisions yet:
+These remain undecided until a real product need appears:
 
-- whether future VELNAR research products outside the Radar should use a separate editorial-serif system
-- whether Radar eventually needs a dark appearance
-- whether a shared VELNAR design system should be extracted across multiple products
-- whether article imagery / diagrams should gain a standardized treatment
-- whether archive scale will eventually justify topic filtering or search
-- whether article-specific dynamic QR codes should become a permanent Share Card element
+- whether future VELNAR research products outside Radar should use a separate editorial-serif system
+- whether a shared cross-product VELNAR design system should be extracted
+- whether article imagery / diagrams need a standardized treatment
+- whether archive scale will justify search or topic filtering
+- whether a future Discussion Queue becomes useful after real note volume accumulates
 
-Do not resolve these by inference. They require a future explicit design decision when the product need appears.
+Do not resolve these by inference.
