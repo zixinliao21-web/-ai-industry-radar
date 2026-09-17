@@ -1,10 +1,14 @@
-const CACHE='velnar-radar-v23';
+const CACHE='velnar-radar-v24';
 const SHELL=['./','./index.html','./article.html','./manifest.webmanifest','./assets/velnar-symbol.svg','./assets/radar-qr.svg','./assets/qrcode.min.js','./assets/qrcodejs.LICENSE.txt','./assets/share-export-fix.js','./assets/radar-runtime.css','./assets/radar-runtime.js','./assets/research-discussion-bridge.js','./news.json'];
 const NEWS_URL=new URL('./news.json',self.registration.scope).href;
 const SHARE_EXPORT_LOADER="\n;(function(){if(document.querySelector('script[data-velnar-share-export]'))return;var s=document.createElement('script');s.src='./assets/share-export-fix.js';s.async=false;s.setAttribute('data-velnar-share-export','1');document.head.appendChild(s)})();";
 const THEME_META='<meta name="color-scheme" content="light dark"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f4f7"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111318">';
-const RUNTIME_HEAD='<link rel="stylesheet" href="./assets/radar-runtime.css"><script src="./assets/radar-runtime.js"></script>';
-const BRIDGE_SCRIPT='<script src="./assets/research-discussion-bridge.js"></script>';
+const RUNTIME_CSS='<link rel="stylesheet" href="./assets/radar-runtime.css">';
+const LATE_LOADER=`<script id="velnar-enhancement-loader">(function(){
+function add(src,id){if(document.getElementById(id))return;var s=document.createElement('script');s.id=id;s.src=src;s.async=false;document.body.appendChild(s)}
+function boot(){add('./assets/radar-runtime.js','velnar-runtime-script');if(!location.pathname.endsWith('/article.html')){add('./assets/research-discussion-bridge.js','velnar-discussion-script');return}var tries=0,t=setInterval(function(){tries++;if(document.querySelector('#articleRoot .article')){clearInterval(t);add('./assets/research-discussion-bridge.js','velnar-discussion-script')}else if(tries>=100){clearInterval(t)}},120)}
+if(document.readyState==='complete')setTimeout(boot,0);else window.addEventListener('load',function(){setTimeout(boot,0)},{once:true});
+})();</script>`;
 
 function decorateHtml(res){
   if(!res)return Promise.resolve(res);
@@ -12,8 +16,8 @@ function decorateHtml(res){
   if(!type.includes('text/html'))return Promise.resolve(res);
   return res.text().then(text=>{
     text=text.replace('<meta name="theme-color" content="#f3f4f7">',THEME_META);
-    if(!text.includes('assets/radar-runtime.css'))text=text.replace('</head>',RUNTIME_HEAD+'</head>');
-    if(!text.includes('assets/research-discussion-bridge.js'))text=text.replace('</body>',BRIDGE_SCRIPT+'</body>');
+    if(!text.includes('assets/radar-runtime.css'))text=text.replace('</head>',RUNTIME_CSS+'</head>');
+    if(!text.includes('id="velnar-enhancement-loader"'))text=text.replace('</body>',LATE_LOADER+'</body>');
     const headers=new Headers(res.headers);
     headers.set('Content-Type','text/html; charset=utf-8');
     headers.set('Cache-Control','no-store');
