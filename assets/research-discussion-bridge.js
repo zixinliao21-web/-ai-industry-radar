@@ -78,10 +78,10 @@
       sources:'Sources｜来源'
     };
     Object.entries(labels).forEach(([key,label])=>{
-      const h=document.querySelector('#sec-'+key+' h2');if(h)h.textContent=label;
+      const h=document.querySelector('#sec-'+key+' h2');if(h&&h.textContent!==label)h.textContent=label;
     });
     const tocLabels={fact:'Signal',why_it_matters:'Why us',what_is_new:'Delta',map_change:'Map',challenges_existing_assumptions:'Our view',hype_uncertainty:'Guardrail',startup_implications:'Action',prediction:'Watch',discussion_question:'Discuss',sources:'Sources'};
-    document.querySelectorAll('.toc-link[data-key]').forEach(a=>{if(tocLabels[a.dataset.key])a.textContent=tocLabels[a.dataset.key]});
+    document.querySelectorAll('.toc-link[data-key]').forEach(a=>{const label=tocLabels[a.dataset.key];if(label&&a.textContent!==label)a.textContent=label});
     const hero=document.querySelector('.reading-meta');
     if(hero&&!document.querySelector('.vrb-lens-note')){const n=document.createElement('div');n.className='vrb-lens-note';n.textContent='战略观察 · 重点看它对我们既有判断的增量';hero.insertAdjacentElement('afterend',n)}
   }
@@ -176,8 +176,7 @@
     document.getElementById('vrbSelectionBtn').addEventListener('click',()=>{if(!pendingQuote)return;const e=getEntry();if(!e.quotes.includes(pendingQuote))e.quotes.push(pendingQuote);saveEntry(e);showToastSafe('已记下');selection.classList.remove('show');window.getSelection()?.removeAllRanges();pendingQuote='';});
 
     const root=document.getElementById('articleRoot');
-    const mo=new MutationObserver(()=>{if(root.querySelector('.article')){applyStrategicLabels();updateNoteState()}});mo.observe(root,{childList:true,subtree:true});
-    if(root.querySelector('.article'))applyStrategicLabels();
+    if(root&&root.querySelector('.article'))applyStrategicLabels();
     updateNoteState();
   }
 
