@@ -1,12 +1,28 @@
-const CACHE='velnar-radar-v25';
-const SHELL=['./','./index.html','./article.html','./manifest.webmanifest','./assets/velnar-symbol.svg','./assets/radar-qr.svg','./assets/qrcode.min.js','./assets/qrcodejs.LICENSE.txt','./assets/share-export-fix.js','./assets/radar-runtime.css','./assets/radar-runtime.js','./assets/research-discussion-bridge.js','./news.json'];
-const NEWS_URL=new URL('./news.json',self.registration.scope).href;
+const CACHE='velnar-radar-v26';
+const SHELL=[
+  './','./index.html','./article.html',
+  './consumer-radar.html','./consumer-article.html',
+  './deep-read.html','./deep-read-article.html',
+  './manifest.webmanifest',
+  './assets/velnar-symbol.svg','./assets/radar-qr.svg',
+  './assets/qrcode.min.js','./assets/qrcodejs.LICENSE.txt',
+  './assets/share-export-fix.js','./assets/radar-runtime.css','./assets/radar-runtime.js','./assets/research-discussion-bridge.js',
+  './news.json','./consumer-radar.json','./deep-read.json'
+];
+const DATA_FILES=['news.json','consumer-radar.json','deep-read.json'];
 const SHARE_EXPORT_LOADER="\n;(function(){if(document.querySelector('script[data-velnar-share-export]'))return;var s=document.createElement('script');s.src='./assets/share-export-fix.js';s.async=false;s.setAttribute('data-velnar-share-export','1');document.head.appendChild(s)})();";
 const THEME_META='<meta name="color-scheme" content="light dark"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f4f7"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111318">';
 const RUNTIME_CSS='<link rel="stylesheet" href="./assets/radar-runtime.css">';
 const LATE_LOADER=`<script id="velnar-enhancement-loader">(function(){
 function add(src,id){if(document.getElementById(id))return;var s=document.createElement('script');s.id=id;s.src=src;s.async=false;document.body.appendChild(s)}
-function boot(){add('./assets/radar-runtime.js','velnar-runtime-script');if(!location.pathname.endsWith('/article.html')){add('./assets/research-discussion-bridge.js','velnar-discussion-script');return}var tries=0,t=setInterval(function(){tries++;if(document.querySelector('#articleRoot .article')){clearInterval(t);add('./assets/research-discussion-bridge.js','velnar-discussion-script')}else if(tries>=100){clearInterval(t)}},120)}
+function boot(){
+  add('./assets/radar-runtime.js','velnar-runtime-script');
+  var p=location.pathname;
+  var isIndustryIndex=p.endsWith('/')||p.endsWith('/index.html');
+  if(isIndustryIndex){add('./assets/research-discussion-bridge.js','velnar-discussion-script');return}
+  if(!p.endsWith('/article.html'))return;
+  var tries=0,t=setInterval(function(){tries++;if(document.querySelector('#articleRoot .article')){clearInterval(t);add('./assets/research-discussion-bridge.js','velnar-discussion-script')}else if(tries>=100){clearInterval(t)}},120)
+}
 if(document.readyState==='complete')setTimeout(boot,0);else window.addEventListener('load',function(){setTimeout(boot,0)},{once:true});
 })();</script>`;
 
@@ -24,6 +40,16 @@ function decorateHtml(res){
     headers.delete('Content-Length');
     return new Response(text,{status:res.status,statusText:res.statusText,headers});
   });
+}
+
+function dataFileFor(pathname){return DATA_FILES.find(name=>pathname.endsWith('/'+name))||null}
+function fallbackFor(pathname){
+  if(pathname.endsWith('/article.html'))return './article.html';
+  if(pathname.endsWith('/consumer-article.html'))return './consumer-article.html';
+  if(pathname.endsWith('/consumer-radar.html'))return './consumer-radar.html';
+  if(pathname.endsWith('/deep-read-article.html'))return './deep-read-article.html';
+  if(pathname.endsWith('/deep-read.html'))return './deep-read.html';
+  return './index.html';
 }
 
 self.addEventListener('install',event=>{
@@ -44,13 +70,15 @@ self.addEventListener('fetch',event=>{
   const url=new URL(req.url);
   if(url.origin!==location.origin)return;
 
-  if(url.pathname.endsWith('/news.json')){
+  const dataFile=dataFileFor(url.pathname);
+  if(dataFile){
     event.respondWith((async()=>{
       const cache=await caches.open(CACHE);
-      const cached=await cache.match(NEWS_URL);
+      const canonical=new URL('./'+dataFile,self.registration.scope).href;
+      const cached=await cache.match(canonical);
       try{
-        const fresh=await fetch(new Request(NEWS_URL,{cache:'no-store',credentials:'same-origin'}));
-        if(fresh.ok){await cache.put(NEWS_URL,fresh.clone());return fresh}
+        const fresh=await fetch(new Request(canonical,{cache:'no-store',credentials:'same-origin'}));
+        if(fresh.ok){await cache.put(canonical,fresh.clone());return fresh}
         if(cached)return cached;
         return fresh;
       }catch{
@@ -90,7 +118,7 @@ self.addEventListener('fetch',event=>{
   }
 
   if(req.mode==='navigate'){
-    const fallback=url.pathname.endsWith('/article.html')?'./article.html':'./index.html';
+    const fallback=fallbackFor(url.pathname);
     event.respondWith((async()=>{
       let res=null;
       try{
