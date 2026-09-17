@@ -1,10 +1,10 @@
-const CACHE='velnar-radar-v15';
+const CACHE='velnar-radar-v16';
 const SHELL=['./','./index.html','./article.html','./manifest.webmanifest','./assets/velnar-symbol.svg','./assets/radar-qr.svg','./assets/qrcode.min.js','./assets/qrcodejs.LICENSE.txt','./assets/share-export-fix.js','./news.json'];
 const NEWS_URL=new URL('./news.json',self.registration.scope).href;
 const SHARE_EXPORT_LOADER="\n;(function(){if(document.querySelector('script[data-velnar-share-export]'))return;var s=document.createElement('script');s.src='./assets/share-export-fix.js';s.async=false;s.setAttribute('data-velnar-share-export','1');document.head.appendChild(s)})();";
-const INDEX_BRAND_STYLE='<style id="velnar-sticky-brand-v15">.brandbar{top:0!important;margin:0 0 52px!important;padding:10px 0 12px!important;border:0!important;border-bottom:1px solid rgba(17,18,20,.075)!important;border-radius:0!important;background:#f3f4f7!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}@media(max-width:760px){.brandbar{top:0!important;margin:0 0 34px!important;padding:8px 0 10px!important}}</style>';
-const ARTICLE_BRAND_STYLE='<style id="velnar-sticky-brand-v15">.brandbar{top:0!important;margin:0 0 26px!important;padding:8px 0 9px!important;border:0!important;border-bottom:1px solid rgba(17,18,20,.075)!important;border-radius:0!important;background:#f3f4f7!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}.mode{color:#a0a2aa!important}@media(max-width:640px){.brandbar{top:0!important;margin:0 0 18px!important;padding:7px 0 8px!important}}</style>';
-const DARK_THEME_STYLE=`<style id="velnar-system-theme-v15">
+const INDEX_BRAND_STYLE='<style id="velnar-sticky-brand-v16">.brandbar{top:0!important;margin:0 0 52px!important;padding:10px 0 12px!important;border:0!important;border-bottom:1px solid rgba(17,18,20,.075)!important;border-radius:0!important;background:#f3f4f7!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}@media(max-width:760px){.brandbar{top:0!important;margin:0 0 34px!important;padding:8px 0 10px!important}}</style>';
+const ARTICLE_BRAND_STYLE='<style id="velnar-sticky-brand-v16">.brandbar{top:0!important;margin:0 0 26px!important;padding:8px 0 9px!important;border:0!important;border-bottom:1px solid rgba(17,18,20,.075)!important;border-radius:0!important;background:#f3f4f7!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}.mode{color:#a0a2aa!important}@media(max-width:640px){.brandbar{top:0!important;margin:0 0 18px!important;padding:7px 0 8px!important}}</style>';
+const DARK_THEME_STYLE=`<style id="velnar-system-theme-v16">
 :root{color-scheme:light dark}
 @media(prefers-color-scheme:dark){
 :root{--bg:#111318;--card:#181a20;--text:#f2f3f5;--muted:#969aa5;--line:#2a2d35;--line-strong:#393d47;--brand:#f2f4ff;--soft:#17191f;--accent:#7f9cff;color-scheme:dark}
@@ -23,15 +23,37 @@ html,body{background:var(--bg)!important;color:var(--text)!important}
 ::selection{background:rgba(127,156,255,.28)}
 }
 </style>`;
+const THEME_PICKER_STYLE=`<style id="velnar-theme-picker-v16">
+.velnar-theme-actions{display:flex;align-items:center;gap:10px}.velnar-theme-select{appearance:auto;min-height:32px;max-width:92px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--text);padding:5px 9px;font:600 10px/1.2 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif;outline:none;cursor:pointer}.velnar-theme-select:focus-visible{box-shadow:0 0 0 3px rgba(57,110,227,.16),0 0 0 1px rgba(57,110,227,.48)}
+@media(max-width:640px){.velnar-theme-select{max-width:76px;min-height:34px;padding:5px 7px;font-size:9.5px}.velnar-theme-actions{gap:6px}.mode{display:none!important}}
+</style>`;
 const THEME_META='<meta name="color-scheme" content="light dark"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f4f7"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111318">';
+const THEME_RUNTIME_SCRIPT=`<script id="velnar-theme-runtime-v16">
+(function(){
+  var KEY='velnar-radar-theme-v1',SYSTEM_ID='velnar-system-theme-v16',FORCED_ID='velnar-forced-dark-v16';
+  function readMode(){try{var v=localStorage.getItem(KEY);return v==='light'||v==='dark'||v==='system'?v:'system'}catch(e){return'system'}}
+  function systemStyle(){return document.getElementById(SYSTEM_ID)}
+  function enableSystem(on){var s=systemStyle();if(s&&s.sheet)s.sheet.disabled=!on}
+  function removeForced(){var f=document.getElementById(FORCED_ID);if(f)f.remove()}
+  function ensureForcedDark(){var f=document.getElementById(FORCED_ID);if(f)return f;var s=systemStyle();if(!s)return null;var raw=s.textContent||'',marker='@media(prefers-color-scheme:dark){',start=raw.indexOf(marker),end=raw.lastIndexOf('}');if(start<0||end<=start)return null;f=document.createElement('style');f.id=FORCED_ID;f.textContent=':root{color-scheme:dark}\n'+raw.slice(start+marker.length,end);document.head.appendChild(f);return f}
+  function updateThemeColor(mode){var m=document.getElementById('velnar-theme-color-manual');if(mode==='system'){if(m)m.remove();return}if(!m){m=document.createElement('meta');m.id='velnar-theme-color-manual';m.name='theme-color';document.head.appendChild(m)}m.content=mode==='dark'?'#111318':'#f3f4f7'}
+  function apply(mode){if(mode!=='light'&&mode!=='dark')mode='system';document.documentElement.dataset.theme=mode;removeForced();if(mode==='system'){enableSystem(true);document.documentElement.style.colorScheme='';}else if(mode==='light'){enableSystem(false);document.documentElement.style.colorScheme='light';}else{enableSystem(false);ensureForcedDark();document.documentElement.style.colorScheme='dark';}updateThemeColor(mode);var sel=document.querySelector('.velnar-theme-select');if(sel)sel.value=mode;return mode}
+  function makeSelect(){if(document.querySelector('.velnar-theme-select'))return;var bar=document.querySelector('.brandbar');if(!bar)return;var select=document.createElement('select');select.className='velnar-theme-select';select.setAttribute('aria-label','页面外观');select.innerHTML='<option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option>';select.value=readMode();select.addEventListener('change',function(){var mode=select.value;try{localStorage.setItem(KEY,mode)}catch(e){}apply(mode)});var actions=bar.querySelector('.brand-actions');if(actions){var mobile=actions.querySelector('.mobile-open');if(mobile)actions.insertBefore(select,mobile);else actions.appendChild(select)}else{var wrap=document.createElement('div');wrap.className='velnar-theme-actions';var modeLabel=bar.querySelector('.mode');if(modeLabel){modeLabel.replaceWith(wrap);wrap.appendChild(modeLabel)}else{bar.appendChild(wrap)}wrap.appendChild(select)}}
+  var initial=readMode();apply(initial);
+  function mount(){makeSelect();apply(readMode())}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();
+  window.addEventListener('storage',function(e){if(e.key===KEY)apply(readMode())});
+  window.__velnarAppearance={get:readMode,set:function(mode){try{localStorage.setItem(KEY,mode)}catch(e){}apply(mode)}};
+})();
+</script>`;
 function decorateHtml(res,isArticle){
   if(!res)return Promise.resolve(res);
   const type=res.headers.get('content-type')||'';
   if(!type.includes('text/html'))return Promise.resolve(res);
   return res.text().then(text=>{
     text=text.replace('<meta name="theme-color" content="#f3f4f7">',THEME_META);
-    if(!text.includes('velnar-sticky-brand-v15')){
-      const style=(isArticle?ARTICLE_BRAND_STYLE:INDEX_BRAND_STYLE)+DARK_THEME_STYLE;
+    if(!text.includes('velnar-sticky-brand-v16')){
+      const style=(isArticle?ARTICLE_BRAND_STYLE:INDEX_BRAND_STYLE)+DARK_THEME_STYLE+THEME_PICKER_STYLE+THEME_RUNTIME_SCRIPT;
       text=text.includes('</head>')?text.replace('</head>',style+'</head>'):style+text;
     }
     const headers=new Headers(res.headers);
