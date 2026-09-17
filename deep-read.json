@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0",
+  "collection": "weekly-deep-read",
+  "updated_at": "2026-09-18",
+  "items": [
+    {
+      "id": "DR-2026-001",
+      "added_date": "2026-09-18",
+      "title": "The State of Organizations 2026: Three tectonic forces that are reshaping organizations",
+      "author": [
+        "Alexis Krivkovich",
+        "Damian Klingler",
+        "Dana Maor",
+        "Patrick Guggenberger"
+      ],
+      "publication": "McKinsey & Company",
+      "institution": "McKinsey People & Organizational Performance",
+      "source_type": "report",
+      "source_url": "https://www.mckinsey.com/capabilities/people-and-organization/our-insights/the-state-of-organizations",
+      "original_publish_date": "2026-02-19",
+      "estimated_reading_time": "约 60–90 分钟",
+      "topic": "组织与领导",
+      "themes": [
+        "AI-enabled organization",
+        "组织设计",
+        "领导力",
+        "人机协作",
+        "长期趋势"
+      ],
+      "why_read": "这是一份适合作为长期组织管理基线的 74 页报告。它不把 AI 当成孤立工具，而是把技术、经济扰动和劳动力结构变化放在同一张组织设计地图里，适合反复校准‘AI-native company 到底要改变什么’。",
+      "core_argument": "持续绩效不会来自单点技术部署，而来自组织围绕技术、复杂性与新型劳动力结构重新设计工作、领导方式和能力体系。",
+      "key_takeaways": [
+        "AI 的组织影响应放在端到端工作与组织结构中理解，而不只是个人生产率。",
+        "长期绩效要求技术能力、组织适应性和领导方式协同演化。",
+        "人类与 AI Agent 的协作正在成为组织设计问题，而不仅是工具采用问题。"
+      ],
+      "our_notes": "把它当作‘组织基线’，而不是 Agent 产品文章。它最有价值的用途，是帮助我们区分技术能力变化与真正需要组织重构的部分；同时避免因为某个新 Agent 能力出现，就过早复制大公司的组织设计。",
+      "discussion_questions": [
+        "一家真正的 AI-native 创业公司，哪些组织设计应该从第一天就不同，哪些应该等到规模出现后再引入？"
+      ],
+      "access": {
+        "type": "free"
+      }
+    },
+    {
+      "id": "DR-2026-002",
+      "added_date": "2026-09-18",
+      "title": "The Shift to Agentic AI: Evidence from Codex",
+      "author": [
+        "Drew Johnston",
+        "David Holtz",
+        "Alex Martin Richmond",
+        "Christopher Ong",
+        "Prasanna Tambe",
+        "Aaron Chatterji"
+      ],
+      "publication": "arXiv",
+      "source_type": "research_paper",
+      "source_url": "https://arxiv.org/abs/2606.26959",
+      "original_publish_date": "2026-06-25",
+      "estimated_reading_time": "约 45–70 分钟",
+      "topic": "AI / Agent 与工作",
+      "themes": [
+        "Agentic AI",
+        "未来工作",
+        "组织能力",
+        "Workflow",
+        "AI adoption"
+      ],
+      "why_read": "它提供了少见的大规模 Agent 使用实证，而不是只讨论能力演示。对于判断 Agent 是否正在改变任务长度、并行工作和跨职能执行方式，这比观点型文章更有长期参考价值。",
+      "core_argument": "随着 Agent 能力提高，用户正在从短交互转向更长、更复杂、更并行的委托式工作；这会推动生产率、岗位边界和组织方式发生变化。",
+      "key_takeaways": [
+        "Agent 使用正在从开发者快速扩散到非技术知识工作者。",
+        "用户开始管理多个并行 Agent，并把更长周期的工作交给 Agent。",
+        "真实采用数据提示未来工作的变化可能是工作流和岗位重组，而不仅是单任务提效。"
+      ],
+      "our_notes": "这篇应作为 Agent 采用的‘实证锚点’，但不能把 OpenAI 内部和 Codex 前沿用户直接外推到所有企业。最值得跟踪的是：并行 Agent、长周期任务和跨岗位执行是否会在更普通行业中复现。",
+      "discussion_questions": [
+        "当每个知识工作者都能并行管理多个 Agent 时，管理者应该如何重新定义授权、审查和责任边界？"
+      ],
+      "access": {
+        "type": "free"
+      }
+    },
+    {
+      "id": "DR-2026-003",
+      "added_date": "2026-09-18",
+      "title": "Putting AI on the Org Chart: Evidence on Delegation and Oversight",
+      "author": [
+        "Emma Wiles",
+        "Megan Hsu",
+        "Julie Bedard",
+        "Matthew Kropp"
+      ],
+      "publication": "Working paper",
+      "institution": "Boston University / BCG",
+      "source_type": "working_paper",
+      "source_url": "https://www.emmawiles.com/storage/ai_employee.pdf",
+      "original_publish_date": "2026-05-06",
+      "estimated_reading_time": "约 45–60 分钟",
+      "topic": "团队与领导者素养",
+      "themes": [
+        "AI delegation",
+        "组织设计",
+        "监督",
+        "责任",
+        "人机协作"
+      ],
+      "why_read": "它研究一个容易被‘数字员工’叙事忽略的问题：当 Agent 被正式当成员工或角色写进组织结构后，人类管理者的监督和责任判断会不会发生变化。这个问题直接关系到未来团队治理。",
+      "core_argument": "把 AI Agent 正式制度化为组织角色会改变管理者的委托与监督行为，因此组织必须显式设计责任和 oversight，而不能靠‘把 Agent 当同事’这种叙事自然解决。",
+      "key_takeaways": [
+        "AI Agent 已开始被部分组织正式纳入角色和组织结构。",
+        "对 AI 的角色 framing 可能影响管理者的监督强度和责任归因。",
+        "人机组织设计需要把最终责任人、复核点和升级机制写清楚。"
+      ],
+      "our_notes": "最值得保留的不是‘AI employee’这个标签，而是它暴露出的责任转移风险。未来设计 Agent 团队时，拟人化可以改善交互，但不能让责任链条变模糊。",
+      "discussion_questions": [
+        "哪些 Agent 行为可以被真正授权，哪些高风险动作必须始终保留明确的人类 Accountable Owner？"
+      ],
+      "access": {
+        "type": "free"
+      }
+    },
+    {
+      "id": "DR-2026-004",
+      "added_date": "2026-09-18",
+      "title": "How Agentic AI Supercharges Startups and Threatens Incumbents",
+      "author": [
+        "Vivian S. Lee",
+        "Linda Mantia",
+        "Jon McNeill"
+      ],
+      "publication": "Harvard Business Review",
+      "institution": "Harvard Business Review",
+      "source_type": "magazine_article",
+      "source_url": "https://hbr.org/2026/07/how-agentic-ai-supercharges-startups-and-threatens-incumbents",
+      "original_publish_date": "2026-07",
+      "estimated_reading_time": "约 25–40 分钟（精读估计）",
+      "topic": "创业与商业模式",
+      "themes": [
+        "创业起步",
+        "Agentic AI",
+        "AI-native company",
+        "商业模式",
+        "组织设计"
+      ],
+      "why_read": "它把 Agentic AI 放到创业经济学里，而不是只谈产品能力：当原型、试错、协调和部分执行成本被压缩，创业门槛和 incumbent 的组织包袱都会发生变化。",
+      "core_argument": "Agentic AI 正在形成创业的第二次成本压缩，使小团队能以更低时间、资本和人数启动与扩张，同时迫使成熟企业重新设计 operating model。",
+      "key_takeaways": [
+        "Agent 系统会降低从想法到验证、迭代和扩张所需的部分时间与资本。",
+        "AI-native 创业公司的结构性优势来自从零围绕 Agent 设计流程，而非仅把 AI 叠加在旧流程上。",
+        "执行成本下降后，问题选择、分发、工作流和组织能力的重要性反而上升。"
+      ],
+      "our_notes": "这篇适合用来训练‘AI 降低什么成本、又没有降低什么成本’的判断。Agent 可以压缩执行，但不会自动提供需求、分发、信任和真正的业务壁垒。",
+      "discussion_questions": [
+        "如果基础 Agent 能力越来越普及，早期创业公司应该把最稀缺的资源集中在哪些不可被模型商品化的环节？"
+      ],
+      "access": {
+        "type": "paywalled",
+        "note": "HBR 可能需要订阅或购买全文。"
+      }
+    },
+    {
+      "id": "DR-2026-005",
+      "added_date": "2026-09-18",
+      "title": "Snowflake in 2026 (A): All In On Enterprise AI",
+      "author": [
+        "Raj Joshi",
+        "Robert Burgelman"
+      ],
+      "publication": "Stanford Graduate School of Business Case Studies",
+      "institution": "Stanford Graduate School of Business",
+      "source_type": "case_study",
+      "source_url": "https://www.gsb.stanford.edu/faculty-research/case-studies/snowflake-2026-all-enterprise-ai",
+      "original_publish_date": "2026",
+      "estimated_reading_time": "约 45–60 分钟",
+      "topic": "企业案例与战略",
+      "themes": [
+        "Enterprise AI",
+        "战略转型",
+        "商业模式",
+        "数据平台",
+        "CEO leadership"
+      ],
+      "why_read": "这是一个完整的企业战略案例：Snowflake 如何在核心业务仍然成功时主动押注 AI Data Cloud，并判断企业数据、治理和生态合作在 AI 价值链中的控制点。",
+      "core_argument": "Snowflake 必须避免在 AI 价值链中退化为数据管道，因此通过 AI Data Cloud、Agent 平台、生态合作和 GTM 转型，把 governed enterprise data 重新定位为企业智能的核心资产。",
+      "key_takeaways": [
+        "战略转型最难的时点往往是旧业务仍然健康、但价值链已经开始迁移的时候。",
+        "企业 AI 的差异化不一定来自自研基础模型，也可能来自受治理的数据、上下文和分发位置。",
+        "Consumption-based 商业模式在 Agent 使用增长和模型效率提升之间存在新的机会与张力。"
+      ],
+      "our_notes": "读这篇时最值得追问的不是 Snowflake 会不会赢，而是‘如果所有人都能调用同样模型，一家公司究竟控制价值链哪一层’。这个问题也适用于早期 AI 创业公司的护城河设计。",
+      "discussion_questions": [
+        "在模型能力逐步商品化后，企业 AI 公司最值得长期拥有的资产是数据、上下文、Workflow、分发，还是执行控制权？"
+      ],
+      "access": {
+        "type": "restricted",
+        "note": "案例下载主要向 Stanford GSB 学生、教职员工与校友开放。"
+      }
+    },
+    {
+      "id": "DR-2026-006",
+      "added_date": "2026-09-18",
+      "title": "Google’s Global Business Organization (B): AI-First Leadership and Innovation",
+      "author": [
+        "Tim Rosenberger",
+        "Amy Wilkinson"
+      ],
+      "publication": "Stanford Graduate School of Business Case Studies",
+      "institution": "Stanford Graduate School of Business",
+      "source_type": "case_study",
+      "source_url": "https://www.gsb.stanford.edu/faculty-research/case-studies/googles-global-business-organization-b-ai-first-leadership-innovation",
+      "original_publish_date": "2026",
+      "estimated_reading_time": "约 45–60 分钟",
+      "topic": "领导力与组织能力",
+      "themes": [
+        "AI-first leadership",
+        "组织转型",
+        "团队领导",
+        "激励机制",
+        "执行速度"
+      ],
+      "why_read": "它不是‘Google 怎么用 AI’的产品案例，而是一个 20,000 人商业组织如何在继续承担核心收入责任的同时，提高速度、调整结构与激励，并把 AI 真正嵌入销售工作流的领导力案例。",
+      "core_argument": "成熟企业的 AI-first 转型不仅需要技术部署，还需要领导者同时重构决策速度、组织结构、激励与文化，并在高强度转型和组织耐力之间做取舍。",
+      "key_takeaways": [
+        "大型成熟组织的难题是边运行现有收入机器，边重构未来 operating model。",
+        "AI-first 不等于员工学会用工具，而是 AI 进入真实 seller workflow、产品和决策机制。",
+        "领导者需要在不完整信息下形成可修正但明确的判断，同时避免把长期高强度误当成战略。"
+      ],
+      "our_notes": "对早期团队最有价值的不是复制 Google 的制度，而是理解组织速度来自信息流、决策权、激励和执行机制，而不是单纯让每个人更忙。创业公司应该优先优化学习与决策速度，避免过早组织化。",
+      "discussion_questions": [
+        "早期团队如何建立高决策速度和清晰责任，同时避免把‘大公司式制度’过早引入几个人的创业阶段？"
+      ],
+      "access": {
+        "type": "restricted",
+        "note": "案例下载主要向 Stanford GSB 学生、教职员工与校友开放。"
+      }
+    }
+  ]
+}
