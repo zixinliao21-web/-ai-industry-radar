@@ -1,4 +1,13 @@
 (function(){
+  if(document.querySelector('script[data-velnar-research-discussion]'))return;
+  const s=document.createElement('script');
+  s.src='./assets/research-discussion.js';
+  s.defer=true;
+  s.setAttribute('data-velnar-research-discussion','1');
+  document.head.appendChild(s);
+})();
+
+(function(){
   'use strict';
 
   const shareBtn=document.getElementById('shareImageBtn');
