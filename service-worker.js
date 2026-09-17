@@ -14,7 +14,7 @@ const SHARE_EXPORT_LOADER="\n;(function(){if(document.querySelector('script[data
 const THEME_META='<meta name="color-scheme" content="light dark"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f4f7"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111318">';
 const RUNTIME_CSS='<link rel="stylesheet" href="./assets/radar-runtime.css">';
 const LATE_LOADER=`<script id="velnar-enhancement-loader">(function(){
-function add(src,id){if(document.getElementById(id))return;var s=document.createElement('script');s.id=id;s.src=src;s.async=false;document.body.appendChild(s)}
+function add(src,id){if(document.getElementById(id)||document.querySelector('script[src="'+src+'"]'))return;var s=document.createElement('script');s.id=id;s.src=src;s.async=false;document.body.appendChild(s)}
 function boot(){
   add('./assets/radar-runtime.js','velnar-runtime-script');
   var p=location.pathname;
