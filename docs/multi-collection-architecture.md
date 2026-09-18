@@ -27,10 +27,12 @@ Existing mature collection. Preserve behavior unless a change explicitly targets
 ```text
 index.html
 article.html
-news.json
+news-index.json
+news-items/<id>.json
+news.json (legacy snapshot)
 ```
 
-Canonical content: `news.json`.
+Canonical content: `news-index.json` + `news-items/<id>.json`. `news.json` is retained only as a frozen legacy snapshot.
 
 Editorial/product contract: `PRODUCT.md`.
 
@@ -162,7 +164,8 @@ Navigation fallback map:
 Canonical JSON files are network-first with cached fallback:
 
 ```text
-news.json
+news-index.json
+news-items/<id>.json (dynamic per-article network-first)
 consumer-radar.json
 deep-read.json
 ```
@@ -184,9 +187,9 @@ It must not silently rewrite research conclusions or normalize the three editori
 
 ### Industry research thread may
 
-- maintain `news.json` according to the Industry Radar contract.
+- maintain `news-index.json` and `news-items/<id>.json` according to the Industry Radar publishing contract; never append new publications to legacy `news.json`.
 
-It should not modify Consumer/Deep Read data or website implementation as part of routine publishing.
+It should not modify Consumer/Deep Read data or website implementation as part of routine publishing. Create the per-item article first, then update only the compact index with its exact current SHA.
 
 ### Consumer research thread may
 
