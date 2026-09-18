@@ -5,6 +5,7 @@ This repository is a lightweight static **VELNAR Research** product containing t
 ## Quick links
 
 - [Industry Radar product contract](PRODUCT.md)
+- [Industry Radar safe publishing procedure](docs/industry-radar-publishing.md)
 - [Design language](DESIGN.md)
 - [Multi-collection architecture](docs/multi-collection-architecture.md)
 - [Consumer Radar content contract](docs/consumer-radar-contract.md)
@@ -85,6 +86,8 @@ Website implementation must not compress, rewrite or normalize research merely t
 ### Industry Radar
 
 `news.json` remains canonical. New items follow the strategic-observation contract in `PRODUCT.md`.
+
+`news.json` must remain 2-space pretty-printed JSON with a trailing newline. Never minify it back to one line. For every publication, follow `docs/industry-radar-publishing.md`: never reconstruct or overwrite the archive from a truncated tool preview; verify the complete current archive, existing IDs and item count before writing, and use the exact current blob SHA so concurrent changes fail safely.
 
 Do not delete or mass-rewrite historical Industry items merely to restyle them. Factual corrections should be explicit rather than silently changing history.
 
