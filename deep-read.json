@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "collection": "weekly-deep-read",
   "updated_at": "2026-09-18",
   "items": [
@@ -40,7 +40,8 @@
       ],
       "access": {
         "type": "free"
-      }
+      },
+      "content_status": "legacy_summary_do_not_render_as_body"
     },
     {
       "id": "DR-2026-002",
@@ -80,7 +81,8 @@
       ],
       "access": {
         "type": "free"
-      }
+      },
+      "content_status": "legacy_summary_do_not_render_as_body"
     },
     {
       "id": "DR-2026-003",
@@ -119,7 +121,8 @@
       ],
       "access": {
         "type": "free"
-      }
+      },
+      "content_status": "legacy_summary_do_not_render_as_body"
     },
     {
       "id": "DR-2026-004",
@@ -158,7 +161,8 @@
       "access": {
         "type": "paywalled",
         "note": "HBR 可能需要订阅或购买全文。"
-      }
+      },
+      "content_status": "legacy_summary_do_not_render_as_body"
     },
     {
       "id": "DR-2026-005",
@@ -196,7 +200,8 @@
       "access": {
         "type": "restricted",
         "note": "案例下载主要向 Stanford GSB 学生、教职员工与校友开放。"
-      }
+      },
+      "content_status": "legacy_summary_do_not_render_as_body"
     },
     {
       "id": "DR-2026-006",
@@ -234,7 +239,32 @@
       "access": {
         "type": "restricted",
         "note": "案例下载主要向 Stanford GSB 学生、教职员工与校友开放。"
-      }
+      },
+      "content_status": "legacy_summary_do_not_render_as_body"
+    },
+    {
+      "id": "DR-2026-007",
+      "added_date": "2026-09-18",
+      "title": "Harness Engineering: The Operating System for Agentic AI",
+      "author": [
+        "Aparna Kapoor",
+        "Vincent Paca",
+        "Nerijus Zemgulys"
+      ],
+      "publication": "BCG",
+      "source_url": "https://www.bcg.com/ja-jp/publications/2026/harness-engineering-scale-agentic-ai",
+      "original_publish_date": "2026-09-16",
+      "estimated_reading_time": "官方阅读时间 8 分钟",
+      "themes": [
+        "AI / Agent",
+        "Enterprise AI",
+        "Harness Engineering",
+        "Workflow",
+        "Agent Reliability",
+        "商业模式"
+      ],
+      "content_status": "published_verbatim",
+      "content_markdown": "# 本期 Deep Read：模型正在商品化，真正的 Agent 护城河可能是“Harness”\n\n## [Harness Engineering: The Operating System for Agentic AI](https://www.bcg.com/ja-jp/publications/2026/harness-engineering-scale-agentic-ai)\n\n**作者：** Aparna Kapoor、Vincent Paca、Nerijus Zemgulys  \n**发布：** BCG  \n**发布日期：2026 年 9 月 16 日**  \n**官方阅读时间：8 分钟。** 这次明显没有达到 40+ 分钟标准，但我仍然选择它：一是它昨天刚发布；二是它提出的 **Harness Engineering**，与前一期 McKinsey 的“先设计 Workflow 再部署 Agent”形成了一个很重要的新拼图，而且开始直接回答更进一步的问题——**如果模型越来越商品化，Enterprise Agent 公司究竟还能控制什么？**\n\n文章的核心判断可以压缩成一句话：\n\n> **未来企业 AI 的竞争优势，可能越来越不在 Agent 本身，而在 Agent 周围那套让它可靠工作的系统。**\n\nBCG 把这套系统称为 **Harness**。\n\n## 为什么会需要 Harness\n\n现在很多企业已经发现一个问题：Agent Demo 能工作，不代表 Agent 能承担真实工作。\n\nAgent 会出现：\n\n- hallucination；\n- 错误进入 Workflow；\n- 实际没有完成任务却宣布完成；\n- 无法满足客户或监管要求。\n\n因此大量企业仍然没有真正规模化 Agent，而已经规模化的企业也普遍没有看到与技术预期匹配的利润影响。\n\nBCG 的解决思路不是继续等待模型变强，而是在模型外围建立一个类似计算机 OS 的控制系统：\n\n```text\nBusiness Workflow\n        ↓\n      Harness\n ┌───────────────┐\n │ Context       │\n │ Process Logic │\n │ Evaluation    │\n │ Approval      │\n │ Guardrails    │\n │ Governance    │\n │ Audit         │\n └───────────────┘\n        ↓\n       Agent\n        ↓\n      Action\n```\n\n这个比喻相当准确。\n\n我们不会因为一个应用程序“通常不会出错”，就允许它直接任意控制整个电脑。操作系统负责权限、资源、隔离和控制。\n\nBCG 认为 Agent 也需要类似的一层。\n\n## 最值得关注的真实案例\n\nBCG 最近为一家大型东南亚银行建设了一套 fully agentic platform。\n\n结果包括：\n\n**财富顾问用于主动服务客户的时间提高到原来的约 3 倍；收入生产率提高超过 30%；客户转化提升约 4–5 倍；工程效率约提高 5 倍；从设计到部署的速度提高约 50%。**\n\nBCG 特别强调：\n\n> 这些改善主要不是来自选择了哪个模型，而来自模型周围的 Evaluation、Approval Process 和 Behavioral Guardrails。\n\n也正是这些能力，让 Agent 能进入真正受到严格监管的银行生产环境。\n\n这个案例比“Agent benchmark 又提高多少”更值得研究，因为它已经进入：\n\n> **技术能力 → 生产可靠性 → Workflow → 商业结果。**\n\n---\n\n# 但这篇真正重要的是它对“护城河”的判断\n\nBCG 明确提出：\n\n> 随着 AI 模型越来越商品化，胜负不会主要取决于谁拥有最好的模型。\n\n真正开始重要的是 Harness 能不能沉淀一家公司的：\n\n**Context + Process Logic + Quality Signals + Governance Requirements + Institutional Knowledge。**\n\n这意味着未来可能出现这样的产业结构：\n\n```text\n越来越标准化\n────────────────\nFoundation Model\nAgent Framework\nTool Calling\nMCP\n基础推理能力\n────────────────\n        ↓\n\n越来越企业专属\n────────────────\nBusiness Context\nDomain Model\nWorkflow\nPolicy\nEvaluation\nPermission\nInstitutional Knowledge\nAction Logic\n────────────────\n```\n\n如果这个判断成立，Enterprise AI 的价值可能逐渐向第二层移动。\n\n---\n\n# 这对 AI 创业的商业模式影响很大\n\n过去很容易认为：\n\n> “我们做一个 Agent，然后把 Agent 卖给企业。”\n\n但如果 Agent 本身越来越容易获得，这个商业模式会受到持续压缩。\n\n更有价值的产品可能变成：\n\n> **我们掌握一套让某类企业 Workflow 可以被 Agent 可靠执行的 Harness。**\n\n例如不是卖：\n\n> Sales Agent。\n\n而是：\n\n```text\n客户语义\n+\n产品语义\n+\n价格规则\n+\n库存状态\n+\n权限\n+\n客户政策\n+\n报价 Workflow\n+\n异常升级\n+\nEvaluation\n+\nTrace\n```\n\n形成一个真正能够运行销售流程的系统。\n\n这时候客户买的已经不是“一个会聊天的 Agent”。\n\n而是：\n\n> **一套机器可以安全进入业务流程的 Operational Infrastructure。**\n\n---\n\n# BCG 给创业者的建议甚至有点反 SaaS\n\n文章最后提出三个原则：\n\n> **Start small. Build, don’t buy. Be selective.**\n\n其中第二条最值得讨论。\n\nBCG 认为模型可以买，通用 AI 能力可以买，但 Harness 最好不要完全购买现成平台。\n\n原因不是“自己开发更酷”。\n\n而是 Harness 恰好承载：\n\n> 企业自己的 Context、Process Logic、Quality Signal、Governance 和 Institutional Knowledge。\n\n这些东西如果真正独特，就是竞争者不能简单花钱复制的资产。BCG甚至直接认为，**定制 Harness + 有效模型可以形成竞争护城河。**\n\n这同时意味着做 Enterprise AI 创业不能走向另一个极端：\n\n> 什么都自己造。\n\n基础模型、通用基础设施、成熟协议应该尽可能利用外部能力。\n\n真正值得自己拥有的是：\n\n> **决定企业如何工作的那部分。**\n\n---\n\n# “Be selective”同样重要\n\nBCG 并不认为所有 Workflow 都应该立即 Agent 化。\n\n它建议早期优先寻找三种特征：\n\n**工作已经被文档化；质量可以被验证；Agent 能够调用现有系统完成工作。**\n\n这实际上给出了一个不错的 Agent 市场筛选公式：\n\n```text\n高业务价值\n×\n流程可描述\n×\n事实可 Ground\n×\n结果可验证\n×\nAction 可执行\n×\n错误可控制\n```\n\n满足得越多，越适合成为早期 Agent Workflow。\n\n而不是简单寻找：\n\n> “哪里人工最多？”\n\n---\n\n# 这篇与前一期文章连起来以后，出现了一个值得长期跟踪的信号\n\n前一期 McKinsey 提出：\n\n> **不要把 Agent 当 Tool，要把它当 System。**\n\n昨天 BCG 又进一步提出：\n\n> **真正重要的可能是 Agent 外围的 Operating System。**\n\n两个不同咨询机构在几天内，从不同角度逐渐靠近同一个架构判断：\n\n```text\nLLM\n不是系统\n\nAgent\n也不是完整系统\n\n真正的 Enterprise AI\n=\nAgent\n+\nContext\n+\nWorkflow\n+\nPolicy\n+\nEvaluation\n+\nGovernance\n+\nHuman Oversight\n+\nAction\n```\n\n这说明 Enterprise Agent 的产业讨论正在明显从：\n\n> **Agent Capability**\n\n向：\n\n> **Agent Reliability Infrastructure / Operational System**\n\n移动。\n\n---\n\n## 对你当前 AI-native 创业思考最值得带走的一点\n\n这里需要区分两个概念。\n\n**企业 Harness** 是客户自己的运行资产。\n\n而一家 AI 创业公司的机会，是判断其中哪些部分能够逐渐变成：\n\n> **行业级可复用能力。**\n\n例如某个行业里 100 家企业都有不同客户、不同库存、不同价格，但它们可能共享：\n\n```text\n类似 Product Model\n类似 Quote Workflow\n类似 Grounding Pattern\n类似 Approval Logic\n类似 Evaluation Framework\n类似 Supplier / Order Relationship\n```\n\n那么创业公司真正值得积累的就不是：\n\n> “帮第 1 家客户定制了一套 Agent。”\n\n而是不断区分：\n\n> **什么是客户专属，什么是行业共性，什么最终可以成为产品。**\n\n这正是服务型 AI 公司能否逐渐走向可扩张产品公司的关键分界线。\n\n所以这篇虽然只有 8 分钟，我仍建议今天读掉。它提供了一个很值得保留的长期问题：\n\n> **当模型、Agent Framework 甚至通用 Agent 都可以买到时，我们真正应该自己拥有的那一层，到底是什么？**\n\nBCG 给出的答案是 **Harness**。\n\n我认为这个答案还没有最终定论，但它已经足够重要，值得放进长期 AI-native company 架构判断里继续验证。"
     }
   ]
 }
