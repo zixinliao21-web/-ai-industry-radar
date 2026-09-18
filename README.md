@@ -12,7 +12,9 @@ https://zixinliao21-web.github.io/-ai-industry-radar/
 
 - `index.html` — directory / unread-read interface
 - `article.html` — long-form article reader
-- `news.json` — canonical Industry Radar archive
+- `news-index.json` — compact Industry Radar manifest / directory index
+- `news-items/<id>.json` — canonical per-article Industry Radar records
+- `news.json` — frozen legacy pre-split snapshot
 
 ### AI C 端产业雷达
 
