@@ -1,0 +1,32 @@
+{
+  "id": "2026-09-16-S3",
+  "date": "2026-09-16",
+  "grade": "S",
+  "title": "OpenAI Sponsored Agents：广告正在从“买一次点击”变成“买一段 Agent 对话”",
+  "themes": [
+    "Agent Commerce",
+    "Advertising",
+    "Consumer AI",
+    "Distribution"
+  ],
+  "deck": "OpenAI 开始测试 Sponsored Agents，让用户点击广告后直接与品牌赞助的 Agent 对话。广告库存可能从 impression/click 演化为可持续的商业 Agent 会话，ChatGPT 则进一步向交易前的商业入口和分发平台移动。",
+  "fact": "FACT｜9 月 16 日，OpenAI 宣布在美国选择性测试 Sponsored Agents。用户在 ChatGPT 中与广告互动后，可以主动进入一个由企业赞助、明确标注的 Agent 对话，继续询问商品或服务问题，并在需要时访问商家网站；OpenAI 表示该赞助对话与 ChatGPT 的独立回答以及用户原始对话保持分离。与此同时，ChatGPT Ads Manager plugin 允许广告主用自然语言创建、更新和分析 campaign（广告活动），根据网站或 brief 生成活动并分析表现；Ads Manager 还能建议文案和图片，并可选择按对话上下文调整现有广告文字。HubSpot 成为首个 CRM 合作伙伴，Shopify 成为首个电商合作伙伴，商家可以把既有客户/商品上下文连接到 ChatGPT Ads。Reuters 报道确认 Sponsored Agents 正由部分美国广告主测试。",
+  "why_it_matters": "INFERENCE｜传统互联网广告的核心交易单位是 impression（曝光）、click（点击）、lead（线索）或 conversion（转化）。Sponsored Agents 提出了一个新的可能单位：commercial conversation（商业对话）。广告不再一定把用户尽快送离平台进入 landing page，而可以在 AI 平台内部继续完成需求澄清、产品匹配、异议处理、配置解释甚至未来的交易准备。如果这种模式成立，Personal Agent / AI Assistant 的商业控制点就不仅是‘谁回答用户’，还包括‘谁决定什么时候允许商业 Agent 进入、如何标记、商业 Agent 能看到多少 Context、能执行哪些 Action，以及最终交易归因给谁’。这使 AI 入口更像 Search Ads、App Store 和 marketplace 的混合体，但交互单位从页面和链接变成持续对话。",
+  "what_is_new": "ChatGPT 出现广告本身已经不是新信号；电商 Agent、品牌客服 Bot 也早已存在。真正新增的是平台把‘赞助 Agent’正式嵌入广告产品结构，并明确保持与独立回答的边界。也就是说，商业 Agent 不再只是品牌自己网站上的客服，而开始作为平台级付费分发对象进入通用 AI 入口。HubSpot 与 Shopify 集成进一步说明这不是孤立的聊天广告格式：广告侧正在连接 CRM Context、商品 Catalog 和后续 lead workflow，逐渐形成从需求发现 → 商业对话 → 企业系统 → 转化的链路。",
+  "map_change": "Consumer AI / Agent Commerce 地图需要新增或强化一个控制点：Paid Agent Distribution（付费 Agent 分发）。此前我们关注 Interface / Personal Context / Identity / Permission / Action / Transaction；Sponsored Agents 表明 Distribution / Commercial Routing 也可能成为独立收费站。未来用户的 Personal Agent 不一定亲自完成所有商品知识和售前服务，它可能把用户临时路由到商家的 specialized agent。谁控制这个 routing market，谁就可能像搜索引擎控制关键词广告、移动 OS 控制 App 分发一样抽取商业价值。",
+  "challenges_existing_assumptions": "它强化了‘Personal Agent 可能成为新商业入口’的判断，但削弱一个隐含假设：Personal Agent 的商业模式不一定主要来自订阅或交易佣金。广告可以重新出现，只是形态从静态展示转为可对话的商业 Agent。与此同时，它要求我们更谨慎地区分 User Agent 与 Merchant Agent：用户代理的目标应代表用户利益，而赞助 Agent 明确代表商家利益。如果平台把两者混合，信任会迅速受损。因此 Agent 时代的广告治理可能比搜索广告更重要，因为对话系统能够更深地影响用户决策。",
+  "hype_uncertainty": "当前只是选择性测试，不能假设用户愿意和赞助 Agent 长时间聊天，也不能证明其转化率高于普通广告。Sponsored Agent 仍可能只是更复杂的 landing page；如果用户觉得它拖慢任务或具有操纵性，使用率会很低。另一个核心不确定性是 Context boundary：商家 Agent 能获得多少原始对话信息、是否能够长期记忆、哪些个性化行为需要明确授权。OpenAI 当前强调清晰标注和会话分离，这是重要设计，但未来收入压力可能持续测试这一边界。广告主是否愿意为 conversation、qualified lead、transaction 或传统 CPC 付费，也尚未形成稳定定价模式。",
+  "startup_implications": "对创业公司，机会和威胁同时出现。机会在于 Agent-native commerce infrastructure：品牌需要把 Catalog、库存、价格、CRM、售后规则和品牌 policy 组织成 Merchant Agent 可可靠调用的 Context；还需要评估 Agent 是否给出错误承诺、是否违反价格/合规政策，以及如何把会话安全地 handoff 到真人或交易系统。新的 attribution（归因）和 agent analytics 也可能出现。威胁是：单纯做‘品牌聊天机器人’的公司会被平台原生 Sponsored Agent 与 Shopify/HubSpot 集成迅速压缩，因为分发入口掌握在 ChatGPT 等平台手里。更持久的资产应是跨渠道的商业语义、产品事实、交易能力和治理，而不是某一个聊天 UI。",
+  "prediction": "PREDICTION｜未来 1–3 年，主要 AI Assistant 会尝试至少三种商业 Agent 模式：赞助对话、交易佣金和商家 Agent marketplace。广告计费也可能从 CPC 扩展到 qualified conversation / agent-assisted conversion（有效对话 / Agent 辅助转化）。平台会被迫建立更严格的 disclosure、Context permission 和 conflict-of-interest 规则。长期如果 Personal Agent 真正代表用户，最健康的架构可能不是让广告直接改变 User Agent 的回答，而是像现在的测试一样把 Merchant Agent 作为明确分离、用户主动进入的商业主体。",
+  "discussion_question": "当 User Agent 代表用户利益、Merchant Agent 代表商家利益时，谁应该控制两者之间的路由、上下文授权和交易归因——AI 平台、商家、还是用户自己的 Personal Agent？",
+  "sources": [
+    {
+      "label": "Reuters — OpenAI tests advertiser-sponsored agents",
+      "url": "https://www.reuters.com/business/media-telecom/openai-tests-advertiser-sponsored-agents-expands-ai-tools-chatgpt-ads-2026-09-16/"
+    },
+    {
+      "label": "OpenAI — Reimagining advertising with AI",
+      "url": "https://openai.com/index/reimagining-advertising-with-ai/"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-const CACHE='velnar-radar-v33';
+const CACHE='velnar-radar-v34';
 const SHELL=[
   './','./index.html','./article.html',
   './consumer-radar.html','./consumer-article.html',
@@ -7,9 +7,9 @@ const SHELL=[
   './assets/velnar-symbol.svg','./assets/radar-qr.svg',
   './assets/qrcode.min.js','./assets/qrcodejs.LICENSE.txt',
   './assets/share-export-fix.js','./assets/radar-runtime.css','./assets/radar-runtime.js','./assets/research-discussion-bridge.js','./assets/collection-discussion-bridge.js',
-  './news.json','./consumer-radar.json','./deep-read.json'
+  './news-index.json','./consumer-radar.json','./deep-read.json'
 ];
-const DATA_FILES=['news.json','consumer-radar.json','deep-read.json'];
+const DATA_FILES=['news-index.json','consumer-radar.json','deep-read.json'];
 const NETWORK_FIRST_ASSETS=['/assets/radar-runtime.js','/assets/research-discussion-bridge.js','/assets/collection-discussion-bridge.js'];
 const SHARE_EXPORT_LOADER="\n;(function(){if(document.querySelector('script[data-velnar-share-export]'))return;var s=document.createElement('script');s.src='./assets/share-export-fix.js';s.async=false;s.setAttribute('data-velnar-share-export','1');document.head.appendChild(s)})();";
 const THEME_META='<meta name="color-scheme" content="light dark"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f4f7"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111318">';
@@ -46,6 +46,7 @@ function decorateHtml(res){
 }
 
 function dataFileFor(pathname){return DATA_FILES.find(name=>pathname.endsWith('/'+name))||null}
+function isIndustryItem(pathname){return /\/news-items\/[^/]+\.json$/.test(pathname)}
 function fallbackFor(pathname){
   if(pathname.endsWith('/article.html'))return './article.html';
   if(pathname.endsWith('/consumer-article.html'))return './consumer-article.html';
@@ -88,6 +89,22 @@ self.addEventListener('fetch',event=>{
       }catch{
         if(cached)return cached;
         return new Response(JSON.stringify({updated_at:'',items:[]}),{status:200,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}});
+      }
+    })());
+    return;
+  }
+
+  if(isIndustryItem(url.pathname)){
+    event.respondWith((async()=>{
+      const cache=await caches.open(CACHE);
+      try{
+        const fresh=await fetch(new Request(req,{cache:'no-store',credentials:'same-origin'}));
+        if(fresh.ok){await cache.put(req,fresh.clone());return fresh}
+        const cached=await cache.match(req);
+        return cached||fresh;
+      }catch{
+        const cached=await cache.match(req);
+        return cached||new Response(JSON.stringify({error:'Industry Radar article unavailable'}),{status:503,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}});
       }
     })());
     return;

@@ -1,0 +1,26 @@
+{
+  "id": "2026-09-15-S1",
+  "date": "2026-09-15",
+  "grade": "S",
+  "title": "行业龙头内部 AI → 对外产品化：新的 Vertical AI 公司构建路径",
+  "themes": [
+    "Vertical AI",
+    "AI-native Company",
+    "Domain"
+  ],
+  "fact": "美国大型人身伤害律师事务所 Morgan & Morgan 宣布未来十年投入至少 10 亿美元用于技术与 AI。它已经投入约 3 亿美元建设内部平台 MX2，约 5,000 名月活用户使用它处理医疗信息抽取、案件文档生成、庭审准备等核心法律工作流。更关键的是，公司计划在 2027 年底开始把 MX2 提供给其他律师事务所。",
+  "why_it_matters": "这展示了第三种 Vertical AI 公司形成路径：不是软件创业者先找行业，也不是 FDE 服务商再产品化，而是 Domain Incumbent（行业既有龙头）先把自己内部 AI-native 化，再把内部系统向同行外售。行业龙头天然拥有 Workflow、Domain Context、历史数据、真实评估标准和内部用户，可能成为 Vertical AI 创业公司的新竞争来源。",
+  "what_is_new": "“企业自己做软件”并不新；新的是 Foundation Models 大幅降低智能软件建设门槛后，传统行业公司开始有机会把自身的运营系统直接变成行业软件产品。竞争地图因此需要增加一条：Domain Leader → Internal AI System → External Productization → Vertical AI Platform。",
+  "hype_uncertainty": "MX2 对外商业化目前仍是计划，不代表其他律师事务所一定愿意采用竞争对手的软件。数据隔离、信任、产品通用化、支持成本都会成为障碍。所以这里值得记录的是公司形成路径，而不是认定 Morgan & Morgan 已经成为法律 SaaS 平台。",
+  "discussion_question": "如果未来最强 Vertical AI 公司可能从行业龙头内部长出来，那么独立 AI 创业公司的结构性优势究竟应该是什么？",
+  "sources": [
+    {
+      "label": "Reuters — Morgan & Morgan AI investment / MX2",
+      "url": "https://www.reuters.com/legal/legalindustry/us-personal-injury-law-firm-morgan-morgan-touts-1-billion-ai-investment-plans-2026-09-14/"
+    },
+    {
+      "label": "Morgan & Morgan — MX2 announcement",
+      "url": "https://www.forthepeople.com/blog/while-big-law-plans-morgan-morgan-reveals-it-has-been-quietly-building-proprietary-house-ai/"
+    }
+  ]
+}

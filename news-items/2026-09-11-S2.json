@@ -1,0 +1,17 @@
+{
+  "id": "2026-09-11-S2",
+  "date": "2026-09-11",
+  "grade": "S",
+  "title": "OpenAI Data Agent：Semantic Authority 与 Intelligence Interface 开始分离",
+  "themes": [
+    "Enterprise Context",
+    "Semantic Layer",
+    "BI"
+  ],
+  "fact": "OpenAI 读取 Databricks、Snowflake、dbt 等已有语义层，而不是重新定义全部企业事实。",
+  "why_it_matters": "企业 AI 可能形成“事实存储权、语义解释权、智能入口权”的分离。",
+  "what_is_new": "",
+  "hype_uncertainty": "",
+  "discussion_question": "",
+  "sources": []
+}

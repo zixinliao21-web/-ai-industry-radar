@@ -1,0 +1,22 @@
+{
+  "id": "2026-09-14-A1",
+  "date": "2026-09-14",
+  "grade": "A",
+  "title": "欧洲把 AI 依赖进一步上升为主权与战略依赖问题",
+  "themes": [
+    "Sovereign AI",
+    "Europe",
+    "Infrastructure"
+  ],
+  "fact": "欧洲央行行长 Christine Lagarde 警告，欧洲对海外 AI 技术、算力和基础设施的依赖可能形成前所未有的战略脆弱性。她主张扩大欧洲本地数据中心与算力，并发展能够运行在欧洲基础设施上的模型，以降低被改变访问条件或“切断”的风险。",
+  "why_it_matters": "AI 正从一般产业竞争力议题进一步变成 Strategic Dependency（战略依赖）和 Sovereign AI（主权 AI）问题，类似能源、半导体和支付基础设施。可能带来本地模型托管、数据主权、算力、关键行业私有推理等长期市场。",
+  "what_is_new": "“欧洲想发展本土 AI”并不新；新增的是央行层面把 AI 依赖明确连接到经济主权、金融脆弱性和关键公共系统运行，说明 AI 基础设施开始被视作战略基础设施。",
+  "hype_uncertainty": "政策主张不等于欧洲能够快速复制美国的算力、资本和模型生态。Sovereign AI 市场会存在，但其经济效率、成本和客户是否愿意为主权溢价付费仍需验证。",
+  "discussion_question": "Sovereign AI 会形成真正独立的大市场，还是最终主要成为云厂商/模型公司的区域化部署选项？",
+  "sources": [
+    {
+      "label": "Reuters — Lagarde on Europe AI dependency",
+      "url": "https://www.reuters.com/business/finance/europe-facing-unprecedented-risk-being-cut-off-ai-lagarde-warns-2026-09-14/"
+    }
+  ]
+}

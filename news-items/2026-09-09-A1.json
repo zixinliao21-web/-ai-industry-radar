@@ -1,0 +1,17 @@
+{
+  "id": "2026-09-09-A1",
+  "date": "2026-09-09",
+  "grade": "A",
+  "title": "Euno：Enterprise Context 被直接产品化为 Context Platform",
+  "themes": [
+    "Enterprise Context",
+    "Context Platform",
+    "Data"
+  ],
+  "fact": "Context 不再只是 RAG 输入，而被定义成长期、动态、带权限和治理的基础设施。",
+  "why_it_matters": "验证“企业上下文”可能形成独立控制层，但其独立市场边界仍不确定。",
+  "what_is_new": "",
+  "hype_uncertainty": "",
+  "discussion_question": "",
+  "sources": []
+}

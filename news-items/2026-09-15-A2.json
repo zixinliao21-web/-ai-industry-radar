@@ -1,0 +1,22 @@
+{
+  "id": "2026-09-15-A2",
+  "date": "2026-09-15",
+  "grade": "A",
+  "title": "Enterprise Context Custody：零数据保留成为模型采购条件",
+  "themes": [
+    "Enterprise AI",
+    "Security",
+    "Data Custody"
+  ],
+  "fact": "据 Reuters 转述 The Information，Palantir、Nvidia、Booz Allen 等企业正在限制部分高级模型用于敏感任务，原因是数据安全与知识产权保护。Palantir 被报道要求 Anthropic 提供 irrevocable zero-data-retention commitment（不可撤销的零数据保留承诺）；Nvidia 将部分 Anthropic 模型限制在低敏感任务；Booz Allen 禁止员工在专有网络安全工作中使用商业 Claude。",
+  "why_it_matters": "企业模型采购的竞争变量正在从“模型多聪明”扩展到 Context Custody（上下文保管权）：谁能看到数据、保留多久、是否用于训练、供应商是否能单方面修改数据策略、敏感推理能否在隔离环境完成。Confidential AI / Sovereign Inference（机密 AI / 主权推理）可能成为企业基础设施的一条独立赛道。",
+  "what_is_new": "企业数据隐私本身不是新问题。新信号是大型 AI 重度用户开始把不可撤销的数据保留条款、模型使用边界和隔离推理直接变成采购与内部使用政策，而不是仅依赖供应商一般性隐私声明。",
+  "hype_uncertainty": "相关细节部分来自媒体转述而非公开合同文本，不能假设所有企业都会要求完全零保留。不同监管环境、任务敏感度和模型能力差异会造成很大分层。",
+  "discussion_question": "如果企业越来越要求模型与核心 Context 解耦，谁会控制“安全推理层”：模型公司、云厂商，还是企业自己的 Agent / Context 平台？",
+  "sources": [
+    {
+      "label": "Reuters — Palantir / Nvidia restrict model use",
+      "url": "https://www.reuters.com/business/palantir-nvidia-curb-ai-model-use-over-data-fears-information-reports-2026-09-14/"
+    }
+  ]
+}

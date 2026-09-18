@@ -1,0 +1,17 @@
+{
+  "id": "2026-09-11-S1",
+  "date": "2026-09-11",
+  "grade": "S",
+  "title": "Oracle 自动生成 Enterprise Ontology",
+  "themes": [
+    "Ontology",
+    "Enterprise Context",
+    "Oracle"
+  ],
+  "fact": "System of Record 厂商开始直接向 Enterprise Ontology / Context 层扩张。",
+  "why_it_matters": "提示 Ontology 可能分层：通用企业层被平台吸收，Vertical Semantics 仍可能属于垂直公司。",
+  "what_is_new": "",
+  "hype_uncertainty": "",
+  "discussion_question": "",
+  "sources": []
+}

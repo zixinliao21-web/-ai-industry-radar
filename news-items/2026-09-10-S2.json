@@ -1,0 +1,17 @@
+{
+  "id": "2026-09-10-S2",
+  "date": "2026-09-10",
+  "grade": "S",
+  "title": "Salesforce AI Control Plane：Agent 控制层正式产品化",
+  "themes": [
+    "AI Control Plane",
+    "Governance",
+    "Enterprise AI"
+  ],
+  "fact": "统一发现、登记、管理 Agent 身份、权限、策略、行为、成本与生命周期。",
+  "why_it_matters": "“谁控制 AI 是否可以执行”从概念走向正式平台层。",
+  "what_is_new": "",
+  "hype_uncertainty": "",
+  "discussion_question": "",
+  "sources": []
+}

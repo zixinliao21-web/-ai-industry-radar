@@ -182,11 +182,14 @@
 
   function buildDiscussionPacket(){
     const item=current()||{};const note=getEntry();
+    const quotes=note.quotes.length?note.quotes.map((q,i)=>(i+1)+'. “'+q+'”').join('\n'):'（无）';
+    const personal=note.text.trim()||'（暂无额外笔记）';
+    if(typeof item.article_text==='string'&&item.article_text.trim()){
+      return '[VELNAR Intelligence Radar]\n\n文章：'+(item.title||document.title)+'\n文章 ID：'+(item.id||articleId())+'\n日期：'+(item.date||'')+'\n\n完整研究正文：\n'+item.article_text+'\n\n我的笔记：\n'+personal+'\n\n我记下的原文：\n'+quotes+'\n\n请基于这篇完整研究正文继续分析。指出相对我们既有判断真正新增了什么，再讨论它对 VELNAR 当前阶段意味着什么；不要因为单一产业信号扩大当前工程范围，区分“现在应行动”“继续观察”“暂时无关”。';
+    }
     const core=item.why_it_matters||item.deck||'';
     const changed=item.challenges_existing_assumptions||item.map_change||item.startup_implications||'';
     const guard=item.hype_uncertainty||'';
-    const quotes=note.quotes.length?note.quotes.map((q,i)=>(i+1)+'. “'+q+'”').join('\n'):'（无）';
-    const personal=note.text.trim()||'（暂无额外笔记）';
     return '[VELNAR Intelligence Radar]\n\n文章：'+(item.title||document.title)+'\n文章 ID：'+(item.id||articleId())+'\n日期：'+(item.date||'')+'\n\n为什么值得我们注意：\n'+core+'\n\n它对既有判断的增量：\n'+changed+'\n\n防止误判：\n'+guard+'\n\n我的笔记：\n'+personal+'\n\n我记下的原文：\n'+quotes+'\n\n请结合我们此前关于 VELNAR、AI 产业地图、Vertical AI、FDE → Product → Network、Enterprise Context / Ontology、Agent Control Plane 等讨论继续分析。先指出这条信号相对我们既有判断真正新增了什么，再讨论它对 VELNAR 当前阶段意味着什么。不要因为单一产业信号就扩大当前工程范围；区分“现在应行动”“继续观察”“暂时无关”。';
   }
 

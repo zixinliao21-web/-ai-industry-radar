@@ -1,0 +1,17 @@
+{
+  "id": "2026-09-10-B2",
+  "date": "2026-09-10",
+  "grade": "B",
+  "title": "TeamSystem：AI 不会自动消灭所有传统 SaaS",
+  "themes": [
+    "SaaS",
+    "System of Record",
+    "Moat"
+  ],
+  "fact": "深度控制 Workflow、监管接口、真实记录与交易历史的 SaaS 仍可能非常牢固。",
+  "why_it_matters": "判断 SaaS 风险时，应区分 UI 功能和真实业务控制权。",
+  "what_is_new": "",
+  "hype_uncertainty": "",
+  "discussion_question": "",
+  "sources": []
+}

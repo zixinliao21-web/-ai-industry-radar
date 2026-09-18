@@ -1,64 +1,63 @@
 # AI Industry Radar — Safe Publishing Procedure
 
-Status: Active
+Status: Active  
+Storage schema: split archive V2
 
-This procedure exists because `news.json` is a long-lived canonical archive. A routine Radar publication must never risk truncating or replacing historical items.
+The Industry Radar no longer appends full articles to one large `news.json`.
 
-## Canonical format
+## Canonical storage
 
-`news.json` must remain valid, human-readable pretty JSON:
+```text
+news-index.json
+news-items/<id>.json
+```
 
-- UTF-8
-- 2-space indentation
-- trailing newline
-- one structural element per line
-- never minify / compress back to a single line
+- `news-index.json` is the compact directory / navigation manifest.
+- `news-items/<id>.json` is the canonical full record for one Radar article.
+- `news.json` is a frozen legacy snapshot of the pre-split archive. Do not append new items to it and do not use it as the routine publishing target.
 
-The readable format is operationally important: GitHub-connected agents can retrieve the archive safely in line ranges when a full-file response is too large for one tool result.
+## Safe publication workflow
 
-## Safe append workflow
+For each genuinely new Radar signal:
 
-For a normal new Radar item:
+1. Read the complete current `news-index.json`.
+2. Record its exact blob SHA, complete ID set and item count.
+3. Deduplicate against that compact index.
+4. Finish the canonical research article in ChatGPT first.
+5. Create `news-items/<id>.json` containing the full record.
+6. For new single-artifact publications, `article_text` is the canonical body and must preserve the exact research article delivered in chat, except JSON escaping.
+7. Only after the item file exists, append compact metadata to `news-index.json` and update `updated_at`.
+8. Update the index with its exact current blob SHA. Concurrent changes must fail rather than overwrite another publication.
+9. Re-read the index and the new item and verify the new ID exists exactly once, every old ID remains, the count increased exactly as intended, IDs match, and `article_text` matches the frozen chat article.
 
-1. Read the current `news.json` from the latest `main`.
-2. Parse it as JSON before editing.
-3. Record:
-   - current blob SHA
-   - existing item count
-   - complete set of existing item IDs
-4. Append only the new item unless an explicit factual correction is required.
-5. Update `updated_at`.
-6. Serialize with 2-space indentation and a trailing newline.
-7. Before writing, verify:
-   - JSON parses successfully
-   - no duplicate item IDs exist
-   - every pre-existing item ID is still present
-   - expected item count is preserved or increased exactly as intended
-8. Write using the exact blob SHA read in step 3 so concurrent changes fail instead of being silently overwritten.
-9. Re-read after the commit and verify:
-   - the new item exists
-   - old IDs are still present
-   - final item count is correct
+## Compact index entry
 
-## Large-file retrieval rule
+```json
+{
+  "id": "YYYY-MM-DD-A1",
+  "date": "YYYY-MM-DD",
+  "grade": "A",
+  "title": "...",
+  "themes": ["..."],
+  "deck": "...",
+  "body_format": "article_text"
+}
+```
 
-A truncated tool preview is **not** a valid source for a full-file rewrite.
-
-If a GitHub connector truncates the visible response:
-
-- use line-ranged reads against the pretty-printed file, or
-- use a tool/runtime that can fetch and parse the complete blob internally before writing.
-
-Never reconstruct `news.json` from a truncated excerpt.
+Do not put full bodies, sources, Fact/Inference sections or browser-local state in the index.
 
 ## Failure behavior
 
-If complete current content cannot be verified, do not publish and do not overwrite the archive.
+If item creation succeeds but the index update loses a SHA race, do not overwrite anything. Re-read the latest small index, deduplicate again and retry the index update. An orphan item file is recoverable; deleting historical Radar records is not.
 
-Pause the write, preserve the researched item separately in the working discussion, and retry only after a safe read path is available.
+If the complete compact index cannot be verified, stop only the write step. Never reconstruct an index from a truncated response.
 
-## Scope
+## Historical items
 
-This procedure applies to `news.json` only.
+Pre-split articles were migrated verbatim into individual `news-items/*.json` files. Their existing structured fields remain valid and are rendered through the legacy structured layout.
 
-`consumer-radar.json` and `deep-read.json` keep their own editorial contracts, but the same general rule applies: never overwrite canonical history from a truncated preview.
+`news.json` is retained only as a historical snapshot and must not receive new publications.
+
+## Browser-local state
+
+Read/unread state, notes, excerpts and discussion-thread state remain browser-local and must never enter the index or item files.

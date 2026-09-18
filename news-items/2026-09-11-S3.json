@@ -1,0 +1,17 @@
+{
+  "id": "2026-09-11-S3",
+  "date": "2026-09-11",
+  "grade": "S",
+  "title": "Computer Use：UI-as-API 可能侵蚀传统 Integration / RPA",
+  "themes": [
+    "Computer Use",
+    "RPA",
+    "Integration"
+  ],
+  "fact": "前沿模型开始直接操作没有 API 的旧软件界面，降低部分集成工程的长期价值。",
+  "why_it_matters": "Integration moat 可能从“连接系统”转向“理解和治理系统间业务关系”。",
+  "what_is_new": "",
+  "hype_uncertainty": "",
+  "discussion_question": "",
+  "sources": []
+}

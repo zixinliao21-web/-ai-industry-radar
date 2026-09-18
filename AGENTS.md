@@ -19,7 +19,9 @@ This repository is a lightweight static **VELNAR Research** product containing t
 
 - `index.html` — directory / read-state interface
 - `article.html` — long-form reading surface
-- `news.json` — canonical Industry Radar archive
+- `news-index.json` — compact canonical Industry Radar manifest / dedup baseline
+- `news-items/<id>.json` — canonical per-article Industry Radar records
+- `news.json` — frozen legacy pre-split snapshot; do not append new publications
 - `assets/research-discussion-bridge.js` — Industry notebook, excerpt capture, discussion handoff and strategic labels
 
 ### AI C 端产业雷达
@@ -85,9 +87,11 @@ Website implementation must not compress, rewrite or normalize research merely t
 
 ### Industry Radar
 
-`news.json` remains canonical. New items follow the strategic-observation contract in `PRODUCT.md`.
+Industry Radar uses split storage. `news-index.json` is the compact canonical manifest and dedup baseline; each full article lives in `news-items/<id>.json`. `news.json` is a frozen legacy snapshot and must not receive new publications.
 
-`news.json` must remain 2-space pretty-printed JSON with a trailing newline. Never minify it back to one line. For every publication, follow `docs/industry-radar-publishing.md`: never reconstruct or overwrite the archive from a truncated tool preview; verify the complete current archive, existing IDs and item count before writing, and use the exact current blob SHA so concurrent changes fail safely.
+For every publication, follow `docs/industry-radar-publishing.md`: create the new per-item file first, then update only the compact index using its exact current blob SHA. Never require a full-history body rewrite to add one signal.
+
+For new single-artifact publications, `article_text` in the item file is the canonical website body and must preserve the research article delivered in chat. Structured fields may remain as secondary compatibility metadata.
 
 Do not delete or mass-rewrite historical Industry items merely to restyle them. Factual corrections should be explicit rather than silently changing history.
 

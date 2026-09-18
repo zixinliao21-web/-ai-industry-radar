@@ -1,0 +1,17 @@
+{
+  "id": "2026-09-10-A1",
+  "date": "2026-09-10",
+  "grade": "A",
+  "title": "Frontier Intelligence：生产集中，但能力可能快速扩散",
+  "themes": [
+    "Models",
+    "Distillation",
+    "Moat"
+  ],
+  "fact": "前沿模型训练越来越资本密集，但蒸馏、合成数据等让部分能力向第二梯队快速扩散。",
+  "why_it_matters": "修正“智能商品化”的表述：生产集中化与使用/扩散商品化可以同时发生。",
+  "what_is_new": "",
+  "hype_uncertainty": "",
+  "discussion_question": "",
+  "sources": []
+}

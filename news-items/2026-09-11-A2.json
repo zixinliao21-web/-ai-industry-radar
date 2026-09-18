@@ -1,0 +1,17 @@
+{
+  "id": "2026-09-11-A2",
+  "date": "2026-09-11",
+  "grade": "A",
+  "title": "Frontier AI Regulation / AI Assurance",
+  "themes": [
+    "Regulation",
+    "Evaluation",
+    "Frontier Models"
+  ],
+  "fact": "前沿模型可能逐步进入基于能力的独立评估、部署准入与持续监控框架。",
+  "why_it_matters": "“谁有资格证明模型足够安全”可能成为新的控制点。",
+  "what_is_new": "",
+  "hype_uncertainty": "",
+  "discussion_question": "",
+  "sources": []
+}

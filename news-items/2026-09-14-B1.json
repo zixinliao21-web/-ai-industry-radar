@@ -1,0 +1,22 @@
+{
+  "id": "2026-09-14-B1",
+  "date": "2026-09-14",
+  "grade": "B",
+  "title": "Robotruck：Physical AI 商业化继续向重型物流扩散",
+  "themes": [
+    "Physical AI",
+    "Logistics",
+    "Autonomy"
+  ],
+  "fact": "Pony.ai 与广汽商用车发布第四代 L4 自动驾驶重卡，基于电动重卡平台，计划进入量产并用于长途运输、固定线路物流和港口运输。公司称新一代自动驾驶套件 BOM 成本较上一代降低约 70%，并预计降低吨公里运输成本。",
+  "why_it_matters": "这是对我们 Physical AI 判断的现实验证：商业化未必先由通用人形机器人完成。受限环境、固定路线、明确 ROI 和高劳动力成本的运输/物流场景，可能更早形成规模化自主执行。",
+  "what_is_new": "新意不在“又有自动驾驶卡车”，而在于产品从测试向量产、成本下降和具体运营场景推进，继续支持“Physical AI 先在经济闭环清晰的垂直任务落地”的路径。",
+  "hype_uncertainty": "厂商给出的成本下降和运营节省仍需要真实车队规模、事故率、监管许可、保险成本和长期运营数据验证；量产计划也不等于大规模商业采用。",
+  "discussion_question": "Physical AI 的第一批大规模利润池会不会主要来自“低自由度、高价值、可计算 ROI”的工业和物流任务，而不是通用机器人？",
+  "sources": [
+    {
+      "label": "Pony.ai — Gen-4 Robotruck announcement",
+      "url": "https://ir.pony.ai/zh-hant/news-releases/news-release-details/pony-ai-inc-unveils-new-gen-4-robotruck-collaboration-gac"
+    }
+  ]
+}

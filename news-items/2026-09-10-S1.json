@@ -1,0 +1,17 @@
+{
+  "id": "2026-09-10-S1",
+  "date": "2026-09-10",
+  "grade": "S",
+  "title": "OpenAI Agents API：Agent Runtime / Harness 正在基础设施化",
+  "themes": [
+    "Agent Runtime",
+    "Models",
+    "Platform"
+  ],
+  "fact": "模型公司开始直接提供长任务、工具调用、沙箱、子 Agent、Context 管理等通用运行能力。",
+  "why_it_matters": "通用 Agent Engineering 的差异化价值继续下降。",
+  "what_is_new": "",
+  "hype_uncertainty": "",
+  "discussion_question": "",
+  "sources": []
+}

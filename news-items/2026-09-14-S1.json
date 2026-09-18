@@ -1,0 +1,26 @@
+{
+  "id": "2026-09-14-S1",
+  "date": "2026-09-14",
+  "grade": "S",
+  "title": "Frontier AI Capability Pacing：能力增速与发布治理进入主议题",
+  "themes": [
+    "Frontier Models",
+    "Governance",
+    "Evaluation"
+  ],
+  "fact": "Anthropic CEO Dario Amodei 发布“Pace the Frontier”主张，要求前沿 AI 能力增长给安全评估与治理留出时间，并提出让独立第三方评估者获得接近内部员工级别的访问。Sam Altman、Elon Musk 等公开支持谨慎减速的方向，但 Meta CEO Mark Zuckerberg、Nvidia CEO Jensen Huang 等随后明确反对行业协同减速。",
+  "why_it_matters": "真正新的不是“AI 安全再次被讨论”，而是 Capability Pacing（能力增速治理）开始从抽象安全理念进入前沿实验室的研发和发布节奏讨论。产业链可能增加一个上游控制层：不仅评估“模型是否能部署”，还要决定“能力是否应该继续加速、何时进入市场”。",
+  "what_is_new": "此前 Evaluation / Assurance 主要回答部署安全；Capability Pacing 更进一步，涉及能力研发速度、第三方嵌入式评估和 Release Gate（发布准入）。同时，Nvidia/Meta 的反对也说明这并非稳定共识，而是一个正在形成的新产业分歧。",
+  "hype_uncertainty": "不能把这理解成全球 AI 已经进入统一减速。商业竞争、国家竞争和开源生态都形成强烈反向激励；目前更准确的判断是“前沿能力治理成为正式议题”，而不是“行业会整体暂停”。",
+  "discussion_question": "创业公司应该继续假设模型能力快速跃迁，还是应该把产品设计建立在“模型能力可能阶段性冻结、但 Workflow / Context / Policy 继续进步”的前提上？",
+  "sources": [
+    {
+      "label": "AP — Amodei calls for pacing AI frontier",
+      "url": "https://apnews.com/article/d59552edcb27892d8ee4d98a48397706"
+    },
+    {
+      "label": "Reuters — Zuckerberg rejects coordinated slowdown",
+      "url": "https://www.reuters.com/business/metas-zuckerberg-says-ai-labs-have-enough-incentive-build-safely-2026-09-16/"
+    }
+  ]
+}

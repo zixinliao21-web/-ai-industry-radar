@@ -1,0 +1,22 @@
+{
+  "id": "2026-09-15-A1",
+  "date": "2026-09-15",
+  "grade": "A",
+  "title": "Temporal：Durable Execution / Agent Reliability 被资本市场单独定价",
+  "themes": [
+    "Agent Reliability",
+    "Workflow",
+    "Infrastructure"
+  ],
+  "fact": "Temporal 宣布完成 5.5 亿美元 Series E，估值 125.5 亿美元。公司称年化收入运行率已超过 2.5 亿美元，同比增长超过 200%。Temporal 的核心能力是 Durable Execution（持久化执行）：长时间运行的工作流或 Agent 即使进程、网络或服务失败，也能够从确定状态恢复，而不是整条任务重来。",
+  "why_it_matters": "当 Agent 从“一问一答”走向几个小时、几天甚至更长时间的真实业务任务，Failure Recovery（故障恢复）、Workflow State（工作流状态）和确定性的重试/恢复机制会从工程细节变成生产基础设施。Temporal 的增长和估值是一个市场验证信号：Agent Reliability 可能形成独立基础设施价值。",
+  "what_is_new": "Durable Execution 不是新概念；新增的是 Agentic AI 的生产化需求正在把这类传统工作流基础设施重新推到核心位置。Agent Framework 本身未必能可靠承担企业长期任务，执行状态和恢复逻辑可能成为独立层。",
+  "hype_uncertainty": "融资估值和公司披露的 run rate 不能直接证明所有增长都来自 AI Agent；Temporal 也长期服务支付、微服务等非 AI 工作流。因此它更适合作为“可靠执行层价值上升”的验证，而不是“Agent 已经创造了 125 亿美元新市场”的证明。",
+  "discussion_question": "未来 Agent Runtime 会不会把 Durable Execution 内建并商品化，还是可靠性层会像数据库/消息队列一样长期保持独立基础设施地位？",
+  "sources": [
+    {
+      "label": "Temporal — Series E announcement",
+      "url": "https://temporal.io/news/temporal-raises-550m-at-a-12-55b-valuation"
+    }
+  ]
+}

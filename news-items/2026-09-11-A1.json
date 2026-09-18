@@ -1,0 +1,17 @@
+{
+  "id": "2026-09-11-A1",
+  "date": "2026-09-11",
+  "grade": "A",
+  "title": "Agent Egress Control：外部行动边界成为基础设施问题",
+  "themes": [
+    "Security",
+    "Agent Control",
+    "Egress"
+  ],
+  "fact": "Agent 安全从企业内部越权扩展到对互联网和第三方系统的写入、账号、凭证、代码执行等外部影响。",
+  "why_it_matters": "AI Control Plane 可能逐渐演化成 Agent 时代的 IAM + Firewall + API Gateway。",
+  "what_is_new": "",
+  "hype_uncertainty": "",
+  "discussion_question": "",
+  "sources": []
+}

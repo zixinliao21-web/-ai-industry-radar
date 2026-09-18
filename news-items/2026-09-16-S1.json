@@ -1,0 +1,27 @@
+{
+  "id": "2026-09-16-S1",
+  "date": "2026-09-16",
+  "grade": "S",
+  "title": "CADDi：制造业 Domain-native Context + Agent",
+  "themes": [
+    "Manufacturing AI",
+    "Vertical AI",
+    "Ontology",
+    "FDE"
+  ],
+  "fact": "CADDi 完成 1.14 亿美元 Series D，估值 12 亿美元。比融资数字更重要的是它的产品架构：平台把 CAD / 2D 工程图、ERP、采购、质量和生产数据组织成制造业可计算的 Context，再让 CADDi Agent 进入零件标准化、设计审查、质量影响分析等工作流。公司表示其专用模型负责理解工程图和 CAD，通用 LLM 主要处理文档与表格；同时推出多个 workflow 产品，试图把资深工程师的隐性知识编码进系统。",
+  "why_it_matters": "这提供了一个很具体的 Vertical AI 路径：不是“先造通用 Ontology，再找场景”，而是从高价值 Workflow 出发，因为任务需要而逐步形成 Domain-native Context（行业原生上下文），再进入更多 Workflow。它说明厚行业公司的壁垒可能来自把行业现实变成 machine-readable / machine-actionable（机器可理解、可执行）的结构，而不是更漂亮的 Agent UI。",
+  "what_is_new": "此前我们已经讨论 Enterprise Context / Ontology，但 CADDi 把这个抽象判断落到了制造业原生数据：工程图、CAD、BOM、质量记录、供应商选择等并不是普通文本 RAG 能覆盖的。新信号在于“行业原生数据理解 + Workflow + Agent”开始形成完整产品架构，而 FDE / Customer Success 被用来发现并编码这些行业知识。",
+  "hype_uncertainty": "公司没有披露收入或 ARR；其约 900 人团队、100+ Customer Success 以及持续增加 FDE，也说明部署和变革管理仍然很重。真正需要观察的是：每新增一家客户要多少人工建模、Domain Model 跨客户能复用多少、部署周期是否下降，以及服务人员是否必须随收入近似线性增长。CEO 关于“80% 制造流程知识未被记录”的比例属于公司观点，不应当成独立统计事实。",
+  "discussion_question": "如果 Vertical AI 最有价值的资产是把行业现实变成可计算的 Domain Context，什么情况下它会形成可跨企业复用的软件资产，什么情况下只是每家客户都要重做一遍的高成本数字化咨询？",
+  "sources": [
+    {
+      "label": "Fortune — CADDi Series D / product architecture",
+      "url": "https://www.fortune.com/2026/09/15/caddi-manufacturing-startup-valuation-funding-round-series-d-exclusive/"
+    },
+    {
+      "label": "WSJ Pro — CADDi financing",
+      "url": "https://www.wsj.com/pro/private-equity/coreline-salesforce-ventures-back-manufacturing-ai-company-caddi-ec3b9427"
+    }
+  ]
+}

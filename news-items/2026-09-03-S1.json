@@ -1,0 +1,17 @@
+{
+  "id": "2026-09-03-S1",
+  "date": "2026-09-03",
+  "grade": "S",
+  "title": "NVIDIA 拟收购 Hugging Face：从算力向开发者分发层扩张",
+  "themes": [
+    "Models",
+    "Developer Distribution",
+    "Control Points"
+  ],
+  "fact": "NVIDIA 从 GPU/CUDA 向模型发现、分发与开发者工作流继续上移，强化“巨头跨连续控制层扩张”的判断。",
+  "why_it_matters": "帮助建立 AI 产业“控制点/收费站”框架。",
+  "what_is_new": "",
+  "hype_uncertainty": "",
+  "discussion_question": "",
+  "sources": []
+}
