@@ -18,14 +18,16 @@ Implementation evidence:
 - `assets/research-discussion-bridge.js` — notes, excerpt capture, strategic labels, GPT discussion handoff
 - `assets/share-export-fix.js` — Share Card export
 - `service-worker.js` — PWA cache and runtime injection
-- `news.json` — canonical research archive
+- `news-index.json` — compact Industry Radar directory / navigation manifest
+- `news-items/<id>.json` — canonical per-article Industry Radar records
+- `news.json` — frozen legacy snapshot
 
 Rules:
 
 1. Preserve product behavior before visual polish.
 2. Extend existing tokens before inventing new ones.
 3. Keep the static HTML/CSS/JS architecture unless a real product requirement justifies migration.
-4. UI-only work must not compress research or mutate `news.json` semantics.
+4. UI-only work must not compress research or mutate Industry/Consumer/Deep Read content semantics.
 5. Reading remains primary; utility controls remain compact and secondary.
 
 ## 2. Typography — Precision Sans
