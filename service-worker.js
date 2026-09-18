@@ -1,4 +1,4 @@
-const CACHE='velnar-radar-v34';
+const CACHE='velnar-radar-v35';
 const SHELL=[
   './','./index.html','./article.html',
   './consumer-radar.html','./consumer-article.html',
