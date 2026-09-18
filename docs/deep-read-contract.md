@@ -1,98 +1,58 @@
 # Weekly Deep Read — Content Contract
 
 Status: Active  
-Collection: `weekly-deep-read`  
+Schema: `deep-read.json` V2.0  
 Canonical content store: `deep-read.json`
 
-## 1. Purpose
+## 1. Product identity
 
-Weekly Deep Read is a long-term curated reading collection for VELNAR Research.
+Weekly Deep Read is a long-term curated reading product.
 
-It is **not** a news stream and **not** a tag or subfeed of VELNAR Intelligence Radar.
+It is not a news stream, not an Intelligence Radar tag, and not a place to regenerate shorter summaries for the website.
 
-Its job is to preserve a small number of articles, essays, reports, research papers, and business cases that remain worth reading beyond the day they were published.
+The authoritative artifact is the **finished Deep Read produced in this ChatGPT thread**.
 
-The content loop is:
+The publishing flow is:
 
 ```text
-Selection
-→ verify the original source
-→ judge why the piece deserves sustained attention
-→ extract the core argument
-→ record durable takeaways
-→ add VELNAR reading notes / reflection where useful
-→ preserve questions worth discussing
-→ publish as a Deep Read entry
+ChatGPT selects and reads a source
+→ ChatGPT writes the finished Deep Read
+→ that finished Deep Read becomes the publication artifact
+→ store it in deep-read.json
+→ website renders that artifact
 ```
 
-## 2. Separation from Intelligence Radar
+There is no second editorial rewrite between ChatGPT and the website.
 
-`news.json` remains the canonical archive for VELNAR Intelligence Radar.
+## 2. Verbatim publishing rule
 
-Weekly Deep Read uses `deep-read.json`.
+For a published item, `content_markdown` is the canonical body.
 
-Do not:
-- write Deep Read entries into `news.json`;
-- reuse Radar grades or force Deep Read into Radar themes;
-- require Radar fields such as `fact`, `what_is_new`, `hype_uncertainty`, or `map_change`;
-- treat a Deep Read as a current signal merely because it was recently published;
-- modify Radar content when publishing or correcting a Deep Read entry.
+It must preserve the finished Deep Read from this thread at full length, including:
 
-Radar asks: **What changed in the outside world, and how does it change our map?**
+- title and section hierarchy;
+- paragraphs and emphasis;
+- quoted framing;
+- code / text blocks;
+- examples and analogies;
+- the original-source link;
+- analysis, interpretation and concluding judgment contained in that finished Deep Read.
 
-Deep Read asks: **Why is this source worth sustained reading, what is its argument, and what should we retain after reading it?**
+Do not compress the body into `why_read`, `core_argument`, `key_takeaways`, a card summary, or a Radar-style memo.
 
-## 3. Selection scope
+Do not re-search an already finished Deep Read merely to create a different web version.
 
-Primary themes include:
+Do not silently rewrite or “improve” historical prose during publishing.
 
-- AI / Agent and technological innovation
-- entrepreneurship, strategy, and organizational management
-- market analysis and business models
-- social, cultural, and long-term trends
-- early-stage startup building
-- company / business case studies
-- teams, leadership, founder and manager qualities
-- organizational capability building
+If a factual correction becomes necessary later, handle it explicitly as correction metadata or a new editorial decision; do not silently mutate the historical artifact.
 
-Prefer substantial long-form reading, normally around 40 minutes or more. Shorter pieces may be included only when their insight density and long-term value justify an exception.
+Mechanical adaptation needed to make a ChatGPT rich link clickable on the website is allowed, but it must not alter the visible prose or argument.
 
-Paywalled or restricted-access sources are allowed when the access condition is recorded honestly.
+## 3. Metadata is secondary
 
-## 4. Publication gate
+Metadata exists only for indexing, sorting, filtering and source access.
 
-An entry should not be published until the following are verified from the original source or a reliable first-party record where possible:
-
-- title
-- author(s), when available
-- publication / institution
-- canonical source URL
-- original publication date at the precision the source actually provides
-- enough of the source to judge its core argument and reading value
-
-Do not manufacture missing metadata.
-
-If the source only provides a year or month, preserve that precision:
-- `YYYY-MM-DD`
-- `YYYY-MM`
-- `YYYY`
-
-Historical ChatGPT recommendations are candidates, not evidence. Re-verify them before adding them to `deep-read.json`.
-
-## 5. Data contract
-
-Top level:
-
-```json
-{
-  "schema_version": "1.0",
-  "collection": "weekly-deep-read",
-  "updated_at": "YYYY-MM-DD",
-  "items": []
-}
-```
-
-Each item uses:
+A minimal item is:
 
 ```json
 {
@@ -101,61 +61,64 @@ Each item uses:
   "title": "string",
   "author": ["string"],
   "publication": "string",
-  "institution": "string",
-  "source_type": "article | report | research_paper | working_paper | case_study | essay | other",
   "source_url": "https://...",
   "original_publish_date": "YYYY-MM-DD | YYYY-MM | YYYY",
   "estimated_reading_time": "string",
-  "topic": "string",
   "themes": ["string"],
-  "why_read": "string",
-  "core_argument": "string",
-  "key_takeaways": ["string"],
-  "our_notes": "string",
-  "discussion_questions": ["string"],
-  "access": {
-    "type": "free | paywalled | restricted | unknown",
-    "note": "optional string"
-  }
+  "content_markdown": "full finished Deep Read"
 }
 ```
 
-### Field intent
+Fields may be omitted when they were not known in the original artifact and are not needed for indexing.
 
-- `id`: stable Deep Read identity; do not derive meaning from Radar IDs.
-- `added_date`: when VELNAR Research added the item to this collection. It is not the automation schedule.
-- `original_publish_date`: source publication date, retaining only the precision supported by evidence.
-- `topic`: one primary editorial bucket for scanning.
-- `themes`: secondary concepts; no need to match Radar theme vocabulary.
-- `why_read`: why this source deserves sustained attention.
-- `core_argument`: the source's central thesis, stated compactly and without turning our interpretation into the author's claim.
-- `key_takeaways`: durable ideas worth retaining after reading.
-- `our_notes`: VELNAR / ChatGPT reading notes or reflection. Keep source claims and our interpretation distinguishable.
-- `discussion_questions`: include only when there is a concrete question worth returning to.
-- `access`: practical access status; never imply a source is freely available when it is not.
+The website must not synthesize the article body from metadata.
 
-If an optional field is genuinely unavailable or adds no value, omit it rather than inventing filler.
+## 4. Separation from the two Radar collections
 
-## 6. Scheduling boundary
+- `news.json` remains VELNAR Intelligence Radar.
+- `consumer-radar.json` remains AI C 端产业雷达.
+- `deep-read.json` remains Weekly Deep Read.
 
-The Tuesday / Thursday / Saturday recommendation cadence belongs to the ChatGPT automation layer.
+The three collections do not share an editorial schema.
 
-Do not write cadence, next-run time, notification state, or automation metadata into individual Deep Read items or `deep-read.json`.
+Radar asks what changed in the world and how it changes our map.
 
-## 7. Editorial discipline
+Deep Read preserves a finished reading artifact and the reasoning that made the source worth reading.
 
-A Deep Read entry should be source-centric and durable.
+Never write Deep Read content into either Radar collection.
 
-Prefer:
-- the strongest available original source;
-- clear separation between the author's thesis and our reflection;
-- a small number of high-signal takeaways;
-- corrections when earlier chat recommendations contained inaccurate metadata.
+## 5. Selection scope
 
-Avoid:
-- rewriting the source into a news story;
-- padding notes merely to make an entry look complete;
-- duplicating a paper and its short announcement as separate entries when the deeper source subsumes the shorter one;
-- archiving every recommendation automatically.
+The existing scope remains:
 
-The collection should remain selective enough that an old entry still feels worth opening months later.
+- AI / Agent and technological innovation
+- entrepreneurship, strategy and organizational management
+- market analysis and business models
+- social, cultural and long-term trends
+- early-stage startup building
+- company / business case studies
+- teams and leadership qualities
+
+The Tuesday / Thursday / Saturday cadence belongs to ChatGPT automation and must not be copied into article data.
+
+## 6. Historical migration rule
+
+Past Deep Reads already written in this thread should be migrated from the **actual finished assistant response**, not reconstructed from a later summary.
+
+If a prior website entry contains only a short structured synopsis, that synopsis is not the canonical body and should be replaced or superseded by the original full Deep Read.
+
+Repeated recommendations of the same source do not need duplicate website entries. Choose the intended finished artifact and preserve that artifact verbatim.
+
+## 7. Website-team contract
+
+The VELNAR Research website thread owns rendering and UI.
+
+For Weekly Deep Read it should:
+
+1. read `deep-read.json`;
+2. use metadata for directory/index surfaces;
+3. render `content_markdown` as the full article body;
+4. keep `source_url` accessible as the original-source link;
+5. not truncate, summarize, or map the body into Radar sections unless explicitly requested.
+
+This content thread owns selection and the full Deep Read artifact. The website thread owns presentation only.
