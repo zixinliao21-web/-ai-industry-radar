@@ -18,8 +18,8 @@
 *{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{margin:0;min-height:100dvh;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}a{color:inherit}button{font:inherit}.skip-link{position:fixed;left:14px;top:10px;z-index:1200;transform:translateY(-140%);background:#111;color:#fff;padding:8px 11px;border-radius:8px;font-size:12px;text-decoration:none}.skip-link:focus{transform:translateY(0)}.progress-track{position:fixed;top:0;left:0;right:0;height:2px;z-index:1100;pointer-events:none}.progress-bar{width:100%;height:100%;transform:scaleX(0);transform-origin:left center;background:linear-gradient(90deg,#1daace 0%,#396ee3 48%,#6b42ea 100%)}
 main{max-width:900px;margin:0 auto;padding:max(22px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) calc(80px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}.brandbar{position:sticky;top:max(8px,env(safe-area-inset-top));z-index:80;display:flex;align-items:center;justify-content:space-between;gap:14px;margin:0 -8px 26px;padding:8px;border:1px solid rgba(227,229,234,.82);border-radius:13px;background:rgba(243,244,247,.9);backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%);box-shadow:0 1px 0 rgba(17,18,20,.025);opacity:1;transform:none;animation:brandIn var(--dur-brand,560ms) var(--ease-velnar) 60ms forwards}.brandlock{display:flex;align-items:center;gap:9px}.brandmark{width:28px;height:28px;display:block;transform:none;animation:markIn var(--dur-brand,560ms) var(--ease-velnar) 60ms forwards}.brandname{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--brand)}.product{font-size:11px;color:var(--muted);margin-left:2px}.mode{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#8b8d95}
 .topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.top-actions{display:flex;align-items:center;gap:8px}.control{min-height:40px;border:1px solid var(--line);background:rgba(255,255,255,.9);color:#26272d;border-radius:999px;padding:9px 13px;font-size:12px;text-decoration:none;cursor:pointer;outline:none;white-space:nowrap}.control:focus-visible,.archive-link:focus-visible,.toc-link:focus-visible,.sources a:focus-visible{box-shadow:0 0 0 3px rgba(57,110,227,.18),0 0 0 1px rgba(57,110,227,.55);outline:none}.toc-shell{position:sticky;top:45px;z-index:60;margin-bottom:14px;display:none;background:var(--bg)}.toc-shell.visible{display:block}.toc{display:flex;gap:16px;align-items:center;overflow-x:auto;scrollbar-width:none;padding:11px 14px;background:var(--bg);border:1px solid var(--line);border-radius:14px}.toc::-webkit-scrollbar{display:none}.toc-link{position:relative;flex:0 0 auto;color:#858791;text-decoration:none;font-size:10.5px;line-height:1;padding:4px 0}.toc-link.active{color:var(--text)}.toc-link::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left}.toc-link.active::after{transform:scaleX(1)}
-.article{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:24px;padding:36px 36px 46px}.article>*{max-width:var(--reading);margin-left:auto;margin-right:auto}.article>.section,.article>.deep-read-body{max-width:none;width:100%;margin-left:0;margin-right:0;box-sizing:border-box}.hero-block{padding-bottom:26px;border-bottom:1px solid var(--line)}.kicker{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:17px}.kind{display:inline-grid;place-items:center;min-width:48px;height:34px;padding:0 8px;border-radius:10px;background:#111;color:#fff;font-size:8px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.kind.baseline{background:#4b4e58}.kind.update{background:#8d9099}.meta{font-size:10.5px;color:var(--muted);font-variant-numeric:tabular-nums}.article h1{font-size:clamp(34px,5vw,48px);line-height:1.08;letter-spacing:-1.45px;margin:0 0 12px;text-wrap:balance}.themes{font-size:11px;color:var(--muted);line-height:1.6;margin:0}.reading-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:17px;color:#8b8d95;font-size:10.5px}.reading-meta .dot{opacity:.45}
-.section{padding-top:34px;scroll-margin-top:126px}.section h2{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#646670;margin:0 0 14px;font-weight:800}.section h2::before{content:"";display:block;width:18px;height:1px;background:#b9bbc3}.body{font-size:16px;line-height:1.92;color:#25262c;white-space:pre-line;text-wrap:pretty}.question-list{display:grid;gap:10px}.question{background:#f5f6f8;border:1px solid #eceef2;border-radius:14px;padding:16px 18px;line-height:1.75;font-size:15px}.sources{display:grid;gap:10px}.sources a{display:flex;align-items:flex-start;gap:6px;padding:10px 0;border-bottom:1px solid #eceef2;color:#24262c;text-decoration:none;font-size:14px;line-height:1.55}.sources a:last-child{border-bottom:0}.source-index{flex:0 0 28px;color:#9698a0;font-size:10px;padding-top:2px}.error{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;color:var(--muted)}
+.article{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:24px;padding:36px 36px 46px}.article>*{max-width:var(--reading);margin-left:auto;margin-right:auto}.article>.section,.article>.deep-read-body,.article>.consumer-markdown-body{max-width:none;width:100%;margin-left:0;margin-right:0;box-sizing:border-box}.hero-block{padding-bottom:26px;border-bottom:1px solid var(--line)}.kicker{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:17px}.kind{display:inline-grid;place-items:center;min-width:48px;height:34px;padding:0 8px;border-radius:10px;background:#111;color:#fff;font-size:8px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.kind.baseline{background:#4b4e58}.kind.update{background:#8d9099}.meta{font-size:10.5px;color:var(--muted);font-variant-numeric:tabular-nums}.article h1{font-size:clamp(34px,5vw,48px);line-height:1.08;letter-spacing:-1.45px;margin:0 0 12px;text-wrap:balance}.themes{font-size:11px;color:var(--muted);line-height:1.6;margin:0}.reading-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:17px;color:#8b8d95;font-size:10.5px}.reading-meta .dot{opacity:.45}
+.section{padding-top:34px;scroll-margin-top:126px}.section h2{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#646670;margin:0 0 14px;font-weight:800}.section h2::before{content:"";display:block;width:18px;height:1px;background:#b9bbc3}.body{font-size:16px;line-height:1.92;color:#25262c;white-space:pre-line;text-wrap:pretty}.consumer-markdown-body{padding-top:34px;font-size:16px;line-height:1.92;color:var(--text);overflow-wrap:anywhere}.consumer-markdown-body>:first-child{margin-top:0}.consumer-markdown-body>:last-child{margin-bottom:0}.consumer-markdown-body h1,.consumer-markdown-body h2,.consumer-markdown-body h3,.consumer-markdown-body h4,.consumer-markdown-body h5,.consumer-markdown-body h6{color:var(--text);text-transform:none;letter-spacing:-.02em;line-height:1.25;font-weight:760;scroll-margin-top:126px}.consumer-markdown-body h1{font-size:30px;margin:44px 0 18px}.consumer-markdown-body h2{font-size:24px;margin:40px 0 16px}.consumer-markdown-body h3{font-size:19px;margin:32px 0 13px}.consumer-markdown-body h4,.consumer-markdown-body h5,.consumer-markdown-body h6{font-size:16px;margin:28px 0 12px}.consumer-markdown-body p{margin:0 0 19px}.consumer-markdown-body strong{font-weight:760;color:var(--text)}.consumer-markdown-body blockquote{margin:24px 0;padding:4px 0 4px 18px;border-left:2px solid var(--accent);color:var(--muted)}.consumer-markdown-body blockquote p{margin:0}.consumer-markdown-body ul,.consumer-markdown-body ol{margin:0 0 20px;padding-left:1.45em}.consumer-markdown-body li{margin:7px 0;padding-left:.15em}.consumer-markdown-body pre{margin:24px 0;padding:16px 18px;overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--soft);font:400 13px/1.65 ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;white-space:pre}.consumer-markdown-body code{font:400 .9em/1.5 ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;background:var(--soft);border-radius:5px;padding:.1em .35em}.consumer-markdown-body pre code{font:inherit;background:transparent;border-radius:0;padding:0}.consumer-markdown-body a{color:inherit;text-decoration-line:underline;text-decoration-color:var(--line-strong);text-decoration-thickness:1px;text-underline-offset:3px}.consumer-markdown-body hr{border:0;border-top:1px solid var(--line);margin:34px 0}.markdown-table-wrap{width:100%;overflow-x:auto;margin:24px 0;-webkit-overflow-scrolling:touch}.consumer-markdown-body table{width:100%;min-width:440px;border-collapse:collapse;font-size:14px;line-height:1.6}.consumer-markdown-body th,.consumer-markdown-body td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.consumer-markdown-body th{font-weight:700;color:var(--text);background:var(--soft)}.consumer-body-status{margin-top:30px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--soft);color:var(--muted);font-size:13px;line-height:1.7}.question-list{display:grid;gap:10px}.question{background:#f5f6f8;border:1px solid #eceef2;border-radius:14px;padding:16px 18px;line-height:1.75;font-size:15px}.sources{display:grid;gap:10px}.sources a{display:flex;align-items:flex-start;gap:6px;padding:10px 0;border-bottom:1px solid #eceef2;color:#24262c;text-decoration:none;font-size:14px;line-height:1.55}.sources a:last-child{border-bottom:0}.source-index{flex:0 0 28px;color:#9698a0;font-size:10px;padding-top:2px}.error{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;color:var(--muted)}
 .archive-nav{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.archive-link{display:flex;flex-direction:column;justify-content:space-between;min-height:112px;padding:16px 17px;background:rgba(255,255,255,.78);border:1px solid var(--line);border-radius:16px;text-decoration:none;outline:none}.archive-link.empty{visibility:hidden}.archive-label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#90929a}.archive-title{margin-top:18px;font-size:13px;line-height:1.45;font-weight:650;color:#2c2e35;text-wrap:pretty}.archive-meta{margin-top:7px;font-size:10px;color:var(--muted)}.footerbrand{display:flex;justify-content:center;align-items:center;gap:7px;margin-top:28px;color:#8a8c94;font-size:10px;letter-spacing:.08em}.footerbrand img{width:18px;height:18px}.to-top{position:fixed;right:max(22px,env(safe-area-inset-right));bottom:calc(22px + env(safe-area-inset-bottom));z-index:60;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:rgba(255,255,255,.94);color:#454750;font-size:16px;cursor:pointer;opacity:0;transform:translateY(8px);pointer-events:none}.to-top.visible{opacity:1;transform:translateY(0);pointer-events:auto}
 @keyframes brandIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}@keyframes markIn{from{transform:scale(.96)}to{transform:scale(1)}}
 @media(hover:hover) and (pointer:fine){.collection-link:hover{color:var(--text)}.archive-link:hover{background:#fff;border-color:var(--line-strong)}}
@@ -45,13 +45,126 @@ function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&l
 function readSet(){try{const v=JSON.parse(localStorage.getItem(READ_KEY)||'[]');return new Set(Array.isArray(v)?v:[])}catch{return new Set()}}
 function writeSet(set){try{localStorage.setItem(READ_KEY,JSON.stringify([...set]))}catch{}}
 function kindLabel(kind){return kind==='baseline'?'BASE':kind==='category_update'?'UPDATE':'SIGNAL'}function kindClass(kind){return kind==='baseline'?'baseline':kind==='category_update'?'update':'signal'}
-function readingMinutes(item){const fields=[item.fact,item.user_evidence,item.inference,item.prediction,item.hype_uncertainty,...(item.discussion_questions||[])].filter(Boolean).join('');return Math.max(1,Math.round(fields.length/420))}
+function readingMinutes(item){
+  const canonical=item.publication_mode==='verbatim'&&typeof item.body_markdown==='string'&&item.body_markdown.trim();
+  const text=canonical?item.body_markdown:[item.fact,item.user_evidence,item.inference,item.prediction,item.hype_uncertainty,...(item.discussion_questions||[])].filter(Boolean).join('');
+  const cjk=(text.match(/[\u3400-\u9fff]/g)||[]).length,latin=(text.match(/[A-Za-z0-9]+/g)||[]).length;
+  return Math.max(1,Math.round(cjk/450+latin/220));
+}
+function safeHref(value){try{const u=new URL(String(value||''),location.href);return u.protocol==='http:'||u.protocol==='https:'?u.href:'#'}catch{return'#'}}
+function inlineMarkdown(value){
+  const tokens=[];const stash=html=>{const token='@@VELNAR_MD_'+tokens.length+'@@';tokens.push(html);return token};
+  let s=String(value??'').split('\\`').join('`');
+  s=s.replace(/`([^`\n]+)`/g,(_,code)=>stash('<code>'+esc(code)+'</code>'));
+  s=s.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,(_,label,url)=>stash('<a href="'+esc(safeHref(url))+'" target="_blank" rel="noopener noreferrer">'+esc(label).replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>')+'</a>'));
+  s=esc(s);
+  s=s.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/__([^_]+)__/g,'<strong>$1</strong>');
+  tokens.forEach((html,i)=>{s=s.replace('@@VELNAR_MD_'+i+'@@',html)});
+  return s;
+}
+function inlineLines(lines){return lines.map((line,i)=>{const hard=/\s{2,}$/.test(line);const clean=hard?line.replace(/\s{2,}$/,''):line;return inlineMarkdown(clean)+(i<lines.length-1?(hard?'<br>':' '):'')}).join('')}
+function normalizedFence(line){
+  const t=String(line||'').trim().split('\\`').join('`');
+  return t.startsWith('```')?t:null;
+}
+function tableCells(line){
+  let s=String(line||'').trim();
+  if(s.startsWith('|'))s=s.slice(1);
+  if(s.endsWith('|'))s=s.slice(0,-1);
+  return s.split('|').map(x=>x.trim());
+}
+function tableSeparator(line){
+  const cells=tableCells(line);
+  return cells.length>0&&cells.every(x=>/^:?-{3,}:?$/.test(x.replace(/\s+/g,'')));
+}
+function tableHtml(lines,start){
+  const headers=tableCells(lines[start]),spec=tableCells(lines[start+1]);
+  const aligns=spec.map(x=>{const s=x.replace(/\s+/g,'');return s.startsWith(':')&&s.endsWith(':')?'center':s.endsWith(':')?'right':s.startsWith(':')?'left':''});
+  const rows=[];let i=start+2;
+  while(i<lines.length&&lines[i].trim()&&lines[i].includes('|')){rows.push(tableCells(lines[i]));i++}
+  const cell=(tag,value,index)=>'<'+tag+(aligns[index]?' style="text-align:'+aligns[index]+'"':'')+'>'+inlineMarkdown(value??'')+'</'+tag+'>';
+  const head='<thead><tr>'+headers.map((x,j)=>cell('th',x,j)).join('')+'</tr></thead>';
+  const body=rows.length?'<tbody>'+rows.map(row=>'<tr>'+headers.map((_,j)=>cell('td',row[j]??'',j)).join('')+'</tr>').join('')+'</tbody>':'';
+  return {html:'<div class="markdown-table-wrap"><table>'+head+body+'</table></div>',next:i};
+}
+function markdownToHtml(markdown){
+  const lines=String(markdown??'').replace(/\r\n?/g,'\n').split('\n'),out=[];let i=0,headingIndex=0,paragraph=[];
+  const flushParagraph=()=>{if(!paragraph.length)return;out.push('<p>'+inlineLines(paragraph)+'</p>');paragraph=[]};
+  while(i<lines.length){
+    const line=lines[i],fence=normalizedFence(line);
+    if(fence){
+      flushParagraph();const code=[];const info=fence.slice(3).trim();i++;
+      while(i<lines.length&&!normalizedFence(lines[i])){code.push(lines[i]);i++}
+      if(i<lines.length)i++;
+      out.push('<pre><code'+(info?' data-info="'+esc(info)+'"':'')+'>'+esc(code.join('\n'))+'</code></pre>');continue;
+    }
+    if(!line.trim()){flushParagraph();i++;continue}
+    const heading=line.match(/^(#{1,6})\s+(.+)$/);
+    if(heading){
+      flushParagraph();headingIndex++;const level=heading[1].length,id='md-heading-'+headingIndex;
+      out.push('<h'+level+' id="'+id+'" data-md-heading="1">'+inlineMarkdown(heading[2])+'</h'+level+'>');i++;continue;
+    }
+    if(i+1<lines.length&&line.includes('|')&&tableSeparator(lines[i+1])){
+      flushParagraph();const table=tableHtml(lines,i);out.push(table.html);i=table.next;continue;
+    }
+    if(/^\s*(?:-{3,}|\*{3,}|_{3,})\s*$/.test(line)){flushParagraph();out.push('<hr>');i++;continue}
+    if(/^\s*>\s?/.test(line)){
+      flushParagraph();const quote=[];
+      while(i<lines.length&&/^\s*>\s?/.test(lines[i])){quote.push(lines[i].replace(/^\s*>\s?/,''));i++}
+      out.push('<blockquote><p>'+inlineLines(quote)+'</p></blockquote>');continue;
+    }
+    if(/^\s*[-*+]\s+/.test(line)){
+      flushParagraph();const items=[];
+      while(i<lines.length&&/^\s*[-*+]\s+/.test(lines[i])){items.push(lines[i].replace(/^\s*[-*+]\s+/,''));i++}
+      out.push('<ul>'+items.map(x=>'<li>'+inlineMarkdown(x)+'</li>').join('')+'</ul>');continue;
+    }
+    if(/^\s*\d+[.)]\s+/.test(line)){
+      flushParagraph();const items=[];
+      while(i<lines.length&&/^\s*\d+[.)]\s+/.test(lines[i])){items.push(lines[i].replace(/^\s*\d+[.)]\s+/,''));i++}
+      out.push('<ol>'+items.map(x=>'<li>'+inlineMarkdown(x)+'</li>').join('')+'</ol>');continue;
+    }
+    paragraph.push(line);i++;
+  }
+  flushParagraph();return out.join('');
+}
 function section(id,label,body){if(!body)return'';return '<section class="section" id="sec-'+id+'"><h2>'+esc(label)+'</h2><div class="body">'+esc(body)+'</div></section>'}
 function questionSection(questions){if(!questions||!questions.length)return'';return '<section class="section" id="sec-discussion"><h2>值得继续讨论的问题</h2><div class="question-list">'+questions.map(q=>'<div class="question">'+esc(q)+'</div>').join('')+'</div></section>'}
-function sourcesSection(sources){if(!sources||!sources.length)return'';return '<section class="section" id="sec-sources"><h2>Sources｜来源</h2><div class="sources">'+sources.map((s,i)=>'<a href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer"><span class="source-index">'+String(i+1).padStart(2,'0')+'</span><span>'+esc(s.label||s.url)+'</span></a>').join('')+'</div></section>'}
-function renderArticle(item){currentItem=item;window.currentItem=item;const themes=(item.themes||[]).map(esc).join(' · ');const controls=(item.control_points||[]).map(esc).join(' · ');articleRoot.innerHTML='<article class="article"><header class="hero-block"><div class="kicker"><span class="kind '+kindClass(item.kind)+'">'+kindLabel(item.kind)+'</span><span class="meta">'+esc(item.date)+' · '+esc(item.id)+'</span></div><h1>'+esc(item.title)+'</h1><p class="themes">'+themes+'</p><div class="reading-meta"><span>约 '+readingMinutes(item)+' 分钟阅读</span><span class="dot">·</span><span>'+esc(controls||'Consumer AI')+'</span></div></header>'+section('fact','Fact｜发生了什么',item.fact)+section('user-evidence','User Evidence｜真实用户证据',item.user_evidence)+section('inference','Inference｜我们如何理解',item.inference)+section('prediction','Prediction｜接下来观察什么',item.prediction)+section('uncertainty','Hype / Uncertainty｜不应过度推断什么',item.hype_uncertainty)+questionSection(item.discussion_questions)+sourcesSection(item.sources)+'</article>';document.title=item.title+' · AI C 端产业雷达';updateReadButton();buildToc();observeSections();updateProgress()}
-function buildToc(){const labels={fact:'Fact','user-evidence':'User Evidence',inference:'Inference',prediction:'Prediction',uncertainty:'Guardrail',discussion:'Discuss',sources:'Sources'};const sections=[...document.querySelectorAll('.article .section')];toc.innerHTML=sections.map(s=>'<a class="toc-link" href="#'+s.id+'" data-target="'+s.id+'">'+(labels[s.id.replace('sec-','')]||s.querySelector('h2').textContent)+'</a>').join('');tocShell.classList.toggle('visible',sections.length>1)}
-let observer=null;function observeSections(){if(observer)observer.disconnect();const links=[...document.querySelectorAll('.toc-link')];const sections=[...document.querySelectorAll('.article .section')];observer=new IntersectionObserver(entries=>{const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top)[0];if(!visible)return;links.forEach(a=>a.classList.toggle('active',a.dataset.target===visible.target.id))},{rootMargin:'-120px 0px -65% 0px',threshold:[0,.1,1]});sections.forEach(s=>observer.observe(s))}
+function sourcesSection(sources){if(!sources||!sources.length)return'';return '<section class="section" id="sec-sources"><h2>Sources｜来源</h2><div class="sources">'+sources.map((s,i)=>'<a href="'+esc(safeHref(s.url))+'" target="_blank" rel="noopener noreferrer"><span class="source-index">'+String(i+1).padStart(2,'0')+'</span><span>'+esc(s.label||s.url)+'</span></a>').join('')+'</div></section>'}
+function canonicalBody(item){
+  if(item.publication_mode==='verbatim'){
+    if(typeof item.body_markdown==='string'&&item.body_markdown.trim())return '<div class="consumer-markdown-body">'+markdownToHtml(item.body_markdown)+'</div>';
+    return '<div class="consumer-body-status">该条目已标记为 verbatim 发布，但 canonical body_markdown 缺失。</div>';
+  }
+  return '';
+}
+function renderArticle(item){
+  currentItem=item;window.currentItem=item;
+  const themes=(item.themes||[]).map(esc).join(' · '),controls=(item.control_points||[]).map(esc).join(' · ');
+  const verbatim=item.publication_mode==='verbatim',body=verbatim?canonicalBody(item):section('fact','Fact｜发生了什么',item.fact)+section('user-evidence','User Evidence｜真实用户证据',item.user_evidence)+section('inference','Inference｜我们如何理解',item.inference)+section('prediction','Prediction｜接下来观察什么',item.prediction)+section('uncertainty','Hype / Uncertainty｜不应过度推断什么',item.hype_uncertainty)+questionSection(item.discussion_questions)+sourcesSection(item.sources);
+  const badge=verbatim?'RADAR':kindLabel(item.kind),badgeClass=verbatim?'signal':kindClass(item.kind);
+  articleRoot.innerHTML='<article class="article"><header class="hero-block"><div class="kicker"><span class="kind '+badgeClass+'">'+badge+'</span><span class="meta">'+esc(item.date)+' · '+esc(item.id)+'</span></div><h1>'+esc(item.title)+'</h1><p class="themes">'+themes+'</p><div class="reading-meta"><span>约 '+readingMinutes(item)+' 分钟阅读</span><span class="dot">·</span><span>'+esc(controls||'Consumer AI')+'</span></div></header>'+body+'</article>';
+  document.title=item.title+' · AI C 端产业雷达';updateReadButton();buildToc();observeSections();updateProgress();
+}
+function buildToc(){
+  const headings=[...document.querySelectorAll('.consumer-markdown-body [data-md-heading]')];
+  if(headings.length){
+    toc.innerHTML=headings.map(h=>'<a class="toc-link" href="#'+h.id+'" data-target="'+h.id+'">'+esc(h.textContent)+'</a>').join('');
+    tocShell.classList.toggle('visible',headings.length>1);return;
+  }
+  const labels={fact:'Fact','user-evidence':'User Evidence',inference:'Inference',prediction:'Prediction',uncertainty:'Guardrail',discussion:'Discuss',sources:'Sources'};
+  const sections=[...document.querySelectorAll('.article .section')];
+  toc.innerHTML=sections.map(s=>'<a class="toc-link" href="#'+s.id+'" data-target="'+s.id+'">'+(labels[s.id.replace('sec-','')]||s.querySelector('h2').textContent)+'</a>').join('');
+  tocShell.classList.toggle('visible',sections.length>1);
+}
+let observer=null;
+function observeSections(){
+  if(observer)observer.disconnect();const links=[...document.querySelectorAll('.toc-link')];
+  const headings=[...document.querySelectorAll('.consumer-markdown-body [data-md-heading]')];
+  const targets=headings.length?headings:[...document.querySelectorAll('.article .section')];
+  if(!targets.length)return;
+  observer=new IntersectionObserver(entries=>{const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top)[0];if(!visible)return;links.forEach(a=>a.classList.toggle('active',a.dataset.target===visible.target.id))},{rootMargin:'-120px 0px -65% 0px',threshold:[0,.1,1]});
+  targets.forEach(s=>observer.observe(s));
+}
 function updateReadButton(){if(!currentItem)return;const set=readSet();readBtn.textContent=set.has(currentItem.id)?'标记未读':'标记已读'}
 readBtn.addEventListener('click',()=>{if(!currentItem)return;const set=readSet();if(set.has(currentItem.id))set.delete(currentItem.id);else{set.add(currentItem.id);try{sessionStorage.setItem(LAST_OPENED_KEY,currentItem.id)}catch{}}writeSet(set);updateReadButton()});
 function renderNav(){const sorted=[...allItems].sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));const i=sorted.findIndex(x=>x.id===currentItem.id);const newer=i>0?sorted[i-1]:null;const older=i>=0&&i<sorted.length-1?sorted[i+1]:null;function card(x,label){return x?'<a class="archive-link" href="./consumer-article.html?id='+encodeURIComponent(x.id)+'"><span class="archive-label">'+label+'</span><span><div class="archive-title">'+esc(x.title)+'</div><div class="archive-meta">'+esc(x.date)+'</div></span></a>':'<span class="archive-link empty"></span>'}archiveNav.innerHTML=card(newer,'Newer')+card(older,'Older')}
