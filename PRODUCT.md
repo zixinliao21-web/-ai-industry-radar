@@ -86,9 +86,11 @@ Each article has a local notebook.
 
 ### Discussion handoff
 
-The **讨论** action builds a Discussion Packet containing relevant article context plus the reader’s notes / excerpts, copies it to the clipboard, and opens ChatGPT.
+The **讨论** action builds a Discussion Packet containing relevant article context plus the reader’s notes / excerpts and copies it to the clipboard. The website must not imply that clipboard content has been injected into ChatGPT automatically.
 
-A user may optionally bind a specific ChatGPT discussion-thread URL. If none is configured, opening ChatGPT’s home page is an acceptable fallback.
+The default handoff targets the ChatGPT desktop app: after copying, show the platform-appropriate desktop shortcut when available and ask the reader to paste the packet into the intended discussion thread. Do not automatically open ChatGPT web as part of the primary action. A saved ChatGPT web-thread URL may remain as an explicit secondary fallback.
+
+When the page is opened inside the ChatGPT desktop app’s built-in browser and WebMCP site tools are available, expose a read-only tool that returns the current article’s Discussion Packet, including browser-local notes and excerpts. This is a progressive enhancement; normal reading and clipboard handoff must remain available without WebMCP.
 
 The packet should ask GPT to:
 

@@ -20,7 +20,7 @@
     style.id='vrb-bridge-style';
     style.textContent=`
       .vrb-icon-control{position:relative;width:40px!important;min-width:40px!important;padding:0!important;display:grid!important;place-items:center!important}.vrb-icon-control svg{width:18px;height:18px}.vrb-note-dot{position:absolute;right:5px;top:5px;width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 2px var(--bg);display:none}.vrb-icon-control.has-note .vrb-note-dot{display:block}.vrb-discuss{display:flex!important;align-items:center!important;gap:6px!important}.vrb-discuss svg{width:15px;height:15px}
-      .vrb-note-layer{position:fixed;inset:0;z-index:1300;pointer-events:none;background:rgba(10,11,15,0);transition:background var(--dur-state,220ms) ease}.vrb-note-layer.open{pointer-events:auto;background:rgba(10,11,15,.24)}.vrb-note-sheet{position:absolute;top:0;right:0;width:min(420px,94vw);height:100dvh;background:var(--card);border-left:1px solid var(--line);box-shadow:-18px 0 60px rgba(17,18,20,.10);transform:translateX(102%);transition:transform var(--dur-state,220ms) var(--ease-velnar,cubic-bezier(.23,1,.32,1));display:flex;flex-direction:column;padding:max(18px,env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) 18px}.vrb-note-layer.open .vrb-note-sheet{transform:translateX(0)}.vrb-note-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--line)}.vrb-note-title{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:760;color:var(--text)}.vrb-note-title svg{width:18px;height:18px}.vrb-note-context{margin-top:5px;font-size:10px;line-height:1.5;color:var(--muted);max-width:310px}.vrb-note-close{width:36px;height:36px;border:1px solid var(--line);border-radius:50%;background:var(--soft);color:var(--text);display:grid;place-items:center;cursor:pointer}.vrb-note-close svg{width:16px;height:16px}.vrb-note-body{flex:1;min-height:0;overflow:auto;padding:16px 1px}.vrb-note-label{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}.vrb-note-text{width:100%;min-height:190px;resize:vertical;border:1px solid var(--line);border-radius:14px;background:var(--soft);color:var(--text);padding:13px 14px;font:400 14px/1.72 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif;outline:none}.vrb-note-text:focus{border-color:var(--line-strong);box-shadow:0 0 0 3px rgba(57,110,227,.10)}.vrb-note-save{margin-top:7px;text-align:right;font-size:9px;color:var(--muted);min-height:14px}.vrb-quotes{display:grid;gap:8px;margin-top:18px}.vrb-quote{position:relative;border-left:2px solid var(--accent);background:var(--soft);border-radius:0 10px 10px 0;padding:10px 36px 10px 12px;color:var(--text);font-size:11.5px;line-height:1.65}.vrb-quote-remove{position:absolute;right:5px;top:5px;width:28px;height:28px;border:0;background:transparent;color:var(--muted);display:grid;place-items:center;cursor:pointer;border-radius:7px}.vrb-quote-remove:hover{background:var(--card);color:var(--text)}.vrb-quote-remove svg{width:14px;height:14px}.vrb-empty-quotes{font-size:11px;color:var(--muted);line-height:1.6;padding:6px 0}.vrb-note-foot{padding-top:12px;border-top:1px solid var(--line)}.vrb-thread-settings{margin-bottom:10px}.vrb-thread-settings summary{cursor:pointer;color:var(--muted);font-size:10px;list-style:none}.vrb-thread-settings summary::-webkit-details-marker{display:none}.vrb-thread-settings summary::before{content:'⚙';margin-right:6px}.vrb-thread-help{font-size:10px;line-height:1.55;color:var(--muted);margin:9px 0 7px}.vrb-thread-row{display:flex;gap:7px}.vrb-thread-input{min-width:0;flex:1;border:1px solid var(--line);border-radius:10px;background:var(--soft);color:var(--text);padding:8px 10px;font-size:10px;outline:none}.vrb-thread-save{border:1px solid var(--line);border-radius:10px;background:var(--soft);color:var(--text);padding:8px 10px;font-size:10px;cursor:pointer}.vrb-discuss-now{width:100%;min-height:44px;border:1px solid var(--text);border-radius:12px;background:var(--text);color:var(--bg);font-weight:700;font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px}.vrb-discuss-now svg{width:16px;height:16px}
+      .vrb-note-layer{position:fixed;inset:0;z-index:1300;pointer-events:none;background:rgba(10,11,15,0);transition:background var(--dur-state,220ms) ease}.vrb-note-layer.open{pointer-events:auto;background:rgba(10,11,15,.24)}.vrb-note-sheet{position:absolute;top:0;right:0;width:min(420px,94vw);height:100dvh;background:var(--card);border-left:1px solid var(--line);box-shadow:-18px 0 60px rgba(17,18,20,.10);transform:translateX(102%);transition:transform var(--dur-state,220ms) var(--ease-velnar,cubic-bezier(.23,1,.32,1));display:flex;flex-direction:column;padding:max(18px,env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) 18px}.vrb-note-layer.open .vrb-note-sheet{transform:translateX(0)}.vrb-note-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--line)}.vrb-note-title{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:760;color:var(--text)}.vrb-note-title svg{width:18px;height:18px}.vrb-note-context{margin-top:5px;font-size:10px;line-height:1.5;color:var(--muted);max-width:310px}.vrb-note-close{width:36px;height:36px;border:1px solid var(--line);border-radius:50%;background:var(--soft);color:var(--text);display:grid;place-items:center;cursor:pointer}.vrb-note-close svg{width:16px;height:16px}.vrb-note-body{flex:1;min-height:0;overflow:auto;padding:16px 1px}.vrb-note-label{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}.vrb-note-text{width:100%;min-height:190px;resize:vertical;border:1px solid var(--line);border-radius:14px;background:var(--soft);color:var(--text);padding:13px 14px;font:400 14px/1.72 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif;outline:none}.vrb-note-text:focus{border-color:var(--line-strong);box-shadow:0 0 0 3px rgba(57,110,227,.10)}.vrb-note-save{margin-top:7px;text-align:right;font-size:9px;color:var(--muted);min-height:14px}.vrb-quotes{display:grid;gap:8px;margin-top:18px}.vrb-quote{position:relative;border-left:2px solid var(--accent);background:var(--soft);border-radius:0 10px 10px 0;padding:10px 36px 10px 12px;color:var(--text);font-size:11.5px;line-height:1.65}.vrb-quote-remove{position:absolute;right:5px;top:5px;width:28px;height:28px;border:0;background:transparent;color:var(--muted);display:grid;place-items:center;cursor:pointer;border-radius:7px}.vrb-quote-remove:hover{background:var(--card);color:var(--text)}.vrb-quote-remove svg{width:14px;height:14px}.vrb-empty-quotes{font-size:11px;color:var(--muted);line-height:1.6;padding:6px 0}.vrb-note-foot{padding-top:12px;border-top:1px solid var(--line)}.vrb-thread-settings{margin-bottom:10px}.vrb-thread-settings summary{cursor:pointer;color:var(--muted);font-size:10px;list-style:none}.vrb-thread-settings summary::-webkit-details-marker{display:none}.vrb-thread-settings summary::before{content:'⚙';margin-right:6px}.vrb-handoff{min-height:0;font-size:10px;line-height:1.6;color:var(--muted)}.vrb-handoff:not(:empty){padding:10px 11px;border:1px solid var(--line);border-radius:10px;background:var(--soft);margin-bottom:10px}.vrb-thread-help{font-size:10px;line-height:1.55;color:var(--muted);margin:9px 0 7px}.vrb-thread-row{display:flex;gap:7px}.vrb-thread-input{min-width:0;flex:1;border:1px solid var(--line);border-radius:10px;background:var(--soft);color:var(--text);padding:8px 10px;font-size:10px;outline:none}.vrb-thread-save{border:1px solid var(--line);border-radius:10px;background:var(--soft);color:var(--text);padding:8px 10px;font-size:10px;cursor:pointer}.vrb-discuss-now{width:100%;min-height:44px;border:1px solid var(--text);border-radius:12px;background:var(--text);color:var(--bg);font-weight:700;font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px}.vrb-discuss-now svg{width:16px;height:16px}
       .vrb-selection{position:fixed;z-index:1400;display:none}.vrb-selection.show{display:block}.vrb-selection-btn{width:34px;height:34px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--text);box-shadow:0 10px 30px rgba(17,18,20,.16);display:grid;place-items:center;cursor:pointer}.vrb-selection-btn svg{width:17px;height:17px}.vrb-selection-btn:hover{transform:translateY(-1px)}
       .vrb-note-mark{display:inline-flex;align-items:center;color:var(--accent);margin-left:3px;vertical-align:-2px}.vrb-note-mark svg{width:11px;height:11px}.vrb-lens-note{display:inline-flex;align-items:center;gap:6px;margin-top:13px;color:var(--muted);font-size:9.5px;letter-spacing:.02em}.vrb-lens-note::before{content:'';width:14px;height:1px;background:var(--accent);opacity:.75}
       @media(prefers-color-scheme:dark){html:not([data-theme="light"]) .vrb-note-sheet,html:not([data-theme="light"]) .vrb-selection-btn{background:#17191f;color:#edf0f5}html:not([data-theme="light"]) .vrb-note-text,html:not([data-theme="light"]) .vrb-quote,html:not([data-theme="light"]) .vrb-thread-input,html:not([data-theme="light"]) .vrb-thread-save,html:not([data-theme="light"]) .vrb-note-close{background:#1d2027;border-color:#30343d;color:#edf0f5}html:not([data-theme="light"]) .vrb-note-sheet{border-color:#2a2d35;box-shadow:-18px 0 60px rgba(0,0,0,.35)}html:not([data-theme="light"]) .vrb-discuss-now{background:#f1f3f6;color:#111318;border-color:#f1f3f6}}
@@ -61,6 +61,12 @@
     const ta=document.createElement('textarea');ta.value=text;ta.style.cssText='position:fixed;left:-9999px;top:-9999px';document.body.appendChild(ta);ta.select();let ok=false;try{ok=document.execCommand('copy')}catch{}ta.remove();return ok;
   }
 
+  function desktopShortcut(){
+    const p=String(navigator.platform||navigator.userAgent||'');
+    if(/Mac|iPhone|iPad/i.test(p))return '⌥ Space';
+    if(/Win/i.test(p))return 'Alt + Space';
+    return '';
+  }
   function applyStrategicLabels(){
     if(!isArticle)return;
     const root=document.getElementById('articleRoot');
@@ -99,6 +105,19 @@
   }
   function updateIndexMarks(){mountIndexMarks()}
 
+  async function registerDiscussionTool(){
+    if(!isArticle||typeof document.modelContext?.registerTool!=='function')return;
+    try{
+      await document.modelContext.registerTool({
+        name:'get_velnar_discussion_packet',
+        description:'Read the current VELNAR Industry Radar discussion context, including browser-local notes and saved excerpts.',
+        inputSchema:{type:'object',properties:{},additionalProperties:false},
+        annotations:{readOnlyHint:true},
+        execute:async()=>{const item=current(),e=getEntry();return{collection:'AI Industry Radar',article_id:articleId(),title:item?.title||document.title,note_chars:e.text.trim().length,excerpt_count:e.quotes.length,discussion_packet:buildDiscussionPacket()}}
+      });
+    }catch{}
+  }
+
   function mountArticleBridge(){
     if(!isArticle)return;
     const actions=document.querySelector('.top-actions');
@@ -112,7 +131,7 @@
 
     const layer=document.createElement('div');
     layer.id='vrbNoteLayer';layer.className='vrb-note-layer';layer.setAttribute('aria-hidden','true');
-    layer.innerHTML='<aside class="vrb-note-sheet" role="dialog" aria-modal="true" aria-labelledby="vrbNoteTitle"><div class="vrb-note-head"><div><div class="vrb-note-title" id="vrbNoteTitle">'+NOTE_ICON+'<span>阅读笔记</span></div><div class="vrb-note-context" id="vrbNoteContext"></div></div><button class="vrb-note-close" id="vrbNoteClose" type="button" aria-label="关闭阅读笔记">'+CLOSE_ICON+'</button></div><div class="vrb-note-body"><div class="vrb-note-label">我的问题与判断</div><textarea class="vrb-note-text" id="vrbNoteText" placeholder="记下你想回到 GPT 继续讨论的问题、不同意的地方，或与 VELNAR 当前路径有关的判断。"></textarea><div class="vrb-note-save" id="vrbNoteSaveState"></div><div class="vrb-quotes" id="vrbQuoteList"></div></div><div class="vrb-note-foot"><details class="vrb-thread-settings"><summary>讨论入口设置</summary><div class="vrb-thread-help">可选：粘贴这个产业研究专用 GPT 聊天的链接。只保存在当前浏览器。</div><div class="vrb-thread-row"><input class="vrb-thread-input" id="vrbThreadInput" type="url" inputmode="url" placeholder="https://chatgpt.com/c/…"><button class="vrb-thread-save" id="vrbThreadSave" type="button">保存</button></div></details><button class="vrb-discuss-now" id="vrbDiscussNow" type="button">'+CHAT_ICON+'<span>带着笔记去讨论</span></button></div></aside>';
+    layer.innerHTML='<aside class="vrb-note-sheet" role="dialog" aria-modal="true" aria-labelledby="vrbNoteTitle"><div class="vrb-note-head"><div><div class="vrb-note-title" id="vrbNoteTitle">'+NOTE_ICON+'<span>阅读笔记</span></div><div class="vrb-note-context" id="vrbNoteContext"></div></div><button class="vrb-note-close" id="vrbNoteClose" type="button" aria-label="关闭阅读笔记">'+CLOSE_ICON+'</button></div><div class="vrb-note-body"><div class="vrb-note-label">我的问题与判断</div><textarea class="vrb-note-text" id="vrbNoteText" placeholder="记下你想回到 GPT 继续讨论的问题、不同意的地方，或与 VELNAR 当前路径有关的判断。"></textarea><div class="vrb-note-save" id="vrbNoteSaveState"></div><div class="vrb-quotes" id="vrbQuoteList"></div></div><div class="vrb-note-foot"><div class="vrb-handoff" id="vrbHandoff" aria-live="polite"></div><details class="vrb-thread-settings"><summary>网页版备用入口</summary><div class="vrb-thread-help">可选：保存产业研究专用 ChatGPT 网页线程。讨论按钮不会再自动打开网页；这里只作为备用入口。</div><div class="vrb-thread-row"><input class="vrb-thread-input" id="vrbThreadInput" type="url" inputmode="url" placeholder="https://chatgpt.com/c/…"><button class="vrb-thread-save" id="vrbThreadSave" type="button">保存</button><button class="vrb-thread-save" id="vrbOpenWeb" type="button">打开网页版</button></div></details><button class="vrb-discuss-now" id="vrbDiscussNow" type="button">'+CHAT_ICON+'<span>复制讨论包</span></button></div></aside>';
     document.body.appendChild(layer);
 
     const selection=document.createElement('div');selection.id='vrbSelection';selection.className='vrb-selection';selection.innerHTML='<button class="vrb-selection-btn" id="vrbSelectionBtn" type="button" aria-label="记下选中内容" title="记下">'+NOTE_ADD_ICON+'</button>';document.body.appendChild(selection);
@@ -145,14 +164,33 @@
     noteText.addEventListener('input',()=>{noteSave.textContent='正在保存…';clearTimeout(saveTimer);saveTimer=setTimeout(()=>{const e=getEntry();e.text=noteText.value;saveEntry(e);noteSave.textContent='已保存在此浏览器';setTimeout(()=>{if(noteSave.textContent==='已保存在此浏览器')noteSave.textContent=''},1100)},320)});
     document.getElementById('vrbThreadSave').addEventListener('click',()=>{const v=threadInput.value.trim();if(v&&!/^https?:\/\//i.test(v)){showToastSafe('请输入完整的 http(s) 链接');return}try{if(v)localStorage.setItem(THREAD_KEY,v);else localStorage.removeItem(THREAD_KEY)}catch{}showToastSafe(v?'讨论线程已保存':'已清除固定讨论线程')});
 
-    async function discuss(){
-      const packet=buildDiscussionPacket();const copied=await copyText(packet);if(copied)showToastSafe('讨论包已复制');
-      let target='';try{target=(localStorage.getItem(THREAD_KEY)||'').trim()}catch{}
-      const url=/^https?:\/\//i.test(target)?target:'https://chatgpt.com/';
-      window.open(url,'_blank','noopener');
-      if(!target)setTimeout(()=>showToastSafe('讨论包已复制；可在笔记设置中绑定固定 GPT 线程'),250);
+    function flushLatestNote(){
+      if(!layer.classList.contains('open'))return;
+      clearTimeout(saveTimer);
+      const e=getEntry();e.text=noteText.value;saveEntry(e);
+      noteSave.textContent='已保存在此浏览器';
     }
-    discussBtn.addEventListener('click',discuss);document.getElementById('vrbDiscussNow').addEventListener('click',discuss);
+    async function discuss(){
+      flushLatestNote();
+      const copied=await copyText(buildDiscussionPacket());
+      const e=getEntry(),shortcut=desktopShortcut(),handoff=document.getElementById('vrbHandoff');
+      if(copied){
+        const detail='已复制讨论包（笔记 '+e.text.trim().length+' 字 · 摘录 '+e.quotes.length+' 条）。';
+        const next=shortcut?'按 '+shortcut+' 打开 ChatGPT 桌面端，然后粘贴发送。':'切回 ChatGPT 桌面端，然后粘贴发送。';
+        if(handoff)handoff.textContent=detail+next;
+        showToastSafe('讨论包已复制，包含当前笔记与摘录');
+      }else{
+        if(handoff)handoff.textContent='自动复制失败。请检查浏览器剪贴板权限后重试。';
+        showToastSafe('讨论包复制失败');
+      }
+    }
+    function openWebFallback(){
+      let target='';try{target=(localStorage.getItem(THREAD_KEY)||'').trim()}catch{}
+      window.open(/^https?:\/\//i.test(target)?target:'https://chatgpt.com/','_blank','noopener');
+    }
+    discussBtn.addEventListener('click',discuss);
+    document.getElementById('vrbDiscussNow').addEventListener('click',discuss);
+    document.getElementById('vrbOpenWeb').addEventListener('click',openWebFallback);
 
     function captureSelection(){
       setTimeout(()=>{
@@ -199,6 +237,7 @@
   function escapeHtml(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 
   injectStyle();
+  registerDiscussionTool();
   if(isArticle){mountArticleBridge();const retry=setInterval(()=>{mountArticleBridge();applyStrategicLabels();if(document.querySelector('.article'))clearInterval(retry)},250);setTimeout(()=>clearInterval(retry),10000)}
   if(isIndex){mountIndexMarks();const lists=[document.getElementById('unreadList'),document.getElementById('readList')].filter(Boolean);const mo=new MutationObserver(mountIndexMarks);lists.forEach(x=>mo.observe(x,{childList:true,subtree:true}));window.addEventListener('pageshow',mountIndexMarks)}
   window.addEventListener('storage',e=>{if(e.key===NOTES_KEY){updateNoteState();mountIndexMarks()}});
