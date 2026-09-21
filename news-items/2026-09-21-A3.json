@@ -1,0 +1,24 @@
+{
+  "id": "2026-09-21-A3",
+  "date": "2026-09-21",
+  "grade": "A",
+  "title": "Agent Commerce 的下一场战争不是支付，而是访问权：商家开始决定哪些 Agent 有资格替用户行动",
+  "themes": ["Agent Commerce", "Personal Agent", "Platform Control", "Agent Identity", "Trust Infrastructure"],
+  "deck": "Amazon 阻止 Meta Muse 代用户访问其商店，暴露了 Agent Commerce 比支付更早的一层控制点：第三方 Agent 是否被识别、授权并允许进入商家的数字边界。未来商业互联网可能需要的不只是 Agent 钱包，还需要 Agent Identity、Intent、Permission 与 Merchant Acceptance。",
+  "article_text": "今天有一个值得进入 A 级 Radar 的 Agent Commerce 信号。表面上看，它只是 Amazon 和 Meta 之间的一次平台冲突：Amazon 阻止 Meta 的个人 AI Agent Muse 在其网站上替用户购物。但如果把它放进我们过去两周持续追踪的 Agent Commerce 地图里，这件事补上了一块此前被支付叙事遮住的基础设施：一个 Agent 即使拥有用户授权、浏览器、支付能力和购买意图，也不代表商家必须允许它进入。\n\nMeta 9 月 8 日发布 Muse 时，已经把 Personal Agent 从“聊天助手”推向真正的行动主体。Muse 运行在独立 Secure VM 中，可以持续在后台工作、打开浏览器、填写表单、谈判，并在用户批准后完成购买；支付侧则通过 Stripe Link 的一次性卡号隐藏真实卡信息。换句话说，Meta 已经同时解决了一部分 Personal Context、Credential、Permission、Execution 和 Payment 问题。\n\n但 9 月 21 日出现了一个很有意思的反作用力：Amazon 阻止 Muse 在 Amazon 上购物。Amazon 给出的理由不是“AI 不准买东西”，而是 Muse 没有按 Amazon 要求识别自身、其访问方式未经授权，并带来隐私与安全问题。此前 Amazon 也曾与 Perplexity 因 Agent 代用户访问和购物发生类似冲突。\n\n真正值得我们记录的变化是：Agent Commerce 的基础设施问题开始从“Agent 怎么付款”向前移动到“Agent 有没有资格进入”。\n\n我们此前重点观察 Visa、Mastercard、Stripe 等公司，是因为当 AI 从推荐商品变成真正替用户下单时，必须回答谁授权、最多花多少钱、钱付给谁、发生欺诈怎么办。这仍然成立。但 Amazon 与 Muse 的冲突说明，在 Payment Authorization 之前，还有一个 Merchant Acceptance Layer——商家接受层。现实中的信用卡网络之所以能工作，不只是消费者有一张卡，而是商户、发卡行、收单行和卡组织共同接受一套身份、授权、清算与争议规则。Agent Commerce 很可能也会走向类似结构：用户说“你替我买”，只是第一层授权；Agent 还需要向商家证明“我是谁、我代表谁、被允许做什么、这次行为是否真的来自用户意图”，而商家则保留决定是否接受这个 Agent 的权力。\n\n这会让我们此前讨论的 Agent Trust 进一步具体化。未来真正需要标准化的可能不只是 Agent Payment，而是 Agent Identity + User Intent + Permission + Merchant Acceptance + Audit Trail。也就是说，Agent 互联网不能简单复制今天的 Web：今天网站默认浏览器背后是一个人，而未来同一个网站可能面对成千上万个自动行动的软件主体。如果这些 Agent 不主动表明身份，网站看到的只是异常自动化流量；如果 Agent 表明身份，网站又必须决定哪些 Agent 可以搜索、比较、登录、加入购物车、谈价、购买，哪些能力需要额外授权。\n\n这里可能出现一个新的产业控制点。拥有用户关系的 Personal Agent 会希望成为用户在互联网中的代理入口，因为一旦它掌握长期偏好、购买历史、预算和任务上下文，它理论上可以替用户跨平台选择最优商品；但拥有商品、库存、履约和交易关系的平台不会自然愿意把这个入口让出去。Amazon 希望用户在 Amazon 自己的界面和 Agent 中完成发现与决策，Meta、OpenAI、Google 等 Personal Agent 则希望把“选择什么”这一层带到自己的界面。于是未来 Agent Commerce 的竞争不只是“谁能完成购买”，而是谁控制需求入口，以及商家是否允许外部 Agent 穿透自己的界面进入交易系统。\n\n这也解释了为什么 Agent Commerce 最终可能不能长期依赖 Computer Use 和网页模拟点击。Computer Use 很适合在开放 Web 上快速获得行动能力，但当 Agent 开始产生真实经济影响时，平台有动力识别、限制甚至封锁这种自动化访问。真正规模化的 Agent Commerce 很可能需要从“像人一样操作网站”逐渐迁移到机器可验证的商业协议：Agent 明确声明身份，携带用户授权和可验证 Intent，商家暴露允许 Agent 使用的能力，支付网络验证资金权限，最后整个交易留下可审计记录。浏览器自动化可能是过渡层，而不是最终协议层。\n\n但我们也不能因为 Amazon 封锁 Muse，就直接得出“开放 Agent Web 会失败”或者“平台一定能守住入口”。Amazon 有自己的商业利益，它既是商家平台，也是广告平台，也在建设自己的 AI 购物入口，因此安全理由与平台控制权并不是完全可以分开的。反过来，如果用户明确要求自己的 Agent 去 Amazon 比价，而 Amazon 长期拒绝所有外部 Agent，这也可能引发竞争、消费者代理权甚至监管问题。现在还不知道最终均衡会是封闭花园、开放协议，还是类似支付网络那样的多方互操作体系。\n\n对 VELNAR 当前阶段，这属于继续观察，不产生任何 Sales MVP Scope 变化。但它对我们长期理解 Agent 时代非常重要，因为它进一步说明：当 Agent 从“生成信息”进入“替人行动”，真正有价值的基础设施会从模型能力逐渐转向 Identity、Permission、Policy、Intent、Audit 和跨组织 Trust。我们现在在企业 Agent 中强调的 Grounding、Policy、Tool 权限和 Trace，本质上解决的是企业内部的行动可信度；Agent Commerce 正在把同一类问题扩大到企业与企业、用户与平台之间。\n\n所以这条信号对产业地图的修改不是新增一个“购物 Agent”类别，而是把 Agent Commerce 拆成了至少三层控制点：上层是掌握用户 Context 与 Intent 的 Personal Agent，中间是决定 Agent 能否进入并调用商业能力的 Merchant / Platform Access Layer，底层是处理授权、支付、争议与结算的 Financial Trust Layer。未来最强的平台未必同时控制三层，而围绕这三层之间接口和权力分配的竞争，很可能才刚刚开始。\n\n接下来我认为最值得我们继续讨论两个问题。第一，如果用户明确授权一个 Personal Agent 代表自己行动，那么平台究竟应该拥有多大的权力拒绝这个 Agent——Agent Access 最终会不会像 API Access、支付受理甚至网络中立一样变成新的平台治理问题？第二，如果 Personal Agent 最终成为消费者需求入口，那么 VELNAR 长期应该怎样理解“控制点”：真正值得占据的是 Agent 本身，还是让不同 Agent、企业和交易系统彼此可信地行动的 Context / Identity / Permission / Policy 基础设施？",
+  "sources": [
+    {"label": "Meta — Introducing Muse: The World’s First Personal AI Agent Built for Everyone", "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/"},
+    {"label": "The Verge — Amazon doesn't trust Meta's Muse AI agent", "url": "https://www.theverge.com/tech/998078/amazon-blocks-meta-muse-ai-agent-shopping"}
+  ],
+  "fact": "Meta Muse 已具备浏览器操作、持续后台执行和经用户批准后的购买能力；9 月 21 日 Amazon 阻止 Muse 在其平台购物，理由涉及未经授权访问、Agent 身份识别及隐私安全。",
+  "why_it_matters": "它暴露了 Agent Commerce 在支付之前的 Merchant Acceptance / Agent Access 控制点：用户授权 Agent 并不自动意味着商家接受该 Agent。",
+  "what_is_new": "Agent Commerce 的信任栈需要从支付扩展到 Agent Identity、User Intent、Permission、Merchant Acceptance 与 Audit Trail。",
+  "challenges_existing_assumptions": "强化了 Agent Trust 是基础设施层的判断，同时修正了‘只要支付和用户授权解决，Agent 就能自由跨 Web 行动’的隐含假设。",
+  "hype_uncertainty": "Amazon 同时拥有平台与 AI 商业利益，因此安全理由与入口控制权可能交织；目前不能据此判断开放 Agent Web 必然失败或封闭平台必然胜出。",
+  "startup_implications": "继续观察。当前 VELNAR Sales MVP 不扩 Scope；长期关注跨组织 Agent Identity、Permission、Policy、Intent 与 Audit 基础设施。",
+  "map_change": "将 Agent Commerce 细分为 Personal Agent / Context 层、Merchant / Platform Access 层和 Financial Trust 层。",
+  "discussion_question": [
+    "用户明确授权 Agent 后，平台拒绝该 Agent 的权力边界应该在哪里？",
+    "长期更有价值的控制点是 Personal Agent 本身，还是跨 Agent、企业和交易系统的 Context / Identity / Permission / Policy 基础设施？"
+  ]
+}
