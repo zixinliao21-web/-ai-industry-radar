@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "storage": "split",
-  "updated_at": "2026-09-21 11:33 +08:00",
+  "updated_at": "2026-09-21 17:13 +08:00",
   "items": [
     {"id":"2026-09-16-S1","date":"2026-09-16","grade":"S","title":"CADDi：制造业 Domain-native Context + Agent","themes":["Manufacturing AI","Vertical AI","Ontology","FDE"],"body_format":"legacy_structured"},
     {"id":"2026-09-15-S1","date":"2026-09-15","grade":"S","title":"行业龙头内部 AI → 对外产品化：新的 Vertical AI 公司构建路径","themes":["Vertical AI","AI-native Company","Domain"],"body_format":"legacy_structured"},
@@ -36,6 +36,7 @@
     {"id":"2026-09-16-A3","date":"2026-09-16","grade":"A","title":"Noetive：Industrial World Model 开始连接 System of Record 与真实工厂感知","themes":["Physical AI","Manufacturing AI","World Models","System of Record"],"deck":"Noetive 以 4100 万美元 Seed 进入制造、物流和施工，核心不是机器人本体，而是把企业系统数据与现场多模态 sensing 合并成持续更新的工业“世界模型”。这补上了 Enterprise Context 从数字世界走向物理现实的一块关键缺口。","body_format":"legacy_structured"},
     {"id":"2026-09-17-A1","date":"2026-09-17","grade":"A","title":"Enhans：真实 Workflow → Ontology / Business Rules → AgentOS → Industry Pack","themes":["Enterprise AI","Ontology","FDE","Vertical AI","AgentOS"],"deck":"Enhans 的 Series C 不只是融资信号。更值得记录的是它正在把真实企业部署中沉淀的数据结构、业务规则与执行方法封装成 AgentOS 和 Industry Packs，提供了另一条从客户 Workflow 出发、再把 Domain Context 产品化的企业 Agent 路径。","body_format":"legacy_structured"},
     {"id":"2026-09-18-S1","date":"2026-09-18","grade":"S","title":"AI 开始进入 AI 自身的生产函数：前沿实验室的能力增长可能从‘模型迭代’变成‘研发循环加速’","themes":["Frontier Models","AI R&D Automation","Agent Oversight","Recursive Self-Improvement","AI Infrastructure"],"deck":"Anthropic 首次把内部 AI 研发自动化程度量化出来：截至 2026 年 8 月，Claude 已能在人工监督下主导 26% 的 AI R&D 工作，90% 以上的研发工作至少进入人机协作，同时约 3 万个研究与工程 Agent 在其主要内部平台并行运行。真正值得关注的不是‘AI 会不会自己造 AI’的标题，而是前沿实验室的研发生产函数正在发生变化。","body_format":"article_text"},
-    {"id":"2026-09-21-A1","date":"2026-09-21","grade":"A","title":"Ontology 正在从 Agent 功能变成可移植的企业资产：Semantic Authority 可能独立于 Agent Runtime","themes":["Ontology","Enterprise Context","Semantic Authority","Agent Runtime","Open Standards"],"deck":"Alation 把 Ontology 定义成企业拥有、专家审核、基于开放标准并可通过 MCP 被任意 Agent Runtime 消费的知识对象，同时把跨 Snowflake、Databricks 等平台的 Semantic Model Mastering 做成独立治理层。真正值得注意的是：企业语义权威可能不会归属于某一个 Agent 平台，而会成为可跨 Runtime 流动的独立控制点。","body_format":"article_text"}
+    {"id":"2026-09-21-A1","date":"2026-09-21","grade":"A","title":"Ontology 正在从 Agent 功能变成可移植的企业资产：Semantic Authority 可能独立于 Agent Runtime","themes":["Ontology","Enterprise Context","Semantic Authority","Agent Runtime","Open Standards"],"deck":"Alation 把 Ontology 定义成企业拥有、专家审核、基于开放标准并可通过 MCP 被任意 Agent Runtime 消费的知识对象，同时把跨 Snowflake、Databricks 等平台的 Semantic Model Mastering 做成独立治理层。真正值得注意的是：企业语义权威可能不会归属于某一个 Agent 平台，而会成为可跨 Runtime 流动的独立控制点。","body_format":"article_text"},
+    {"id":"2026-09-21-A2","date":"2026-09-21","grade":"A","title":"Physical AI 的资本叙事开始撞上商业化审计：真正稀缺的可能不是机器人本体，而是可验证的生产价值","themes":["Physical AI","Robotics","Commercialization","Bubble","Capital Markets"],"deck":"中国监管层据报道开始放缓人形机器人 IPO 节奏，关注高估值、政府支持型收入与真实商业需求之间的错位。对我们更重要的不是‘机器人泡沫破裂’，而是 Physical AI 正从能力与融资竞赛进入对可重复部署、真实客户付费和单位经济性的审计阶段。","body_format":"article_text"}
   ]
 }
