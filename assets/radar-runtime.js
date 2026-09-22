@@ -31,12 +31,15 @@
     if(document.getElementById('velnarThemeSelect'))return;
     const bar=document.querySelector('.brandbar');if(!bar)return;
     const select=picker();
-    const actions=bar.querySelector('.brand-actions');
-    if(actions){const mobile=actions.querySelector('.mobile-open');if(mobile)actions.insertBefore(select,mobile);else actions.appendChild(select);return}
-    const mode=bar.querySelector('.mode');
-    const wrap=document.createElement('div');wrap.className='velnar-theme-wrap';
-    if(mode){mode.replaceWith(wrap);wrap.appendChild(mode)}else bar.appendChild(wrap);
-    wrap.appendChild(select);
+    let actions=bar.querySelector('.brand-actions');
+    if(!actions){
+      actions=document.createElement('div');
+      actions.className='brand-actions velnar-header-actions';
+      const mode=bar.querySelector('.mode');
+      if(mode)actions.appendChild(mode);
+      bar.appendChild(actions);
+    }
+    actions.appendChild(select);
   }
   function mountCollectionNav(){
     if(document.querySelector('.collection-link')||document.getElementById('velnarCollectionNav'))return;
