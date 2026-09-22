@@ -1,0 +1,102 @@
+{
+  "schema_version": "3.0",
+  "segment": "0003",
+  "items": [
+    {
+      "id": "2026-09-10-B2",
+      "date": "2026-09-10",
+      "grade": "B",
+      "title": "TeamSystem：AI 不会自动消灭所有传统 SaaS",
+      "themes": [
+        "SaaS",
+        "System of Record",
+        "Moat"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-10-B3",
+      "date": "2026-09-10",
+      "grade": "B",
+      "title": "Robotics + SPAC：Physical AI 出现资本过热信号",
+      "themes": [
+        "Physical AI",
+        "Bubble",
+        "SPAC"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-10-A1",
+      "date": "2026-09-10",
+      "grade": "A",
+      "title": "Frontier Intelligence：生产集中，但能力可能快速扩散",
+      "themes": [
+        "Models",
+        "Distillation",
+        "Moat"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-10-A2",
+      "date": "2026-09-10",
+      "grade": "A",
+      "title": "NVLink Fusion：平台最高级形态可能是让竞争者在你的规则里竞争",
+      "themes": [
+        "Compute",
+        "NVIDIA",
+        "Standards"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-09-S1",
+      "date": "2026-09-09",
+      "grade": "S",
+      "title": "Visa / Mastercard：Agent Trust 与交易基础设施开始成形",
+      "themes": [
+        "Agent Internet",
+        "Payments",
+        "Trust"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-09-A1",
+      "date": "2026-09-09",
+      "grade": "A",
+      "title": "Euno：Enterprise Context 被直接产品化为 Context Platform",
+      "themes": [
+        "Enterprise Context",
+        "Context Platform",
+        "Data"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-09-A2",
+      "date": "2026-09-09",
+      "grade": "A",
+      "title": "ADI 收购 Alif：Physical AI 的 Intelligent Edge 控制点",
+      "themes": [
+        "Physical AI",
+        "Edge AI",
+        "Semiconductors"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-08-S1",
+      "date": "2026-09-08",
+      "grade": "S",
+      "title": "Accenture × Google：FDE 开始被咨询巨头规模化",
+      "themes": [
+        "FDE",
+        "Consulting",
+        "Enterprise AI"
+      ],
+      "body_format": "legacy_structured"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": "3.0",
+  "segment": "0001",
+  "items": [
+    {
+      "id": "2026-09-16-S1",
+      "date": "2026-09-16",
+      "grade": "S",
+      "title": "CADDi：制造业 Domain-native Context + Agent",
+      "themes": [
+        "Manufacturing AI",
+        "Vertical AI",
+        "Ontology",
+        "FDE"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-15-S1",
+      "date": "2026-09-15",
+      "grade": "S",
+      "title": "行业龙头内部 AI → 对外产品化：新的 Vertical AI 公司构建路径",
+      "themes": [
+        "Vertical AI",
+        "AI-native Company",
+        "Domain"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-15-A1",
+      "date": "2026-09-15",
+      "grade": "A",
+      "title": "Temporal：Durable Execution / Agent Reliability 被资本市场单独定价",
+      "themes": [
+        "Agent Reliability",
+        "Workflow",
+        "Infrastructure"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-15-A2",
+      "date": "2026-09-15",
+      "grade": "A",
+      "title": "Enterprise Context Custody：零数据保留成为模型采购条件",
+      "themes": [
+        "Enterprise AI",
+        "Security",
+        "Data Custody"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-14-S1",
+      "date": "2026-09-14",
+      "grade": "S",
+      "title": "Frontier AI Capability Pacing：能力增速与发布治理进入主议题",
+      "themes": [
+        "Frontier Models",
+        "Governance",
+        "Evaluation"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-14-B1",
+      "date": "2026-09-14",
+      "grade": "B",
+      "title": "Robotruck：Physical AI 商业化继续向重型物流扩散",
+      "themes": [
+        "Physical AI",
+        "Logistics",
+        "Autonomy"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-14-A1",
+      "date": "2026-09-14",
+      "grade": "A",
+      "title": "欧洲把 AI 依赖进一步上升为主权与战略依赖问题",
+      "themes": [
+        "Sovereign AI",
+        "Europe",
+        "Infrastructure"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-13-B1",
+      "date": "2026-09-13",
+      "grade": "B",
+      "title": "Anthropic 正营业利润信号：智能生产与智能服务需分开看",
+      "themes": [
+        "Models",
+        "Economics",
+        "Anthropic"
+      ],
+      "body_format": "legacy_structured"
+    }
+  ]
+}

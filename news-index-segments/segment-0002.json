@@ -1,0 +1,102 @@
+{
+  "schema_version": "3.0",
+  "segment": "0002",
+  "items": [
+    {
+      "id": "2026-09-11-S1",
+      "date": "2026-09-11",
+      "grade": "S",
+      "title": "Oracle 自动生成 Enterprise Ontology",
+      "themes": [
+        "Ontology",
+        "Enterprise Context",
+        "Oracle"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-11-S2",
+      "date": "2026-09-11",
+      "grade": "S",
+      "title": "OpenAI Data Agent：Semantic Authority 与 Intelligence Interface 开始分离",
+      "themes": [
+        "Enterprise Context",
+        "Semantic Layer",
+        "BI"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-11-S3",
+      "date": "2026-09-11",
+      "grade": "S",
+      "title": "Computer Use：UI-as-API 可能侵蚀传统 Integration / RPA",
+      "themes": [
+        "Computer Use",
+        "RPA",
+        "Integration"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-11-A1",
+      "date": "2026-09-11",
+      "grade": "A",
+      "title": "Agent Egress Control：外部行动边界成为基础设施问题",
+      "themes": [
+        "Security",
+        "Agent Control",
+        "Egress"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-11-A2",
+      "date": "2026-09-11",
+      "grade": "A",
+      "title": "Frontier AI Regulation / AI Assurance",
+      "themes": [
+        "Regulation",
+        "Evaluation",
+        "Frontier Models"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-10-S1",
+      "date": "2026-09-10",
+      "grade": "S",
+      "title": "OpenAI Agents API：Agent Runtime / Harness 正在基础设施化",
+      "themes": [
+        "Agent Runtime",
+        "Models",
+        "Platform"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-10-S2",
+      "date": "2026-09-10",
+      "grade": "S",
+      "title": "Salesforce AI Control Plane：Agent 控制层正式产品化",
+      "themes": [
+        "AI Control Plane",
+        "Governance",
+        "Enterprise AI"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-10-B1",
+      "date": "2026-09-10",
+      "grade": "B",
+      "title": "AI Infrastructure Capital Stack：债务与交织式融资升温",
+      "themes": [
+        "Infrastructure",
+        "Bubble",
+        "Capital"
+      ],
+      "body_format": "legacy_structured"
+    }
+  ]
+}

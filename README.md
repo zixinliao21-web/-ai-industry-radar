@@ -12,7 +12,8 @@ https://zixinliao21-web.github.io/-ai-industry-radar/
 
 - `index.html` — directory / unread-read interface
 - `article.html` — long-form article reader
-- `news-index.json` — compact Industry Radar manifest / directory index
+- `news-index.json` — tiny Industry Radar segmented-index manifest
+- `news-index-segments/segment-XXXX.json` — bounded compact directory metadata shards
 - `news-items/<id>.json` — canonical per-article Industry Radar records
 - `news.json` — frozen legacy pre-split snapshot
 

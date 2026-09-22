@@ -19,7 +19,8 @@ This repository is a lightweight static **VELNAR Research** product containing t
 
 - `index.html` — directory / read-state interface
 - `article.html` — long-form reading surface
-- `news-index.json` — compact canonical Industry Radar manifest / dedup baseline
+- `news-index.json` — tiny canonical Industry Radar segment manifest
+- `news-index-segments/segment-XXXX.json` — bounded compact metadata shards (max 8 items; sealed when full)
 - `news-items/<id>.json` — canonical per-article Industry Radar records
 - `news.json` — frozen legacy pre-split snapshot; do not append new publications
 - `assets/research-discussion-bridge.js` — Industry notebook, excerpt capture, discussion handoff and strategic labels
@@ -87,9 +88,9 @@ Website implementation must not compress, rewrite or normalize research merely t
 
 ### Industry Radar
 
-Industry Radar uses split storage. `news-index.json` is the compact canonical manifest and dedup baseline; each full article lives in `news-items/<id>.json`. `news.json` is a frozen legacy snapshot and must not receive new publications.
+Industry Radar uses segmented index V3. `news-index.json` is a tiny manifest; compact directory metadata lives in bounded `news-index-segments/segment-XXXX.json` shards; each full article lives in `news-items/<id>.json`. Full 8-item segments are sealed and immutable. `news.json` is a frozen legacy snapshot and must not receive new publications.
 
-For every publication, follow `docs/industry-radar-publishing.md`: create the new per-item file first, then update only the compact index using its exact current blob SHA. Never require a full-history body rewrite to add one signal.
+For every publication, follow `docs/industry-radar-publishing.md`: create the new per-item file first, update only the active bounded metadata segment, then update the tiny manifest using exact current blob SHAs. Never require a growing full-history index rewrite to add one signal.
 
 For new single-artifact publications, `article_text` in the item file is the canonical website body and must preserve the research article delivered in chat. Structured fields may remain as secondary compatibility metadata.
 
@@ -181,7 +182,8 @@ Do not reintroduce an observer that repeatedly rewrites article DOM labels. A pr
 These canonical content stores remain **network-first with cached fallback**:
 
 ```text
-news.json
+news-index.json
+news-index-segments/segment-XXXX.json
 consumer-radar.json
 deep-read.json
 ```

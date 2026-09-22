@@ -28,11 +28,12 @@ Existing mature collection. Preserve behavior unless a change explicitly targets
 index.html
 article.html
 news-index.json
+news-index-segments/segment-XXXX.json
 news-items/<id>.json
 news.json (legacy snapshot)
 ```
 
-Canonical content: `news-index.json` + `news-items/<id>.json`. `news.json` is retained only as a frozen legacy snapshot.
+Canonical content: tiny `news-index.json` manifest + bounded `news-index-segments/segment-XXXX.json` metadata shards + `news-items/<id>.json`. Full index segments are sealed and immutable. `news.json` is retained only as a frozen legacy snapshot.
 
 Editorial/product contract: `PRODUCT.md`.
 
@@ -165,6 +166,7 @@ Canonical JSON files are network-first with cached fallback:
 
 ```text
 news-index.json
+news-index-segments/segment-XXXX.json (dynamic network-first)
 news-items/<id>.json (dynamic per-article network-first)
 consumer-radar.json
 deep-read.json
@@ -187,9 +189,9 @@ It must not silently rewrite research conclusions or normalize the three editori
 
 ### Industry research thread may
 
-- maintain `news-index.json` and `news-items/<id>.json` according to the Industry Radar publishing contract; never append new publications to legacy `news.json`.
+- maintain the tiny `news-index.json` manifest, bounded `news-index-segments/segment-XXXX.json` metadata shards, and `news-items/<id>.json` according to the Industry Radar publishing contract; never append new publications to legacy `news.json`.
 
-It should not modify Consumer/Deep Read data or website implementation as part of routine publishing. Create the per-item article first, then update only the compact index with its exact current SHA.
+It should not modify Consumer/Deep Read data or website implementation as part of routine publishing. Create the per-item article first, then update only the active bounded segment and tiny manifest with exact current SHAs.
 
 ### Consumer research thread may
 

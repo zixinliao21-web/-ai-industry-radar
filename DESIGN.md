@@ -18,7 +18,8 @@ Implementation evidence:
 - `assets/research-discussion-bridge.js` — notes, excerpt capture, strategic labels, GPT discussion handoff
 - `assets/share-export-fix.js` — Share Card export
 - `service-worker.js` — PWA cache and runtime injection
-- `news-index.json` — compact Industry Radar directory / navigation manifest
+- `news-index.json` — tiny Industry Radar segmented-index manifest
+- `news-index-segments/segment-XXXX.json` — bounded compact directory / navigation metadata shards
 - `news-items/<id>.json` — canonical per-article Industry Radar records
 - `news.json` — frozen legacy snapshot
 

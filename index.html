@@ -62,7 +62,26 @@ mobileOpenBtn.addEventListener('click',openMobileAccess);qrCloseBtn.addEventList
 function card(e,index,isRead,justReadId){const themes=e.themes||[];const cls='item '+(e.id===justReadId&&isRead?'just-read':'reveal');const delay=Math.min(index,5)*28;const href='./article.html?id='+encodeURIComponent(e.id);const meta=[esc(e.date),...themes.slice(0,3).map(t=>'<span class="theme">'+esc(t)+'</span>'),esc(e.id)];return '<a class="'+cls+'" style="--delay:'+delay+'ms" href="'+href+'" onclick="rememberReturn()" aria-label="阅读 '+esc(e.title)+'"><div class="grade-wrap"><div class="grade '+esc(e.grade)+'">'+esc(e.grade)+'</div></div><div class="content"><div class="title">'+esc(e.title)+'</div><div class="meta">'+meta.join('<span class="sep">·</span>')+'</div></div><div class="arrow" aria-hidden="true">›</div></a>'}
 function restoreScroll(){let raw=null;try{raw=sessionStorage.getItem(RETURN_SCROLL_KEY);sessionStorage.removeItem(RETURN_SCROLL_KEY)}catch{}if(raw===null)return;const y=Number(raw);if(Number.isFinite(y))requestAnimationFrame(()=>window.scrollTo(0,y))}
 function render(){readSet=parseStoredSet(READ_KEY);let justReadId='';try{justReadId=sessionStorage.getItem(LAST_OPENED_KEY)||''}catch{}const sorted=[...items].sort((a,b)=>b.date.localeCompare(a.date)||({S:0,A:1,B:2}[a.grade]-{S:0,A:1,B:2}[b.grade]));const unread=sorted.filter(x=>!readSet.has(x.id));const read=sorted.filter(x=>readSet.has(x.id));unreadList.innerHTML=unread.length?unread.map((x,i)=>card(x,i,false,justReadId)).join(''):'<div class="empty">暂无未读</div>';readList.innerHTML=read.length?read.map((x,i)=>card(x,i,true,justReadId)).join(''):'<div class="empty">暂无已读</div>';unreadCount.textContent=unread.length+' 条';readCount.textContent=read.length+' 条';stats.innerHTML='<a class="stat stat-link" href="#unreadSection" aria-label="跳到未读目录"><div class="stat-label">Unread</div><div class="stat-value">'+unread.length+'</div></a><a class="stat stat-link" href="#readSection" aria-label="跳到已读目录"><div class="stat-label">Reviewed</div><div class="stat-value">'+read.length+'</div></a><div class="stat"><div class="stat-label">Archive</div><div class="stat-value">'+items.length+'</div></div>';if(justReadId)setTimeout(()=>{try{sessionStorage.removeItem(LAST_OPENED_KEY)}catch{}},900);restoreScroll()}
-async function load(){try{const r=await fetch('./news-index.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const data=await r.json();items=data.items||[];updated.textContent='Updated '+(data.updated_at||'—');render()}catch(err){unreadList.innerHTML='<div class="error">新闻数据加载失败，请稍后刷新。 '+esc(err.message)+'</div>'}}
+async function loadIndustryIndex(){
+  const stamp=Date.now();
+  const r=await fetch('./news-index.json?ts='+stamp,{cache:'no-store'});
+  if(!r.ok)throw new Error('Index HTTP '+r.status);
+  const data=await r.json();
+  if(Array.isArray(data.items))return data;
+  if(data.storage!=='segmented_index'||!Array.isArray(data.segments))throw new Error('Unsupported Industry index schema');
+  const paths=data.segments.map(x=>x&&x.path).filter(x=>typeof x==='string'&&/^news-index-segments\/segment-\d+\.json$/.test(x));
+  if(paths.length!==data.segments.length)throw new Error('Industry index manifest invalid');
+  const shards=await Promise.all(paths.map(async path=>{
+    const res=await fetch('./'+path+'?ts='+stamp,{cache:'no-store'});
+    if(!res.ok)throw new Error('Index segment HTTP '+res.status);
+    const shard=await res.json();
+    return Array.isArray(shard.items)?shard.items:[];
+  }));
+  const items=shards.flat();
+  if(Number.isFinite(Number(data.item_count))&&items.length!==Number(data.item_count))throw new Error('Industry index count mismatch');
+  return{updated_at:data.updated_at||'',items};
+}
+async function load(){try{const data=await loadIndustryIndex();items=data.items||[];updated.textContent='Updated '+(data.updated_at||'—');render()}catch(err){unreadList.innerHTML='<div class="error">新闻数据加载失败，请稍后刷新。 '+esc(err.message)+'</div>'}}
 if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').catch(()=>{}));window.addEventListener('pageshow',()=>{if(items.length)render()});load();
 </script>
 </body>

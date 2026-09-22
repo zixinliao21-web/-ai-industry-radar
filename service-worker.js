@@ -1,4 +1,4 @@
-const CACHE='velnar-radar-v36';
+const CACHE='velnar-radar-v37';
 const SHELL=[
   './','./index.html','./article.html',
   './consumer-radar.html','./consumer-article.html',
@@ -47,6 +47,7 @@ function decorateHtml(res){
 
 function dataFileFor(pathname){return DATA_FILES.find(name=>pathname.endsWith('/'+name))||null}
 function isIndustryItem(pathname){return /\/news-items\/[^/]+\.json$/.test(pathname)}
+function industryIndexSegmentFor(pathname){const m=pathname.match(/\/news-index-segments\/(segment-\d+\.json)$/);return m?('news-index-segments/'+m[1]):null}
 function fallbackFor(pathname){
   if(pathname.endsWith('/article.html'))return './article.html';
   if(pathname.endsWith('/consumer-article.html'))return './consumer-article.html';
@@ -89,6 +90,25 @@ self.addEventListener('fetch',event=>{
       }catch{
         if(cached)return cached;
         return new Response(JSON.stringify({updated_at:'',items:[]}),{status:200,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}});
+      }
+    })());
+    return;
+  }
+
+  const indexSegment=industryIndexSegmentFor(url.pathname);
+  if(indexSegment){
+    event.respondWith((async()=>{
+      const cache=await caches.open(CACHE);
+      const canonical=new URL('./'+indexSegment,self.registration.scope).href;
+      const cached=await cache.match(canonical);
+      try{
+        const fresh=await fetch(new Request(canonical,{cache:'no-store',credentials:'same-origin'}));
+        if(fresh.ok){await cache.put(canonical,fresh.clone());return fresh}
+        if(cached)return cached;
+        return fresh;
+      }catch{
+        if(cached)return cached;
+        return new Response(JSON.stringify({schema_version:'3.0',items:[]}),{status:503,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}});
       }
     })());
     return;

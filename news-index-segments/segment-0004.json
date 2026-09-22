@@ -1,0 +1,115 @@
+{
+  "schema_version": "3.0",
+  "segment": "0004",
+  "items": [
+    {
+      "id": "2026-09-08-S2",
+      "date": "2026-09-08",
+      "grade": "S",
+      "title": "Personal Agent 进入消费级入口竞争",
+      "themes": [
+        "Consumer AI",
+        "Personal Agent",
+        "Agent Commerce"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-03-S1",
+      "date": "2026-09-03",
+      "grade": "S",
+      "title": "NVIDIA 拟收购 Hugging Face：从算力向开发者分发层扩张",
+      "themes": [
+        "Models",
+        "Developer Distribution",
+        "Control Points"
+      ],
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-16-A1",
+      "date": "2026-09-16",
+      "grade": "A",
+      "title": "AI Energy Management Alliance：算力开始从电网负担变成可调度负荷",
+      "themes": [
+        "AI Infrastructure",
+        "Energy",
+        "Grid",
+        "Control Points"
+      ],
+      "deck": "Google、NVIDIA、Anthropic 与电力公司共同推动 AI 数据中心成为可验证、可调度的电网负荷。AI 基础设施的下一层竞争可能不只是拿到更多电，而是控制“算力何时、在哪里消耗电”。",
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-16-A2",
+      "date": "2026-09-16",
+      "grade": "A",
+      "title": "Anthropic 澳大利亚 2.16GW 推理园区：Inference 正在成为全球基础设施，而不只是云端 API",
+      "themes": [
+        "Inference",
+        "AI Infrastructure",
+        "Sovereign AI",
+        "Energy"
+      ],
+      "deck": "Anthropic 在澳大利亚锁定最高 2.16GW 的数据中心容量，而且用途明确是 inference 而非训练。前沿模型公司的物理基础设施开始从少数训练超级集群扩展为面向全球需求的推理网络。",
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-16-S2",
+      "date": "2026-09-16",
+      "grade": "S",
+      "title": "Cohere × Aleph Alpha：Sovereign AI 从模型选择升级为“模型 + 部署 + 本地主权云”完整栈",
+      "themes": [
+        "Sovereign AI",
+        "Enterprise AI",
+        "Consolidation",
+        "Infrastructure"
+      ],
+      "deck": "Cohere 与 Aleph Alpha 签署最终合并协议，并把 STACKIT 主权云纳入交付栈。Sovereign AI 正从“本地模型”概念升级为模型、企业部署能力、司法辖区治理与本地算力共同组成的完整产业栈。",
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-16-S3",
+      "date": "2026-09-16",
+      "grade": "S",
+      "title": "OpenAI Sponsored Agents：广告正在从“买一次点击”变成“买一段 Agent 对话”",
+      "themes": [
+        "Agent Commerce",
+        "Advertising",
+        "Consumer AI",
+        "Distribution"
+      ],
+      "deck": "OpenAI 开始测试 Sponsored Agents，让用户点击广告后直接与品牌赞助的 Agent 对话。广告库存可能从 impression/click 演化为可持续的商业 Agent 会话，ChatGPT 则进一步向交易前的商业入口和分发平台移动。",
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-16-A3",
+      "date": "2026-09-16",
+      "grade": "A",
+      "title": "Noetive：Industrial World Model 开始连接 System of Record 与真实工厂感知",
+      "themes": [
+        "Physical AI",
+        "Manufacturing AI",
+        "World Models",
+        "System of Record"
+      ],
+      "deck": "Noetive 以 4100 万美元 Seed 进入制造、物流和施工，核心不是机器人本体，而是把企业系统数据与现场多模态 sensing 合并成持续更新的工业“世界模型”。这补上了 Enterprise Context 从数字世界走向物理现实的一块关键缺口。",
+      "body_format": "legacy_structured"
+    },
+    {
+      "id": "2026-09-17-A1",
+      "date": "2026-09-17",
+      "grade": "A",
+      "title": "Enhans：真实 Workflow → Ontology / Business Rules → AgentOS → Industry Pack",
+      "themes": [
+        "Enterprise AI",
+        "Ontology",
+        "FDE",
+        "Vertical AI",
+        "AgentOS"
+      ],
+      "deck": "Enhans 的 Series C 不只是融资信号。更值得记录的是它正在把真实企业部署中沉淀的数据结构、业务规则与执行方法封装成 AgentOS 和 Industry Packs，提供了另一条从客户 Workflow 出发、再把 Domain Context 产品化的企业 Agent 路径。",
+      "body_format": "legacy_structured"
+    }
+  ]
+}
