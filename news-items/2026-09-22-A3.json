@@ -1,0 +1,16 @@
+{
+  "id": "2026-09-22-A3",
+  "date": "2026-09-22",
+  "grade": "A",
+  "title": "前沿 AI 的竞争单位正在从‘模型公司’扩大为‘全栈工业体系’：Alibaba 把芯片、超节点、模型、云和 Agent 放进同一条生产链",
+  "themes": ["AI Infrastructure", "Full-stack AI", "Frontier Models", "Vertical Integration", "Cloud", "Agents"],
+  "deck": "Alibaba 在同一场 Apsara Conference 中同时推进 5–10 万亿参数下一代模型、自研 AI 芯片、超节点、云基础设施与 Agent 平台，并计划到 2032 年把云数据中心容量提高到 20GW 以上。值得关注的不是单个模型或芯片参数，而是前沿 AI 的竞争边界正在从模型能力扩展为资本、能源、芯片、系统软件、模型和分发的一体化工业体系。",
+  "article_text": "前沿 AI 的竞争单位正在从‘模型公司’扩大为‘全栈工业体系’：Alibaba 把芯片、超节点、模型、云和 Agent 放进同一条生产链\n\n9 月 22 日的 Apsara Conference 给出了一个比‘Alibaba 又发布了新模型和新芯片’更值得记录的信号。Alibaba 表示正在训练参数规模约 5–10 万亿的下一代 Qwen 模型，目标是处理更复杂、更长周期的任务；同时发布下一代 Zhenwu V900 AI 芯片，并继续扩展由自研芯片、超节点、数据中心、模型服务和 Agent 平台组成的基础设施。Reuters 报道称，Alibaba Cloud 计划到 2032 年把数据中心容量提高到 20GW 以上。单独看，每一项都可以被理解成一次普通产品升级；合在一起看，它们说明前沿 AI 的竞争单位正在发生变化。\n\nFACT：Alibaba 并不是今天才开始做全栈。其今年早些时候已经推出 Zhenwu M890、面向 Agent 并发推理的 Panjiu 超节点以及围绕 Agent 重构的云平台；8 月披露的经营数据又显示 AI Cloud and Compute Services 收入同比增长 45%，AI 相关产品收入连续第十二个季度保持三位数增长。今天新增的不是‘Alibaba 也有芯片’，而是它继续把模型规模、自研芯片、集群系统、云容量和 Agent 应用放在同一条资本投入与商业化链路里，并把物理基础设施目标进一步拉到 20GW 量级。\n\nINFERENCE：这强化了一个需要逐渐纳入 Radar 的判断——前沿模型市场最终可能不是一个纯软件市场。训练和推理规模继续增长后，模型能力越来越依赖芯片供给、互联、数据中心、电力、推理调度和云分发。能够同时控制其中多个层级的公司，可以在一个层级受到限制时从另一个层级补偿：自研芯片降低对外部加速器的依赖，云业务提供真实推理需求和现金流，模型提高云的差异化，Agent 又把模型调用进一步转化为持续工作负载。所谓‘模型公司’，在最前沿可能逐渐接近一种新型重资产科技工业体系。\n\n这也修正了我们对模型竞争‘最终会不会商品化’的简单想象。模型本身仍可能快速扩散，开源、蒸馏和价格战也可能持续压低单次 intelligence 的价格；但这并不意味着最上游的竞争壁垒同步消失。恰恰可能出现相反结构：单个模型 API 越商品化，拥有芯片—算力—模型—云—分发闭环的平台越有能力把利润和控制权转移到其他层。我们此前观察 NVIDIA 的意义在于它让竞争者进入自己的计算规则；Alibaba 这条信号展示的是另一种路径——尽量把规则所依赖的多个关键层都纳入自己的体系。\n\n但不要把它误读成‘以后只有全栈巨头能做 AI’。这是最需要防止的结论。全栈的资本门槛极高，而且垂直整合本身会带来巨大的固定成本、组织复杂度和技术押注风险。应用公司、Vertical AI 公司和像 VELNAR 这样的早期企业没有理由复制这条路径。相反，如果基础模型和算力逐渐由少数巨型平台承担，应用层公司更应该避免在没有独特资产的层级与它们正面竞争。\n\n对 VELNAR，这属于‘继续观察，不改变当前 Sales MVP’。它反而强化了我们最近讨论 Vertical Model 时的谨慎：不要因为行业知识重要，就过早把自己变成基础模型公司。上游巨头正在用数十亿乃至更高资本规模解决通用 intelligence、芯片和算力问题，我们真正可能积累的非对称资产仍然是 Domain Context、真实 Workflow、Gold Data、Evaluation、Trace、客户关系和行业语义。未来如果需要 Vertical Model，更合理的路径仍是建立在这些资产之上的微调、蒸馏或任务专用模型，而不是复制一个缩小版 Alibaba/OpenAI。\n\nPREDICTION：如果这种全栈趋势持续，AI 产业可能进一步形成两种完全不同的公司。一类是少数资本密集型 Intelligence Infrastructure Platforms，竞争芯片、能源、模型、云和全球分发；另一类是大量资本更轻但 Domain 更厚的 Vertical Intelligence Companies，竞争真实业务上下文、工作流、数据反馈和客户控制点。中间那些既没有上游规模优势、又没有下游 Domain 深度的通用 Agent/SaaS 公司，反而可能最容易受到挤压。\n\n接下来最值得讨论的有两个问题。第一，如果上游 intelligence 越来越集中在少数全栈平台，VELNAR 应该怎样保持模型可替换性，避免自己的 Domain Context 和 Workflow 被某一家平台锁死？第二，如果‘上游越来越厚、下游也越来越厚’，中间层到底还有哪些长期独立价值——Agent Runtime、Control Plane、Evaluation、Integration 中哪些会成为稳定基础设施，哪些最终会被上下两端吸收？",
+  "sources": [
+    {"label": "Reuters — Alibaba deepens AI push with new chip, bigger model", "url": "https://www.reuters.com/business/retail-consumer/alibaba-plans-ai-model-with-5-trillion-10-trillion-parameters-unveils-new-chip-2026-09-22/"},
+    {"label": "Alibaba Cloud — Full-Stack AI Accelerates Monetization", "url": "https://www.alibabacloud.com/blog/603489"},
+    {"label": "Alibaba Cloud — New AI Chip, Flagship Model, and Rebuilt Cloud Stack for Agentic Era", "url": "https://www.alibabacloud.com/blog/603151"}
+  ],
+  "action": "继续观察",
+  "body_format": "article_text"
+}
