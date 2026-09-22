@@ -1,14 +1,39 @@
 {
   "schema_version": "3.0",
   "storage": "segmented_index",
-  "updated_at": "2026-09-22 11:07 +08:00",
-  "item_count": 37,
+  "updated_at": "2026-09-22 11:20 +08:00",
+  "item_count": 38,
   "segment_size": 8,
   "segments": [
-    {"id": "0001", "path": "news-index-segments/segment-0001.json", "count": 8, "sealed": true},
-    {"id": "0002", "path": "news-index-segments/segment-0002.json", "count": 8, "sealed": true},
-    {"id": "0003", "path": "news-index-segments/segment-0003.json", "count": 8, "sealed": true},
-    {"id": "0004", "path": "news-index-segments/segment-0004.json", "count": 8, "sealed": true},
-    {"id": "0005", "path": "news-index-segments/segment-0005.json", "count": 5, "sealed": false}
+    {
+      "id": "0001",
+      "path": "news-index-segments/segment-0001.json",
+      "count": 8,
+      "sealed": true
+    },
+    {
+      "id": "0002",
+      "path": "news-index-segments/segment-0002.json",
+      "count": 8,
+      "sealed": true
+    },
+    {
+      "id": "0003",
+      "path": "news-index-segments/segment-0003.json",
+      "count": 8,
+      "sealed": true
+    },
+    {
+      "id": "0004",
+      "path": "news-index-segments/segment-0004.json",
+      "count": 8,
+      "sealed": true
+    },
+    {
+      "id": "0005",
+      "path": "news-index-segments/segment-0005.json",
+      "count": 6,
+      "sealed": false
+    }
   ]
 }
