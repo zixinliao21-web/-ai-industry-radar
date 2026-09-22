@@ -1,0 +1,15 @@
+{
+  "schema_version": "3.0",
+  "segment": "0006",
+  "items": [
+    {
+      "id": "2026-09-22-A5",
+      "date": "2026-09-22",
+      "grade": "A",
+      "title": "模型能力越强，训练数据反而越像高附加值制造业：Snorkel 的增长显示‘专家知识 → 可验证环境’正在成为独立生产层",
+      "themes": ["Training Data", "Evaluation", "Reinforcement Learning", "Vertical AI", "AI Infrastructure"],
+      "deck": "Snorkel AI 的年化收入据报道从约 2000 万美元跃升至超过 3.5 亿美元，增长核心不是传统标注软件，而是直接交付专家数据、强化学习环境和可验证评测。前沿模型的数据瓶颈正在从‘有没有更多文本’转向‘能否把稀缺专家判断加工成可训练、可验证、可追溯的机器资产’。",
+      "body_format": "article_text"
+    }
+  ]
+}
