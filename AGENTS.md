@@ -153,6 +153,12 @@ velnar-radar-theme-v1
 
 Storage failures must not break primary reading.
 
+### Optional cross-device state
+
+Cross-device Sync V1 is documented in `docs/cross-device-sync.md`. It is local-first and may synchronize read/unread, recent article, reading progress and speech-reader state through a user-configured provider. Notes, excerpts, discussion-thread URLs and canonical research data must remain outside Sync V1.
+
+Cloud sync failure must never block primary reading or local state updates.
+
 ## Research → Discussion Bridge
 
 Preserve these behaviors where a collection supports them:

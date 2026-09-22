@@ -19,7 +19,7 @@
     return window.currentItem||null;
   }
   function storageGet(key,fallback){try{const v=localStorage.getItem(key);return v==null?fallback:v}catch{return fallback}}
-  function storageSet(key,value){try{localStorage.setItem(key,value)}catch{}}
+  function storageSet(key,value){try{localStorage.setItem(key,value);window.dispatchEvent(new CustomEvent('velnar:local-state-changed',{detail:{key:key}}))}catch{}}
   function readProgress(){try{const v=JSON.parse(storageGet(PROGRESS_KEY,'{}'));return v&&typeof v==='object'&&!Array.isArray(v)?v:{}}catch{return{}}}
   function saveProgress(){
     if(!articleKey)return;

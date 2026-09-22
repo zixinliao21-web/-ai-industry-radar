@@ -113,6 +113,10 @@ velnar-radar-theme-v1
 
 Storage failures must not break primary reading.
 
+### Cross-device continuity
+
+Read/unread state, recent article, reading position and speech-reader progress may optionally synchronize across the user's own devices through a local-first sync layer. Cloud availability must never become a prerequisite for reading. Article notes and excerpts remain device-local in Sync V1.
+
 ## 6. Directory behavior
 
 The directory remains concise.

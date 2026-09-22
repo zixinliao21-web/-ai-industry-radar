@@ -36,6 +36,7 @@ dialog{border:0;padding:0;background:transparent;max-width:none}dialog::backdrop
 </style>
 <link rel="stylesheet" href="./assets/radar-runtime.css">
 <script defer src="./assets/radar-runtime.js"></script>
+<script defer src="./assets/state-sync.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#content">跳到内容</a>
@@ -82,6 +83,7 @@ async function loadIndustryIndex(){
   return{updated_at:data.updated_at||'',items};
 }
 async function load(){try{const data=await loadIndustryIndex();items=data.items||[];updated.textContent='Updated '+(data.updated_at||'—');render()}catch(err){unreadList.innerHTML='<div class="error">新闻数据加载失败，请稍后刷新。 '+esc(err.message)+'</div>'}}
+window.addEventListener('velnar:sync-applied',()=>{if(items.length)render()});
 if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').catch(()=>{}));window.addEventListener('pageshow',()=>{if(items.length)render()});load();
 </script>
 </body>
