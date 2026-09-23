@@ -209,7 +209,8 @@
   function resolveArticle(){
     if(!isArticle||!collection)return false;let id=new URLSearchParams(location.search).get('id')||'';
     try{if(!id&&window.currentItem&&window.currentItem.id)id=String(window.currentItem.id)}catch{}
-    if(!id)return false;articleKey=collection+':'+id;markOpened(collection,id);tryRestoreReading();return true;
+    if(!id||!document.querySelector('#articleRoot .article'))return false;
+    articleKey=collection+':'+id;markOpened(collection,id);tryRestoreReading();return true;
   }
   function clearResumeParam(){
     try{const u=new URL(location.href);if(!u.searchParams.has('resume'))return;u.searchParams.delete('resume');history.replaceState(null,'',u.pathname+u.search+u.hash)}catch{}
