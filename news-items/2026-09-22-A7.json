@@ -1,0 +1,17 @@
+{
+  "id": "2026-09-22-A7",
+  "date": "2026-09-22",
+  "grade": "A",
+  "title": "Physical AI 的竞争正在出现“ROS 之上的运行层”：Intrinsic 把工业机器人基础设施开源，争夺的可能不是机器人本体",
+  "themes": ["Physical AI", "Robotics", "Open Source", "Agent Runtime", "Industrial AI"],
+  "deck": "Alphabet 旗下 Intrinsic 将工业机器人平台的核心能力以 Apache 2.0 开源，包括硬件无关的实时控制、数字孪生以及 ROS 兼容服务。值得注意的不是又一个机器人 SDK，而是 Physical AI 可能正在形成类似数字 Agent 的分层：模型负责智能，开放运行层负责把智能可靠地接入异构机器与真实生产环境。",
+  "article_text": "Physical AI 的竞争正在出现“ROS 之上的运行层”：Intrinsic 把工业机器人基础设施开源，争夺的可能不是机器人本体\n\n9 月 22 日，Alphabet 旗下工业机器人公司 Intrinsic 在 ROSCon 2026 发布 Intrinsic Core，并把平台的核心部分以 Apache 2.0 许可证开源。按照 Intrinsic 自己的说明，Core 提供硬件无关的实时控制框架、连接模拟器与运动学模型的数字孪生、ROS 兼容能力与一套可直接运行的开放式 machine-tending 参考方案，目标是让开发者从原型一直走到生产，而不必重新搭建底层机器人软件。\n\nFACT：这不是一个新的机器人基础模型，也不是一台新的 humanoid。Intrinsic 开放的是让 AI-enabled robotics 真正运行起来的一层基础设施。它把机器人硬件、实时控制、数字孪生、模拟环境和上层 AI 应用之间的接口打包成可复用运行环境。更重要的是，它选择兼容已经成为机器人开发事实标准之一的 ROS，而不是要求开发者进入完全封闭的专有栈。\n\n为什么值得我们注意？因为 Physical AI 的产业结构正在逐渐显露出和数字 Agent 类似的分层。数字世界里，模型能力增强以后，并没有消灭 Agent Runtime、Tool、Permission、Trace 和 Control Plane；相反，当 Agent 真正进入业务系统，这些负责把智能连接到现实执行环境的层反而变得更重要。机器人世界可能出现对应结构：foundation model / world model 提供感知、推理与规划，ROS 和类似 Core 的运行层负责硬件抽象、实时控制、simulation-to-real、设备接口和可靠执行，最下面才是机器人、传感器与工厂设备。\n\nINFERENCE：如果这一结构成立，那么 Physical AI 的长期控制点不会全部集中在“谁拥有最聪明的机器人模型”或“谁造出最好的人形机器人”。一个能够让不同模型、不同机器人和不同工业设备在统一环境里可靠运行的开放 Runtime，也可能成为重要基础设施。Intrinsic 此时开源 Core 的意义就在这里：开源会削弱直接的软件许可壁垒，却可能扩大它在开发者工具链、接口标准和工业机器人应用架构中的位置。它争夺的更像是生态默认层，而不是单次软件销售。\n\n这也修正了一个容易形成的 Physical AI 直觉：我们过去讨论 Physical AI 时，很容易把产业地图画成“模型公司 + 机器人本体公司 + 工厂客户”。这次信号提醒我们，中间还可能存在一个厚重的软件与运行基础设施层。现实世界不像浏览器或企业 SaaS，动作具有实时性、安全性、设备差异和物理后果。模型即使变得非常聪明，也不能自动消除运动控制、设备抽象、数字孪生、仿真验证和生产环境集成。模型能力越强、接入的机器越多，这层基础设施甚至可能越重要。\n\n但不要把它误读成“Intrinsic 已经成为机器人界 Android”。目前只是一次重要的开放策略变化。ROS 本身已经拥有强大生态，NVIDIA Isaac、各类机器人厂商和工业自动化供应商也都在争夺类似开发与运行位置；开放源码能否转化为实际标准权、开发者采用和商业价值，需要看未来真实部署。Intrinsic Core 能否跨厂商、跨硬件稳定进入生产环境，比 GitHub star 或开发者试用更重要。\n\n对 VELNAR 当前阶段，这属于“继续观察”，不是“现在进入 Physical AI”。它不应改变当前 Sales MVP，也不构成我们去做机器人 Runtime 的理由。真正值得沉淀的是一个更一般的战略判断：AI 产业每进入一个高价值现实场景，都要寻找 intelligence 与 reality 之间的执行层。企业软件里它表现为 Workflow、Grounding、Policy、Tool、Trace；机器人里可能表现为 real-time control、digital twin、simulation、hardware abstraction 和 safety。未来判断新 AI 赛道时，不能只问谁拥有模型，还要问谁控制把模型可靠变成现实动作的那一层。\n\nPREDICTION：如果 Physical AI 真正大规模进入制造业，开放模型与开放机器人 Runtime 很可能同时降低应用开发门槛，而真正稀缺的价值会继续向行业 Workflow、设备数据、生产约束、现场集成能力和可验证的商业结果迁移。这与我们对 Vertical AI 的观察形成呼应：通用 intelligence 越便宜，连接真实行业环境的 Context 与 Execution 越可能成为差异化来源。\n\n接下来最值得讨论两个问题：第一，数字 Agent 的 Runtime / Control Plane 与 Physical AI 的机器人 Runtime，哪些结构是同一种抽象，哪些因为物理安全和实时控制而本质不同？第二，如果开放基础设施逐渐把机器人开发标准化，Physical AI 最终最厚的利润层会留在模型、本体、Runtime，还是掌握行业 Workflow 与部署网络的公司？",
+  "sources": [
+    {"label": "Intrinsic — Introducing Intrinsic Core: An open source approach to Physical AI", "url": "https://www.intrinsic.ai/blog/posts/introducing-intrinsic-core"},
+    {"label": "Intrinsic — ROSCon 2026", "url": "https://www.intrinsic.ai/events/roscon-2026"}
+  ],
+  "fact": "Intrinsic 在 ROSCon 2026 发布并开源 Intrinsic Core，提供硬件无关实时控制、数字孪生和 ROS 兼容的工业机器人基础能力。",
+  "why_it_matters": "Physical AI 可能形成独立于模型和机器人本体的开放运行基础设施层。",
+  "what_is_new": "工业机器人平台厂商主动把核心运行能力开源，显示竞争可能从封闭软件产品转向生态默认层和接口标准。",
+  "startup_implications": "继续观察，不改变 VELNAR 当前 Sales MVP Scope。"
+}
