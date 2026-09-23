@@ -1,0 +1,19 @@
+{
+  "id": "2026-09-23-A3",
+  "date": "2026-09-23",
+  "grade": "A",
+  "title": "Agent Identity 正在从单次验证变成共享注册表：真正的控制点可能是‘谁有资格被整个网络信任’",
+  "themes": ["Agent Identity", "Agent Commerce", "Trust Infrastructure", "Network Effects", "Merchant Acceptance"],
+  "deck": "Baselayer 把传统 KYB 身份基础设施扩展到 AI Agent，并推出跨商家、支付机构和 Agent 平台共享的 Trusted Registry。真正值得记录的不是又一家身份创业公司融资，而是 Agent 身份正在从每次交易各自验证，向可携带、可复用、持续监控的网络级信任对象演化。",
+  "article_text": "Agent Commerce 的身份问题正在从“每次交易时验证这个 Agent 是谁”，进一步变成“整个商业网络是否存在一个大家共同承认的 Agent 身份注册表”。如果这条路径成立，Agent Identity 就不只是安全功能，而可能成为具有网络效应的基础设施控制点。\n\n【FACT】Baselayer 正在把原本面向金融机构的 KYB（Know Your Business，企业身份核验）基础设施扩展到 AI Agent。公司公开的 Trusted Registry 不只是给单个机构提供一次 API 查询，而是试图建立一个由商家、支付处理商、卡组织、Agent 平台共同使用的共享注册表：Agent 平台可以注册并接受验证，企业可以声明自己的身份与访问要求，商家和支付方则可以查询一个 Agent 是否来自已验证的平台、代表谁行动，并据此决定是否允许访问或交易。Baselayer 还把这一层称为 Know Your Agent（KYA），核心目标是让 Agent 拥有与已验证个人或企业关联的“portable identity”——可携带身份，而不是每进入一个网站就从零开始证明自己。公司称其现有身份与风险基础设施已服务 2300 多家金融机构；同期披露的 3500 万美元融资本身不是这里最重要的信号，重要的是传统金融身份网络开始向 Agent 主体扩展。\n\n这比我们此前记录的“商家是否接受 Agent”又往前推进了一层。Amazon 阻止 Muse、Shopify 主动开放 AI 渠道，说明 Merchant Acceptance（商家接受层）正在形成；银行随后把授权、意图、责任和审计记录推到台前。现在 Baselayer 展示的是另一块可能独立出来的公共基础设施：在商家决定“放不放行”之前，必须先有一种机器可验证的方法回答“门外这个 Agent 到底是谁、背后是谁、它是否仍然可信”。\n\n【INFERENCE】如果每个商家都自己维护 Agent 白名单、自己重新做身份核验，Agent Commerce 的交易成本会非常高。共享 Registry 的价值在于把一次验证变成可跨机构复用的信任资产：越多 Agent 平台注册，商家越有理由查询；越多商家、银行和支付网络查询，Agent 平台越有理由主动加入。这意味着 Agent Identity 潜在的护城河不只来自验证算法，而可能来自双边甚至多边的信任网络。它与传统 KYC/KYB、证书体系、信用网络的经济逻辑更接近，而不是普通 SaaS 工具。\n\n但这里最容易误读成“Baselayer 已经成为 Agent 世界的身份证中心”。现在远远没有到这个阶段。第一，Trusted Registry 仍是单一公司的产品，行业并没有证明最终会接受一个私有注册表作为事实标准；Visa、Mastercard、Stripe、云平台、浏览器、操作系统以及大型商家都可能建立自己的身份与授权体系。第二，身份只能证明“你是谁、代表谁”，不能单独证明“你这一次具体有权做什么”。真正完成交易仍然需要 Intent、Permission、spending boundary、Merchant Acceptance、Payment Authentication 和 Audit Trail。第三，如果不同网络之间不能互操作，Agent Identity 反而可能碎片化成新的平台围墙。\n\n因此，这条信号强化而不是推翻我们最近对 Agent Commerce 的判断：未来基础设施很可能不是一个“Agent 支付按钮”，而是一条连续的信任链——Agent Identity → Delegated Authority → Merchant Acceptance → Transaction → Audit / Liability。真正新增的是，Identity 这一层开始出现“共享注册表 + 持续风险监控 + 可携带身份”的产品形态，因而第一次更清楚地显露出潜在网络效应。\n\n【PREDICTION】如果未来 12–24 个月出现跨平台可验证的 Agent credential、多个大型支付/商业网络共同认可的身份声明格式，或者 Agent 的身份与授权可以像今天的网站证书一样被不同服务自动读取，那么 Agent Identity 会从安全配件升级为商业互联网的新公共层。相反，如果身份长期被 Meta、OpenAI、Visa、Shopify 等各自封闭在自己的网络中，这个市场更可能成为多个平台控制平面，而不是独立基础设施公司赢得统一标准。\n\n对 VELNAR 当前阶段属于“继续观察”，不应因此改动 Sales MVP。我们自己的企业 Agent 当前更重要的仍然是企业内部 Identity、Permission、Policy、Trace：谁发起动作、Agent 能调用什么工具、什么写操作必须确认、发生错误如何追溯。这与外部 Agent Commerce 的 KYA 属于同一个抽象问题，但当前没有必要提前建设跨企业身份网络。\n\n接下来最值得讨论的两个问题是：第一，Agent Identity 最终会像 TLS/证书体系一样形成跨平台标准，还是像登录与支付一样被少数大型平台各自控制？第二，如果“可信 Agent 注册表”真的产生网络效应，那么未来 Agent Commerce 最有价值的控制点究竟在拥有用户 Context 的 Personal Agent、拥有商家的 Commerce Platform，还是掌握身份与授权信任网络的基础设施层？",
+  "sources": [
+    {"label": "Baselayer — Trusted Registry", "url": "https://baselayer.com/trusted-registry/"},
+    {"label": "Baselayer — What Is KYB?", "url": "https://baselayer.com/resources/what-is-kyb/"},
+    {"label": "Baselayer — Company platform", "url": "https://baselayer.com/"},
+    {"label": "FinTech Global — Baselayer lands $35m to verify AI agents before fraud hits", "url": "https://fintech.global/2026/09/23/baselayer-lands-35m-to-verify-ai-agents-before-fraud-hits/"}
+  ],
+  "fact": "Baselayer is extending business identity and risk infrastructure into Know Your Agent and a shared Trusted Registry for verified agent platforms, businesses, merchants and payment participants.",
+  "why_it_matters": "Agent identity may become a reusable network-level trust object rather than a per-transaction security check, creating a potential infrastructure control point with network effects.",
+  "what_not_to_conclude": "A private registry has not become an industry standard; identity alone does not establish transaction-specific authority, merchant acceptance or liability.",
+  "velnar_action": "继续观察；不改变当前 Sales MVP Scope。"
+}
