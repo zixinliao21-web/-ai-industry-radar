@@ -15,7 +15,7 @@
       "id": "2026-09-22-A6",
       "date": "2026-09-22",
       "grade": "A",
-      "title": "Agent Commerce 的下一层控制点开始从‘能不能交易’走向‘谁为 Agent 的决定负责’：六家银行把 Intent、Liability 与 Audit Trail 推到台前",
+      "title": "Agent Commerce 的下一层控制点开始从‘能不能交易’转向‘谁为 Agent 的决定负责’：六家银行把 Intent、Liability 与 Audit Trail 推到台前",
       "themes": ["Agent Commerce", "Trust Infrastructure", "Agent Identity", "Liability", "Audit Trail"],
       "deck": "Bank of America、NatWest、ING、Capital One、Commonwealth Bank of Australia 与 ASB Bank 联合提出可信 Agent Commerce 原则。真正新增的不是银行提醒诈骗风险，而是金融机构开始把 Agent 交易拆成身份、授权、意图、决策透明度、责任归属与可审计记录的问题：支付成功只是终点，证明 Agent 为什么有权这样买、出了错由谁负责，正在成为新的基础设施层。",
       "body_format": "article_text"
