@@ -37,6 +37,15 @@
       "themes": ["Frontier Models", "Agent Economics", "Agentic Coding", "Inference Cost", "AI Infrastructure"],
       "deck": "Anthropic 的 Claude Opus 5.5 不只是又一次榜单领先：它在多项 Agent 工作中同时减少 token、工具调用、执行步骤和时间，并把典型工作负载成本降低约 40%。当模型开始用更少推理与更少动作完成同一任务，Agent 的商业瓶颈会从‘模型能不能做’进一步转向‘一次可靠完成任务究竟需要多少计算、多少调用和多少监督’。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-09-23-A1",
+      "date": "2026-09-23",
+      "grade": "A",
+      "title": "Physical AI 的价值链开始从‘机器人本体’向感知基础设施收敛：Cognex 用 5 亿美元买下 RealSense",
+      "themes": ["Physical AI", "Robotic Perception", "Machine Vision", "Industrial AI", "Consolidation"],
+      "deck": "Cognex 以约 5 亿美元现金收购 RealSense，把传统工业机器视觉从检测、识别和测量扩展到 3D 深度感知与机器人导航。值得记录的不是又一笔机器人并购，而是成熟工业自动化公司开始把‘机器如何可靠地感知真实世界’当成 Physical AI 的独立基础设施层。",
+      "body_format": "article_text"
     }
   ]
 }
