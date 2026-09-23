@@ -1,0 +1,15 @@
+{
+  "schema_version": "3.0",
+  "segment": "0007",
+  "items": [
+    {
+      "id": "2026-09-23-A5",
+      "date": "2026-09-23",
+      "grade": "A",
+      "title": "前沿 AI 的竞争单位正在从‘模型公司’扩大成‘芯片—集群—模型—Agent’一体化工业体系：Alibaba 把目标推到 20GW",
+      "themes": ["AI Infrastructure", "Vertical Integration", "Frontier Models", "Semiconductors", "Platform Concentration"],
+      "deck": "Alibaba 在同一次 Apsara Conference 上同时公布自研 Zhenwu V900、最高 50 万卡集群、下一代 Qwen 4 以及到 2032 年超过 20GW 的全球数据中心容量目标。真正值得记录的不是单个芯片或参数规模，而是前沿 AI 的竞争边界正在向全栈资本密集型工业体系扩张。",
+      "body_format": "article_text"
+    }
+  ]
+}
