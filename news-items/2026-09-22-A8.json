@@ -1,0 +1,15 @@
+{
+  "id": "2026-09-22-A8",
+  "date": "2026-09-22",
+  "grade": "A",
+  "title": "Agent 竞争开始从‘谁更聪明’转向‘谁能用更少步骤完成真实工作’：能力成本曲线正在成为新的模型控制点",
+  "themes": ["Frontier Models", "Agent Economics", "Agentic Coding", "Inference Cost", "AI Infrastructure"],
+  "deck": "Anthropic 的 Claude Opus 5.5 不只是又一次榜单领先：它在多项 Agent 工作中同时减少 token、工具调用、执行步骤和时间，并把典型工作负载成本降低约 40%。当模型开始用更少推理与更少动作完成同一任务，Agent 的商业瓶颈会从‘模型能不能做’进一步转向‘一次可靠完成任务究竟需要多少计算、多少调用和多少监督’。",
+  "article_text": "Agent 竞争开始从‘谁更聪明’转向‘谁能用更少步骤完成真实工作’：能力成本曲线正在成为新的模型控制点\n\nAnthropic 9 月 22 日发布 Claude Opus 5.5。表面上看，这仍然是一轮熟悉的前沿模型升级：Anthropic 称其在 Terminal-Bench 4.0、FrontierCode、CursorBench 等 Agentic Coding 基准上取得领先或接近领先成绩，Reuters 也把报道重点放在它与 OpenAI 等模型的性能竞争上。但对我们更值得记录的不是排行榜，而是另一组数字：Anthropic 表示 Opus 5.5 在典型工作负载上的运行成本比 Opus 5 低约 40%，输出速度提高 30% 以上；cache read 价格从每百万 token 0.50 美元降到 0.20 美元。在多个真实测试中，它不仅使用更少 token，而且使用更少工具调用和执行步骤。\n\n**FACT：**Anthropic 公布的测试显示，Opus 5.5 在 Terminal-Bench 4.0 上以默认 effort 超过 Opus 5 的最高 effort，同时成本约为后者五分之一；在 FrontierCode 上，其默认配置超过 GPT-6 Astra，而每项任务成本约为后者 20%。AWS Kiro 的测试称，新模型解决更多终端任务的同时，调用次数减少约 40%、token 使用量约减半。Optiver 则报告，在其 Agentic Coding 任务上，新模型达到相近质量所需的 turns、时间和输出 token 大约减半。需要强调，这些数字主要来自 Anthropic 及其早期客户的评测，不能直接外推到所有企业 Workflow。\n\n真正新增的信号是：前沿模型的竞争维度正在从 capability frontier（能力上限）扩展到 capability-per-dollar / capability-per-step（单位成本、单位步骤所获得的能力）。过去讨论 Agent 商业化时，我们容易把成本理解成 token 单价；但真实 Agent 的成本还包括一次任务需要多少轮推理、多少次 Tool Call、多少次失败重试、运行多久，以及人类要检查多少中间结果。如果模型能力提升同时让这些数量下降，那么 Agent 的单位经济性可能出现非线性改善——不仅每个 token 更便宜，而且完成同一个业务结果所需的 token 和动作本身也更少。\n\n**INFERENCE：**这会修正我们对 Agent Infrastructure 的一个潜在误区。更强模型确实可能吞掉一部分过去由复杂 orchestration 承担的微观规划：任务拆解、工具选择、重试策略和局部多 Agent 调度都有可能越来越多地进入模型能力。但这并不意味着 State、Grounding、Policy、Permission、Transaction 和 Trace 会一起消失。恰恰相反，当单个 Agent 可以用更低成本执行更多真实动作时，企业允许它承担的工作量可能上升，控制层面对的是更大的行动规模，而不是更弱的模型。模型负责‘怎么更聪明地完成’，企业基础设施仍要回答‘什么事实可信、什么动作允许、结果是否可提交、出了问题如何追溯’。\n\n最容易误读成两件事。第一，不应因为一次模型升级就推断 Agent 成本问题已经解决；长任务的上下文、工具 API、外部系统延迟、验证和人工监督仍可能成为主要成本。第二，也不能把 benchmark 的成本优势直接当成企业 ROI。真正需要测的是 end-to-end cost per successful business outcome，而不是 cost per million tokens。\n\n对 VELNAR 当前阶段属于**现在应行动，但只作用于 Evaluation，不扩大 Sales MVP Scope**。我们以后评估模型时不应只比较‘谁答得最准’，而应该逐渐记录同一真实业务任务的成功率、总 token、tool calls、turns、重试次数、完成时间和人工介入次数。这样未来模型升级时，我们才能判断它究竟只是 benchmark 更高，还是确实把一次报价、一次产品匹配或一次订单处理的单位执行成本压低了。\n\n**PREDICTION：**如果 capability-per-step 持续快速改善，未来 Vertical AI 的护城河会更少来自‘我们写了多少 Agent orchestration’，更多来自模型无法自行获得的 Domain Context、真实 Workflow、Evaluation、权限边界和高质量反馈数据。通用智能会持续吞掉执行层复杂度，但不会自动获得一家企业的事实、责任和业务语义。\n\n接下来最值得讨论的问题是：第一，我们是否应该把‘每个成功业务结果的总执行成本’正式加入企业 Agent 的长期 Evaluation？第二，如果未来模型能自动吞掉越来越多微观 orchestration，VELNAR 当前哪些确定性组件属于会被模型能力侵蚀的暂态层，哪些属于无论模型多强都必须保留的企业控制层？",
+  "sources": [
+    {"label": "Anthropic — Introducing Claude Opus 5.5", "url": "https://www.anthropic.com/claude-opus-5-5"},
+    {"label": "Reuters — Anthropic unveils Claude Opus 5.5", "url": "https://www.reuters.com/business/anthropic-unveils-claude-opus-55-2026-09-22/"}
+  ],
+  "action": "现在应行动：把 end-to-end cost per successful business outcome 纳入长期 Evaluation；不扩大当前 Sales MVP Scope。",
+  "body_format": "article_text"
+}
