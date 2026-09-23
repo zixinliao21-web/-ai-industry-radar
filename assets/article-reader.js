@@ -13,6 +13,7 @@
   const MAX_CHARS=230;
   let segments=[],index=0,state='idle',utterance=null,generation=0,voicePool=[],articleKey='',sourceFingerprint='',mounted=false;
   let trigger=null,panel=null,playBtn=null,prevBtn=null,nextBtn=null,statusEl=null,rateSelect=null,voiceSelect=null,stopBtn=null;
+  let mini=null,miniPlay=null,miniPrev=null,miniNext=null,miniStatus=null,miniRate=null;
 
   function getItem(){
     try{if(typeof currentItem!=='undefined'&&currentItem)return currentItem}catch{}
@@ -201,13 +202,25 @@
     if(!mounted)return;
     const complete=index>=segments.length&&segments.length;
     const pos=complete?segments.length:Math.min(index+1,segments.length);
-    statusEl.textContent=message||(complete?'已读完':segments.length?('第 '+pos+' / '+segments.length+' 段'):'没有可朗读正文');
+    const status=message||(complete?'已读完':segments.length?('第 '+pos+' / '+segments.length+' 段'):'没有可朗读正文');
+    statusEl.textContent=status;
     const active=state==='speaking',paused=state==='paused';
     playBtn.textContent=active?'暂停':paused?'继续':'播放';
     trigger.textContent=active?'⏸ 朗读中':paused?'▶ 继续朗读':'▶ 朗读';
     prevBtn.disabled=!segments.length||index<=0;
     nextBtn.disabled=!segments.length||index>=segments.length-1;
     stopBtn.disabled=state==='idle';
+    if(mini){
+      const visible=active||paused;
+      mini.classList.toggle('visible',visible);
+      mini.setAttribute('aria-hidden',visible?'false':'true');
+      document.documentElement.classList.toggle('vr-reader-mini-active',visible);
+      miniPlay.textContent=active?'暂停':'继续';
+      miniStatus.textContent=status;
+      miniPrev.disabled=!segments.length||index<=0;
+      miniNext.disabled=!segments.length||index>=segments.length-1;
+      if(miniRate&&miniRate.value!==String(currentRate()))miniRate.value=String(currentRate());
+    }
   }
   function speakCurrent(){
     if(!segments.length)return;
@@ -245,6 +258,15 @@
     index=Math.max(0,Math.min(index+delta,segments.length-1));saveProgress();setState('idle');
     if(wasActive)speakCurrent();
   }
+  function applyRate(value){
+    const next=String(value||'1');
+    if(rateSelect&&Array.from(rateSelect.options).some(o=>o.value===next))rateSelect.value=next;
+    if(miniRate&&Array.from(miniRate.options).some(o=>o.value===next))miniRate.value=next;
+    storageSet(RATE_KEY,next);
+    const active=state==='speaking';
+    generation++;try{synth.cancel()}catch{}
+    setState('idle');if(active)speakCurrent();else updateUi();
+  }
   function mount(){
     if(mounted||!document.querySelector('#articleRoot .article'))return false;
     if(!buildSegments())return false;
@@ -260,6 +282,10 @@
     panel.innerHTML='<div class="vr-reader-row"><button class="vr-reader-main" type="button" data-reader="play">播放</button><button class="vr-reader-step" type="button" data-reader="prev">上一段</button><span class="vr-reader-status" aria-live="polite"></span><button class="vr-reader-step" type="button" data-reader="next">下一段</button><button class="vr-reader-stop" type="button" data-reader="stop">停止</button></div><div class="vr-reader-settings"><label>语速<select data-reader="rate"><option value="0.9">0.9×</option><option value="1">1.0×</option><option value="1.15">1.15×</option><option value="1.3">1.3×</option><option value="1.5">1.5×</option><option value="2">2.0×</option></select></label><label class="vr-reader-voice-label">声音<select data-reader="voice"></select></label><span class="vr-reader-note">使用当前设备的系统语音 · 免费本地朗读</span></div>';
     hero.insertAdjacentElement('afterend',panel);
 
+    mini=document.createElement('section');mini.className='vr-reader-mini';mini.setAttribute('aria-label','朗读快捷控制');mini.setAttribute('aria-hidden','true');
+    mini.innerHTML='<button type="button" data-mini="prev" aria-label="上一段">‹</button><button type="button" class="vr-reader-mini-main" data-mini="play">继续</button><span class="vr-reader-mini-status" aria-live="polite"></span><button type="button" data-mini="next" aria-label="下一段">›</button><select data-mini="rate" aria-label="朗读语速"><option value="0.9">0.9×</option><option value="1">1.0×</option><option value="1.15">1.15×</option><option value="1.3">1.3×</option><option value="1.5">1.5×</option><option value="2">2.0×</option></select>';
+    document.body.appendChild(mini);
+
     playBtn=panel.querySelector('[data-reader="play"]');
     prevBtn=panel.querySelector('[data-reader="prev"]');
     nextBtn=panel.querySelector('[data-reader="next"]');
@@ -267,9 +293,15 @@
     statusEl=panel.querySelector('.vr-reader-status');
     rateSelect=panel.querySelector('[data-reader="rate"]');
     voiceSelect=panel.querySelector('[data-reader="voice"]');
+    miniPlay=mini.querySelector('[data-mini="play"]');
+    miniPrev=mini.querySelector('[data-mini="prev"]');
+    miniNext=mini.querySelector('[data-mini="next"]');
+    miniStatus=mini.querySelector('.vr-reader-mini-status');
+    miniRate=mini.querySelector('[data-mini="rate"]');
 
     const savedRate=storageGet(RATE_KEY,'1');
     if(Array.from(rateSelect.options).some(o=>o.value===savedRate))rateSelect.value=savedRate;
+    if(Array.from(miniRate.options).some(o=>o.value===savedRate))miniRate.value=savedRate;
     refreshVoices();
 
     trigger.addEventListener('click',()=>{panel.hidden=false;trigger.setAttribute('aria-expanded','true');toggle()});
@@ -277,10 +309,11 @@
     prevBtn.addEventListener('click',()=>move(-1));
     nextBtn.addEventListener('click',()=>move(1));
     stopBtn.addEventListener('click',stop);
-    rateSelect.addEventListener('change',()=>{
-      storageSet(RATE_KEY,rateSelect.value);
-      const active=state==='speaking';generation++;try{synth.cancel()}catch{};setState('idle');if(active)speakCurrent();
-    });
+    rateSelect.addEventListener('change',()=>applyRate(rateSelect.value));
+    miniPlay.addEventListener('click',toggle);
+    miniPrev.addEventListener('click',()=>move(-1));
+    miniNext.addEventListener('click',()=>move(1));
+    miniRate.addEventListener('change',()=>applyRate(miniRate.value));
     voiceSelect.addEventListener('change',()=>{
       storageSet(VOICE_KEY,voiceSelect.value);
       const active=state==='speaking';generation++;try{synth.cancel()}catch{};setState('idle');if(active)speakCurrent();
@@ -301,9 +334,10 @@
       '.vr-reader-status{min-width:74px;text-align:center;font-size:10px;color:var(--muted);font-variant-numeric:tabular-nums}',
       '.vr-reader-settings{display:flex;align-items:center;gap:10px;margin-top:9px;padding-top:9px;border-top:1px solid var(--line);font-size:10px;color:var(--muted)}',
       '.vr-reader-settings label{display:flex;align-items:center;gap:6px}.vr-reader-settings select{max-width:230px;min-height:32px;padding:5px 8px}.vr-reader-note{margin-left:auto;font-size:9px;color:var(--muted)}',
+      '.vr-reader-mini{position:fixed;left:50%;bottom:calc(10px + env(safe-area-inset-bottom));z-index:1200;display:none;align-items:center;gap:7px;width:min(430px,calc(100vw - 20px));box-sizing:border-box;padding:8px 9px;border:1px solid var(--line);border-radius:15px;background:color-mix(in srgb,var(--card) 96%,transparent);box-shadow:0 14px 42px rgba(17,18,20,.16);transform:translate(-50%,10px);opacity:0;pointer-events:none;transition:opacity 160ms ease,transform 220ms cubic-bezier(.23,1,.32,1);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}.vr-reader-mini.visible{opacity:1;transform:translate(-50%,0);pointer-events:auto}.vr-reader-mini button,.vr-reader-mini select{min-height:38px;border:1px solid var(--line);border-radius:10px;background:var(--soft);color:var(--text);font:650 10px/1 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif}.vr-reader-mini button{min-width:38px;padding:0 10px}.vr-reader-mini-main{min-width:52px!important}.vr-reader-mini-status{min-width:0;flex:1;text-align:center;color:var(--muted);font-size:9.5px;font-variant-numeric:tabular-nums;white-space:nowrap}.vr-reader-mini select{width:62px;padding:0 5px}.vr-reader-mini button:disabled{opacity:.35}.vr-reader-mini-active .to-top{bottom:calc(76px + env(safe-area-inset-bottom))!important}',
       '@media(hover:hover) and (pointer:fine){.vr-reader-trigger:hover{color:var(--accent)}.vr-reader-panel button:hover:not(:disabled){border-color:var(--line-strong);background:var(--card)}}',
-      '@media(max-width:640px){.vr-reader-panel{padding:12px}.vr-reader-row{flex-wrap:wrap}.vr-reader-status{order:5;width:100%;text-align:left;padding-top:2px}.vr-reader-settings{flex-wrap:wrap;align-items:flex-start}.vr-reader-voice-label{width:100%}.vr-reader-voice-label select{flex:1;min-width:0;max-width:none}.vr-reader-note{width:100%;margin-left:0;line-height:1.45}.vr-reader-panel button,.vr-reader-panel select{min-height:38px}}',
-      '@media(prefers-reduced-motion:reduce){.vr-reader-trigger,.vr-reader-panel button{transition:none!important}}'
+      '@media(max-width:640px){.vr-reader-panel{padding:12px}.vr-reader-row{flex-wrap:wrap}.vr-reader-status{order:5;width:100%;text-align:left;padding-top:2px}.vr-reader-settings{flex-wrap:wrap;align-items:flex-start}.vr-reader-voice-label{width:100%}.vr-reader-voice-label select{flex:1;min-width:0;max-width:none}.vr-reader-note{width:100%;margin-left:0;line-height:1.45}.vr-reader-panel button,.vr-reader-panel select{min-height:38px}.vr-reader-mini{display:flex}}',
+      '@media(prefers-reduced-motion:reduce){.vr-reader-trigger,.vr-reader-panel button,.vr-reader-mini{transition:none!important}.vr-reader-mini.visible{transform:translate(-50%,0)!important}}'
     ].join('');
     document.head.appendChild(style);
   }
