@@ -1,4 +1,4 @@
-const CACHE='velnar-radar-v43';
+const CACHE='velnar-radar-v44';
 const SHELL=[
   './','./index.html','./article.html',
   './consumer-radar.html','./consumer-article.html',
@@ -6,11 +6,11 @@ const SHELL=[
   './manifest.webmanifest',
   './assets/velnar-symbol.svg','./assets/radar-qr.svg',
   './assets/qrcode.min.js','./assets/qrcodejs.LICENSE.txt',
-  './assets/share-export-fix.js','./assets/radar-runtime.css','./assets/radar-runtime.js','./assets/state-sync.js','./assets/article-reader.js','./assets/article-completion.js','./assets/research-discussion-bridge.js','./assets/collection-discussion-bridge.js',
+  './assets/share-export-fix.js','./assets/radar-runtime.css','./assets/radar-runtime.js','./assets/state-sync.js','./assets/continue-reading.js','./assets/article-reader.js','./assets/article-completion.js','./assets/research-discussion-bridge.js','./assets/collection-discussion-bridge.js',
   './news-index.json','./consumer-radar.json','./deep-read.json'
 ];
 const DATA_FILES=['news-index.json','consumer-radar.json','deep-read.json'];
-const NETWORK_FIRST_ASSETS=['/assets/radar-runtime.js','/assets/state-sync.js','/assets/article-reader.js','/assets/article-completion.js','/assets/research-discussion-bridge.js','/assets/collection-discussion-bridge.js'];
+const NETWORK_FIRST_ASSETS=['/assets/radar-runtime.js','/assets/state-sync.js','/assets/continue-reading.js','/assets/article-reader.js','/assets/article-completion.js','/assets/research-discussion-bridge.js','/assets/collection-discussion-bridge.js'];
 const SHARE_EXPORT_LOADER="\n;(function(){if(document.querySelector('script[data-velnar-share-export]'))return;var s=document.createElement('script');s.src='./assets/share-export-fix.js';s.async=false;s.setAttribute('data-velnar-share-export','1');document.head.appendChild(s)})();";
 const THEME_META='<meta name="color-scheme" content="light dark"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f4f7"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111318">';
 const RUNTIME_CSS='<link rel="stylesheet" href="./assets/radar-runtime.css">';
