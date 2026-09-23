@@ -10,6 +10,15 @@
       "themes": ["AI Infrastructure", "Vertical Integration", "Frontier Models", "Semiconductors", "Platform Concentration"],
       "deck": "Alibaba 在同一次 Apsara Conference 上同时公布自研 Zhenwu V900、最高 50 万卡集群、下一代 Qwen 4 以及到 2032 年超过 20GW 的全球数据中心容量目标。真正值得记录的不是单个芯片或参数规模，而是前沿 AI 的竞争边界正在向全栈资本密集型工业体系扩张。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-09-23-A6",
+      "date": "2026-09-23",
+      "grade": "A",
+      "title": "Agent Harness 正在从‘让模型多想几步’转向‘推理前先约束执行’：Teradata 把确定性 Workflow 写进 Agent Runtime",
+      "themes": ["Agent Runtime", "Deterministic Workflow", "Enterprise Context", "Agent Control Plane", "Enterprise AI"],
+      "deck": "Teradata 新发布的 Tera Harness 不只是又一个企业 Agent：它在模型推理前加载业务上下文、应用 guardrails，并用 84 种预定义执行模式先形成计划，再让模型进入受约束的执行循环。这个设计强化了一条关键判断：模型越强，企业 Agent 的可靠性层未必消失，反而可能从外部补丁演化成 Runtime 内部的一等架构。",
+      "body_format": "article_text"
     }
   ]
 }
