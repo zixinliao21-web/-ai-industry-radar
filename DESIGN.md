@@ -240,9 +240,9 @@ The **讨论** action:
 
 1. builds a Discussion Packet from article context + local notes / excerpts
 2. copies it to the clipboard
-3. opens a configured ChatGPT discussion-thread URL, or ChatGPT home as fallback
+3. keeps the reader on the Radar page and gives an explicit handoff cue for ChatGPT Desktop
 
-A dedicated thread URL may be configured locally. The web page must never pretend it can send the message into ChatGPT automatically.
+A dedicated ChatGPT web-thread URL may be configured locally only as an explicit secondary fallback. The primary action must not automatically open ChatGPT web, and the web page must never pretend it can inject the packet into ChatGPT automatically.
 
 ## 9. Share Artifact System
 

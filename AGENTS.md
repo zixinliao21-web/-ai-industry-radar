@@ -114,7 +114,7 @@ Routine publishing in one collection must not modify the other collections' cano
 
 ## Browser-local state
 
-Read state, notes, excerpts, discussion-thread settings and appearance are browser-local. Never write them into any canonical JSON file, GitHub content commit, or server-side storage.
+Canonical research files must never contain user state. Notes, excerpts, discussion-thread settings, appearance, and device-specific system voice remain browser-local. Cross-device Sync V1 may copy only the bounded state explicitly documented in `docs/cross-device-sync.md`; never write synchronized state into canonical JSON files or GitHub content commits.
 
 ### Industry Radar
 
@@ -167,7 +167,7 @@ Preserve these behaviors where a collection supports them:
 - selected article text can be captured through the small notebook-style action
 - notes and excerpts auto-save locally per article
 - directory may show a small notebook marker for articles with local notes
-- **讨论** builds a collection-appropriate Discussion Packet, copies it, then opens the configured ChatGPT thread or ChatGPT home as fallback
+- **讨论** builds a collection-appropriate Discussion Packet and copies it; the primary action stays on Radar and gives an explicit desktop handoff cue, while a saved ChatGPT web thread remains a secondary manual fallback
 - the bridge remains lightweight; do not turn the website into a chat app or general PKM system
 
 Do not reintroduce an observer that repeatedly rewrites article DOM labels. A previous self-triggering `MutationObserver` caused the article page to freeze.

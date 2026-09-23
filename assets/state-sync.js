@@ -65,6 +65,7 @@
   }
   function newer(a,b){return time(a&&a.updated_at)>=time(b&&b.updated_at)?a:b}
   function mergeStates(states){
+    const local=normalizeState(states[0]||null);
     const out=emptyState();
     states.map(normalizeState).forEach(s=>{
       ['industry','consumer','deep'].forEach(c=>Object.entries(s.read[c]).forEach(([id,rec])=>{
@@ -83,8 +84,8 @@
         }else out.reader.progress[key]={...(time(rec.updated_at)>time(old.updated_at)?rec:old)};
       });
       if(s.reader.rate)out.reader.rate=out.reader.rate?{...newer(s.reader.rate,out.reader.rate)}:{...s.reader.rate};
-      if(s.reader.voice)out.reader.voice=out.reader.voice?{...newer(s.reader.voice,out.reader.voice)}:{...s.reader.voice};
     });
+    out.reader.voice=local.reader.voice?{...local.reader.voice}:null;
     out.updated_at=now();return out;
   }
   function applyState(state,source){
@@ -137,7 +138,7 @@
     if(!r.ok||!data||data.error)throw new Error((data&&data.error)||('HTTP '+r.status));
     return data.result;
   }
-  async function pushLocal(){const c=getConfig();if(c)await redisCommand(['HSET',c.key,deviceId(),JSON.stringify(localState||initializeState())])}
+  async function pushLocal(){const c=getConfig();if(c){const snapshot=normalizeState(localState||initializeState());snapshot.reader.voice=null;await redisCommand(['HSET',c.key,deviceId(),JSON.stringify(snapshot)])}}
   async function pullAll(){
     const c=getConfig();if(!c)return[];const result=await redisCommand(['HGETALL',c.key]);if(!Array.isArray(result))return[];
     const states=[];for(let i=1;i<result.length;i+=2){try{const v=JSON.parse(result[i]);if(v&&typeof v==='object')states.push(v)}catch{}}return states;
@@ -173,7 +174,7 @@
     const btn=document.createElement('button');btn.type='button';btn.id='vssButton';btn.className='vss-button';btn.innerHTML='<span class="vss-dot" data-state="off"></span><span>同步</span>';btn.setAttribute('aria-label','跨设备同步设置');
     const actions=bar.querySelector('.brand-actions')||bar;actions.appendChild(btn);
     const layer=document.createElement('div');layer.id='vssLayer';layer.className='vss-layer';layer.setAttribute('aria-hidden','true');
-    layer.innerHTML='<section class="vss-panel" role="dialog" aria-modal="true" aria-labelledby="vssTitle"><div class="vss-head"><div><div class="vss-title" id="vssTitle">跨设备同步</div><div class="vss-sub" id="vssStatus">未连接</div></div><button class="vss-close" id="vssClose" type="button" aria-label="关闭">×</button></div><div class="vss-body"><p class="vss-copy">同步已读状态、最近打开、阅读进度和朗读进度/偏好。笔记与摘录仍只保存在当前设备。</p><label>Upstash REST URL<input id="vssUrl" type="url" inputmode="url" placeholder="https://…upstash.io"></label><label>REST Token<input id="vssToken" type="password" autocomplete="off" placeholder="Token"></label><div class="vss-actions"><button id="vssConnect" type="button">保存并连接</button><button id="vssSyncNow" type="button">立即同步</button></div><div class="vss-rule"></div><label>另一台设备的连接码<textarea id="vssImport" rows="3" placeholder="VRS1.…"></textarea></label><div class="vss-actions"><button id="vssImportBtn" type="button">导入连接码</button><button id="vssCopyCode" type="button">复制本机连接码</button></div><p class="vss-warning">连接码包含数据库访问凭据，等同同步密码，只在自己的设备之间传递。建议为 Radar 使用独立的 Upstash 数据库。</p><div class="vss-message" id="vssMessage" aria-live="polite"></div><button class="vss-disconnect" id="vssDisconnect" type="button">断开此设备</button></div></section>';
+    layer.innerHTML='<section class="vss-panel" role="dialog" aria-modal="true" aria-labelledby="vssTitle"><div class="vss-head"><div><div class="vss-title" id="vssTitle">跨设备同步</div><div class="vss-sub" id="vssStatus">未连接</div></div><button class="vss-close" id="vssClose" type="button" aria-label="关闭">×</button></div><div class="vss-body"><p class="vss-copy">同步已读状态、最近打开、阅读进度、朗读进度与语速。系统声音、笔记与摘录仍只保存在当前设备。</p><label>Upstash REST URL<input id="vssUrl" type="url" inputmode="url" placeholder="https://…upstash.io"></label><label>REST Token<input id="vssToken" type="password" autocomplete="off" placeholder="Token"></label><div class="vss-actions"><button id="vssConnect" type="button">保存并连接</button><button id="vssSyncNow" type="button">立即同步</button></div><div class="vss-rule"></div><label>另一台设备的连接码<textarea id="vssImport" rows="3" placeholder="VRS1.…"></textarea></label><div class="vss-actions"><button id="vssImportBtn" type="button">导入连接码</button><button id="vssCopyCode" type="button">复制本机连接码</button></div><p class="vss-warning">连接码包含数据库访问凭据，等同同步密码，只在自己的设备之间传递。建议为 Radar 使用独立的 Upstash 数据库。</p><div class="vss-message" id="vssMessage" aria-live="polite"></div><button class="vss-disconnect" id="vssDisconnect" type="button">断开此设备</button></div></section>';
     document.body.appendChild(layer);
     function open(){updateUiStatus();showInline('');layer.classList.add('open');layer.setAttribute('aria-hidden','false')}
     function close(){layer.classList.remove('open');layer.setAttribute('aria-hidden','true')}
