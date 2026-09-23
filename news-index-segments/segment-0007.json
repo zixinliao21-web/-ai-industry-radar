@@ -19,6 +19,15 @@
       "themes": ["Agent Runtime", "Deterministic Workflow", "Enterprise Context", "Agent Control Plane", "Enterprise AI"],
       "deck": "Teradata 新发布的 Tera Harness 不只是又一个企业 Agent：它在模型推理前加载业务上下文、应用 guardrails，并用 84 种预定义执行模式先形成计划，再让模型进入受约束的执行循环。这个设计强化了一条关键判断：模型越强，企业 Agent 的可靠性层未必消失，反而可能从外部补丁演化成 Runtime 内部的一等架构。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-09-23-A7",
+      "date": "2026-09-23",
+      "grade": "A",
+      "title": "企业 Agent 正在同时侵蚀 SaaS 席位费与实施服务费：Ema 暴露的真正控制点是‘执行层’",
+      "themes": ["Enterprise AI", "Agent Execution", "SaaS", "IT Services", "Outcome Pricing", "FDE Productization"],
+      "deck": "Ema 披露的信号不只是 7700 万美元融资，而是一组更值得观察的生产数据：客户从单一用例扩展到几十个 Workflow、约 180% NDR、接近 80% 毛利，并按任务/业务结果而非席位或 Token 收费。如果这些公司口径能持续成立，Agent 公司争夺的可能不只是 SaaS 的界面，而是软件与 IT 服务之间原本由人工实施承接的企业执行层。",
+      "body_format": "article_text"
     }
   ]
 }
