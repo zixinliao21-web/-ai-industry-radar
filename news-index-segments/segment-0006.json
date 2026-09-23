@@ -19,6 +19,15 @@
       "themes": ["Agent Commerce", "Trust Infrastructure", "Agent Identity", "Liability", "Audit Trail"],
       "deck": "Bank of America、NatWest、ING、Capital One、Commonwealth Bank of Australia 与 ASB Bank 联合提出可信 Agent Commerce 原则。真正新增的不是银行提醒诈骗风险，而是金融机构开始把 Agent 交易拆成身份、授权、意图、决策透明度、责任归属与可审计记录的问题：支付成功只是终点，证明 Agent 为什么有权这样买、出了错由谁负责，正在成为新的基础设施层。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-09-22-A7",
+      "date": "2026-09-22",
+      "grade": "A",
+      "title": "Physical AI 的竞争正在出现“ROS 之上的运行层”：Intrinsic 把工业机器人基础设施开源，争夺的可能不是机器人本体",
+      "themes": ["Physical AI", "Robotics", "Open Source", "Agent Runtime", "Industrial AI"],
+      "deck": "Alphabet 旗下 Intrinsic 将工业机器人平台的核心能力以 Apache 2.0 开源，包括硬件无关的实时控制、数字孪生以及 ROS 兼容服务。值得注意的不是又一个机器人 SDK，而是 Physical AI 可能正在形成类似数字 Agent 的分层：模型负责智能，开放运行层负责把智能可靠地接入异构机器与真实生产环境。",
+      "body_format": "article_text"
     }
   ]
 }
