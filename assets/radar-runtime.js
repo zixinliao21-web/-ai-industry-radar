@@ -41,23 +41,44 @@
     }
     actions.appendChild(select);
   }
+  function collectionLinks(){
+    const path=location.pathname;
+    return[
+      {href:'./',label:'AI 产业雷达',short:'AI 产业雷达',active:path.endsWith('/')||path.endsWith('/index.html')||path.endsWith('/article.html')},
+      {href:'./consumer-radar.html',label:'AI C 端产业雷达',short:'C 端产业雷达',active:path.endsWith('/consumer-radar.html')||path.endsWith('/consumer-article.html')},
+      {href:'./deep-read.html',label:'Weekly Deep Read',short:'Deep Read',active:path.endsWith('/deep-read.html')||path.endsWith('/deep-read-article.html')}
+    ];
+  }
   function mountCollectionNav(){
     if(document.querySelector('.collection-link')||document.getElementById('velnarCollectionNav'))return;
     const bar=document.querySelector('.brandbar');if(!bar)return;
     if(!document.getElementById('velnar-collection-nav-style')){
       const style=document.createElement('style');style.id='velnar-collection-nav-style';style.textContent=`
-        .velnar-collection-nav{display:flex;align-items:center;gap:14px;overflow-x:auto;scrollbar-width:none;margin:-24px 0 28px;padding:0 2px 9px;border-bottom:1px solid var(--line);white-space:nowrap}.velnar-collection-nav::-webkit-scrollbar{display:none}.velnar-collection-link{position:relative;flex:0 0 auto;padding:5px 0;color:var(--muted);font-size:10px;line-height:1;text-decoration:none;outline:none}.velnar-collection-link[aria-current="page"]{color:var(--text);font-weight:700}.velnar-collection-link[aria-current="page"]::after{content:'';position:absolute;left:0;right:0;bottom:-10px;height:1px;background:var(--accent)}.velnar-collection-link:focus-visible{box-shadow:0 0 0 3px rgba(57,110,227,.16);border-radius:4px}@media(hover:hover) and (pointer:fine){.velnar-collection-link:hover{color:var(--text)}}@media(max-width:640px){.velnar-collection-nav{gap:12px;margin:-18px 0 22px;padding-bottom:9px}.velnar-collection-link{font-size:9.5px}}
+        .velnar-collection-nav{display:flex;align-items:center;gap:14px;overflow-x:auto;scrollbar-width:none;margin:-24px 0 28px;padding:0 2px 9px;border-bottom:1px solid var(--line);white-space:nowrap}.velnar-collection-nav::-webkit-scrollbar{display:none}.velnar-collection-link{position:relative;flex:0 0 auto;padding:5px 0;color:var(--muted);font-size:10px;line-height:1;text-decoration:none;outline:none}.velnar-collection-link[aria-current="page"]{color:var(--text);font-weight:700}.velnar-collection-link[aria-current="page"]::after{content:'';position:absolute;left:0;right:0;bottom:-10px;height:1px;background:var(--accent)}.velnar-collection-link:focus-visible{box-shadow:0 0 0 3px rgba(57,110,227,.16);border-radius:4px}@media(hover:hover) and (pointer:fine){.velnar-collection-link:hover{color:var(--text)}}@media(max-width:640px){.velnar-collection-nav{display:none}}
       `;document.head.appendChild(style)
     }
-    const path=location.pathname;
     const nav=document.createElement('nav');nav.id='velnarCollectionNav';nav.className='velnar-collection-nav';nav.setAttribute('aria-label','Research collections');
-    const links=[
-      {href:'./',label:'AI 产业雷达',active:path.endsWith('/')||path.endsWith('/index.html')||path.endsWith('/article.html')},
-      {href:'./consumer-radar.html',label:'AI C 端产业雷达',active:path.endsWith('/consumer-radar.html')||path.endsWith('/consumer-article.html')},
-      {href:'./deep-read.html',label:'Weekly Deep Read',active:path.endsWith('/deep-read.html')||path.endsWith('/deep-read-article.html')}
-    ];
+    const links=collectionLinks();
     nav.innerHTML=links.map(x=>'<a class="velnar-collection-link" href="'+x.href+'"'+(x.active?' aria-current="page"':'')+'>'+x.label+'</a>').join('');
     bar.insertAdjacentElement('afterend',nav);
+  }
+  function mountMobileCollectionPicker(){
+    if(document.getElementById('velnarCollectionSelect'))return;
+    const bar=document.querySelector('.brandbar'),lock=bar&&bar.querySelector('.brandlock');if(!bar||!lock)return;
+    const links=collectionLinks(),current=links.find(x=>x.active)||links[0];
+    const select=document.createElement('select');
+    select.id='velnarCollectionSelect';select.className='velnar-collection-select';select.setAttribute('aria-label','切换研究板块');
+    select.innerHTML=links.map(x=>'<option value="'+x.href+'"'+(x.active?' selected':'')+'>'+x.short+'</option>').join('');
+    select.value=current.href;
+    select.addEventListener('change',()=>{if(select.value&&select.value!==current.href)location.href=select.value});
+    lock.appendChild(select);
+  }
+  function syncStickyMetrics(){
+    const bar=document.querySelector('.brandbar');if(!bar)return;
+    const applyHeight=()=>document.documentElement.style.setProperty('--velnar-header-height',Math.ceil(bar.getBoundingClientRect().height)+'px');
+    applyHeight();
+    if('ResizeObserver'in window){const ro=new ResizeObserver(applyHeight);ro.observe(bar)}
+    else window.addEventListener('resize',applyHeight,{passive:true});
   }
   function ensureToast(){
     if(typeof window.showToast==='function')return;
@@ -71,7 +92,7 @@
     if(!matches||document.getElementById('velnar-collection-discussion-script')||document.querySelector('script[src="./assets/collection-discussion-bridge.js"]'))return;
     const s=document.createElement('script');s.id='velnar-collection-discussion-script';s.src='./assets/collection-discussion-bridge.js';s.async=false;document.body.appendChild(s);
   }
-  function boot(){mountPicker();mountCollectionNav();ensureToast();loadCollectionBridge();apply(readMode())}
+  function boot(){mountPicker();mountCollectionNav();mountMobileCollectionPicker();syncStickyMetrics();ensureToast();loadCollectionBridge();apply(readMode())}
   apply(readMode());
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});
   else boot();
