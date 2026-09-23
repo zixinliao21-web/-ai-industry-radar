@@ -50,7 +50,7 @@
     }
     const pct=Math.max(4,Math.min(96,Math.round(c.progress*100)));
     wrap.hidden=false;
-    wrap.innerHTML='<a class="vcr-link" href="'+href(c.id)+'" aria-label="继续阅读 '+escapeHtml(c.title)+'，已读 '+pct+'%"><div><div class="vcr-eyebrow">继续阅读 · Continue</div><div class="vcr-title">'+escapeHtml(c.title)+'</div></div><div class="vcr-meta"><span>'+pct+'%</span><span class="vcr-track" aria-hidden="true"><span class="vcr-fill" style="transform:scaleX('+(pct/100)+')"></span></span><span aria-hidden="true">›</span></div></a>';
+    wrap.innerHTML='<a class="vcr-link" href="'+href(c.id)+'&resume=1" aria-label="继续阅读 '+escapeHtml(c.title)+'，已读 '+pct+'%"><div><div class="vcr-eyebrow">继续阅读 · Continue</div><div class="vcr-title">'+escapeHtml(c.title)+'</div></div><div class="vcr-meta"><span>'+pct+'%</span><span class="vcr-track" aria-hidden="true"><span class="vcr-fill" style="transform:scaleX('+(pct/100)+')"></span></span><span aria-hidden="true">›</span></div></a>';
     return true;
   }
   function escapeHtml(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}

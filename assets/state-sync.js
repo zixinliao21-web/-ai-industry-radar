@@ -14,7 +14,7 @@
     path.endsWith('/deep-read.html')||path.endsWith('/deep-read-article.html')?'deep':
     (path.endsWith('/')||path.endsWith('/index.html')||path.endsWith('/article.html'))?'industry':null;
   const isArticle=/\/(?:article|consumer-article|deep-read-article)\.html$/.test(path);
-  let syncTimer=null,syncing=false,articleKey='',restoreDone=false,scrollTimer=null,localState=null;
+  let syncTimer=null,syncing=false,articleKey='',restoreDone=false,scrollTimer=null,localState=null,resumePrompt=null;
 
   function now(){return new Date().toISOString()}
   function time(v){const n=Date.parse(String(v||''));return Number.isFinite(n)?n:0}
@@ -201,7 +201,8 @@
       '.vss-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:18px 18px 13px;border-bottom:1px solid var(--line)}.vss-title{font-size:14px;font-weight:760}.vss-sub{margin-top:4px;font-size:10px;color:var(--muted)}.vss-close{width:34px;height:34px;border:1px solid var(--line);border-radius:50%;background:var(--soft);color:var(--text);font-size:18px;cursor:pointer}',
       '.vss-body{padding:16px 18px 18px}.vss-copy,.vss-warning{margin:0 0 14px;font-size:10.5px;line-height:1.65;color:var(--muted)}.vss-warning{margin-top:12px}.vss-body label{display:grid;gap:6px;margin:11px 0;font-size:10px;color:var(--muted)}.vss-body input,.vss-body textarea{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:10px;background:var(--soft);color:var(--text);padding:9px 10px;font:500 11px/1.45 ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;outline:none}',
       '.vss-actions{display:flex;gap:8px;flex-wrap:wrap}.vss-actions button,.vss-disconnect{min-height:36px;padding:8px 11px;border:1px solid var(--line);border-radius:10px;background:var(--soft);color:var(--text);font:650 10.5px/1 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif;cursor:pointer}.vss-actions button:disabled,.vss-disconnect:disabled{opacity:.4}.vss-rule{height:1px;background:var(--line);margin:16px 0}.vss-message{min-height:18px;font-size:10px;line-height:1.55;color:var(--muted);margin-top:10px}.vss-disconnect{margin-top:8px;background:transparent}',
-      '@media(max-width:640px){.vss-button span:last-child{display:none}.vss-button{width:36px;justify-content:center;padding:0}.vss-panel{width:100%;border-radius:16px}.vss-layer{align-items:flex-end;padding:10px}.vss-panel{max-height:92vh}}'
+      '.vss-resume{display:block;margin:-4px 0 14px auto;min-height:34px;padding:7px 11px;border:1px solid var(--line);border-radius:999px;background:var(--soft);color:var(--muted);font:650 10px/1 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif;cursor:pointer}.vss-resume:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(57,110,227,.16),0 0 0 1px rgba(57,110,227,.48)}',
+      '@media(max-width:640px){.vss-button span:last-child{display:none}.vss-button{width:36px;justify-content:center;padding:0}.vss-panel{width:100%;border-radius:16px}.vss-layer{align-items:flex-end;padding:10px}.vss-panel{max-height:92vh}.vss-resume{margin:-2px 0 12px auto;min-height:38px}}'
     ].join('');document.head.appendChild(s);
   }
   function resolveArticle(){
@@ -209,12 +210,29 @@
     try{if(!id&&window.currentItem&&window.currentItem.id)id=String(window.currentItem.id)}catch{}
     if(!id)return false;articleKey=collection+':'+id;markOpened(collection,id);tryRestoreReading();return true;
   }
+  function clearResumeParam(){
+    try{const u=new URL(location.href);if(!u.searchParams.has('resume'))return;u.searchParams.delete('resume');history.replaceState(null,'',u.pathname+u.search+u.hash)}catch{}
+  }
+  function restoreTo(progress){
+    if(restoreDone)return;restoreDone=true;
+    if(resumePrompt){resumePrompt.remove();resumePrompt=null}
+    setTimeout(()=>{const max=Math.max(0,document.documentElement.scrollHeight-innerHeight);if(max>0)window.scrollTo(0,Math.round(max*progress));clearResumeParam()},180);
+  }
+  function showResumePrompt(progress){
+    if(resumePrompt||scrollY>80)return;
+    const topbar=document.querySelector('.topbar');if(!topbar)return;
+    const pct=Math.max(4,Math.min(96,Math.round(progress*100)));
+    resumePrompt=document.createElement('button');resumePrompt.type='button';resumePrompt.className='vss-resume';resumePrompt.textContent='继续上次位置 · '+pct+'%';resumePrompt.setAttribute('aria-label','继续上次阅读位置，约 '+pct+'%');
+    topbar.insertAdjacentElement('afterend',resumePrompt);
+    resumePrompt.addEventListener('click',()=>restoreTo(progress));
+  }
   function tryRestoreReading(){
     if(restoreDone||!articleKey||location.hash||scrollY>80)return;
     const progress=(localState&&localState.reading&&localState.reading[articleKey]&&localState.reading[articleKey].progress)||0;
     if(progress<.04||progress>.97)return;
-    const article=document.querySelector('#articleRoot .article');if(!article)return;restoreDone=true;
-    setTimeout(()=>{const max=Math.max(0,document.documentElement.scrollHeight-innerHeight);if(max>0)window.scrollTo(0,Math.round(max*progress))},180);
+    const article=document.querySelector('#articleRoot .article');if(!article)return;
+    const explicit=new URLSearchParams(location.search).get('resume')==='1';
+    if(explicit)restoreTo(progress);else showResumePrompt(progress);
   }
   function setupArticleTracking(){
     if(!isArticle)return;let tries=0;const t=setInterval(()=>{tries++;if(resolveArticle()||tries>80)clearInterval(t)},120);
