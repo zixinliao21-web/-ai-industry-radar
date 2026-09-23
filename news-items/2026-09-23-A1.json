@@ -1,0 +1,17 @@
+{
+  "id": "2026-09-23-A1",
+  "date": "2026-09-23",
+  "grade": "A",
+  "title": "Physical AI 的价值链开始从‘机器人本体’向感知基础设施收敛：Cognex 用 5 亿美元买下 RealSense",
+  "themes": ["Physical AI", "Robotic Perception", "Machine Vision", "Industrial AI", "Consolidation"],
+  "deck": "Cognex 以约 5 亿美元现金收购 RealSense，把传统工业机器视觉从检测、识别和测量扩展到 3D 深度感知与机器人导航。值得记录的不是又一笔机器人并购，而是成熟工业自动化公司开始把‘机器如何可靠地感知真实世界’当成 Physical AI 的独立基础设施层。",
+  "article_text": "Physical AI 的价值链开始从‘机器人本体’向感知基础设施收敛：Cognex 用 5 亿美元买下 RealSense\n\n9 月 22 日，工业机器视觉公司 Cognex 宣布以约 5 亿美元现金收购 RealSense，交易预计在 2026 年第四季度完成。RealSense 原本由 Intel 在 2014 年创立、2025 年独立出来，核心资产是深度摄像头、3D 视觉与机器人感知技术，已经用于固定机械臂、自主移动机器人、四足机器人和人形机器人。Cognex 则是一个更传统也更成熟的工业自动化玩家，拥有超过 3 万家客户，长期业务集中在工业识别、2D/3D 机器视觉、检测和测量。收购后，Cognex 明确提出要形成从工业 ID、机器视觉测量一直延伸到 3D 深度感知和机器人导航的“full-stack visual intelligence platform”。\n\n【FACT】这笔交易的价格本身并不夸张到足以成为 S 级信号：RealSense 预计 2026 年收入约 8000 万至 9000 万美元，同比增长超过 50%；Cognex 给出的当前 robotic perception 市场规模约为 6 亿美元，并预计到 2030 年增长至约 16 亿美元。更值得注意的是买方是谁，以及它为什么买。Cognex 不是一家追逐人形机器人概念的新公司，而是已经深入制造与物流现场四十多年的机器视觉供应商。它现在把 robotic perception 明确列为 Physical AI 的增长邻接市场，说明 Physical AI 的产业化开始被既有工业基础设施公司吸收，而不再只是机器人创业公司的独立叙事。\n\n【INFERENCE】这强化了我们最近对 Physical AI 分层的判断。9 月 22 日我们刚记录 Intrinsic 把硬件无关实时控制、数字孪生和 ROS 兼容服务推向开放运行层；Cognex × RealSense 则补上另一块：感知层。数字 Agent 要可靠行动，需要模型、Runtime、Context、Policy 和 Tool；物理 Agent 同样不可能只靠一个更强的 foundation model。它必须持续回答“我在哪里、物体在哪里、距离多少、环境发生了什么、这个动作是否安全”。这些问题最终落在传感器、深度视觉、定位、实时控制和工业集成上。模型能力提升可能吞掉一部分视觉理解算法，但不会自动消除机器人获取可靠物理世界状态的需求。\n\n真正新增的判断因此不是“机器视觉很重要”，而是 Physical AI 的基础设施控制点可能逐渐形成一条比机器人品牌更稳定的横向价值链：感知 → 实时控制/Runtime → 世界模型/Context → 行动执行。机器人本体可以非常碎片化，工厂里的机械臂、AMR、四足和未来人形机器人也不会来自同一家厂商；但如果某一套感知和运行基础设施能够跨硬件复用，它就可能像数字世界里的云、数据库、Agent Runtime 一样获得更广泛的分发面。Cognex 已经拥有超过 3 万家工业客户，这使 RealSense 的意义不仅是增加一种摄像头，而是让一套机器人感知能力直接获得成熟工业渠道。\n\n这里最容易误读成“Physical AI 的赢家会是卖传感器的人”。证据还远远不够。RealSense 预计收入不到 1 亿美元，Cognex 自己对 2030 年市场的预测也只有约 16 亿美元；而且视觉只是机器人感知的一部分，力觉、触觉、位置、音频以及多传感器融合都可能形成不同技术栈。更重要的是，硬件组件往往面临标准化和价格下降。如果感知设备不能继续向软件、数据、校准、开发者生态和跨机器人平台的能力上移，它仍可能只是一个竞争激烈的硬件层。\n\n对 VELNAR 当前阶段，这属于“继续观察”，不触发任何 Sales MVP 范围变化。它真正有价值的是帮助我们建立 Physical AI 的分析框架：以后不要只统计谁发布了人形机器人、谁融资最多，而要追踪哪些横向层开始被成熟工业公司收购、标准化和平台化。尤其值得观察三个控制点：跨机器人通用的感知层是否形成事实标准；Runtime/控制层是否像数字 Agent Runtime 一样出现平台集中；以及工业企业自身的数据、设备语义和现场状态是否最终形成 Physical Enterprise Context。\n\n接下来最值得讨论的问题是：第一，如果未来机器人本体高度碎片化，感知与 Runtime 是否反而会成为更集中的价值层？第二，Cognex 这类拥有真实工业客户和渠道的传统自动化公司，会不会比纯机器人创业公司更容易成为 Physical AI 的基础设施平台？第三，我们现在研究数字企业 Agent 时形成的 Context、Control Plane、Trace 等框架，哪些可以迁移到 Physical AI，哪些到了物理世界必须重新定义？",
+  "sources": [
+    {"label": "Cognex Investor Relations — Cognex to Acquire RealSense", "url": "https://investor.cognex.com/news/news-details/2026/Cognex-to-Acquire-RealSense-Expanding-Machine-Vision-Leadership-into-High-Growth-Robotic-Perception-Market/default.aspx"},
+    {"label": "SEC Form 8-K — Cognex / RealSense transaction", "url": "https://www.sec.gov/Archives/edgar/data/851205/000085120526000071/cgnx-20260922.htm"},
+    {"label": "RealSense — Cognex acquisition announcement", "url": "https://www.realsenseai.com/news-insights/cognex-to-acquire-realsense-expanding-machine-vision-leadership-into-high-growth-robotic-perception-market/"}
+  ],
+  "fact": "Cognex agreed to acquire RealSense for approximately $500 million in cash; RealSense is expected to generate $80–90 million revenue in 2026 and serves robotic perception applications across multiple robot forms.",
+  "inference": "Physical AI may develop durable horizontal infrastructure layers around perception and runtime even if robot OEMs remain fragmented.",
+  "action": "继续观察；不改变当前 Sales MVP Scope。"
+}
