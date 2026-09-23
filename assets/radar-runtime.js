@@ -86,13 +86,19 @@
     let el=document.getElementById('velnarGlobalToast');if(!el){el=document.createElement('div');el.id='velnarGlobalToast';el.className='velnar-global-toast';el.setAttribute('role','status');el.setAttribute('aria-live','polite');document.body.appendChild(el)}
     let timer=null;window.showToast=function(text){el.textContent=String(text||'');el.classList.add('visible');clearTimeout(timer);timer=setTimeout(()=>el.classList.remove('visible'),1600)};
   }
+  function adaptMobileAccess(){
+    const btn=document.getElementById('mobileOpenBtn');if(!btn)return;
+    const coarse=matchMedia('(pointer:coarse)').matches;
+    if(coarse){btn.textContent='分享';btn.setAttribute('aria-label','分享当前页面')}
+    else{btn.textContent='手机打开';btn.setAttribute('aria-label','在手机上打开')}
+  }
   function loadCollectionBridge(){
     const p=location.pathname;
     const matches=p.endsWith('/consumer-radar.html')||p.endsWith('/consumer-article.html')||p.endsWith('/deep-read.html')||p.endsWith('/deep-read-article.html');
     if(!matches||document.getElementById('velnar-collection-discussion-script')||document.querySelector('script[src="./assets/collection-discussion-bridge.js"]'))return;
     const s=document.createElement('script');s.id='velnar-collection-discussion-script';s.src='./assets/collection-discussion-bridge.js';s.async=false;document.body.appendChild(s);
   }
-  function boot(){mountPicker();mountCollectionNav();mountMobileCollectionPicker();syncStickyMetrics();ensureToast();loadCollectionBridge();apply(readMode())}
+  function boot(){mountPicker();mountCollectionNav();mountMobileCollectionPicker();syncStickyMetrics();ensureToast();adaptMobileAccess();loadCollectionBridge();apply(readMode())}
   apply(readMode());
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});
   else boot();

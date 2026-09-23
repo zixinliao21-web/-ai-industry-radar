@@ -1,4 +1,4 @@
-const CACHE='velnar-radar-v44';
+const CACHE='velnar-radar-v45';
 const SHELL=[
   './','./index.html','./article.html',
   './consumer-radar.html','./consumer-article.html',
@@ -90,7 +90,7 @@ self.addEventListener('fetch',event=>{
         return fresh;
       }catch{
         if(cached)return cached;
-        return new Response(JSON.stringify({updated_at:'',items:[]}),{status:200,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}});
+        return new Response(JSON.stringify({error:'Offline and no cached data',updated_at:'',items:[]}),{status:503,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}});
       }
     })());
     return;

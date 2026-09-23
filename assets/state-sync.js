@@ -187,7 +187,8 @@
     document.getElementById('vssSyncNow').addEventListener('click',async()=>{showInline('正在同步…');const ok=await syncNow(true);if(ok)showInline('同步完成。')});
     document.getElementById('vssCopyCode').addEventListener('click',async()=>{const c=getConfig();if(!c)return;const ok=await copyText(encodeSetup(c));showInline(ok?'连接码已复制。请只发送到自己的另一台设备。':'复制失败，请检查剪贴板权限。')});
     document.getElementById('vssImportBtn').addEventListener('click',async()=>{
-      try{const c=decodeSetup(document.getElementById('vssImport').value);saveConfig(c);updateUiStatus();showInline('连接码已导入，正在同步…');const ok=await syncNow(true);if(ok)showInline('同步完成。')}catch(err){showInline(String(err&&err.message||err))}
+      const input=document.getElementById('vssImport');
+      try{const c=decodeSetup(input.value);saveConfig(c);input.value='';updateUiStatus();showInline('连接码已导入并已从输入框清除，正在同步…');const ok=await syncNow(true);if(ok)showInline('同步完成。')}catch(err){showInline(String(err&&err.message||err))}
     });
     document.getElementById('vssDisconnect').addEventListener('click',()=>{try{localStorage.removeItem(CONFIG_KEY)}catch{}updateUiStatus();showInline('已断开云同步。本地阅读状态仍保留。')});
     updateUiStatus();
