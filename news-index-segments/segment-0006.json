@@ -2,59 +2,12 @@
   "schema_version": "3.0",
   "segment": "0006",
   "items": [
-    {
-      "id": "2026-09-22-A5",
-      "date": "2026-09-22",
-      "grade": "A",
-      "title": "模型能力越强，训练数据反而越像高附加值制造业：Snorkel 的增长显示‘专家知识 → 可验证环境’正在成为独立生产层",
-      "themes": ["Training Data", "Evaluation", "Reinforcement Learning", "Vertical AI", "AI Infrastructure"],
-      "deck": "Snorkel AI 的年化收入据报道从约 2000 万美元跃升至超过 3.5 亿美元，增长核心不是传统标注软件，而是直接交付专家数据、强化学习环境和可验证评测。前沿模型的数据瓶颈正在从‘有没有更多文本’转向‘能否把稀缺专家判断加工成可训练、可验证、可追溯的机器资产’。",
-      "body_format": "article_text"
-    },
-    {
-      "id": "2026-09-22-A6",
-      "date": "2026-09-22",
-      "grade": "A",
-      "title": "Agent Commerce 的下一层控制点开始从‘能不能交易’转向‘谁为 Agent 的决定负责’：六家银行把 Intent、Liability 与 Audit Trail 推到台前",
-      "themes": ["Agent Commerce", "Trust Infrastructure", "Agent Identity", "Liability", "Audit Trail"],
-      "deck": "Bank of America、NatWest、ING、Capital One、Commonwealth Bank of Australia 与 ASB Bank 联合提出可信 Agent Commerce 原则。真正新增的不是银行提醒诈骗风险，而是金融机构开始把 Agent 交易拆成身份、授权、意图、决策透明度、责任归属与可审计记录的问题：支付成功只是终点，证明 Agent 为什么有权这样买、出了错由谁负责，正在成为新的基础设施层。",
-      "body_format": "article_text"
-    },
-    {
-      "id": "2026-09-22-A7",
-      "date": "2026-09-22",
-      "grade": "A",
-      "title": "Physical AI 的竞争正在出现“ROS 之上的运行层”：Intrinsic 把工业机器人基础设施开源，争夺的可能不是机器人本体",
-      "themes": ["Physical AI", "Robotics", "Open Source", "Agent Runtime", "Industrial AI"],
-      "deck": "Alphabet 旗下 Intrinsic 将工业机器人平台的核心能力以 Apache 2.0 开源，包括硬件无关的实时控制、数字孪生以及 ROS 兼容服务。值得注意的不是又一个机器人 SDK，而是 Physical AI 可能正在形成类似数字 Agent 的分层：模型负责智能，开放运行层负责把智能可靠地接入异构机器与真实生产环境。",
-      "body_format": "article_text"
-    },
-    {
-      "id": "2026-09-22-A8",
-      "date": "2026-09-22",
-      "grade": "A",
-      "title": "Agent 竞争开始从‘谁更聪明’转向‘谁能用更少步骤完成真实工作’：能力成本曲线正在成为新的模型控制点",
-      "themes": ["Frontier Models", "Agent Economics", "Agentic Coding", "Inference Cost", "AI Infrastructure"],
-      "deck": "Anthropic 的 Claude Opus 5.5 不只是又一次榜单领先：它在多项 Agent 工作中同时减少 token、工具调用、执行步骤和时间，并把典型工作负载成本降低约 40%。当模型开始用更少推理与更少动作完成同一任务，Agent 的商业瓶颈会从‘模型能不能做’进一步转向‘一次可靠完成任务究竟需要多少计算、多少调用和多少监督’。",
-      "body_format": "article_text"
-    },
-    {
-      "id": "2026-09-23-A1",
-      "date": "2026-09-23",
-      "grade": "A",
-      "title": "Physical AI 的价值链开始从‘机器人本体’向感知基础设施收敛：Cognex 用 5 亿美元买下 RealSense",
-      "themes": ["Physical AI", "Robotic Perception", "Machine Vision", "Industrial AI", "Consolidation"],
-      "deck": "Cognex 以约 5 亿美元现金收购 RealSense，把传统工业机器视觉从检测、识别和测量扩展到 3D 深度感知与机器人导航。值得记录的不是又一笔机器人并购，而是成熟工业自动化公司开始把‘机器如何可靠地感知真实世界’当成 Physical AI 的独立基础设施层。",
-      "body_format": "article_text"
-    },
-    {
-      "id": "2026-09-23-A2",
-      "date": "2026-09-23",
-      "grade": "A",
-      "title": "Enterprise Agent 开始同时吃 SaaS 与 IT Services 的预算：真正的新竞争单位可能不是软件席位，而是‘完成一项业务结果’",
-      "themes": ["Enterprise AI", "Agents", "SaaS", "IT Services", "Outcome-based Pricing", "AI-native Company"],
-      "deck": "Ema 披露其多 Agent 系统已进入 50 多个企业项目、覆盖超过 100 万企业用户，并以任务和业务结果而非 seat/token 收费；公司同时声称部分客户正在减少大型 SaaS 依赖，实施与集成工作也被 Agent 吸收。值得注意的不是 7700 万美元融资，而是企业 AI 的价值捕获边界正在同时向软件许可和人力服务两侧扩张。",
-      "body_format": "article_text"
-    }
+    {"id":"2026-09-22-A5","date":"2026-09-22","grade":"A","title":"模型能力越强，训练数据反而越像高附加值制造业：Snorkel 的增长显示‘专家知识 → 可验证环境’正在成为独立生产层","themes":["Training Data","Evaluation","Reinforcement Learning","Vertical AI","AI Infrastructure"],"deck":"Snorkel AI 的年化收入据报道从约 2000 万美元跃升至超过 3.5 亿美元，增长核心不是传统标注软件，而是直接交付专家数据、强化学习环境和可验证评测。前沿模型的数据瓶颈正在从‘有没有更多文本’转向‘能否把稀缺专家判断加工成可训练、可验证、可追溯的机器资产’。","body_format":"article_text"},
+    {"id":"2026-09-22-A6","date":"2026-09-22","grade":"A","title":"Agent Commerce 的下一层控制点开始从‘能不能交易’转向‘谁为 Agent 的决定负责’：六家银行把 Intent、Liability 与 Audit Trail 推到台前","themes":["Agent Commerce","Trust Infrastructure","Agent Identity","Liability","Audit Trail"],"deck":"Bank of America、NatWest、ING、Capital One、Commonwealth Bank of Australia 与 ASB Bank 联合提出可信 Agent Commerce 原则。真正新增的不是银行提醒诈骗风险，而是金融机构开始把 Agent 交易拆成身份、授权、意图、决策透明度、责任归属与可审计记录的问题：支付成功只是终点，证明 Agent 为什么有权这样买、出了错由谁负责，正在成为新的基础设施层。","body_format":"article_text"},
+    {"id":"2026-09-22-A7","date":"2026-09-22","grade":"A","title":"Physical AI 的竞争正在出现“ROS 之上的运行层”：Intrinsic 把工业机器人基础设施开源，争夺的可能不是机器人本体","themes":["Physical AI","Robotics","Open Source","Agent Runtime","Industrial AI"],"deck":"Alphabet 旗下 Intrinsic 将工业机器人平台的核心能力以 Apache 2.0 开源，包括硬件无关的实时控制、数字孪生以及 ROS 兼容服务。值得注意的不是又一个机器人 SDK，而是 Physical AI 可能正在形成类似数字 Agent 的分层：模型负责智能，开放运行层负责把智能可靠地接入异构机器与真实生产环境。","body_format":"article_text"},
+    {"id":"2026-09-22-A8","date":"2026-09-22","grade":"A","title":"Agent 竞争开始从‘谁更聪明’转向‘谁能用更少步骤完成真实工作’：能力成本曲线正在成为新的模型控制点","themes":["Frontier Models","Agent Economics","Agentic Coding","Inference Cost","AI Infrastructure"],"deck":"Anthropic 的 Claude Opus 5.5 不只是又一次榜单领先：它在多项 Agent 工作中同时减少 token、工具调用、执行步骤和时间，并把典型工作负载成本降低约 40%。当模型开始用更少推理与更少动作完成同一任务，Agent 的商业瓶颈会从‘模型能不能做’进一步转向‘一次可靠完成任务究竟需要多少计算、多少调用和多少监督’。","body_format":"article_text"},
+    {"id":"2026-09-23-A1","date":"2026-09-23","grade":"A","title":"Physical AI 的价值链开始从‘机器人本体’向感知基础设施收敛：Cognex 用 5 亿美元买下 RealSense","themes":["Physical AI","Robotic Perception","Machine Vision","Industrial AI","Consolidation"],"deck":"Cognex 以约 5 亿美元现金收购 RealSense，把传统工业机器视觉从检测、识别和测量扩展到 3D 深度感知与机器人导航。值得记录的不是又一笔机器人并购，而是成熟工业自动化公司开始把‘机器如何可靠地感知真实世界’当成 Physical AI 的独立基础设施层。","body_format":"article_text"},
+    {"id":"2026-09-23-A2","date":"2026-09-23","grade":"A","title":"Enterprise Agent 开始同时吃 SaaS 与 IT Services 的预算：真正的新竞争单位可能不是软件席位，而是‘完成一项业务结果’","themes":["Enterprise AI","Agents","SaaS","IT Services","Outcome-based Pricing","AI-native Company"],"deck":"Ema 披露其多 Agent 系统已进入 50 多个企业项目、覆盖超过 100 万企业用户，并以任务和业务结果而非 seat/token 收费；公司同时声称部分客户正在减少大型 SaaS 依赖，实施与集成工作也被 Agent 吸收。值得注意的不是 7700 万美元融资，而是企业 AI 的价值捕获边界正在同时向软件许可和人力服务两侧扩张。","body_format":"article_text"},
+    {"id":"2026-09-23-A3","date":"2026-09-23","grade":"A","title":"Agent Identity 正在从单次验证变成共享注册表：真正的控制点可能是‘谁有资格被整个网络信任’","themes":["Agent Identity","Agent Commerce","Trust Infrastructure","Network Effects","Merchant Acceptance"],"deck":"Baselayer 把传统 KYB 身份基础设施扩展到 AI Agent，并推出跨商家、支付机构和 Agent 平台共享的 Trusted Registry。真正值得记录的不是又一家身份创业公司融资，而是 Agent 身份正在从每次交易各自验证，向可携带、可复用、持续监控的网络级信任对象演化。","body_format":"article_text"}
   ]
 }
