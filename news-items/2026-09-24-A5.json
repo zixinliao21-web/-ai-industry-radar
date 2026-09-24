@@ -1,0 +1,26 @@
+{
+  "id": "2026-09-24-A5",
+  "date": "2026-09-24",
+  "grade": "A",
+  "title": "企业 Agent 的竞争正在从“谁有更多 Agent”转向“谁拥有业务运行的操作系统”：SAP 把 Process、Architecture、Company Memory 与 Agent Governance 连成了一条闭环",
+  "themes": [
+    "Enterprise AI",
+    "Agent Control Plane",
+    "Enterprise Context",
+    "Workflow",
+    "Semantic Authority",
+    "SAP"
+  ],
+  "deck": "SAP 正把流程智能、企业架构、Company Memory、Agent Hub 与运行监控连接成一套 Agent Operations 体系。真正值得注意的不是新增了几个 Agent，而是 Enterprise Context、Process、Policy、Ownership 与 Trace 正开始汇合为企业 Agent 的可执行运营底座。",
+  "article_text": "企业 Agent 的竞争正在从“谁有更多 Agent”转向“谁拥有业务运行的操作系统”：SAP 把 Process、Architecture、Company Memory 与 Agent Governance 连成了一条闭环。\n\nSAP 在本周的 Transformation Excellence Summit 上更新了 Business Transformation Management（BTM）组合。单看每一项功能并不新鲜：Signavio 做流程分析，LeanIX 做企业架构，WalkMe 做数字采用，Cloud ALM 做生命周期管理，SAP 也早已有 Agent Hub。但这次真正值得记录的不是某个新 Agent，而是 SAP 开始明确把这些原本分散的企业软件资产组织成一套“Agent Operations”体系：流程层定义工作应该怎样运行，架构层约束 Agent 在哪些系统和能力边界内活动，Company Memory 给人和 Agent 提供统一的规则、标准和流程知识，Agent Hub 盘点 Agent、LLM 与 MCP Server 并映射到负责人和业务能力，Cloud ALM 则持续监控 Agent 的实际行动和业务结果。\n\nFACT：SAP 官方披露，AI Agent Hub 已被约 150 家企业使用，管理超过 10 万个 Agent；它把 Agent、LLM 和 MCP Server 当作可治理资产。最新发布进一步把这种治理与 Signavio 的流程智能、LeanIX 的架构知识、WalkMe 的执行入口以及 Cloud ALM 的运行监控连接起来。SAP Company Memory 还被定义为组织规则、标准、流程 know-how 的一致来源，供员工和 Agent 共同使用。更关键的是，SAP 不只是记录 Agent 是否存在，而是开始追踪它支持什么业务能力、访问什么应用、由谁负责、是否符合 EU AI Act/NIST 等规则，以及上线后每个 Agent 实际做了什么。\n\n为什么这值得我们注意？因为它把我们此前分开观察的几条线第一次在一个大型企业软件栈里清晰地汇合起来：Enterprise Context、Semantic Authority、Agent Control Plane、Workflow/Process、Trace 和 System of Record 并不是五个独立市场，它们可能最终组成企业 Agent 的“运营底座”。Agent 要真正执行工作，光有模型推理能力不够；它必须知道公司怎样做事、哪些规则有效、哪些系统可以访问、谁拥有责任，以及执行后如何判断结果是否正确。过去这些信息分别存在流程图、架构文档、ERP 配置、政策文件和员工经验里。SAP 的方向是把它们转成 Agent 可以持续读取、执行和被审计的运行上下文。\n\nINFERENCE：这强化了我们关于 Semantic Authority 应独立于单个 Agent Runtime 的判断，但又补了一层。语义权威只是告诉 Agent“企业里的对象和规则是什么”；真实生产还需要 Procedural Authority——企业认可的流程到底怎样运行、什么时候可以行动、发生异常时谁接管。换句话说，未来真正难复制的企业资产可能不是一个巨大的 Ontology，而是“Business Semantics + Process Model + Policy + Ownership + Runtime Evidence”的组合。它既描述企业是什么，也描述企业实际上怎样运转。\n\n这对 VELNAR 当前项目尤其有价值，因为我们的 Sales MVP 已经在非常小的尺度上碰到了同一问题。Customer、Product/SKU、Supplier、Inventory、Price、Quote、Order 是业务对象；Grounding 决定引用是否落到真实实体；Readiness 和 Policy 决定什么时候可以继续；Workflow/State 决定任务如何推进；Tool 执行动作；Trace 留下证据。SAP 的路线并不意味着我们应该把这些东西重新命名成 Company Memory、Ontology 或 Agent Control Plane，更不意味着现在引入 SAP 式的大平台。相反，它提供了一个外部验证：我们目前把“业务事实、流程、规则、执行、审计”分层，而不是让 LLM 直接生成完整业务状态，这个方向与大型企业软件厂商正在形成的生产级 Agent 架构具有结构上的一致性。\n\n但最容易误读的地方也在这里。第一，不要因为 SAP 把所有层连接起来，就得出“未来一定由一个巨型平台包办所有企业 Agent”的结论。企业仍可能采用多个模型、多个 Agent Runtime 和多个业务系统，Semantic Authority 与控制层反而可能成为跨平台资产。第二，Company Memory 不是普通 RAG 知识库的换名。SAP 描述的是经过治理的规则、标准、架构决策和流程知识，并且这些知识直接影响 Agent 的设计与运行行为；如果只是把文档切块后让模型检索，远远没有达到这个含义。第三，Agent Hub 管理十万级 Agent 并不证明这些 Agent 都在自主完成高价值业务流程，它只能证明治理对象已经开始规模化出现。\n\n对 VELNAR 的行动判断是“继续当前路线，同时开始有意识地观察可复用资产”，而不是扩大 MVP Scope。我们真正应该从第一个企业项目里沉淀的，不只是代码和 Prompt，而是下一家客户仍然可能复用的 Product Schema、业务对象关系、Workflow Pattern、Policy Pattern、Grounding 机制、Trace 结构、Evaluation，以及把客户隐性经验转换成机器可执行规则的方法。这样，“下一次部署更快”和“下一次部署更好”才会逐渐从口号变成可积累的组织能力。\n\nPREDICTION：如果这条路线成立，企业 Agent 市场长期的关键控制点之一可能不是 Agent 数量，也不是某个模型，而是谁能够持续维护企业的“Operational Context”——一套把语义、流程、权限、责任和真实运行证据连接起来的机器可执行业务模型。大型平台会从现有 ERP、流程挖掘和架构管理资产向这个位置扩张；Vertical AI 公司则可能从真实行业 Workflow 反向积累同样的能力。两者最终竞争的，不只是 Agent，而是谁更懂企业怎样真正运转。\n\n接下来最值得讨论的问题有两个。第一，我们现在所说的 Domain Context 是否应该进一步区分“描述业务世界的 Semantic Context”和“描述业务怎样运行的 Operational/Procedural Context”，还是这个区分现在仍然过早？第二，如果未来 VELNAR 服务第二、第三家同类企业，哪些 Workflow/Policy/Trace 结构应该成为跨客户共享的行业资产，哪些必须永远留在客户自己的 Company Memory 里？",
+  "sources": [
+    {
+      "label": "SAP News Center",
+      "url": "https://news.sap.com/2026/09/autonomous-enterprise-business-transformation-management-solutions-sap-ai-agents-work-at-scale/"
+    },
+    {
+      "label": "SAP News Center background",
+      "url": "https://news.sap.com/2026/05/business-transformation-management-foundation-autonomous-enterprise/"
+    }
+  ]
+}
