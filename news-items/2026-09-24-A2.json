@@ -1,0 +1,25 @@
+{
+  "id": "2026-09-24-A2",
+  "date": "2026-09-24",
+  "grade": "A",
+  "title": "Physical AI 的价值链正在向‘感知 + 工业渠道’收敛：Cognex 收购 RealSense 暴露了机器人商业化的另一条路径",
+  "themes": ["Physical AI", "Robotic Perception", "Industrial Distribution", "Machine Vision", "Consolidation"],
+  "deck": "Cognex 以约 5 亿美元现金收购 RealSense，把工业机器视觉、3D 深度感知、机器人导航和既有制造业客户渠道合并到同一平台。真正值得注意的不是又一笔机器人并购，而是 Physical AI 的竞争可能不只发生在机器人本体和基础模型，也发生在把感知能力嵌入真实工厂的工业分发层。",
+  "article_text": "Physical AI 的价值链正在向‘感知 + 工业渠道’收敛：Cognex 收购 RealSense 暴露了机器人商业化的另一条路径\n\nCognex 宣布以约 5 亿美元现金收购 RealSense，交易预计在 2026 年第四季度完成。RealSense 原本由 Intel 孵化、2025 年独立，核心资产是 3D 深度摄像头与机器人感知技术；Cognex 则是拥有四十多年历史的工业机器视觉公司，覆盖汽车、消费电子、包装、物流等场景，并称其全球拥有超过 3 万家客户。公司预计 RealSense 2026 年收入约 8000 万至 9000 万美元，同比增长超过 50%。SEC 文件也确认了 5 亿美元现金收购及配套员工留任安排。\n\n【FACT】这笔交易把两类过去相邻但并不完全相同的能力放进了一家公司：Cognex 擅长工业 ID、2D/3D 机器视觉、测量和质量检测，RealSense 更靠近移动机器人、机械臂、四足与人形机器人的深度感知和导航。Cognex 明确把组合后的目标描述为覆盖从工业视觉到 3D depth perception 与 robotic navigation 的 full-stack visual intelligence platform。\n\n真正值得注意的不是‘Physical AI 又热了’，而是价值链的控制点可能开始向机器人本体之外扩散。机器人要进入真实工厂，不只需要更强的 VLA、World Model 或运动控制模型，还必须持续、低延迟、可验证地知道自己周围发生了什么。感知层因此不是一个普通外设：它决定机器人能看到什么、以什么精度看到、如何把现实世界转成模型可执行的状态。更重要的是，Cognex 已经拥有成熟工业客户、集成经验和全球销售渠道。RealSense 自己也承认，加入 Cognex 后获得的是其独立发展需要多年才能建立的工业客户触达能力。\n\n【INFERENCE】这强化了我们此前对 Physical AI 的一个判断：真正的壁垒未必集中在‘谁造出最像人的机器人’。当基础模型能力逐渐扩散后，传感器、工业数据、现场集成、可靠性验证、既有客户渠道和部署能力可能共同形成更厚的商业壁垒。Cognex × RealSense 的组合尤其说明，传统工业技术公司并不一定会被 Physical AI 原生创业公司绕开；它们反而可能通过收购关键 AI-native 感知资产，把几十年积累的工业分发网络重新变成新一代机器智能的入口。\n\n但不要把这笔交易直接理解为‘机器人感知层已经形成赢家’。Cognex 给出的机器人感知市场规模与增长率属于公司自己的前瞻估计；RealSense 的高速增长也仍来自较小收入基数。机器人最终采用多大比例的通用视觉硬件、专用传感器，或者把更多感知能力整合进端到端模型，目前都没有定论。模型能力提升还可能压缩部分传统视觉算法的独立价值。\n\n【PREDICTION】如果类似交易继续出现，Physical AI 产业可能逐渐形成几类独立控制层：机器人本体与执行器、感知与边缘推理、基础/世界模型、仿真与数据、以及面向工厂的集成与分发。最后拥有最大价值的公司未必横跨全部层，而可能是在某一层拥有技术优势，同时掌握进入真实生产环境的渠道。\n\n对 VELNAR 当前阶段是‘继续观察’，不是‘现在进入机器人’。它与当前 Sales MVP 没有工程上的直接关系，不应触发任何 Scope 扩张。但战略上值得保留一个更一般的判断：在 AI 时代，Domain Distribution 本身可能重新升值。拥有模型并不等于拥有行业；谁能进入真实客户现场、连接既有设备与数据、通过可靠性验证并持续部署，谁才可能把通用智能变成行业价值。\n\n接下来最值得讨论两个问题：第一，Physical AI 如果逐渐模块化，长期利润最高的控制层究竟会落在模型、感知、机器人本体，还是工业渠道与集成？第二，把这个逻辑映射回 VELNAR，未来 Vertical AI 的壁垒是否也不只是 Domain Context，而是 Domain Context + Workflow + 客户分发与持续部署能力的组合？",
+  "sources": [
+    {
+      "label": "Cognex Investor Relations — Cognex to Acquire RealSense",
+      "url": "https://investor.cognex.com/news/news-details/2026/Cognex-to-Acquire-RealSense-Expanding-Machine-Vision-Leadership-into-High-Growth-Robotic-Perception-Market/default.aspx"
+    },
+    {
+      "label": "SEC Form 8-K — Cognex / RealSense acquisition",
+      "url": "https://www.sec.gov/Archives/edgar/data/851205/000085120526000071/cgnx-20260922.htm"
+    },
+    {
+      "label": "RealSense — Cognex to Acquire RealSense",
+      "url": "https://www.realsenseai.com/news-insights/cognex-to-acquire-realsense-expanding-machine-vision-leadership-into-high-growth-robotic-perception-market/"
+    }
+  ],
+  "action": "继续观察",
+  "body_format": "article_text"
+}
