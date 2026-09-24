@@ -7,7 +7,13 @@
       "date": "2026-09-24",
       "grade": "A",
       "title": "Personal Context 正在从云端 Agent 的附属记忆变成设备级基础设施：谁掌握持续上下文，谁可能控制下一代个人 AI 入口",
-      "themes": ["Personal Context", "Personal Agent", "On-device AI", "Edge AI", "Control Points"],
+      "themes": [
+        "Personal Context",
+        "Personal Agent",
+        "On-device AI",
+        "Edge AI",
+        "Control Points"
+      ],
       "deck": "Liquid AI 把持续 Personal Context 直接部署到 Snapdragon NPU，并设计成可被本地、云端和第三方 Agent 共同消费的共享上下文层。真正值得注意的不是又一个端侧小模型，而是 Personal Context 正在与具体 Agent 解耦，开始成为设备厂商可以独立拥有和治理的基础设施层。",
       "body_format": "article_text"
     },
@@ -16,8 +22,30 @@
       "date": "2026-09-24",
       "grade": "A",
       "title": "Agent Control Plane 正在与企业安全栈汇合：真正需要治理的不是 Agent 本身，而是‘身份 × 数据 × 行动’",
-      "themes": ["Agent Control Plane", "Non-human Identity", "Data Security", "Enterprise AI", "AI Security"],
+      "themes": [
+        "Agent Control Plane",
+        "Non-human Identity",
+        "Data Security",
+        "Enterprise AI",
+        "AI Security"
+      ],
       "deck": "Cyera 在收购非人类身份安全公司 Oasis 后，又获得 Goldman Sachs 4 亿美元投资，把数据安全、机器身份与 Agent 行动治理放进同一平台。值得记录的不是融资规模，而是企业 Agent 的控制边界正在从单独的模型 guardrail 扩展成‘这个 Agent 是谁、能看到什么、能调用什么、实际做了什么’的联合治理层。",
+      "body_format": "article_text"
+    },
+    {
+      "id": "2026-09-24-A5",
+      "date": "2026-09-24",
+      "grade": "A",
+      "title": "企业 Agent 的竞争正在从“谁有更多 Agent”转向“谁拥有业务运行的操作系统”：SAP 把 Process、Architecture、Company Memory 与 Agent Governance 连成了一条闭环",
+      "themes": [
+        "Enterprise AI",
+        "Agent Control Plane",
+        "Enterprise Context",
+        "Workflow",
+        "Semantic Authority",
+        "SAP"
+      ],
+      "deck": "SAP 正把流程智能、企业架构、Company Memory、Agent Hub 与运行监控连接成一套 Agent Operations 体系。真正值得注意的不是新增了几个 Agent，而是 Enterprise Context、Process、Policy、Ownership 与 Trace 正开始汇合为企业 Agent 的可执行运营底座。",
       "body_format": "article_text"
     }
   ]
