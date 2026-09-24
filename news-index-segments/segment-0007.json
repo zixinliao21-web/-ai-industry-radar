@@ -2,50 +2,11 @@
   "schema_version": "3.0",
   "segment": "0007",
   "items": [
-    {
-      "id": "2026-09-23-A5",
-      "date": "2026-09-23",
-      "grade": "A",
-      "title": "前沿 AI 的竞争单位正在从‘模型公司’扩大成‘芯片—集群—模型—Agent’一体化工业体系：Alibaba 把目标推到 20GW",
-      "themes": ["AI Infrastructure", "Vertical Integration", "Frontier Models", "Semiconductors", "Platform Concentration"],
-      "deck": "Alibaba 在同一次 Apsara Conference 上同时公布自研 Zhenwu V900、最高 50 万卡集群、下一代 Qwen 4 以及到 2032 年超过 20GW 的全球数据中心容量目标。真正值得记录的不是单个芯片或参数规模，而是前沿 AI 的竞争边界正在向全栈资本密集型工业体系扩张。",
-      "body_format": "article_text"
-    },
-    {
-      "id": "2026-09-23-A6",
-      "date": "2026-09-23",
-      "grade": "A",
-      "title": "Agent Harness 正在从‘让模型多想几步’转向‘推理前先约束执行’：Teradata 把确定性 Workflow 写进 Agent Runtime",
-      "themes": ["Agent Runtime", "Deterministic Workflow", "Enterprise Context", "Agent Control Plane", "Enterprise AI"],
-      "deck": "Teradata 新发布的 Tera Harness 不只是又一个企业 Agent：它在模型推理前加载业务上下文、应用 guardrails，并用 84 种预定义执行模式先形成计划，再让模型进入受约束的执行循环。这个设计强化了一条关键判断：模型越强，企业 Agent 的可靠性层未必消失，反而可能从外部补丁演化成 Runtime 内部的一等架构。",
-      "body_format": "article_text"
-    },
-    {
-      "id": "2026-09-23-A7",
-      "date": "2026-09-23",
-      "grade": "A",
-      "title": "企业 Agent 正在同时侵蚀 SaaS 席位费与实施服务费：Ema 暴露的真正控制点是‘执行层’",
-      "themes": ["Enterprise AI", "Agent Execution", "SaaS", "IT Services", "Outcome Pricing", "FDE Productization"],
-      "deck": "Ema 披露的信号不只是 7700 万美元融资，而是一组更值得观察的生产数据：客户从单一用例扩展到几十个 Workflow、约 180% NDR、接近 80% 毛利，并按任务/业务结果而非席位或 Token 收费。如果这些公司口径能持续成立，Agent 公司争夺的可能不只是 SaaS 的界面，而是软件与 IT 服务之间原本由人工实施承接的企业执行层。",
-      "body_format": "article_text"
-    },
-    {
-      "id": "2026-09-23-A8",
-      "date": "2026-09-23",
-      "grade": "A",
-      "title": "Agent Commerce 的下一层控制点正在浮出水面：银行开始要求把‘谁授权、谁负责、如何追责’写进交易基础设施",
-      "themes": ["Agent Commerce", "Financial Trust Layer", "Agent Identity", "Consumer Protection", "Liability"],
-      "deck": "六家全球银行开始共同提出 Agent Commerce 原则，关注的不只是支付安全，而是 Agent 替用户选择、授权和交易后，欺诈、隐私、偏向与责任归属如何处理。结合 Mastercard 的 Verifiable Intent 与 Visa 的 Agentic Ready，Agent Commerce 的竞争正在从‘Agent 能不能买’进一步进入‘这笔机器交易能否被证明、审计和追责’。",
-      "body_format": "article_text"
-    },
-    {
-      "id": "2026-09-23-A9",
-      "date": "2026-09-23",
-      "grade": "A",
-      "title": "Physical AI 的算力边界正在从‘机器人机身’扩展成‘机器人—边缘—云’：推理基础设施可能成为独立控制层",
-      "themes": ["Physical AI", "Inference Infrastructure", "Edge AI", "Robotics", "Distributed Systems"],
-      "deck": "Microsoft Research 的系统测量显示，把大模型全部塞进机器人机身并不天然更优：本地 GPU 会同时受到显存、功耗、续航和性能约束，而边缘/云端卸载又受到网络时延与带宽约束。更重要的是，Microsoft 已把自动容器化、Kubernetes 调度以及 ROS2/LeRobot 集成做进 Physical AI Toolchain。Physical AI 的基础设施正在从‘给每台机器人装更强 GPU’转向跨机器人、边缘和云动态放置推理任务。",
-      "body_format": "article_text"
-    }
+    {"id":"2026-09-23-A5","date":"2026-09-23","grade":"A","title":"前沿 AI 的竞争单位正在从‘模型公司’扩大成‘芯片—集群—模型—Agent’一体化工业体系：Alibaba 把目标推到 20GW","themes":["AI Infrastructure","Vertical Integration","Frontier Models","Semiconductors","Platform Concentration"],"deck":"Alibaba 在同一次 Apsara Conference 上同时公布自研 Zhenwu V900、最高 50 万卡集群、下一代 Qwen 4 以及到 2032 年超过 20GW 的全球数据中心容量目标。真正值得记录的不是单个芯片或参数规模，而是前沿 AI 的竞争边界正在向全栈资本密集型工业体系扩张。","body_format":"article_text"},
+    {"id":"2026-09-23-A6","date":"2026-09-23","grade":"A","title":"Agent Harness 正在从‘让模型多想几步’转向‘推理前先约束执行’：Teradata 把确定性 Workflow 写进 Agent Runtime","themes":["Agent Runtime","Deterministic Workflow","Enterprise Context","Agent Control Plane","Enterprise AI"],"deck":"Teradata 新发布的 Tera Harness 不只是又一个企业 Agent：它在模型推理前加载业务上下文、应用 guardrails，并用 84 种预定义执行模式先形成计划，再让模型进入受约束的执行循环。这个设计强化了一条关键判断：模型越强，企业 Agent 的可靠性层未必消失，反而可能从外部补丁演化成 Runtime 内部的一等架构。","body_format":"article_text"},
+    {"id":"2026-09-23-A7","date":"2026-09-23","grade":"A","title":"企业 Agent 正在同时侵蚀 SaaS 席位费与实施服务费：Ema 暴露的真正控制点是‘执行层’","themes":["Enterprise AI","Agent Execution","SaaS","IT Services","Outcome Pricing","FDE Productization"],"deck":"Ema 披露的信号不只是 7700 万美元融资，而是一组更值得观察的生产数据：客户从单一用例扩展到几十个 Workflow、约 180% NDR、接近 80% 毛利，并按任务/业务结果而非席位或 Token 收费。如果这些公司口径能持续成立，Agent 公司争夺的可能不只是 SaaS 的界面，而是软件与 IT 服务之间原本由人工实施承接的企业执行层。","body_format":"article_text"},
+    {"id":"2026-09-23-A8","date":"2026-09-23","grade":"A","title":"Agent Commerce 的下一层控制点正在浮出水面：银行开始要求把‘谁授权、谁负责、如何追责’写进交易基础设施","themes":["Agent Commerce","Financial Trust Layer","Agent Identity","Consumer Protection","Liability"],"deck":"六家全球银行开始共同提出 Agent Commerce 原则，关注的不只是支付安全，而是 Agent 替用户选择、授权和交易后，欺诈、隐私、偏向与责任归属如何处理。结合 Mastercard 的 Verifiable Intent 与 Visa 的 Agentic Ready，Agent Commerce 的竞争正在从‘Agent 能不能买’进一步进入‘这笔机器交易能否被证明、审计和追责’。","body_format":"article_text"},
+    {"id":"2026-09-23-A9","date":"2026-09-23","grade":"A","title":"Physical AI 的算力边界正在从‘机器人机身’扩展成‘机器人—边缘—云’：推理基础设施可能成为独立控制层","themes":["Physical AI","Inference Infrastructure","Edge AI","Robotics","Distributed Systems"],"deck":"Microsoft Research 的系统测量显示，把大模型全部塞进机器人机身并不天然更优：本地 GPU 会同时受到显存、功耗、续航和性能约束，而边缘/云端卸载又受到网络时延与带宽约束。更重要的是，Microsoft 已把自动容器化、Kubernetes 调度以及 ROS2/LeRobot 集成做进 Physical AI Toolchain。Physical AI 的基础设施正在从‘给每台机器人装更强 GPU’转向跨机器人、边缘和云动态放置推理任务。","body_format":"article_text"},
+    {"id":"2026-09-23-A10","date":"2026-09-23","grade":"A","title":"AI 数据正在从‘标注外包’变成‘可编程生产系统’：Snorkel 的 18 倍增长暴露了后训练时代的新基础设施层","themes":["AI Data","Post-training","Evaluation","Vertical AI","AI Infrastructure"],"deck":"Snorkel AI 的 Data-as-a-Service 在约一年内增长超过 18 倍、年化收入达到 3.75 亿美元。真正值得注意的不是融资，而是客户购买的对象正在从标注软件和人力工时，变成由专家、模型、合成数据、强化学习环境和评测共同生产的成品数据资产。","body_format":"article_text"}
   ]
 }
