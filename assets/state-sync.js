@@ -14,7 +14,7 @@
     path.endsWith('/deep-read.html')||path.endsWith('/deep-read-article.html')?'deep':
     (path.endsWith('/')||path.endsWith('/index.html')||path.endsWith('/article.html'))?'industry':null;
   const isArticle=/\/(?:article|consumer-article|deep-read-article)\.html$/.test(path);
-  let syncTimer=null,syncing=false,articleKey='',restoreDone=false,scrollTimer=null,localState=null,resumePrompt=null,syncHealthy=false;
+  let syncTimer=null,syncing=false,articleKey='',restoreDone=false,scrollTimer=null,localState=null,resumePrompt=null;
 
   function now(){return new Date().toISOString()}
   function time(v){const n=Date.parse(String(v||''));return Number.isFinite(n)?n:0}
@@ -163,18 +163,7 @@
     return{provider:'upstash',url:String(x.u).replace(/\/+$/,''),token:String(x.t),key:String(x.k)};
   }
   async function copyText(v){try{await navigator.clipboard.writeText(v);return true}catch{return false}}
-  function setStatus(kind,text){
-    if(kind==='ok')syncHealthy=true;
-    if(kind==='off'||kind==='error')syncHealthy=false;
-    const visual=kind==='syncing'&&syncHealthy?'ok':kind;
-    const dot=document.querySelector('.vss-dot'),label=document.getElementById('vssStatus'),brand=document.querySelector('.brandname');
-    if(dot)dot.dataset.state=kind;if(label)label.textContent=text||'';
-    if(brand){
-      brand.dataset.syncState=visual;
-      const labelText=visual==='ok'?'VELNAR · 已同步':visual==='syncing'?'VELNAR · 同步中':visual==='error'?'VELNAR · 同步异常':visual==='idle'?'VELNAR · 已连接，等待同步':'VELNAR · 未启用同步';
-      brand.setAttribute('aria-label',labelText);brand.setAttribute('title',labelText);
-    }
-  }
+  function setStatus(kind,text){const dot=document.querySelector('.vss-dot'),label=document.getElementById('vssStatus');if(dot)dot.dataset.state=kind;if(label)label.textContent=text||''}
   function showInline(text){const el=document.getElementById('vssMessage');if(el)el.textContent=text||''}
   function updateUiStatus(){
     const c=getConfig(),url=document.getElementById('vssUrl'),token=document.getElementById('vssToken'),syncBtn=document.getElementById('vssSyncNow'),copyBtn=document.getElementById('vssCopyCode'),disconnect=document.getElementById('vssDisconnect');

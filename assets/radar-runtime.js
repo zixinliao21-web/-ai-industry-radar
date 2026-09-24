@@ -83,10 +83,6 @@
   function injectMobileHierarchyStyle(){
     if(document.getElementById('velnar-mobile-hierarchy-style'))return;
     const s=document.createElement('style');s.id='velnar-mobile-hierarchy-style';s.textContent=`
-      .brandname{transition:color 180ms ease,opacity 180ms ease}
-      .brandname[data-sync-state="off"],.brandname[data-sync-state="idle"],.brandname[data-sync-state="error"]{color:var(--muted)!important;opacity:.62}
-      .brandname[data-sync-state="syncing"]{color:var(--text)!important;opacity:.82}
-      .brandname[data-sync-state="ok"]{color:var(--text)!important;opacity:1}
       .velnar-more-button{display:none;width:38px;height:38px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--text);place-items:center;font:800 17px/1 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif;cursor:pointer}
       .velnar-more-menu{position:fixed;right:14px;top:calc(var(--velnar-header-height,64px) + 6px);z-index:1650;display:none;width:218px;padding:7px;border:1px solid var(--line);border-radius:14px;background:var(--card);box-shadow:0 18px 50px rgba(17,18,20,.16);color:var(--text)}
       .velnar-more-menu.open{display:block}.velnar-more-item{display:flex;width:100%;min-height:42px;box-sizing:border-box;align-items:center;justify-content:space-between;gap:12px;padding:9px 10px;border:0;border-radius:10px;background:transparent;color:var(--text);font:650 11px/1.25 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif;text-align:left;cursor:pointer}
@@ -107,7 +103,7 @@
         .shell>.stats .stat-label{margin-bottom:3px!important;line-height:1.1!important}
         .shell>.stats .stat-value{font-size:18px!important;line-height:1.05!important}
       }
-      @media(prefers-reduced-motion:reduce){.brandname,.velnar-more-menu{transition:none!important}}
+      @media(prefers-reduced-motion:reduce){.velnar-more-menu{transition:none!important}}
     `;document.head.appendChild(s);
   }
   function mountMobileUtilityMenu(){
