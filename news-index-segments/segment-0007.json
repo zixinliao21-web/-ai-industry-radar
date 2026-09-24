@@ -37,6 +37,15 @@
       "themes": ["Agent Commerce", "Financial Trust Layer", "Agent Identity", "Consumer Protection", "Liability"],
       "deck": "六家全球银行开始共同提出 Agent Commerce 原则，关注的不只是支付安全，而是 Agent 替用户选择、授权和交易后，欺诈、隐私、偏向与责任归属如何处理。结合 Mastercard 的 Verifiable Intent 与 Visa 的 Agentic Ready，Agent Commerce 的竞争正在从‘Agent 能不能买’进一步进入‘这笔机器交易能否被证明、审计和追责’。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-09-23-A9",
+      "date": "2026-09-23",
+      "grade": "A",
+      "title": "Physical AI 的算力边界正在从‘机器人机身’扩展成‘机器人—边缘—云’：推理基础设施可能成为独立控制层",
+      "themes": ["Physical AI", "Inference Infrastructure", "Edge AI", "Robotics", "Distributed Systems"],
+      "deck": "Microsoft Research 的系统测量显示，把大模型全部塞进机器人机身并不天然更优：本地 GPU 会同时受到显存、功耗、续航和性能约束，而边缘/云端卸载又受到网络时延与带宽约束。更重要的是，Microsoft 已把自动容器化、Kubernetes 调度以及 ROS2/LeRobot 集成做进 Physical AI Toolchain。Physical AI 的基础设施正在从‘给每台机器人装更强 GPU’转向跨机器人、边缘和云动态放置推理任务。",
+      "body_format": "article_text"
     }
   ]
 }
