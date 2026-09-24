@@ -80,6 +80,58 @@
     if('ResizeObserver'in window){const ro=new ResizeObserver(applyHeight);ro.observe(bar)}
     else window.addEventListener('resize',applyHeight,{passive:true});
   }
+  function injectMobileHierarchyStyle(){
+    if(document.getElementById('velnar-mobile-hierarchy-style'))return;
+    const s=document.createElement('style');s.id='velnar-mobile-hierarchy-style';s.textContent=`
+      .brandname{transition:color 180ms ease,opacity 180ms ease}
+      .brandname[data-sync-state="off"],.brandname[data-sync-state="idle"],.brandname[data-sync-state="error"]{color:var(--muted)!important;opacity:.62}
+      .brandname[data-sync-state="syncing"]{color:var(--text)!important;opacity:.82}
+      .brandname[data-sync-state="ok"]{color:var(--text)!important;opacity:1}
+      .velnar-more-button{display:none;width:38px;height:38px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--text);place-items:center;font:800 17px/1 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif;cursor:pointer}
+      .velnar-more-menu{position:fixed;right:14px;top:calc(var(--velnar-header-height,64px) + 6px);z-index:1650;display:none;width:218px;padding:7px;border:1px solid var(--line);border-radius:14px;background:var(--card);box-shadow:0 18px 50px rgba(17,18,20,.16);color:var(--text)}
+      .velnar-more-menu.open{display:block}.velnar-more-item{display:flex;width:100%;min-height:42px;box-sizing:border-box;align-items:center;justify-content:space-between;gap:12px;padding:9px 10px;border:0;border-radius:10px;background:transparent;color:var(--text);font:650 11px/1.25 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif;text-align:left;cursor:pointer}
+      .velnar-more-item small{font-size:9px;font-weight:550;color:var(--muted)}.velnar-more-item:hover,.velnar-more-item:focus-visible{background:var(--soft);outline:none}.velnar-more-rule{height:1px;background:var(--line);margin:5px 4px}.velnar-theme-options{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;padding:5px}.velnar-theme-option{min-height:34px;border:1px solid var(--line);border-radius:9px;background:transparent;color:var(--muted);font:650 9px/1 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",Arial,sans-serif}.velnar-theme-option.active{background:var(--soft);color:var(--text);border-color:var(--line-strong)}
+      @media(max-width:640px){
+        .brandbar{padding-top:8px!important;padding-bottom:8px!important}
+        .brandbar>.brand-actions{gap:0!important}
+        .brandbar .mobile-open,.brandbar .velnar-theme-select,.brandbar .vss-button{display:none!important}
+        .velnar-more-button{display:grid}
+        .brandlock{gap:7px!important}.brandmark{flex:0 0 auto}.brandname{flex:0 0 auto}
+        .shell>.hero{gap:14px!important;margin-bottom:24px!important}
+        .shell>.hero .eyebrow{margin-bottom:10px!important}
+        .shell>.hero p{margin-top:14px!important;line-height:1.62!important}
+        .shell>.hero .hero-note{padding-top:9px!important}
+        .shell>.hero .hero-note-copy{display:none!important}
+        .shell>.stats{gap:7px!important;margin-bottom:22px!important}
+        .shell>.stats .stat{padding:8px 9px!important;border-radius:12px!important}
+        .shell>.stats .stat-label{margin-bottom:3px!important;line-height:1.1!important}
+        .shell>.stats .stat-value{font-size:18px!important;line-height:1.05!important}
+      }
+      @media(prefers-reduced-motion:reduce){.brandname,.velnar-more-menu{transition:none!important}}
+    `;document.head.appendChild(s);
+  }
+  function mountMobileUtilityMenu(){
+    if(document.getElementById('velnarMoreButton'))return;
+    const bar=document.querySelector('.brandbar'),actions=bar&&bar.querySelector('.brand-actions');if(!bar||!actions)return;
+    injectMobileHierarchyStyle();
+    const btn=document.createElement('button');btn.type='button';btn.id='velnarMoreButton';btn.className='velnar-more-button';btn.textContent='···';btn.setAttribute('aria-label','更多设置');btn.setAttribute('aria-haspopup','menu');btn.setAttribute('aria-expanded','false');actions.appendChild(btn);
+    const menu=document.createElement('div');menu.id='velnarMoreMenu';menu.className='velnar-more-menu';menu.setAttribute('role','menu');
+    menu.innerHTML='<button class="velnar-more-item" type="button" data-action="share"><span>分享当前页面</span><small>Share</small></button><div class="velnar-more-rule"></div><div class="velnar-theme-options" aria-label="页面外观"><button class="velnar-theme-option" type="button" data-theme-mode="system">系统</button><button class="velnar-theme-option" type="button" data-theme-mode="light">浅色</button><button class="velnar-theme-option" type="button" data-theme-mode="dark">深色</button></div><div class="velnar-more-rule"></div><button class="velnar-more-item" type="button" data-action="sync"><span>同步设置</span><small>Sync</small></button>';
+    document.body.appendChild(menu);
+    const themeButtons=[...menu.querySelectorAll('[data-theme-mode]')];
+    function updateTheme(){const mode=readMode();themeButtons.forEach(x=>x.classList.toggle('active',x.dataset.themeMode===mode))}
+    function close(){menu.classList.remove('open');btn.setAttribute('aria-expanded','false')}
+    function open(){updateTheme();menu.classList.add('open');btn.setAttribute('aria-expanded','true')}
+    btn.addEventListener('click',e=>{e.stopPropagation();menu.classList.contains('open')?close():open()});
+    menu.addEventListener('click',e=>{
+      const theme=e.target.closest('[data-theme-mode]');if(theme){try{localStorage.setItem(KEY,theme.dataset.themeMode)}catch{}apply(theme.dataset.themeMode);updateTheme();return}
+      const action=e.target.closest('[data-action]')?.dataset.action;
+      if(action==='share'){document.getElementById('mobileOpenBtn')?.click();close()}
+      if(action==='sync'){const syncBtn=document.getElementById('vssButton');if(syncBtn)syncBtn.click();else window.dispatchEvent(new CustomEvent('velnar:open-sync'));close()}
+    });
+    document.addEventListener('click',e=>{if(!menu.contains(e.target)&&e.target!==btn)close()});
+    window.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+  }
   function ensureToast(){
     if(typeof window.showToast==='function')return;
     if(!document.getElementById('velnar-global-toast-style')){const s=document.createElement('style');s.id='velnar-global-toast-style';s.textContent='.velnar-global-toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));z-index:1600;transform:translate(-50%,10px);opacity:0;pointer-events:none;padding:9px 12px;border-radius:999px;background:#15161a;color:#fff;font-size:11px;box-shadow:0 6px 24px rgba(0,0,0,.14);transition:opacity 220ms ease,transform 220ms cubic-bezier(.23,1,.32,1)}.velnar-global-toast.visible{opacity:1;transform:translate(-50%,0)}@media(prefers-reduced-motion:reduce){.velnar-global-toast{transition:none!important}}';document.head.appendChild(s)}
@@ -98,7 +150,7 @@
     if(!matches||document.getElementById('velnar-collection-discussion-script')||document.querySelector('script[src="./assets/collection-discussion-bridge.js"]'))return;
     const s=document.createElement('script');s.id='velnar-collection-discussion-script';s.src='./assets/collection-discussion-bridge.js';s.async=false;document.body.appendChild(s);
   }
-  function boot(){mountPicker();mountCollectionNav();mountMobileCollectionPicker();syncStickyMetrics();ensureToast();adaptMobileAccess();loadCollectionBridge();apply(readMode())}
+  function boot(){mountPicker();mountCollectionNav();mountMobileCollectionPicker();mountMobileUtilityMenu();syncStickyMetrics();ensureToast();adaptMobileAccess();loadCollectionBridge();apply(readMode())}
   apply(readMode());
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});
   else boot();
