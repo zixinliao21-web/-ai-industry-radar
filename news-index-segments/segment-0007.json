@@ -28,6 +28,15 @@
       "themes": ["Enterprise AI", "Agent Execution", "SaaS", "IT Services", "Outcome Pricing", "FDE Productization"],
       "deck": "Ema 披露的信号不只是 7700 万美元融资，而是一组更值得观察的生产数据：客户从单一用例扩展到几十个 Workflow、约 180% NDR、接近 80% 毛利，并按任务/业务结果而非席位或 Token 收费。如果这些公司口径能持续成立，Agent 公司争夺的可能不只是 SaaS 的界面，而是软件与 IT 服务之间原本由人工实施承接的企业执行层。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-09-23-A8",
+      "date": "2026-09-23",
+      "grade": "A",
+      "title": "Agent Commerce 的下一层控制点正在浮出水面：银行开始要求把‘谁授权、谁负责、如何追责’写进交易基础设施",
+      "themes": ["Agent Commerce", "Financial Trust Layer", "Agent Identity", "Consumer Protection", "Liability"],
+      "deck": "六家全球银行开始共同提出 Agent Commerce 原则，关注的不只是支付安全，而是 Agent 替用户选择、授权和交易后，欺诈、隐私、偏向与责任归属如何处理。结合 Mastercard 的 Verifiable Intent 与 Visa 的 Agentic Ready，Agent Commerce 的竞争正在从‘Agent 能不能买’进一步进入‘这笔机器交易能否被证明、审计和追责’。",
+      "body_format": "article_text"
     }
   ]
 }
