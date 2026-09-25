@@ -1,0 +1,39 @@
+{
+  "id": "2026-09-24-A6",
+  "date": "2026-09-24",
+  "grade": "A",
+  "title": "企业 Agent 开始明确拆成 Context Engine 与 Execution Harness：模型之外的两层基础设施正在形成边界",
+  "themes": [
+    "Enterprise Context",
+    "Agent Runtime",
+    "Semantic Authority",
+    "Agent Control Plane",
+    "Enterprise AI"
+  ],
+  "deck": "Teradata 把新版 Tera 明确拆成 Context Engine 与 Harness：前者组织业务知识、语义、治理与权限，后者负责持久状态、工具编排、失败恢复和确定性执行。值得记录的不是又一个 Agent 产品，而是企业 Context 与 Agent Runtime 正被不同厂商反复划成两个可独立演化的系统层。",
+  "article_text": "企业 Agent 的架构正在出现一次值得注意的“拆层”：Context 与 Harness 开始被分别产品化，而不是继续把所有能力塞进一个大 Agent。\n\n9 月 22 日，Teradata 发布了新版 Tera，并明确拆成两个核心层：Tera Context Engine 与 Tera Harness。前者负责把分散在数据库、数据平台、目录、模型以及其他系统中的企业数据和业务知识组织成共享上下文，并连接治理、血缘、身份和访问策略；后者则负责 Agent 的实际执行，包括持久状态、工具与模型编排、并发执行、失败恢复和确定性 guardrails。Teradata 还强调这一体系可以跨 Snowflake、BigQuery 等异构环境工作，而不是要求企业先把数据全部搬到 Teradata。\n\n单独看，这当然是一家传统数据平台厂商把产品重新包装成 Agentic AI 的发布，营销成分必须打折。但值得记录的不是“Tera 是不是最好的 Agent”，而是它选择了怎样的架构边界。过去一年企业 AI 市场里，Context、Ontology、Agent Runtime、Workflow、Policy、Memory、Tool Calling 经常被混在一个“Agent Platform”概念里。现在越来越多产品开始把其中至少两层明确分离：一层负责回答“这个企业世界是什么”，另一层负责回答“Agent 如何在这个世界里可靠行动”。\n\nFACT：Teradata 官方资料明确把 Context Engine 定义为连接企业数据、业务知识、治理与策略的上下文层，把 Harness 定义为执行层；Harness 维持工作流状态、协调模型与工具，并提供 deterministic guardrails。Teradata 还声称，在其内部基准中，这种架构相较通用 coding agent 可以减少 token 消耗和执行成本。这里的性能数字属于厂商自测，不应直接当成行业事实，但架构本身是可验证的产品选择。\n\nINFERENCE：这进一步强化了我们最近形成的判断——Semantic Authority / Enterprise Context 与 Agent Runtime 很可能不会永久绑定在一起。9 月 21 日我们记录 Alation 时，看到的是 Ontology 被做成可被多个 Runtime 消费的企业语义资产；9 月 24 日观察 SAP 时，又看到 Process、Company Memory、Agent Governance 被组合成企业 Agent Operations。Teradata 提供了第三种证据：一家长期掌握企业数据和行业模型的厂商，正在把“Context Engine”与“Execution Harness”直接做成两个相邻但不同的产品层。三个信号来自不同类型厂商，却正在向相似的系统边界收敛。\n\n真正新增的不是“Agent 需要 Context”——这已经非常明确。新增的是 Context 层正在从被动检索材料升级为执行前的业务约束环境。它不只是给模型更多文档，而是决定实体关系、业务定义、数据来源、访问权限、血缘和可用工具；Harness 则在这个边界内完成规划与执行。如果这种分层继续成立，那么未来企业 Agent 的竞争单位可能不是单个 Agent，而是三块可以独立演化的资产：模型 intelligence、企业 Context / Semantic Authority，以及可靠的 execution harness / control plane。\n\n这也修正了一个容易出现的判断：模型能力越来越强，并不意味着 Workflow 和 Harness 必然整体消失。更强模型很可能吞掉大量手写 planning、router、固定步骤拆解，甚至能够动态创建子任务和选择工具；但只要 Agent 开始修改真实企业状态，持久执行状态、权限边界、失败恢复、幂等、审计和事务控制就不只是“模型不会推理”造成的补丁。它们属于行动系统本身的工程属性。Teradata 的设计至少说明，商业厂商也开始把这一点作为独立基础设施出售，而不是只依赖更长 prompt 或更强模型。\n\n但我们也不能反过来得出“VELNAR 应该立刻建设 Context Engine + Harness 平台”。这正是最危险的误读。Teradata 面向的是大型、多云、异构数据环境，它拥有几十年的数据平台和行业模型积累；VELNAR 当前只有一个需要先跑通的真实 Sales Workflow。现在把这些概念抽象成平台，会产生典型的 premature abstraction：在还不知道第二、第三个客户究竟重复什么之前，就提前设计一个通用企业操作系统。\n\n因此，对 VELNAR 当前阶段仍然是“继续观察，局部沉淀，不扩 Scope”。我们真正应该做的是继续把 Sales MVP 中已经被真实业务证明需要的东西保持边界清楚：Product / Customer / Price 等 Domain Context 是什么，Grounding 如何把语言映射到真实实体，State 如何保存事实，Policy / Readiness 如何决定是否允许行动，Tool 如何执行，Trace 如何证明发生了什么。等未来多个 Workflow、多个客户反复要求同一套 Context 或执行能力时，再判断哪些部分应该从具体业务代码中提升为共享层。\n\nPREDICTION：如果这一趋势持续，未来 Vertical AI 公司最有价值的资产可能并不是自己拥有多少 Agent，而是能否拥有一套可复用的 Domain Context，并让不同模型、不同 Agent Runtime 都能在其上可靠行动。模型供应商会继续提高 intelligence，Runtime 厂商会继续降低执行成本，但“这个行业里的对象是什么、关系是什么、哪些事实可信、什么动作在什么条件下允许发生”仍可能沉淀在垂直公司自身。对于 VELNAR，这比现在训练自己的垂直基础模型更接近应该长期积累的核心资产。\n\n接下来最值得讨论的两个问题是：第一，我们当前 Sales MVP 里的哪些结构已经属于未来 Context Layer 的雏形，哪些只是当前 Workflow 的局部实现，不能过早抽象？第二，如果未来模型真的吞掉越来越多 orchestration，我们应该用什么标准判断一段确定性逻辑应该继续保留在 Harness / Policy 层，还是交回模型动态决策？",
+  "sources": [
+    {
+      "label": "Teradata — Tera Agentic Coworker / Context Engine / Harness",
+      "url": "https://www.teradata.com/press-releases/2026/tera-an-agentic-coworker"
+    },
+    {
+      "label": "Teradata Investor Relations — Tera announcement",
+      "url": "https://investor.teradata.com/news-events/investor-news/news-details/2026/Teradata-Transforms-Tera-into-an-Agentic-Coworker-Introduces-Tera-Context-Engine-and-Tera-Harness/default.aspx"
+    },
+    {
+      "label": "Futurum — Teradata Bridges the Enterprise AI Agent Execution Gap",
+      "url": "https://futurumgroup.com/insights/teradata-bridges-the-enterprise-ai-agent-execution-gap/"
+    }
+  ],
+  "fact": "Teradata 将 Tera 明确拆分为 Context Engine 与 Harness 两层，并把企业语义/治理与执行状态/工具编排分别放入两层。",
+  "why_it_matters": "来自传统企业数据平台厂商的新证据显示 Enterprise Context 与 Agent Runtime 正形成可独立产品化的架构边界。",
+  "what_is_new": "不是再次证明 Agent 需要 Context，而是 Context 被提升为执行前的业务约束环境，并与持久执行 Harness 分离。",
+  "challenges_existing_assumptions": "强化 Semantic Authority / Enterprise Context 独立于 Runtime 的判断，同时修正‘模型变强会整体吞掉确定性基础设施’的过度推断。",
+  "hype_uncertainty": "Teradata 的成本与 token 性能数据属于厂商自测；其大型企业架构也不能直接映射到 VELNAR 当前 MVP。",
+  "startup_implications": "继续观察并保持现有 Domain Context / Grounding / State / Policy / Tool / Trace 边界清楚，不建设新的通用平台，不扩大 Sales MVP Scope。",
+  "discussion_questions": [
+    "当前 Sales MVP 哪些结构已经是未来 Context Layer 雏形，哪些只是局部 Workflow 实现？",
+    "模型能力继续增强时，如何判断确定性逻辑应留在 Harness/Policy 还是交给模型？"
+  ]
+}
