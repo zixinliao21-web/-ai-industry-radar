@@ -1,0 +1,36 @@
+{
+  "id": "2026-09-25-B1",
+  "date": "2026-09-25",
+  "grade": "B",
+  "title": "企业 Agent 治理正在从“上线前审批”进入“运行时执行”：Policy 本身开始变成机器可执行的控制对象",
+  "themes": [
+    "Agent Control Plane",
+    "Runtime Governance",
+    "Policy",
+    "Enterprise Context",
+    "Semantic Authority"
+  ],
+  "deck": "Collibra 把 Agent Contracts 与 Guardian Agents 组合成运行时治理机制：前者定义机器可读边界，后者持续监督真实行为并支持阻断越权动作。它进一步验证了一个方向——企业 Agent 的 Policy 正从制度文本变成 Runtime 可以执行和审计的控制对象。",
+  "article_text": "企业 Agent 治理正在从“上线前审批”进入“运行时执行”：Policy 本身开始变成机器可执行的控制对象\n\n过去一年，企业 AI 治理的大多数产品仍然延续 Model Governance 的思路：登记模型、完成风险评估、记录负责人、通过审批，然后把系统放进生产环境。Agent 改变了这个节奏。一个 Agent 上线以后会持续访问数据、调用工具、与其他 Agent 协作并产生真实业务动作；因此，治理如果只存在于部署前的文档和审批流里，就无法回答最关键的问题：这个 Agent 此刻正在做的动作，是否仍然处于被授权的边界内？\n\nCollibra 在最新一轮 AI Command Center 能力中把这个问题进一步产品化。其 Agent Contracts 用机器可读的方式定义 Agent 应遵守的分层控制规则，包括全局规则以及按职能、风险等级和运行上下文附加的专门约束；Guardian Agents 则在运行时持续监督 Agent 的真实行为，在越界时从告警、升级进一步走向重定向或阻止未经授权的动作。与此同时，Collibra 的 operational trust 把部署后的质量评估、token 消耗等运行信号与 assessment、lifecycle status、documentation completeness 等治理信号放到同一视图里。\n\nFACT：这不是“又一个 Agent”。Collibra 明确把 Agent Contracts 定义为边界，把 Guardian Agents 定义为对这些边界的持续监督，并且强调这套控制要覆盖企业自己构建、购买或运行在其他平台上的 Agent。其公开材料还把 procurement agent 作为例子：Agent 可以搜索供应商和准备采购建议，但如果交易金额超过授权阈值，运行时监督层应识别并升级或阻断这个动作。换句话说，Policy 正从给人看的制度文本，逐步变成 Runtime 可以检查和执行的机器对象。\n\nINFERENCE：这进一步强化了我们此前对 Agent Control Plane 的判断，但也把它修正得更具体。Control Plane 不能只是一张“所有 Agent 的管理后台”，也不能只做 Trace。真正有价值的控制层需要连接四件事：Agent 的身份与责任、它获得的 Context/Data、它被允许调用的 Tool/Action，以及它运行时实际产生的行为。Policy 位于这四者之间，负责把“应该怎样”转换成可以和“实际怎样”实时比较的约束。只有 Trace 而没有可执行 Policy，企业最多能够事后解释事故；只有 Policy 而没有运行时 telemetry，则无法知道规则是否真正被遵守。\n\n这也解释了为什么 Enterprise Context 与 Agent Governance 正在汇合。Collibra 的产品叙事并不是单独治理 Agent，而是把 governed ontology、Knowledge Graph 和 runtime controls 放在同一个体系中。Agent 是否越界，有时不是简单的 API allowlist 能判断的。例如“采购 Agent 可以向批准供应商询价，但不得向未认证供应商发送客户专属规格”同时依赖实体语义、供应商状态、客户数据分类、动作类型和业务规则。随着 Agent 从问答进入业务执行，Semantic Authority 不只是提高答案准确率，也可能成为 Policy 判断所依赖的事实基础。\n\n但这里不能得出“VELNAR 现在应该建设 Agent Control Plane”的结论。我们当前只有一个窄 Sales MVP，最重要的仍然是把确定性 Workflow、Grounding、Readiness、Policy、Tool 与 Trace 做可靠。为了行业趋势提前抽象一个通用治理平台，反而会扩大 Scope，并制造没有真实运行负载支撑的架构。对我们现在真正有用的信号是：现有 Policy 和 Trace 不应该被看作临时补丁，它们可能正是未来运行时治理能力的最小种子。今天把关键业务动作的授权条件、证据、执行结果和失败原因记录清楚，比提前发明一个“Control Plane”产品更有价值。\n\n还需要保持怀疑。Collibra 当前关于 Guardian Agents 的很多价值主张来自厂商自己的产品材料，真正跨平台、低延迟、可解释地阻断复杂 Agent 行为有多可靠，仍需要更多生产数据验证。所谓“机器可读合同”如果最终只是另一套配置 DSL，也可能重新制造治理孤岛。更困难的问题是，当业务规则本身具有模糊性、上下文依赖和例外时，哪些 Policy 可以确定性执行，哪些只能由模型辅助判断，以及谁对误阻断负责。这些问题尚未因为产品发布而解决。\n\n因此，这条信号对 VELNAR 的动作等级是：观察并沉淀，不扩建。继续保持当前 Sales MVP 的 bounded AI decision 和 deterministic enforcement；同时确保 Policy、Action、Trace 的数据结构能够明确回答“为什么允许这个动作、依据什么、实际执行了什么”。如果未来多个 Agent、多个 Workflow 或多个客户真的让规则复用和运行时监督成为瓶颈，再考虑把这些能力显式化为 Control Plane。\n\n接下来值得持续验证三个问题：第一，Agent Contracts 这类 machine-readable policy 是否会形成跨 Runtime 的开放标准，还是被各平台分别锁定；第二，企业真正愿意让独立 Guardian Agent 自动阻断生产动作到什么程度，还是长期停留在告警与人工审批；第三，当 Ontology、Identity、Policy、Tool Permission 和 Trace 越来越紧密地连接后，哪一层最终会成为企业不可替代的控制点。",
+  "fact": "Collibra 发布 Agent Contracts 与 Guardian Agents，前者定义机器可读控制边界，后者在运行时监督 Agent 行为，并可从告警升级到阻断未经授权的动作。",
+  "why_it_matters": "Agent Control Plane 的价值正在从注册表和事后 Trace 延伸到运行时 Policy Enforcement；Semantic Authority 也可能成为复杂业务规则判断的事实基础。",
+  "what_is_new": "新的结构性信号不是企业需要治理 Agent，而是 Policy 开始被产品化为可被 Runtime 持续比较、执行和审计的机器对象，并试图跨越第三方 Agent 平台。",
+  "challenges_existing_assumptions": "强化 VELNAR 对 Policy + Tool + Trace 的长期判断，但不构成当前 Sales MVP 扩 Scope 或建设通用 Control Plane 的理由。",
+  "hype_uncertainty": "主要证据来自厂商材料；跨平台执行可靠性、复杂规则表达、误阻断责任和开放标准化程度仍未验证。",
+  "startup_implications": "当前只需继续把关键动作的授权条件、证据和 Trace 做清楚；等待真实多 Agent / 多 Workflow 复杂度出现后再决定是否显式化 Control Plane。",
+  "discussion_question": "Machine-readable Agent Policy 最终会成为跨 Runtime 的开放标准，还是被各企业平台分别锁定？",
+  "sources": [
+    {
+      "label": "Collibra — Guardian Agents: Keep AI agents in control at runtime",
+      "url": "https://www.collibra.com/blog/guardian-agents-keep-ai-agents-in-control-at-runtime"
+    },
+    {
+      "label": "Collibra — Agentic AI Governance: A Control-Plane Framework for Governing Autonomous AI Agents at Runtime",
+      "url": "https://www.collibra.com/blog/agentic-ai-governance-a-control-plane-framework-for-governing-autonomous-ai-agents-at-runtime"
+    },
+    {
+      "label": "Collibra — Operational trust for AI agents",
+      "url": "https://productresources.collibra.com/docs/release-notes/Content/AICommandCenter/co_aicc-operational-trust.htm"
+    }
+  ]
+}
