@@ -78,6 +78,21 @@
       ],
       "deck": "Collibra 把 Agent Contracts 与 Guardian Agents 组合成运行时治理机制：前者定义机器可读边界，后者持续监督真实行为并支持阻断越权动作。它进一步验证了一个方向——企业 Agent 的 Policy 正从制度文本变成 Runtime 可以执行和审计的控制对象。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-09-26-B1",
+      "date": "2026-09-26",
+      "grade": "B",
+      "title": "Agent Commerce 正在分化出第二条基础设施：机器原生支付可能不需要复刻人类结账流程",
+      "themes": [
+        "Agent Commerce",
+        "Machine Payments",
+        "x402",
+        "Open Standards",
+        "Agent Control Plane"
+      ],
+      "deck": "Block 加入 x402 Foundation 并贡献 Bitcoin Lightning 支持，重要性不在 Bitcoin，而在一个开放机器支付协议开始容纳多种结算轨道。Agent Commerce 可能分化为消费者交易的 Merchant Acceptance / Trust 栈，以及 API、数据、模型等数字资源的 machine-to-machine payment 栈。",
+      "body_format": "article_text"
     }
   ]
 }
