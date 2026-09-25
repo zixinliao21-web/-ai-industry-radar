@@ -47,6 +47,22 @@
       ],
       "deck": "SAP 正把流程智能、企业架构、Company Memory、Agent Hub 与运行监控连接成一套 Agent Operations 体系。真正值得注意的不是新增了几个 Agent，而是 Enterprise Context、Process、Policy、Ownership 与 Trace 正开始汇合为企业 Agent 的可执行运营底座。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-09-25-A1",
+      "date": "2026-09-25",
+      "grade": "A",
+      "title": "企业 Agent 的入口可能不是聊天框：Databricks 收购 Row Zero，把 Spreadsheet 变成 Human-Agent Shared State",
+      "themes": [
+        "Enterprise AI",
+        "Agent UI",
+        "Work Surface",
+        "Enterprise Context",
+        "Semantic Authority",
+        "Databricks"
+      ],
+      "deck": "Databricks 收购 Row Zero，并把受治理的实时 spreadsheet 接入 Genie Ontology、Unity Catalog 与 Agent。真正值得注意的不是“AI + Excel”，而是企业 AI 的竞争正在从 Context 与 Runtime 延伸到人和 Agent 共同查看、修改、审计业务状态的 Work Surface。",
+      "body_format": "article_text"
     }
   ]
 }
