@@ -1,0 +1,36 @@
+{
+  "id": "2026-09-25-A1",
+  "date": "2026-09-25",
+  "grade": "A",
+  "title": "企业 Agent 的入口可能不是聊天框：Databricks 收购 Row Zero，把 Spreadsheet 变成 Human-Agent Shared State",
+  "themes": [
+    "Enterprise AI",
+    "Agent UI",
+    "Work Surface",
+    "Enterprise Context",
+    "Semantic Authority",
+    "Databricks"
+  ],
+  "deck": "Databricks 收购 Row Zero，并把受治理的实时 spreadsheet 接入 Genie Ontology、Unity Catalog 与 Agent。真正值得注意的不是“AI + Excel”，而是企业 AI 的竞争正在从 Context 与 Runtime 延伸到人和 Agent 共同查看、修改、审计业务状态的 Work Surface。",
+  "article_text": "企业 Agent 的入口可能不是聊天框，而是用户已经工作了四十年的表格：Databricks 收购 Row Zero 暴露了“AI Coworker”真正需要争夺的最后一公里。\n\n9 月 24 日，Databricks 宣布收购云端表格公司 Row Zero，并计划把它原生整合进 Genie。单看交易本身，这很容易被归类成一次普通的产品补全：Databricks 有数据平台和 AI Agent，Row Zero 有能处理超大数据集的 spreadsheet，于是把两者拼起来。但真正值得记录的不是“AI + Excel”这个功能，而是 Databricks 正在把 Enterprise Context、治理层、Agent 与人类最熟悉的业务操作界面连接成一条完整链路。\n\nFACT：Databricks 对这笔收购给出的产品结构非常明确。Row Zero 将直接连接受治理的实时企业数据，查询继承用户权限，数据可以自动刷新，导出可以被限制，结果还能写回；Agent 对表格的操作则保留在业务人员能够理解和审计的 spreadsheet syntax 与 processing model 中。它的底层不是一个脱离企业系统的 AI 表格，而是 Genie Ontology、Unity Catalog 和 Unity Gateway。也就是说，Agent 看到什么业务事实、这些事实代表什么、谁有权访问、执行了什么操作，以及人最终如何检查结果，被放进了同一条数据与治理路径。\n\n这件事对我们的意义在于，它补充了过去几周 Radar 中逐渐形成的一条判断：Enterprise Context / Semantic Authority 本身并不足以构成企业 AI 的最终产品。企业还需要一个“人和 Agent 共同工作的操作表面”。过去我们更多把这个表面想成 Chat、Workbench 或某种 Agent UI；Databricks 给出的答案更保守，也可能更现实——不要强迫企业员工迁移到一个全新的 AI 工作界面，而是让 Agent 进入他们已经使用几十年的 spreadsheet、document、ERP 和其他既有工作表面。\n\nINFERENCE：如果这条路线成立，未来企业 AI 的竞争可能分成至少三个相互独立但必须连接的控制层。第一层是 Semantic Authority / Enterprise Context，决定“什么是真的、业务对象是什么意思”；第二层是 Agent Runtime / Control Plane，决定“Agent 可以推理什么、调用什么、执行什么”；第三层是 Work Surface，决定“人在哪里看到、修改、批准并继续使用 Agent 的产出”。Databricks 收购 Row Zero 的战略价值，在于它不满足于只控制前两层，而开始向第三层推进。\n\n这也解释了为什么 spreadsheet 在 Agent 时代未必会像很多人预测的那样被聊天界面消灭。表格的价值从来不只是输入数字。它同时是一种可计算的业务表达语言：公式、行列、透视表、情景模型和人工修改共同构成了一套业务人员已经掌握的操作语义。纯聊天可以生成答案，却不天然提供一个让人逐格检查、修改假设、重新计算并留下可解释结构的环境。Row Zero 强调 Agent 生成的分析可审计、可编辑，本质上是在利用 spreadsheet 作为 Human-Agent shared state，而不仅仅把它当作旧时代 UI。\n\n这会修正我们对 Agent UI 的一个潜在假设。我们不能默认模型能力越强，企业软件就越会收敛到一个万能聊天框。模型可能吞掉大量菜单、查询和手工操作，但当任务涉及高密度结构化信息、比较、修改、审批和协作时，领域原生界面仍可能长期存在。真正变化的不是 UI 消失，而是 UI 从“人操作软件”变成“人和 Agent 共同操作同一个业务状态”。\n\n但也不能反过来得出“Spreadsheet 会成为企业 Agent 的最终入口”。Databricks 自己已经把 Genie 扩展到 Web、桌面、移动端和其他协作入口；不同 Workflow 需要的 Work Surface 很可能不同。销售可能需要 CRM/Workbench，财务可能需要 spreadsheet，制造可能需要 MES/可视化工位，管理层可能需要 dashboard + conversation。更合理的判断是：Agent Runtime 会跨界面流动，而高价值 Work Surface 会因为掌握用户工作习惯、可解释状态和最终确认动作而继续保有控制力。\n\n对 VELNAR 当前阶段，这属于“继续观察，并对现有设计原则形成直接验证”，而不是要求我们扩大 Sales MVP。我们正在做的 Sales Workbench 不需要因为 Databricks 收购一家 spreadsheet 公司而改造成表格，更不应该追逐所谓 AI Coworker UI。真正应该保留的原则是：不要把聊天框当成产品本身。对于报价、客户选择、产品匹配、价格确认和写入动作，用户最终需要的是可检查、可修改、可确认的业务状态。聊天负责表达意图，确定性系统维护事实和状态，Workbench 则承担 Human-Agent shared state 与最终操作表面。这与 Databricks 正在形成的结构高度一致。\n\nPREDICTION：如果 Agent 能力继续提高，未来大型企业平台的并购重点可能不只发生在模型和 Agent startup，还会越来越多地落到“最后一公里工作界面”——spreadsheet、browser、document、IDE、CRM surface、vertical workbench。因为当推理能力逐渐商品化之后，谁拥有企业真实 Context，以及谁拥有用户每天实际确认和修改工作的界面，可能比谁拥有另一个通用 Agent 更难被替代。\n\n接下来值得讨论两个问题。第一，VELNAR 的 Sales Workbench 中，哪些状态必须成为业务员和 Agent 都能直接看到、修改和确认的 shared state，而不能只存在于后台 State Model？第二，如果未来 VELNAR 做多个行业，我们应该把 Work Surface 视为每个 Vertical 的产品资产，还是尽量让同一 Agent Runtime 嵌入客户已有的 Excel、ERP、CRM 等界面？",
+  "sources": [
+    {
+      "label": "Databricks — Databricks Acquires Row Zero, Bringing Live, Governed Spreadsheets to Genie",
+      "url": "https://www.databricks.com/company/newsroom/press-releases/databricks-acquires-row-zero-bringing-live-governed-spreadsheets"
+    },
+    {
+      "label": "Databricks — Introducing Genie One, Genie Agents, and Genie Ontology",
+      "url": "https://www.databricks.com/blog/introducing-genie-one-genie-ontology-and-genie-agents"
+    },
+    {
+      "label": "Row Zero — AI Agent documentation",
+      "url": "https://rowzero.io/docs/ai-assistant"
+    },
+    {
+      "label": "TechCrunch — Databricks buys Row Zero and is scouting for more startups to acquire",
+      "url": "https://techcrunch.com/2026/09/24/databricks-buys-row-zero-and-is-scouting-for-more-startups-to-acquire/"
+    }
+  ],
+  "action": "继续观察",
+  "strategic_implication": "验证 Work Surface 是 Enterprise Context 与 Agent Runtime 之外的独立产品层；不改变当前 Sales MVP scope。"
+}
