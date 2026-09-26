@@ -2,97 +2,12 @@
   "schema_version": "3.0",
   "segment": "0008",
   "items": [
-    {
-      "id": "2026-09-24-A3",
-      "date": "2026-09-24",
-      "grade": "A",
-      "title": "Personal Context 正在从云端 Agent 的附属记忆变成设备级基础设施：谁掌握持续上下文，谁可能控制下一代个人 AI 入口",
-      "themes": [
-        "Personal Context",
-        "Personal Agent",
-        "On-device AI",
-        "Edge AI",
-        "Control Points"
-      ],
-      "deck": "Liquid AI 把持续 Personal Context 直接部署到 Snapdragon NPU，并设计成可被本地、云端和第三方 Agent 共同消费的共享上下文层。真正值得注意的不是又一个端侧小模型，而是 Personal Context 正在与具体 Agent 解耦，开始成为设备厂商可以独立拥有和治理的基础设施层。",
-      "body_format": "article_text"
-    },
-    {
-      "id": "2026-09-24-A4",
-      "date": "2026-09-24",
-      "grade": "A",
-      "title": "Agent Control Plane 正在与企业安全栈汇合：真正需要治理的不是 Agent 本身，而是‘身份 × 数据 × 行动’",
-      "themes": [
-        "Agent Control Plane",
-        "Non-human Identity",
-        "Data Security",
-        "Enterprise AI",
-        "AI Security"
-      ],
-      "deck": "Cyera 在收购非人类身份安全公司 Oasis 后，又获得 Goldman Sachs 4 亿美元投资，把数据安全、机器身份与 Agent 行动治理放进同一平台。值得记录的不是融资规模，而是企业 Agent 的控制边界正在从单独的模型 guardrail 扩展成‘这个 Agent 是谁、能看到什么、能调用什么、实际做了什么’的联合治理层。",
-      "body_format": "article_text"
-    },
-    {
-      "id": "2026-09-24-A5",
-      "date": "2026-09-24",
-      "grade": "A",
-      "title": "企业 Agent 的竞争正在从“谁有更多 Agent”转向“谁拥有业务运行的操作系统”：SAP 把 Process、Architecture、Company Memory 与 Agent Governance 连成了一条闭环",
-      "themes": [
-        "Enterprise AI",
-        "Agent Control Plane",
-        "Enterprise Context",
-        "Workflow",
-        "Semantic Authority",
-        "SAP"
-      ],
-      "deck": "SAP 正把流程智能、企业架构、Company Memory、Agent Hub 与运行监控连接成一套 Agent Operations 体系。真正值得注意的不是新增了几个 Agent，而是 Enterprise Context、Process、Policy、Ownership 与 Trace 正开始汇合为企业 Agent 的可执行运营底座。",
-      "body_format": "article_text"
-    },
-    {
-      "id": "2026-09-25-A1",
-      "date": "2026-09-25",
-      "grade": "A",
-      "title": "企业 Agent 的入口可能不是聊天框：Databricks 收购 Row Zero，把 Spreadsheet 变成 Human-Agent Shared State",
-      "themes": [
-        "Enterprise AI",
-        "Agent UI",
-        "Work Surface",
-        "Enterprise Context",
-        "Semantic Authority",
-        "Databricks"
-      ],
-      "deck": "Databricks 收购 Row Zero，并把受治理的实时 spreadsheet 接入 Genie Ontology、Unity Catalog 与 Agent。真正值得注意的不是“AI + Excel”，而是企业 AI 的竞争正在从 Context 与 Runtime 延伸到人和 Agent 共同查看、修改、审计业务状态的 Work Surface。",
-      "body_format": "article_text"
-    },
-    {
-      "id": "2026-09-25-B1",
-      "date": "2026-09-25",
-      "grade": "B",
-      "title": "企业 Agent 治理正在从“上线前审批”进入“运行时执行”：Policy 本身开始变成机器可执行的控制对象",
-      "themes": [
-        "Agent Control Plane",
-        "Runtime Governance",
-        "Policy",
-        "Enterprise Context",
-        "Semantic Authority"
-      ],
-      "deck": "Collibra 把 Agent Contracts 与 Guardian Agents 组合成运行时治理机制：前者定义机器可读边界，后者持续监督真实行为并支持阻断越权动作。它进一步验证了一个方向——企业 Agent 的 Policy 正从制度文本变成 Runtime 可以执行和审计的控制对象。",
-      "body_format": "article_text"
-    },
-    {
-      "id": "2026-09-26-B1",
-      "date": "2026-09-26",
-      "grade": "B",
-      "title": "Agent Commerce 正在分化出第二条基础设施：机器原生支付可能不需要复刻人类结账流程",
-      "themes": [
-        "Agent Commerce",
-        "Machine Payments",
-        "x402",
-        "Open Standards",
-        "Agent Control Plane"
-      ],
-      "deck": "Block 加入 x402 Foundation 并贡献 Bitcoin Lightning 支持，重要性不在 Bitcoin，而在一个开放机器支付协议开始容纳多种结算轨道。Agent Commerce 可能分化为消费者交易的 Merchant Acceptance / Trust 栈，以及 API、数据、模型等数字资源的 machine-to-machine payment 栈。",
-      "body_format": "article_text"
-    }
+    {"id":"2026-09-24-A3","date":"2026-09-24","grade":"A","title":"Personal Context 正在从云端 Agent 的附属记忆变成设备级基础设施：谁掌握持续上下文，谁可能控制下一代个人 AI 入口","themes":["Personal Context","Personal Agent","On-device AI","Edge AI","Control Points"],"deck":"Liquid AI 把持续 Personal Context 直接部署到 Snapdragon NPU，并设计成可被本地、云端和第三方 Agent 共同消费的共享上下文层。真正值得注意的不是又一个端侧小模型，而是 Personal Context 正在与具体 Agent 解耦，开始成为设备厂商可以独立拥有和治理的基础设施层。","body_format":"article_text"},
+    {"id":"2026-09-24-A4","date":"2026-09-24","grade":"A","title":"Agent Control Plane 正在与企业安全栈汇合：真正需要治理的不是 Agent 本身，而是‘身份 × 数据 × 行动’","themes":["Agent Control Plane","Non-human Identity","Data Security","Enterprise AI","AI Security"],"deck":"Cyera 在收购非人类身份安全公司 Oasis 后，又获得 Goldman Sachs 4 亿美元投资，把数据安全、机器身份与 Agent 行动治理放进同一平台。值得记录的不是融资规模，而是企业 Agent 的控制边界正在从单独的模型 guardrail 扩展成‘这个 Agent 是谁、能看到什么、能调用什么、实际做了什么’的联合治理层。","body_format":"article_text"},
+    {"id":"2026-09-24-A5","date":"2026-09-24","grade":"A","title":"企业 Agent 的竞争正在从“谁有更多 Agent”转向“谁拥有业务运行的操作系统”：SAP 把 Process、Architecture、Company Memory 与 Agent Governance 连成了一条闭环","themes":["Enterprise AI","Agent Control Plane","Enterprise Context","Workflow","Semantic Authority","SAP"],"deck":"SAP 正把流程智能、企业架构、Company Memory、Agent Hub 与运行监控连接成一套 Agent Operations 体系。真正值得注意的不是新增了几个 Agent，而是 Enterprise Context、Process、Policy、Ownership 与 Trace 正开始汇合为企业 Agent 的可执行运营底座。","body_format":"article_text"},
+    {"id":"2026-09-25-A1","date":"2026-09-25","grade":"A","title":"企业 Agent 的入口可能不是聊天框：Databricks 收购 Row Zero，把 Spreadsheet 变成 Human-Agent Shared State","themes":["Enterprise AI","Agent UI","Work Surface","Enterprise Context","Semantic Authority","Databricks"],"deck":"Databricks 收购 Row Zero，并把受治理的实时 spreadsheet 接入 Genie Ontology、Unity Catalog 与 Agent。真正值得注意的不是“AI + Excel”，而是企业 AI 的竞争正在从 Context 与 Runtime 延伸到人和 Agent 共同查看、修改、审计业务状态的 Work Surface。","body_format":"article_text"},
+    {"id":"2026-09-25-B1","date":"2026-09-25","grade":"B","title":"企业 Agent 治理正在从“上线前审批”进入“运行时执行”：Policy 本身开始变成机器可执行的控制对象","themes":["Agent Control Plane","Runtime Governance","Policy","Enterprise Context","Semantic Authority"],"deck":"Collibra 把 Agent Contracts 与 Guardian Agents 组合成运行时治理机制：前者定义机器可读边界，后者持续监督真实行为并支持阻断越权动作。它进一步验证了一个方向——企业 Agent 的 Policy 正从制度文本变成 Runtime 可以执行和审计的控制对象。","body_format":"article_text"},
+    {"id":"2026-09-26-B1","date":"2026-09-26","grade":"B","title":"Agent Commerce 正在分化出第二条基础设施：机器原生支付可能不需要复刻人类结账流程","themes":["Agent Commerce","Machine Payments","x402","Open Standards","Agent Control Plane"],"deck":"Block 加入 x402 Foundation 并贡献 Bitcoin Lightning 支持，重要性不在 Bitcoin，而在一个开放机器支付协议开始容纳多种结算轨道。Agent Commerce 可能分化为消费者交易的 Merchant Acceptance / Trust 栈，以及 API、数据、模型等数字资源的 machine-to-machine payment 栈。","body_format":"article_text"},
+    {"id":"2026-09-26-A1","date":"2026-09-26","grade":"A","title":"AI Agent 开始闭合“数字推理 → 物理实验”循环：Anthropic 的 wet lab 让 Agent 从知识工作者迈向科学发现系统","themes":["AI-native Company","Scientific Agents","Physical AI","Closed-loop Research","Life Sciences"],"deck":"Anthropic 不再只让 Claude 分析生物数据，而是建立自己的 wet lab，让 Agent 从大规模序列搜索、提出候选假设一路连接到真实实验验证。真正的新信号不是“AI 找到一个像 CRISPR 的东西”，而是前沿模型公司开始把数字 Agent 与物理实验基础设施闭合成一套研发生产系统。","body_format":"article_text"}
   ]
 }
