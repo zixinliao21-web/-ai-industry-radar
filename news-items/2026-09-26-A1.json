@@ -1,0 +1,32 @@
+{
+  "id": "2026-09-26-A1",
+  "date": "2026-09-26",
+  "grade": "A",
+  "title": "AI Agent 开始闭合“数字推理 → 物理实验”循环：Anthropic 的 wet lab 让 Agent 从知识工作者迈向科学发现系统",
+  "themes": [
+    "AI-native Company",
+    "Scientific Agents",
+    "Physical AI",
+    "Closed-loop Research",
+    "Life Sciences"
+  ],
+  "deck": "Anthropic 不再只让 Claude 分析生物数据，而是建立自己的 wet lab，让 Agent 从大规模序列搜索、提出候选假设一路连接到真实实验验证。真正的新信号不是“AI 找到一个像 CRISPR 的东西”，而是前沿模型公司开始把数字 Agent 与物理实验基础设施闭合成一套研发生产系统。",
+  "article_text": "Anthropic 最近公布的生命科学进展，真正值得记录的并不是“Claude 发现了一个类似 CRISPR 的新系统”这个标题，而是一个更结构性的变化：前沿模型公司的 Agent 正开始从纯数字知识工作跨过边界，进入由真实实验反馈驱动的闭环科学研发系统。\n\nFACT：Anthropic 在 9 月 23 日正式公开新的生命科学研究团队与实验室。其研究流程不是只让 Claude 阅读论文或分析已有数据，而是让 Claude 探索 DNA 数据、寻找未被表征的蛋白家族、规模化生成假设，再把候选结果送入真实实验验证。Anthropic 披露的第一个案例中，Claude Agent 在较高层级的人类指导下，从大规模噬菌体序列中识别出一个此前未被表征、具有类似 CRISPR 重复结构特征的酶系统。Reuters 同时确认，这项工作来自 Anthropic 在旧金山湾区建立的 wet lab，是其生物研究从纯计算分析进入物理实验的第一批公开结果。\n\n但这里必须把“发现”与“价值”拆开。这个酶系统目前的具体功能仍未知，也没有证据证明它会成为新的 CRISPR，更不能把一次候选发现直接外推为“AI 已经可以独立做科学”。Anthropic 自己也把它描述为 early result。科学价值需要后续实验、同行验证和可重复性来确认。因此，如果只从模型能力榜单看这件事，容易高估它。\n\nINFERENCE：真正重要的是研发系统的结构发生了变化。过去大多数所谓 AI for Science，本质上仍然是“人提出问题 → AI 做计算/预测 → 人决定实验 → 实验结果再由人重新组织”。Anthropic 现在展示的方向是把其中更多环节连接起来：Agent 可以大规模搜索候选空间、形成假设、排序实验优先级，而 wet lab 提供现实世界的反馈。只要实验数据能够重新进入下一轮 Agent 推理，这就不再只是一个更强的科学助手，而开始接近一个可以持续迭代的 closed-loop research system。\n\n这与我们此前记录的 Anthropic 内部 AI R&D Automation 是同一条产业趋势的进一步外延。此前的信号说明 AI 正进入 AI 自身的生产函数：模型公司用 Agent 加速代码、研究和模型研发。现在 Anthropic 又把这种生产函数扩展到生物学。换句话说，AI-native company 的边界可能不只是“员工 + 软件 Agent”，还可能变成“人类专家 + Agent + 专用物理基础设施 + 实验反馈”。当 Agent 能调用的不只是 API，而是机器人实验设备、自动化工厂、传感器和真实世界执行系统时，数字 Agent 与 Physical AI 的边界会开始模糊。\n\n这也修正了一个容易形成的判断：Physical AI 不应只等同于人形机器人或自动驾驶。真正更广义的 Physical AI，是智能系统能够读取现实状态、提出行动、执行物理操作并从结果中获得反馈。自动化实验室正是其中一个非常清晰的形态，而且它可能比通用人形机器人更早产生高价值闭环，因为任务空间、设备接口和评价标准都更受约束。\n\n对 VELNAR，这条信号目前属于“观察，不行动”。它不意味着我们的 Sales MVP 应增加任何 Physical AI、科学 Agent 或复杂自治能力，更不构成重构当前 deterministic workflow 的理由。相反，它强化了我们已有的一条架构判断：真正有价值的 Agent 系统不是聊天界面，而是能进入真实工作循环、获得可信状态、调用受控工具、执行动作并通过结果反馈继续推进任务。Anthropic 的实验对象是 DNA 与 wet lab；我们当前的实验对象是客户需求、SKU、价格、库存、订单和业务动作。行业不同，但“Context → Decision → Action → Ground Truth → 下一轮状态”的闭环逻辑是相通的。\n\nPREDICTION：如果这种模式成立，未来值得关注的控制点可能不只是模型能力，而是“谁拥有高质量实验反馈循环”。在生命科学里，它可能表现为专有实验数据、自动化实验设备、实验协议与模型共同形成的复合壁垒；在制造业里，则可能是机器状态、质量数据、工艺参数与生产动作。模型能力越商品化，能够持续产生现实世界反馈的数据与执行基础设施，反而可能变得更重要。\n\n因此，不能从这条新闻得出“模型公司都会变成生物科技公司”，也不能得出“软件 Agent 已经完成向现实世界自治的跃迁”。更合理的判断是：Agent 的价值边界正在从处理已有数字信息，逐步扩展到主动产生新的现实世界信息。如果这种闭环被证明可以重复提高科研产出，那么 AI 产业的下一类 Thick Domain Company 可能不是单纯拥有行业知识的软件公司，而是同时拥有 Domain Context、Agent Runtime 和真实世界反馈基础设施的公司。\n\n接下来最值得追踪三个问题：第一，Anthropic 的 wet lab 是否会形成连续、可重复的发现，而不是一次展示性结果；第二，实验自动化程度会不会继续提高，使 Claude 从“提出候选”进入实验设计和迭代控制；第三，在制造、材料、化学等领域，是否会出现同样由 Agent + 专用物理基础设施形成的 closed-loop vertical AI company。",
+  "sources": [
+    {
+      "label": "Anthropic — Claude discovers a novel enzyme system with CRISPR-like repeats",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+    },
+    {
+      "label": "Reuters — Anthropic says Claude AI helped discover novel enzyme system",
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/anthropic-says-claude-ai-helped-discover-novel-enzyme-system-2026-09-23/"
+    }
+  ],
+  "fact": "Anthropic 建立生命科学研究组与 wet lab，并公开 Claude Agent 从大规模序列搜索中提出候选、随后进入真实实验验证的首个结果。",
+  "why_it_matters": "Agent 正从纯数字知识工作进入能够通过物理实验产生新信息的闭环研发系统。",
+  "what_is_new": "不是单次 AI 辅助发现，而是前沿模型公司开始拥有并连接自己的物理实验反馈基础设施。",
+  "challenges_existing_assumptions": "扩展了 Physical AI 的定义，也强化了 Agent 价值来自进入真实 Workflow 并形成 Action/Feedback 闭环的判断。",
+  "hype_uncertainty": "候选酶系统功能仍未知；一次结果不能证明 autonomous science 已成熟，也不能证明该发现具有 CRISPR 级价值。",
+  "startup_implications": "VELNAR 当前只观察，不改变 Sales MVP Scope；长期关注 Domain Context + Agent Runtime + 现实反馈基础设施是否形成新的 Thick Domain Company 壁垒。",
+  "discussion_question": "当模型能力继续商品化后，真实世界的高质量反馈循环是否会成为 Vertical AI 比模型本身更重要的长期控制点？"
+}
