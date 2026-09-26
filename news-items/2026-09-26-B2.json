@@ -1,0 +1,36 @@
+{
+  "id": "2026-09-26-B2",
+  "date": "2026-09-26",
+  "grade": "B",
+  "title": "Agent Control Plane 可能独立于 Runtime：企业开始为跨平台 Agent Inventory、Risk 与 ROI 单独买单",
+  "themes": [
+    "Agent Control Plane",
+    "Enterprise AI",
+    "Agent Governance",
+    "Multi-Runtime",
+    "Observability"
+  ],
+  "deck": "Dataiku 把跨 Salesforce、AWS、Microsoft、Google、Databricks、Snowflake 等 Runtime 的 Agent 发现、风险、成本与业务价值管理做成 standalone product。它进一步验证：企业可能长期保留多种 Agent Runtime，而在其上单独采购一个跨平台控制与审计层。",
+  "article_text": "企业 Agent 治理正在出现一个值得单独记录的分层：企业未必需要把所有 Agent 迁到同一个 Runtime，控制层本身可以独立于 Agent 的构建平台。\n\n【FACT】Dataiku 在 9 月 24 日正式发布 Agent Management，定位为独立、跨平台的 Agent 管理产品，并计划于 10 月 GA。它强调的不是再提供一种 Agent Builder，而是发现企业内部运行的 Agent、识别其依赖的模型和工具、追踪业务与技术表现、记录认证状态和风险，并覆盖由其他厂商平台构建的 Agent。Dataiku 明确把这种能力描述为“sit above the stack”：监督层位于 Salesforce、AWS、Microsoft、Google、Databricks、Snowflake 等不同 Agent Runtime 之上，而不是要求企业先统一到 Dataiku 自己的 Runtime。对自定义环境，则可以通过 OpenTelemetry 接入。\n\n同日 Dataiku 公布了一项由 Harris Poll 执行、覆盖 685 名全球 CIO 的调查。公司披露的数据包括：84% 的 CIO 认为员工创建 AI Agent 和应用的速度已经超过 IT 治理速度，83% 缺乏标准化的 Agent 生命周期管理，72% 无法持续衡量所有 Agent 是否产生业务结果，只有 21% 表示自己对 AI 成本拥有接近实时且能归因到业务单元、团队或 use case 的完整可见性。调查由产品供应商赞助，因此这些比例不应被当作独立市场统计的最终真相；但它们至少说明 Dataiku 正在针对一个已经足够具体、可以被企业预算化的问题销售产品：Agent inventory、ownership、cost、risk 和 value attribution。\n\n【INFERENCE】这强化了我们此前对 Agent Control Plane 的判断，但也进一步修正了它。控制层不一定首先表现为一个“大一统 Agent 操作系统”。更现实的演化可能类似云、安全和数据基础设施：企业同时拥有多个 Runtime，而其上出现跨平台 inventory、identity、policy、observability、evaluation、cost attribution 和 audit layer。也就是说，Agent Runtime 与 Agent Governance/Management 可能成为两个可以分别采购、分别竞争的市场。\n\n真正的新信息不是“企业需要治理 Agent”。这一点已经反复得到 Salesforce、SAP、Collibra 等信号验证。Dataiku 新增的结构性证据是：一家企业 AI 平台厂商正在把“跨供应商 Agent 资产清单 + 风险 + 业务价值”做成 standalone product，并明确按 instance 加 monitored agent 计费。如果这种采购形态成立，Agent 本身会越来越像一种需要持续盘点和管理的企业数字资产，而不只是某个 SaaS 产品里的功能。\n\n这对 VELNAR 有两个不同层级的含义。\n\n第一，对当前 Sales MVP：不行动，不扩 Scope。我们现在没有多 Runtime、数百 Agent 或 shadow agent sprawl，去建设通用 Control Plane 会是典型的提前基础设施化。当前继续坚持 deterministic workflow/orchestration + bounded AI decision + Grounding + Readiness + Policy + Tool + Trace 更重要。Trace、Policy、Action ownership 和可验证业务结果本身，反而是未来任何治理层真正需要消费的数据。\n\n第二，对长期产品架构：需要继续观察“控制权是否从 Runtime 上移”。如果企业最终同时使用多个 Agent 平台，那么只绑定单一 Runtime 的治理能力可能很难成为企业级 Semantic/Operational Authority。相反，能够跨 Runtime 知道“有哪些 Agent、谁负责、能访问什么、调用什么工具、花多少钱、产生什么业务结果、是否通过测试”的层，可能形成新的独立控制点。这与我们此前观察到 Semantic Authority 可能独立于 Agent Runtime 的趋势高度相似：语义权威和运行治理都有可能从具体 Agent 产品中解耦。\n\n但不能由此得出“Agent Control Plane 已经形成成熟市场”。Dataiku 的产品要到 10 月才 GA，跨平台 discovery 的覆盖率、身份映射准确度、实时性、业务价值归因以及企业是否愿意为大量低价值 Agent 按数量持续付费，都还没有充分验证。尤其是“业务价值”远比 latency、token cost 或 error rate 难测：如果价值指标最终仍依赖团队自行定义和录入，Control Plane 很容易退化成更漂亮的资产台账。\n\n【PREDICTION】如果 Agent 数量继续增长，企业 Agent 管理市场可能沿两条路线分化：Runtime 厂商提供本栈内更深的执行控制，独立治理层提供跨 Runtime 的 inventory、risk、cost 和 audit。最终谁掌握控制点，不取决于谁能列出最多 Agent，而取决于谁能把 Agent Identity、Permission、Policy、Trace 与可验证的 Business Outcome 连成一条可信证据链。\n\n接下来最值得跟踪三个问题：第一，跨平台 Agent discovery 是否真的能做到足够完整，还是仍依赖各 Runtime 主动暴露接口；第二，企业会不会接受一个独立第三方成为 Agent inventory 和 audit 的事实来源；第三，Agent ROI 能否形成稳定、可机器计算的度量，还是最终仍必须回到每个业务 Workflow 自己的确定性结果与经营指标。",
+  "fact": "Dataiku 于 2026-09-24 发布跨平台 Agent Management，计划 10 月 GA；其 Harris Poll CIO 调查显示 Agent inventory、lifecycle management 与 value attribution 已成为明确治理痛点。",
+  "why_it_matters": "强化 Agent Control Plane 作为独立层的判断，并提示治理层可能与具体 Agent Runtime 解耦。",
+  "what_is_new": "跨供应商 Agent inventory、risk 和 business-value measurement 被正式包装为 standalone enterprise product，而非单一 Runtime 内置功能。",
+  "challenges_existing_assumptions": "修正“大一统 Agent OS 才是控制层”的隐含假设；多 Runtime + 独立治理层可能是更现实的企业架构。",
+  "hype_uncertainty": "产品尚未 GA；跨平台 discovery 完整度、业务价值归因和按 Agent 计费的可持续性仍待验证。",
+  "startup_implications": "当前 Sales MVP 不扩 Scope；继续沉淀 Trace、Policy、Action ownership 与业务结果证据，长期观察其是否成为跨 Runtime 治理输入。",
+  "discussion_question": "如果企业最终长期并存多个 Agent Runtime，哪一层最可能成为不可替代的控制点：Identity、Semantic Authority、Policy、Trace，还是 Business Outcome attribution？",
+  "sources": [
+    {
+      "label": "Dataiku — Agent Management launch",
+      "url": "https://www.dataiku.com/company/news/dataiku-agent-management-general-availability"
+    },
+    {
+      "label": "Dataiku — Global AI Confessions Report: CIO Edition 2026",
+      "url": "https://www.dataiku.com/company/news/global-ai-confessions-report-cio-edition-2026"
+    },
+    {
+      "label": "Dataiku — Discover Agent Management",
+      "url": "https://www.dataiku.com/blog/dataiku-agent-management"
+    }
+  ]
+}
