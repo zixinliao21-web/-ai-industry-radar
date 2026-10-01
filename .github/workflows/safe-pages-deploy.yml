@@ -57,6 +57,12 @@ jobs:
       - name: Re-run content validation
         run: node scripts/validate-publish.js
 
+      - name: Re-run publication history validation
+        shell: bash
+        run: |
+          BASE_SHA="$(git rev-parse "$RELEASE_SHA^")"
+          node scripts/validate-history.js --base "$BASE_SHA"
+
       - name: Re-run runtime validation
         run: node scripts/validate-runtime.js
 

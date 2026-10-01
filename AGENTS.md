@@ -205,6 +205,17 @@ Do not revert them to long-lived cache-first behavior.
 
 Frequently changed runtime/discussion scripts should also avoid stale-cache lock-in.
 
+## Historical publication integrity
+
+`scripts/validate-history.js` is a production invariant. Routine publication must preserve existing canonical history.
+
+- Consumer V2 may add new items but must not silently remove historical IDs or rewrite existing canonical `body_markdown`.
+- Industry / Deep Read sealed segments are immutable.
+- The previously active segment is append-only during routine publication.
+- Existing canonical `article_text` / `content_markdown` bodies are immutable; corrections should be represented explicitly rather than silently rewriting the historical artifact.
+
+Do not weaken history validation to make an unsafe publisher pass.
+
 ## Production release gate
 
 Production Pages must be deployed through `.github/workflows/safe-pages-deploy.yml` after `VELNAR Content Validation` succeeds. The Pages source must be **GitHub Actions**, not legacy “Deploy from a branch”.

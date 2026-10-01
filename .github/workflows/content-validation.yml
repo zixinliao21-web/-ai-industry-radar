@@ -24,6 +24,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -39,6 +41,11 @@ jobs:
 
       - name: Validate canonical research content
         run: node scripts/validate-publish.js
+
+      - name: Validate publication history
+        env:
+          BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+        run: node scripts/validate-history.js --base "$BASE_SHA"
 
       - name: Validate website runtime
         run: node scripts/validate-runtime.js

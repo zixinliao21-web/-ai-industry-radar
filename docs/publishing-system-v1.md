@@ -44,6 +44,18 @@ A validation failure leaves the production site on the previous successful deplo
 
 Recoverable orphan Industry item files are reported as warnings rather than automatically published.
 
+### History integrity
+
+`scripts/validate-history.js` compares a candidate release with its previous/base commit and blocks silent historical damage:
+
+- Consumer historical IDs may not disappear and canonical `body_markdown` may not be silently rewritten.
+- Industry and Deep Read sealed segments are byte-immutable.
+- Previously active segmented indexes are append-only.
+- Historical indexed IDs and canonical article bodies must remain present.
+- Collection item counts may not decrease.
+
+This protects against valid-looking but truncated JSON and accidental history rewrites.
+
 ### Runtime
 
 `scripts/validate-runtime.js` checks:
