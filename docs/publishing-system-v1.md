@@ -87,3 +87,18 @@ This safety layer does not:
 - introduce a backend, CMS or database
 - move browser-local state into canonical content
 - change website UI
+
+
+## Health audit
+
+`.github/workflows/research-health.yml` runs once per day and may also be started manually. It:
+
+- re-runs canonical content validation;
+- re-runs runtime validation;
+- records current item counts and last content-update ages;
+- checks all six production surfaces;
+- checks the live `release-status.json` against the deployed canonical stores.
+
+Content age is informational. The health workflow does not invent research cadence or publish content.
+
+The safe deployment workflow also performs a post-deploy live-site check against the exact validated commit.

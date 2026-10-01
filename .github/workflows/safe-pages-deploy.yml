@@ -84,3 +84,9 @@ jobs:
         if: steps.latest.outputs.deploy == 'true'
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Verify live production release
+        if: steps.latest.outputs.deploy == 'true'
+        env:
+          RADAR_BASE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: node scripts/check-live-release.js --commit "$RELEASE_SHA"

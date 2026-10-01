@@ -215,6 +215,12 @@ Publishers must not bypass or weaken:
 
 Recoverable orphan Industry item files are not permission to auto-publish them.
 
+## Operational health audit
+
+`.github/workflows/research-health.yml` is the repository heartbeat. It validates repository integrity and the live GitHub Pages release without changing content. Content age is reported but must not be converted into an editorial cadence rule unless the owning research thread explicitly defines one.
+
+`scripts/check-live-release.js` verifies the deployed release status and canonical collection counts. Do not remove this post-deploy check merely to make a failing release green.
+
 ## Safe change rule
 
 For UI-only work:

@@ -1,0 +1,42 @@
+name: VELNAR Research Health Audit
+
+on:
+  schedule:
+    - cron: '20 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    name: Audit repository and live production
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate canonical research content
+        run: node scripts/validate-publish.js
+
+      - name: Validate website runtime
+        run: node scripts/validate-runtime.js
+
+      - name: Generate health audit
+        run: node scripts/health-audit.js --output health-audit.json
+
+      - name: Check live production
+        run: node scripts/check-live-release.js
+
+      - name: Upload health artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: velnar-research-health
+          path: health-audit.json
+          retention-days: 14
