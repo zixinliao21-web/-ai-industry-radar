@@ -205,6 +205,12 @@ Do not revert them to long-lived cache-first behavior.
 
 Frequently changed runtime/discussion scripts should also avoid stale-cache lock-in.
 
+## Publication change-scope gate
+
+`scripts/validate-change-scope.js` enforces routine publication isolation. A candidate that changes canonical research content may change only one Collection and must not bundle runtime/release-infrastructure edits. Frozen legacy stores are immutable.
+
+Keep migrations and infrastructure work in focused commits so they can be reviewed independently from editorial publication.
+
 ## Atomic publication transactions
 
 Industry Radar and Weekly Deep Read are multi-file segmented collections. When Git tree/commit/ref primitives are available, routine publication must prefer a single atomic candidate commit containing the canonical item, bounded segment change, and tiny manifest change. Re-check `main` before the ref update and rebuild on races.

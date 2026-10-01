@@ -44,6 +44,16 @@ A validation failure leaves the production site on the previous successful deplo
 
 Recoverable orphan Industry item files are reported as warnings rather than automatically published.
 
+### Collection change scope
+
+`scripts/validate-change-scope.js` enforces publication isolation for each candidate commit:
+
+- frozen legacy stores `news.json` and `deep-read.json` may not change;
+- one candidate may modify canonical content for at most one Collection;
+- a content candidate may not simultaneously modify HTML, shared assets, Service Worker, web manifest, workflows, publishing scripts or release-state files.
+
+Infrastructure/UI work with no canonical-content change remains allowed. This converts the repository's cross-collection publishing boundary from a prompt convention into a CI gate.
+
 ### History integrity
 
 `scripts/validate-history.js` compares a candidate release with its previous/base commit and blocks silent historical damage:

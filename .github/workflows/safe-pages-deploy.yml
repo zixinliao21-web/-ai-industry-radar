@@ -57,6 +57,12 @@ jobs:
       - name: Re-run content validation
         run: node scripts/validate-publish.js
 
+      - name: Re-run publication change-scope validation
+        shell: bash
+        run: |
+          CHANGE_BASE="$(git rev-parse "$RELEASE_SHA^")"
+          node scripts/validate-change-scope.js --base "$CHANGE_BASE"
+
       - name: Resolve trusted production baseline
         id: history-base
         shell: bash
