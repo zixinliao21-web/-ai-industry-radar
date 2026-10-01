@@ -1,124 +1,95 @@
 # Weekly Deep Read — Content Contract
 
 Status: Active  
-Schema: `deep-read.json` V2.0  
-Canonical content store: `deep-read.json`
+Storage schema: segmented index V3  
+Legacy snapshot: `deep-read.json` (frozen)
 
 ## 1. Product identity
 
-Weekly Deep Read is a long-term curated reading product.
+Weekly Deep Read is a long-term curated reading product. It is not a news stream and must not regenerate shorter website summaries from finished research.
 
-It is not a news stream, not an Intelligence Radar tag, and not a place to regenerate shorter summaries for the website.
-
-The authoritative artifact is the **finished Deep Read produced in this ChatGPT thread**.
-
-The publishing flow is:
+The authoritative artifact is the finished Deep Read produced in the owning ChatGPT research thread.
 
 ```text
 ChatGPT selects and reads a source
-→ ChatGPT writes the finished Deep Read
-→ that finished Deep Read becomes the publication artifact
-→ store it in deep-read.json
-→ website renders that artifact
+→ writes the finished Deep Read
+→ freezes that exact artifact
+→ stores one complete item file
+→ updates bounded index metadata
+→ validated production deployment
 ```
 
 There is no second editorial rewrite between ChatGPT and the website.
 
-## 2. Verbatim publishing rule
+## 2. Canonical storage
 
-For a published item, `content_markdown` is the canonical body.
+Active storage is:
 
-It must preserve the finished Deep Read from this thread at full length, including:
-
-- title and section hierarchy;
-- paragraphs and emphasis;
-- quoted framing;
-- code / text blocks;
-- examples and analogies;
-- the original-source link;
-- analysis, interpretation and concluding judgment contained in that finished Deep Read.
-
-Do not compress the body into `why_read`, `core_argument`, `key_takeaways`, a card summary, or a Radar-style memo.
-
-Do not re-search an already finished Deep Read merely to create a different web version.
-
-Do not silently rewrite or “improve” historical prose during publishing.
-
-If a factual correction becomes necessary later, handle it explicitly as correction metadata or a new editorial decision; do not silently mutate the historical artifact.
-
-Mechanical adaptation needed to make a ChatGPT rich link clickable on the website is allowed, but it must not alter the visible prose or argument.
-
-## 3. Metadata is secondary
-
-Metadata exists only for indexing, sorting, filtering and source access.
-
-A minimal item is:
-
-```json
-{
-  "id": "DR-YYYY-NNN",
-  "added_date": "YYYY-MM-DD",
-  "title": "string",
-  "author": ["string"],
-  "publication": "string",
-  "source_url": "https://...",
-  "original_publish_date": "YYYY-MM-DD | YYYY-MM | YYYY",
-  "estimated_reading_time": "string",
-  "themes": ["string"],
-  "content_markdown": "full finished Deep Read"
-}
+```text
+deep-read-index.json
+deep-read-index-segments/segment-XXXX.json
+deep-read-items/<id>.json
 ```
 
-Fields may be omitted when they were not known in the original artifact and are not needed for indexing.
+- `deep-read-index.json` is a tiny manifest only.
+- Index segments contain bounded directory/navigation metadata, maximum 8 items each.
+- Full 8-item segments are sealed and immutable.
+- `deep-read-items/<id>.json` is the canonical complete record for one Deep Read.
+- `deep-read.json` is the frozen V2 legacy snapshot and must not receive new publications.
 
-The website must not synthesize the article body from metadata.
+## 3. Verbatim publishing rule
 
-## 4. Separation from the two Radar collections
+For a published item, `content_markdown` in the per-item file is the canonical body. Preserve the finished Deep Read at full length, including headings, paragraphs, emphasis, quotations, lists, code/text blocks, examples, source link, analysis and concluding judgment.
 
-- `news.json` remains VELNAR Intelligence Radar.
-- `consumer-radar.json` remains AI C 端产业雷达.
-- `deep-read.json` remains Weekly Deep Read.
+Do not compress the body into `why_read`, `core_argument`, `key_takeaways`, a card summary, or a Radar-style memo. Mechanical adaptation of ChatGPT-only rich links is allowed only when visible prose and reasoning remain unchanged.
 
-The three collections do not share an editorial schema.
+Historical legacy items without a recovered canonical body may remain explicitly marked `legacy_summary_do_not_render_as_body`; the old summary must not masquerade as the article.
 
-Radar asks what changed in the world and how it changes our map.
+## 4. Compact index metadata
 
-Deep Read preserves a finished reading artifact and the reasoning that made the source worth reading.
+Segments may contain metadata needed for the directory and archive navigation, including:
 
-Never write Deep Read content into either Radar collection.
+- `id`
+- `added_date`
+- `title`
+- author/publication metadata
+- `source_url`
+- `original_publish_date`
+- `estimated_reading_time`
+- `topic`
+- `themes`
+- `access`
+- `content_status`
 
-## 5. Selection scope
+Never put `content_markdown` or other full long-form bodies in the manifest or index segments.
 
-The existing scope remains:
+## 5. Safe publication order
 
-- AI / Agent and technological innovation
-- entrepreneurship, strategy and organizational management
-- market analysis and business models
-- social, cultural and long-term trends
-- early-stage startup building
-- company / business case studies
-- teams and leadership qualities
+For one new Deep Read:
+
+1. Read the complete current `deep-read-index.json` and record its exact blob SHA, item count, segment size and descriptors.
+2. Check whether `deep-read-items/<id>.json` already exists. Reconcile rather than duplicate.
+3. Read the current active segment completely.
+4. Finish and freeze the canonical Deep Read.
+5. Create `deep-read-items/<id>.json` first.
+6. Append compact metadata to the active segment using its exact SHA; if it is full/sealed, create the next sequential segment.
+7. Update the tiny manifest last using its exact current SHA: increment item count exactly once, update `updated_at`, and update/append the active segment descriptor.
+8. On any SHA race, re-read and reconcile. Never overwrite concurrent history.
+9. Verify the item exists exactly once, the index entry exists exactly once, counts agree, and sealed historical segments did not change.
+10. Production is not considered live until `VELNAR Content Validation` and `VELNAR Safe Pages Deploy` succeed for the candidate SHA.
+
+A recoverable orphan item is safer than rewriting history. Do not auto-publish an orphan merely because its file exists.
+
+## 6. Separation from other collections
+
+Industry Radar, Consumer Radar and Weekly Deep Read retain independent editorial schemas. Routine Deep Read publication must not modify Industry, Consumer, HTML/CSS/JS/PWA, or browser-local state.
+
+## 7. Selection scope
+
+The established scope remains AI/Agent and technological innovation; entrepreneurship, strategy and organizational management; market analysis and business models; social/cultural/long-term trends; early-stage startup building; business/company cases; teams and leadership.
 
 The Tuesday / Thursday / Saturday cadence belongs to ChatGPT automation and must not be copied into article data.
 
-## 6. Historical migration rule
+## 8. Website contract
 
-Past Deep Reads already written in this thread should be migrated from the **actual finished assistant response**, not reconstructed from a later summary.
-
-If a prior website entry contains only a short structured synopsis, that synopsis is not the canonical body and should be replaced or superseded by the original full Deep Read.
-
-Repeated recommendations of the same source do not need duplicate website entries. Choose the intended finished artifact and preserve that artifact verbatim.
-
-## 7. Website-team contract
-
-The VELNAR Research website thread owns rendering and UI.
-
-For Weekly Deep Read it should:
-
-1. read `deep-read.json`;
-2. use metadata for directory/index surfaces;
-3. render `content_markdown` as the full article body;
-4. keep `source_url` accessible as the original-source link;
-5. not truncate, summarize, or map the body into Radar sections unless explicitly requested.
-
-This content thread owns selection and the full Deep Read artifact. The website thread owns presentation only.
+The directory reads compact V3 index metadata. The article page fetches only the selected `deep-read-items/<id>.json` and renders `content_markdown` as the complete article body. It must not truncate, summarize, or remap that body into Radar sections.

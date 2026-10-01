@@ -135,18 +135,58 @@ function checkConsumer() {
 }
 
 function checkDeepRead() {
-  const data = readJson('deep-read.json');
-  if (!data) return { count: 0, updated_at: null };
-  if (data.schema_version !== '2.0') fail.push('Deep Read schema_version must be 2.0');
-  if (!Array.isArray(data.items)) { fail.push('Deep Read items must be an array'); return { count: 0, updated_at: data.updated_at || null }; }
+  const manifest = readJson('deep-read-index.json');
+  if (!manifest) return { count: 0, updated_at: null };
+  if (manifest.schema_version !== '3.0') fail.push('Deep Read manifest schema_version must be 3.0');
+  if (manifest.storage !== 'segmented_index') fail.push('Deep Read manifest storage must be segmented_index');
+  if (!Number.isInteger(manifest.segment_size) || manifest.segment_size < 1) fail.push('Deep Read segment_size must be a positive integer');
+  if (!Number.isInteger(manifest.item_count) || manifest.item_count < 0) fail.push('Deep Read item_count must be a non-negative integer');
+  if (!Array.isArray(manifest.segments) || !manifest.segments.length) {
+    fail.push('Deep Read manifest must contain segments');
+    return { count: 0, updated_at: manifest.updated_at || null };
+  }
+
   const ids = new Set();
-  data.items.forEach((item, i) => {
-    const ctx = `Deep Read item #${i + 1}`;
-    if (!uniqueKey(ids, item && item.id, ctx)) return;
-    if (!nonEmpty(item.title)) fail.push(`${ctx}: missing title`);
-    if (item.content_status === 'published_verbatim' && !nonEmpty(item.content_markdown)) fail.push(`Deep Read published_verbatim item missing content_markdown: ${item.id}`);
+  const segmentPaths = new Set();
+  let total = 0;
+  manifest.segments.forEach((segment, index) => {
+    const ctx = `Deep Read segment descriptor #${index + 1}`;
+    if (!segment || typeof segment !== 'object') { fail.push(`${ctx}: invalid descriptor`); return; }
+    const expectedPath = `deep-read-index-segments/segment-${segment.id}.json`;
+    if (segment.path !== expectedPath) fail.push(`${ctx}: path must be ${expectedPath}`);
+    segmentPaths.add(segment.path);
+    const data = readJson(segment.path);
+    if (!data) return;
+    if (data.schema_version !== '3.0') fail.push(`${segment.path}: schema_version must be 3.0`);
+    if (String(data.segment) !== String(segment.id)) fail.push(`${segment.path}: segment id mismatch`);
+    if (!Array.isArray(data.items)) { fail.push(`${segment.path}: items must be an array`); return; }
+    total += data.items.length;
+    if (data.items.length !== segment.count) fail.push(`${segment.path}: declared count ${segment.count}, actual ${data.items.length}`);
+    if (data.items.length > manifest.segment_size) fail.push(`${segment.path}: exceeds segment_size ${manifest.segment_size}`);
+    if (index < manifest.segments.length - 1 && segment.sealed !== true) fail.push(`${segment.path}: historical segment must be sealed`);
+    if (segment.sealed === true && data.items.length !== manifest.segment_size) fail.push(`${segment.path}: sealed segment must contain exactly ${manifest.segment_size} items`);
+
+    data.items.forEach((meta, itemIndex) => {
+      const itemCtx = `${segment.path} item #${itemIndex + 1}`;
+      if (!uniqueKey(ids, meta && meta.id, itemCtx)) return;
+      if (!nonEmpty(meta.title)) fail.push(`${itemCtx}: missing title`);
+      const itemPath = `deep-read-items/${meta.id}.json`;
+      const item = readJson(itemPath);
+      if (!item) return;
+      if (item.id !== meta.id) fail.push(`${itemPath}: id mismatch`);
+      if (item.title !== meta.title) warn.push(`${itemPath}: title differs from index metadata`);
+      if (item.content_status === 'published_verbatim' && !nonEmpty(item.content_markdown)) fail.push(`Deep Read published_verbatim item missing content_markdown: ${item.id}`);
+    });
   });
-  return { count: data.items.length, updated_at: data.updated_at || null };
+  if (total !== manifest.item_count) fail.push(`Deep Read item_count mismatch: manifest ${manifest.item_count}, actual ${total}`);
+
+  const itemsDir = full('deep-read-items');
+  if (fs.existsSync(itemsDir)) {
+    const diskIds = fs.readdirSync(itemsDir).filter(x => x.endsWith('.json')).map(x => x.slice(0, -5));
+    const orphans = diskIds.filter(id => !ids.has(id));
+    if (orphans.length) warn.push(`Deep Read orphan item files: ${orphans.join(', ')}`);
+  }
+  return { count: total, updated_at: manifest.updated_at || null, storage: manifest.storage, segment_count: manifest.segments.length };
 }
 
 function checkReleaseLock() {

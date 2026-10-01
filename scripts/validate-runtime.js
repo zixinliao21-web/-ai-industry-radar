@@ -56,7 +56,7 @@ const sw = read('service-worker.js');
 for (const route of ['article.html','consumer-radar.html','consumer-article.html','deep-read.html','deep-read-article.html']) {
   if (!sw.includes(route)) fail.push(`service-worker.js: missing route/fallback reference ${route}`);
 }
-for (const store of ['news-index.json','consumer-radar.json','deep-read.json','news-index-segments']) {
+for (const store of ['news-index.json','consumer-radar.json','deep-read-index.json','news-index-segments','deep-read-index-segments','deep-read-items']) {
   if (!sw.includes(store)) fail.push(`service-worker.js: missing network-first content reference ${store}`);
 }
 

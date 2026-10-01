@@ -1,0 +1,41 @@
+{
+  "id": "DR-2026-002",
+  "added_date": "2026-09-18",
+  "title": "The Shift to Agentic AI: Evidence from Codex",
+  "author": [
+    "Drew Johnston",
+    "David Holtz",
+    "Alex Martin Richmond",
+    "Christopher Ong",
+    "Prasanna Tambe",
+    "Aaron Chatterji"
+  ],
+  "publication": "arXiv",
+  "source_type": "research_paper",
+  "source_url": "https://arxiv.org/abs/2606.26959",
+  "original_publish_date": "2026-06-25",
+  "estimated_reading_time": "约 45–70 分钟",
+  "topic": "AI / Agent 与工作",
+  "themes": [
+    "Agentic AI",
+    "未来工作",
+    "组织能力",
+    "Workflow",
+    "AI adoption"
+  ],
+  "why_read": "它提供了少见的大规模 Agent 使用实证，而不是只讨论能力演示。对于判断 Agent 是否正在改变任务长度、并行工作和跨职能执行方式，这比观点型文章更有长期参考价值。",
+  "core_argument": "随着 Agent 能力提高，用户正在从短交互转向更长、更复杂、更并行的委托式工作；这会推动生产率、岗位边界和组织方式发生变化。",
+  "key_takeaways": [
+    "Agent 使用正在从开发者快速扩散到非技术知识工作者。",
+    "用户开始管理多个并行 Agent，并把更长周期的工作交给 Agent。",
+    "真实采用数据提示未来工作的变化可能是工作流和岗位重组，而不仅是单任务提效。"
+  ],
+  "our_notes": "这篇应作为 Agent 采用的‘实证锚点’，但不能把 OpenAI 内部和 Codex 前沿用户直接外推到所有企业。最值得跟踪的是：并行 Agent、长周期任务和跨岗位执行是否会在更普通行业中复现。",
+  "discussion_questions": [
+    "当每个知识工作者都能并行管理多个 Agent 时，管理者应该如何重新定义授权、审查和责任边界？"
+  ],
+  "access": {
+    "type": "free"
+  },
+  "content_status": "legacy_summary_do_not_render_as_body"
+}

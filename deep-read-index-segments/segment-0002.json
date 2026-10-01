@@ -1,0 +1,82 @@
+{
+  "schema_version": "3.0",
+  "segment": "0002",
+  "items": [
+    {
+      "id": "DR-2026-009",
+      "added_date": "2026-09-18",
+      "title": "The new management playbook for AI: How to move faster and create more value",
+      "publication": "McKinsey & Company",
+      "source_url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-new-management-playbook-for-ai-how-to-move-faster-and-create-more-value",
+      "original_publish_date": "2026-08-28",
+      "estimated_reading_time": "约 20–30 分钟",
+      "themes": [
+        "AI transformation",
+        "组织能力",
+        "领导力",
+        "企业案例",
+        "Operating Model"
+      ],
+      "content_status": "published_verbatim"
+    },
+    {
+      "id": "DR-2026-010",
+      "added_date": "2026-09-18",
+      "title": "The key to AI value is hiding in plain sight: Your operating model",
+      "publication": "McKinsey & Company",
+      "source_url": "https://www.mckinsey.com/capabilities/people-and-organization/our-insights/the-key-to-ai-value-is-hiding-in-plain-sight-your-operating-model",
+      "original_publish_date": "2026-09-09",
+      "estimated_reading_time": "约 20–30 分钟",
+      "themes": [
+        "Operating Model",
+        "组织设计",
+        "AI transformation",
+        "领导力",
+        "团队"
+      ],
+      "content_status": "published_verbatim"
+    },
+    {
+      "id": "DR-2026-011",
+      "added_date": "2026-09-18",
+      "title": "Stacking the odds: A blueprint for successfully scaling agentic AI",
+      "publication": "McKinsey & Company",
+      "source_url": "https://www.mckinsey.com/capabilities/operations/our-insights/stacking-the-odds-a-blueprint-for-successfully-scaling-agentic-ai",
+      "original_publish_date": "2026-09-14",
+      "estimated_reading_time": "约 20–30 分钟",
+      "themes": [
+        "Agentic AI",
+        "Workflow",
+        "Governance",
+        "Data Readiness",
+        "Enterprise AI"
+      ],
+      "content_status": "published_verbatim"
+    },
+    {
+      "id": "DR-2026-012",
+      "added_date": "2026-09-19",
+      "title": "We Must Pace the Frontier",
+      "author": [
+        "Dario Amodei"
+      ],
+      "publication": "Dario Amodei",
+      "institution": "Anthropic",
+      "source_type": "essay",
+      "source_url": "https://darioamodei.com/post/we-must-pace-the-frontier",
+      "original_publish_date": "2026-09",
+      "estimated_reading_time": "约 35–50 分钟",
+      "topic": "AI Frontier 与领导判断",
+      "themes": [
+        "AI Frontier",
+        "Recursive Self-Improvement",
+        "Agent",
+        "技术治理",
+        "CEO 判断",
+        "组织能力",
+        "长期技术趋势"
+      ],
+      "content_status": "published_verbatim"
+    }
+  ]
+}

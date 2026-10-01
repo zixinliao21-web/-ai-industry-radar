@@ -1,0 +1,40 @@
+{
+  "id": "DR-2026-005",
+  "added_date": "2026-09-18",
+  "title": "Snowflake in 2026 (A): All In On Enterprise AI",
+  "author": [
+    "Raj Joshi",
+    "Robert Burgelman"
+  ],
+  "publication": "Stanford Graduate School of Business Case Studies",
+  "institution": "Stanford Graduate School of Business",
+  "source_type": "case_study",
+  "source_url": "https://www.gsb.stanford.edu/faculty-research/case-studies/snowflake-2026-all-enterprise-ai",
+  "original_publish_date": "2026",
+  "estimated_reading_time": "约 45–60 分钟",
+  "topic": "企业案例与战略",
+  "themes": [
+    "Enterprise AI",
+    "战略转型",
+    "商业模式",
+    "数据平台",
+    "CEO leadership"
+  ],
+  "why_read": "这是一个完整的企业战略案例：Snowflake 如何在核心业务仍然成功时主动押注 AI Data Cloud，并判断企业数据、治理和生态合作在 AI 价值链中的控制点。",
+  "core_argument": "Snowflake 必须避免在 AI 价值链中退化为数据管道，因此通过 AI Data Cloud、Agent 平台、生态合作和 GTM 转型，把 governed enterprise data 重新定位为企业智能的核心资产。",
+  "key_takeaways": [
+    "战略转型最难的时点往往是旧业务仍然健康、但价值链已经开始迁移的时候。",
+    "企业 AI 的差异化不一定来自自研基础模型，也可能来自受治理的数据、上下文和分发位置。",
+    "Consumption-based 商业模式在 Agent 使用增长和模型效率提升之间存在新的机会与张力。"
+  ],
+  "our_notes": "读这篇时最值得追问的不是 Snowflake 会不会赢，而是‘如果所有人都能调用同样模型，一家公司究竟控制价值链哪一层’。这个问题也适用于早期 AI 创业公司的护城河设计。",
+  "discussion_questions": [
+    "在模型能力逐步商品化后，企业 AI 公司最值得长期拥有的资产是数据、上下文、Workflow、分发，还是执行控制权？"
+  ],
+  "access": {
+    "type": "restricted",
+    "note": "案例下载主要向 Stanford GSB 学生、教职员工与校友开放。"
+  },
+  "content_status": "published_verbatim",
+  "content_markdown": "# 本期 Deep Read：Snowflake 如何从“数据仓库”押注成为 AI 时代的企业操作层\n\n## [Snowflake in 2026 (A): All In On Enterprise AI](https://www.gsb.stanford.edu/faculty-research/case-studies/snowflake-2026-all-enterprise-ai)\n\n**作者：** Raj Joshi、Robert Burgelman  \n**发布：** Stanford Graduate School of Business  \n**发布时间：** 2026 年新发布案例，Stanford 页面近期上线；**21 页**  \n**阅读时间：** 约 **45–60 分钟**，符合这次优先寻找的深度长文标准。案例正文主要面向 Stanford GSB 学生、教师和校友开放。\n\n这次我选它而不是一篇泛泛谈“AI 改变企业”的文章，因为它同时覆盖了你最近增加的几个主题：**企业案例、CEO 战略判断、商业模式、组织转型、Agent、竞争战略和领导者素养。**\n\n---\n\n## 这篇案例研究的核心问题\n\nSnowflake 曾经靠一个非常清楚的定位成长起来：\n\n> **Cloud Data Warehouse**\n\n它最重要的早期架构创新之一，是把 storage 和 compute 分离。\n\n但到了 AI 时代，一个危险的问题出现了：\n\n> **如果企业真正产生价值的“智能层”被 OpenAI、Anthropic、Microsoft、Databricks 等公司占据，Snowflake 会不会最后只剩下一个存数据的管道？**\n\nStanford 案例甚至直接把这个风险称为成为：\n\n> **“dumb pipe”——笨管道。**\n\n于是 2024 年上任的 CEO Sridhar Ramaswamy 做了一个非常大的战略转向：\n\n**Data Warehouse**\n\n↓\n\n**Data Cloud**\n\n↓\n\n**AI Data Cloud**\n\n↓\n\n企业数据 + AI + Agent\n\n他的赌注是：\n\n> **企业 AI 真正的瓶颈最终不是有没有模型，而是模型能不能安全地接触企业自己的数据、语义、权限和业务上下文。**\n\n如果这个判断成立，Snowflake 就不应该只卖数据库，而应该成为企业 AI 的基础层。\n\n---\n\n# 第一层：这是一个非常典型的“主动自我颠覆”案例\n\n企业战略里有一个很困难的问题：\n\n> **什么时候应该主动破坏自己已经成功的商业模式？**\n\nSnowflake 原来的生意并没有坏掉。\n\n相反，它已经建立了非常成功的数据平台业务。\n\n问题在于 CEO 判断：\n\n> **未来价值可能向 AI Intelligence Layer 转移。**\n\n如果等市场证明这件事情以后再转型，可能已经来不及。\n\n所以这不是：\n\n> “业务不行了，我们找第二增长曲线。”\n\n而是：\n\n> **“核心业务还很好，但我们判断价值链正在迁移，因此必须提前重新定位公司。”**\n\n这是创业者和 CEO 很值得训练的一种能力：\n\n**战略不是解决今天的问题，而是判断今天看起来还没有问题的东西，什么时候会变成问题。**\n\n---\n\n# 第二层：Snowflake 的真正 AI 护城河不是模型\n\nSnowflake 没有试图自己训练一个模型然后跟 Anthropic、Google 等公司正面竞争。\n\n它的判断是：\n\n```text\n企业真正的数据\n+\n权限\n+\nGovernance\n+\n业务语义\n+\n历史 Context\n        ↓\nEnterprise Intelligence\n```\n\n因此它选择让不同模型进入自己的生态，而把自己控制的核心资源放在：\n\n> **governed enterprise data。**\n\n这也是它与 Anthropic、Google、SAP、Salesforce、Accenture 等公司建立生态合作，而不是试图把所有层全部自己做掉的原因之一。\n\n这背后其实是一个非常重要的创业战略原则：\n\n> **不要因为 AI 很重要，就默认自己必须拥有模型。**\n\n真正应该问的是：\n\n> **价值链里哪一层是我最有机会长期控制的？**\n\n---\n\n# 第三层：商业模式也必须跟着 AI 改\n\nSnowflake 本身有一个非常值得研究的商业模式：\n\n> **Consumption-based pricing。**\n\n不是传统 SaaS：\n\n> $X / seat / month\n\n而是客户用了多少计算、数据和服务，就产生多少收入。\n\nAI 出现以后，这个模式既有优势，也有风险。\n\n优势很明显：\n\nAgent 越多 →\n\n查询越多 →\n\nInference 越多 →\n\n数据访问越多 →\n\nSnowflake consumption 越高。\n\n也就是说，如果 Agent 真正进入企业工作流，Snowflake 有可能天然分享 Agent 使用量增长。\n\n但反过来，如果模型效率大幅提高：\n\n> 完成同样任务需要的 compute 下降，\n\n那么 consumption economics 又可能受到影响。\n\nStanford 因此把：\n\n> **AI 时代 consumption-based revenue model 是否仍然可持续**\n\n直接列成这篇案例的核心学习问题之一。\n\n这比简单讨论：\n\n> “AI SaaS 应该按 Seat 还是 Token 收费？”\n\n更深一层。\n\n真正的问题应该是：\n\n> **你的收费单位，是否和客户获得的价值一起增长？**\n\n---\n\n# 第四层：一个产品成功，不等于公司完成 AI 转型\n\n案例里一个很值得注意的数据是：\n\nSnowflake 的 AI 产品已经提前达到约：\n\n> **$100 million AI revenue run rate。**\n\n这至少说明市场存在真实付费需求。\n\n但 Stanford 仍然把一个问题放在案例中心：\n\n> **pilot-to-production gap。**\n\n企业现在很容易：\n\n```text\n做 AI Demo\n↓\n做 Copilot\n↓\n做 Agent Pilot\n```\n\n真正困难的是：\n\n```text\n接真实数据\n↓\n接真实权限\n↓\n进入 Workflow\n↓\n处理异常\n↓\n承担业务责任\n↓\n规模化\n```\n\n所以真正的 Enterprise AI 公司竞争的不是：\n\n> 谁 Demo 更惊艳。\n\n而是：\n\n> **谁能让 AI 从实验进入生产。**\n\n---\n\n# 第五层：案例里其实藏着一个领导力实验\n\nSnowflake 前后两任 CEO 的管理方式差异很大。\n\n前 CEO Frank Slootman 的时代，更强调：\n\n**execution、focus、sales discipline、performance intensity。**\n\n而 Ramaswamy 接手以后，需要解决的是另一种管理问题：\n\n> **如何让一家已经规模化的成功企业重新进入创新状态。**\n\nStanford 特意把：\n\n> **两种 CEO leadership philosophy 对组织产生的不同影响**\n\n列为案例学习目标之一。\n\n这其实说明：\n\n**不存在脱离公司阶段的“最好领导风格”。**\n\n公司从 0→1 时需要一种领导方式；\n\n1→10 需要另一种；\n\n已经成功以后重新进入技术范式转换，又可能需要第三种。\n\n优秀领导者真正需要的是：\n\n> **根据公司所处阶段改变自己的 Operating Model。**\n\n---\n\n# 对 AI 创业最值得记住的一点\n\nSnowflake 这个案例可以压缩成一个很有用的战略框架：\n\n```text\n技术范式变化\n        ↓\n价值链发生迁移\n        ↓\n判断价值将流向哪一层\n        ↓\n找到自己能够控制的战略资产\n        ↓\n重新设计产品\n        ↓\n重新设计商业模式\n        ↓\n重新设计 GTM\n        ↓\n重新设计组织\n```\n\n注意最后四项。\n\n真正的战略转型不是：\n\n> **“我们增加一个 AI 功能。”**\n\n而是产品、Pricing、GTM、组织甚至公司定位一起发生变化。\n\n这也是为什么这篇案例值得完整读。\n\n---\n\n## 对你当前思考最有价值的映射\n\n你现在关注 AI-native entrepreneurship 时，可以把 Snowflake 的问题缩小到创业公司尺度：\n\n假设未来基础模型越来越强、越来越便宜，那么：\n\n> **你的公司到底控制什么？**\n\n可能不是模型，而是：\n\n**行业客户关系 + 专有业务数据 + Grounding + Workflow + Policy + Evaluation + System Integration + Domain Knowledge。**\n\n如果这些东西只是临时帮客户配置一次，那么你可能是一家 AI 项目公司。\n\n如果这些能力能够：\n\n> **不断复用 → 不断积累 → 新客户部署越来越快 → 客户使用越多系统越强**\n\n它才开始变成真正的 **organizational / data / workflow moat**。\n\n所以读这篇时，我建议你始终带着一个问题：\n\n> **“如果所有竞争者明天都能使用同样强的模型，我的公司还剩下什么？”**\n\n能够回答这个问题，才开始真正进入 **AI 商业模式设计**，而不只是 AI 产品设计。"
+}

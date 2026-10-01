@@ -1,0 +1,40 @@
+{
+  "id": "DR-2026-004",
+  "added_date": "2026-09-18",
+  "title": "How Agentic AI Supercharges Startups and Threatens Incumbents",
+  "author": [
+    "Vivian S. Lee",
+    "Linda Mantia",
+    "Jon McNeill"
+  ],
+  "publication": "Harvard Business Review",
+  "institution": "Harvard Business Review",
+  "source_type": "magazine_article",
+  "source_url": "https://hbr.org/2026/07/how-agentic-ai-supercharges-startups-and-threatens-incumbents",
+  "original_publish_date": "2026-07",
+  "estimated_reading_time": "约 25–40 分钟（精读估计）",
+  "topic": "创业与商业模式",
+  "themes": [
+    "创业起步",
+    "Agentic AI",
+    "AI-native company",
+    "商业模式",
+    "组织设计"
+  ],
+  "why_read": "它把 Agentic AI 放到创业经济学里，而不是只谈产品能力：当原型、试错、协调和部分执行成本被压缩，创业门槛和 incumbent 的组织包袱都会发生变化。",
+  "core_argument": "Agentic AI 正在形成创业的第二次成本压缩，使小团队能以更低时间、资本和人数启动与扩张，同时迫使成熟企业重新设计 operating model。",
+  "key_takeaways": [
+    "Agent 系统会降低从想法到验证、迭代和扩张所需的部分时间与资本。",
+    "AI-native 创业公司的结构性优势来自从零围绕 Agent 设计流程，而非仅把 AI 叠加在旧流程上。",
+    "执行成本下降后，问题选择、分发、工作流和组织能力的重要性反而上升。"
+  ],
+  "our_notes": "这篇适合用来训练‘AI 降低什么成本、又没有降低什么成本’的判断。Agent 可以压缩执行，但不会自动提供需求、分发、信任和真正的业务壁垒。",
+  "discussion_questions": [
+    "如果基础 Agent 能力越来越普及，早期创业公司应该把最稀缺的资源集中在哪些不可被模型商品化的环节？"
+  ],
+  "access": {
+    "type": "paywalled",
+    "note": "HBR 可能需要订阅或购买全文。"
+  },
+  "content_status": "legacy_summary_do_not_render_as_body"
+}

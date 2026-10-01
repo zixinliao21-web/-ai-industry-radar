@@ -1,0 +1,40 @@
+{
+  "id": "DR-2026-006",
+  "added_date": "2026-09-18",
+  "title": "Google’s Global Business Organization (B): AI-First Leadership and Innovation",
+  "author": [
+    "Tim Rosenberger",
+    "Amy Wilkinson"
+  ],
+  "publication": "Stanford Graduate School of Business Case Studies",
+  "institution": "Stanford Graduate School of Business",
+  "source_type": "case_study",
+  "source_url": "https://www.gsb.stanford.edu/faculty-research/case-studies/googles-global-business-organization-b-ai-first-leadership-innovation",
+  "original_publish_date": "2026",
+  "estimated_reading_time": "约 45–60 分钟",
+  "topic": "领导力与组织能力",
+  "themes": [
+    "AI-first leadership",
+    "组织转型",
+    "团队领导",
+    "激励机制",
+    "执行速度"
+  ],
+  "why_read": "它不是‘Google 怎么用 AI’的产品案例，而是一个 20,000 人商业组织如何在继续承担核心收入责任的同时，提高速度、调整结构与激励，并把 AI 真正嵌入销售工作流的领导力案例。",
+  "core_argument": "成熟企业的 AI-first 转型不仅需要技术部署，还需要领导者同时重构决策速度、组织结构、激励与文化，并在高强度转型和组织耐力之间做取舍。",
+  "key_takeaways": [
+    "大型成熟组织的难题是边运行现有收入机器，边重构未来 operating model。",
+    "AI-first 不等于员工学会用工具，而是 AI 进入真实 seller workflow、产品和决策机制。",
+    "领导者需要在不完整信息下形成可修正但明确的判断，同时避免把长期高强度误当成战略。"
+  ],
+  "our_notes": "对早期团队最有价值的不是复制 Google 的制度，而是理解组织速度来自信息流、决策权、激励和执行机制，而不是单纯让每个人更忙。创业公司应该优先优化学习与决策速度，避免过早组织化。",
+  "discussion_questions": [
+    "早期团队如何建立高决策速度和清晰责任，同时避免把‘大公司式制度’过早引入几个人的创业阶段？"
+  ],
+  "access": {
+    "type": "restricted",
+    "note": "案例下载主要向 Stanford GSB 学生、教职员工与校友开放。"
+  },
+  "content_status": "published_verbatim",
+  "content_markdown": "# 本期 Deep Read：Google 如何让一个 20,000 人组织重新获得“创业公司式速度”\n\n## [Google’s Global Business Organization (B): AI-First Leadership and Innovation](https://www.gsb.stanford.edu/faculty-research/case-studies/googles-global-business-organization-b-ai-first-leadership-innovation)\n\n**作者：** Tim Rosenberger、Amy Wilkinson  \n**发布：** Stanford Graduate School of Business  \n**发布时间：** 2026 年新案例，Stanford GSB 页面近期上线  \n**长度：** **24 页**，正常精读约 45–60 分钟  \n**主题：** AI-native organization、领导力、组织设计、激励机制、企业转型、战略执行。案例全文目前主要向 Stanford GSB 学生、教职员工和校友开放。\n\n这期我没有继续选上一篇已经讲过的 McKinsey Operating Model 文章，而是选了一个更具体的**真实企业案例**：\n\n> 当一个已经极其成功、拥有 20,000 人规模的组织面对新的技术范式时，领导者究竟怎样让它重新跑快？\n\n研究对象是 Google 的 Global Business Organization（GBO）。它是 Google 的商业引擎，支撑着 Alphabet **70% 以上的收入**。\n\n这不是一个“Google 怎么用 Gemini”的产品案例。\n\n它研究的是更困难的问题：\n\n> **AI 出现以后，组织本身应该怎么改变？**\n\n---\n\n## 故事的背景其实相当危险\n\n2026 年，Google 面临一个很特殊的矛盾。\n\n一方面，它是现代 AI 最重要的技术源头之一。\n\n另一方面，市场一度形成一种叙事：\n\n> Google 发明了很多关键技术，却可能让其他公司更快完成商业化。\n\n与此同时，公司预计 2026 年资本支出超过 **1700 亿美元**。\n\n这意味着 Chief Business Officer Philipp Schindler 面临两个同时发生的任务：\n\n```text\n任务 A\n继续增长现有广告和商业业务\n↓\n产生现金流\n↓\n支持巨额 AI 投资\n\n\n任务 B\n与此同时\n↓\n改造 Google 自己\n↓\n改造客户\n↓\n改造合作伙伴\n↓\n进入 AI-first 时代\n```\n\n这比创业公司的转型困难得多。\n\n创业公司可以：\n\n> 推翻旧东西重新来。\n\nGoogle 不行。\n\n它必须：\n\n> **一边高速运行现有机器，一边重新设计机器。**\n\n---\n\n# 第一层：真正困难的不是找到 AI 战略，而是改变组织速度\n\nSchindler 对 GBO 的要求经历了一个很有意思的变化。\n\n早期内部使用的比喻是：\n\n> **Going to the gym**\n\n意思大概是：\n\n持续训练组织、提高能力、逐渐变强。\n\n后来变成：\n\n> **Game On**\n\n区别非常大。\n\nGym 是：\n\n```text\n准备\n训练\n提升能力\n```\n\nGame 是：\n\n```text\n比赛已经开始\n↓\n现在就必须交付结果\n```\n\nStanford 案例把这种变化描述为组织向更高 **speed and intensity** 转型，包括：\n\n- 更精简的组织结构；\n- 调整激励机制；\n- AI 进入销售人员 Workflow；\n- AI 直接进入广告产品；\n- 更快的决策和执行。\n\n这揭示了一个领导力问题：\n\n> **领导者什么时候应该培养组织，什么时候应该明确告诉组织“比赛已经开始”？**\n\n两种状态需要完全不同的管理方式。\n\n---\n\n# 第二层：Google 没有把 AI 转型理解成“员工学会使用 AI”\n\n这是我认为案例最值得注意的地方之一。\n\n很多公司的所谓 AI transformation 是：\n\n```text\n给员工 Copilot\n+\n培训 Prompt\n+\n要求大家多用 AI\n```\n\nGoogle GBO 的改造明显更深。\n\nAI 开始进入：\n\n> **seller workflows**\n\n也就是销售人员真正每天工作的流程。\n\n同时进入：\n\n> Performance Max、AI Max 等商业产品。\n\n所以发生的是两条线同时变化：\n\n```text\n内部\n\nAI\n↓\n改变员工怎么工作\n\n\n外部\n\nAI\n↓\n改变客户购买的产品\n```\n\n这两件事情最终又互相强化。\n\n员工自己真正使用 AI 工作以后，更容易理解：\n\n> 客户为什么需要 AI。\n\n而客户真实使用 AI 产品以后产生的数据和问题，又反过来影响产品和组织。\n\n这才比较接近真正意义上的：\n\n> **AI-native transformation。**\n\n---\n\n# 第三层：领导者不能只喊“速度更快”\n\nSchindler 总结了五条领导原则，其中 Stanford 特别强调两个：\n\n> **Make customers successful**\n\n以及：\n\n> **Put a stake in the ground**\n\n后者非常值得理解。\n\n所谓 put a stake in the ground，本质上就是：\n\n> **面对不完整信息，领导者仍然必须形成明确判断。**\n\nAI 时代尤其容易出现一种管理瘫痪：\n\n```text\n模型还在变化\n↓\n竞争格局还在变化\n↓\n客户需求还没稳定\n↓\n商业模式还没稳定\n↓\n所以继续研究\n↓\n继续讨论\n↓\n继续等待\n```\n\n但领导者没有无限等待信息完整的权利。\n\n很多时候必须：\n\n> 形成假设 → 明确方向 → 投入资源 → 看真实反馈 → 再修正。\n\n这不是“拍脑袋”。\n\n它更接近：\n\n> **在高度不确定条件下进行可修正的坚定决策。**\n\n这是创业者和管理者非常重要、但很难通过读管理理论学会的一种能力。\n\n---\n\n# 第四层：AI 转型最后一定会碰到“人”的问题\n\n案例没有把 Google 的转型写成一个舒服的技术升级故事。\n\n它明确涉及：\n\n> **restructuring、culture change、leaner structure、recalibrated incentives。**\n\n也就是说：\n\nAI 提高生产率以后，领导者最终必须回答：\n\n> 原来的岗位还应该存在吗？\n\n> 管理层级还需要这么多吗？\n\n> 什么行为应该被奖励？\n\n> 谁真正对结果负责？\n\n> 一个团队到底应该有多少人？\n\n这时候 AI transformation 已经不属于 IT 项目。\n\n它进入：\n\n> **组织政治 + 人才管理 + 激励设计 + 领导责任。**\n\n这也是为什么真正的 AI-native company 很难通过：\n\n> “买几个 AI 软件”\n\n实现。\n\n技术变化通常比组织变化快得多。\n\n---\n\n# 第五层：这里存在一个很危险的领导力 Trade-off\n\nStanford 没有简单把 Google 的高强度改革描述成正确答案。\n\n案例明确要求读者思考：\n\n> **disciplined urgency 和 endurance 怎么平衡？**\n\n也就是：\n\n```text\n太慢\n↓\n错过技术窗口\n\n\n但\n\n\n长期极高强度\n↓\n人才疲劳\n↓\n组织恐惧\n↓\n短期主义\n↓\n创新能力下降\n```\n\n所以真正优秀的领导者不是：\n\n> 永远要求团队更快。\n\n而是知道：\n\n> **什么时候组织必须 Sprint，什么时候必须恢复长期运行能力。**\n\n这一点对创业团队尤其重要。\n\n创业公司很容易把：\n\n> “我们是 Startup”\n\n解释成：\n\n> “所有事情永远都必须紧急。”\n\n长期结果通常不是高绩效，而是组织失去优先级判断。\n\n如果所有事情都是 P0：\n\n> 实际上就没有 P0。\n\n---\n\n# 第六层：这篇案例提出了一个非常好的组织问题\n\nStanford 给学生留下的核心问题之一是：\n\n> **一个 20,000 人组织，怎样保持 startup intensity？**\n\n答案显然不是：\n\n> 把 20,000 人都当创业公司员工管理。\n\n更可能是重新设计：\n\n```text\nDecision Rights\n↓\n谁可以决定\n\nStructure\n↓\n团队怎么组织\n\nIncentives\n↓\n什么行为被奖励\n\nWorkflow\n↓\n工作怎么流动\n\nInformation\n↓\n谁能看到什么\n\nLeadership\n↓\n什么时候介入\n\nAI\n↓\n什么工作由机器承担\n```\n\n所以组织速度并不是：\n\n> **员工工作速度之和。**\n\n而更接近：\n\n> **信息流动速度 × 决策速度 × 执行速度 × 学习速度。**\n\n其中任何一个环节严重堵塞，增加员工工作强度都解决不了问题。\n\n---\n\n# 对早期创业团队最值得借鉴的，不是 Google 的组织结构\n\n这里需要特别警惕一个错误。\n\n一个几个人的创业团队不应该看完 Google 案例以后开始设计：\n\n- 复杂 KPI；\n- 部门制度；\n- Leadership Principles；\n- Performance System；\n- 多层 Governance。\n\n这属于典型的**过早组织化**。\n\n真正应该借鉴的是它背后的原则：\n\n> **组织设计必须服务于当前最重要的战略问题。**\n\nGoogle 当前的问题是：\n\n> 如何让一个庞大成熟组织重新获得速度。\n\n早期创业公司的问题通常恰恰相反：\n\n> **如何找到真正值得重复的东西。**\n\n因此早期团队更应该优化：\n\n```text\n客户反馈速度\n+\n产品实验速度\n+\n决策速度\n+\n学习速度\n```\n\n而不是：\n\n> 组织完整度。\n\n---\n\n# 我认为这篇对 AI-native 创业还有一层更深的启发\n\n最近几篇 Deep Read 连起来以后，已经出现一条比较清楚的线：\n\n```text\n第一阶段\n\nAI 是工具\n↓\n员工效率提高\n\n\n第二阶段\n\nAI 进入 Workflow\n↓\n业务流程改变\n\n\n第三阶段\n\nWorkflow 改变\n↓\n岗位和团队改变\n\n\n第四阶段\n\n团队改变\n↓\n组织结构和决策机制改变\n\n\n第五阶段\n\nOperating Model 改变\n↓\n公司本身成为 AI-native\n```\n\n因此：\n\n> **AI-native company 不是“公司里 AI 使用率很高”。**\n\n它真正意味着：\n\n> **如果今天把 AI 从这家公司拿掉，这家公司的产品、人员结构、Workflow、决策机制甚至商业模式都会无法正常运行。**\n\n这才是一个更严格的定义。\n\n---\n\n## 这篇为什么值得你完整读\n\n因为它把三个通常被分开讨论的问题放到了一起：\n\n**技术变革、商业增长、领导力。**\n\nSchindler 不能只负责“拥抱 AI”。\n\n他同时必须：\n\n> 维持 Alphabet 最重要的收入机器 → 为 AI 基础设施提供资金 → 改造组织 → 改造产品 → 改变文化 → 还不能把组织烧坏。\n\n这才是真实世界里的战略管理。\n\n所以读这篇时，我建议不要问：\n\n> **Google 做了哪些管理动作？**\n\n而始终问一个更有价值的问题：\n\n> **“在技术范式发生变化时，一个领导者究竟应该改变什么，又有哪些东西不应该因为焦虑而改变？”**\n\n这个问题对 20,000 人的 Google 有效，对只有几个人的早期创业团队同样有效。"
+}

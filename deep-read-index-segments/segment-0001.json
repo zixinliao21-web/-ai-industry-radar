@@ -1,0 +1,222 @@
+{
+  "schema_version": "3.0",
+  "segment": "0001",
+  "items": [
+    {
+      "id": "DR-2026-001",
+      "added_date": "2026-09-18",
+      "title": "The State of Organizations 2026: Three tectonic forces that are reshaping organizations",
+      "author": [
+        "Alexis Krivkovich",
+        "Damian Klingler",
+        "Dana Maor",
+        "Patrick Guggenberger"
+      ],
+      "publication": "McKinsey & Company",
+      "institution": "McKinsey People & Organizational Performance",
+      "source_type": "report",
+      "source_url": "https://www.mckinsey.com/capabilities/people-and-organization/our-insights/the-state-of-organizations",
+      "original_publish_date": "2026-02-19",
+      "estimated_reading_time": "约 60–90 分钟",
+      "topic": "组织与领导",
+      "themes": [
+        "AI-enabled organization",
+        "组织设计",
+        "领导力",
+        "人机协作",
+        "长期趋势"
+      ],
+      "access": {
+        "type": "free"
+      },
+      "content_status": "legacy_summary_do_not_render_as_body"
+    },
+    {
+      "id": "DR-2026-002",
+      "added_date": "2026-09-18",
+      "title": "The Shift to Agentic AI: Evidence from Codex",
+      "author": [
+        "Drew Johnston",
+        "David Holtz",
+        "Alex Martin Richmond",
+        "Christopher Ong",
+        "Prasanna Tambe",
+        "Aaron Chatterji"
+      ],
+      "publication": "arXiv",
+      "source_type": "research_paper",
+      "source_url": "https://arxiv.org/abs/2606.26959",
+      "original_publish_date": "2026-06-25",
+      "estimated_reading_time": "约 45–70 分钟",
+      "topic": "AI / Agent 与工作",
+      "themes": [
+        "Agentic AI",
+        "未来工作",
+        "组织能力",
+        "Workflow",
+        "AI adoption"
+      ],
+      "access": {
+        "type": "free"
+      },
+      "content_status": "legacy_summary_do_not_render_as_body"
+    },
+    {
+      "id": "DR-2026-003",
+      "added_date": "2026-09-18",
+      "title": "Putting AI on the Org Chart: Evidence on Delegation and Oversight",
+      "author": [
+        "Emma Wiles",
+        "Megan Hsu",
+        "Julie Bedard",
+        "Matthew Kropp"
+      ],
+      "publication": "Working paper",
+      "institution": "Boston University / BCG",
+      "source_type": "working_paper",
+      "source_url": "https://www.emmawiles.com/storage/ai_employee.pdf",
+      "original_publish_date": "2026-05-06",
+      "estimated_reading_time": "约 45–60 分钟",
+      "topic": "团队与领导者素养",
+      "themes": [
+        "AI delegation",
+        "组织设计",
+        "监督",
+        "责任",
+        "人机协作"
+      ],
+      "access": {
+        "type": "free"
+      },
+      "content_status": "legacy_summary_do_not_render_as_body"
+    },
+    {
+      "id": "DR-2026-004",
+      "added_date": "2026-09-18",
+      "title": "How Agentic AI Supercharges Startups and Threatens Incumbents",
+      "author": [
+        "Vivian S. Lee",
+        "Linda Mantia",
+        "Jon McNeill"
+      ],
+      "publication": "Harvard Business Review",
+      "institution": "Harvard Business Review",
+      "source_type": "magazine_article",
+      "source_url": "https://hbr.org/2026/07/how-agentic-ai-supercharges-startups-and-threatens-incumbents",
+      "original_publish_date": "2026-07",
+      "estimated_reading_time": "约 25–40 分钟（精读估计）",
+      "topic": "创业与商业模式",
+      "themes": [
+        "创业起步",
+        "Agentic AI",
+        "AI-native company",
+        "商业模式",
+        "组织设计"
+      ],
+      "access": {
+        "type": "paywalled",
+        "note": "HBR 可能需要订阅或购买全文。"
+      },
+      "content_status": "legacy_summary_do_not_render_as_body"
+    },
+    {
+      "id": "DR-2026-005",
+      "added_date": "2026-09-18",
+      "title": "Snowflake in 2026 (A): All In On Enterprise AI",
+      "author": [
+        "Raj Joshi",
+        "Robert Burgelman"
+      ],
+      "publication": "Stanford Graduate School of Business Case Studies",
+      "institution": "Stanford Graduate School of Business",
+      "source_type": "case_study",
+      "source_url": "https://www.gsb.stanford.edu/faculty-research/case-studies/snowflake-2026-all-enterprise-ai",
+      "original_publish_date": "2026",
+      "estimated_reading_time": "约 45–60 分钟",
+      "topic": "企业案例与战略",
+      "themes": [
+        "Enterprise AI",
+        "战略转型",
+        "商业模式",
+        "数据平台",
+        "CEO leadership"
+      ],
+      "access": {
+        "type": "restricted",
+        "note": "案例下载主要向 Stanford GSB 学生、教职员工与校友开放。"
+      },
+      "content_status": "published_verbatim"
+    },
+    {
+      "id": "DR-2026-006",
+      "added_date": "2026-09-18",
+      "title": "Google’s Global Business Organization (B): AI-First Leadership and Innovation",
+      "author": [
+        "Tim Rosenberger",
+        "Amy Wilkinson"
+      ],
+      "publication": "Stanford Graduate School of Business Case Studies",
+      "institution": "Stanford Graduate School of Business",
+      "source_type": "case_study",
+      "source_url": "https://www.gsb.stanford.edu/faculty-research/case-studies/googles-global-business-organization-b-ai-first-leadership-innovation",
+      "original_publish_date": "2026",
+      "estimated_reading_time": "约 45–60 分钟",
+      "topic": "领导力与组织能力",
+      "themes": [
+        "AI-first leadership",
+        "组织转型",
+        "团队领导",
+        "激励机制",
+        "执行速度"
+      ],
+      "access": {
+        "type": "restricted",
+        "note": "案例下载主要向 Stanford GSB 学生、教职员工与校友开放。"
+      },
+      "content_status": "published_verbatim"
+    },
+    {
+      "id": "DR-2026-007",
+      "added_date": "2026-09-18",
+      "title": "Harness Engineering: The Operating System for Agentic AI",
+      "author": [
+        "Aparna Kapoor",
+        "Vincent Paca",
+        "Nerijus Zemgulys"
+      ],
+      "publication": "BCG",
+      "source_url": "https://www.bcg.com/ja-jp/publications/2026/harness-engineering-scale-agentic-ai",
+      "original_publish_date": "2026-09-16",
+      "estimated_reading_time": "官方阅读时间 8 分钟",
+      "themes": [
+        "AI / Agent",
+        "Enterprise AI",
+        "Harness Engineering",
+        "Workflow",
+        "Agent Reliability",
+        "商业模式"
+      ],
+      "content_status": "published_verbatim"
+    },
+    {
+      "id": "DR-2026-008",
+      "added_date": "2026-09-18",
+      "title": "Five monetization trends from global pricing leaders",
+      "author": [
+        "Scott Woody"
+      ],
+      "publication": "Stripe",
+      "source_url": "https://stripe.com/blog/five-monetization-trends-from-global-pricing-leaders",
+      "original_publish_date": "2026-08-20",
+      "estimated_reading_time": "约 15–25 分钟",
+      "themes": [
+        "商业模式",
+        "AI pricing",
+        "SaaS",
+        "usage-based pricing",
+        "Agent commerce"
+      ],
+      "content_status": "published_verbatim"
+    }
+  ]
+}

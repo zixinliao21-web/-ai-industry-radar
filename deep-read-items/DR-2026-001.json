@@ -1,0 +1,40 @@
+{
+  "id": "DR-2026-001",
+  "added_date": "2026-09-18",
+  "title": "The State of Organizations 2026: Three tectonic forces that are reshaping organizations",
+  "author": [
+    "Alexis Krivkovich",
+    "Damian Klingler",
+    "Dana Maor",
+    "Patrick Guggenberger"
+  ],
+  "publication": "McKinsey & Company",
+  "institution": "McKinsey People & Organizational Performance",
+  "source_type": "report",
+  "source_url": "https://www.mckinsey.com/capabilities/people-and-organization/our-insights/the-state-of-organizations",
+  "original_publish_date": "2026-02-19",
+  "estimated_reading_time": "约 60–90 分钟",
+  "topic": "组织与领导",
+  "themes": [
+    "AI-enabled organization",
+    "组织设计",
+    "领导力",
+    "人机协作",
+    "长期趋势"
+  ],
+  "why_read": "这是一份适合作为长期组织管理基线的 74 页报告。它不把 AI 当成孤立工具，而是把技术、经济扰动和劳动力结构变化放在同一张组织设计地图里，适合反复校准‘AI-native company 到底要改变什么’。",
+  "core_argument": "持续绩效不会来自单点技术部署，而来自组织围绕技术、复杂性与新型劳动力结构重新设计工作、领导方式和能力体系。",
+  "key_takeaways": [
+    "AI 的组织影响应放在端到端工作与组织结构中理解，而不只是个人生产率。",
+    "长期绩效要求技术能力、组织适应性和领导方式协同演化。",
+    "人类与 AI Agent 的协作正在成为组织设计问题，而不仅是工具采用问题。"
+  ],
+  "our_notes": "把它当作‘组织基线’，而不是 Agent 产品文章。它最有价值的用途，是帮助我们区分技术能力变化与真正需要组织重构的部分；同时避免因为某个新 Agent 能力出现，就过早复制大公司的组织设计。",
+  "discussion_questions": [
+    "一家真正的 AI-native 创业公司，哪些组织设计应该从第一天就不同，哪些应该等到规模出现后再引入？"
+  ],
+  "access": {
+    "type": "free"
+  },
+  "content_status": "legacy_summary_do_not_render_as_body"
+}

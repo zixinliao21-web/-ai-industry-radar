@@ -67,7 +67,7 @@ deep-read-article.html
 deep-read.json
 ```
 
-Canonical content: `deep-read.json`.
+Canonical content: `deep-read-index.json` + bounded `deep-read-index-segments/` + `deep-read-items/`.
 
 Content contract: `docs/deep-read-contract.md`.
 
@@ -197,11 +197,11 @@ It should not modify Consumer/Deep Read data or website implementation as part o
 
 - maintain `consumer-radar.json` according to `docs/consumer-radar-contract.md`.
 
-It should not modify `news.json`, `deep-read.json`, or website implementation as part of routine publishing.
+It should not modify `news.json`, Deep Read V3 canonical stores, or website implementation as part of routine publishing.
 
 ### Weekly Deep Read thread may
 
-- maintain `deep-read.json` according to `docs/deep-read-contract.md`.
+- maintain Deep Read V3 split storage according to `docs/deep-read-contract.md`.
 
 It should not modify the two Radar data stores or website implementation as part of routine publishing.
 

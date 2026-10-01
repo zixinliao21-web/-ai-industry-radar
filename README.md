@@ -28,7 +28,10 @@ https://zixinliao21-web.github.io/-ai-industry-radar/
 
 - `deep-read.html` — curated long-read directory
 - `deep-read-article.html` — Deep Read reading-note surface
-- `deep-read.json` — canonical Deep Read archive
+- `deep-read-index.json` — Deep Read V3 manifest
+- `deep-read-index-segments/segment-XXXX.json` — bounded Deep Read metadata shards
+- `deep-read-items/<id>.json` — canonical Deep Read article records
+- `deep-read.json` — frozen V2 legacy snapshot
 - `docs/deep-read-contract.md` — content contract
 
 ## Shared infrastructure

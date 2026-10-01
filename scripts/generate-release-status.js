@@ -13,7 +13,7 @@ function arg(name) {
 
 const industry = readJson('news-index.json');
 const consumer = readJson('consumer-radar.json');
-const deep = readJson('deep-read.json');
+const deep = readJson('deep-read-index.json');
 const commit = arg('--commit') || process.env.RELEASE_SHA || process.env.GITHUB_SHA || null;
 
 const status = {
@@ -41,7 +41,9 @@ const status = {
     deep_read: {
       status: 'healthy',
       last_update: deep.updated_at || null,
-      item_count: Array.isArray(deep.items) ? deep.items.length : 0
+      item_count: Number(deep.item_count || 0),
+      storage: deep.storage || null,
+      segment_count: Array.isArray(deep.segments) ? deep.segments.length : 0
     }
   },
   validation: {

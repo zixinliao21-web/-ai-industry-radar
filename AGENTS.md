@@ -38,7 +38,10 @@ This repository is a lightweight static **VELNAR Research** product containing t
 
 - `deep-read.html` — curated reading directory
 - `deep-read-article.html` — Deep Read reading-note surface
-- `deep-read.json` — canonical Deep Read published-content store
+- `deep-read-index.json` — tiny Deep Read V3 manifest
+- `deep-read-index-segments/segment-XXXX.json` — bounded compact Deep Read metadata shards
+- `deep-read-items/<id>.json` — canonical complete Deep Read item records
+- `deep-read.json` — frozen V2 legacy snapshot
 - `docs/deep-read-contract.md` — editorial/data contract
 
 ### Shared implementation
@@ -106,7 +109,7 @@ Do not manufacture `S/A/B` grades or remap Consumer `kind` values into Industry 
 
 ### Weekly Deep Read
 
-`deep-read.json` remains canonical.
+Weekly Deep Read uses segmented index V3. `deep-read-index.json` is the tiny manifest, bounded compact metadata lives in `deep-read-index-segments/segment-XXXX.json`, and each complete article lives in `deep-read-items/<id>.json`. `deep-read.json` is frozen legacy and must not receive new publications.
 
 Deep Read is not a Radar feed. Do not add Radar grades or Radar-specific fields merely to make renderers look uniform. Preserve original-source metadata and access status honestly.
 
@@ -193,7 +196,9 @@ These canonical content stores remain **network-first with cached fallback**:
 news-index.json
 news-index-segments/segment-XXXX.json
 consumer-radar.json
-deep-read.json
+deep-read-index.json
+deep-read-index-segments/segment-XXXX.json
+deep-read-items/<id>.json
 ```
 
 Do not revert them to long-lived cache-first behavior.

@@ -1,0 +1,21 @@
+{
+  "id": "DR-2026-008",
+  "added_date": "2026-09-18",
+  "title": "Five monetization trends from global pricing leaders",
+  "author": [
+    "Scott Woody"
+  ],
+  "publication": "Stripe",
+  "source_url": "https://stripe.com/blog/five-monetization-trends-from-global-pricing-leaders",
+  "original_publish_date": "2026-08-20",
+  "estimated_reading_time": "约 15–25 分钟",
+  "themes": [
+    "商业模式",
+    "AI pricing",
+    "SaaS",
+    "usage-based pricing",
+    "Agent commerce"
+  ],
+  "content_status": "published_verbatim",
+  "content_markdown": "# 本期 Deep Read：AI 时代的软件到底该怎么收费？\n\n## [Five monetization trends from global pricing leaders](https://stripe.com/blog/five-monetization-trends-from-global-pricing-leaders)\n\n**作者：** Scott Woody，Metronome 创始人兼 CEO  \n**发布：** Stripe  \n**发布日期：** **2026 年 8 月 20 日**  \n**阅读时间：** 正文没有 40 分钟那么长，大约 15–25 分钟；但这次我仍然优先选它，因为它讨论的是一个正在发生、而且对 AI 创业非常关键的变化：**AI 正在破坏过去二十年 SaaS 的定价逻辑。**\n\n文章来自 Stripe 对近期全球定价负责人和创业公司的观察，其中包含 Lovable、ElevenLabs 等 AI 公司的一线实践。\n\n---\n\n## 它真正讨论的不是“怎么定价格”\n\n文章开头有一句判断很重要：\n\n> 上一代成功软件公司建立起来的 revenue playbook 正在失效。\n\n传统 SaaS 的经济模型很容易理解：\n\n**员工 → 使用软件 → 每个员工一个账号 → 每 Seat / 每月收费。**\n\n例如一家企业有 100 个销售：\n\n> 100 sales × $50 / seat / month\n\n公司规模扩大，Seat 增加，软件收入自然增长。\n\n但 Agent 出现以后，这条链条开始断裂。\n\n假设未来：\n\n> 10 个销售 + 20 个 AI Agent  \n> 完成过去 100 个销售的工作。\n\n那么软件公司到底应该收：\n\n- 10 个 Seat 的钱？\n- 30 个 Seat？\n- Agent 调用次数？\n- Token？\n- 完成的任务数量？\n- 给客户创造的结果？\n\n这已经不是 pricing optimization，而是**软件商业模式的计价单位正在变化**。\n\n---\n\n## 我认为最值得你注意的是三个变化\n\n### ① 从 Seat-based 转向 Usage / Outcome\n\n过去 SaaS 收的是：\n\n> **你有多少人在使用我的软件。**\n\nAI 软件越来越可能收：\n\n> **我的系统替你完成了多少工作。**\n\n例如未来一个销售 Agent：\n\n```text\n不是：\n¥499 / 销售 / 月\n\n而可能是：\n\n每找到一个有效 Lead\n¥X\n\n每完成一次 Qualification\n¥X\n\n每完成一个销售机会\n¥X\n```\n\n甚至：\n\n> **按产生的 Revenue 抽成。**\n\n这会让 SaaS 与 BPO 的边界越来越模糊。\n\n文章观察到的现实情况已经是**混合定价越来越普遍**：基础平台费 + usage + credits + outcome 等不同组合，而不是简单复制传统 per-seat SaaS。\n\n---\n\n### ② AI 产品的定价不能一年改一次\n\n这是文章里一个很具体的案例。\n\nLovable 的 Head of Growth Elena Verna 加入公司的**第一年就进行了 10 次 pricing changes**。\n\n为什么？\n\n因为 AI 产品同时有三个变量快速变化：\n\n```text\n模型成本 ↓\n\nAgent 能力 ↑\n\n客户使用方式不断变化\n```\n\n所以你今天设计：\n\n> ¥999 / 月\n\n可能六个月后已经完全不合理。\n\n这意味着 AI 创业公司的 Pricing 不再只是财务部门的问题，而逐渐变成：\n\n> **产品实验的一部分。**\n\nProduct → Usage → Cost → Value → Pricing 需要形成持续反馈循环。\n\n---\n\n### ③ 一个更容易被忽视的变化：客户可能不再是“人”\n\n文章提出了一个很值得思考的概念：\n\n> **nonhuman buyer**\n\n未来可能出现：\n\n```text\nAgent\n↓\n发现自己需要某项能力\n↓\n寻找服务\n↓\n比较 API / 软件\n↓\n选择供应商\n↓\n付款\n↓\n调用\n```\n\n也就是说，未来软件公司的客户可能同时存在两类：\n\n```text\nHuman Buyer\n\n和\n\nAgent Buyer\n```\n\n这会进一步改变：\n\n- 产品发现；\n- Pricing Page；\n- API；\n- 支付；\n- Marketplace；\n- 软件分销。\n\n这不是纯粹的未来想象。Stripe 已经在为 Agent 支付、AI-native billing 和机器交易构建基础设施。\n\n---\n\n# 为什么这篇值得读\n\n它其实触及了一个比“AI SaaS 怎么定价”更大的问题：\n\n> **AI 会不会让 SaaS、服务公司和 BPO 最终融合成一种新的公司形态？**\n\n过去三种模式很清楚：\n\n```text\nSaaS\n卖工具\n\nBPO\n卖人工\n\n咨询\n卖专业能力\n```\n\nAgent 出现以后可能出现：\n\n```text\nAI Company\n        ↓\n软件\n+\nAgent\n+\nWorkflow\n+\n少量人工判断\n        ↓\n直接交付结果\n```\n\n客户甚至不需要知道背后用了多少软件、多少 Agent、多少人。\n\n客户只购买：\n\n> **结果。**\n\n这会同时改变 **TAM、定价、毛利率、组织结构和竞争壁垒**。\n\n这也是为什么我认为这篇和 Services: The New Software 放在一起看会非常有意思。后者提出了一个更激进的判断：\n\n> 下一家万亿美元公司可能表面上是一家服务公司，本质上却是一家软件公司。\n\n---\n\n## 一个值得长期记住的商业模式问题\n\n以后看到任何 AI 创业项目，可以先不要问：\n\n> “它一个月订阅多少钱？”\n\n而先问：\n\n> **客户现在到底在为什么付钱？**\n\n如果客户真正购买的是：\n\n```text\n完成报价\n完成招聘\n完成会计结账\n完成客服\n完成销售\n完成采购\n```\n\n那么 AI 公司最终最有价值的商业模式，很可能不是：\n\n> **卖一个帮助人工作的工具**\n\n而是：\n\n> **直接把这项工作卖给客户。**\n\n这会同时改变 **TAM、定价、毛利率、组织结构和竞争壁垒**。\n\n这也是这篇文章最值得读的地方：它表面讲 Pricing，实际上在讨论 **AI 时代“软件公司”这个概念本身正在发生什么变化。**"
+}

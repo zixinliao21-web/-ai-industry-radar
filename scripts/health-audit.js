@@ -10,8 +10,8 @@ function ageDays(value){const t=parseDate(value);if(t==null)return null;return M
 function row(name,status,count,lastUpdate){return{name,status,item_count:count,last_update:lastUpdate||null,age_days:ageDays(lastUpdate)}}
 const industry=readJson('news-index.json');
 const consumer=readJson('consumer-radar.json');
-const deep=readJson('deep-read.json');
-const report={schema_version:'1.0',generated_at:new Date().toISOString(),commit:process.env.GITHUB_SHA||null,status:'healthy',collections:{industry:row('AI Industry Radar','healthy',Number(industry.item_count||0),industry.updated_at),consumer:row('AI Consumer Radar','healthy',Array.isArray(consumer.items)?consumer.items.length:0,consumer.updated_at),deep_read:row('Weekly Deep Read','healthy',Array.isArray(deep.items)?deep.items.length:0,deep.updated_at)}};
+const deep=readJson('deep-read-index.json');
+const report={schema_version:'1.0',generated_at:new Date().toISOString(),commit:process.env.GITHUB_SHA||null,status:'healthy',collections:{industry:row('AI Industry Radar','healthy',Number(industry.item_count||0),industry.updated_at),consumer:row('AI Consumer Radar','healthy',Array.isArray(consumer.items)?consumer.items.length:0,consumer.updated_at),deep_read:row('Weekly Deep Read','healthy',Number(deep.item_count||0),deep.updated_at)}};
 const output=arg('--output');
 if(output)fs.writeFileSync(path.resolve(root,output),JSON.stringify(report,null,2)+'\n','utf8');
 const summaryPath=arg('--summary')||process.env.GITHUB_STEP_SUMMARY;

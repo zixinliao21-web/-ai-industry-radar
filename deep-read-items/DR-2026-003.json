@@ -1,0 +1,40 @@
+{
+  "id": "DR-2026-003",
+  "added_date": "2026-09-18",
+  "title": "Putting AI on the Org Chart: Evidence on Delegation and Oversight",
+  "author": [
+    "Emma Wiles",
+    "Megan Hsu",
+    "Julie Bedard",
+    "Matthew Kropp"
+  ],
+  "publication": "Working paper",
+  "institution": "Boston University / BCG",
+  "source_type": "working_paper",
+  "source_url": "https://www.emmawiles.com/storage/ai_employee.pdf",
+  "original_publish_date": "2026-05-06",
+  "estimated_reading_time": "约 45–60 分钟",
+  "topic": "团队与领导者素养",
+  "themes": [
+    "AI delegation",
+    "组织设计",
+    "监督",
+    "责任",
+    "人机协作"
+  ],
+  "why_read": "它研究一个容易被‘数字员工’叙事忽略的问题：当 Agent 被正式当成员工或角色写进组织结构后，人类管理者的监督和责任判断会不会发生变化。这个问题直接关系到未来团队治理。",
+  "core_argument": "把 AI Agent 正式制度化为组织角色会改变管理者的委托与监督行为，因此组织必须显式设计责任和 oversight，而不能靠‘把 Agent 当同事’这种叙事自然解决。",
+  "key_takeaways": [
+    "AI Agent 已开始被部分组织正式纳入角色和组织结构。",
+    "对 AI 的角色 framing 可能影响管理者的监督强度和责任归因。",
+    "人机组织设计需要把最终责任人、复核点和升级机制写清楚。"
+  ],
+  "our_notes": "最值得保留的不是‘AI employee’这个标签，而是它暴露出的责任转移风险。未来设计 Agent 团队时，拟人化可以改善交互，但不能让责任链条变模糊。",
+  "discussion_questions": [
+    "哪些 Agent 行为可以被真正授权，哪些高风险动作必须始终保留明确的人类 Accountable Owner？"
+  ],
+  "access": {
+    "type": "free"
+  },
+  "content_status": "legacy_summary_do_not_render_as_body"
+}
