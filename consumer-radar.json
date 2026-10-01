@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19 13:58 +08:00",
+  "updated_at": "2026-10-02 03:11 +08:00",
   "schema_version": "2.0",
   "collection": {
     "id": "consumer-ai-radar",
@@ -7,6 +7,31 @@
     "purpose": "保存并发布本研究线程已经完成的消费级 AI / Personal Agent 研究文章原文；网页是阅读载体，不是二次改写层。"
   },
   "items": [
+    {
+      "id": "2026-10-02-agent-delegation-boundary",
+      "date": "2026-10-02",
+      "article_type": "baseline_refinement",
+      "title": "AI C 端产业雷达｜Personal Agent 的竞争开始从“谁更聪明”转向“谁有权替用户行动”",
+      "themes": [
+        "Personal Agent",
+        "Permission",
+        "Identity",
+        "Agent Commerce",
+        "Action Infrastructure",
+        "Platform Control"
+      ],
+      "control_points": [
+        "Identity",
+        "Permission",
+        "Action",
+        "Transaction",
+        "Service Acceptance",
+        "Delegation"
+      ],
+      "publication_mode": "verbatim",
+      "source_thread": "AI C 端产业演化、消费级 AI 产品与 Personal Agent",
+      "body_markdown": "# AI C 端产业雷达｜Personal Agent 的竞争开始从“谁更聪明”转向“谁有权替用户行动”\n\n过去两周，消费级 Personal Agent 出现了一组比单一产品发布更值得更新长期判断的信号：Meta Muse 获得快速的早期下载增长，却同时被 Amazon 阻止代用户购物，并出现权限与隐私事件；OpenAI 随后推出 always-on Dots，把持续运行、跨应用行动和可配置审批边界直接做成产品核心。\n\n单看任何一件事，都不足以证明 Personal Agent 已成为下一代入口。合在一起，它们却开始改变一个更底层的判断：\n\n> **Personal Agent 的主要竞争正在从“模型能不能完成任务”，转向“谁有权代表用户进入别人的服务、读取什么 Context、保存什么授权、执行什么 Action，以及服务提供方是否承认这种代理关系”。**\n\n这意味着我们此前关于开放 Agent Stack 的假设需要增加一个重要约束：**Browser automation 能扩大 Action surface，但不能自动获得 Action legitimacy。**\n\n## Fact｜Muse 的早期增长是真实信号，但还不是留存证明\n\nReuters 9 月 25 日报道称，Muse 上线前两周获得约 **280 万次下载**，并登上美国和加拿大主要应用商店免费榜前列。这至少证明，“让 AI 替我做事”已经成为普通消费者能够理解并愿意尝试的产品命题，Meta 的社交分发能力也可能成为 Personal Agent 竞争中的结构性优势。\n\n但最关键的数据仍然缺失：**D30 / D90 retention、每周真实 delegated actions、授权深度、任务成功率，以及用户是否在新鲜感消退后继续让 Agent 访问邮件、日历、支付与账户。**\n\n因此，下载量只能把“消费者是否愿意尝试 Personal Agent”从问号推进到早期肯定，不能把“Personal Agent 已成为默认入口”判定为成立。\n\n来源：[Reuters，2026-09-25](https://www.reuters.com/technology/meta-bolsters-muse-safety-warning-after-security-vulnerability-found-information-2026-09-25/)\n\n## Fact｜真正重要的变化发生在 Action 边界：Amazon 直接拒绝 Muse\n\n9 月 20 日，Amazon 开始阻止 Muse 在 Amazon.com 上替用户购物。Amazon 认为 Muse 没有明确识别 Agent 身份，也没有获得 Amazon 对这种第三方代理访问的同意，并涉及账户与交易相关的敏感数据处理。\n\n这件事很关键，因为 Muse 代表当前一类通用 Agent 的典型路线：\n\n```text\nUser intent\n   ↓\nPersonal Agent\n   ↓\n有 API → 调 API\n无 API → 操作网页\n   ↓\nAction\n```\n\n浏览器操作让 Agent 获得很大的 Action surface，但 Amazon 的阻断说明：\n\n> **“用户授权 Agent”并不等于“目标服务承认 Agent 有权代表用户行动”。**\n\n因此 Permission 必须拆成两层：\n\n```text\nUser-side Permission\n用户允许 Agent 做什么\n        +\nService-side Permission\n服务是否允许这个 Agent 进入与交易\n        ↓\nLegitimate Action\n```\n\n过去我们主要关注第一层。现在第二层必须正式进入长期框架。\n\n来源：[GeekWire，2026-09-20](https://www.geekwire.com/2026/amazon-blocks-metas-muse-ai-assistant-in-new-standoff-over-agentic-shopping/)\n\n## Fact｜Permission UX 本身开始成为安全边界\n\n近期 Muse 还出现了权限理解偏差导致敏感信息被非预期披露的案例。Meta 随后表示将调整权限设置，减少用户对持续授权范围的误解。Reuters 另报道 Muse 曾出现一个被定为 SEV-2 的安全漏洞，潜在影响虚拟机中保存的邮件、文件等敏感数据，随后安全警告得到强化。\n\n这里暴露的不是简单的“模型偶尔犯错”，而是 Personal Agent 产品里一个更难的问题：\n\n> **Permission 不是一次性的 OAuth 弹窗，而是持续运行的决策系统。**\n\n用户真正需要表达的通常不是简单的 Allow / Deny，而是：可以读取什么、可以记住什么、可以向谁披露什么、什么情况下可以自动行动、什么情况下必须再次确认、权限持续多久，以及异常时如何撤销。\n\n来源：[The Verge，2026-09-29](https://www.theverge.com/ai-artificial-intelligence/1001886/meta-muse-ai-facebook-marketplace-security-concerns)；[Reuters，2026-09-25](https://www.reuters.com/technology/meta-bolsters-muse-safety-warning-after-security-vulnerability-found-information-2026-09-25/)\n\n## Fact｜OpenAI Dots 把“持续代理 + 权限边界”带入巨头正面竞争\n\nOpenAI 在 9 月 29 日 DevDay 推出 Dots：持续运行的 always-on Agent，可以在后台追踪目标、使用应用和工具，并主动向用户汇报。\n\n这本身只是产品发布，不足以升级长期判断。更值得注意的是它的产品边界：OpenAI 把审批规则、敏感 Action 控制和用户可配置的行为边界直接放进 Agent 设计。Dots 首发仍主要面向高价付费用户，因此也不能用它证明大众消费者已经愿意长期委托 AI。\n\n但从竞争格局看，Meta 与 OpenAI 已经明显收敛到同一个产品方向：\n\n```text\nPersistent Agent\n+ Personal Context\n+ Background execution\n+ Proactive interaction\n+ Cross-service Action\n+ Permission controls\n```\n\n巨头竞争的对象已经不只是“谁有最好的聊天机器人”。\n\n来源：[OpenAI，Introducing dots](https://openai.com/index/introducing-dots/)；[Reuters，2026-09-29](https://www.reuters.com/business/openai-takes-meta-with-always-on-dots-agent-enterprise-ai-push-2026-09-29/)；[WIRED，2026-09-30](https://www.wired.com/story/ai-agents-dots-devday-muse-battling-it-out/)\n\n# Inference｜开放 Agent Stack 仍然成立，但 Browser-like Layer 比原先想的更难\n\n我们此前建立过两个竞争假设：Vertical Integration 与 Open Agent Stack。近期证据没有推翻开放路线，但明显增加了一个此前权重不足的变量：\n\n> **开放协议不仅要解决“Agent 如何调用服务”，还要解决“服务为什么承认这个 Agent 有权代表用户”。**\n\n如果没有这一层，通用 Agent 可以依靠浏览器自动化快速扩张能力，但这种能力随时可能被网站条款、身份验证、反自动化机制、安全政策或商业利益切断。\n\n因此更完整的结构应该是：\n\n```text\nUser Identity\n      ↓\nUser Permission\n      ↓\nAgent Identity\n      ↓\nDelegation Credential\n      ↓\nService Acceptance\n      ↓\nAction / Transaction\n      ↓\nAudit / Liability / Revocation\n```\n\n未来重要的可能不只是“Agent 知道我是谁”，而是服务能够验证：这是哪个 Agent、它代表哪个用户、用户授予了什么范围的权力、授权是否仍然有效，以及出了问题如何追责与撤销。\n\n这比单纯的 Memory 或 Context 更接近真正的代理基础设施。\n\n# Inference｜Agent Commerce 的瓶颈开始从“能不能买”转向“谁控制交易关系”\n\nAmazon 阻止 Muse 还有商业层面的含义。电商平台拥有商品排序、广告展示、推荐、行为数据、商家关系、支付与售后。如果 Personal Agent 直接替用户搜索、比较并购买，平台的一部分传统界面价值会被绕过。\n\n所以未来 Agent Commerce 的冲突并不只是技术兼容性问题，而是：\n\n> **谁拥有购买决策发生之前的那一层界面，以及谁拥有用户与商家的关系。**\n\n开放 Action Infrastructure 的成熟度，因此需要同时观察：\n\n```text\nTechnical interoperability\n+ Economic incentives\n+ Identity\n+ Permission\n+ Merchant consent\n+ Payment authorization\n+ Liability\n```\n\n缺少其中一部分，都可能让 Agent Commerce 停留在脆弱的 browser automation。\n\n# Inference｜Trust 不再只是 adoption 阻力，而可能决定平台结构\n\n当 Agent 只是回答问题时，Trust 主要影响“我信不信答案”。当 Agent 可以发送信息、购买商品、修改账户时，Trust 变成：\n\n> **我愿意给谁长期持有行动权。**\n\n一个模型能力略弱、但权限模型清晰、审计完善、身份可信、撤销机制成熟的 Agent，可能比能力最强但行为边界模糊的 Agent 更容易获得高价值权限。\n\n因此未来评估 Personal Agent，不能只比较 benchmark 或任务成功率，还要增加 Permission granularity、Approval frequency、Unauthorized-action rate、Sensitive-data disclosure rate、Revocation / recovery、Auditability 与 Service acceptance rate。\n\n# 反证与不确定性\n\n第一，Muse 的下载增长仍然非常早，没有足够留存数据确认它已经跨过 novelty curve。\n\n第二，Amazon 与 Meta 的冲突包含明显商业利益。Amazon 自己也在发展购物 Agent，因此它提出的安全理由不能被简单视为纯粹中立的安全判断。\n\n第三，单个严重权限事故不能证明所有 Personal Agent 都不可控。它也可能促使行业更快形成 approval policy、delegation credential 和审计基础设施。\n\n第四，Dots 目前主要是高价付费产品。OpenAI 的进入证明巨头竞争方向收敛，但不能证明消费者行为已经同步成熟。\n\n第五，Browser automation 不会消失。它仍可能是长尾服务的重要 fallback，只是现在有更充分理由认为：**它很难单独成为高风险 Action 和 Transaction 的长期基础设施。**\n\n# Prediction｜下一阶段真正值得追踪的不是“又来了几个 Personal Agent”\n\n接下来最值得观察的临界点，不是 Muse、Dots 或其他 Agent 谁在 App Store 第一，而是是否出现一种可跨平台验证的 Delegation Layer：\n\n```text\nHuman\n  ↓\nIdentity\n  ↓\nDelegation credential\n  ↓\nAgent\n  ↓\nService verifies scope\n  ↓\nAction\n  ↓\nTransaction\n  ↓\nAudit / revoke\n```\n\n如果这一层逐渐标准化，开放 Agent Stack 会得到明显强化：用户可以更换 Agent，而不必重新建立所有服务关系。\n\n如果这一层长期由 Apple、Google、Meta、Amazon 等各自封闭控制，那么 Vertical Integration 的优势会重新上升，Personal Agent 很可能不会成为一个完全独立于平台的 Browser-like Layer。\n\n因此，当前长期判断应更新为：\n\n> **AI as Representative 已经进入真实竞争阶段，但“代表用户行动”不是模型能力问题的自然延伸。Personal Agent 要成为稳定入口，必须同时获得用户授权与服务侧承认。Identity、Permission、Delegation、Service Acceptance、Audit 和 Liability 正从外围安全问题升级为核心基础设施。Browser automation 能证明 Agent 可以行动，却不能证明它拥有长期、可持续的行动权。**\n\n接下来最值得讨论的三个问题是：\n\n1. **未来是否会出现类似 OAuth、支付 Token 的“Agent Delegation Credential”，让服务能够验证 Agent 的身份与授权范围？**\n2. **如果平台可以拒绝第三方 Agent，Personal Agent 最终会不会重新被 OS、电商、支付和超级 App 巨头切割成多个封闭代理域？**\n3. **长期最强的控制点究竟是 Personal Context / Memory，还是更底层的 Identity + Permission + Delegation Graph？**"
+    },
     {
       "id": "2026-09-19-radar",
       "date": "2026-09-19",
