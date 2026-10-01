@@ -57,11 +57,17 @@ jobs:
       - name: Re-run content validation
         run: node scripts/validate-publish.js
 
-      - name: Re-run publication history validation
+      - name: Resolve trusted production baseline
+        id: history-base
         shell: bash
         run: |
-          BASE_SHA="$(git rev-parse "$RELEASE_SHA^")"
-          node scripts/validate-history.js --base "$BASE_SHA"
+          FALLBACK_BASE="$(git rev-parse "$RELEASE_SHA^")"
+          BASE_SHA="$(node scripts/resolve-history-base.js --fallback "$FALLBACK_BASE")"
+          echo "sha=$BASE_SHA" >> "$GITHUB_OUTPUT"
+          echo "History baseline: $BASE_SHA"
+
+      - name: Re-run publication history validation
+        run: node scripts/validate-history.js --base "${{ steps.history-base.outputs.sha }}"
 
       - name: Re-run runtime validation
         run: node scripts/validate-runtime.js

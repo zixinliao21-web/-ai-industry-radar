@@ -216,6 +216,8 @@ Frequently changed runtime/discussion scripts should also avoid stale-cache lock
 
 Do not weaken history validation to make an unsafe publisher pass.
 
+The live validated production release is the preferred history baseline for production candidates. A failed or undeployed commit on `main` must not become trusted history merely because a later publisher used it as its Git parent.
+
 ## Production release gate
 
 Production Pages must be deployed through `.github/workflows/safe-pages-deploy.yml` after `VELNAR Content Validation` succeeds. The Pages source must be **GitHub Actions**, not legacy “Deploy from a branch”.

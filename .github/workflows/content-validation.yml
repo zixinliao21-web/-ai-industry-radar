@@ -42,10 +42,22 @@ jobs:
       - name: Validate canonical research content
         run: node scripts/validate-publish.js
 
-      - name: Validate publication history
+      - name: Resolve trusted history baseline
+        id: history-base
+        shell: bash
         env:
-          BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
-        run: node scripts/validate-history.js --base "$BASE_SHA"
+          FALLBACK_BASE: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
+            BASE_SHA="$FALLBACK_BASE"
+          else
+            BASE_SHA="$(node scripts/resolve-history-base.js --fallback "$FALLBACK_BASE")"
+          fi
+          echo "sha=$BASE_SHA" >> "$GITHUB_OUTPUT"
+          echo "History baseline: $BASE_SHA"
+
+      - name: Validate publication history
+        run: node scripts/validate-history.js --base "${{ steps.history-base.outputs.sha }}"
 
       - name: Validate website runtime
         run: node scripts/validate-runtime.js

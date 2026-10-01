@@ -56,6 +56,8 @@ Recoverable orphan Industry item files are reported as warnings rather than auto
 
 This protects against valid-looking but truncated JSON and accidental history rewrites.
 
+For production pushes, history validation prefers the SHA recorded by the **currently live validated release** as its trusted history baseline. If that live metadata is temporarily unavailable, it falls back to the candidate's previous commit. Pull requests compare against their PR base. This prevents an undeployed/failed commit left on `main` from silently becoming the trusted historical baseline for a later candidate.
+
 ### Runtime
 
 `scripts/validate-runtime.js` checks:
