@@ -1,37 +1,60 @@
 # VELNAR Research Release Protocol V1
 
-## Purpose
+Status: **active once GitHub Pages source is GitHub Actions**
 
-Prevent partial content publication from reaching the production website.
+## Invariant
 
-## Release states
+Production may advance only to a commit for which **VELNAR Content Validation** completed successfully.
+
+## Release sequence
 
 ```text
-idle
- |
- v
-preparing
- |
- v
-validated
- |
- v
-released
+candidate commit on main
+        ↓
+canonical content validation
+        ↓
+runtime validation
+        ↓
+validation success
+        ↓
+safe Pages workflow receives exact validated SHA
+        ↓
+verify SHA is still current main
+        ↓
+generate release-status.json in deployment workspace
+        ↓
+upload immutable Pages artifact
+        ↓
+deploy
 ```
 
-A failed validation must not become a production release.
+If validation fails, the candidate remains in Git history for diagnosis but is not a production release.
 
-## Transaction rule
+## Industry publication contract
 
-A release must update all required artifacts together:
+Routine Industry publishing still follows `docs/industry-radar-publishing.md`:
 
-- canonical content
-- collection index
-- runtime manifest
-- release status
+1. create the per-item article first;
+2. update only the active bounded metadata segment (or create the next segment);
+3. update the tiny manifest last;
+4. use exact current SHAs and reconcile races instead of overwriting.
 
-If one artifact is incomplete, the release remains unreleased and requires reconciliation.
+The release gate is defense in depth. It does not justify unsafe publisher behavior.
 
-## Current phase
+## Release lock
 
-Foundation only. This document does not change existing website behavior.
+`release-lock.json` must be `idle` for a production deployment.
+
+Future publishers may use intermediate states such as `preparing` while assembling a release, but the final candidate commit must return the lock to `idle`. A non-idle lock fails validation and cannot deploy.
+
+## Recoverable partial state
+
+An Industry item file may temporarily exist without an index entry. The validator reports this as a warning and does not auto-publish it.
+
+Index entries that point to missing or inconsistent canonical item files are fatal validation errors.
+
+## Rollback
+
+Git history is the canonical rollback source. Because Pages deploys immutable validated artifacts, production remains on the previous successful artifact when a candidate fails.
+
+A manual rollback is performed by restoring a previously validated commit to `main`, after which it passes through the same validation/deployment gate.

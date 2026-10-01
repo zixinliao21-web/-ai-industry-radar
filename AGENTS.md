@@ -10,6 +10,8 @@ This repository is a lightweight static **VELNAR Research** product containing t
 - [Multi-collection architecture](docs/multi-collection-architecture.md)
 - [Consumer Radar content contract](docs/consumer-radar-contract.md)
 - [Weekly Deep Read content contract](docs/deep-read-contract.md)
+- [Publishing system V1](docs/publishing-system-v1.md)
+- [Release protocol V1](docs/release-protocol-v1.md)
 - [Design decision record](docs/plans/design-language.md)
 - [Frontend design craft skill](.agents/skills/frontend-design/SKILL.md)
 
@@ -197,6 +199,21 @@ deep-read.json
 Do not revert them to long-lived cache-first behavior.
 
 Frequently changed runtime/discussion scripts should also avoid stale-cache lock-in.
+
+## Production release gate
+
+Production Pages must be deployed through `.github/workflows/safe-pages-deploy.yml` after `VELNAR Content Validation` succeeds. The Pages source must be **GitHub Actions**, not legacy “Deploy from a branch”.
+
+A content commit existing on `main` is not proof that it is a production release. Validation failure must leave production on the previous successful Pages artifact.
+
+Publishers must not bypass or weaken:
+
+- `scripts/validate-publish.js`
+- `scripts/validate-runtime.js`
+- `release-lock.json` idle requirement
+- the latest-main SHA check in the safe Pages workflow
+
+Recoverable orphan Industry item files are not permission to auto-publish them.
 
 ## Safe change rule
 

@@ -1,0 +1,86 @@
+name: VELNAR Safe Pages Deploy
+
+on:
+  workflow_run:
+    workflows:
+      - VELNAR Content Validation
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: velnar-pages-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Deploy validated main
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (
+        github.event.workflow_run.conclusion == 'success' &&
+        github.event.workflow_run.event == 'push' &&
+        github.event.workflow_run.head_branch == 'main'
+      )
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      RELEASE_SHA: ${{ github.event_name == 'workflow_dispatch' && github.sha || github.event.workflow_run.head_sha }}
+
+    steps:
+      - name: Checkout validated commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.RELEASE_SHA }}
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Re-run content validation
+        run: node scripts/validate-publish.js
+
+      - name: Re-run runtime validation
+        run: node scripts/validate-runtime.js
+
+      - name: Confirm candidate is still latest main
+        id: latest
+        shell: bash
+        run: |
+          git fetch origin main --depth=1
+          CURRENT_MAIN="$(git rev-parse origin/main)"
+          if [ "$CURRENT_MAIN" = "$RELEASE_SHA" ]; then
+            echo "deploy=true" >> "$GITHUB_OUTPUT"
+            echo "Validated candidate is current main: $RELEASE_SHA"
+          else
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+            echo "Skip stale validated candidate $RELEASE_SHA; current main is $CURRENT_MAIN"
+          fi
+
+      - name: Generate production release health
+        if: steps.latest.outputs.deploy == 'true'
+        run: node scripts/generate-release-status.js --output release-status.json --commit "$RELEASE_SHA"
+
+      - name: Configure GitHub Pages
+        if: steps.latest.outputs.deploy == 'true'
+        uses: actions/configure-pages@v5
+
+      - name: Upload validated Pages artifact
+        if: steps.latest.outputs.deploy == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy validated Pages artifact
+        if: steps.latest.outputs.deploy == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4

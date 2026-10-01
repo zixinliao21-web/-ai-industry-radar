@@ -8,9 +8,12 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   validate-content:
-    name: Validate research content integrity
+    name: Validate release candidate
     runs-on: ubuntu-latest
 
     steps:
@@ -22,5 +25,22 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Run VELNAR publishing validator
+      - name: Validate canonical research content
         run: node scripts/validate-publish.js
+
+      - name: Validate website runtime
+        run: node scripts/validate-runtime.js
+
+      - name: Generate release health preview
+        env:
+          RELEASE_SHA: ${{ github.sha }}
+        run: |
+          node scripts/generate-release-status.js --output release-status.preview.json --commit "$RELEASE_SHA"
+          cat release-status.preview.json
+
+      - name: Upload validation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: validated-release-status
+          path: release-status.preview.json
+          retention-days: 7

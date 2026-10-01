@@ -1,62 +1,89 @@
 # VELNAR Research Publishing System V1
 
-Status: Phase 1 active
+Status: **gate-ready**
 
 ## Goal
 
-Prevent partial content releases from breaking the Research website.
+Prevent partial content releases from breaking the Research website while preserving the existing static HTML/CSS/JS product.
 
-The website remains a static research product. This layer only adds release safety.
+## Production rule
 
-## Release principle
+The production site must deploy only a commit that has passed both validators:
 
 ```text
-Research content
-      |
-      v
-Canonical data files
-      |
-      v
-Validation
-      |
-      v
-Release
-      |
-      v
-Website
+push / PR
+   ↓
+scripts/validate-publish.js
+   ↓
+scripts/validate-runtime.js
+   ↓
+VELNAR Content Validation
+   ↓ success only
+VELNAR Safe Pages Deploy
+   ↓
+validated GitHub Pages artifact
 ```
 
-## Phase 1 validator
+A validation failure leaves the production site on the previous successful deployment.
 
-`scripts/validate-publish.js` is a read-only safety check.
+## Validators
 
-It validates:
+### Canonical content
 
-- Industry Radar segmented index counts
-- duplicate article IDs
-- Consumer verbatim articles have canonical body content
-- Weekly Deep Read verbatim articles have canonical body content
+`scripts/validate-publish.js` checks:
 
-The validator does not modify data.
+- Industry segmented-index schema and bounded segment rules
+- manifest count = actual segment count
+- duplicate Industry IDs
+- every indexed Industry article file exists and matches its index identity
+- canonical `article_text` exists when `body_format=article_text`
+- Consumer V2 verbatim items contain `body_markdown`
+- Deep Read published-verbatim items contain `content_markdown`
+- duplicate IDs in Consumer / Deep Read
+- production `release-lock.json` is idle
 
-## Future phases
+Recoverable orphan Industry item files are reported as warnings rather than automatically published.
 
-Phase 2:
+### Runtime
 
-- draft / published separation
-- release artifacts
-- rollback snapshots
+`scripts/validate-runtime.js` checks:
 
-Phase 3:
+- shared JavaScript syntax
+- inline JavaScript syntax on all six surfaces
+- required shared runtime references
+- Service Worker collection routes and canonical data references
+- web manifest JSON validity
 
-- health monitoring
-- publication status dashboard
+## Release health
 
-## Boundary
+`scripts/generate-release-status.js` generates `release-status.json` inside the deployment workspace after validation. It is release metadata, not canonical research content.
 
-This system must not change:
+The generated snapshot records:
 
-- research conclusions
-- collection editorial schemas
-- local browser state
-- website visual design
+- validated commit SHA
+- collection item counts
+- collection last-update values
+- Industry storage / segment count
+- validators used
+
+The generator does not commit or rewrite research content.
+
+## Concurrency / race handling
+
+`VELNAR Safe Pages Deploy` deploys the exact commit that passed validation and verifies that commit is still the latest `main` before deployment. A slower validation for an older commit cannot overwrite a newer release.
+
+## GitHub Pages setting
+
+The repository must use **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+
+Legacy “Deploy from a branch” starts Pages deployment before the validation workflow and therefore cannot provide a release gate.
+
+## Boundaries
+
+This safety layer does not:
+
+- rewrite research conclusions
+- unify the three editorial schemas
+- introduce a backend, CMS or database
+- move browser-local state into canonical content
+- change website UI
