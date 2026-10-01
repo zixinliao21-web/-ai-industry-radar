@@ -1,6 +1,8 @@
 # VELNAR Research Release Protocol V1
 
-Status: **active once GitHub Pages source is GitHub Actions**
+Status: **active**
+
+GitHub Pages production source: **GitHub Actions**.
 
 ## Invariant
 
