@@ -1,0 +1,36 @@
+{
+  "id": "2026-10-02-A1",
+  "date": "2026-10-02",
+  "grade": "A",
+  "title": "Agent Commerce 的控制点正在从“能付款”转向“谁能证明 Agent 的身份、意图与行为”",
+  "themes": [
+    "Agent Commerce",
+    "Agent Identity",
+    "Verifiable Intent",
+    "KYA",
+    "Payment Networks",
+    "Trust Infrastructure"
+  ],
+  "deck": "Mastercard 将 Agent Pay 从支付执行继续推进到身份、意图、行为与风险判断层。真正值得观察的不是 AI Agent 能否付款，而是谁能成为跨 Agent、商户与金融机构共享的信任与授权基础设施。",
+  "article_text": "# Agent Commerce 的控制点正在从“能付款”转向“谁能证明 Agent 的身份、意图与行为”\n\nMastercard 在 2026 年 9 月 30 日扩展 Agent Pay，真正值得关注的不是又一家支付网络宣布支持 AI Agent，而是它开始把“Agent 是否可信”做成交易网络中的独立判断层：新的 Trust and Intelligence Services 会结合身份、用户意图、行为与欺诈信号，并首先在美国测试一个判断交易是否由 AI Agent 发起的概率分数。Mastercard 同时与 Cloudflare 探索结合 Web 与支付网络信号，与 Skyfire 引入 Know Your Agent（KYA）能力。\n\n这使 Agent Commerce 的产业问题发生了一次更清晰的分层。\n\n**FACT｜发生了什么**\n\nMastercard 把 Agent Pay Trust Framework 明确拆成 identity、intent、controls、execution、intelligence 五部分。此前它已经通过 Verifiable Intent 尝试提供用户授权的可验证记录，也已经在欧洲、澳大利亚、韩国等市场完成或推进真实 Agent 支付；此次新增的重点不是让 Agent 第一次“付得了钱”，而是让发卡行、商户和支付平台在授权决策时获得关于 Agent 的额外上下文。\n\n第一个服务是 Agent-initiated transaction probability score：支付网络判断一笔交易有多大概率由 AI Agent 发起。随后还计划加入行为、商户风险、交易模式、凭证风险和消费者倾向等信号。换句话说，传统支付网络原本主要判断“这是不是持卡人允许的合法交易”，现在开始增加一层“是谁代表用户行动、这个 Agent 是否可信、它是否仍在授权边界内”。\n\n这不是孤立动作。Mastercard 此前推出的 Verifiable Intent 试图证明用户到底授权了什么；Agent Pay for Machines 又把 credentialing、permissioning、transacting、settling 明确成机器交易基础能力；Agent Connect 则试图降低 Agent、商户、平台和支付提供商之间的连接复杂度。把这些动作连起来看，Mastercard 正在尝试覆盖 Agent Commerce 从连接、身份、授权、执行到风险判断的一整套信任基础设施。\n\n**INFERENCE｜真正的新信号：支付网络可能演化成 Agent Trust Network**\n\n我们此前关注 Agent Commerce 时，很容易把新的控制点理解成“谁掌握支付入口”。这次信号要求把判断进一步细化：支付本身未必是最稀缺的能力，真正可能形成长期控制力的是跨 Agent、跨模型、跨商户、跨银行仍然成立的信任与授权语义。\n\n原因很直接。未来一个消费者可能同时使用 OpenAI、Google、Anthropic 或其他公司的 Agent；商户也不会愿意分别为每种 Agent 建立完整的身份、权限和风控体系。如果每个生态各自定义“用户授权了什么”“这个 Agent 是谁”“它有没有越权”，Agent Commerce 会重新陷入碎片化。\n\n支付网络恰好位于多方必须共同经过的交易节点。它已经拥有发卡行、收单机构、商户、凭证、欺诈和交易行为数据，因此有机会把原来的 fraud/risk network 扩展成 agent trust network。Mastercard 与 Cloudflare 的合作尤其值得观察：如果 Web 行为信号与支付网络信号能够在保护隐私的前提下组合，控制点就不再只是支付结算，而可能覆盖 Agent 从网页行动到最终交易的连续行为证明。\n\n这会强化一个长期判断：Agent 经济中的重要基础设施不会只有模型、Runtime 和 Tool Protocol，还会出现独立的 Identity / Intent / Permission / Trust 层。它们可能由现有支付网络、身份公司、Cloudflare 一类互联网基础设施公司以及新的 KYA 厂商共同争夺，而不是天然属于模型公司。\n\n**但这并不等于 Mastercard 已经赢得 Agent Commerce。**\n\n第一，概率分数目前只是美国测试中的服务，尚不能证明市场会把 Mastercard 的判断作为事实标准。\n\n第二，Agent Commerce 的身份与授权标准仍处于竞争期。Google AP2、UCP、不同支付网络、KYA 厂商以及未来可能出现的监管要求，都可能改变接口和权力分配。一个支付网络能够提供信号，不代表它能够定义整个 Agent 身份体系。\n\n第三，今天大量“Agent Commerce”仍然是受控试点。真实消费者是否愿意长期把购买决策和支付权限交给 Agent、争议处理如何分责、商户是否愿意让第三方 Agent 控制发现与转化入口，都还没有被规模化验证。因此不能从基础设施快速建设反推需求已经成熟。\n\n**对 VELNAR 的意义**\n\n这条信号属于长期结构观察，而不是当前 Sales MVP 的开发指令。\n\n它强化的不是“我们应该加入支付功能”，而是一个更一般的架构判断：当 Agent 从建议者变成执行者，企业和交易网络真正需要的不是更自由的自主性，而是可验证的 identity、intent、permission、policy、trace 与 execution boundary。VELNAR 当前采用 bounded AI decision + Grounding + Policy + Tool + Trace 的方向，与这个产业趋势是相容的；没有理由因为 Agent Commerce 的发展扩大当前 MVP Scope。\n\n更值得长期保留的是“Semantic Authority”的外延正在变得更具体：未来系统不仅要知道业务事实是什么，还要能回答“谁授权了什么、哪个 Agent 代表谁、在什么边界内行动、发生争议时哪条证据具有权威性”。在支付领域，Verifiable Intent 和 KYA 已经开始把这些抽象问题变成可执行基础设施。\n\n**判断更新**\n\n此前判断“Agent Commerce 会产生新的控制点”得到加强，但需要修正为：新的控制点未必首先来自新的 Agent Marketplace 或支付入口，更可能先形成于跨生态的身份、授权、意图证明和风险网络。\n\n当前行动：**观察，不扩 Scope。**\n\n接下来最值得追踪三个问题：\n\n1. Visa、Mastercard、Google AP2/UCP 与 KYA 厂商最终会趋向互操作标准，还是形成彼此封闭的 Agent Trust Network？\n2. Agent identity 与 verifiable intent 最终由支付网络掌握，还是会成为类似 TLS/OAuth 的开放公共层，从而削弱单一公司的控制力？\n3. 当真实 Agent 交易规模上升后，谁拥有争议处理与责任归因的数据，将比“谁提供 Agent”更有可能形成长期网络效应？",
+  "sources": [
+    {
+      "title": "Mastercard Advances Agentic Commerce With New Trust and Intelligence Services",
+      "url": "https://investor.mastercard.com/investor-news/investor-news-details/2026/Mastercard-Advances-Agentic-Commerce-With-New-Trust-and-Intelligence-Services/default.aspx",
+      "date": "2026-09-30"
+    },
+    {
+      "title": "How Verifiable Intent builds trust in agentic AI commerce",
+      "url": "https://www.mastercard.com/us/en/news-and-trends/stories/2026/verifiable-intent.html"
+    },
+    {
+      "title": "Mastercard Launches Agent Pay for Machines",
+      "url": "https://investor.mastercard.com/investor-news/investor-news-details/2026/Mastercard-Launches-Agent-Pay-for-Machines-to-Unlock-Super-Fast-Always-On-Payments/default.aspx"
+    },
+    {
+      "title": "Mastercard launches Agent Connect",
+      "url": "https://www.mastercard.com/us/en/news-and-trends/press/2026/september/mastercard-gives-merchants-a-simpler-way-to-build--connect-and-s.html"
+    }
+  ],
+  "body_format": "article_text"
+}
