@@ -1,6 +1,11 @@
 name: VELNAR Research Health Audit
 
 on:
+  workflow_run:
+    workflows:
+      - VELNAR Safe Pages Deploy
+    types:
+      - completed
   schedule:
     - cron: '20 0 * * *'
   workflow_dispatch:
@@ -15,12 +20,15 @@ concurrency:
 jobs:
   audit:
     name: Audit repository and live production
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 12
 
     steps:
-      - name: Checkout main
+      - name: Checkout audited commit
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || 'main' }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -44,7 +52,15 @@ jobs:
         run: node scripts/health-audit.js --output health-audit.json
 
       - name: Check live production
-        run: node scripts/check-live-release.js
+        env:
+          DEPLOYED_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || '' }}
+        shell: bash
+        run: |
+          if [ -n "$DEPLOYED_SHA" ]; then
+            node scripts/check-live-release.js --commit "$DEPLOYED_SHA"
+          else
+            node scripts/check-live-release.js
+          fi
 
       - name: Upload health artifact
         uses: actions/upload-artifact@v4
