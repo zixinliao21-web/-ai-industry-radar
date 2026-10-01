@@ -16,6 +16,22 @@
       ],
       "deck": "Dataiku 把跨 Salesforce、AWS、Microsoft、Google、Databricks、Snowflake 等 Runtime 的 Agent 发现、风险、成本与业务价值管理做成 standalone product。它进一步验证：企业可能长期保留多种 Agent Runtime，而在其上单独采购一个跨平台控制与审计层。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-02-A1",
+      "date": "2026-10-02",
+      "grade": "A",
+      "title": "Agent Commerce 的控制点正在从“能付款”转向“谁能证明 Agent 的身份、意图与行为”",
+      "themes": [
+        "Agent Commerce",
+        "Agent Identity",
+        "Verifiable Intent",
+        "KYA",
+        "Payment Networks",
+        "Trust Infrastructure"
+      ],
+      "deck": "Mastercard 将 Agent Pay 从支付执行继续推进到身份、意图、行为与风险判断层。真正值得观察的不是 AI Agent 能否付款，而是谁能成为跨 Agent、商户与金融机构共享的信任与授权基础设施。",
+      "body_format": "article_text"
     }
   ]
 }
