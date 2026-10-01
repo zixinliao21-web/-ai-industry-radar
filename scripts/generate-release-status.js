@@ -48,7 +48,7 @@ const status = {
   },
   validation: {
     passed: true,
-    validators: ['scripts/validate-publish.js','scripts/validate-runtime.js']
+    validators: ['scripts/validate-publish.js','scripts/validate-change-scope.js','scripts/validate-history.js','scripts/validate-runtime.js']
   }
 };
 
