@@ -32,6 +32,22 @@
       ],
       "deck": "Mastercard 将 Agent Pay 从支付执行继续推进到身份、意图、行为与风险判断层。真正值得观察的不是 AI Agent 能否付款，而是谁能成为跨 Agent、商户与金融机构共享的信任与授权基础设施。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-02-A2",
+      "date": "2026-10-02",
+      "grade": "A",
+      "title": "Agent 安全正在下沉到模型之外：可执行边界可能成为新的基础设施层",
+      "themes": [
+        "Agent Safety",
+        "Secure Runtime",
+        "Policy Enforcement",
+        "Agent Infrastructure",
+        "Physical AI",
+        "Governance"
+      ],
+      "deck": "NVIDIA 把 Agent 安全从应用层 Guardrail 推向独立于 Agent 推理过程的 Runtime、内核与硬件执行边界，并获得企业软件、金融、工业与机器人生态的大范围接入。新信号不是“又一个安全产品”，而是 Agent 治理正在从建议模型守规矩转向让系统具备模型无法绕过的确定性约束。",
+      "body_format": "article_text"
     }
   ]
 }

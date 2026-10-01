@@ -1,0 +1,28 @@
+{
+  "id": "2026-10-02-A2",
+  "date": "2026-10-02",
+  "grade": "A",
+  "title": "Agent 安全正在下沉到模型之外：可执行边界可能成为新的基础设施层",
+  "themes": [
+    "Agent Safety",
+    "Secure Runtime",
+    "Policy Enforcement",
+    "Agent Infrastructure",
+    "Physical AI",
+    "Governance"
+  ],
+  "deck": "NVIDIA 把 Agent 安全从应用层 Guardrail 推向独立于 Agent 推理过程的 Runtime、内核与硬件执行边界，并获得企业软件、金融、工业与机器人生态的大范围接入。新信号不是“又一个安全产品”，而是 Agent 治理正在从建议模型守规矩转向让系统具备模型无法绕过的确定性约束。",
+  "article_text": "# Agent 安全正在下沉到模型之外：可执行边界可能成为新的基础设施层\n\nNVIDIA 在 9 月 28 日发布 Open Agent Safety Platform。真正值得 VELNAR 注意的，不是 NVIDIA 又扩了一条 AI 软件产品线，而是它把 Agent 安全问题重新定义成了一个基础设施问题：当 Agent 获得文件、网络、API、工具乃至机器人执行权限后，安全边界不能只存在于 Prompt、模型对齐或 Agent Harness 内部，而需要存在于 Agent 无法自行修改和绕过的执行环境之外。\n\n这条信号值得列为 A 级，因为它把过去分散在 sandbox、policy、identity、observability、human approval 中的需求，进一步推向一个共同方向：**Agent Runtime 之下可能形成独立的 enforceable control layer。**\n\n## FACT｜发生了什么\n\nNVIDIA Open Agent Safety Platform 由两类核心能力组成。\n\n第一层是 OpenShell。它是开源的 secure runtime，把 Agent 放进隔离环境，通过默认拒绝的网络策略、文件访问限制、进程权限和 policy enforcement 控制 Agent 能接触什么。NVIDIA 对它的定位很明确：安全规则应由环境执行，而不是依赖模型或应用自己遵守。允许和拒绝行为可以被审计，策略执行发生在 Agent 进程之外。\n\n第二层是 Sentry。NVIDIA 将它设计为运行在 BlueField-4 DPU 上的 out-of-band watchdog。它从独立信任域监控 Agent 行为，在 Agent 越过边界时执行隔离。这里最重要的设计思想不是具体硬件，而是 enforcement 与被监管 Agent 分离：即使 Agent 自己的推理、Prompt 或应用层控制被绕过，外部执行边界仍然存在。\n\n更值得注意的是生态范围。NVIDIA 公布的合作或集成对象已经跨越 Anthropic、Microsoft、Salesforce、SAP、ServiceNow、Palantir、Red Hat、Scale AI、JPMorganChase、Citi，以及 Figure、Gecko Robotics、Skild AI 等机器人公司。SAP 正把 OpenShell 与 Joule Studio runtime 结合；Salesforce 已把 OpenShell Agent 活动与审批接入 Slack；机器人公司则在探索把相同边界用于物理执行系统。\n\n因此，这不是单一 coding-agent sandbox 的故事。它正在尝试覆盖 enterprise software、cloud、financial services、critical infrastructure 和 Physical AI。\n\n## INFERENCE｜安全控制正在从“模型是否听话”转向“系统允许它做什么”\n\n过去 Agent 安全经常被表达成 Guardrail 问题：改善 Prompt、增加审批、限制 Tool Calling、训练模型拒绝危险请求。\n\n这些仍然必要，但它们共享一个弱点：很多控制与 Agent 本身处在同一应用层。如果 Agent 因 Prompt Injection、错误规划或工具组合出现异常，要求它“自己遵守限制”并不是足够强的安全模型。\n\nOpenShell 所代表的方向更接近传统计算安全中的 least privilege、sandbox、zero trust 和 policy enforcement：模型可以犯错，但系统仍然决定它最终能执行什么。\n\n这与企业 Agent 的成熟路径存在直接关系。Agent 越从“给建议”走向“执行工作”，企业越不能只评价模型回答是否正确，而必须回答：\n\n- 它能访问哪些数据？\n- 能调用哪些工具？\n- 哪些行为默认禁止？\n- 谁可以临时提升权限？\n- 行为是否可审计？\n- 即使模型失控，最大 blast radius 是多少？\n\n因此，未来企业 Agent Stack 可能逐渐形成更明确的分层：\n\n**Model / Reasoning → Agent Runtime → Policy & Execution Boundary → Enterprise Systems / Physical World**\n\nControl Plane 负责“看见和管理 Agent”，而 enforceable runtime boundary 负责“即使 Agent 不合作，也让限制成立”。两者可能成为不同但相互依赖的基础设施市场。\n\n## 为什么这会影响我们对控制点的判断\n\n此前我们已经观察到企业开始为跨 Runtime 的 Agent Inventory、Risk、ROI 与 Governance 单独买单。这次 NVIDIA 的动作补上了另一半：治理不仅需要一个管理面，还需要真正可以执行策略的底层边界。\n\n如果这个方向成立，Agent 时代的重要控制点可能不只属于模型公司或 SaaS 应用。谁能够跨模型、跨 Agent Framework、跨云和本地环境提供统一的 identity、policy、permission、audit 与 enforcement，谁就可能成为 Agent 基础设施中的长期中间层。\n\nNVIDIA 的优势在于它可以把这层控制一直下沉到计算和硬件；但 OpenShell 又宣称可以扩展到 Arm、Intel 等第三方平台。这说明它至少在当前阶段试图把标准做大，而不是只把安全能力绑定在 NVIDIA GPU 上。\n\nPhysical AI 会进一步放大这个问题。软件 Agent 做错一步可能造成错误文件操作；机器人 Agent 做错一步可能直接影响物理设备和人员。因此“模型之外的确定性执行边界”在 Physical AI 中可能比纯软件 Agent 更接近硬要求。\n\n## 我们不应该因此得出什么结论\n\n第一，不能因为合作名单很长就认定 NVIDIA 已经控制 Agent Security。大量合作仍可能处于集成、试验或生态表态阶段，真实生产采用率尚未被证明。\n\n第二，OpenShell 是开源的，而且 Runtime isolation、sandbox、zero-trust policy 并不是 NVIDIA 独有概念。云厂商、安全公司、Agent 平台和操作系统厂商都可能提供竞争方案。这个市场最终可能标准化，而不是由单一供应商垄断。\n\n第三，硬件级 enforcement 并不意味着所有企业都需要专用 DPU。很多普通业务 Agent 可能通过软件 sandbox 和权限系统获得足够安全性。Sentry 是否会成为普遍架构，仍需要真实部署证据。\n\n第四，这条信号不能被误读成 VELNAR 当前 Sales MVP 应该增加 NVIDIA OpenShell、硬件安全层或重新设计 Runtime。当前项目的风险和规模远没有证明这种工程复杂度是必要的。\n\n## 对 VELNAR 的判断更新\n\n这条信号强化了一个已有方向：**bounded AI decision + deterministic enforcement 比“让 LLM 自己判断边界”更接近企业 Agent 的长期架构。**\n\n但它把这个判断向前推进了一步。\n\n过去我们主要把确定性系统理解为业务层的 Grounding、State、Policy、Tool、Trace；现在需要长期观察的是：当 Agent 权限扩大后，Policy 是否还需要进一步下沉成独立于 Agent 本身的 execution boundary。\n\n这不是当前 MVP 的开发任务，而是未来企业 Agent 从“业务自动化工具”走向“高权限执行主体”时可能出现的基础设施分界线。\n\n**当前行动：观察，不扩 Scope。**\n\n值得继续追踪三个问题：\n\n1. Agent Control Plane 与 secure runtime 最终会合并成一个市场，还是形成“管理面 + 执行面”两层独立产品？\n2. OpenShell 一类跨模型 enforcement 是否会演化成类似容器安全、IAM 或 service mesh 的标准基础设施，而不是某个 Agent Framework 的附属功能？\n3. 当 Physical AI 真正规模部署后，模型之外的 hardware-backed safety boundary 是否会从高安全场景的可选项变成默认要求？",
+  "sources": [
+    {
+      "title": "NVIDIA Launches Open Agent Safety Platform to Secure Agents From Testing to Deployment",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-Open-Agent-Safety-Platform-to-Secure-Agents-From-Testing-to-Deployment/default.aspx",
+      "date": "2026-09-28"
+    },
+    {
+      "title": "NVIDIA OpenShell | Open, Secure Runtime for AI Agents",
+      "url": "https://www.nvidia.com/en-us/ai/openshell/"
+    }
+  ],
+  "body_format": "article_text"
+}
