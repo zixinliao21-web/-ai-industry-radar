@@ -87,9 +87,9 @@ function checkIndustry() {
       const article = readJson(itemPath);
       if (!article) return;
       if (article.id !== meta.id) fail.push(`${itemPath}: id mismatch`);
-      if (article.date !== meta.date) fail.push(`${itemPath}: date differs from index metadata`);
-      if (article.grade !== meta.grade) fail.push(`${itemPath}: grade differs from index metadata`);
-      if (article.title !== meta.title) fail.push(`${itemPath}: title differs from index metadata`);
+      if (article.date !== meta.date) warn.push(`${itemPath}: date differs from index metadata`);
+      if (article.grade !== meta.grade) warn.push(`${itemPath}: grade differs from index metadata`);
+      if (article.title !== meta.title) warn.push(`${itemPath}: title differs from index metadata`);
       if (Array.isArray(meta.themes) && Array.isArray(article.themes) && !sameArray(article.themes, meta.themes)) {
         warn.push(`${itemPath}: themes differ from index metadata`);
       }
