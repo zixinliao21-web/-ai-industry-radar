@@ -95,7 +95,7 @@ Website implementation must not compress, rewrite or normalize research merely t
 
 Industry Radar uses segmented index V3. `news-index.json` is a tiny manifest; compact directory metadata lives in bounded `news-index-segments/segment-XXXX.json` shards; each full article lives in `news-items/<id>.json`. Full 8-item segments are sealed and immutable. `news.json` is a frozen legacy snapshot and must not receive new publications.
 
-For every publication, follow `docs/industry-radar-publishing.md`: create the new per-item file first, update only the active bounded metadata segment, then update the tiny manifest using exact current blob SHAs. Never require a growing full-history index rewrite to add one signal.
+For every publication, follow `docs/industry-radar-publishing.md`. Prefer one atomic Git tree/commit containing the new per-item file, the active bounded segment mutation/new segment, and the tiny manifest. Re-check the recorded `main` SHA before fast-forwarding the ref. Use staged item → segment → manifest writes only as a compatibility fallback when atomic Git primitives are unavailable. Never require a growing full-history index rewrite to add one signal.
 
 For new single-artifact publications, `article_text` in the item file is the canonical website body and must preserve the research article delivered in chat. Structured fields may remain as secondary compatibility metadata.
 
@@ -204,6 +204,12 @@ deep-read-items/<id>.json
 Do not revert them to long-lived cache-first behavior.
 
 Frequently changed runtime/discussion scripts should also avoid stale-cache lock-in.
+
+## Atomic publication transactions
+
+Industry Radar and Weekly Deep Read are multi-file segmented collections. When Git tree/commit/ref primitives are available, routine publication must prefer a single atomic candidate commit containing the canonical item, bounded segment change, and tiny manifest change. Re-check `main` before the ref update and rebuild on races.
+
+Staged multi-commit writes are a fallback only. They remain recoverable and production-safe because of the release gate, but they should not be the normal path when atomic publication is available.
 
 ## Historical publication integrity
 

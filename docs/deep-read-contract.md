@@ -63,20 +63,19 @@ Segments may contain metadata needed for the directory and archive navigation, i
 
 Never put `content_markdown` or other full long-form bodies in the manifest or index segments.
 
-## 5. Safe publication order
+## 5. Safe publication transaction
 
 For one new Deep Read:
 
-1. Read the complete current `deep-read-index.json` and record its exact blob SHA, item count, segment size and descriptors.
+1. Read the complete current `deep-read-index.json` and record the exact current `main` commit SHA, manifest blob SHA, item count, segment size and descriptors.
 2. Check whether `deep-read-items/<id>.json` already exists. Reconcile rather than duplicate.
-3. Read the current active segment completely.
-4. Finish and freeze the canonical Deep Read.
-5. Create `deep-read-items/<id>.json` first.
-6. Append compact metadata to the active segment using its exact SHA; if it is full/sealed, create the next sequential segment.
-7. Update the tiny manifest last using its exact current SHA: increment item count exactly once, update `updated_at`, and update/append the active segment descriptor.
-8. On any SHA race, re-read and reconcile. Never overwrite concurrent history.
-9. Verify the item exists exactly once, the index entry exists exactly once, counts agree, and sealed historical segments did not change.
-10. Production is not considered live until `VELNAR Content Validation` and `VELNAR Safe Pages Deploy` succeed for the candidate SHA.
+3. Read the current active segment completely and finish/freeze the canonical Deep Read.
+4. Construct the complete post-publication state before moving `main`: the per-item file, the updated/new bounded metadata segment, and the updated tiny manifest.
+5. **Preferred path:** when Git tree/commit/ref primitives are available, write those files into one tree based on the exact recorded base tree, create one commit with the recorded `main` SHA as parent, re-read `main`, and fast-forward only if the ref is unchanged. This is the normal V3 publication transaction.
+6. If `main` moved, discard/rebuild against the new complete manifest and active segment. Never force-update over concurrent history.
+7. **Fallback only when an atomic transaction is unavailable:** staged item → segment → manifest writes may be used with exact SHAs and the recovery rules below. Partial fallback commits are release candidates only and must not be treated as live publication.
+8. Verify the item exists exactly once, the index entry exists exactly once, counts agree, and sealed historical segments did not change.
+9. Production is not live until `VELNAR Content Validation`, `VELNAR Safe Pages Deploy`, and live verification succeed for the exact candidate SHA.
 
 A recoverable orphan item is safer than rewriting history. Do not auto-publish an orphan merely because its file exists.
 

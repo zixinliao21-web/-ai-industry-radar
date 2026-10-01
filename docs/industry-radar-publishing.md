@@ -76,26 +76,24 @@ Do not put full bodies, sources, Fact/Inference sections or browser-local state 
 
 For each genuinely new Radar signal:
 
-1. Read the complete current `news-index.json` manifest and record its exact blob SHA, `item_count`, `segment_size`, and complete segment list.
+1. Read the complete current `news-index.json` manifest and record the exact current `main` commit SHA, manifest blob SHA, `item_count`, `segment_size`, and complete segment list.
 2. Check whether `news-items/<candidate-id>.json` already exists. If it exists, reconcile rather than creating a duplicate.
-3. Read the current last index segment completely. For substantive dedupe, read additional bounded segments as needed; never require one unbounded aggregate blob.
+3. Read the current active index segment completely. For substantive dedupe, read additional bounded segments as needed; never require one unbounded aggregate blob.
 4. Finish and freeze the canonical research article.
-5. Create `news-items/<id>.json` **first**. `article_text` is the canonical body and must preserve the frozen research article except JSON escaping.
-6. Publish compact metadata:
-   - If the current last segment has fewer than 8 items, append exactly one metadata entry to that segment using its exact current blob SHA.
-   - If the current last segment has 8 items / is sealed, create the next sequential segment with the new metadata entry as its first item.
-   - When a segment reaches 8 items, mark that segment sealed in the manifest.
-7. Only after the item file and index segment are safely present, update the tiny `news-index.json` manifest with its exact current blob SHA:
-   - update `updated_at`;
-   - increment `item_count` exactly once;
-   - update the active segment count/sealed state or append the newly created segment descriptor.
-8. If any SHA changed because another publication landed, do not overwrite. Re-read the tiny manifest and active bounded segment, deduplicate/reconcile, then retry.
-9. After publication, verify:
+5. Construct the complete post-publication state **before moving `main`**:
+   - new `news-items/<id>.json` with canonical `article_text`;
+   - updated active segment, or the next sequential segment if the current segment is full/sealed;
+   - updated tiny `news-index.json` manifest with the exact resulting counts/descriptors.
+6. **Preferred path — atomic Git transaction:** when Git tree/commit/ref primitives are available, create one tree based on the exact current base tree containing all three changes, create one commit with the recorded `main` SHA as parent, re-read `main`, and fast-forward the ref only if it is still the recorded SHA. The repository must never expose item-only or segment-only commits in this path.
+7. If `main` changed before the ref move, discard the prepared candidate, re-read the current manifest + active segment, deduplicate/reconcile, rebuild the tree, and retry. Never force-update over concurrent history.
+8. **Fallback path only when an atomic Git transaction is unavailable:** staged item → segment → manifest writes may still be used with exact current blob SHAs. In that fallback, preserve the established recovery rules below and rely on the production release gate to keep partial candidates off the live site.
+9. After the candidate commit, verify:
    - `news-items/<id>.json` exists and its `id` / `article_text` are correct;
    - the metadata entry exists exactly once in the active segment;
    - the manifest references that segment;
    - manifest `item_count` and segment counts reflect the publication;
    - no sealed historical segment was modified.
+10. The commit is only a release candidate. It is live only after `VELNAR Content Validation`, `VELNAR Safe Pages Deploy`, and live verification succeed for the exact candidate SHA.
 
 ## Failure behavior
 

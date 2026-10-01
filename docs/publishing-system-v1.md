@@ -82,6 +82,14 @@ The generated snapshot records:
 
 The generator does not commit or rewrite research content.
 
+## Atomic content transactions
+
+For segmented collections (Industry Radar and Weekly Deep Read), the preferred publisher writes the new canonical item, bounded segment mutation/new segment, and tiny manifest as **one Git tree + one commit + one fast-forward ref update**.
+
+The publisher must record the current `main` SHA before preparing the tree and re-check it immediately before moving the ref. A race invalidates the prepared transaction and requires a rebuild against the new latest state.
+
+Staged multi-commit publishing remains a compatibility fallback only. The release gate can keep partial candidates off production, but atomic publication is preferred because it also keeps `main` itself internally complete.
+
 ## Concurrency / race handling
 
 `VELNAR Safe Pages Deploy` deploys the exact commit that passed validation and verifies that commit is still the latest `main` before deployment. A slower validation for an older commit cannot overwrite a newer release.
