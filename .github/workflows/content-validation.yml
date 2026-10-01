@@ -11,10 +11,15 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: velnar-validation-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   validate-content:
     name: Validate release candidate
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout repository
@@ -23,7 +28,14 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
+
+      - name: Check publishing script syntax
+        shell: bash
+        run: |
+          for file in scripts/*.js; do
+            node --check "$file"
+          done
 
       - name: Validate canonical research content
         run: node scripts/validate-publish.js
