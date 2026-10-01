@@ -1,0 +1,21 @@
+{
+  "schema_version": "3.0",
+  "segment": "0009",
+  "items": [
+    {
+      "id": "2026-09-26-B2",
+      "date": "2026-09-26",
+      "grade": "B",
+      "title": "Agent Control Plane 可能独立于 Runtime：企业开始为跨平台 Agent Inventory、Risk 与 ROI 单独买单",
+      "themes": [
+        "Agent Control Plane",
+        "Enterprise AI",
+        "Agent Governance",
+        "Multi-Runtime",
+        "Observability"
+      ],
+      "deck": "Dataiku 把跨 Salesforce、AWS、Microsoft、Google、Databricks、Snowflake 等 Runtime 的 Agent 发现、风险、成本与业务价值管理做成 standalone product。它进一步验证：企业可能长期保留多种 Agent Runtime，而在其上单独采购一个跨平台控制与审计层。",
+      "body_format": "article_text"
+    }
+  ]
+}
