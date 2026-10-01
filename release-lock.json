@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "status": "idle",
+  "purpose": "Publishing transaction guard. This file records whether a production content release is currently being prepared or requires reconciliation.",
+  "release_id": null,
+  "started_at": null,
+  "completed_at": null,
+  "validation": {
+    "passed": false,
+    "validator": null
+  }
+}
