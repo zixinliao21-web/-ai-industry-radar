@@ -48,6 +48,22 @@
       ],
       "deck": "NVIDIA 把 Agent 安全从应用层 Guardrail 推向独立于 Agent 推理过程的 Runtime、内核与硬件执行边界，并获得企业软件、金融、工业与机器人生态的大范围接入。新信号不是“又一个安全产品”，而是 Agent 治理正在从建议模型守规矩转向让系统具备模型无法绕过的确定性约束。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-02-B1",
+      "date": "2026-10-02",
+      "grade": "B",
+      "title": "Semantic Authority 正在出现开放交换层：企业语义资产可能比 Agent Runtime 更可移植",
+      "themes": [
+        "Semantic Authority",
+        "Enterprise Context",
+        "Open Standards",
+        "Ontology",
+        "Enterprise AI",
+        "Interoperability"
+      ],
+      "deck": "Microsoft 正式加入 Apache Ossie 并贡献 Power BI 双向转换能力，使 Snowflake、Power BI/Fabric 等平台之间开始出现可执行的语义模型交换路径。它没有证明统一语义标准已经胜出，但进一步验证：企业可能要求业务定义独立于单一 Agent、BI 或数据平台长期存在。",
+      "body_format": "article_text"
     }
   ]
 }
