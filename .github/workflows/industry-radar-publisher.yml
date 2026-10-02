@@ -19,6 +19,7 @@ on:
       - 'docs/industry-radar-autonomous-publisher.md'
 
 permissions:
+  actions: write
   contents: write
 
 concurrency:
@@ -63,18 +64,13 @@ jobs:
         if: github.event_name == 'push' && env.OPENAI_API_KEY == ''
         run: echo '::notice::OPENAI_API_KEY is not configured yet; contract self-test passed, but autonomous research was not executed.'
 
-      - name: Require research credential for scheduled/manual production run
-        if: github.event_name != 'push'
-        shell: bash
-        run: |
-          if [ -z "$OPENAI_API_KEY" ]; then
-            echo '::error::OPENAI_API_KEY is required for autonomous Industry Radar research.'
-            exit 1
-          fi
+      - name: Note missing research credential for scheduled/manual production run
+        if: github.event_name != 'push' && env.OPENAI_API_KEY == ''
+        run: echo '::notice::OPENAI_API_KEY is not configured; autonomous Industry research is skipped and no repository mutation occurs.'
 
       - name: Run autonomous Industry Radar research
         id: radar
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' && env.OPENAI_API_KEY != ''
         shell: bash
         run: |
           if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
@@ -84,17 +80,17 @@ jobs:
           fi
 
       - name: Stop after dry run or empty scan
-        if: github.event_name != 'push' && steps.radar.outputs.changed != 'true'
+        if: github.event_name != 'push' && env.OPENAI_API_KEY != '' && steps.radar.outputs.changed != 'true'
         run: echo 'No canonical Industry publication prepared; nothing to commit.'
 
       - name: Validate prepared canonical content
-        if: github.event_name != 'push' && steps.radar.outputs.changed == 'true'
+        if: github.event_name != 'push' && env.OPENAI_API_KEY != '' && steps.radar.outputs.changed == 'true'
         run: |
           node scripts/validate-publish.js
           node scripts/validate-runtime.js
 
       - name: Create one local atomic publication commit
-        if: github.event_name != 'push' && steps.radar.outputs.changed == 'true'
+        if: github.event_name != 'push' && env.OPENAI_API_KEY != '' && steps.radar.outputs.changed == 'true'
         id: candidate
         shell: bash
         env:
@@ -111,7 +107,7 @@ jobs:
           node scripts/validate-history.js --base "$BASE_SHA"
 
       - name: Fast-forward main only if the recorded base is still current
-        if: github.event_name != 'push' && steps.radar.outputs.changed == 'true'
+        if: github.event_name != 'push' && env.OPENAI_API_KEY != '' && steps.radar.outputs.changed == 'true'
         shell: bash
         env:
           BASE_SHA: ${{ steps.base.outputs.sha }}
@@ -123,4 +119,12 @@ jobs:
             exit 0
           fi
           git push origin HEAD:main
-          echo "Published atomic Industry candidate $(git rev-parse HEAD). Existing validation/deploy workflows now own production release."
+          echo "Published atomic Industry candidate $(git rev-parse HEAD)."
+
+      - name: Dispatch content validation for workflow-authored commit
+        if: github.event_name != 'push' && env.OPENAI_API_KEY != '' && steps.radar.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run content-validation.yml --ref main
+          echo "Dispatched VELNAR Content Validation for current main. Safe Pages Deploy will follow only after validation succeeds."
