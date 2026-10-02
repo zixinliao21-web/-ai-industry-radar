@@ -6,6 +6,7 @@ This repository is a lightweight static **VELNAR Research** product containing t
 
 - [Industry Radar product contract](PRODUCT.md)
 - [Industry Radar safe publishing procedure](docs/industry-radar-publishing.md)
+- [Industry Radar autonomous publisher](docs/industry-radar-autonomous-publisher.md)
 - [Design language](DESIGN.md)
 - [Multi-collection architecture](docs/multi-collection-architecture.md)
 - [Consumer Radar content contract](docs/consumer-radar-contract.md)
@@ -214,6 +215,8 @@ Keep migrations and infrastructure work in focused commits so they can be review
 ## Atomic publication transactions
 
 Industry Radar and Weekly Deep Read are multi-file segmented collections. When Git tree/commit/ref primitives are available, routine publication must prefer a single atomic candidate commit containing the canonical item, bounded segment change, and tiny manifest change. Re-check `main` before the ref update and rebuild on races.
+
+For the recurring Industry Radar production loop, `.github/workflows/industry-radar-publisher.yml` plus `scripts/run-industry-radar.js` is the authoritative GitHub-native publisher. ChatGPT scheduled automations must not be used as the canonical Git writer for this collection. See `docs/industry-radar-autonomous-publisher.md`.
 
 Staged multi-commit writes are a fallback only. They remain recoverable and production-safe because of the release gate, but they should not be the normal path when atomic publication is available.
 
