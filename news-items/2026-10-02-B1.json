@@ -1,0 +1,38 @@
+{
+  "id": "2026-10-02-B1",
+  "date": "2026-10-02",
+  "grade": "B",
+  "title": "Semantic Authority 正在出现开放交换层：企业语义资产可能比 Agent Runtime 更可移植",
+  "themes": [
+    "Semantic Authority",
+    "Enterprise Context",
+    "Open Standards",
+    "Ontology",
+    "Enterprise AI",
+    "Interoperability"
+  ],
+  "deck": "Microsoft 正式加入 Apache Ossie 并贡献 Power BI 双向转换能力，使 Snowflake、Power BI/Fabric 等平台之间开始出现可执行的语义模型交换路径。它没有证明统一语义标准已经胜出，但进一步验证：企业可能要求业务定义独立于单一 Agent、BI 或数据平台长期存在。",
+  "article_text": "# Semantic Authority 正在出现开放交换层：企业语义资产可能比 Agent Runtime 更可移植\n\nMicrosoft 对 Apache Ossie 的正式投入，值得注意的不是又一家大厂加入一个开源项目，而是企业 AI 的“业务含义”开始获得一个独立于具体 Agent、BI 工具和数据平台的交换层。\n\n这条信号本身不足以改变我们对 Enterprise Context / Semantic Authority 的核心判断，因此定为 B 级。但它为此前“Ontology / Semantic Authority 可能成为可移植企业资产”的判断增加了更具体的工程证据。\n\n**FACT｜发生了什么**\n\nMicrosoft 在 FabCon / SQLCon 2026 期间正式确认支持 Apache Ossie（incubating）。Ossie 的目标是用供应商中立的 JSON/YAML 规范表达 datasets、fields、relationships、metrics 与 AI context，使同一套语义定义能够被不同分析、AI 和 BI 平台读取。\n\n这次变化的关键不只是口头支持。Microsoft 工程师已经参与 Power BI / Fabric 与 Ossie 之间的转换能力，目标包括让 Power BI semantic model 与 Snowflake Semantic Views 等兼容语义模型通过 Ossie 交换，而不需要复制底层数据或重新手工定义指标。Microsoft 还表示希望推动 DAX 成为 Ossie 可识别的查询表达语言，并扩展 ontology 支持。\n\nApache Ossie 本身仍处于 Apache Incubator 阶段，规范和治理都还没有达到成熟标准的稳定程度。因此现在不能把它描述成已经形成事实行业标准。\n\n**INFERENCE｜新的增量不是“语义层重要”，而是语义层开始尝试脱离平台所有权**\n\n过去企业里的“Revenue”“Customer”“Active Account”“Churn”等定义通常绑定在某个 BI、warehouse、semantic layer 或业务系统里。Agent 接入之后，这种碎片化会被放大：如果不同 Agent 从不同系统读取不同定义，它们即使模型能力完全相同，也可能对同一个业务问题给出互相冲突的答案。\n\n因此，Enterprise Context 的长期问题并不只是“如何给模型更多上下文”，而是谁拥有业务含义的权威版本，以及这种含义能不能跨 Runtime 和平台保持一致。\n\nOssie 的方向是把这部分资产从专有实现里抽出一个交换格式。Microsoft 的加入尤其有意义，因为 Power BI 拥有庞大的既有语义模型资产。如果一个大型既有生态愿意让这些定义能够向外转换，那么“semantic portability”就不再只是新平台为了打破 incumbents 锁定而提出的主张。\n\n这进一步支持一个结构判断：未来企业 Agent 生态可能分成至少三个相对独立的层——模型负责推理，Runtime / Harness 负责执行，而 Semantic Authority 负责定义企业事实、指标、实体与关系。三者可以由不同供应商提供。\n\n**但不应该因此得出什么结论**\n\n第一，开放交换格式不等于开放执行层。Ossie 可以描述语义，不代表不同引擎会对复杂指标、权限、时间语义和业务规则执行出完全一致的结果。\n\n第二，Microsoft、Snowflake 等厂商支持互操作，也不意味着它们会放弃自己的平台控制力。开放标准可能成为连接层，同时各平台仍然通过计算、治理、应用入口和 Agent 分发维持锁定。\n\n第三，Ossie 仍在孵化期。规范演进、转换损失、ontology 表达能力以及真实大规模采用都需要继续验证。今天看到的是标准化方向获得更多产业支持，不是标准战争已经结束。\n\n**对 VELNAR 的意义**\n\n这条信号不构成当前 Sales MVP 的新增开发要求，也不应该触发 Ontology 重构。\n\n它真正强化的是已有边界：确定性的业务事实、规则和语义不能被某个 LLM 会话临时生成；它们应当作为可验证、可治理、理论上可迁移的企业资产存在。VELNAR 当前优先解决真实业务 Workflow 的可靠闭环，这一点不变。\n\n长期值得观察的是：如果 Semantic Authority 最终出现成熟开放交换标准，那么企业 AI 产品的壁垒可能更少来自“把客户语义锁在自己的格式里”，更多来自谁能更快建立、验证、维护和运营这些语义资产，并把它们可靠地连接到真实工作流。\n\n**判断更新**\n\n此前判断“Ontology / Semantic Authority 可能独立于 Agent Runtime”得到进一步验证，但没有升级为更强结论。\n\n当前行动：**观察，不扩 Scope。**\n\n继续追踪三个问题：\n\n1. Ossie 是否从模型交换真正进入生产级双向互操作，而不是停留在 converter demo？\n2. ontology、权限、业务规则和操作语义能否像 metrics 一样被可靠移植？\n3. 如果语义格式逐渐开放，真正的商业控制点会转移到语义资产的创建治理、执行引擎，还是 Agent 分发入口？",
+  "sources": [
+    {
+      "title": "Microsoft & Snowflake’s Commitment to Apache Ossie",
+      "url": "https://community.fabric.microsoft.com/blog/fbc_pbiupdatesblog/microsoft--snowflake%E2%80%99s-commitment-to-apache-ossie/5369534",
+      "date": "2026-09-30"
+    },
+    {
+      "title": "FabCon and SQLCon 2026 in Barcelona: Building the data foundation for Microsoft Copilot and agents",
+      "url": "https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-in-barcelona-building-the-data-foundation-for-microsoft-copilot-and-agents/",
+      "date": "2026-09-28"
+    },
+    {
+      "title": "Breaking Down Semantic Silos: Microsoft Ecosystem Support Comes to Apache Ossie (Incubating)",
+      "url": "https://www.snowflake.com/en/blog/engineering/apache-ossie-microsoft-ecosystem-support/",
+      "date": "2026-09-30"
+    },
+    {
+      "title": "Apache Ossie (incubating)",
+      "url": "https://ossie.apache.org/"
+    }
+  ],
+  "body_format": "article_text"
+}
