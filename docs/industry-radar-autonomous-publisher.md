@@ -49,6 +49,8 @@ A concurrent change makes the candidate stale. The workflow does not force the r
 
 The autonomous publisher only creates a candidate on `main`. It does not bypass the existing release gate.
 
+GitHub suppresses ordinary workflow triggers for commits pushed with the built-in `GITHUB_TOKEN`. Therefore, after an autonomous atomic push, the publisher explicitly dispatches `VELNAR Content Validation` on `main`. That dispatched validation is treated as a normal release candidate and may trigger Safe Pages Deploy only after it succeeds.
+
 The existing chain remains authoritative:
 
 ```text
@@ -66,7 +68,7 @@ There is no publication quota. If web research finds no genuinely useful new S/A
 
 ## Failure behavior
 
-- Missing `OPENAI_API_KEY`: scheduled/manual production run fails before research; no repository mutation occurs.
+- Missing `OPENAI_API_KEY`: scheduled/manual production run is skipped before research; no repository mutation occurs.
 - OpenAI/web research failure: no repository mutation occurs.
 - Invalid model output: no repository mutation occurs.
 - Repository contract drift: self-test fails rather than guessing a new storage shape.
