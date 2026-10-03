@@ -9,6 +9,11 @@ on:
   schedule:
     - cron: '20 0 * * *'
   workflow_dispatch:
+    inputs:
+      expected_sha:
+        description: Exact deployed publication SHA
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -25,6 +30,16 @@ jobs:
     timeout-minutes: 12
 
     steps:
+      - name: Verify dispatched release identity
+        if: github.event_name == 'workflow_dispatch' && inputs.expected_sha != ''
+        env:
+          EXPECTED_SHA: ${{ inputs.expected_sha }}
+        shell: bash
+        run: |
+          [[ "$EXPECTED_SHA" =~ ^[0-9a-f]{40}$ ]]
+          [[ "$GITHUB_REF" = refs/heads/main ]]
+          [[ "$GITHUB_SHA" = "$EXPECTED_SHA" ]]
+
       - name: Checkout audited commit
         uses: actions/checkout@v4
         with:
@@ -53,7 +68,7 @@ jobs:
 
       - name: Check live production
         env:
-          DEPLOYED_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || '' }}
+          DEPLOYED_SHA: ${{ github.event_name == 'workflow_dispatch' && inputs.expected_sha || (github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || '') }}
         shell: bash
         run: |
           if [ -n "$DEPLOYED_SHA" ]; then
