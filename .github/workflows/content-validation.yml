@@ -1,7 +1,6 @@
 name: VELNAR Content Validation
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
@@ -43,30 +42,16 @@ jobs:
       - name: Validate canonical research content
         run: node scripts/validate-publish.js
 
-      - name: Resolve candidate change base
-        id: change-base
-        shell: bash
-        run: |
-          if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
-            BASE_SHA="${{ github.event.pull_request.base.sha }}"
-          elif [ "$GITHUB_EVENT_NAME" = "push" ]; then
-            BASE_SHA="${{ github.event.before }}"
-          else
-            BASE_SHA="$(git rev-parse "$GITHUB_SHA^")"
-          fi
-          echo "sha=$BASE_SHA" >> "$GITHUB_OUTPUT"
-          echo "Candidate change base: $BASE_SHA"
-
       - name: Validate publication change scope
         env:
-          CHANGE_BASE: ${{ steps.change-base.outputs.sha }}
+          CHANGE_BASE: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
         run: node scripts/validate-change-scope.js --base "$CHANGE_BASE"
 
       - name: Resolve trusted history baseline
         id: history-base
         shell: bash
         env:
-          FALLBACK_BASE: ${{ steps.change-base.outputs.sha }}
+          FALLBACK_BASE: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
         run: |
           if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
             BASE_SHA="$FALLBACK_BASE"
