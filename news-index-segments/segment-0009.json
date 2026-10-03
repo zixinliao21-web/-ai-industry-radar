@@ -96,6 +96,22 @@
       ],
       "deck": "TypeSafe 的 Jev 不生成文本，而只返回预定义类型的概率化决策；Vercel 数据显示其上线 24 小时即进入近 13% 付费团队。真正值得观察的不是一个新模型，而是企业自动化是否会把大量高频判断从通用 LLM 中拆出，形成“确定性代码 + 专用决策模型 + 通用生成模型”的分层栈。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-04-A1",
+      "date": "2026-10-04",
+      "grade": "A",
+      "title": "Physical AI 的价值可能从机器人本体转向跨硬件的“通用智能层”：FieldAI 正在验证软件先于形态规模化",
+      "themes": [
+        "Physical AI",
+        "Robotics",
+        "Embodied AI",
+        "Industrial AI",
+        "Robot Intelligence",
+        "Control Points"
+      ],
+      "deck": "FieldAI 一边把同一套 autonomy brain 部署到四足、轮式、无人机与人形机器人，一边在建筑、能源、制造和安全等真实场景扩张；最新融资报道又把公司估值推向 100 亿美元。真正值得观察的不是机器人估值继续上涨，而是 Physical AI 是否会出现独立于单一机器人本体、跨硬件复用并通过真实部署形成数据飞轮的通用智能层。",
+      "body_format": "article_text"
     }
   ]
 }
