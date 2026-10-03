@@ -1,0 +1,46 @@
+name: VELNAR Publication Branch Promoter
+
+on:
+  create:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: Existing publication candidate branch
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: velnar-publication-promoter
+  cancel-in-progress: false
+
+jobs:
+  promote:
+    if: >-
+      (github.event_name == 'create' && github.event.ref_type == 'branch' &&
+       (startsWith(github.event.ref, 'radar/publish-') ||
+        startsWith(github.event.ref, 'consumer/publish-') ||
+        startsWith(github.event.ref, 'deep-read/publish-'))) ||
+      (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main')
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - name: Checkout trusted default branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Validate and atomically promote publication
+        env:
+          PUBLICATION_BRANCH: ${{ github.event_name == 'create' && github.event.ref || inputs.branch }}
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/promote-publication.js
