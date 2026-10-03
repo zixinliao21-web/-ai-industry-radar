@@ -1,0 +1,20 @@
+name: VELNAR Publication Candidate Signal
+
+on:
+  create:
+
+permissions:
+  contents: read
+
+jobs:
+  signal:
+    if: >-
+      github.event.ref_type == 'branch' &&
+      (startsWith(github.event.ref, 'radar/publish-') ||
+       startsWith(github.event.ref, 'consumer/publish-') ||
+       startsWith(github.event.ref, 'deep-read/publish-'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Signal candidate creation without executing candidate files
+        run: echo 'Candidate created; trusted main workflow will validate it.'
