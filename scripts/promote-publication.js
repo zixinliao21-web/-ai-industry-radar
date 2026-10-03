@@ -48,6 +48,9 @@ function main() {
     '+refs/heads/' + branch + ':refs/remotes/origin/publication');
   const base = git('rev-parse', 'refs/remotes/origin/main');
   const candidate = git('rev-parse', 'refs/remotes/origin/publication');
+  if (process.env.EXPECTED_CANDIDATE_SHA && candidate !== process.env.EXPECTED_CANDIDATE_SHA) {
+    throw new Error('Candidate moved since creation signal');
+  }
   if (base !== trusted) throw new Error('Main moved since trusted workflow checkout; retry from current main');
   console.log(JSON.stringify({branch, base, candidate, collection: checkCandidate(branch, base, candidate)}));
   // Scope has proven every executable, workflow and release control unchanged.

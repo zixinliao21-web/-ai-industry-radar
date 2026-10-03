@@ -1,7 +1,11 @@
 name: VELNAR Publication Branch Promoter
 
 on:
-  create:
+  workflow_run:
+    workflows:
+      - VELNAR Publication Candidate Signal
+    types:
+      - completed
   workflow_dispatch:
     inputs:
       branch:
@@ -19,10 +23,12 @@ concurrency:
 jobs:
   promote:
     if: >-
-      (github.event_name == 'create' && github.event.ref_type == 'branch' &&
-       (startsWith(github.event.ref, 'radar/publish-') ||
-        startsWith(github.event.ref, 'consumer/publish-') ||
-        startsWith(github.event.ref, 'deep-read/publish-'))) ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.event == 'create' &&
+       github.event.workflow_run.head_repository.full_name == github.repository &&
+       (startsWith(github.event.workflow_run.head_branch, 'radar/publish-') ||
+        startsWith(github.event.workflow_run.head_branch, 'consumer/publish-') ||
+        startsWith(github.event.workflow_run.head_branch, 'deep-read/publish-'))) ||
       (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main')
     runs-on: ubuntu-latest
     timeout-minutes: 12
@@ -41,6 +47,7 @@ jobs:
           node-version: '24'
       - name: Validate and atomically promote publication
         env:
-          PUBLICATION_BRANCH: ${{ github.event_name == 'create' && github.event.ref || inputs.branch }}
+          PUBLICATION_BRANCH: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_branch || inputs.branch }}
+          EXPECTED_CANDIDATE_SHA: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || '' }}
           GH_TOKEN: ${{ github.token }}
         run: node scripts/promote-publication.js
