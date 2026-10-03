@@ -80,6 +80,22 @@
       ],
       "deck": "Anthropic 投入 1 亿美元、计划到 2027 年训练 1 万名 Frontier Deployed Engineers，并把 Accenture、Bain、Deloitte、McKinsey 等服务商与大型企业纳入首批体系。信号不只是 FDE 更热门，而是模型厂商正在尝试把原本高度稀缺、依赖自身团队的部署 know-how 标准化并外溢到合作生态。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-03-A2",
+      "date": "2026-10-03",
+      "grade": "A",
+      "title": "企业 AI 的默认智能单元可能不再是 LLM：决策模型开始把“判断”从“生成”中拆出来",
+      "themes": [
+        "Enterprise AI",
+        "Decision Models",
+        "Bounded AI Decision",
+        "Agent Architecture",
+        "Structured Output",
+        "AI Economics"
+      ],
+      "deck": "TypeSafe 的 Jev 不生成文本，而只返回预定义类型的概率化决策；Vercel 数据显示其上线 24 小时即进入近 13% 付费团队。真正值得观察的不是一个新模型，而是企业自动化是否会把大量高频判断从通用 LLM 中拆出，形成“确定性代码 + 专用决策模型 + 通用生成模型”的分层栈。",
+      "body_format": "article_text"
     }
   ]
 }
