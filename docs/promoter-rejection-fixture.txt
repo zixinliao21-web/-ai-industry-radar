@@ -1,0 +1,1 @@
+Diagnostic fixture: publication scope must reject this documentation path.
