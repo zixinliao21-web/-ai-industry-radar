@@ -7,11 +7,21 @@ on:
     types:
       - completed
   workflow_dispatch:
+    inputs:
+      expected_sha:
+        description: Exact publication SHA (with validated_run)
+        required: false
+        type: string
+      validated_run:
+        description: Successful Content Validation run ID
+        required: false
+        type: string
 
 permissions:
   contents: read
   pages: write
   id-token: write
+  actions: write
 
 concurrency:
   group: velnar-pages-production
@@ -24,7 +34,7 @@ jobs:
       github.event_name == 'workflow_dispatch' ||
       (
         github.event.workflow_run.conclusion == 'success' &&
-        (github.event.workflow_run.event == 'push' || github.event.workflow_run.event == 'workflow_dispatch') &&
+        github.event.workflow_run.event == 'push' &&
         github.event.workflow_run.head_branch == 'main'
       )
     runs-on: ubuntu-latest
@@ -33,9 +43,23 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     env:
-      RELEASE_SHA: ${{ github.event_name == 'workflow_dispatch' && github.sha || github.event.workflow_run.head_sha }}
+      RELEASE_SHA: ${{ github.event_name == 'workflow_dispatch' && (inputs.expected_sha || github.sha) || github.event.workflow_run.head_sha }}
 
     steps:
+      - name: Reject incomplete publication proof inputs
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          EXPECTED_SHA: ${{ inputs.expected_sha }}
+          VALIDATED_RUN_ID: ${{ inputs.validated_run }}
+        shell: bash
+        run: |
+          if [ -n "$EXPECTED_SHA" ] || [ -n "$VALIDATED_RUN_ID" ]; then
+            [[ "$EXPECTED_SHA" =~ ^[0-9a-f]{40}$ ]]
+            [[ "$VALIDATED_RUN_ID" =~ ^[0-9]+$ ]]
+            [[ "$GITHUB_REF" = refs/heads/main ]]
+            [[ "$GITHUB_SHA" = "$EXPECTED_SHA" ]]
+          fi
+
       - name: Checkout validated commit
         uses: actions/checkout@v4
         with:
@@ -46,6 +70,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+
+      - name: Verify successful source Content Validation run
+        if: github.event_name == 'workflow_dispatch' && inputs.validated_run != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EXPECTED_SHA: ${{ inputs.expected_sha }}
+          VALIDATED_RUN_ID: ${{ inputs.validated_run }}
+        run: node scripts/verify-validation-run.js
 
       - name: Check publishing script syntax
         shell: bash
@@ -116,3 +148,11 @@ jobs:
         env:
           RADAR_BASE_URL: ${{ steps.deployment.outputs.page_url }}
         run: node scripts/check-live-release.js --commit "$RELEASE_SHA"
+
+      - name: Hand verified publication release to health audit
+        if: steps.latest.outputs.deploy == 'true' && github.event_name == 'workflow_dispatch' && inputs.validated_run != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh workflow run research-health.yml --repo "$GITHUB_REPOSITORY" --ref main
+          -f expected_sha="$RELEASE_SHA"
