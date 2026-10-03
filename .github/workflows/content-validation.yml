@@ -30,9 +30,6 @@ jobs:
     name: Validate release candidate
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    permissions:
-      contents: read
-      actions: write
 
     steps:
       - name: Checkout repository
@@ -112,8 +109,17 @@ jobs:
           path: release-status.preview.json
           retention-days: 7
 
-      - name: Hand successful publication validation to safe deploy
-        if: github.event_name == 'workflow_dispatch'
+  publication-deploy-handoff:
+    name: Hand validated publication to safe deploy
+    needs: validate-content
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    permissions:
+      contents: read
+      actions: write
+    steps:
+      - name: Dispatch exact validated main
         env:
           GH_TOKEN: ${{ github.token }}
         run: >-
