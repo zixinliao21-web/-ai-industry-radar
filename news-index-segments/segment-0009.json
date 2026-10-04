@@ -112,6 +112,22 @@
       ],
       "deck": "FieldAI 一边把同一套 autonomy brain 部署到四足、轮式、无人机与人形机器人，一边在建筑、能源、制造和安全等真实场景扩张；最新融资报道又把公司估值推向 100 亿美元。真正值得观察的不是机器人估值继续上涨，而是 Physical AI 是否会出现独立于单一机器人本体、跨硬件复用并通过真实部署形成数据飞轮的通用智能层。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-04-A2",
+      "date": "2026-10-04",
+      "grade": "A",
+      "title": "Physical AI 的短期瓶颈可能不是“机器人会不会做”，而是“做这件事是否比人便宜”",
+      "themes": [
+        "Physical AI",
+        "Robotics",
+        "Robot Economics",
+        "Automation",
+        "Unit Economics",
+        "Industrial AI"
+      ],
+      "deck": "Anthropic 的 Robot Exposure Index 显示，现有机器人在技术上已可覆盖约四分之三的美国体力工作任务，但按当前价格只有约 0.3% 的任务具备成本竞争力。它把 Physical AI 的核心约束从单纯能力进步重新拉回机器人价格、利用率、部署环境与单位经济性：能力曲线与商业替代曲线可能长期不同步。",
+      "body_format": "article_text"
     }
   ]
 }
