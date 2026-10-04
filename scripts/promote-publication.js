@@ -7,9 +7,9 @@ function git(...args) {
   return cp.execFileSync('git', args, {cwd: root, encoding: 'utf8'}).trim();
 }
 function collection(branch) {
-  if (/^radar\/publish-[a-z0-9][a-z0-9-]*$/.test(branch)) return 'industry';
-  if (/^consumer\/publish-[a-z0-9][a-z0-9-]*$/.test(branch)) return 'consumer';
-  if (/^deep-read\/publish-[a-z0-9][a-z0-9-]*$/.test(branch)) return 'deep_read';
+  if (/^radar\/publish-[A-Za-z0-9][A-Za-z0-9-]*$/.test(branch)) return 'industry';
+  if (/^consumer\/publish-[A-Za-z0-9][A-Za-z0-9-]*$/.test(branch)) return 'consumer';
+  if (/^deep-read\/publish-[A-Za-z0-9][A-Za-z0-9-]*$/.test(branch)) return 'deep_read';
   throw new Error('Branch is not an allowed publication branch');
 }
 function allowed(file, kind) {
