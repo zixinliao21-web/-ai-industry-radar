@@ -1,0 +1,22 @@
+{
+  "schema_version": "3.0",
+  "segment": "0010",
+  "items": [
+    {
+      "id": "2026-10-05-A1",
+      "date": "2026-10-05",
+      "grade": "A",
+      "title": "AI 基础设施的控制权正在从“拥有算力”扩展到“能否融资并持续扩建算力”",
+      "themes": [
+        "AI Infrastructure",
+        "Infrastructure Concentration",
+        "Capital Formation",
+        "Data Centers",
+        "Control Points",
+        "SoftBank"
+      ],
+      "deck": "SoftBank 完成收购 DigitalBridge，把一个管理数据中心、光纤、通信塔与边缘基础设施资本的平台纳入 AI 版图。值得注意的不是又一笔数据中心并购，而是 AI 基础设施竞争正在把资本募集、资产运营和长期融资能力本身变成控制点。",
+      "body_format": "article_text"
+    }
+  ]
+}
