@@ -36,6 +36,9 @@ try {
     git('reset', '--hard', base);
     assert.throws(() => check('radar/publish-test', base, commit(file, '{}'))); tests++;
   }
+  assert.equal(collection('radar/publish-2026-10-04-A1-1883c63'), 'industry'); tests++;
+  assert.equal(collection('consumer/publish-2026-10-04-C1-ABC1234'), 'consumer'); tests++;
+  assert.equal(collection('deep-read/publish-DR-2026-013-ABC1234'), 'deep_read'); tests++;
   assert.throws(() => collection('radar/publish-test/evil')); tests++;
   git('reset', '--hard', base);
   const candidate = commit('news-items/test.json', '{}');
