@@ -17,6 +17,22 @@
       ],
       "deck": "SoftBank 完成收购 DigitalBridge，把一个管理数据中心、光纤、通信塔与边缘基础设施资本的平台纳入 AI 版图。值得注意的不是又一笔数据中心并购，而是 AI 基础设施竞争正在把资本募集、资产运营和长期融资能力本身变成控制点。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-05-A2",
+      "date": "2026-10-05",
+      "grade": "A",
+      "title": "工业 AI 的争夺正在从“工厂数据”上移到“产品全生命周期的权威上下文”",
+      "themes": [
+        "Industrial AI",
+        "Enterprise Context",
+        "Semantic Authority",
+        "PLM",
+        "Industrial Software",
+        "M&A"
+      ],
+      "deck": "Schneider Electric 以约 226 亿美元收购 PTC，并把 PTC 的 CAD/PLM/ALM/SLM 产品数据层与 AVEVA、Cognite 组合。真正重要的不是工业软件又一次大型并购，而是能源自动化巨头正在把工程设计、产品生命周期、运营数据与 AI 连接成更完整的工业上下文控制面。",
+      "body_format": "article_text"
     }
   ]
 }
