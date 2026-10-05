@@ -49,6 +49,22 @@
       ],
       "deck": "Mastercard 把 Agent Pay 从支付执行扩展到 identity、intent、controls、execution 与 intelligence，并开始用交易级概率分数识别 AI Agent 发起的支付。真正的新信号不是 Agent 又能多买一种东西，而是支付网络正在把“谁在行动、是否获授权、是否符合用户意图”做成共享的交易基础设施。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-05-A4",
+      "date": "2026-10-05",
+      "grade": "A",
+      "title": "企业 AI 治理正在从“写政策”下沉到 Agent Runtime 的实时执行层",
+      "themes": [
+        "Enterprise AI",
+        "Agent Governance",
+        "Control Plane",
+        "Runtime Enforcement",
+        "Semantic Authority",
+        "Policy"
+      ],
+      "deck": "Collibra 收购 trail ML，把原本偏数据治理与合规目录的能力推进到持续评估和 Agent runtime enforcement。真正重要的不是又一笔 AI 治理并购，而是企业治理正在从静态规则与审计材料，变成能够在 Agent 调用数据、系统和工具时实时阻止越权动作的执行基础设施。",
+      "body_format": "article_text"
     }
   ]
 }
