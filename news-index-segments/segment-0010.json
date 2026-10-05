@@ -33,6 +33,22 @@
       ],
       "deck": "Schneider Electric 以约 226 亿美元收购 PTC，并把 PTC 的 CAD/PLM/ALM/SLM 产品数据层与 AVEVA、Cognite 组合。真正重要的不是工业软件又一次大型并购，而是能源自动化巨头正在把工程设计、产品生命周期、运营数据与 AI 连接成更完整的工业上下文控制面。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-05-A3",
+      "date": "2026-10-05",
+      "grade": "A",
+      "title": "Agent Commerce 的关键控制点正在从“能不能付款”转向“谁能证明 Agent 的身份、意图与授权”",
+      "themes": [
+        "Agent Commerce",
+        "Identity",
+        "Authorization",
+        "Payments",
+        "Trust Infrastructure",
+        "Control Points"
+      ],
+      "deck": "Mastercard 把 Agent Pay 从支付执行扩展到 identity、intent、controls、execution 与 intelligence，并开始用交易级概率分数识别 AI Agent 发起的支付。真正的新信号不是 Agent 又能多买一种东西，而是支付网络正在把“谁在行动、是否获授权、是否符合用户意图”做成共享的交易基础设施。",
+      "body_format": "article_text"
     }
   ]
 }
