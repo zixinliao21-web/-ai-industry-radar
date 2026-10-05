@@ -65,6 +65,22 @@
       ],
       "deck": "Collibra 收购 trail ML，把原本偏数据治理与合规目录的能力推进到持续评估和 Agent runtime enforcement。真正重要的不是又一笔 AI 治理并购，而是企业治理正在从静态规则与审计材料，变成能够在 Agent 调用数据、系统和工具时实时阻止越权动作的执行基础设施。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-06-A1",
+      "date": "2026-10-06",
+      "grade": "A",
+      "title": "芯片巨头正在把“理解下一代模型”本身收进基础设施控制面",
+      "themes": [
+        "AI Infrastructure",
+        "Physical AI",
+        "Spatial Intelligence",
+        "Vertical Integration",
+        "Model-Hardware Co-design",
+        "Control Points"
+      ],
+      "deck": "AMD 以约 82 亿美元收购 World Labs，买入的不只是空间智能模型，而是直接把前沿模型研究团队纳入硬件、软件和系统路线图。信号指向一个更深的变化：当 AI 工作负载从 LLM 扩展到 world models、机器人与模拟，算力公司的竞争正在从供应芯片转向更早地参与定义模型与计算如何共同演化。",
+      "body_format": "article_text"
     }
   ]
 }
