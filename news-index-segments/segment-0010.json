@@ -97,6 +97,23 @@
       ],
       "deck": "Google 为 Gemini coworker agent 配置独立的 Workspace 身份、邮箱、日历、Drive 和组织目录位置，并把上下文、权限、审计、模型路由纳入同一工作入口。真正的新信号不是聊天助手更会做事，而是协作套件开始把 Agent 当作持续存在、可授权、可追责的组织参与者。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-09-A1",
+      "date": "2026-10-09",
+      "grade": "A",
+      "title": "先做真实运营，再出售 AI 操作系统：垂直 AI 的护城河可能藏在业务事实里",
+      "themes": [
+        "Vertical AI",
+        "AI-native Company",
+        "Domain Context",
+        "System of Record",
+        "Ontology",
+        "Regulated Workflow",
+        "Business Model"
+      ],
+      "deck": "Valon 先用六年时间自营受监管的房贷服务，再出售运营业务、向同行销售 ValonOS；其披露的 2 亿美元以上合同 ARR 与六分之一美国房贷签约覆盖，提供了一条区别于 FDE 和行业龙头内部软件外售的 Vertical AI 路线。但签约不等于迁移上线，Agent 效率仍缺独立证据。",
+      "body_format": "article_text"
     }
   ]
 }
