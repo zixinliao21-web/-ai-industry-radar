@@ -77,6 +77,33 @@
         "长期技术趋势"
       ],
       "content_status": "published_verbatim"
+    },
+    {
+      "id": "DR-2026-013",
+      "added_date": "2026-10-07",
+      "title": "Apps, Agents, and Aggregation",
+      "author": [
+        "Ben Thompson"
+      ],
+      "publication": "Stratechery",
+      "source_url": "https://stratechery.com/2026/apps-agents-and-aggregation/",
+      "original_publish_date": "2026-09-28",
+      "estimated_reading_time": "约 30–40 分钟",
+      "topic": "Agent 与软件平台战略",
+      "themes": [
+        "Agent",
+        "Aggregation Theory",
+        "SaaS",
+        "Personal Agent",
+        "Enterprise Agent",
+        "商业模式",
+        "分发权",
+        "创业战略"
+      ],
+      "access": {
+        "type": "free"
+      },
+      "content_status": "published_verbatim"
     }
   ]
 }
