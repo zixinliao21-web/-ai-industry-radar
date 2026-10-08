@@ -114,6 +114,23 @@
       ],
       "deck": "Valon 先用六年时间自营受监管的房贷服务，再出售运营业务、向同行销售 ValonOS；其披露的 2 亿美元以上合同 ARR 与六分之一美国房贷签约覆盖，提供了一条区别于 FDE 和行业龙头内部软件外售的 Vertical AI 路线。但签约不等于迁移上线，Agent 效率仍缺独立证据。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-09-A2",
+      "date": "2026-10-09",
+      "grade": "A",
+      "title": "AI 没有简单消灭 IT 服务：企业交付巨头正把客户运营现场变成 AI 的新入口",
+      "themes": [
+        "Enterprise AI",
+        "IT Services",
+        "AI-led Transformation",
+        "Business Operations",
+        "FDE",
+        "Enterprise Context",
+        "Services Economics"
+      ],
+      "deck": "TCS 披露年化 AI 收入达 31 亿美元、超过季度营收的 10%，同时通过 Porsche/MHP 和 Best Buy GCC 交易获得更深的业务现场。它不是“AI 服务商已战胜软件”的证明，而是对“Agent 将直接取代传统 IT 服务”这一线性叙事的重要修正：成熟交付网络可能转化为 AI 运营入口，但收入定义、毛利与实际自动化效果仍需核验。",
+      "body_format": "article_text"
     }
   ]
 }
