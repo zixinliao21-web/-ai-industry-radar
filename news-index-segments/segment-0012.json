@@ -19,6 +19,25 @@
       ],
       "deck": "Lumentum CEO 披露部分光器件产能已售罄至 2029 年初，且特定产品到 2027—2028 年仍存在显著供需缺口。结合 NVIDIA 向 Lumentum、Coherent 分别投入 20 亿美元并取得未来产能访问权，AI 基础设施的稀缺性正在从 GPU 延伸到光互连制造。但‘售罄’不等于已交付收入，产品口径、扩产周期与需求回撤风险必须分开看。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-10-A3",
+      "date": "2026-10-10",
+      "grade": "A",
+      "title": "开源 Agent 正从工具变成企业可拥有的执行资产：模型可替换，不等于组织知识可迁移",
+      "themes": [
+        "Enterprise AI",
+        "Open-source Agents",
+        "Agent Harness",
+        "Enterprise Context",
+        "Organizational Memory",
+        "Skills",
+        "Model Portability",
+        "AI-native Business Models",
+        "Control Points"
+      ],
+      "deck": "Nous Research 完成 9000 万美元融资，推动 MIT 开源的 Hermes Agent 进入企业市场。真正的信号不是又一家 Agent 公司融资，而是模型可替换的执行框架、跨会话记忆和团队技能库被打包为企业智能资产；但克隆次数不是付费客户，开源代码也不自动保证权限安全、知识可迁移或商业护城河。",
+      "body_format": "article_text"
     }
   ]
 }
