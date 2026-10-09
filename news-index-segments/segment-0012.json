@@ -1,0 +1,24 @@
+{
+  "schema_version": "3.0",
+  "segment": "0012",
+  "items": [
+    {
+      "id": "2026-10-10-A2",
+      "date": "2026-10-10",
+      "grade": "A",
+      "title": "AI 算力的下一道瓶颈可能是光：当激光器产能被锁定到 2029 年，GPU 之外出现新的配给权",
+      "themes": [
+        "AI Infrastructure",
+        "Optical Interconnects",
+        "Photonics",
+        "Indium Phosphide",
+        "AI Supply Chain",
+        "Capacity Allocation",
+        "Industrial Bottlenecks",
+        "Control Points"
+      ],
+      "deck": "Lumentum CEO 披露部分光器件产能已售罄至 2029 年初，且特定产品到 2027—2028 年仍存在显著供需缺口。结合 NVIDIA 向 Lumentum、Coherent 分别投入 20 亿美元并取得未来产能访问权，AI 基础设施的稀缺性正在从 GPU 延伸到光互连制造。但‘售罄’不等于已交付收入，产品口径、扩产周期与需求回撤风险必须分开看。",
+      "body_format": "article_text"
+    }
+  ]
+}
