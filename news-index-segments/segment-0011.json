@@ -1,0 +1,23 @@
+{
+  "schema_version": "3.0",
+  "segment": "0011",
+  "items": [
+    {
+      "id": "2026-10-09-A3",
+      "date": "2026-10-09",
+      "grade": "A",
+      "title": "AI for Science 的稀缺资源正在从模型转向实验数据：开放数据联盟也会产生先发控制权",
+      "themes": [
+        "AI for Science",
+        "Scientific Data Infrastructure",
+        "Bio AI",
+        "Experimental Automation",
+        "Data Commons",
+        "Control Points",
+        "Open Science"
+      ],
+      "deck": "Biohub、美国 DOE/NIH 与 Google DeepMind、Meta 等共同组织 18 亿美元量级的生物数据与实验能力投入。真正的新信号不是“AI 已能模拟生命”，而是科学 AI 的瓶颈正被当作跨机构的数据生产基础设施来建设；开放数据与出资方的提前访问权同时存在。",
+      "body_format": "article_text"
+    }
+  ]
+}
