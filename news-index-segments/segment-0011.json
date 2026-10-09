@@ -72,6 +72,23 @@
       ],
       "deck": "Supabase 披露约 70% 的新增数据库由 Agent 或 AI 工具创建，并宣布收购 Turso。信号不只是 AI 带来更多数据库需求，而是数据库的最小配置、生命周期、隔离与定价单位可能从长期应用转向海量短期 Agent 任务；但公司口径、真实付费率及跨引擎迁移仍待验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-09-A7",
+      "date": "2026-10-09",
+      "grade": "A",
+      "title": "AI 芯片的控制点不只在先进制程：硅中介层开始成为可跨代工厂分工的产能",
+      "themes": [
+        "AI Infrastructure",
+        "Advanced Packaging",
+        "Semiconductor Supply Chain",
+        "CoWoS",
+        "Manufacturing Capacity",
+        "Supply Chain Resilience",
+        "Control Points"
+      ],
+      "deck": "GlobalFoundries 与 TSMC 签订为期五年、总额约 20 亿美元的硅中介层制造协议，计划在美国纽约州建立 CoWoS 供应环节，2028 年上半年才开始量产爬坡。它说明先进封装的部分制造步骤正被重新组织，但不等于 TSMC 已外包整个 CoWoS，也不能把远期产能当作今日交付。",
+      "body_format": "article_text"
     }
   ]
 }
