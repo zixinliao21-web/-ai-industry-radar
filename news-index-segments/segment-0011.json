@@ -89,6 +89,26 @@
       ],
       "deck": "GlobalFoundries 与 TSMC 签订为期五年、总额约 20 亿美元的硅中介层制造协议，计划在美国纽约州建立 CoWoS 供应环节，2028 年上半年才开始量产爬坡。它说明先进封装的部分制造步骤正被重新组织，但不等于 TSMC 已外包整个 CoWoS，也不能把远期产能当作今日交付。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-09-A8",
+      "date": "2026-10-09",
+      "grade": "A",
+      "title": "企业 AI 的下一层权威数据不是职位表：SAP 买下工作与技能的动态 Context Graph",
+      "themes": [
+        "Enterprise AI",
+        "Enterprise Context",
+        "Semantic Authority",
+        "Work Intelligence",
+        "HR AI",
+        "Ontology",
+        "Agent Grounding",
+        "Enterprise Software",
+        "M&A",
+        "Governance"
+      ],
+      "deck": "SAP 签约收购 TechWolf，意在把跨 HR 与业务系统的“工作—任务—技能”动态 Context Graph 纳入 SuccessFactors 和 Joule。新增的产业信号不是 HR Agent 又会做推荐，而是员工工作事实的推断、验证、授权与可移植性正在成为 Enterprise Context 的独立控制点；交易尚未完成，ROI 与非 SAP 中立性待验证。",
+      "body_format": "article_text"
     }
   ]
 }
