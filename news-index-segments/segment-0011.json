@@ -36,6 +36,24 @@
       ],
       "deck": "Stuut 披露 150 多家企业客户、超过 30 亿美元平台资金流及应收账款自动化结果；ZoomInfo、Bishop Lifting 的具名案例使“Agent 执行真实财务流程”比演示更可观察。但 DSO 改善仍存在样本、归因与口径问题，HighRadius、Sidetrade 也在争夺同一控制层。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-09-A5",
+      "date": "2026-10-09",
+      "grade": "A",
+      "title": "AI 算力合同不等于可交付算力：Firmus IPO 撤回暴露基建估值的兑现断层",
+      "themes": [
+        "AI Infrastructure",
+        "Neocloud",
+        "Capital Markets",
+        "Data Centers",
+        "AI Financing",
+        "Physical Delivery",
+        "Control Points",
+        "Industry Consolidation"
+      ],
+      "deck": "Firmus 拥有超过 900MW 签约算力容量，却在约 46MW 实际运行容量阶段撤回拟募资约 50 亿美元的 IPO。新信号不是 AI 算力需求消失，而是公开市场开始要求把合同、投产、收入与现金流分开定价；大额融资承诺和明星客户无法替代交付证据。",
+      "body_format": "article_text"
     }
   ]
 }
