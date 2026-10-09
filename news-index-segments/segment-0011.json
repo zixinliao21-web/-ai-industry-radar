@@ -54,6 +54,24 @@
       ],
       "deck": "Firmus 拥有超过 900MW 签约算力容量，却在约 46MW 实际运行容量阶段撤回拟募资约 50 亿美元的 IPO。新信号不是 AI 算力需求消失，而是公开市场开始要求把合同、投产、收入与现金流分开定价；大额融资承诺和明星客户无法替代交付证据。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-09-A6",
+      "date": "2026-10-09",
+      "grade": "A",
+      "title": "数据库的客户正在变成 Agent：每任务独立数据空间可能改写后端基础设施经济学",
+      "themes": [
+        "Agent Infrastructure",
+        "AI-native Software",
+        "Database Architecture",
+        "Agent State",
+        "Data Isolation",
+        "Developer Platform",
+        "Unit Economics",
+        "Control Points"
+      ],
+      "deck": "Supabase 披露约 70% 的新增数据库由 Agent 或 AI 工具创建，并宣布收购 Turso。信号不只是 AI 带来更多数据库需求，而是数据库的最小配置、生命周期、隔离与定价单位可能从长期应用转向海量短期 Agent 任务；但公司口径、真实付费率及跨引擎迁移仍待验证。",
+      "body_format": "article_text"
     }
   ]
 }

@@ -1,0 +1,51 @@
+{
+  "id": "2026-10-09-A6",
+  "date": "2026-10-09",
+  "grade": "A",
+  "title": "数据库的客户正在变成 Agent：每任务独立数据空间可能改写后端基础设施经济学",
+  "themes": [
+    "Agent Infrastructure",
+    "AI-native Software",
+    "Database Architecture",
+    "Agent State",
+    "Data Isolation",
+    "Developer Platform",
+    "Unit Economics",
+    "Control Points"
+  ],
+  "deck": "Supabase 披露约 70% 的新增数据库由 Agent 或 AI 工具创建，并宣布收购 Turso。信号不只是 AI 带来更多数据库需求，而是数据库的最小配置、生命周期、隔离与定价单位可能从长期应用转向海量短期 Agent 任务；但公司口径、真实付费率及跨引擎迁移仍待验证。",
+  "article_text": "# 数据库的客户正在变成 Agent：每任务独立数据空间可能改写后端基础设施经济学\n\n过去讨论 Agent 基础设施时，我们经常把注意力放在模型、工具调用、工作流和长期记忆上，却容易默认数据库仍是传统应用的附属品：一个产品申请一套后端，开发者配置数据库，随后长期运行。新的信号是：**创建数据库的主体、频率和生命周期可能都在改变。**当大量软件由 Agent 生成、试验和维护，数据库不再只是“一个应用的长期资产”，也可能是“一个 Agent、一次任务或一个临时环境随用随建的工作空间”。\n\n2026 年 10 月 2 日，Supabase 宣布新增 1.5 亿美元融资，并同日宣布拟收购 Turso。最值得 VELNAR 关注的不是融资额，而是 Supabase 披露：其平台每月新增超过 400 万个数据库，约 **70% 由 Agent 或 AI 驱动工具创建**。如果这一趋势可持续，后端平台争夺的控制点将不仅是存储更多数据，还包括**让非人类开发者以极低成本、安全地创建、隔离、休眠、恢复和升级大量数据空间**。这是 A 级结构信号，而不是“数据库已经被 Agent 取代”的结论。\n\n## FACT｜先把已经发生的事与公司主张分开\n\nSupabase 10 月 2 日发布的融资公告称，新一轮融资为 1.5 亿美元，由 GIC 领投，CapitalG、IronArc、SquarePeg 参与；部分资金也将用于员工流动性。公司四个月前宣布过 5 亿美元 Series F，估值 105 亿美元。**这两笔融资不能混成一次，也不能把 1.5 亿美元当成 Turso 的收购价**：本次收购对价未披露，公开材料也未说明新一轮融资对应的新估值。\n\n更重要的使用数据同样来自公司披露：每月新增超过 100 万用户、400 万数据库，其中约 70% 的新数据库由 Agent 或 AI 工具创建。Supabase CEO 在 10 月 2 日的官方博客还称，平台每周启动超过 100 万个数据库。两组数字在量级上相符，但尚未看到第三方审计，也没有公开“Agent 创建”的识别规则、数据库存活时间、去重口径或其中多少转化为持续付费项目。**70% 是新增创建量的占比，不是 Agent 贡献了 70% 的数据库收入、查询量或企业生产工作负载。**\n\n同一天宣布的 Turso 收购，为这一需求假设提供了具体的工程选择。Turso 在官方说明中称，其团队以 Rust 重写 SQLite，面向服务器并发写入与海量小型数据库，采用按需唤醒和闲置休眠的架构。Supabase 的博客称，Turso 的云平台可以让一台服务器管理大量数据库，并按 Agent 创建独立实例；公司列举 Superhuman、Sauna.ai、CTO.new、Mastra 等使用场景。**这些是供应商与具名客户的产品使用描述，不等于每家客户已经证明了相同的单位成本优势。**\n\n收购完成后，双方宣称会保留 Turso 平台和开源数据库的运营，并提供从轻量 SQLite 工作负载进入 Supabase Postgres 生态的成长路径。Turso 创始人 Glauber Costa 将负责 Agentic Services。具体迁移机制、定价、收购完成条件及整合时间表仍不充分公开。\n\nSupabase 同期发布的 Compute 私有 Alpha 进一步补足上下文：它面向 Agent 的隔离沙箱、长时间运行服务和后台任务，宣称可按任务/会话创建执行环境，并沿用项目权限边界。**但这是私有测试能力，不应写成已经大规模生产验证的统一 Agent 运行平台。**\n\n## INFERENCE｜真正变化的是数据库的“经济单位”\n\n传统 SaaS 后端常以应用、组织或租户为配置中心：数据库创建相对低频，运维重点是容量、稳定性、权限和备份。Agent 生成的软件把另一类工作负载推到前台：自动编程工具可能并行建立多个原型；长任务可能需要可恢复的中间状态；每个客户、会话或 Agent 可能需要互不干扰的暂存数据；失败试验可能在数分钟后被丢弃。\n\n如果仍为每个短任务启动一套重量级、持续运行的数据库服务，**启动时延、空闲资源、连接开销和最低收费**可能比实际存储量更昂贵。Turso 所强调的“海量轻量数据库、按需加载、空闲休眠”试图优化的正是这种形态。Postgres 并没有因此失去价值：高并发、复杂事务、成熟生态、持续生产负载仍可能更适合它。Supabase 收购 Turso 的战略意义，是试图把“短期、数量多、成本敏感”和“长期、业务关键、功能完整”两类数据生命周期放到同一开发者入口下。\n\n这也可能改变平台的价值捕获方式。过去数据库供应商主要争取人类开发者选型；未来 Agent 工具链本身可能通过默认模板、API、MCP、权限模型和价格阈值决定后端被选中多少次。**被 Agent 频繁自动选择**与**最终获得高质量、可持续付费工作负载**是两个阶段：前者争分发，后者争可靠性、治理和商业留存。\n\n更深一层，Agent 的 state 不应混为一种东西。会话状态、执行检查点、工具结果缓存、临时实验数据、客户主数据、财务记录和可审计的业务事实，具有不同的寿命、授权与一致性要求。按 Agent 隔离的小数据库可以是临时工作空间，却不天然具有企业 System of Record 的权威性。**Agent 能随手创建数据库，并不等于它可以随手创造业务事实。**\n\n## 为什么这可能是独立控制点，而不是又一个数据库功能\n\n第一，**低成本批量配置能力**可能成为 AI-native 应用平台的基础默认项。真正的竞争对象不是“谁的 SQL 更聪明”，而是从 Agent 发出创建请求到安全可用的时间、单位闲置成本、自动回收和恢复机制。\n\n第二，**身份与数据隔离**可能与数据库配置绑定。Agent 需要独立执行空间，但每个空间仍应知道它代表哪个用户、拥有哪些权限、能否访问生产数据，以及操作是否可追踪。Supabase 同期推出的应用级 MCP、用户身份和 RLS 路径，说明它不仅在卖存储，也试图控制 Agent 接入应用数据的边界。能否把这种治理一致地贯穿 Turso、Postgres 与 Compute，尚待检验。\n\n第三，**原型到生产的迁移通道**可能成为锁定开发者的重要环节。若 Agent 创建的大量小型数据库中只有少数成长为真实业务，平台需要让成功项目无痛升级，而不是让开发者在 SQL 方言、事务语义、权限、备份和迁移上重新做一遍。这个成长通道目前主要是产品路线承诺，不能当作已实现的无损迁移。\n\n第四，**Agent 分发入口**可能比单一数据库引擎更有杠杆。谁被 AI 编程工具、Agent Builder、企业开发平台默认调用，谁就可能先获得庞大的实验工作负载，再争取其中转化为生产系统的少数赢家。但调用量能否转化为毛利和长期收入，仍是未解问题。\n\n## COUNTERARGUMENT｜为什么不能得出“未来每个 Agent 都要一个数据库”\n\n**其一，70% 的分母可能高度偏向实验项目。**Agent 可以在一分钟里创建并销毁多个数据库，统计上的数据库数量增长未必意味着企业长期存储量或付费价值等比例增长。若多数实例从未进入生产，基础设施的商业价值可能被创建量高估。\n\n**其二，逻辑隔离不一定需要物理独立数据库。**成熟的多租户 Postgres、schema、表级权限、对象存储、KV、向量存储和事件日志也能服务许多 Agent 状态需求。每任务一库只在隔离成本、配置速度、性能或治理收益大于复杂度时成立。\n\n**其三，海量小库可能转移而非消灭复杂性。**实例目录、密钥轮换、备份、跨库查询、数据保留、删除合规、成本追踪和可观测性，都会随着实例数量增加而变难。便宜地创建，不代表便宜地治理。\n\n**其四，收购不是整合成功。**SQLite 与 Postgres 的 SQL 特性、并发行为、类型系统、事务和权限机制并不完全一致。“从原型无缝毕业到生产”需要可验证的迁移工具和兼容性边界，而不只是同一家公司拥有两个数据库品牌。\n\n**其五，竞争并非真空。**托管 Postgres、轻量 SQLite、Serverless 数据库、边缘数据服务和 AI 编程平台都在争夺自动化后端配置。Supabase 具有开发者分发优势，却没有证据证明它已形成排他性控制点。\n\n## VELNAR 的产业判断应如何更新\n\n**新增判断：**Agent Infrastructure 除了模型、Runtime、工具与权限，还可能出现一个独立的 **Agent Data Provisioning** 层。它的核心能力不是存更多字节，而是以极低摩擦创建大量隔离、可恢复、可审计且可清理的数据空间，并在必要时把临时状态升级为长期业务系统。\n\n**被强化的判断：**AI-native 软件的真正分发入口可能是“被 Agent 默认调用的基础设施”。数据库、身份、沙箱和 API 若能在同一受治理的开发体验里被自动配置，可能比单一功能更容易形成开发者习惯。\n\n**不变的判断：**企业系统仍需明确 System of Record、权限、证据来源、状态更新和审计。Agent 创建的便捷性不能替代确定性业务规则。当前 Sales MVP 不需要因此引入每 Agent 一库、替换数据库、增设 Ontology 平台或扩大架构范围；其首要任务仍是可靠完成真实业务闭环。\n\n## PREDICTION｜未来 12—24 个月如何证伪这条假设\n\n如果“数据库最小单位向 Agent 任务移动”确实成为结构变化，应看到可独立复核的四类证据：其一，Agent 自动创建的数据库中，持续使用和付费比例提高，而非仅创建量激增；其二，实例启动、休眠、恢复、备份及回收的单位成本有公开基准；其三，Turso 与 Postgres 之间出现可重复的迁移案例和清晰兼容边界；其四，企业客户能在海量 Agent 工作空间中维持身份隔离、权限审计与数据生命周期治理。\n\n反过来，如果两年后增长主要来自短命试验数据库、跨引擎迁移仍靠人工、生产负载继续集中于少数传统多租户数据库，那么“每 Agent 一库”更可能是某类工作负载的有效优化，而不是数据库行业的普遍新范式。\n\n**值得带回讨论的问题：当 Agent 成为软件与数据库的主要创建者时，后端平台最值得争夺的是创建入口、可持续的数据权威，还是从临时工作空间升级为真实业务系统的迁移通道？**\n\n## 主要证据\n\n- Supabase，2026-10-02，官方收购说明、每周数据库创建量与 Turso 技术路径：https://supabase.com/blog/supabase-is-acquiring-turso\n- Supabase，2026-10-02，融资与 Agent 创建数据库占比的公司公告：https://www.prnewswire.com/news-releases/supabase-announces-150m-in-new-funding-and-turso-acquisition-302900000.html （若链接不可用，以同日 Supabase 官方新闻稿为准）\n- Turso，2026-10-02，SQLite/Rust、并发写入、WAL-on-S3 与收购后承诺：https://turso.tech/blog/turso-is-joining-supabase\n- Supabase，2026-10-02，Agent-ready backend、MCP、Compute 的产品发布及私有 Alpha 边界：https://supabase.com/blog/select-2026-build-anything\n- SiliconANGLE，2026-10-02，独立报道融资、收购及数据库架构定位：https://siliconangle.com/2026/10/02/database-startup-supabase-raises-150m-acquires-turso/\n- Supabase，2026-06-04，Series F、数据库同比增长与 Agent 创建量早期口径：https://www.prnewswire.com/news-releases/supabase-raises-500m-at-10-5b-to-accelerate-lead-in-agentic-infrastructure-302791787.html",
+  "sources": [
+    {
+      "title": "Supabase：收购 Turso 与数据库配置架构",
+      "url": "https://supabase.com/blog/supabase-is-acquiring-turso",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "Supabase：1.5 亿美元融资与 Agent 创建数据库数据（公司新闻稿转载）",
+      "url": "https://theaiinsider.tech/2026/10/06/supabase-announces-150m-in-new-funding-and-turso-acquisition/",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "Turso：加入 Supabase 与海量小数据库架构",
+      "url": "https://turso.tech/blog/turso-is-joining-supabase",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "Supabase：Agent-ready 后端、MCP 与 Compute",
+      "url": "https://supabase.com/blog/select-2026-build-anything",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "SiliconANGLE：Supabase 融资与 Turso 收购报道",
+      "url": "https://siliconangle.com/2026/10/02/database-startup-supabase-raises-150m-acquires-turso/",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "Supabase：2026 年 6 月 Series F 与数据库增长口径",
+      "url": "https://www.prnewswire.com/news-releases/supabase-raises-500m-at-10-5b-to-accelerate-lead-in-agentic-infrastructure-302791787.html",
+      "date": "2026-06-04"
+    }
+  ],
+  "body_format": "article_text"
+}
