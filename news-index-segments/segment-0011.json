@@ -18,6 +18,24 @@
       ],
       "deck": "Biohub、美国 DOE/NIH 与 Google DeepMind、Meta 等共同组织 18 亿美元量级的生物数据与实验能力投入。真正的新信号不是“AI 已能模拟生命”，而是科学 AI 的瓶颈正被当作跨机构的数据生产基础设施来建设；开放数据与出资方的提前访问权同时存在。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-09-A4",
+      "date": "2026-10-09",
+      "grade": "A",
+      "title": "企业 Agent 的价值开始由“节省工时”转向“提前收到钱”：应收账款成为可核验的执行战场",
+      "themes": [
+        "Enterprise AI",
+        "Vertical AI",
+        "Finance AI",
+        "Order-to-Cash",
+        "Working Capital",
+        "Workflow Ownership",
+        "Enterprise Context",
+        "Agent Economics"
+      ],
+      "deck": "Stuut 披露 150 多家企业客户、超过 30 亿美元平台资金流及应收账款自动化结果；ZoomInfo、Bishop Lifting 的具名案例使“Agent 执行真实财务流程”比演示更可观察。但 DSO 改善仍存在样本、归因与口径问题，HighRadius、Sidetrade 也在争夺同一控制层。",
+      "body_format": "article_text"
     }
   ]
 }
