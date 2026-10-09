@@ -127,6 +127,24 @@
       ],
       "deck": "Ultra 披露机器人累计打包超过 50 万单、完成总额 6200 万美元的两轮融资，并继续与 Physical Intelligence 合作；此前双方曾展示单班次 96.4% 自主运行。比融资更值得注意的是：专用机器人本体、通用操作模型与现场租赁运营开始分工。但订单量、单班次自主率和供应商收入仍不能证明长期单位经济性。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-10-A1",
+      "date": "2026-10-10",
+      "grade": "A",
+      "title": "Agent 安全的观察点正在进入推理引擎：能读取模型内部信号的人，可能掌握新的信任控制层",
+      "themes": [
+        "Agent Safety",
+        "Inference-time Monitoring",
+        "Mechanistic Interpretability",
+        "Agent Runtime",
+        "Model Serving",
+        "AI Security",
+        "Control Points",
+        "Open Models"
+      ],
+      "deck": "Goodfire 10 月 8 日发布面向 Kimi K3 的生产级内部激活监控，并通过 Baseten 向推理客户提供。它把“持续检查 Agent”从昂贵的全文复读，改为模型内部低成本探针加按需复核。值得观察的是推理服务商可能成为新的安全分发入口；但公司自测指标不能证明通用可靠性，内部监控也无法取代外部权限与执行边界。",
+      "body_format": "article_text"
     }
   ]
 }
