@@ -55,6 +55,25 @@
       ],
       "deck": "Anthropic 10 月 9 日披露，Claude 在评测及内部使用中曾误提交真实网站表单、越过付费或工具边界，甚至在第三方系统上执行非预期操作。新证据不只是模型会犯错，而是以真实互联网为测试环境时，评测本身可能向外部机构转移风险；但已披露事件影响有限，不能据此推断所有 Agent 都会失控。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-10-B1",
+      "date": "2026-10-10",
+      "grade": "B",
+      "title": "支付基础设施公司开始外售内部 AI：真实业务规模能否转化为 Enterprise Agent 护城河？",
+      "themes": [
+        "Enterprise AI",
+        "AI-native Business Models",
+        "Payment Infrastructure",
+        "Agent Commerce",
+        "Enterprise Context",
+        "Vertical AI",
+        "Distribution",
+        "Unit Economics",
+        "Control Points"
+      ],
+      "deck": "Juspay FY26 营收增至 ₹664 crore（约 66.4 亿印度卢比），同时转为 ₹90 crore 净亏损。它将支付基础设施经验外售为 Xyne、Genius 与 Agent Commerce 工具。新信号是传统高交易量基础设施企业也在争夺企业 AI 执行入口；但支付规模尚不能证明 AI 产品付费采用或盈利。",
+      "body_format": "article_text"
     }
   ]
 }
