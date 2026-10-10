@@ -20,6 +20,25 @@
       ],
       "deck": "美国 Genesis Mission 宣布由 11 家企业提供合计 24 亿美元的科研算力额度与工具，同时推进跨机构科研项目、区域算力中心及自动化实验设施。新增的结构信号不是“AI 已证明能加速所有科学”，而是国家开始组织模型、算力、实验仪器与科研任务的资源分配层；承诺额、实际兑付、可移植性和科研产出仍必须分开核验。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-11-A3",
+      "date": "2026-10-11",
+      "grade": "A",
+      "title": "Physical AI 的数据工厂正在成为独立产业：稀缺的不是视频，而是可验证的动作经验",
+      "themes": [
+        "Physical AI",
+        "Robotics Data",
+        "Robot Data Factories",
+        "Embodied Learning",
+        "Evaluation Infrastructure",
+        "Industrial AI",
+        "Data Rights",
+        "Control Points",
+        "Robot Economics"
+      ],
+      "deck": "Mecka 宣布 6000 万美元 B 轮，Figure 披露 1600 万条众包视频与 1500 万美元创作者支出，XDOF、Scale AI 则从遥操作与工业现场建立训练—评测链。真正的变化是机器人学习所需的物理经验正在被组织为专门的生产与验证基础设施；但数据规模、融资和自报营收不能证明跨机器人泛化或长期单位经济性。",
+      "body_format": "article_text"
     }
   ]
 }
