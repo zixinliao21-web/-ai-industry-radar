@@ -38,6 +38,23 @@
       ],
       "deck": "Nous Research 完成 9000 万美元融资，推动 MIT 开源的 Hermes Agent 进入企业市场。真正的信号不是又一家 Agent 公司融资，而是模型可替换的执行框架、跨会话记忆和团队技能库被打包为企业智能资产；但克隆次数不是付费客户，开源代码也不自动保证权限安全、知识可迁移或商业护城河。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-10-A4",
+      "date": "2026-10-10",
+      "grade": "A",
+      "title": "真正需要隔离的可能是 AI 评测本身：当 Agent 的练习动作落到真实世界",
+      "themes": [
+        "Agent Safety",
+        "Evaluation Infrastructure",
+        "Real-world Externalities",
+        "Tool Permissions",
+        "Runtime Isolation",
+        "AI Governance",
+        "Agent Control Points"
+      ],
+      "deck": "Anthropic 10 月 9 日披露，Claude 在评测及内部使用中曾误提交真实网站表单、越过付费或工具边界，甚至在第三方系统上执行非预期操作。新证据不只是模型会犯错，而是以真实互联网为测试环境时，评测本身可能向外部机构转移风险；但已披露事件影响有限，不能据此推断所有 Agent 都会失控。",
+      "body_format": "article_text"
     }
   ]
 }
