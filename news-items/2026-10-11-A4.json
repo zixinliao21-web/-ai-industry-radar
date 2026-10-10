@@ -1,0 +1,57 @@
+{
+  "id": "2026-10-11-A4",
+  "date": "2026-10-11",
+  "grade": "A",
+  "title": "AI 算力的下一层控制点可能是调度市场：共享 GPU 不等于可交付计算",
+  "themes": [
+    "AI Infrastructure",
+    "Compute Allocation",
+    "GPU Marketplace",
+    "Workload Scheduling",
+    "Compute Economics",
+    "Goodput",
+    "Multi-cloud",
+    "Control Points",
+    "AI Competition"
+  ],
+  "deck": "National Compute Grid 与 Vultr 开始把跨云、跨芯片的闲置算力组织为可竞价的共享池，宣称 760MW 已接入或进入规划，并以“有效工作量”叙事挑战 GPU 小时计费。但其现行文档仍按持有的 GPU 容量与竞价结算，公开预览仅面向特定公共机构。真正值得跟踪的不是又多了一家 GPU 平台，而是资源发现、调度、计费与可靠性是否能成为独立控制层。",
+  "article_text": "# AI 算力的下一层控制点可能是调度市场：共享 GPU 不等于可交付计算\n\n**AI 算力竞争正在出现一条不同于“再建更多数据中心”的路径：把分散、时常空闲的加速器组织成可发现、可竞价、可调度的资源池。** 如果这条路径成立，市场里稀缺的就不只是 GPU 和电力，还包括一种能力：知道哪些计算资源在什么时间、以什么价格、用多高的可靠性，能完成哪类任务。但“连接了很多机房”与“能稳定交付前沿模型训练”之间，仍隔着网络、数据、硬件兼容性、抢占和合同责任。\n\n2026 年 10 月 7 日，National Compute Grid 对外亮相；云基础设施提供商 Vultr 同日宣布成为创始联盟成员，贡献算力并参与名为 Grid Exchange 的共享编排体系。10 月 8 日的行业报道补充了联盟的容量、定价设想与公共科研用途。**这是 A 级结构观察，而不是 S 级产业重构已完成的证据。** 它把“谁能买到 GPU”的问题进一步拆成“谁掌握计算资源的可用性信息、撮合规则和交付保障”。\n\n## FACT｜已经发生了什么，哪些数字不能混算\n\n**第一，已经有真实参与方和可访问的产品文档，但仍是受限预览。** Vultr 在 10 月 7 日的公告中确认以创始成员身份加入，并描述 Grid Exchange 将跨不同云服务商、地点和 NVIDIA、AMD、TPU 等架构汇聚计算容量。National Compute 官网显示，预览期主要面向具备 .edu、.mil、.gov 等资格的公共研究用户；其他用户需等待开放。官网展示的容量属于带日期的规划估计，而不是第三方审计过的实时可交付清单。因此，“已发布平台”不等于“所有创业公司现在都能直接购买任意集群”。\n\n**第二，760MW 与 2GW 是基础设施规模口径，不是算力交付成绩。** 据 Axios 10 月 7 日报道，联盟称约 760MW 容量“已连接或可望获得”（connected or in sight），目标是 2030 年汇聚 2GW。两个状态被合并到一个数字：其中多少已经通电、装机、可调度、符合客户要求、能够长期稳定供货，公开资料没有给出统一拆分。兆瓦衡量的是功率相关容量，不能不经芯片型号、互联、利用率和运行条件换算为统一 FLOPS、训练吞吐或实际客户交付量。联盟材料还称独立单租户数据中心平均净利用率不足 15%；这是联盟自身论文口径，不代表“全行业 85% GPU 都闲置”，更不是独立审计结果。\n\n**第三，资源调度机制已经比一张共享 GPU 名单具体。** National Compute 的公开文档描述，用户可设置 GPU 需求数量和每 GPU 小时最高愿付价格，系统按站点运行约每 10 秒一次的竞价清算；虚拟机、Kubernetes 作业通过不同入口申报需求，容量由价格、节点组合和保护窗口等规则分配。基础容量合同与可被抢占的 burst capacity 被明确区分：前者按固定期限支付以获得保障，后者需面对价格波动和可能中断。这里已出现可研究的资源分配规则，但不能把“文档写出了规则”当成已在多家供应商间达到稳定大规模撮合的证据。\n\n**第四，宣传中的 goodput 定价与当前实际计费文档存在关键差别。** Vultr 的 10 月 7 日文章强调未来以完成且未中断的有效计算工作（goodput）为价值尺度，而非只卖 GPU 小时；这在经济学上很有意义，因为租用硬件不等于完成训练或评测。但 National Compute 当前 Billing 与 FAQ 文档明确写明：VM 在持有节点期间收费，即使没有作业运行；Kubernetes 节点按加入集群的时段计费，并有最短持有时间；固定基础容量按整个合同期限收费；公共科研租用按 GPU 小时收费。**因此目前可核验的交易对象主要仍是“按规则取得并持有的 GPU 容量”，不能把联盟愿景写成已经普遍兑现的按任务成果付费。** 两种表述并不必然矛盾——goodput 可以是长期优化目标——但它们处在不同成熟度。\n\n**第五，需求与订单数字也必须区分。** 《华盛顿邮报》和 HPCwire 报道 National Compute 已取得数十亿美元规模的预订意向或预约口径，并计划向美国 Genesis Mission 提供约 1 亿美元计算额度。预订、资源承诺、已成交合同、已执行 GPU 小时、确认收入和科研产出是六类不同事实。当前公开材料不足以把预订总额认定为实际营收，更不能据此推导利润率。对 Genesis Mission 的算力贡献与前一篇有关政府科研资源分配的观察有交集，但**本篇新增的主题是市场化资源发现与调度机制，而非政府宣布多少研究资助**。\n\n## INFERENCE｜为什么这可能成为新的基础设施控制层\n\n传统 AI 算力叙事围绕“谁拥有更多 GPU、谁能获得更多电力”。Grid Exchange 所尝试的，是在所有权之上叠加一个**资源市场与执行编排层**：供应商上报型号、地点、价格、可用时段和服务能力；需求方申报任务、时间、预算和可靠性约束；平台决定匹配、竞价、抢占、计量与结算。若跨供应商真实运行，平台掌握的不仅是交易流量，还有哪些工作负载适合哪些硬件、哪些机房交付稳定、什么时间发生资源紧缺的运营数据。\n\n这一层可能形成三种经济杠杆。其一，**提高已建设资产的使用效率**，使新增供给不必完全依赖新机房建设；其二，**降低中小研发机构获取短期算力的交易摩擦**，让不能签多年长约的用户进入市场；其三，**把基础设施竞争从标价 GPU 小时推进到可预期的任务成本**，让调度、检查点、恢复、监控和故障归因具备可单独收费的可能性。注意第三点是推论，不是 National Compute 当前计费已完成的事实。\n\n它也修正了一个容易过度简化的判断：算力集中未必只能通过“谁建得最多”来衡量。**即使 GPU 分散在许多所有者手中，能够聚合需求、规定市场规则、决定准入和定义可靠性交付的调度层，仍可能集中控制权。** 反过来，开放接口、多家调度服务商和客户自有工作负载管理能力，也可能限制这种集中。\n\n## COUNTERARGUMENT｜共享资源池不等于一台更大的超级计算机\n\n最强反论来自计算机系统本身。前沿模型的大规模同步训练往往要求大量加速器处于低延迟、高带宽、故障域可控的紧耦合集群；散落在不同地区的空闲 GPU 不能靠一个 API 自动拼成可替代的训练超算。不同芯片的软件栈、显存容量、网络拓扑和算子兼容性也使“统一价格”难以代表“统一可用性能”。\n\n其次，**可抢占资源把价格风险转移成执行风险**。当竞价价格上涨或资源被回收，长任务需要检查点、恢复、重新加载数据；数据迁移成本、失败重试、任务截止时间与合规要求，可能抵消低标价带来的节约。对于敏感企业数据或受监管模型，跨运营商流转还需要可验证的隔离、审计和责任分配。\n\n再次，平台当前的公共研究预览并不能证明商业客户已有可规模化使用体验。联盟自报的利用率、可连接容量与预订规模，应由独立的可用率、实际完成作业、失败率、价格分布和客户复购来检验。**一旦大型云厂商用自身的闲置容量、调度技术和长期客户关系复制这一功能，独立 Grid Exchange 也未必拥有稳定议价权。** 早已有其他“AI Grid”产品概念；本项目的创新需要靠跨所有者交易和结算的实际运营来证明，而不是靠“Grid”名称。\n\n## PREDICTION｜未来 6—18 个月应该验证什么\n\n**预测一（有条件）：**短期最可能先获得价值的，是中小规模训练、可中断实验、批量推理、评测和具备检查点的研究任务；不是立刻替代最前沿的超大规模同步训练集群。应观察实际成交的 GPU 小时、任务成功率、不同芯片的有效吞吐、恢复成本，而非单看新增兆瓦。\n\n**预测二（有条件）：**若市场真实形成，竞争会逐步围绕可核验的 SLA、抢占与恢复政策、跨云数据成本、价格透明度及供应商信用展开。goodput 或“每成功任务成本”可能成为新的销售指标，但是否能变成法律和账单上的结算单位，仍需产品合同验证。\n\n**预测三（反向情景）：**如果参与方只贡献低质量的剩余容量，或平台难以统一调度与计费，Grid 可能停留在营销联盟和资源目录。真正的稀缺仍将回到紧耦合高性能集群、可靠供电和资本融资，调度平台的独立价值有限。\n\n## 对 VELNAR 的判断边界\n\n这条信号**强化**了我们对 AI 基础设施控制点不止在芯片所有权的理解，并新增“跨主体资源分配权、竞价规则和可验证交付”的观察维度；它**没有推翻**大型云厂商、先进互联和能源基础设施的优势，也**不意味着**当前企业 Sales MVP 应引入算力交易、跨云调度或新的 Agent 基础设施。现阶段应把它放进长期产业地图，而非产品待办。\n\n值得回到 GPT 继续讨论的问题是：**当计算资源所有权高度分散、但任务调度和计费规则可能集中时，真正可持续的护城河在硬件供给、跨供应商市场流动性，还是“完成一次可信计算”的履约证据？** 我们需要什么数据才能区分这三者？\n\n## 证据与核验入口\n\n1. National Compute 官网及公共研究预览说明（2026-10-11 核验）：https://nationalcompute.com/\n2. National Compute 官方产品文档（2026-10-11 核验）：https://docs.nationalcompute.com/\n3. National Compute 官方计费规则（2026-10-11 核验）：https://docs.nationalcompute.com/billing/\n4. National Compute 官方竞价、SLA 与抢占 FAQ（2026-10-11 核验）：https://docs.nationalcompute.com/faq/\n5. Vultr，2026-10-07，创始成员与 Grid Exchange、goodput 设想：https://blogs.vultr.com/vultr-joins-national-compute\n6. Axios，2026-10-07，National Compute Grid 发布、760MW 与联盟口径：https://www.axios.com/2026/10/07/national-compute-grid-ai-capacity\n7. HPCwire，2026-10-08，跨供应商计算池的商业化与技术限制：https://www.hpcwire.com/2026/10/08/national-compute-grid-launches-to-pool-idle-ai-capacity-across-providers/",
+  "sources": [
+    {
+      "title": "National Compute: Public Sector Preview",
+      "url": "https://nationalcompute.com/",
+      "date": "2026-10-11"
+    },
+    {
+      "title": "National Compute: Official Product Documentation",
+      "url": "https://docs.nationalcompute.com/",
+      "date": "2026-10-11"
+    },
+    {
+      "title": "National Compute: Billing Contract",
+      "url": "https://docs.nationalcompute.com/billing/",
+      "date": "2026-10-11"
+    },
+    {
+      "title": "National Compute: FAQ, Auction and SLA",
+      "url": "https://docs.nationalcompute.com/faq/",
+      "date": "2026-10-11"
+    },
+    {
+      "title": "Vultr: Joins National Compute Consortium",
+      "url": "https://blogs.vultr.com/vultr-joins-national-compute",
+      "date": "2026-10-07"
+    },
+    {
+      "title": "Axios: New Compute Grid Takes Aim at Chip Supply Crunch",
+      "url": "https://www.axios.com/2026/10/07/national-compute-grid-ai-capacity",
+      "date": "2026-10-07"
+    },
+    {
+      "title": "HPCwire: National Compute Grid Launches",
+      "url": "https://www.hpcwire.com/2026/10/08/national-compute-grid-launches-to-pool-idle-ai-capacity-across-providers/",
+      "date": "2026-10-08"
+    }
+  ],
+  "body_format": "article_text"
+}

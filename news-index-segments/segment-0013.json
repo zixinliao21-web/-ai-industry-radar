@@ -39,6 +39,25 @@
       ],
       "deck": "Mecka 宣布 6000 万美元 B 轮，Figure 披露 1600 万条众包视频与 1500 万美元创作者支出，XDOF、Scale AI 则从遥操作与工业现场建立训练—评测链。真正的变化是机器人学习所需的物理经验正在被组织为专门的生产与验证基础设施；但数据规模、融资和自报营收不能证明跨机器人泛化或长期单位经济性。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-11-A4",
+      "date": "2026-10-11",
+      "grade": "A",
+      "title": "AI 算力的下一层控制点可能是调度市场：共享 GPU 不等于可交付计算",
+      "themes": [
+        "AI Infrastructure",
+        "Compute Allocation",
+        "GPU Marketplace",
+        "Workload Scheduling",
+        "Compute Economics",
+        "Goodput",
+        "Multi-cloud",
+        "Control Points",
+        "AI Competition"
+      ],
+      "deck": "National Compute Grid 与 Vultr 开始把跨云、跨芯片的闲置算力组织为可竞价的共享池，宣称 760MW 已接入或进入规划，并以“有效工作量”叙事挑战 GPU 小时计费。但其现行文档仍按持有的 GPU 容量与竞价结算，公开预览仅面向特定公共机构。真正值得跟踪的不是又多了一家 GPU 平台，而是资源发现、调度、计费与可靠性是否能成为独立控制层。",
+      "body_format": "article_text"
     }
   ]
 }
