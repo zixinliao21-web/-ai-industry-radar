@@ -94,6 +94,26 @@
       ],
       "deck": "Helm.ai 披露过去 12 个月签署 7000 万美元汽车与工业 AI 商业合同，Honda 的官方合作公告提供了客户侧验证。新信号是 Physical AI 可通过模型、感知与验证软件出售能力，而不必自营机器人车队；但签约额不等于收入，量产时点、跨本体复用与真实利润仍待检验。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-10-A5",
+      "date": "2026-10-10",
+      "grade": "A",
+      "title": "AI Agent 的退出通道正被主权审查改写：Manus 脱离 Meta 后仍融资超 5 亿美元",
+      "themes": [
+        "AI-native Companies",
+        "Enterprise Agents",
+        "General-purpose Agents",
+        "Cross-border M&A",
+        "AI Sovereignty",
+        "Regulatory Control",
+        "Capital Markets",
+        "Data Governance",
+        "Exit Optionality",
+        "Control Points"
+      ],
+      "deck": "Manus 在已完成的 Meta 收购被中国监管要求撤销后，恢复独立运营并完成超 5 亿美元融资。重要的不是又一轮 Agent 融资，而是 AI 公司的并购退出、跨境技术与数据控制、独立融资能力被迫分开定价；但新融资不等于盈利、估值兑现或跨境监管风险消失。",
+      "body_format": "article_text"
     }
   ]
 }
