@@ -74,6 +74,26 @@
       ],
       "deck": "Juspay FY26 营收增至 ₹664 crore（约 66.4 亿印度卢比），同时转为 ₹90 crore 净亏损。它将支付基础设施经验外售为 Xyne、Genius 与 Agent Commerce 工具。新信号是传统高交易量基础设施企业也在争夺企业 AI 执行入口；但支付规模尚不能证明 AI 产品付费采用或盈利。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-10-B2",
+      "date": "2026-10-10",
+      "grade": "B",
+      "title": "Physical AI 的软件商业化开始有合同证据：7000 万美元签约额仍不等于可兑现收入",
+      "themes": [
+        "Physical AI",
+        "Autonomy Software",
+        "Industrial AI",
+        "Automotive AI",
+        "Robotics",
+        "Foundation Models",
+        "Commercial Contracts",
+        "Unit Economics",
+        "Deployment Validation",
+        "Control Points"
+      ],
+      "deck": "Helm.ai 披露过去 12 个月签署 7000 万美元汽车与工业 AI 商业合同，Honda 的官方合作公告提供了客户侧验证。新信号是 Physical AI 可通过模型、感知与验证软件出售能力，而不必自营机器人车队；但签约额不等于收入，量产时点、跨本体复用与真实利润仍待检验。",
+      "body_format": "article_text"
     }
   ]
 }
