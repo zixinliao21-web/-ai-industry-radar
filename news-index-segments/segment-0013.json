@@ -1,0 +1,25 @@
+{
+  "schema_version": "3.0",
+  "segment": "0013",
+  "items": [
+    {
+      "id": "2026-10-11-A2",
+      "date": "2026-10-11",
+      "grade": "A",
+      "title": "科研 AI 的控制点正在变成算力分配权：24 亿美元资源承诺不等于可自由使用的公共算力",
+      "themes": [
+        "AI for Science",
+        "AI Infrastructure",
+        "Compute Allocation",
+        "Public-Private Partnerships",
+        "Scientific Research",
+        "Agentic Laboratories",
+        "Platform Control",
+        "Sovereign AI",
+        "Control Points"
+      ],
+      "deck": "美国 Genesis Mission 宣布由 11 家企业提供合计 24 亿美元的科研算力额度与工具，同时推进跨机构科研项目、区域算力中心及自动化实验设施。新增的结构信号不是“AI 已证明能加速所有科学”，而是国家开始组织模型、算力、实验仪器与科研任务的资源分配层；承诺额、实际兑付、可移植性和科研产出仍必须分开核验。",
+      "body_format": "article_text"
+    }
+  ]
+}
