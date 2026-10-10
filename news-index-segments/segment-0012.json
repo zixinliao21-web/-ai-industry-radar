@@ -133,6 +133,25 @@
       ],
       "deck": "Nuvacore 尚无产品就寻求约 25 亿美元估值融资，背后更有 NVIDIA Vera、CoreWeave 沙箱测试与 Perplexity 的真实工作负载信号：Agent 的工具调用、代码运行、隔离环境和评测循环正让 CPU 重新进入 AI 基础设施竞争。但融资意向不是成交，供应商基准测试也不等于普遍经济优势。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-11-A1",
+      "date": "2026-10-11",
+      "grade": "A",
+      "title": "企业上下文开始被单独拍卖：破产公司的工作记录暴露 AI 训练数据的权利断层",
+      "themes": [
+        "Enterprise Context",
+        "AI Training Data",
+        "Data Rights",
+        "Worker Privacy",
+        "AI-native Data Markets",
+        "Agent Evaluation",
+        "Enterprise AI",
+        "Data Provenance",
+        "Control Points"
+      ],
+      "deck": "Google 以 1000 万美元竞得 Spirit Airlines 企业数据的交易仍待法院批准；拟转让资料涉及约 1 亿封邮件、5 亿条 Teams 消息。121 名美国议员、工会与隐私组织围绕员工记录提出异议。信号不是“企业数据都能卖”，而是 AI 训练对真实工作上下文的需求，正在与数据持有权、员工隐私、二次用途和模型衍生权发生结构性碰撞。",
+      "body_format": "article_text"
     }
   ]
 }
