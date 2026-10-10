@@ -114,6 +114,25 @@
       ],
       "deck": "Manus 在已完成的 Meta 收购被中国监管要求撤销后，恢复独立运营并完成超 5 亿美元融资。重要的不是又一轮 Agent 融资，而是 AI 公司的并购退出、跨境技术与数据控制、独立融资能力被迫分开定价；但新融资不等于盈利、估值兑现或跨境监管风险消失。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-10-A6",
+      "date": "2026-10-10",
+      "grade": "A",
+      "title": "AI Agent 的算力账单不只属于 GPU：CPU 正成为执行与评测的独立控制点",
+      "themes": [
+        "AI Infrastructure",
+        "Agent Economics",
+        "CPU",
+        "Agent Runtime",
+        "Sandbox Execution",
+        "Evaluation Infrastructure",
+        "Compute Architecture",
+        "Control Points",
+        "Semiconductor Startups"
+      ],
+      "deck": "Nuvacore 尚无产品就寻求约 25 亿美元估值融资，背后更有 NVIDIA Vera、CoreWeave 沙箱测试与 Perplexity 的真实工作负载信号：Agent 的工具调用、代码运行、隔离环境和评测循环正让 CPU 重新进入 AI 基础设施竞争。但融资意向不是成交，供应商基准测试也不等于普遍经济优势。",
+      "body_format": "article_text"
     }
   ]
 }
