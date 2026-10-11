@@ -21,6 +21,26 @@
       ],
       "deck": "Google 自 10 月 1 日停止 OSS VRP 的产品漏洞投稿，Anthropic 10 月 8 日开放可选择接收未经人工审查报告的 OSS Scanner，IBM/Red Hat 则披露已修复并回移 400 多个 Java 漏洞、提供可签名分发的旧版本补丁。三者共同指向一个变化：漏洞候选的生产越来越便宜，真正稀缺的是可验证的风险判断、兼容修复、披露协调和生产交付；但厂商自报数量不能直接等同于独立安全效果。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-12-A2",
+      "date": "2026-10-12",
+      "grade": "A",
+      "title": "AI 工厂的互连控制权正从单一芯片延伸到异构网络：开放标准不等于脱离 NVIDIA",
+      "themes": [
+        "AI Infrastructure",
+        "AI Networking",
+        "Heterogeneous Accelerators",
+        "Scale-up",
+        "Scale-out",
+        "Open Standards",
+        "Ethernet",
+        "Network Orchestration",
+        "NVIDIA",
+        "Control Points"
+      ],
+      "deck": "Upscale 10 月 8 日发布 Token Fabric：以自研 SkyFabriX 连接机架内异构加速器，以 NVIDIA Spectrum-X 承担跨机架网络，并由统一软件管理。它显示 AI 算力竞争正在延伸到跨芯片互连与运维控制面；但产品计划 2027 年初才普遍可用，开放接口、客户采用和实际性能均未得到独立规模验证。",
+      "body_format": "article_text"
     }
   ]
 }
