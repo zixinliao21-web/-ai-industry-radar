@@ -120,6 +120,26 @@
       ],
       "deck": "《金融时报》10 月 10 日披露 NVIDIA 正与 Reflection AI 商谈加码投资、收购或人才与技术许可安排。相比已收购的 Hugging Face 分发入口，这次潜在动作触及开放权重模型的研发与供给。但谈判未确认成交，Beam 权重也尚未公开，不能把资本意向等同于模型生态控制权。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-11-A8",
+      "date": "2026-10-11",
+      "grade": "A",
+      "title": "AI 编程的竞争单位正在从代码生成变成生产交付：Harness 收购的是上下文闭环，而非整个 Augment",
+      "themes": [
+        "Enterprise Agents",
+        "AI Coding",
+        "Autonomous SDLC",
+        "Software Delivery",
+        "Enterprise Context",
+        "Code Context",
+        "Delivery Knowledge Graph",
+        "Agent Governance",
+        "M&A",
+        "Control Points"
+      ],
+      "deck": "Harness 于 10 月 8 日收购 Augment Code 的 Cosmos、Auggie CLI、Code Context Engine 等特定资产，将代码库理解与构建、测试、安全、部署和运行反馈连接。新信号不是“AI 已实现无人软件工厂”，而是开发 Agent 的价值正向可治理的交付闭环迁移；整合效果、故障率与跨工具中立性尚无独立证据。",
+      "body_format": "article_text"
     }
   ]
 }
