@@ -140,6 +140,25 @@
       ],
       "deck": "Harness 于 10 月 8 日收购 Augment Code 的 Cosmos、Auggie CLI、Code Context Engine 等特定资产，将代码库理解与构建、测试、安全、部署和运行反馈连接。新信号不是“AI 已实现无人软件工厂”，而是开发 Agent 的价值正向可治理的交付闭环迁移；整合效果、故障率与跨工具中立性尚无独立证据。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-11-A9",
+      "date": "2026-10-11",
+      "grade": "A",
+      "title": "AI 可以批量产出数学结果，但科研的稀缺环节正在转向验证、理解与吸收",
+      "themes": [
+        "AI for Science",
+        "Mathematical Research",
+        "Formal Verification",
+        "Scientific Validation",
+        "Research Provenance",
+        "AI Research Automation",
+        "Knowledge Governance",
+        "Control Points",
+        "Scientific Publishing"
+      ],
+      "deck": "OpenAI 公开 719 篇 AI 生成数学手稿、372 个结果家族，但只有约 42% 顶层结果有 Lean 形式化，且已撤回三篇。真正的产业信号不是“AI 解决了多少难题”，而是研究候选的生产速度与独立验证、语义对齐、知识吸收速度开始分离；科研验收可能成为新的基础设施控制点。",
+      "body_format": "article_text"
     }
   ]
 }
