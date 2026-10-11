@@ -1,0 +1,26 @@
+{
+  "schema_version": "3.0",
+  "segment": "0014",
+  "items": [
+    {
+      "id": "2026-10-12-A1",
+      "date": "2026-10-12",
+      "grade": "A",
+      "title": "AI 安全的稀缺环节正在从发现漏洞转向修复交付：三种相反的开源治理选择",
+      "themes": [
+        "AI Cybersecurity",
+        "Open-source Security",
+        "Vulnerability Remediation",
+        "Software Supply Chain",
+        "Agentic Security",
+        "Patch Backporting",
+        "Security Validation",
+        "Trust Infrastructure",
+        "Enterprise Software",
+        "Control Points"
+      ],
+      "deck": "Google 自 10 月 1 日停止 OSS VRP 的产品漏洞投稿，Anthropic 10 月 8 日开放可选择接收未经人工审查报告的 OSS Scanner，IBM/Red Hat 则披露已修复并回移 400 多个 Java 漏洞、提供可签名分发的旧版本补丁。三者共同指向一个变化：漏洞候选的生产越来越便宜，真正稀缺的是可验证的风险判断、兼容修复、披露协调和生产交付；但厂商自报数量不能直接等同于独立安全效果。",
+      "body_format": "article_text"
+    }
+  ]
+}
