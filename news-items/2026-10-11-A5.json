@@ -1,0 +1,49 @@
+{
+  "id": "2026-10-11-A5",
+  "date": "2026-10-11",
+  "grade": "A",
+  "title": "Personal Agent 不再只能伪装用户：Poppy 把商家访问权写成跨渠道会话契约",
+  "themes": [
+    "Personal Agent",
+    "Agent Commerce",
+    "Agent Identity",
+    "Merchant Acceptance",
+    "Protocol Standards",
+    "Delegated Authorization",
+    "Enterprise Agents",
+    "Agent-to-Business",
+    "Control Points",
+    "Interoperability",
+    "Agent Governance"
+  ],
+  "deck": "Sierra 与 Meta 10 月 9 日发布 Personal Agent Protocol（Poppy）0.1 草案，并新增 35 家设计伙伴。它把商家发现、Agent 身份、用户授权以及网站/API/商家 Agent 之间的同一会话写成协议；可选 operations 扩展还规定精确条款确认与重试去重。新增的控制点是“谁定义外部 Agent 如何合法进入企业”，但草案、伙伴名单和演示不等于跨平台规模化采用，支付等关键环节仍未纳入核心规范。",
+  "article_text": "# Personal Agent 不再只能伪装用户：Poppy 把商家访问权写成跨渠道会话契约\n\n**Personal Agent 与商家的冲突，正在从“网站要不要封锁机器人”进入“商家如何明确授予一个外部 Agent 有限访问权”的协议层。** 2026 年 10 月 9 日，Sierra 与 Meta 推动的 Personal Agent Protocol（简称 Poppy）公布 0.1 草案。它的核心并不是让 AI 再多会一种购物技能，而是试图为三种主体建立可互相验证的关系：用户委托谁、外部 Agent 是谁、商家允许它做什么。更关键的是，同一次委托可以穿过网站、API 和商家自己的 Agent，而不必每切换一个入口就丢失身份与上下文。\n\n**这是 A 级结构信号，而不是“Agent 互联网标准已经统一”的 S 级事实。** 草案已经有可读的协议条款与具体的安全约束；35 家新增设计伙伴体现了广泛讨论意愿，却不能直接折算为上线客户、协议兼容性或真实交易量。\n\n## FACT｜从联合倡议到可以逐条审查的协议草案\n\n**第一，10 月 6 日的倡议在 10 月 9 日有了实质性增量。** Sierra 与 Meta 最初宣布 Personal Agent Protocol，合作名单包括 Genesys、Instinct、NiCE、Rocket、Shopify、Stripe、Walmart 等。10 月 9 日，Sierra 公布 Poppy 0.1 草案及 35 家新增设计伙伴，名单覆盖 OpenAI、Visa、Mastercard、PayPal、Adyen、Plaid、Okta、Cloudflare、Target、United Airlines、Bank of America、1Password 等不同产业角色。**准确口径是“参与设计讨论”，不是“这 35 家已经生产部署”。** 官方同时表示接下来还要组织设计工作坊并发布参考实现，草案允许不兼容修改。\n\n**第二，商家通过一个公开发现文件声明自己的接入边界。** 0.1 草案要求商家在受控域名的 `/.well-known/poppy.json` 发布协议版本、身份授权服务器、网站接入点、可用 API 和商家 Agent 入口。可用 API 可以是 OpenAPI 或 MCP；也可以只开放网站或自有 Agent。协议进一步要求 OAuth issuer 的元数据列出允许的商家域名，Agent 必须核对域名与 issuer，避免恶意域名冒用其他企业的授权服务器。这里的控制点不是“把网站内容重新爬一遍”，而是**商家主动发布一个机器可读、可验证的接入声明**。\n\n**第三，协议把 Agent 身份、用户身份与授权会话拆开。** Personal Agent 的 `client_id` 是可访问的 HTTPS 元数据地址，元数据包含公开验证密钥和回调地址；Agent 使用签名断言向商家证明身份。它为同一用户在不同商家分配不同、不可从个人信息推导的稳定标识。会话令牌是短期、绑定 Agent 密钥的访问凭据，访问时需提供 DPoP 证明；用户登录后获得的 Account Token 则用于未来再次申请受限会话。商家可以要求 Agent 预注册、限流、设置允许或拒绝名单。**用户同意并不自动剥夺商家决定接入方式的权力。**\n\n**第四，同一 Session 横跨三类交互渠道。** 草案让用户在一个商家下的活动可以在网站浏览、API 调用和与商家 Agent 对话之间共享会话身份：例如先匿名查退货政策，再由用户授权读取订单，随后由商家 Agent 处理换货。网站接入是可选能力，需要专门的 browser-session endpoint；并非所有普通网页都自动变成可信的 Agent API。商家能将多渠道动作归入同一访问上下文，但这也意味着必须更严格地管理跨渠道权限、日志与会话撤销。\n\n**第五，协议已经开始触及“行动承诺”，但通过可选扩展实现。** Poppy 的 `operations` 扩展规定：有业务后果的动作可以先提出明确条款，由 Personal Agent 代表用户确认某一版条款，再由商家执行；同一操作跨网站、API、MCP 或对话共享 operation ID，超时重试应至多执行一次。它针对的正是订票、退货、取消订阅等“重复点击会产生真实损失”的问题。**这些是草案规定的设计义务，不是已有跨厂商实测证明的幂等保证**；而且扩展并非核心强制项。\n\n**第六，已经有现场演示，但没有规模化生产证据。** Sierra 披露，Rocket 在 10 月 6 日的峰会上演示了 Meta Muse 经 Poppy 找到 Rocket 的商家 Agent、由用户授权共享信息、两方 Agent 协作完成房贷预批准流程。这说明方案可以被展示为端到端体验；它没有披露独立复现实验、真实生产用户量、跨商家兼容率、失败率或责任归属结果。一次受控演示与开放互联网的长期互操作是不同证据等级。\n\n## INFERENCE｜新增的产业控制点：企业如何允许外部智能进入\n\n我们此前已经观察到两条路径：Amazon 封锁未经授权的外部购物 Agent；Shopify 则把 AI 渠道的商品可见性和结账权限做成商家可配置项。Poppy 没有推翻这两条判断，而是进一步把问题从单个平台的政策推进到**跨企业的访问契约**：Personal Agent 不必假装是普通浏览器用户，商家也不必只能在“全放行”和“全封锁”之间二选一。\n\n这一层与现有协议的边界值得明确。MCP 主要解决模型/Agent 如何使用工具与数据接口；UCP 等商业协议主要覆盖商品发现、结账与订单；OAuth 提供授权基础。Poppy 试图组合的是更上层的**发现—委托身份—会话—渠道切换—商家接受**关系。它既不取代 MCP，也没有在 0.1 核心规范中解决所有支付问题。\n\n如果未来真正形成网络效应，新的商业优势可能落在三个地方。其一，**接入目录与互操作规则**：哪个 Agent 可以被哪个商家识别、以什么身份和作用域访问。其二，**跨渠道会话与授权治理**：一次用户委托如何安全地持续、收窄、撤销并被审计。其三，**高风险动作的履约证据**：谁批准了哪版条款、操作是否重复执行、发生争议时各方能否重建事实链。这些控制点不必由模型提供商独占，商家平台、身份厂商、支付网络和垂直行业软件都可能参与。\n\nPoppy 的另一个值得注意之处是参与方结构。设计伙伴不只是 Personal Agent 入口公司，还包括支付网络、银行、零售商、身份安全公司和企业服务商。这说明行业开始意识到“Agent 能行动”不是单一技术问题，而是多个利益相关者需要共同接受的委托关系。不过，**伙伴数量只能说明协议议程得到关注，不能证明未来的治理权一定中立或市场份额一定集中**。\n\n## 反论｜开放协议不等于开放市场，也不等于默认安全\n\n**第一，0.1 仍是可破坏兼容性的草案。** 目前没有足够公开证据表明互不隶属的 Agent 与商家已经完成多对多互操作、稳定升级和长期维护。标准之争可能出现多个不兼容的扩展，或者最终被大型平台各自的私有授权机制覆盖。\n\n**第二，Agent 身份可验证，不代表行为一定可信。** `client_id`、JWT、DPoP 与 OAuth 能帮助识别调用方并限制令牌滥用，但不能证明 Agent 对用户意图理解正确、没有受到提示注入、或没有执行超出商业语境的错误操作。协议的 read/write scope 也可能过粗；商家需要更细粒度权限与可执行 Policy。可选的 operations 扩展不能被误写成所有接入方天然具备的交易安全保障。\n\n**第三，草案保留了值得警惕的 Mediated Sign-In。** 它允许用户把账号凭据交给 Personal Agent，再由 Agent 发送至商家指定端点；规范为此要求保护秘密、限流并建议异常时追加一次性验证码。但这种模式的凭据暴露面显然不同于用户在商家页面完成的标准 OAuth 授权。对高敏感行业而言，是否允许这种路径应是明确的安全与合规决策，而不是为了降低交互摩擦而默认开启。\n\n**第四，商家仍可拒绝、限流或要求预注册。** 因此所谓“开放”更接近开放的协商格式，不等于任何 Agent 对任何商家都有通行权。大型平台可能借协议提高安全与互操作，也可能利用接入注册、流量配额和专有扩展强化自身议价能力。\n\n**第五，支付、主动推送和附件仍是开放议题。** 官方 Open topics 明确列出支付与现有支付协议的衔接、异步通知、附件等尚未覆盖的能力。对购物、保险、银行、旅行等需要资金、法律责任与长时履约的任务，缺失的环节不能靠“协议已经发布”一句话跨过去。\n\n## 它改变了 VELNAR 的什么判断\n\n**强化的判断：** Agent Commerce 的基础设施不仅有支付和 Agent Identity，还有商家侧的机器可读准入、用户委托与跨渠道 Session。企业对外开放的“执行边界”可能逐渐像 API 契约一样被显式声明、版本化和治理。\n\n**新增的判断：** 当 Personal Agent 与 Enterprise Agent 互相协作时，谁掌握可信的跨渠道会话和业务动作确认记录，可能比谁拥有最会说话的 Agent 更接近可持续控制点。协议中的操作 ID、权限范围与会话归属也提示：数字世界的 Agent 需要与真实业务事实对齐，不能仅靠自然语言对话历史维持状态。\n\n**暂时不改变的判断：** 还没有证据证明 Poppy 会成为唯一通用标准、支付网络会让出结算控制权，或每家企业都必须建设自己的 Company Agent。更不能因此给当前 Sales MVP 增加 OAuth federation、Poppy Server、跨企业 Agent-to-Agent 或新 Ontology 平台。当前工程仍应优先完成可靠的订单、库存、出货等真实业务闭环。\n\n## PREDICTION｜未来 6—12 个月怎样证伪这条信号\n\n若 Poppy 真的成为基础设施，首先应出现**两个以上互不隶属的 Personal Agent 与多个真实商家**完成相同版本的发现、授权、撤销和跨渠道操作，并公布可复核的兼容性测试；其次，参考实现、版本治理和安全审计应独立于单一厂商营销；再次，高风险动作需要在真实失败、重试、退款、身份撤销场景下证明可追责性。对支付等开放议题，应观察它与已有支付协议是否形成清晰分工，而不是出现重复而不兼容的“全栈 Agent 标准”。\n\n反向情景同样重要：如果大商家继续只接受自家白名单 Agent，Poppy 只在演示伙伴间运行，或者各家扩展长期互不兼容，那么它可能停留在一个有价值但影响有限的技术倡议。**标准的真正采用率，应按独立互操作和可完成的真实业务来衡量，而不是按新闻稿中列出的伙伴数量。**\n\n值得继续讨论的问题是：**当用户授权、商家接受、Agent 身份与业务动作记录分别由不同主体掌握时，哪一层最可能形成跨平台网络效应？又该由谁保有最终的纠错与撤销权，才能避免开放协议演变为新的封闭入口？**\n\n## 主要证据与核验入口\n\n1. Sierra，2026-10-09，《Sharing a draft of Personal Agent Protocol》：https://sierra.ai/blog/poppy\n2. Personal Agent Protocol，2026-10-09，0.1 草案全文（规范性要求及尚未稳定的说明）：https://personalagentprotocol.org/docs/spec\n3. Personal Agent Protocol，2026-10-09，Operations 扩展（精确条款、单一操作记录与重试约束）：https://personalagentprotocol.org/docs/extensions/operations\n4. Personal Agent Protocol，2026-10-09，Open topics（支付、推送、附件等未完成范围）：https://personalagentprotocol.org/docs/open-topics\n5. Sierra，2026-10-06，《Introducing Personal Agent Protocol》（初始联合倡议与适用场景）：https://sierra.ai/blog/introducing-personal-agent-protocol",
+  "sources": [
+    {
+      "title": "Sierra: Sharing a draft of Personal Agent Protocol",
+      "url": "https://sierra.ai/blog/poppy",
+      "date": "2026-10-09"
+    },
+    {
+      "title": "Personal Agent Protocol: Draft 0.1 Specification",
+      "url": "https://personalagentprotocol.org/docs/spec",
+      "date": "2026-10-09"
+    },
+    {
+      "title": "Personal Agent Protocol: Operations Extension",
+      "url": "https://personalagentprotocol.org/docs/extensions/operations",
+      "date": "2026-10-09"
+    },
+    {
+      "title": "Personal Agent Protocol: Open Topics",
+      "url": "https://personalagentprotocol.org/docs/open-topics",
+      "date": "2026-10-09"
+    },
+    {
+      "title": "Sierra: Introducing Personal Agent Protocol",
+      "url": "https://sierra.ai/blog/introducing-personal-agent-protocol",
+      "date": "2026-10-06"
+    }
+  ],
+  "body_format": "article_text"
+}

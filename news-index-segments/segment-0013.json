@@ -58,6 +58,27 @@
       ],
       "deck": "National Compute Grid 与 Vultr 开始把跨云、跨芯片的闲置算力组织为可竞价的共享池，宣称 760MW 已接入或进入规划，并以“有效工作量”叙事挑战 GPU 小时计费。但其现行文档仍按持有的 GPU 容量与竞价结算，公开预览仅面向特定公共机构。真正值得跟踪的不是又多了一家 GPU 平台，而是资源发现、调度、计费与可靠性是否能成为独立控制层。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-11-A5",
+      "date": "2026-10-11",
+      "grade": "A",
+      "title": "Personal Agent 不再只能伪装用户：Poppy 把商家访问权写成跨渠道会话契约",
+      "themes": [
+        "Personal Agent",
+        "Agent Commerce",
+        "Agent Identity",
+        "Merchant Acceptance",
+        "Protocol Standards",
+        "Delegated Authorization",
+        "Enterprise Agents",
+        "Agent-to-Business",
+        "Control Points",
+        "Interoperability",
+        "Agent Governance"
+      ],
+      "deck": "Sierra 与 Meta 10 月 9 日发布 Personal Agent Protocol（Poppy）0.1 草案，并新增 35 家设计伙伴。它把商家发现、Agent 身份、用户授权以及网站/API/商家 Agent 之间的同一会话写成协议；可选 operations 扩展还规定精确条款确认与重试去重。新增的控制点是“谁定义外部 Agent 如何合法进入企业”，但草案、伙伴名单和演示不等于跨平台规模化采用，支付等关键环节仍未纳入核心规范。",
+      "body_format": "article_text"
     }
   ]
 }
