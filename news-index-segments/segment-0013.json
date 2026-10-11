@@ -79,6 +79,26 @@
       ],
       "deck": "Sierra 与 Meta 10 月 9 日发布 Personal Agent Protocol（Poppy）0.1 草案，并新增 35 家设计伙伴。它把商家发现、Agent 身份、用户授权以及网站/API/商家 Agent 之间的同一会话写成协议；可选 operations 扩展还规定精确条款确认与重试去重。新增的控制点是“谁定义外部 Agent 如何合法进入企业”，但草案、伙伴名单和演示不等于跨平台规模化采用，支付等关键环节仍未纳入核心规范。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-11-A6",
+      "date": "2026-10-11",
+      "grade": "A",
+      "title": "AI 算力融资从规模竞赛转入信用筛选：9 月发债骤降不是需求崩塌",
+      "themes": [
+        "AI Infrastructure",
+        "AI Financing",
+        "Credit Markets",
+        "Capital Allocation",
+        "Infrastructure Concentration",
+        "Debt Issuance",
+        "AI Bubble",
+        "Data Centers",
+        "Control Points",
+        "Risk Pricing"
+      ],
+      "deck": "据《金融时报》援引 Morgan Stanley 数据，全球 AI 相关债券发行额从 6 月约 1130 亿美元降至 9 月约 230 亿美元；英国央行同时警示杠杆、私募信贷与循环融资的交叉风险。新信号是 AI 基建资本开始面临更明确的期限、现金流与信用质量筛选，但单月发行量下降不能证明融资市场关闭或算力需求崩塌。",
+      "body_format": "article_text"
     }
   ]
 }
