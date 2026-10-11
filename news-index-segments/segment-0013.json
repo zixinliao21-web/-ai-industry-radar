@@ -99,6 +99,27 @@
       ],
       "deck": "据《金融时报》援引 Morgan Stanley 数据，全球 AI 相关债券发行额从 6 月约 1130 亿美元降至 9 月约 230 亿美元；英国央行同时警示杠杆、私募信贷与循环融资的交叉风险。新信号是 AI 基建资本开始面临更明确的期限、现金流与信用质量筛选，但单月发行量下降不能证明融资市场关闭或算力需求崩塌。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-11-A7",
+      "date": "2026-10-11",
+      "grade": "A",
+      "title": "开放模型的供给权正在成为芯片巨头的新战场：NVIDIA 与 Reflection 的谈判尚不是收购",
+      "themes": [
+        "Open-weight Models",
+        "NVIDIA",
+        "Reflection AI",
+        "AI Infrastructure",
+        "Model Supply",
+        "Developer Distribution",
+        "Vertical Integration",
+        "Sovereign AI",
+        "Platform Control",
+        "Enterprise AI",
+        "Control Points"
+      ],
+      "deck": "《金融时报》10 月 10 日披露 NVIDIA 正与 Reflection AI 商谈加码投资、收购或人才与技术许可安排。相比已收购的 Hugging Face 分发入口，这次潜在动作触及开放权重模型的研发与供给。但谈判未确认成交，Beam 权重也尚未公开，不能把资本意向等同于模型生态控制权。",
+      "body_format": "article_text"
     }
   ]
 }
