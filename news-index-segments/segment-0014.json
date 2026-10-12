@@ -62,6 +62,26 @@
       ],
       "deck": "《华尔街日报》10 月 11 日报道亚马逊正洽购 Decart，潜在交易约 70 亿美元；此前 Anthropic 曾考虑约 60 亿美元收购后退出。Decart 已向 NVIDIA GPU、Google TPU、AWS Trainium 提供跨硬件优化栈，且 Amazon 是其既有客户。新信号是降低模型跨芯片运行成本的软件能力开始被不同类型巨头争夺，但收购未成交、性能未经统一独立验证，中立性也可能因归属云厂商而削弱。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-12-A4",
+      "date": "2026-10-12",
+      "grade": "A",
+      "title": "多可用区不等于可恢复：三座数据中心受损暴露 AI 算力的物理集中风险",
+      "themes": [
+        "AI Infrastructure",
+        "Cloud Resilience",
+        "Sovereign AI",
+        "Disaster Recovery",
+        "Multi-cloud",
+        "Availability Zones",
+        "Physical Security",
+        "AI Compute Concentration",
+        "Enterprise Continuity",
+        "Control Points"
+      ],
+      "deck": "10 月 8—11 日，Yandex 在萨索沃、卡卢加和弗拉基米尔的三处数据中心先后受损；官方状态板显示两个云可用区中断，仍可运行的区域面临配额与恢复压力，Yandex Pay 则出现“账户记录未丢失但用户无法正常交易”的分离。真正的产业信号是多区冗余不等于跨地点、跨供应商的可恢复性；两台 AI 超算是否受损尚未证实，战时极端事件也不能直接外推为普通云的日常风险。",
+      "body_format": "article_text"
     }
   ]
 }
