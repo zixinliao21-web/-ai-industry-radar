@@ -22,6 +22,28 @@
       ],
       "deck": "Meta 10 月 12 日发布 Muse Wonder 与 Muse Wonder Full：普通版通过 API 和 Muse Code 提供，增强版限定在 Muse Code 订阅，未来还将进入 Muse 个人 Agent。新信号不是又一次模型榜单竞争，而是 Meta 正把前沿模型、长期记忆、持续任务执行与自有用户入口组织成分层闭环；但跨会话记忆的真实效果、独立任务成功率及开放权重路线的未来边界仍未证实。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-13-A2",
+      "date": "2026-10-13",
+      "grade": "A",
+      "title": "AI 巨头开始购买“新增电力”而不只是电量：Google 的 3.59GW 合同暴露电网接入权",
+      "themes": [
+        "AI Infrastructure",
+        "Energy",
+        "Grid Capacity",
+        "Nuclear Uprates",
+        "Power Purchase Agreements",
+        "PJM",
+        "Google",
+        "Constellation Energy",
+        "Cloud Platforms",
+        "Industrial AI",
+        "Control Points",
+        "Demand Response"
+      ],
+      "deck": "Google 与 Constellation 签订总计 3,590MW 的长期电力安排，但真正新增的核电装机只有 890MW，其余 2,700MW 是既有发电资产的长期供应；双方还把 Google Cloud/Gemini 接入电网运营。信号是 AI 算力竞争正在从购买电量转向为电网增容、长期收入确定性与负荷弹性共同付费；但合同容量、投运进度和 AI 运营成效不能混为一谈。",
+      "body_format": "article_text"
     }
   ]
 }
