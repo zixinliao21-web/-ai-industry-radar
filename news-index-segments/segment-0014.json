@@ -41,6 +41,27 @@
       ],
       "deck": "Upscale 10 月 8 日发布 Token Fabric：以自研 SkyFabriX 连接机架内异构加速器，以 NVIDIA Spectrum-X 承担跨机架网络，并由统一软件管理。它显示 AI 算力竞争正在延伸到跨芯片互连与运维控制面；但产品计划 2027 年初才普遍可用，开放接口、客户采用和实际性能均未得到独立规模验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-12-A3",
+      "date": "2026-10-12",
+      "grade": "A",
+      "title": "跨芯片优化软件开始被当作战略资产：亚马逊洽购 Decart，不等于中立算力层已经形成",
+      "themes": [
+        "AI Infrastructure",
+        "Inference Optimization",
+        "Heterogeneous Accelerators",
+        "Hardware Portability",
+        "Compiler Stack",
+        "AWS Trainium",
+        "AI M&A",
+        "AI-native Companies",
+        "World Models",
+        "Control Points",
+        "Platform Neutrality"
+      ],
+      "deck": "《华尔街日报》10 月 11 日报道亚马逊正洽购 Decart，潜在交易约 70 亿美元；此前 Anthropic 曾考虑约 60 亿美元收购后退出。Decart 已向 NVIDIA GPU、Google TPU、AWS Trainium 提供跨硬件优化栈，且 Amazon 是其既有客户。新信号是降低模型跨芯片运行成本的软件能力开始被不同类型巨头争夺，但收购未成交、性能未经统一独立验证，中立性也可能因归属云厂商而削弱。",
+      "body_format": "article_text"
     }
   ]
 }
