@@ -44,6 +44,28 @@
       ],
       "deck": "Google 与 Constellation 签订总计 3,590MW 的长期电力安排，但真正新增的核电装机只有 890MW，其余 2,700MW 是既有发电资产的长期供应；双方还把 Google Cloud/Gemini 接入电网运营。信号是 AI 算力竞争正在从购买电量转向为电网增容、长期收入确定性与负荷弹性共同付费；但合同容量、投运进度和 AI 运营成效不能混为一谈。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-13-A3",
+      "date": "2026-10-13",
+      "grade": "A",
+      "title": "AI 工厂正在把机房接口开放成公共标准：开放底座不等于算力控制权分散",
+      "themes": [
+        "AI Infrastructure",
+        "Open Compute Project",
+        "AI Factory",
+        "Open Standards",
+        "Rack-scale Computing",
+        "Data Center Design",
+        "Grid Resilience",
+        "Agent CPU",
+        "NVIDIA",
+        "AMD",
+        "Control Points",
+        "Infrastructure Concentration"
+      ],
+      "deck": "10 月 12 日 OCP 峰会上，AMD 发布面向 Agent 执行的 Helion 开放机架蓝图，NVIDIA 把 Vera Rubin 的机架与托盘设计贡献给 OCP；双方还与 Google、Meta 等共同推动机房、电网扰动接口标准。新信号是 AI 基础设施的竞争开始把可复制的物理设施接口与厂商特有的芯片、网络、运维控制面分开，但规范生效时间早于峰会，开放接口也不证明跨厂商可替换或实际部署成本已下降。",
+      "body_format": "article_text"
     }
   ]
 }
