@@ -123,6 +123,26 @@
       ],
       "deck": "10 月 9 日白宫官员称 AI 安全事件通报与补救不再可选；10 月 12 日英国据报考虑强制报告并寻求前沿模型预发布测试权，而欧盟系统性风险模型的法定义务已经进入执法阶段。共同趋势是模型厂商的事故证据、通报与独立评估正成为外部治理接口；但美国声明的法律依据、英国方案的立法状态与跨境数据共享仍存在重要不确定性。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-12-A6",
+      "date": "2026-10-12",
+      "grade": "A",
+      "title": "大模型公司的 CPU 合同开始绑定云厂商股权：算力控制权不只属于 GPU",
+      "themes": [
+        "AI Infrastructure",
+        "Agent CPU",
+        "Cloud Capacity Contracts",
+        "Capital Allocation",
+        "Compute Economics",
+        "Memory Supply Chain",
+        "Equity Warrants",
+        "Anthropic",
+        "Akamai",
+        "Control Points"
+      ],
+      "deck": "Akamai 与 Anthropic 签署七年约 116 亿美元专用云容量合同，核心是 CPU 工作负载；Akamai 同时预计投入约 55 亿美元资本开支、预购约 17 亿美元内存，并向 Anthropic 授予与采购规模挂钩的认股权证。与仅有融资意向的 Agent CPU 芯片项目不同，这份 SEC 披露的商业合同把非 GPU 算力需求、供应链前置投入和客户—供应商股权激励连接起来，但合同总额不是已确认收入，履约与回报仍需验证。",
+      "body_format": "article_text"
     }
   ]
 }
