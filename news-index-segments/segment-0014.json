@@ -143,6 +143,27 @@
       ],
       "deck": "Akamai 与 Anthropic 签署七年约 116 亿美元专用云容量合同，核心是 CPU 工作负载；Akamai 同时预计投入约 55 亿美元资本开支、预购约 17 亿美元内存，并向 Anthropic 授予与采购规模挂钩的认股权证。与仅有融资意向的 Agent CPU 芯片项目不同，这份 SEC 披露的商业合同把非 GPU 算力需求、供应链前置投入和客户—供应商股权激励连接起来，但合同总额不是已确认收入，履约与回报仍需验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-12-A7",
+      "date": "2026-10-12",
+      "grade": "A",
+      "title": "云厂商开始把自研芯片从备选算力升为推理主力：Maia 300 的关键不是单卡性能",
+      "themes": [
+        "AI Infrastructure",
+        "Custom AI Silicon",
+        "Inference Economics",
+        "Microsoft Maia",
+        "Hyperscaler Strategy",
+        "Vertical Integration",
+        "Compute Control Points",
+        "Agent Workloads",
+        "Energy Efficiency",
+        "NVIDIA",
+        "Cloud Platforms"
+      ],
+      "deck": "微软 10 月 12 日宣布 Maia 300，并计划从 2027 年起将自研 Maia 扩展至多吉瓦部署，成为其产品与服务的主要 AI 推理系统。与此前自研芯片作为 GPU 补充不同，这是一项关于内部推理供给权的战略承诺；但 40% 能效优势、百万级芯片规模和实际成本改善仍属厂商目标或自报指标，尚待生产交付与可比测试。",
+      "body_format": "article_text"
     }
   ]
 }
