@@ -82,6 +82,27 @@
       ],
       "deck": "10 月 8—11 日，Yandex 在萨索沃、卡卢加和弗拉基米尔的三处数据中心先后受损；官方状态板显示两个云可用区中断，仍可运行的区域面临配额与恢复压力，Yandex Pay 则出现“账户记录未丢失但用户无法正常交易”的分离。真正的产业信号是多区冗余不等于跨地点、跨供应商的可恢复性；两台 AI 超算是否受损尚未证实，战时极端事件也不能直接外推为普通云的日常风险。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-12-B1",
+      "date": "2026-10-12",
+      "grade": "B",
+      "title": "Physical AI 的价值不只在机器人本体：药物制造正在验证“既有流程的机械执行层”",
+      "themes": [
+        "Physical AI",
+        "Biomanufacturing",
+        "Cell Therapy",
+        "Industrial Robotics",
+        "Regulated Workflow",
+        "Manufacturing AI",
+        "GMP",
+        "Workflow Orchestration",
+        "Process Validation",
+        "Vertical AI",
+        "Control Points"
+      ],
+      "deck": "Multiply Labs 10 月 6 日完成 7500 万美元 B 轮，AstraZeneca 的公开招聘要求对接其机器人平台；多机构参与的研究已在若干细胞制造单元操作中对比人工与机器人结果。信号不是“机器人制药已规模盈利”，而是受监管制造业可能把既有设备、工艺、质量记录的执行环节交给可验证的机器人编排层。74% 降本、100 倍吞吐仍是公司主张，不能当作独立量产结论。",
+      "body_format": "article_text"
     }
   ]
 }
