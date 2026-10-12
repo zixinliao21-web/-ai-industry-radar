@@ -103,6 +103,26 @@
       ],
       "deck": "Multiply Labs 10 月 6 日完成 7500 万美元 B 轮，AstraZeneca 的公开招聘要求对接其机器人平台；多机构参与的研究已在若干细胞制造单元操作中对比人工与机器人结果。信号不是“机器人制药已规模盈利”，而是受监管制造业可能把既有设备、工艺、质量记录的执行环节交给可验证的机器人编排层。74% 降本、100 倍吞吐仍是公司主张，不能当作独立量产结论。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-12-A5",
+      "date": "2026-10-12",
+      "grade": "A",
+      "title": "AI 事故报告正从自愿披露变成跨境治理接口：美英欧的三条路径并不等价",
+      "themes": [
+        "Frontier AI Governance",
+        "AI Incident Reporting",
+        "Agent Safety",
+        "Regulatory Enforcement",
+        "Model Evaluation",
+        "AI Security Institute",
+        "Auditability",
+        "Control Points",
+        "Enterprise AI",
+        "Cross-border AI Policy"
+      ],
+      "deck": "10 月 9 日白宫官员称 AI 安全事件通报与补救不再可选；10 月 12 日英国据报考虑强制报告并寻求前沿模型预发布测试权，而欧盟系统性风险模型的法定义务已经进入执法阶段。共同趋势是模型厂商的事故证据、通报与独立评估正成为外部治理接口；但美国声明的法律依据、英国方案的立法状态与跨境数据共享仍存在重要不确定性。",
+      "body_format": "article_text"
     }
   ]
 }
