@@ -23,6 +23,30 @@
       ],
       "deck": "Publicis 10 月 13 日披露 Q3 净收入有机增长 5.0%，Connected Media 占净收入 62% 且实现高个位数增长；CEO 援引行业数据称三大广告集团赢得的大型比稿占比从约 74% 升至 91%。新信号是 AI 时代的营销价值可能继续流向掌握身份数据、客户预算与执行渠道的既有中介，但市场集中也受并购影响，不能把全部增长归功于 AI。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-13-A8",
+      "date": "2026-10-13",
+      "grade": "A",
+      "title": "企业 Agent 的权限控制开始绑定人事事件：Workday 收购 C1.ai 的真正赌注",
+      "themes": [
+        "Enterprise Agents",
+        "Enterprise Software",
+        "Agent Identity",
+        "Identity Governance",
+        "Authorization Lifecycle",
+        "Enterprise Context",
+        "Human-Agent Workforce",
+        "Agent Runtime",
+        "IAM",
+        "HR Systems of Record",
+        "Workday",
+        "C1.ai",
+        "M&A",
+        "Control Points"
+      ],
+      "deck": "Workday 10 月 13 日签约收购身份治理厂商 C1.ai，同日将受业务权限约束的无界面 Agent 工具与运行框架推向正式可用。相较于单纯登记 Agent，新增信号是人事与岗位变动可能成为跨系统 Agent 授权、即时撤权和执行审计的权威触发器；但交易尚未交割，跨系统权限一致性与实际安全效果仍待验证。",
+      "body_format": "article_text"
     }
   ]
 }
