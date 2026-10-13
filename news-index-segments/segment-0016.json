@@ -47,6 +47,27 @@
       ],
       "deck": "Workday 10 月 13 日签约收购身份治理厂商 C1.ai，同日将受业务权限约束的无界面 Agent 工具与运行框架推向正式可用。相较于单纯登记 Agent，新增信号是人事与岗位变动可能成为跨系统 Agent 授权、即时撤权和执行审计的权威触发器；但交易尚未交割，跨系统权限一致性与实际安全效果仍待验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-14-A1",
+      "date": "2026-10-14",
+      "grade": "A",
+      "title": "芯片厂商开始为算力园区提供信用支持：AMD 把竞争推进项目融资层",
+      "themes": [
+        "AI Infrastructure",
+        "AI Financing",
+        "AMD",
+        "Fermi America",
+        "TensorWave",
+        "Neocloud",
+        "Credit Support",
+        "Project Finance",
+        "GPU Supply Chain",
+        "Infrastructure Concentration",
+        "Control Points"
+      ],
+      "deck": "Fermi 10 月 13 日宣布 AMD 为其与 TensorWave 的 222MW 园区租约签署信用支持协议，并建立最高 650MW 的后续合作框架。新信号是 GPU 厂商开始参与把客户需求转化为可融资的数据中心项目；但信用支持金额与风险边界未公开，65 亿美元租约仍附交割条件，不能把融资支持等同于已交付算力。",
+      "body_format": "article_text"
     }
   ]
 }
