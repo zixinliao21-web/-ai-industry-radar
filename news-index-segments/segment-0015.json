@@ -150,6 +150,28 @@
       ],
       "deck": "Anthropic 10 月 12 日的受控实验显示，9B 模型能在九类硬件中的八类搭建推理，GLM-5.2 在简化模拟网络中完成传播，26B 模型则可分片运行于 15 台廉价电视盒。新信号是模型能力门槛与分散边缘算力正在接近，但实验没有证明小模型已在真实 IoT 网络自主复制，年末时间点仍属趋势预测。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-13-B2",
+      "date": "2026-10-13",
+      "grade": "B",
+      "title": "AI 成本治理开始接入企业执行系统：买下账单可见性，不等于买到 Agent 控制权",
+      "themes": [
+        "Enterprise AI",
+        "AI FinOps",
+        "ITSM",
+        "SaaS Management",
+        "AI Spend Governance",
+        "Enterprise Context",
+        "Agent Governance",
+        "Freshworks",
+        "Torii",
+        "M&A",
+        "Control Points",
+        "Technology Economics"
+      ],
+      "deck": "Freshworks 10 月 12 日签约收购 Torii，计划把 SaaS 资产、身份、许可证与 AI token 消耗归因接入 Freshservice 的 ITSM/CMDB 流程。它为 AI FinOps 从独立成本看板进入审批、回收与运营工作流提供一条并购证据；但交易尚未交割，token 可见性不等于总成本、业务回报或对 Agent 执行的实际控制。",
+      "body_format": "article_text"
     }
   ]
 }
