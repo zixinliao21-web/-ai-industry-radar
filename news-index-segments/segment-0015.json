@@ -66,6 +66,27 @@
       ],
       "deck": "10 月 12 日 OCP 峰会上，AMD 发布面向 Agent 执行的 Helion 开放机架蓝图，NVIDIA 把 Vera Rubin 的机架与托盘设计贡献给 OCP；双方还与 Google、Meta 等共同推动机房、电网扰动接口标准。新信号是 AI 基础设施的竞争开始把可复制的物理设施接口与厂商特有的芯片、网络、运维控制面分开，但规范生效时间早于峰会，开放接口也不证明跨厂商可替换或实际部署成本已下降。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-13-A4",
+      "date": "2026-10-13",
+      "grade": "A",
+      "title": "工业 AI 的入口正在落到现场计算节点：欧姆龙收购 OnLogic 的真正赌注",
+      "themes": [
+        "Physical AI",
+        "Industrial Edge Computing",
+        "Manufacturing AI",
+        "Industrial PCs",
+        "Factory Automation",
+        "OT/IT Convergence",
+        "Industrial AI Platforms",
+        "M&A",
+        "Control Points",
+        "Enterprise Context",
+        "Hardware-Software Integration"
+      ],
+      "deck": "欧姆龙以 6.75 亿美元企业价值拟收购 OnLogic 母公司 Interlogic，后者 2025 年营收 1.542 亿美元，并已进入西门子工业边缘生态。信号是成熟自动化厂商正试图把传感、控制、机器人与现场算力连接成 Physical AI 的部署基础；但工业 PC 渠道不等于模型、工厂数据或工业软件控制权，交易尚未交割。",
+      "body_format": "article_text"
     }
   ]
 }
