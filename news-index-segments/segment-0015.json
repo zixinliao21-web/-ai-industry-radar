@@ -109,6 +109,26 @@
       ],
       "deck": "IDC 经 Reuters 披露的 2026 年上半年中国市场数据：NVIDIA 加速器出货降至 67.8 万颗、约占 34%，华为达 57.2 万颗、约占 28%；非 GPU 加速器按数量首次超过 GPU。新信号是政策约束与系统级竞争正在重组采购结构，但出货份额不等于收入、高端算力、软件生态或单位有效任务成本的控制权。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-13-B1",
+      "date": "2026-10-13",
+      "grade": "B",
+      "title": "模型厂商的企业分发出现双通道：部署服务与既有软件开始同时承接 Agent",
+      "themes": [
+        "Enterprise AI",
+        "IT Services",
+        "ISV Distribution",
+        "FDE",
+        "Model Distribution",
+        "Agent Governance",
+        "Enterprise Software",
+        "Agent Economics",
+        "Productization",
+        "Control Points"
+      ],
+      "deck": "HCLTech 与 Anthropic 的合作同时覆盖 FDE 驻场交付、AI Force 工程平台和 HCLSoftware 既有产品嵌入；同期 HCLTech 披露季度 Advanced AI 收入 2.19 亿美元。它为“服务商兼软件商”争夺企业 Agent 入口提供了新的可量化样本，但合作公告不是部署成效，AI 收入也不能等同于 Agent 软件 ARR。",
+      "body_format": "article_text"
     }
   ]
 }
