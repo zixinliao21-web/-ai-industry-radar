@@ -1,0 +1,45 @@
+{
+  "id": "2026-10-14-A2",
+  "date": "2026-10-14",
+  "grade": "A",
+  "title": "NVIDIA 把 GPU 调度平台整体开源：开放控制面可能反而巩固算力生态",
+  "themes": [
+    "AI Infrastructure",
+    "GPU Orchestration",
+    "Open Source",
+    "NVIDIA",
+    "Run:ai",
+    "Kubernetes",
+    "AI Factory",
+    "Control Plane",
+    "Cloud Economics",
+    "Infrastructure Concentration",
+    "Control Points",
+    "AI Cloud"
+  ],
+  "deck": "NVIDIA 10 月 13 日将 Run:ai 从已开源的 KAI 调度器扩展为包含控制面、配额、权限、GPU 分片和工作负载接口的完整开源平台，八家伙伴同步提供集成。新信号是芯片巨头可能通过降低算力运营软件的采用门槛扩大生态影响力，而非单纯依赖调度软件收费；但开源代码、商业支持和硬件可替代性仍是不同边界。",
+  "article_text": "# NVIDIA 把 GPU 调度平台整体开源：开放控制面可能反而巩固算力生态\n\n**核心判断｜开放软件不必削弱平台控制力。** 2026 年 10 月 13 日，NVIDIA 宣布将 Run:ai 的完整 AI 工作负载与 GPU 编排平台开源，而不是只开放其中的调度算法。更值得研究的变化是：一家掌握核心加速器、CUDA 生态与商业支持体系的芯片巨头，正把部分集群运营能力变成可免费采用、可被云厂商集成的公共底座。这可能扩大它在“如何分配和运营算力”上的事实影响力，同时把差异化竞争转向硬件、驱动、托管交付、可靠性和企业支持。[1][2]\n\n这是一条 **A 级结构验证信号**，并非“GPU 调度已被 NVIDIA 垄断”的 S 级结论。此前 Radar 已讨论 AI 工厂开放机架接口、跨云算力调度和 GPU 利用率；本次新增的不是这些概念，而是**原先商业化销售的完整运营控制面公开了代码，并已有云伙伴把它作为可部署产品分发**。要理解它的意义，必须先拆清楚“开源了什么”和“没有开放什么”。\n\n## FACT｜从开源调度核心到开源整个运营平台\n\n**第一，2025 年已开源 KAI Scheduler，2026 年新增的是更上层的产品。** NVIDIA 在 2025 年 4 月将 KAI Scheduler 以 Apache 2.0 发布，支持 GPU 感知的 Kubernetes 调度、公平份额、gang scheduling、配额与抢占。10 月 13 日的增量是完整 Run:ai：包括控制面与集群服务、Web UI、CLI、API、组织与项目管理、角色权限、监控，以及面向训练、推理和开发工作负载的统一操作入口。官方 GitHub 仓库确实提供这些代码和安装组件；不能把这次公告误写成“KAI 首次开源”。[1][2][3]\n\n**第二，四个模块分别解决不同的控制问题。** KAI Scheduler 负责资源如何排队、分配与抢占；GPU Fractioning Operator 把 CUDA 13.4 的原生 GPU 分片能力接到 Kubernetes，官方称旧有专有分片实现已退役；KAI Resource Management 将部门、项目、节点池和资源保障组织起来；Workload Map 则定义如何描述 PyTorchJob、RayCluster、KServe 等不同工作负载的结构和生命周期，供调度、监控及治理工具共用。特别需要注意，Workload Map 是描述与管理接口，不负责自动扩缩容、跨集群传播或调度本身。[1]\n\n**第三，开源不等于所有交付和支持免费。** 主仓库代码以 Apache 2.0 为主，部分第三方或嵌套内容另有许可与商标限制。NVIDIA 的 NGC Community Product 不需要付费 Run:ai 订阅，但下载须接受适用的软件条款，且不包含 NVIDIA 企业支持。企业版仍可通过独立商业产品、Mission Control、AI Enterprise 和部分云市场取得；不同渠道的许可与支持条件不同。把“源码可获得”直接推导成“生产部署总成本为零”是错误的。[1][2]\n\n**第四，已有具名渠道，而非只有发布会上的伙伴名单。** NVIDIA 列出 Crusoe、Mirantis、Nebius、OpenNebula、Rafay、Saturn Cloud、Spectro Cloud 和 vCluster 八家集成伙伴。Nebius 10 月 13 日独立确认：完整开源 Run:ai 已可通过其 AI Cloud Applications 部署到托管 Kubernetes，并介绍了项目配额、借用空闲容量与抢占机制。它证明至少有一个可观察的分发路径；但“可部署”不等于大量付费客户已迁移，也不等于八家伙伴的实际使用量相同。[1][4]\n\n## INFERENCE｜为什么芯片巨头愿意放开算力调度软件\n\n共享 GPU 集群真正出售的不是抽象的“GPU 数量”，而是不同团队在给定时间里获得可用计算、按策略排队、遇到故障可恢复、成本可归因的能力。假设一个企业有多个推理服务、研发笔记本和训练任务：静态分配可能让某些 GPU 空闲，另一些队列却等待；随意共享则可能破坏重要任务的容量保障。调度、配额、分片、身份和可观测性共同决定一台 GPU 能产生多少可交付工作。\n\n对 NVIDIA 而言，开放这套软件至少有三条可能的经济逻辑。\n\n**一是降低采用摩擦。** 云厂商和企业不必先购买专有编排许可才能试用完整平台，可能更容易将 NVIDIA 生态的调度和资源语义纳入现有 Kubernetes。即便源码可分叉，运维知识、社区贡献、文档、上游兼容性与伙伴集成也可能形成惯性。这是潜在网络效应，不是已被证实的锁定效果。\n\n**二是把竞争转移到更稀缺的层。** 若 GPU 编排逐渐成为可获取的基础软件，厂商更难只凭基础调度功能维持高溢价；价值可能流向性能优化、企业 SLA、故障责任、芯片与网络集成、托管服务和实际算力供给。NVIDIA 既可降低外围软件门槛，也可继续在 CUDA、硬件及受支持的商业发行版上竞争。开放与商业化不是非此即彼。\n\n**三是让更多云服务商帮助定义事实接口。** Workload Map 的价值不在于一个新名称，而在于减少各类 AI 工作负载与监控、成本、策略工具之间重复适配的可能性。如果它获得广泛采用，生态参与者会围绕同一组对象和语义开发工具。但接口是否能成为事实标准，取决于非 NVIDIA 参与者的采用、治理透明度、兼容性和长期维护，而非公告中的“开放”二字。\n\nNebius 披露的分片 GPU 性能结果可以说明利用率改善的可能性，却不应被直接当作本次开源版本的独立生产验证。它明确说明相关联合基准基于**此前商业版 Run:ai v2.24**；工作负载、硬件与配置不同，收益可能明显变化。[4]\n\n## 反论｜开放控制面未必带来新的控制权\n\n**反论一：开源编排赛道原本就不空白。** Kubernetes 原生调度、Kueue、Volcano、Slurm 以及云厂商自研平台都在处理不同范围的队列与算力运营问题。Run:ai 完整开源增加了一个有产品历史的选择，却没有证明其他方案会退出，也没有证明其跨芯片兼容性、扩展性或安全边界优于所有替代方案。\n\n**反论二：代码开放与硬件中立不是一回事。** GPU Fractioning 依赖 CUDA 13.4 原生能力，KAI 的具体优化也围绕加速计算需求。即便接口与控制面可被第三方部署，某些深度优化仍可能绑定 NVIDIA 的驱动、硬件或支持渠道。要判断“开放是否减少锁定”，需要测试跨供应商迁移的实际成本，而不是只看仓库许可证。\n\n**反论三：开源可能压缩 NVIDIA 自身的软件收入。** 如果原本愿意购买独立 Run:ai 许可证的客户改用 Community Product，软件直接收费可能受影响。NVIDIA 可能通过硬件销售、企业支持或更大的伙伴生态补偿，也可能无法完全补偿。公司未披露 Run:ai 收入、开源后定价变化、客户迁移比例或利润率，因此目前不能宣称此举已创造净经济收益。\n\n**反论四：公开仓库不等于生产级风险已转移。** 集群级权限、抢占、跨租户隔离和资源计费涉及真实运营责任。开源版本是否在不同集群拓扑、升级路径、身份体系和故障条件下可靠，仍需独立的生产案例和审计数据。商业支持与自主维护的责任划分尤其重要。\n\n## 对 VELNAR 产业地图的有限修正\n\n此前我们的判断是：AI 基础设施的控制点不只在芯片，还包括资本、能源、网络、部署和持续调度。本次不是推翻它，而是增加一项限定：**某个控制层即使开源，也可能因为上游硬件依赖、标准接口与下游伙伴分发而强化整个生态的议价地位。**\n\n因此，未来分析“开源是否削弱巨头”时，应把四个问题分开：谁控制代码与治理；谁决定工作负载语义和兼容性；谁承担生产支持与故障责任；谁最终掌握芯片供给、客户合同和收入。只有当开放接口带来真实跨平台迁移、供应商替换和更低运营成本时，才有理由进一步更新产业集中度判断。\n\n这对当前 Sales MVP **不构成扩展 Ontology、Agent 控制平台或自建算力调度系统的理由**。该项目仍应先完成确定性的真实业务流程闭环。这里的价值是训练我们识别“开源底座—商业支持—硬件控制”之间的经济关系，而非立即转化为开发任务。\n\n## 值得继续讨论的问题\n\n如果一家平台公司把原本收费的运营软件开放，应该用什么证据判断它是在放弃利润、购买分发，还是在为上游更稀缺的资产建立行业默认接口？未来可持续跟踪的证据包括：独立云采用数、非 NVIDIA 硬件兼容测试、社区治理权、商业版与社区版功能差异、生产故障数据，以及客户真实迁移成本。\n\n**边界结论｜Run:ai 的完整开源让“开放软件也能服务于集中化平台战略”有了新的具体案例；它尚不能证明 NVIDIA 获得了跨云调度的标准控制权，也不能证明开源已降低行业总成本。**\n\n### 证据来源\n\n[1] NVIDIA Technical Blog，2026-10-13，《NVIDIA Run:ai Is Now Open Source as Part of NVIDIA DSX AI Factory Platform》。\n[2] NVIDIA Run:ai 官方 GitHub 仓库及 README、LICENSE，核验于 2026-10-14。\n[3] NVIDIA Technical Blog，2025-04-01，《NVIDIA Open Sources Run:ai Scheduler to Foster Community Collaboration》。\n[4] Nebius 官方博客，2026-10-13，《Open-source NVIDIA Run:ai, a component of NVIDIA DSX OS, available now in Nebius Applications》。",
+  "sources": [
+    {
+      "title": "NVIDIA Technical Blog｜Run:ai 完整平台开源与模块说明",
+      "url": "https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform/",
+      "date": "2026-10-13"
+    },
+    {
+      "title": "NVIDIA Run:ai 官方开源仓库｜代码、许可证与架构",
+      "url": "https://github.com/dsx-ai-factory/run-ai",
+      "date": "2026-10-14"
+    },
+    {
+      "title": "NVIDIA Technical Blog｜2025 年 KAI Scheduler 开源",
+      "url": "https://developer.nvidia.com/blog/nvidia-open-sources-runai-scheduler-to-foster-community-collaboration/",
+      "date": "2025-04-01"
+    },
+    {
+      "title": "Nebius 官方｜开源 Run:ai 已进入托管 Kubernetes 分发",
+      "url": "https://nebius.com/blog/posts/nvidia-run-ai-open-source-nebius-applications",
+      "date": "2026-10-13"
+    }
+  ],
+  "body_format": "article_text"
+}

@@ -68,6 +68,28 @@
       ],
       "deck": "Fermi 10 月 13 日宣布 AMD 为其与 TensorWave 的 222MW 园区租约签署信用支持协议，并建立最高 650MW 的后续合作框架。新信号是 GPU 厂商开始参与把客户需求转化为可融资的数据中心项目；但信用支持金额与风险边界未公开，65 亿美元租约仍附交割条件，不能把融资支持等同于已交付算力。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-14-A2",
+      "date": "2026-10-14",
+      "grade": "A",
+      "title": "NVIDIA 把 GPU 调度平台整体开源：开放控制面可能反而巩固算力生态",
+      "themes": [
+        "AI Infrastructure",
+        "GPU Orchestration",
+        "Open Source",
+        "NVIDIA",
+        "Run:ai",
+        "Kubernetes",
+        "AI Factory",
+        "Control Plane",
+        "Cloud Economics",
+        "Infrastructure Concentration",
+        "Control Points",
+        "AI Cloud"
+      ],
+      "deck": "NVIDIA 10 月 13 日将 Run:ai 从已开源的 KAI 调度器扩展为包含控制面、配额、权限、GPU 分片和工作负载接口的完整开源平台，八家伙伴同步提供集成。新信号是芯片巨头可能通过降低算力运营软件的采用门槛扩大生态影响力，而非单纯依赖调度软件收费；但开源代码、商业支持和硬件可替代性仍是不同边界。",
+      "body_format": "article_text"
     }
   ]
 }
