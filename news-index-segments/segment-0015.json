@@ -87,6 +87,28 @@
       ],
       "deck": "欧姆龙以 6.75 亿美元企业价值拟收购 OnLogic 母公司 Interlogic，后者 2025 年营收 1.542 亿美元，并已进入西门子工业边缘生态。信号是成熟自动化厂商正试图把传感、控制、机器人与现场算力连接成 Physical AI 的部署基础；但工业 PC 渠道不等于模型、工厂数据或工业软件控制权，交易尚未交割。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-13-A5",
+      "date": "2026-10-13",
+      "grade": "A",
+      "title": "中国 AI 加速器市场正在分化：出货份额易变，算力控制权未必同步转移",
+      "themes": [
+        "AI Infrastructure",
+        "China AI Chips",
+        "NVIDIA",
+        "Huawei",
+        "AI Accelerators",
+        "Semiconductor Export Controls",
+        "Compute Sovereignty",
+        "AI System Stacks",
+        "Software Ecosystem",
+        "Control Points",
+        "Inference Economics",
+        "Market Concentration"
+      ],
+      "deck": "IDC 经 Reuters 披露的 2026 年上半年中国市场数据：NVIDIA 加速器出货降至 67.8 万颗、约占 34%，华为达 57.2 万颗、约占 28%；非 GPU 加速器按数量首次超过 GPU。新信号是政策约束与系统级竞争正在重组采购结构，但出货份额不等于收入、高端算力、软件生态或单位有效任务成本的控制权。",
+      "body_format": "article_text"
     }
   ]
 }
