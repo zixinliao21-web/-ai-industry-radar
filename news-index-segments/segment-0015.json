@@ -129,6 +129,27 @@
       ],
       "deck": "HCLTech 与 Anthropic 的合作同时覆盖 FDE 驻场交付、AI Force 工程平台和 HCLSoftware 既有产品嵌入；同期 HCLTech 披露季度 Advanced AI 收入 2.19 亿美元。它为“服务商兼软件商”争夺企业 Agent 入口提供了新的可量化样本，但合作公告不是部署成效，AI 收入也不能等同于 Agent 软件 ARR。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-13-A6",
+      "date": "2026-10-13",
+      "grade": "A",
+      "title": "AI 自复制的门槛正在下沉到廉价终端：安全边界不能只画在数据中心",
+      "themes": [
+        "Agent Security",
+        "Edge AI",
+        "Physical AI",
+        "AI Cybersecurity",
+        "Distributed Inference",
+        "AI Self-Replication",
+        "IoT Security",
+        "Agent Runtime",
+        "Model Capability",
+        "Control Points",
+        "Infrastructure Governance"
+      ],
+      "deck": "Anthropic 10 月 12 日的受控实验显示，9B 模型能在九类硬件中的八类搭建推理，GLM-5.2 在简化模拟网络中完成传播，26B 模型则可分片运行于 15 台廉价电视盒。新信号是模型能力门槛与分散边缘算力正在接近，但实验没有证明小模型已在真实 IoT 网络自主复制，年末时间点仍属趋势预测。",
+      "body_format": "article_text"
     }
   ]
 }
