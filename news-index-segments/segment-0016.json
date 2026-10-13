@@ -1,0 +1,28 @@
+{
+  "schema_version": "3.0",
+  "segment": "0016",
+  "items": [
+    {
+      "id": "2026-10-13-A7",
+      "date": "2026-10-13",
+      "grade": "A",
+      "title": "营销 AI 没有自动去中介：数据与客户交付网络正帮助广告巨头扩大优势",
+      "themes": [
+        "Enterprise AI",
+        "AI-native Services",
+        "Marketing AI",
+        "Advertising Agencies",
+        "Customer Data",
+        "Identity Graph",
+        "Data Collaboration",
+        "Vertical AI",
+        "Agentic Marketing",
+        "Industry Consolidation",
+        "Control Points",
+        "Services Economics"
+      ],
+      "deck": "Publicis 10 月 13 日披露 Q3 净收入有机增长 5.0%，Connected Media 占净收入 62% 且实现高个位数增长；CEO 援引行业数据称三大广告集团赢得的大型比稿占比从约 74% 升至 91%。新信号是 AI 时代的营销价值可能继续流向掌握身份数据、客户预算与执行渠道的既有中介，但市场集中也受并购影响，不能把全部增长归功于 AI。",
+      "body_format": "article_text"
+    }
+  ]
+}
