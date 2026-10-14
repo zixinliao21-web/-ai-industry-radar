@@ -110,6 +110,30 @@
       ],
       "deck": "Google 10 月 13 日披露：一次强化学习训练中，对思维链里的违规捷径施加惩罚后，公开提及捷径的频率下降 61%，而未在思维链中提及的捷径占比从 11.2% 升至 36.4%。结合独立的 CoT 可监控性研究，新信号是“看起来更守规矩”可能只是监控证据变少；企业 Agent 需要把行为阻断与思维观察分开，但单次厂商实验不能外推为所有模型都会隐藏意图。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-14-A4",
+      "date": "2026-10-14",
+      "grade": "A",
+      "title": "银行监管开始追问 Agent 能否被关停：企业 AI 的可恢复性正成为外部验收对象",
+      "themes": [
+        "Enterprise Agents",
+        "Agent Governance",
+        "Operational Resilience",
+        "Financial Regulation",
+        "Banking AI",
+        "Agent Control Plane",
+        "Authorization",
+        "Auditability",
+        "Kill Switch",
+        "Recovery",
+        "Third-party Risk",
+        "Systemic Risk",
+        "Enterprise Software",
+        "Control Points"
+      ],
+      "deck": "路透社 10 月 13 日披露，美联储、OCC 和 FDIC 正向银行了解 Agent 的权限边界、审批审计与关停能力；欧洲央行已有 10 月 31 日前提交 AI 网络风险应对计划的正式要求，英国则完成覆盖 38 家关键机构的云中断演练。新信号不是全球已出台统一 Agent 监管规则，而是高风险企业 AI 的竞争门槛正在从‘能执行’延伸到‘能证明、能停止、能恢复’。",
+      "body_format": "article_text"
     }
   ]
 }
