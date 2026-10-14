@@ -134,6 +134,29 @@
       ],
       "deck": "路透社 10 月 13 日披露，美联储、OCC 和 FDIC 正向银行了解 Agent 的权限边界、审批审计与关停能力；欧洲央行已有 10 月 31 日前提交 AI 网络风险应对计划的正式要求，英国则完成覆盖 38 家关键机构的云中断演练。新信号不是全球已出台统一 Agent 监管规则，而是高风险企业 AI 的竞争门槛正在从‘能执行’延伸到‘能证明、能停止、能恢复’。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-14-A5",
+      "date": "2026-10-14",
+      "grade": "A",
+      "title": "个人 Agent 获得跨商家支付凭证：Shopify 正把交易授权变成可复用的信任入口",
+      "themes": [
+        "Agent Commerce",
+        "Personal Agent",
+        "Shopify",
+        "Shop MCP",
+        "Shop Pay",
+        "Delegated Payments",
+        "Spend Authorization",
+        "One-time Credentials",
+        "Merchant Acceptance",
+        "Consumer Identity",
+        "Payment Infrastructure",
+        "Control Points",
+        "Agent Governance"
+      ],
+      "deck": "Shopify 10 月 13 日开放 Shop MCP，让兼容 Agent 通过统一接口检索十亿级商品、建立购物车并使用 Shop Pay；官方开源工具还支持在缺乏 Agent 结账接口的商家页面，经过用户审批后发放一次性支付凭证。增量不在‘Agent 又能购物’，而在用户授权、支付凭证和订单事实可能由跨 Agent 的中介掌握；但商家接纳、交易争议和真实采用仍未解决。",
+      "body_format": "article_text"
     }
   ]
 }
