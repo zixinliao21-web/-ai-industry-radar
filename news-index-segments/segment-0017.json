@@ -23,6 +23,28 @@
       ],
       "deck": "英国 10 月 12 日确认 AISI 正对最新前沿模型开展评估，13 日 NVIDIA 又承诺五年提供价值 2.5 亿美元的英国本地算力；但英国议会听证显示，AISI 的模型访问仍依赖厂商和外国政府合作，不能强制提交或阻止发布。新信号是安全评估的实际能力取决于‘及时获得模型 × 独立评测算力 × 可执行权力’，不能把算力捐赠、测试合作和法定监管混为一谈。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-14-A8",
+      "date": "2026-10-14",
+      "grade": "A",
+      "title": "生成式 AI 没有一刀切地摧毁图片版权：Getty 重整暴露客户分层与债务杠杆",
+      "themes": [
+        "Generative AI",
+        "Creative Economy",
+        "Copyright Licensing",
+        "Getty Images",
+        "Content Platforms",
+        "AI-native Distribution",
+        "Enterprise Content",
+        "Data Rights",
+        "Business Model Disruption",
+        "AI Consolidation",
+        "Capital Structure",
+        "Control Points"
+      ],
+      "deck": "Getty 10 月 12 日宣布拟通过预打包 Chapter 11 重整并私有化，但 Q2 2026 的 Creative 收入仅同比降 2.6%，Editorial 却增长 9.2%；现金流与债务压力还受到并购失败、诉讼及利息成本影响。真正的结构信号是 AI 对低端图片交易、搜索分发与企业可信内容的冲击并不对称；不能把资产负债表重整简化成‘AI 已杀死版权图库’。",
+      "body_format": "article_text"
     }
   ]
 }
