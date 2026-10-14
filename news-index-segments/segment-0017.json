@@ -45,6 +45,29 @@
       ],
       "deck": "Getty 10 月 12 日宣布拟通过预打包 Chapter 11 重整并私有化，但 Q2 2026 的 Creative 收入仅同比降 2.6%，Editorial 却增长 9.2%；现金流与债务压力还受到并购失败、诉讼及利息成本影响。真正的结构信号是 AI 对低端图片交易、搜索分发与企业可信内容的冲击并不对称；不能把资产负债表重整简化成‘AI 已杀死版权图库’。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-14-A9",
+      "date": "2026-10-14",
+      "grade": "A",
+      "title": "AI 没有直接杀死企业 SaaS：Bending Spoons 正把成熟软件变成可重组的经营资产",
+      "themes": [
+        "Enterprise SaaS",
+        "AI-native Companies",
+        "Software Consolidation",
+        "Bending Spoons",
+        "Airtable",
+        "Miro",
+        "Enterprise Agents",
+        "System of Record",
+        "Agent Governance",
+        "Workflow Ownership",
+        "Capital Allocation",
+        "Business Model",
+        "Control Points"
+      ],
+      "deck": "Bending Spoons 已完成 Airtable 收购，随后宣布缩减大量原有岗位、保留客户服务并将产品重心转向共享业务数据、Agent 权限与自动化；10 月 14 日 Berkshire 又拟追加 3.3 亿美元投资。新信号不是“AI 证明裁员必然有效”，而是成熟 SaaS 可能从高增长独立公司转变为被收购、运营重组、重新配置 AI 能力的现金流资产；组织效率、产品质量与客户留存仍须用后续数据验证。",
+      "body_format": "article_text"
     }
   ]
 }
