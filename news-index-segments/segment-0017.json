@@ -1,0 +1,28 @@
+{
+  "schema_version": "3.0",
+  "segment": "0017",
+  "items": [
+    {
+      "id": "2026-10-14-A7",
+      "date": "2026-10-14",
+      "grade": "A",
+      "title": "前沿 AI 安全评估的双重门槛：英国获得算力承诺，却仍无法强制获得模型",
+      "themes": [
+        "Frontier AI Governance",
+        "AI Safety Evaluation",
+        "Pre-release Model Access",
+        "Compute Allocation",
+        "Sovereign AI",
+        "Agent Security",
+        "NVIDIA",
+        "UK AI Security Institute",
+        "Regulatory Authority",
+        "AI Infrastructure",
+        "Trust Infrastructure",
+        "Control Points"
+      ],
+      "deck": "英国 10 月 12 日确认 AISI 正对最新前沿模型开展评估，13 日 NVIDIA 又承诺五年提供价值 2.5 亿美元的英国本地算力；但英国议会听证显示，AISI 的模型访问仍依赖厂商和外国政府合作，不能强制提交或阻止发布。新信号是安全评估的实际能力取决于‘及时获得模型 × 独立评测算力 × 可执行权力’，不能把算力捐赠、测试合作和法定监管混为一谈。",
+      "body_format": "article_text"
+    }
+  ]
+}
