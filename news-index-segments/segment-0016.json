@@ -157,6 +157,28 @@
       ],
       "deck": "Shopify 10 月 13 日开放 Shop MCP，让兼容 Agent 通过统一接口检索十亿级商品、建立购物车并使用 Shop Pay；官方开源工具还支持在缺乏 Agent 结账接口的商家页面，经过用户审批后发放一次性支付凭证。增量不在‘Agent 又能购物’，而在用户授权、支付凭证和订单事实可能由跨 Agent 的中介掌握；但商家接纳、交易争议和真实采用仍未解决。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-14-A6",
+      "date": "2026-10-14",
+      "grade": "A",
+      "title": "AI 算力扩张的时间表被光刻产能重新约束：ASML 已看到 2030 年的订单意向",
+      "themes": [
+        "AI Infrastructure",
+        "Semiconductor Equipment",
+        "ASML",
+        "EUV Lithography",
+        "DUV Immersion",
+        "Capacity Constraints",
+        "Foundry Expansion",
+        "AI Capital Expenditure",
+        "Supply Chain",
+        "Control Points",
+        "Infrastructure Concentration",
+        "Investment Cycles"
+      ],
+      "deck": "ASML 10 月 14 日披露 Q3 营收 116.62 亿欧元、毛利率 57.5%，并预计既定的 2027—2028 年光刻设备供给仍无法满足客户需求，部分客户开始询问 2029—2030 年交付。新增信号不是‘AI 芯片一定缺货到 2030 年’，而是 AI 投资预期已沿晶圆厂扩产传导至具有多年交付周期的关键设备产能；意向不等于订单，设备瓶颈也不等于应用需求已兑现。",
+      "body_format": "article_text"
     }
   ]
 }
