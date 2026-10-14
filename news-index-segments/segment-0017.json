@@ -68,6 +68,27 @@
       ],
       "deck": "Bending Spoons 已完成 Airtable 收购，随后宣布缩减大量原有岗位、保留客户服务并将产品重心转向共享业务数据、Agent 权限与自动化；10 月 14 日 Berkshire 又拟追加 3.3 亿美元投资。新信号不是“AI 证明裁员必然有效”，而是成熟 SaaS 可能从高增长独立公司转变为被收购、运营重组、重新配置 AI 能力的现金流资产；组织效率、产品质量与客户留存仍须用后续数据验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-15-B1",
+      "date": "2026-10-15",
+      "grade": "B",
+      "title": "Physical AI 需要两种数据工厂：真实空间资产不等于机器人动作经验",
+      "themes": [
+        "Physical AI",
+        "Robotics",
+        "Spatial Data",
+        "World Models",
+        "Simulation",
+        "Industrial AI",
+        "Hesai",
+        "Kosmo",
+        "Data Infrastructure",
+        "Embodied AI",
+        "Control Points"
+      ],
+      "deck": "禾赛 10 月 14 日正式推出 Kosmo One 与 Kosmo World，把空间扫描、可复用 3D 场景和仿真接口组合为两类商业服务。增量并非又一款机器人相机，而是 Physical AI 的数据供给开始分化为“环境模型”与“动作经验”；但 3D 场景、合成轨迹和真实任务可靠性仍不能画等号。",
+      "body_format": "article_text"
     }
   ]
 }
