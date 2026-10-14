@@ -115,6 +115,30 @@
       ],
       "deck": "GoDaddy、Infoblox、Google 与 Cloudflare 10 月 14 日在新加坡用跨 AWS、Cloudflare 和 Google 的模拟机票购买，把 Agent 发现、身份、授权、通信、支付与审计串成一次可演示的交易。新增证据是多种开放协议能够在一个跨平台样例中协作；但这不是实际购票、独立安全认证或规模化采用，控制点仍可能落在注册、凭证、信任评估和争议处理等不同主体。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-15-A2",
+      "date": "2026-10-15",
+      "grade": "A",
+      "title": "AI 云不再只卖 GPU：Agent 沙箱正在成为可独立计价的执行基础设施",
+      "themes": [
+        "AI Infrastructure",
+        "Agent Runtime",
+        "Sandbox Execution",
+        "AI-native Cloud",
+        "Serverless Compute",
+        "Inference",
+        "Reinforcement Learning",
+        "Modal",
+        "Cloud Orchestration",
+        "Developer Infrastructure",
+        "Usage-based Pricing",
+        "Enterprise Agents",
+        "Control Points",
+        "Infrastructure Economics"
+      ],
+      "deck": "Modal 10 月 14 日披露年化收入运行率超过 10 亿美元，其中沙箱执行约 3 亿美元，并完成 7.5 亿美元 D 轮融资。新增证据是 Agent 生成代码的隔离执行、强化学习环境和弹性推理开始形成可独立计费的云需求；但年化运行率不是已实现全年收入，沙箱累计启动量不等于付费客户数，盈利能力与安全效果仍未披露。",
+      "body_format": "article_text"
     }
   ]
 }
