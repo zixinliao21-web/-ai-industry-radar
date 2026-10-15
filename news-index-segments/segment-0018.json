@@ -1,0 +1,29 @@
+{
+  "schema_version": "3.0",
+  "segment": "0018",
+  "items": [
+    {
+      "id": "2026-10-15-A5",
+      "date": "2026-10-15",
+      "grade": "A",
+      "title": "芯片产能的控制权正在拆成出资、运营与收益三层：日美 210 亿美元晶圆厂的新信号",
+      "themes": [
+        "Semiconductor Manufacturing",
+        "GlobalFoundries",
+        "US-Japan Investment",
+        "Industrial Policy",
+        "Foundational Chips",
+        "AI Infrastructure",
+        "Advanced Packaging",
+        "Silicon Photonics",
+        "Public-private Finance",
+        "Foundry Operations",
+        "Capital Structure",
+        "Supply Chain Sovereignty",
+        "Control Points"
+      ],
+      "deck": "GlobalFoundries 10 月 14 日宣布，将运营日美安排下最高 210 亿美元支持的两座纽约晶圆厂：日本出资、GF 提供技术和运营，美国政府另取得约 4% 股权。新增信号不是先进 AI GPU 已新增产能，而是半导体制造的资本所有权、长期运营收入与产业政策收益正在被拆开组织；第二座厂仍属条件性投资，2029 年投产和长期回报均未兑现。",
+      "body_format": "article_text"
+    }
+  ]
+}
