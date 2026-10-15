@@ -114,6 +114,28 @@
       ],
       "deck": "台积电在 10 月 15 日业绩会上披露，已派团队检查美国数据中心建设进度与电力供应，并把云厂商资本开支、融资和供应链瓶颈纳入扩产判断。其 Q3 营收达 467.2 亿美元，HPC 占比 68%，但 HPC 不等于 AI 收入。新信号是上游晶圆厂正主动验证下游算力项目的可交付性；这既不能证明 AI 泡沫破裂，也不代表所有客户订单已经接受独立审计。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-16-A3",
+      "date": "2026-10-16",
+      "grade": "A",
+      "title": "前沿 AI 的外部监督开始进入实验室：独立性不只取决于能否发表报告",
+      "themes": [
+        "Frontier AI Governance",
+        "Independent Evaluation",
+        "METR",
+        "Anthropic",
+        "Agent Safety",
+        "Embedded Auditors",
+        "Model Oversight",
+        "Publication Independence",
+        "Information Asymmetry",
+        "Risk Assessment",
+        "Trust Infrastructure",
+        "Control Points"
+      ],
+      "deck": "Anthropic 10 月 15 日让六名 METR 评估人员获得接近内部风险团队的系统访问，并承诺不能否决其报告；METR 同期强调访问范围、私下访谈、删节披露和评估科学的限制。新信号不是 AI 安全已获认证，而是外部评估的竞争单位正从一次性模型测试变成持续接触内部证据与公开解释权；但厂商仍控制准入和部分删节，评估者也没有强制整改或暂停发布的权力。",
+      "body_format": "article_text"
     }
   ]
 }
