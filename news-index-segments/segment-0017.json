@@ -139,6 +139,30 @@
       ],
       "deck": "Modal 10 月 14 日披露年化收入运行率超过 10 亿美元，其中沙箱执行约 3 亿美元，并完成 7.5 亿美元 D 轮融资。新增证据是 Agent 生成代码的隔离执行、强化学习环境和弹性推理开始形成可独立计费的云需求；但年化运行率不是已实现全年收入，沙箱累计启动量不等于付费客户数，盈利能力与安全效果仍未披露。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-15-A3",
+      "date": "2026-10-15",
+      "grade": "A",
+      "title": "AI 算力开始购买供电组织能力：Google 的 702MW 燃料电池揭示私有微网控制点",
+      "themes": [
+        "AI Infrastructure",
+        "Data Center Power",
+        "Private Microgrid",
+        "Power Purchase Agreements",
+        "Fuel Cells",
+        "Google",
+        "American Electric Power",
+        "Black Hills",
+        "Bloom Energy",
+        "Grid Capacity",
+        "Infrastructure Financing",
+        "Energy Orchestration",
+        "Control Points",
+        "Cost Allocation"
+      ],
+      "deck": "AEP 10 月 14 日确认拟投资约 40 亿美元建设 702MW 燃料电池项目，由 Google 通过 20 年协议购电；Black Hills 同期披露的 Cheyenne 方案则把 590MW 电网服务与约 2.1GW 第三方资源纳入私有微网调度。新增信号不是又增加了可立即使用的 702MW 算力，而是大型 AI 园区正在同时采购发电资产、长期信用、跨主体调度和成本隔离；两份容量不可简单相加，建设、排放和经济性仍待验证。",
+      "body_format": "article_text"
     }
   ]
 }
