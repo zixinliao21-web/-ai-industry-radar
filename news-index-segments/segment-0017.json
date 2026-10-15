@@ -163,6 +163,31 @@
       ],
       "deck": "AEP 10 月 14 日确认拟投资约 40 亿美元建设 702MW 燃料电池项目，由 Google 通过 20 年协议购电；Black Hills 同期披露的 Cheyenne 方案则把 590MW 电网服务与约 2.1GW 第三方资源纳入私有微网调度。新增信号不是又增加了可立即使用的 702MW 算力，而是大型 AI 园区正在同时采购发电资产、长期信用、跨主体调度和成本隔离；两份容量不可简单相加，建设、排放和经济性仍待验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-15-A4",
+      "date": "2026-10-15",
+      "grade": "A",
+      "title": "AI 算力融资开始出现信用分层：投资级 GPU 贷款与高收益债压力可以同时存在",
+      "themes": [
+        "AI Infrastructure",
+        "CoreWeave",
+        "GPU-backed Lending",
+        "Insurance Capital",
+        "Structured Finance",
+        "Credit Ratings",
+        "Neocloud",
+        "Capital Markets",
+        "AI Financing",
+        "Collateral",
+        "Customer Contracts",
+        "Credit Spreads",
+        "Infrastructure Concentration",
+        "Control Points",
+        "AI Bubble"
+      ],
+      "deck": "CoreWeave 10 月 14 日提出进一步引入保险资金，试图把 GPU 与客户合同支持的贷款做成投资级资产；同期其部分公开债券二级市场收益率接近 15%。结合此前 85 亿美元投资级设施与 26 亿美元非投资级设施，新增信号是算力融资的竞争单位正在从“公司能借多少钱”分化为“哪份合同、哪批资产、哪层风险能被谁承保”。但债券价格波动不等于违约，资产级评级也不等于公司整体信用升级。",
+      "body_format": "article_text"
     }
   ]
 }
