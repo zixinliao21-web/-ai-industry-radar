@@ -24,6 +24,28 @@
       ],
       "deck": "GlobalFoundries 10 月 14 日宣布，将运营日美安排下最高 210 亿美元支持的两座纽约晶圆厂：日本出资、GF 提供技术和运营，美国政府另取得约 4% 股权。新增信号不是先进 AI GPU 已新增产能，而是半导体制造的资本所有权、长期运营收入与产业政策收益正在被拆开组织；第二座厂仍属条件性投资，2029 年投产和长期回报均未兑现。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-15-A6",
+      "date": "2026-10-15",
+      "grade": "A",
+      "title": "前沿模型的经济账开始分裂：季度 168 亿美元收入与调整后盈利，仍不等于算力投资回本",
+      "themes": [
+        "Frontier AI Economics",
+        "Anthropic",
+        "Revenue Recognition",
+        "Adjusted Profitability",
+        "Model Unit Economics",
+        "Cloud Distribution",
+        "AI Infrastructure",
+        "Capital Commitments",
+        "IPO",
+        "AI Bubble",
+        "Control Points",
+        "Enterprise AI"
+      ],
+      "deck": "Anthropic 10 月 14 日向潜在投资者披露，2026 年第三季度收入约 168 亿美元，较第二季度增长约 45%，并称按调整后口径实现盈利。新增证据是前沿模型服务已能形成巨额当期收入，增长率却从前季约 147% 放缓；调整后利润、GAAP 利润、长期算力承诺和跨平台收入确认仍不能混算。真正需要追踪的是持续经营现金流、单位推理贡献利润与下一代模型研发资本开支能否同时成立。",
+      "body_format": "article_text"
     }
   ]
 }
