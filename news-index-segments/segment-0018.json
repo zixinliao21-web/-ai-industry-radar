@@ -68,6 +68,28 @@
       ],
       "deck": "Bloomberg 10 月 15 日将 ASKB 对话式 AI 扩展至全部 Terminal 用户，并允许把客户自有资料与其金融数据结合；此前已有超过三分之一订户使用。新增信号不是聊天界面普及，而是既有专业工作台正在把授权数据、机构私有上下文、可追溯分析和协作流程合并为 Agent 的默认入口。但使用覆盖率不等于付费增量、决策准确率或跨系统执行能力。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-16-A1",
+      "date": "2026-10-16",
+      "grade": "A",
+      "title": "主权 AI 正把漏洞修复纳入模型平台：Cohere 收购意向背后的安全控制点",
+      "themes": [
+        "Sovereign AI",
+        "Enterprise AI",
+        "AI Cybersecurity",
+        "Autonomous Vulnerability Research",
+        "Software Supply Chain",
+        "Cohere",
+        "AISLE",
+        "Aleph Alpha",
+        "Agent Governance",
+        "Private Deployment",
+        "Control Points",
+        "Vertical AI"
+      ],
+      "deck": "Cohere 10 月 15 日签署收购 AISLE 的意向书，拟把 AI 漏洞发现、验证与修复能力接入其模型、Agent 和主权部署平台。继 Aleph Alpha 整合协议后，新增信号是安全工作流可能从外部采购工具转为主权 AI 平台的核心能力；但交易未完成，500 多项 CVE 为公司汇总口径，OpenSSL 的部分修复记录虽可独立核对，也不能证明跨企业环境的自动修复可靠性。",
+      "body_format": "article_text"
     }
   ]
 }
