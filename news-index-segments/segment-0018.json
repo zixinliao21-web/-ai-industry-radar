@@ -46,6 +46,28 @@
       ],
       "deck": "Anthropic 10 月 14 日向潜在投资者披露，2026 年第三季度收入约 168 亿美元，较第二季度增长约 45%，并称按调整后口径实现盈利。新增证据是前沿模型服务已能形成巨额当期收入，增长率却从前季约 147% 放缓；调整后利润、GAAP 利润、长期算力承诺和跨平台收入确认仍不能混算。真正需要追踪的是持续经营现金流、单位推理贡献利润与下一代模型研发资本开支能否同时成立。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-15-A7",
+      "date": "2026-10-15",
+      "grade": "A",
+      "title": "当金融终端吸收客户自己的研究：企业 Agent 的入口可能回到既有工作台",
+      "themes": [
+        "Enterprise AI",
+        "Financial Software",
+        "Agent Work Surface",
+        "Enterprise Context",
+        "Proprietary Data",
+        "Semantic Authority",
+        "Bloomberg Terminal",
+        "Agent Distribution",
+        "Workflow Ownership",
+        "Data Custody",
+        "Control Points",
+        "Incumbent SaaS"
+      ],
+      "deck": "Bloomberg 10 月 15 日将 ASKB 对话式 AI 扩展至全部 Terminal 用户，并允许把客户自有资料与其金融数据结合；此前已有超过三分之一订户使用。新增信号不是聊天界面普及，而是既有专业工作台正在把授权数据、机构私有上下文、可追溯分析和协作流程合并为 Agent 的默认入口。但使用覆盖率不等于付费增量、决策准确率或跨系统执行能力。",
+      "body_format": "article_text"
     }
   ]
 }

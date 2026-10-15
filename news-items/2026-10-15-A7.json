@@ -1,0 +1,45 @@
+{
+  "id": "2026-10-15-A7",
+  "date": "2026-10-15",
+  "grade": "A",
+  "title": "当金融终端吸收客户自己的研究：企业 Agent 的入口可能回到既有工作台",
+  "themes": [
+    "Enterprise AI",
+    "Financial Software",
+    "Agent Work Surface",
+    "Enterprise Context",
+    "Proprietary Data",
+    "Semantic Authority",
+    "Bloomberg Terminal",
+    "Agent Distribution",
+    "Workflow Ownership",
+    "Data Custody",
+    "Control Points",
+    "Incumbent SaaS"
+  ],
+  "deck": "Bloomberg 10 月 15 日将 ASKB 对话式 AI 扩展至全部 Terminal 用户，并允许把客户自有资料与其金融数据结合；此前已有超过三分之一订户使用。新增信号不是聊天界面普及，而是既有专业工作台正在把授权数据、机构私有上下文、可追溯分析和协作流程合并为 Agent 的默认入口。但使用覆盖率不等于付费增量、决策准确率或跨系统执行能力。",
+  "article_text": "# 当金融终端吸收客户自己的研究：企业 Agent 的入口可能回到既有工作台\n\n**核心判断｜企业 Agent 的入口竞争，不一定由新的通用 AI 应用赢得。对于拥有可信数据、客户身份、专业协作网络和高频工作流的成熟软件，Agent 可能首先成为原有工作台的一种新交互方式；更关键的是，客户自己的私有上下文也开始被吸入这个工作台。** 2026 年 10 月 15 日，《华尔街日报》报道 Bloomberg 将 ASKB 对话式 AI 向全部 Bloomberg Terminal 用户开放，并允许客户把自己的内容与 Bloomberg 的金融信息结合。报道称，ASKB 此前已被超过三分之一的 Terminal 订户使用。[1]\n\n这条新闻真正值得 VELNAR 研究的，不是“金融终端终于有聊天机器人”，而是一个具体的竞争结构：**拥有数据与工作流的 incumbent，正试图把通用模型变成可替换的推理组件，把专业数据、机构研究上下文、分析出处和执行入口留在自己的产品边界内。** 但这仍是入口与研究流程层面的信号，不是 Bloomberg 已经控制客户所有交易决策或完成全部自主执行的证据。\n\n## 一、FACT｜本次新发生的事，与早已公布的路线要分开\n\n**事实一｜10 月 15 日的新增进展是面向全部用户的开放与客户自有内容整合。** 《华尔街日报》报道，Bloomberg 正让所有 Terminal 用户都能使用 ASKB，并让他们把自己的内容与平台已有金融信息放在同一研究工作流中；报道同时称，ASKB 已有超过三分之一 Terminal 订户使用。[1] 这里的“超过三分之一”是媒体转述的使用覆盖描述，不能直接换算为独立付费客户、新增收入、每日活跃率或投资回报。\n\n**事实二｜ASKB 不是 10 月才诞生。** Bloomberg 于 2026 年 2 月推出测试版，4 月 16 日已公布机构级整合路线：把 Terminal 的市场与公司数据连接客户内部的投资观点、研究笔记、投资组合和风险分析工具，使用多个 Agent 协同完成研究任务。[2] 因此本次不应被包装为突然出现的全新产品类别。真正的时间序列是：测试版与功能路线先形成，随后扩大可用范围，并把机构私有内容接入的叙事推进到实际用户产品。\n\n**事实三｜Bloomberg 的底座不只是语言模型。** 其 4 月官方资料列举了结构化行情数据、公司文件、新闻、卖方研究、投资组合与风险分析、研究管理系统及 Instant Bloomberg 协作网络。ASKB 可在这些来源上生成带出处的回答；当回答涉及数据分析时，系统提供底层 Bloomberg Query Language（BQL）代码，便于在 Excel 或 BQuant 中复核和延伸。[2] Bloomberg 的产品说明还表示 ASKB 使用商业模型与开放权重模型的组合。[3] 这些是厂商公开的架构与功能主张，不等于外部独立审计了每一次答案。\n\n**事实四｜机构内部知识的整合是一个长期战略，而非已验证的全量迁移。** Bloomberg 4 月路线图提出把 Research Management Solutions（RMS Enterprise）的内部研究笔记、模型和团队观点接入 ASKB，并把工作流模板用于定期晨报、观点健康检查等多步骤任务。[2] 9 月 Bloomberg 再次强调研究、组合分析、观点形成与交易前工作流之间的衔接，以及人工审核的重要性。[4] 10 月报道表明产品正向更广用户开放；但不同客户是否已启用每项 RMS、PORT、第三方数据及自有文件整合，仍须按具体授权与部署条件核实。\n\n## 二、INFERENCE｜为什么这比“又一家企业推出 Agent”更有意义\n\n**第一，入口可以来自已被采购、授权和训练过的专业工作台。** 金融机构的分析师原本就在 Terminal 中看行情、研报、文件、模型与消息。一个外部通用 Agent 即使推理能力更强，也需要重新获得数据授权、处理信息出处、适配专业计算口径并融入协作流程。Bloomberg 可以把自然语言入口直接放进既有产品，降低切换成本。这是一种分发优势，但不是无法被竞争者复制的永久护城河。\n\n**第二，Enterprise Context 的争夺正从“谁能读到企业数据”升级为“谁能承载企业自己的判断”。** 公开市场数据与卖方研究构成共同底座；机构自有的持仓、投资假设、研究笔记、风险偏好和决策历史，才可能让 Agent 对同一条新闻给出不同的机构级答案。若这些私有上下文持续在 Terminal 内更新，Bloomberg 可能从信息提供者进一步成为机构研究活动的上下文托管者。这里的“可能”取决于客户授权、隔离、可导出性与实际使用习惯，并非平台宣布支持上传就已经实现锁定。\n\n**第三，可信输出的竞争并不等同于模型排行榜。** 在金融决策中，来源可追溯、时间戳、计算口径和复算能力，往往比回答更流畅更重要。Bloomberg 提供来源标注和 BQL 代码的设计，意味着它尝试把 Agent 输出重新连接到可检查的专业分析对象。[2][3] 这强化了一个既有判断：Semantic Authority 未必属于最会生成语言的模型，而可能属于能定义数据、计算和业务解释口径的系统。不过，展示 BQL 代码不等于代码永远正确；可复核只是审计的必要条件之一。\n\n**第四，模型可以商品化，专业工作台却可能继续收费。** 如果 Terminal 保留数据订阅、权限体系、专业工具、协作网络和客户关系，底层模型从 A 换到 B 不一定改变用户每天打开哪个界面。对通用 Agent 创业者而言，这提出一个更难的问题：究竟是在取代专业软件，还是被专业软件采购为一个能力模块？两条路径可能长期并存，不能由单一 Bloomberg 案例外推整个 SaaS 行业。\n\n## 三、反论｜这仍不能证明传统软件已经赢得 Agent 时代\n\n**反论一｜既有分发优势可能同时是产品束缚。** Terminal 的成本、学习曲线、专有数据授权和封闭生态，可能让轻量化、跨系统、低成本的独立 Agent 在中小机构或非传统金融用户中更有吸引力。若客户需要跨多个供应商和内部系统执行任务，单一终端未必是最佳控制平面。\n\n**反论二｜“客户数据进入工作台”也可能引发新的采购阻力。** 机构需要核实自有研究是否与公共数据隔离、是否会被第三方模型处理、能否撤回、保留多久、是否用于训练、如何审计访问和如何导出。公开产品叙事不能替代合同、技术架构与独立合规验证。私有上下文越有价值，客户越可能要求可迁移和可撤销的治理权。\n\n**反论三｜使用覆盖不等于经济成功。** 超过三分之一订户使用，是比“已发布功能”更强的采用信号，但没有提供按席位的付费增量、持续使用强度、客户留存变化、毛利、推理成本或可验证的投资研究收益。[1] 也不能假设“所有用户开放”意味着所有功能在所有地域、合同与终端版本同时可用。\n\n**反论四｜研究辅助不等于自动交易授权。** 搜索文件、归纳研究、生成 BQL 和编排晨报，与代客户下单、承担投资责任、处理合规审批属于不同风险层级。即便研究入口成熟，交易执行仍受经纪系统、风控、监管与人类授权约束。不能因为出现 Agent Workflows 就宣称金融业务已经端到端自治。\n\n## 四、它修正了 VELNAR 哪一个产业判断\n\n过去讨论企业 AI 入口时，容易把问题简化为“独立 Agent 平台是否会取代传统 SaaS”。本例提示更精确的三分法：\n\n**模型能力层**：提供语言、推理与工具调用，可能存在多模型竞争和价格下降。\n\n**权威上下文层**：保存可信数据、计算定义、组织私有判断及授权边界；可能由既有垂直系统、企业自有平台或独立语义层掌握。\n\n**工作与分发层**：决定专业人员每天在哪里看结果、复核分析、协作与继续行动；既有软件拥有强位置，但并非不可替代。\n\nBloomberg 的新增证据主要强化后两层可能被同一家成熟企业打包的路径。它没有否定独立 Enterprise Context 产品的机会，也没有证明所有垂直行业都需要类似昂贵的终端模式。对 VELNAR 的产业研究而言，未来比较企业 Agent 公司时，应问：**它真正掌握的是模型、数据授权、机构私有上下文、专业计算口径，还是用户每天完成工作的入口？** 这些控制点不能混称为“拥有企业大脑”。\n\n对当前 Sales MVP，**没有任何因此扩大架构范围的理由**。真实业务事实、确定性状态、权限与工具执行的闭环仍是优先事项；Bloomberg 的案例是观察成熟垂直平台如何组织上下文与工作流，不是要求一个小企业系统立刻建设金融终端式知识平台。\n\n## 五、PREDICTION｜接下来应观察什么\n\n**有限预测一**：未来 6—12 个月，更多拥有高价值垂直数据的 incumbent 可能把客户私有资料、可追溯分析和 Agent 工作流放进同一授权界面。但这是否形成竞争壁垒，要看真实使用留存与客户是否愿意把内部知识长期留在平台。\n\n**有限预测二**：独立 Agent 公司的差异化压力可能从“会回答专业问题”转向“跨系统执行、上下文可迁移、可审计且成本更低”。如果既有软件只做封闭的问答层，独立产品仍有突破口；如果它完成跨系统协作并控制关键权限，入口竞争会更难。\n\n**值得继续讨论的问题**：一家垂直软件公司究竟需要控制多少客户私有上下文，才能形成真正的 Agent 护城河？在“数据在客户手里、推理在模型厂商、工作台在 SaaS”三方分离时，谁有权定义可验证的业务事实与执行结果？\n\n## 证据与口径\n\n[1] The Wall Street Journal，2026-10-15，Bloomberg Doubles Down on Conversational AI（全面开放、客户自有内容、超过三分之一订户使用）：https://www.wsj.com/cio-journal/bloomberg-doubles-down-on-conversational-ai-55f47c94\n\n[2] Bloomberg 官方公告，2026-04-16，Bloomberg Unveils ASKB Roadmap for Clients to Augment their Investment Process with Agentic AI（RMS、PORT、Workflows、BQL 与私有研究整合路线）：https://professional.content.cirrus.bloomberg.com/professional2023/insights/press-announcement/bloomberg-unveils-askb-roadmap-for-clients-to-augment-their-investment-process-with-agentic-ai/\n\n[3] Bloomberg Professional 产品说明，查阅于 2026-10-15，AI on Bloomberg（多 Agent、多模型、来源标注、BQL 与工作流能力；页面部分表述仍保留 beta 口径）：https://professional.bloomberg.com/products/bloomberg-terminal/ai\n\n[4] Bloomberg Professional，2026-09-28，How AI is reshaping the foundation of front-office investment workflows（投资研究与组合工作流整合、人工监督）：https://bloomberg.com/professional/insights/artificial-intelligence/how-ai-is-reshaping-the-foundation-of-front-office-investment-workflows\n",
+  "sources": [
+    {
+      "title": "The Wall Street Journal: Bloomberg Doubles Down on Conversational AI",
+      "url": "https://www.wsj.com/cio-journal/bloomberg-doubles-down-on-conversational-ai-55f47c94",
+      "date": "2026-10-15"
+    },
+    {
+      "title": "Bloomberg: ASKB investment workflow roadmap",
+      "url": "https://professional.content.cirrus.bloomberg.com/professional2023/insights/press-announcement/bloomberg-unveils-askb-roadmap-for-clients-to-augment-their-investment-process-with-agentic-ai/",
+      "date": "2026-04-16"
+    },
+    {
+      "title": "Bloomberg Professional: AI on Bloomberg",
+      "url": "https://professional.bloomberg.com/products/bloomberg-terminal/ai",
+      "date": "2026-10-15"
+    },
+    {
+      "title": "Bloomberg: AI in front-office investment workflows",
+      "url": "https://bloomberg.com/professional/insights/artificial-intelligence/how-ai-is-reshaping-the-foundation-of-front-office-investment-workflows",
+      "date": "2026-09-28"
+    }
+  ],
+  "body_format": "article_text"
+}
