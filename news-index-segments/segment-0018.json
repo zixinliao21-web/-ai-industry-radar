@@ -90,6 +90,30 @@
       ],
       "deck": "Cohere 10 月 15 日签署收购 AISLE 的意向书，拟把 AI 漏洞发现、验证与修复能力接入其模型、Agent 和主权部署平台。继 Aleph Alpha 整合协议后，新增信号是安全工作流可能从外部采购工具转为主权 AI 平台的核心能力；但交易未完成，500 多项 CVE 为公司汇总口径，OpenSSL 的部分修复记录虽可独立核对，也不能证明跨企业环境的自动修复可靠性。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-16-A2",
+      "date": "2026-10-16",
+      "grade": "A",
+      "title": "台积电开始核对数据中心建设与供电：AI 晶圆需求不再只看芯片订单",
+      "themes": [
+        "AI Infrastructure",
+        "TSMC",
+        "Semiconductor Foundry",
+        "Capacity Planning",
+        "Data Center Build-out",
+        "Power Supply",
+        "AI Demand Verification",
+        "HPC",
+        "Advanced Nodes",
+        "Capital Expenditure",
+        "Infrastructure Economics",
+        "Supply Chain",
+        "Control Points",
+        "AI Bubble"
+      ],
+      "deck": "台积电在 10 月 15 日业绩会上披露，已派团队检查美国数据中心建设进度与电力供应，并把云厂商资本开支、融资和供应链瓶颈纳入扩产判断。其 Q3 营收达 467.2 亿美元，HPC 占比 68%，但 HPC 不等于 AI 收入。新信号是上游晶圆厂正主动验证下游算力项目的可交付性；这既不能证明 AI 泡沫破裂，也不代表所有客户订单已经接受独立审计。",
+      "body_format": "article_text"
     }
   ]
 }
