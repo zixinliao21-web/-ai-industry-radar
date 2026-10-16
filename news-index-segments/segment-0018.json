@@ -136,6 +136,30 @@
       ],
       "deck": "Anthropic 10 月 15 日让六名 METR 评估人员获得接近内部风险团队的系统访问，并承诺不能否决其报告；METR 同期强调访问范围、私下访谈、删节披露和评估科学的限制。新信号不是 AI 安全已获认证，而是外部评估的竞争单位正从一次性模型测试变成持续接触内部证据与公开解释权；但厂商仍控制准入和部分删节，评估者也没有强制整改或暂停发布的权力。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-16-A4",
+      "date": "2026-10-16",
+      "grade": "A",
+      "title": "企业 Agent 安全正在把“数据可见性”与“行为控制”合并定价：Proofpoint 收购 Varonis 的结构信号",
+      "themes": [
+        "Enterprise AI",
+        "Agent Governance",
+        "Data Security",
+        "Proofpoint",
+        "Varonis",
+        "M&A",
+        "DSPM",
+        "Data Access Governance",
+        "DLP",
+        "Identity",
+        "Enterprise Context",
+        "Cybersecurity Consolidation",
+        "Control Points",
+        "Security Economics"
+      ],
+      "deck": "Proofpoint 与 Varonis 10 月 15 日签署约 63 亿美元全现金收购协议，拟把通信与人员风险、数据发现、权限治理及 Agent 行为监控整合。新增信号不是 AI 安全突然出现新概念，而是大型安全厂商开始为“谁能访问哪些数据、实际如何使用、何时阻断”支付并购溢价；交易尚未交割，现有产品路线也不能证明跨系统实时治理已可用。",
+      "body_format": "article_text"
     }
   ]
 }
