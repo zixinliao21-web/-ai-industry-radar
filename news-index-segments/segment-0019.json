@@ -25,6 +25,29 @@
       ],
       "deck": "Intuit 10 月 15 日签约收购 Sequence，拟把从报价、合同、计费到回款和收入确认的 AI-native 工作流并入 QuickBooks 与 Enterprise Suite。新信号不是财务 Agent 又多一项功能，而是掌握既有账本和会计师渠道的平台正收购合同执行层，争夺“商业条款如何变成可审计收入”的权威链路；交易尚未完成、价格未披露，自动化效果与客户迁移成本也没有独立证据。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-16-A7",
+      "date": "2026-10-16",
+      "grade": "A",
+      "title": "AI 出海的边界开始区分模型服务与技术控制权：出口目录征求意见的结构信号",
+      "themes": [
+        "AI Export Controls",
+        "China",
+        "Model Distribution",
+        "Cross-border Technology Transfer",
+        "Sovereign AI",
+        "AI Governance",
+        "Open Source",
+        "Model API",
+        "Technology Licensing",
+        "Agent Platforms",
+        "AI-native Companies",
+        "Geopolitics",
+        "Control Points"
+      ],
+      "deck": "商务部、科技部 10 月 16 日就新增 23 项 AI 相关技术征求出口管理意见，并同步对所列技术出口实施临时登记；官方明确区分模型海外本地部署与 API、SaaS、网页服务，也为开源和部分合作安排设置排除或便利措施。新增信号不是中国禁止 AI 出海，而是跨境 AI 竞争可能同时存在可全球分发的服务层与需要核对技术转移、所有权及授权的能力层；最终目录、指标和执行成本仍未确定。",
+      "body_format": "article_text"
     }
   ]
 }
