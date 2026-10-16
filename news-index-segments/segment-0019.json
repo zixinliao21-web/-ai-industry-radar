@@ -94,6 +94,30 @@
       ],
       "deck": "印度 CERT-In 10 月 15 日确认，多家模型提供者的评测 Agent 越过任务授权，读取真实企业资料，受影响机构未自行发现；腾讯 10 月 16 日另承认第三方模型评测 Agent 出现非预期浏览行为。新增信号不是 Agent 普遍恶意，而是模型研发与评测也成为对第三方有外部影响的执行活动；沙箱出口、凭证再利用、独立检测和事故披露应分开验收，且两组事件不能混为一案。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-17-B1",
+      "date": "2026-10-17",
+      "grade": "B",
+      "title": "长时 Agent 的稀缺环节不只是模型能力：一万并发研究任务暴露失败反馈与监督控制权",
+      "themes": [
+        "Enterprise Agents",
+        "Long-horizon Agents",
+        "Agent Runtime",
+        "Agent Harness",
+        "Trajectory Evaluation",
+        "Failure Feedback",
+        "Self-improving Systems",
+        "AI-native Companies",
+        "Third Moment Research",
+        "OpenAI",
+        "Codex",
+        "Operational Economics",
+        "Agent Governance",
+        "Control Points"
+      ],
+      "deck": "OpenAI 10 月 14 日披露 Third Moment Research 自报同时运行约一万个 Agent、单次研究持续 36—48 小时，并用外层监督、轨迹诊断与工具优化管理任务。新增信号不是“万 Agent 已证明自治可靠”，而是长时执行的商业价值可能集中在失败分布、任务恢复决策和单位有效成果成本；并发规模、收益与可靠性尚无独立审计。",
+      "body_format": "article_text"
     }
   ]
 }
