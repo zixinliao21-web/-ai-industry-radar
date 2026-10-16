@@ -1,0 +1,36 @@
+{
+  "id": "2026-10-16-A8",
+  "date": "2026-10-16",
+  "grade": "A",
+  "title": "Agent 授权开始变成可验证的执行凭证：ServiceNow 把业务上下文送到最后一道关口",
+  "themes": [
+    "Enterprise Agents",
+    "Agent Authorization",
+    "Cryptographic Credentials",
+    "Delegated Authority",
+    "Runtime Enforcement",
+    "ServiceNow",
+    "NVIDIA OpenShell",
+    "Enterprise Context",
+    "CMDB",
+    "Agent Identity",
+    "MCP",
+    "Policy Governance",
+    "Control Points"
+  ],
+  "deck": "ServiceNow 10 月 15 日宣布 AI Passport，拟用签名凭证把 Agent 身份、委托范围、CMDB/GRC 业务上下文与 NVIDIA 执行环境相连。新增信号不是再次强调运行时治理，而是授权决定正尝试从单一平台的内部规则变成跨 Agent、工具与执行点可核验的对象；产品预计第四季度推出，开放互操作与撤权可靠性尚无独立生产证据。",
+  "article_text": "# Agent 授权开始变成可验证的执行凭证：ServiceNow 把业务上下文送到最后一道关口\n\n**核心判断｜企业 Agent 的控制权正在出现一个比“身份目录”更具体的候选载体：可签名、可验证、可缩小委托范围的授权凭证。** 当一个 Agent 把任务转交给另一个 Agent、MCP 工具或隔离执行环境时，真正困难的不是给它取名字，而是让下游在动作发生前知道：这次授权是谁发出的、依赖什么业务事实、允许什么、何时失效，以及谁能撤销。2026 年 10 月 15 日，ServiceNow 宣布 AI Passport，试图将这些问题包装为能在执行链上核验的凭证，并让 NVIDIA 的安全运行环境参与执行。[1]\n\n这是一条 **A 级结构信号**，但并非一套已被证明可靠的行业标准。它补充了我们对 Agent Identity、Runtime Policy 与 Enterprise Context 的既有认识：**授权不一定只存在于中央控制台，也可能以可验证的对象沿工作流传递；不过凭证签名与真实动作被安全拦截仍是两件事。**\n\n## 一、FACT｜已公布的设计与尚未交付的能力\n\n**第一，ServiceNow 提出的是签名授权范围，而不只是 Agent 注册。** 官方将 AI Passport 描述为给第一方和第三方 Agent、MCP 服务提供的密码学签名凭证，允许在多 Agent 工作流的每一步检查授权范围。其设计允许治理产品、身份提供方和执行点参与签发、验证，并声称支持范围逐级收窄的委托、精确撤权和审计签名。[1] 这意味着下游不必只相信 Agent 自述“我有权限”，而应能核验某个授权声明的来源与完整性。\n\n**第二，凭证的内容拟由业务上下文驱动。** ServiceNow 表示授权范围将参考其配置管理数据库（CMDB）、治理风险合规政策（GRC）及工作流审批。CMDB 中的服务、资产和依赖关系是权限决策的候选事实来源；但它并不自动知道每个业务动作的真实含义。官方同时宣布 NVIDIA 为设计与发布合作伙伴，拟通过 NVIDIA Open Agent Safety Platform、OpenShell 与 Sentry 在执行环境实施控制。[1] 这属于公开的产品集成计划，不等于所有第三方 Agent 已获得跨平台安全认证。\n\n**第三，现场演示提供了一个小而具体的执行例子。** diginomica 记者在发布简报中看到退款 Agent 的 25 美元自动批准阈值：18 美元请求放行，40 美元请求不自动执行。[2] 这个演示比抽象的“治理仪表盘”更接近行动边界，但只证明厂商在受控情境展示了规则判定，不能证明复杂授权链、故障降级或恶意工具调用下的生产可靠性。该媒体同时披露 ServiceNow 是其合作伙伴，采访与演示应按有利益关系的现场报道理解。\n\n**第四，发布时间与可用性不能混写。** 官方明确 AI Passport、Shadow AI Detection 和 AI Cost Management **预计在 2026 年第四季度可用**；面向金融业的 Operational Resilience 则被列为当前可用。[1] 官方引述 LTM 已部署 1,500 个带员工编号和主管的 Agent，这是客户对现有管理实践的陈述，不能作为 AI Passport 已大规模生产部署的证据。产品公告、客户案例与正式可用性属于不同证据层级。\n\n## 二、INFERENCE｜真正的新增控制点是“可验证授权”，不是又一个 Control Plane 名称\n\n我们此前记录过四条相邻路径：Agent 需要独立身份；Collibra 把政策推进到 Runtime Enforcement；Workday 尝试让入职、调岗、离职等组织事实触发授权生命周期；Proofpoint 与 Varonis 试图整合数据权限与行为控制。此次 ServiceNow 的增量不应重复写成“Agent 需要治理”。它提出了更窄的问题：**中央系统作出的授权决定，能否被传递到真正执行动作的地方，并由独立组件核验？**\n\n从系统结构看，这至少涉及四种不同的权力。**事实权**：谁提供服务、数据、员工、任务及其关系的可信状态；**授权权**：谁依据这些事实批准一项动作；**验证权**：谁能确认凭证由可信主体签发、未被篡改且仍有效；**执行权**：哪个工具、网关或沙箱最终拒绝越权动作。ServiceNow 试图凭借 CMDB、GRC 和工作流审批靠近前两层，并借 NVIDIA 的运行环境靠近后两层。由此可能形成的商业控制点，不是凭证文件本身，而是把企业事实转化为可被多种执行点消费的授权决策的能力。\n\n一个具体例子是采购 Agent。员工授权它查询报价，不等于授权它修改付款账户；上游 Agent 把任务委托给下游时，也不应自动继承全部权限。若凭证能够限定主体、资源、动作、金额、时间和委托链，且工具端独立验证，企业就有机会把“最小权限”从设计原则变成实际执行约束。**但这些字段是否都有标准化表示、不同系统是否采用一致语义，当前公告没有提供足够证据。**\n\n更深的竞争问题是：ServiceNow 擅长组织工作流与资产关系，Okta 等身份厂商擅长身份与委托，安全厂商擅长网关和数据访问，云厂商掌握执行环境。**谁最了解业务，并不自动等于谁有权签发、谁最适合验证，更不等于谁实际控制最后一道拦截。**开放规范如果真正可互操作，反而可能让这些权力分离；若互操作只停留在宣传层，平台则可能利用上下文与审批数据提高客户锁定。\n\n## 三、COUNTERARGUMENT｜签名不等于授权正确，更不等于执行安全\n\n**第一，密码学只能证明凭证的签发与完整性，不能证明授权决策本身正确。** 如果 CMDB 资产关系过时、员工权限尚未撤销，或审批系统把错误对象映射为同一客户，合法签名仍可能保护一个错误授权。所谓“业务上下文”必须接受数据新鲜度、来源、冲突处理与语义一致性检验。\n\n**第二，撤权是一条端到端时间链。** 从组织事件变化、控制台更新、凭证失效传播，到执行点拒绝调用，任何缓存、网络隔离或离线沙箱都可能形成窗口。需要实测撤权延迟、凭证过期、密钥轮换、控制面不可用时的 fail-closed 行为，以及误拦截的人工恢复机制。不能仅凭“精确撤权”四字推断即时一致性。\n\n**第三，签名凭证不保证所有动作都经过验证点。** 直接调用未受管 API、共享服务账号、浏览器 UI 自动化、被盗密钥或旁路网络出口，都可能绕开特定沙箱或网关。真正的安全边界取决于覆盖率、工具权限、网络出口与实际副作用是否受控。NVIDIA 合作可以增加一种执行点，但不是跨企业所有工具的统一强制边界。\n\n**第四，“基于开放规范”不等于已经形成可移植标准。** 公告没有给出足以独立复现的完整规范版本、跨厂商一致性测试和大规模第三方验证结果。身份平台可能不愿把授权权交给工作流平台，客户也可能要求签发、验证与审计分离，避免一家供应商既批准动作又自证合规。产品尚未正式可用，采购规模、事故率与经济价值均未公开。[1][2]\n\n## 四、它如何修正 VELNAR 的产业判断\n\n**被加强：** Agent Control Plane 的重要性不是多一个管理后台，而是让企业事实、委托、Policy 与行动前拦截形成可信链路。Enterprise Context 的价值不只在帮助模型理解“是什么”，还在帮助系统判断“在此时此地，谁有权做什么”。\n\n**需要修正：** 我们不宜把“Agent 身份”“授权凭证”“业务政策”“执行沙箱”笼统称为同一层。它们的供应商、数据依赖和故障模式可能不同。若未来出现开放的授权凭证层，Semantic Authority 与最终执行点可以分离；若缺少一致的业务语义，凭证也可能只是另一种包装过的 API token。\n\n**保持不变：** 这不构成 VELNAR 当前 Sales MVP 增设通用 AI Passport、企业 CMDB 或跨 Agent 身份平台的理由。现阶段的必要工程仍是可靠的业务状态、确定性 Policy、写入前确认、最小工具权限与可审计 Trace。研究前沿控制点，与扩张当前产品 Scope，必须分开。\n\n## 五、PREDICTION｜未来六至十二个月应验证什么\n\n优先追踪四项可否证指标：**其一**，Q4 是否按计划提供真实可用产品和公开的凭证格式；**其二**，非 ServiceNow 身份提供方能否签发、非 NVIDIA 执行点能否独立验证，并通过一致性测试；**其三**，客户能否展示跨 Agent 委托、撤权传播、失败关闭和绕行攻击下的可量化结果；**其四**，企业是否为这种授权能力单独增加预算，而非仅接受原有工作流与安全软件的打包销售。\n\n若以上成立，授权凭证可能成为企业 Agent 互操作的公共接口，平台争夺将转向“谁掌握权威业务事实和最终执行关口”；若不成立，AI Passport 更可能是 ServiceNow 控制台内的一项专有治理功能，而不是行业基础设施。两种结果都尚未发生。\n\n**值得带回讨论的问题：** 当业务系统、IAM、Agent Runtime 和安全网关分别掌握事实、身份、执行与审计时，授权应由谁签发，谁拥有否决权，如何避免“签名正确但业务决策错误”的自动化事故？\n\n---\n\n**证据来源与边界**\n\n[1] ServiceNow，*ServiceNow advances its operational harness for enterprise AI with AI Passport and expanded governance capabilities*，2026-10-15：https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-advances-its-operational-harness-for-enterprise-AI-with-AI-Passport-and-expanded-governance-capabilities/default.aspx\n\n[2] diginomica，*ServiceNow announces AI Passport — bringing authorization, business context and a kill switch together*，2026-10-15：https://diginomica.com/servicenow-announces-ai-passport-bringing-authorization-business-context-and-kill-switch-together\n\n**证据纪律：** 签名凭证设计、NVIDIA 合作和预期可用性来自厂商公告；25 美元阈值为记者见证的演示；跨平台互操作、撤权可靠性、客户支付意愿和最终控制点归属均属于待验证推论。",
+  "sources": [
+    {
+      "title": "ServiceNow: AI Passport and expanded enterprise AI governance",
+      "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-advances-its-operational-harness-for-enterprise-AI-with-AI-Passport-and-expanded-governance-capabilities/default.aspx",
+      "date": "2026-10-15"
+    },
+    {
+      "title": "diginomica: ServiceNow announces AI Passport",
+      "url": "https://diginomica.com/servicenow-announces-ai-passport-bringing-authorization-business-context-and-kill-switch-together",
+      "date": "2026-10-15"
+    }
+  ],
+  "body_format": "article_text"
+}

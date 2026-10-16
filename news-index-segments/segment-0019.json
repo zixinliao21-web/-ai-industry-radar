@@ -48,6 +48,29 @@
       ],
       "deck": "商务部、科技部 10 月 16 日就新增 23 项 AI 相关技术征求出口管理意见，并同步对所列技术出口实施临时登记；官方明确区分模型海外本地部署与 API、SaaS、网页服务，也为开源和部分合作安排设置排除或便利措施。新增信号不是中国禁止 AI 出海，而是跨境 AI 竞争可能同时存在可全球分发的服务层与需要核对技术转移、所有权及授权的能力层；最终目录、指标和执行成本仍未确定。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-16-A8",
+      "date": "2026-10-16",
+      "grade": "A",
+      "title": "Agent 授权开始变成可验证的执行凭证：ServiceNow 把业务上下文送到最后一道关口",
+      "themes": [
+        "Enterprise Agents",
+        "Agent Authorization",
+        "Cryptographic Credentials",
+        "Delegated Authority",
+        "Runtime Enforcement",
+        "ServiceNow",
+        "NVIDIA OpenShell",
+        "Enterprise Context",
+        "CMDB",
+        "Agent Identity",
+        "MCP",
+        "Policy Governance",
+        "Control Points"
+      ],
+      "deck": "ServiceNow 10 月 15 日宣布 AI Passport，拟用签名凭证把 Agent 身份、委托范围、CMDB/GRC 业务上下文与 NVIDIA 执行环境相连。新增信号不是再次强调运行时治理，而是授权决定正尝试从单一平台的内部规则变成跨 Agent、工具与执行点可核验的对象；产品预计第四季度推出，开放互操作与撤权可靠性尚无独立生产证据。",
+      "body_format": "article_text"
     }
   ]
 }
