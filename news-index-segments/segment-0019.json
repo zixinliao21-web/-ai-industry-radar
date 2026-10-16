@@ -1,0 +1,30 @@
+{
+  "schema_version": "3.0",
+  "segment": "0019",
+  "items": [
+    {
+      "id": "2026-10-16-A6",
+      "date": "2026-10-16",
+      "grade": "A",
+      "title": "AI 原生财务软件正被并入既有账本：Intuit 收购 Sequence 的真正控制点",
+      "themes": [
+        "Enterprise AI",
+        "AI-native ERP",
+        "Revenue Management",
+        "Quote-to-Revenue",
+        "Intuit",
+        "Sequence",
+        "Financial System of Record",
+        "Commercial Context",
+        "Usage-based Pricing",
+        "Revenue Recognition",
+        "Workflow Ownership",
+        "AI-native Companies",
+        "Software Consolidation",
+        "Control Points"
+      ],
+      "deck": "Intuit 10 月 15 日签约收购 Sequence，拟把从报价、合同、计费到回款和收入确认的 AI-native 工作流并入 QuickBooks 与 Enterprise Suite。新信号不是财务 Agent 又多一项功能，而是掌握既有账本和会计师渠道的平台正收购合同执行层，争夺“商业条款如何变成可审计收入”的权威链路；交易尚未完成、价格未披露，自动化效果与客户迁移成本也没有独立证据。",
+      "body_format": "article_text"
+    }
+  ]
+}
