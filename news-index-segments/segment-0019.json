@@ -118,6 +118,32 @@
       ],
       "deck": "OpenAI 10 月 14 日披露 Third Moment Research 自报同时运行约一万个 Agent、单次研究持续 36—48 小时，并用外层监督、轨迹诊断与工具优化管理任务。新增信号不是“万 Agent 已证明自治可靠”，而是长时执行的商业价值可能集中在失败分布、任务恢复决策和单位有效成果成本；并发规模、收益与可靠性尚无独立审计。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-17-A2",
+      "date": "2026-10-17",
+      "grade": "A",
+      "title": "企业 Agent 的入口开始受到互操作审查：英国把 Copilot 与组织上下文纳入竞争议程",
+      "themes": [
+        "Enterprise AI",
+        "Enterprise Agents",
+        "Microsoft",
+        "Copilot",
+        "Microsoft 365",
+        "UK CMA",
+        "Digital Markets Regulation",
+        "Interoperability",
+        "Enterprise Context",
+        "Microsoft Graph",
+        "AI Distribution",
+        "Productivity Software",
+        "Agent Work Surface",
+        "Identity and Access",
+        "Platform Competition",
+        "Control Points"
+      ],
+      "deck": "英国 CMA 10 月 16 日拟将微软企业软件生态认定为具有战略市场地位，并把第三方 AI 工具能否与 Microsoft 365 集成、访问组织上下文和获得公平入口列入后续调查。新增信号不是 Copilot 已被判违法或英国已强制开放 API，而是既有办公软件的默认入口、数据与身份集成优势开始成为可被监管审查的 AI 竞争控制点；最终认定与具体措施均未决定。",
+      "body_format": "article_text"
     }
   ]
 }
