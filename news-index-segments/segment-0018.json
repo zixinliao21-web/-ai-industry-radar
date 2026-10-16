@@ -160,6 +160,30 @@
       ],
       "deck": "Proofpoint 与 Varonis 10 月 15 日签署约 63 亿美元全现金收购协议，拟把通信与人员风险、数据发现、权限治理及 Agent 行为监控整合。新增信号不是 AI 安全突然出现新概念，而是大型安全厂商开始为“谁能访问哪些数据、实际如何使用、何时阻断”支付并购溢价；交易尚未交割，现有产品路线也不能证明跨系统实时治理已可用。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-16-A5",
+      "date": "2026-10-16",
+      "grade": "A",
+      "title": "FDE 开始绑定股权与经营权：企业 AI 的价值捕获不一定停在软件合同",
+      "themes": [
+        "Enterprise AI",
+        "FDE",
+        "Forward-Deployed Engineering",
+        "Transformation Equity",
+        "AI-native Companies",
+        "Private Equity",
+        "Aldaron",
+        "Oak Point Partners",
+        "Vertical AI",
+        "Workflow Ownership",
+        "Business Model",
+        "Operational Transformation",
+        "Capital Allocation",
+        "Control Points"
+      ],
+      "deck": "Aldaron 10 月 15 日公开其“Transformation Equity”模式：由投资人和前线 AI 工程师共同参与控股企业的经营改造，首笔交易为今年 3 月取得 Oak Point Partners 多数股权；《华尔街日报》称其首只基金获约 8.85 亿美元承诺。新增信号是 FDE 的收益权可能从软件订阅与项目交付延伸至被改造企业的股权增值；但基金募资不是技术成效，单一被投企业尚不足以证明模式可复制。",
+      "body_format": "article_text"
     }
   ]
 }
