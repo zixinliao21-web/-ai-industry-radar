@@ -52,6 +52,32 @@
       ],
       "deck": "《金融时报》10 月 16 日报道称，Anthropic 约 600 亿美元的 Project North Star 芯片融资中，Blackstone 拟承接约 90 亿美元次级债，票息约 10%、综合收益率高于 10%，为约 1.5GW Google TPU 相关租赁提供资金。新增信号不是 AI 债务第一次分层，而是前沿模型公司本身的长期算力承诺开始被债权人按优先级、租约与信用风险明确标价；交易细节主要来自匿名消息源，尚非已完成融资，更不能把次级债收益率误写成全部 600 亿美元的借款成本。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-17-A7",
+      "date": "2026-10-17",
+      "grade": "A",
+      "title": "AI 算力竞争开始外溢到中性利率：投资先于生产率的时间差正在被央行定价",
+      "themes": [
+        "AI Infrastructure",
+        "Capital Markets",
+        "Monetary Policy",
+        "Neutral Interest Rate",
+        "R-star",
+        "AI Investment",
+        "Financial Stability",
+        "Cost of Capital",
+        "IMF",
+        "Central Banks",
+        "Inflation",
+        "Productivity",
+        "Capital Allocation",
+        "Infrastructure Concentration",
+        "AI Bubble",
+        "Control Points"
+      ],
+      "deck": "10 月 16 日多国央行官员在 IMF 年会讨论 AI 投资对资本需求、通胀和中性利率的影响。新增信号不是“AI 已导致全球加息”，而是 AI 算力扩张的资金竞争正在从云商债务价格延伸至宏观利率和非 AI 部门的融资条件；IMF 早已提出该机制，最新增量是多国货币当局公开将其纳入政策讨论。生产率兑现时间、能源冲击和不可直接观测的中性利率仍使因果判断高度不确定。",
+      "body_format": "article_text"
     }
   ]
 }
