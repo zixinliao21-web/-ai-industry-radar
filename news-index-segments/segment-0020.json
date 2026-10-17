@@ -104,6 +104,28 @@
       ],
       "deck": "彭博 10 月 16 日报道软银考虑收购 Allied Universal：潜在股权估值最高约 180 亿美元，加上约 120 亿美元公开债务，整体交易价值可能接近 300 亿美元。结合软银已签约收购 ABB 机器人业务、已收购商业清洁服务商 GCC 的事实，新信号不是“安保机器人已规模替人”，而是 Physical AI 可能通过收购客户现场、履约合同和运营组织来取得分发与反馈优势；Allied 交易仍属初步考虑，单位经济性和数据权利均未获验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-18-A1",
+      "date": "2026-10-18",
+      "grade": "A",
+      "title": "Agent 运行时长达到员工名义工时六倍：企业 AI 的瓶颈正在转向监督与组织判断",
+      "themes": [
+        "Enterprise AI",
+        "AI Agents",
+        "AI-native Companies",
+        "Anthropic",
+        "Workforce Transformation",
+        "Agent Supervision",
+        "Human Attention",
+        "Meta-work",
+        "Organizational Context",
+        "Productivity Measurement",
+        "Enterprise Workflow",
+        "Control Points"
+      ],
+      "deck": "Anthropic 10 月 16 日披露内部工作研究：截至 8 月，员工主导的交互式 Agent 运行时长约为员工按每周 40 小时估算工时的六倍，交互会话约 80% 的墙钟时间却在等待人类输入；管理 Agent 的“元工作”占比由约 10% 升至 22%，初级技术岗位招聘占比由 27% 降至 9%。新增信号不是六个 Agent 等于六名员工，而是 AI 执行吞吐增长后，组织的注意力、验收、授权与协调开始成为独立瓶颈；这些内部观察不能直接外推为全行业就业替代。",
+      "body_format": "article_text"
     }
   ]
 }
