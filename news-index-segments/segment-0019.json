@@ -169,6 +169,31 @@
       ],
       "deck": "继 JPMorgan 明确限制外部 Agent 进入客户账户后，FT 10 月 16 日报道 Citi 也收紧第三方 AI Agent 访问，Schwab 同期强调拦截未经授权的 Agent。新增信号不是 AI 已造成存款外流，而是金融机构开始把外部 Agent 的访问、交易授权与客户关系控制权变成显式边界；安全责任与低成本存款的商业利益可能并存，仍需区分账户数据读取、授权连接和资金转移。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-17-A4",
+      "date": "2026-10-17",
+      "grade": "A",
+      "title": "前沿模型能在桌面运行，不代表推理控制权已经开放：Meta 与 Apple 的两层边界",
+      "themes": [
+        "Frontier Models",
+        "Meta",
+        "Muse Spark Open",
+        "Open Weights",
+        "Model Licensing",
+        "Model-as-a-Service",
+        "Apple Silicon",
+        "MLX",
+        "Local Inference",
+        "Distributed Inference",
+        "Agent Runtime",
+        "AI Infrastructure",
+        "Inference Economics",
+        "Model Distribution",
+        "Control Points"
+      ],
+      "deck": "Meta 10 月 15 日开放 Muse Spark Open 的 8160 亿参数权重，Apple 同日证明两台 M5 Ultra Mac Studio 可分布式运行；但约 493GB 的量化模型内存、复杂互连和针对高收入 Model-as-a-Service 的单独授权条款，说明“可下载权重”“可在本地运行”“可自由商业托管”是三种不同权利。新增信号是前沿 AI 的开放竞争开始同时受许可、硬件内存与推理运行时约束，而非云平台控制权已经消失。",
+      "body_format": "article_text"
     }
   ]
 }
