@@ -27,6 +27,31 @@
       ],
       "deck": "GTCR 与 Elliott 10 月 15 日签约以约 61 亿美元企业价值收购 CCC Intelligent Solutions。CCC 并非新创 Agent 公司，而是连接超过 3.5 万家保险、维修、汽车与零件企业的理赔协作平台；其最新季度收入同比增长 9.8%，并已在既有流程嵌入 AI。新信号不是“传统 SaaS 已战胜 AI”，而是拥有跨组织业务关系、数据和决策工作流的垂直平台仍能吸引资本，AI 价值捕获可能首先发生在既有交易网络内部；交易未交割，网络效应和 AI 增量回报仍需检验。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-17-A6",
+      "date": "2026-10-17",
+      "grade": "A",
+      "title": "AI 算力的资金成本正在暴露模型公司的信用边界：Anthropic 千亿美元级扩张中的次级债定价",
+      "themes": [
+        "AI Infrastructure",
+        "Anthropic",
+        "Blackstone",
+        "Broadcom",
+        "Google TPU",
+        "Structured Finance",
+        "Junior Debt",
+        "Credit Pricing",
+        "Chip Leasing",
+        "AI Capital Stack",
+        "Model Economics",
+        "Capital Markets",
+        "Infrastructure Concentration",
+        "Control Points",
+        "AI Bubble"
+      ],
+      "deck": "《金融时报》10 月 16 日报道称，Anthropic 约 600 亿美元的 Project North Star 芯片融资中，Blackstone 拟承接约 90 亿美元次级债，票息约 10%、综合收益率高于 10%，为约 1.5GW Google TPU 相关租赁提供资金。新增信号不是 AI 债务第一次分层，而是前沿模型公司本身的长期算力承诺开始被债权人按优先级、租约与信用风险明确标价；交易细节主要来自匿名消息源，尚非已完成融资，更不能把次级债收益率误写成全部 600 亿美元的借款成本。",
+      "body_format": "article_text"
     }
   ]
 }
