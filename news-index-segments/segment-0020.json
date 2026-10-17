@@ -78,6 +78,32 @@
       ],
       "deck": "10 月 16 日多国央行官员在 IMF 年会讨论 AI 投资对资本需求、通胀和中性利率的影响。新增信号不是“AI 已导致全球加息”，而是 AI 算力扩张的资金竞争正在从云商债务价格延伸至宏观利率和非 AI 部门的融资条件；IMF 早已提出该机制，最新增量是多国货币当局公开将其纳入政策讨论。生产率兑现时间、能源冲击和不可直接观测的中性利率仍使因果判断高度不确定。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-17-A8",
+      "date": "2026-10-17",
+      "grade": "A",
+      "title": "Physical AI 的下一层入口可能是现场服务合同：软银考虑买下安保网络",
+      "themes": [
+        "Physical AI",
+        "Robotics",
+        "SoftBank",
+        "Allied Universal",
+        "ABB Robotics",
+        "G4S",
+        "Security Services",
+        "Service Operations",
+        "Field Deployment",
+        "AI-native Companies",
+        "Vertical AI",
+        "Workflow Ownership",
+        "Operational Data",
+        "Distribution",
+        "Capital Allocation",
+        "Control Points"
+      ],
+      "deck": "彭博 10 月 16 日报道软银考虑收购 Allied Universal：潜在股权估值最高约 180 亿美元，加上约 120 亿美元公开债务，整体交易价值可能接近 300 亿美元。结合软银已签约收购 ABB 机器人业务、已收购商业清洁服务商 GCC 的事实，新信号不是“安保机器人已规模替人”，而是 Physical AI 可能通过收购客户现场、履约合同和运营组织来取得分发与反馈优势；Allied 交易仍属初步考虑，单位经济性和数据权利均未获验证。",
+      "body_format": "article_text"
     }
   ]
 }
