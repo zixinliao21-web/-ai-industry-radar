@@ -144,6 +144,31 @@
       ],
       "deck": "英国 CMA 10 月 16 日拟将微软企业软件生态认定为具有战略市场地位，并把第三方 AI 工具能否与 Microsoft 365 集成、访问组织上下文和获得公平入口列入后续调查。新增信号不是 Copilot 已被判违法或英国已强制开放 API，而是既有办公软件的默认入口、数据与身份集成优势开始成为可被监管审查的 AI 竞争控制点；最终认定与具体措施均未决定。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-17-A3",
+      "date": "2026-10-17",
+      "grade": "A",
+      "title": "银行开始拒绝外部 Agent 直接动钱：账户访问权同时是安全边界与存款护城河",
+      "themes": [
+        "Agent Commerce",
+        "Personal Agents",
+        "Banking",
+        "Financial System of Record",
+        "Account Access",
+        "Delegated Authorization",
+        "Deposit Economics",
+        "Open Banking",
+        "AI Identity",
+        "Agent Governance",
+        "JPMorgan",
+        "Citigroup",
+        "Charles Schwab",
+        "Workflow Ownership",
+        "Control Points"
+      ],
+      "deck": "继 JPMorgan 明确限制外部 Agent 进入客户账户后，FT 10 月 16 日报道 Citi 也收紧第三方 AI Agent 访问，Schwab 同期强调拦截未经授权的 Agent。新增信号不是 AI 已造成存款外流，而是金融机构开始把外部 Agent 的访问、交易授权与客户关系控制权变成显式边界；安全责任与低成本存款的商业利益可能并存，仍需区分账户数据读取、授权连接和资金转移。",
+      "body_format": "article_text"
     }
   ]
 }
