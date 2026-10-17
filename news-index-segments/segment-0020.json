@@ -1,0 +1,32 @@
+{
+  "schema_version": "3.0",
+  "segment": "0020",
+  "items": [
+    {
+      "id": "2026-10-17-A5",
+      "date": "2026-10-17",
+      "grade": "A",
+      "title": "AI 时代的垂直软件没有自动失去价值：61 亿美元保险理赔平台交易背后的网络控制权",
+      "themes": [
+        "Vertical AI",
+        "Enterprise AI",
+        "Vertical SaaS",
+        "Insurance Technology",
+        "CCC Intelligent Solutions",
+        "GTCR",
+        "Elliott",
+        "Private Equity",
+        "Claims Workflow",
+        "System of Record",
+        "Enterprise Context",
+        "Cross-enterprise Network",
+        "AI-native Companies",
+        "Software Consolidation",
+        "Workflow Ownership",
+        "Control Points"
+      ],
+      "deck": "GTCR 与 Elliott 10 月 15 日签约以约 61 亿美元企业价值收购 CCC Intelligent Solutions。CCC 并非新创 Agent 公司，而是连接超过 3.5 万家保险、维修、汽车与零件企业的理赔协作平台；其最新季度收入同比增长 9.8%，并已在既有流程嵌入 AI。新信号不是“传统 SaaS 已战胜 AI”，而是拥有跨组织业务关系、数据和决策工作流的垂直平台仍能吸引资本，AI 价值捕获可能首先发生在既有交易网络内部；交易未交割，网络效应和 AI 增量回报仍需检验。",
+      "body_format": "article_text"
+    }
+  ]
+}
