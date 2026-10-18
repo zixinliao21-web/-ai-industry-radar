@@ -1,0 +1,30 @@
+{
+  "schema_version": "3.0",
+  "segment": "0021",
+  "items": [
+    {
+      "id": "2026-10-18-A2",
+      "date": "2026-10-18",
+      "grade": "A",
+      "title": "算力合同不是可交付收入：微软退出 Nscale 英国项目，电网瓶颈开始改写客户承诺",
+      "themes": [
+        "AI Infrastructure",
+        "Nscale",
+        "Microsoft",
+        "Data Center Delivery",
+        "Grid Connection",
+        "Neocloud",
+        "Contracted Backlog",
+        "Customer Concentration",
+        "Project Finance",
+        "AI Capital Expenditure",
+        "Execution Risk",
+        "Infrastructure Economics",
+        "Control Points",
+        "AI Bubble"
+      ],
+      "deck": "10 月 18 日据《每日电讯报》及路透社，微软退出 Nscale 在英国 Loughton 的拟建算力中心协议；微软尚未直接说明原因，而该项目原计划 2027 年交付 23,040 张 GPU，电网供电却可能延至 2030 年代。结合 Nscale 招股文件中 1,034 亿美元合同总值仅 26 亿美元已激活的披露，新信号是算力订单必须经过供电、建设、融资、验收才能变成收入，项目级客户退出使这一转换风险不再只是理论推演；不能将单个项目取消等同于双方全面解约或整个 AI 需求崩塌。",
+      "body_format": "article_text"
+    }
+  ]
+}
