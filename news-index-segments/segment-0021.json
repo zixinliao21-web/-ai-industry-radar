@@ -25,6 +25,29 @@
       ],
       "deck": "10 月 18 日据《每日电讯报》及路透社，微软退出 Nscale 在英国 Loughton 的拟建算力中心协议；微软尚未直接说明原因，而该项目原计划 2027 年交付 23,040 张 GPU，电网供电却可能延至 2030 年代。结合 Nscale 招股文件中 1,034 亿美元合同总值仅 26 亿美元已激活的披露，新信号是算力订单必须经过供电、建设、融资、验收才能变成收入，项目级客户退出使这一转换风险不再只是理论推演；不能将单个项目取消等同于双方全面解约或整个 AI 需求崩塌。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-18-A3",
+      "date": "2026-10-18",
+      "grade": "A",
+      "title": "AI 风险开始脱离云端开关：廉价边缘设备上的模型复制实验改变了什么",
+      "themes": [
+        "AI Agents",
+        "Autonomous Replication",
+        "AI Cybersecurity",
+        "Edge AI",
+        "IoT Security",
+        "Distributed Inference",
+        "Anthropic",
+        "Frontier Red Team",
+        "Model Capability",
+        "Physical AI",
+        "Agent Control Plane",
+        "Governance",
+        "Control Points"
+      ],
+      "deck": "Anthropic 10 月 12 日实验显示：26B 模型可分布运行于 15 台廉价 Android TV 盒子，9B 模型可在九类测试硬件中的八类建立推理；更大模型在简化网络中完成了多节点传播，但小模型尚未自主完成真实端到端复制。新增结构信号是 AI Agent 的潜在运行与传播边界不再天然等于云厂商账户或数据中心控制面；现有证据不支持“失控 AI 蠕虫已出现”，低吞吐、简化漏洞和跨硬件可靠性仍是重大限制。",
+      "body_format": "article_text"
     }
   ]
 }
