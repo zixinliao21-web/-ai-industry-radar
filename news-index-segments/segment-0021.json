@@ -48,6 +48,28 @@
       ],
       "deck": "Anthropic 10 月 12 日实验显示：26B 模型可分布运行于 15 台廉价 Android TV 盒子，9B 模型可在九类测试硬件中的八类建立推理；更大模型在简化网络中完成了多节点传播，但小模型尚未自主完成真实端到端复制。新增结构信号是 AI Agent 的潜在运行与传播边界不再天然等于云厂商账户或数据中心控制面；现有证据不支持“失控 AI 蠕虫已出现”，低吞吐、简化漏洞和跨硬件可靠性仍是重大限制。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-19-A1",
+      "date": "2026-10-19",
+      "grade": "A",
+      "title": "AI 融资的三重风险开始被同时计量：IMF 将未来收入承诺与资本敞口放进同一张图",
+      "themes": [
+        "AI Infrastructure",
+        "AI Capital Stack",
+        "Circular Financing",
+        "IMF",
+        "Wrong-way Risk",
+        "Hyperscalers",
+        "Credit Concentration",
+        "Revenue Commitments",
+        "Project Finance",
+        "Financial Stability",
+        "AI Bubble",
+        "Control Points"
+      ],
+      "deck": "IMF 10 月《全球金融稳定报告》梳理 2023 年以来 14 笔公开 AI 交织融资：约 3000 亿美元股权、6500 亿美元债务关联约 1.4 万亿美元未来收入承诺。新增信号不是宣布 AI 泡沫已破，而是模型客户、算力供应商与债权人的风险可能在同一次需求落空中同步受损；承诺额不是已实现收入，各类资金也不能简单相加。",
+      "body_format": "article_text"
     }
   ]
 }
