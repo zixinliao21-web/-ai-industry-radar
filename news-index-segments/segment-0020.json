@@ -173,6 +173,28 @@
       ],
       "deck": "《金融时报》10 月 18 日报道 Anthropic 正向法律专家寻求 AI Agent 代表用户谈判的规则，并探讨以用户签署文件限定委托范围。结合 Anthropic 的真实物品交易实验和谈判研究，新增信号不是 Agent 已获得法律代理资格，而是交易基础设施开始面对授权之外的忠实义务、让步边界、信息不对称与争议追责；法律安排仍在探索，尚无通用执行标准。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-18-B3",
+      "date": "2026-10-18",
+      "grade": "B",
+      "title": "G7 把 AI 网络攻击放进联合演练：金融 AI 治理开始检验跨机构恢复能力",
+      "themes": [
+        "AI Governance",
+        "Financial Stability",
+        "Cyber Resilience",
+        "G7",
+        "Frontier AI",
+        "Financial Infrastructure",
+        "Incident Response",
+        "Cross-border Coordination",
+        "AI Security",
+        "Systemic Risk",
+        "Operational Resilience",
+        "Control Points"
+      ],
+      "deck": "G7 财长与央行行长 10 月 15 日讨论前沿 AI 对金融网络安全的影响，日本财务大臣 16 日确认将开展相关桌面演练。新信号不是 AI 已导致跨国金融事故，而是国际金融治理正尝试把风险声明转化为跨机构的应急流程测试；演练尚未实施，场景、参与机构与有效性指标仍未公布。",
+      "body_format": "article_text"
     }
   ]
 }
