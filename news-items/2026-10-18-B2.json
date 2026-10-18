@@ -1,0 +1,50 @@
+{
+  "id": "2026-10-18-B2",
+  "date": "2026-10-18",
+  "grade": "B",
+  "title": "Agent 议价开始触碰代理义务：比支付凭证更难的是谁有权替你让步",
+  "themes": [
+    "Agent Commerce",
+    "AI Negotiation",
+    "Delegated Authority",
+    "Principal-Agent Problem",
+    "Consumer Protection",
+    "Fiduciary Duty",
+    "Agent Identity",
+    "Contractual Mandate",
+    "Mechanism Design",
+    "Model Asymmetry",
+    "Legal Infrastructure",
+    "Control Points"
+  ],
+  "deck": "《金融时报》10 月 18 日报道 Anthropic 正向法律专家寻求 AI Agent 代表用户谈判的规则，并探讨以用户签署文件限定委托范围。结合 Anthropic 的真实物品交易实验和谈判研究，新增信号不是 Agent 已获得法律代理资格，而是交易基础设施开始面对授权之外的忠实义务、让步边界、信息不对称与争议追责；法律安排仍在探索，尚无通用执行标准。",
+  "body_format": "article_text",
+  "article_text": "# Agent 议价开始触碰代理义务：比支付凭证更难的是谁有权替你让步\n\n**核心判断｜Agent Commerce 正在从“机器能否完成一笔交易”进入更难的问题：机器代表谁、应该争取什么、可以为了成交牺牲多少利益，以及事后由谁承担后果。** 2026 年 10 月 18 日，《金融时报》报道 Anthropic 正与法律专家讨论 AI Agent 替用户议价、处理纠纷等情境中的代表规则，并考虑让用户通过签署文件明确 Agent 的授权任务与限制。[1] 这仍是媒体披露的探索，不是已经生效的统一法律框架，也不是 Agent 已获得独立法律人格。\n\n过去我们讨论 Agent Commerce 时，重点是身份识别、商家接入、可验证意图、付款授权与交易审计。那些是“有没有资格进入系统、能不能动钱”的必要条件。但**有效授权不等于忠实代表**：即使用户确实授权 Agent 买车、谈薪或协商采购价格，它也可能因为误解偏好、过早泄露底价、采用不合适的谈判策略，合法地做出对用户不利的交易。这个问题不能靠一张支付凭证自动解决。\n\n## FACT｜证据指向三种不同的缺口\n\n**第一，法律委托正在进入模型公司的产品讨论。** 《金融时报》10 月 18 日的报道涉及 Anthropic 向法律专业人士征询 Agent 谈判安排，并讨论以用户签署的文件界定授权范围。[1] 应严格区分：媒体所述的法律咨询与方案探索，尚不等于一项已发布、经法院认可或跨司法辖区可执行的 Agent 委托标准。Freshfields 与 Anthropic 早在 4 月已公开宣布共同开发法律工作流，但该公告针对法律服务、合同审查和多步骤法律任务，**不能据此推断 Freshfields 已负责本次 Agent 议价规则**。[2]\n\n**第二，Agent 已能成交，但“替人争取到好结果”不能只看成交率。** Anthropic 9 月 24 日发表 Project Swap：201 名员工在六个办公室参与图书交换实验，Agent 从简短访谈推断偏好后进入交易场。研究报告称，五分钟访谈推断的书籍排序，在被抽样比较的成对偏好中与参与者本人约有 61% 一致；在模拟交易场中，强模型通常获得更好的配置效率，弱模型与强模型混用时，强模型一方往往更占优势。[3] 这些都是特定、低风险、内部样本的实验观察，不能外推为真实金融或采购市场的收益率。\n\n**第三，谈判策略会改变利益分配，甚至改变信任。** Project Swap 中，按模型推断偏好衡量，被要求强硬争取自身利益的 Agent 略占优势，亲社会型 Agent 偶尔会主动让出更喜欢的书帮助他人；相较之下，模型能力差异对结果的影响更大。[3] MIT Sloan 6 月披露的国际 AI 谈判竞赛研究则发现，友善、共情的谈判风格往往有利于达成协议，AI 特有的提示注入策略也可能影响对手。[4] 一项针对供应链议价的预印本在受控模拟中进一步观察到：不同模型提供者、提示中的耐心设定和是否进行合同利润校验，都会改变成交后的利益分配与错误合同风险。[5] 这些研究的方法和场景不同，不应把其指标直接相加，更不等于已经观察到真实消费者遭受同等损失。\n\n## INFERENCE｜支付授权、谈判授权与忠实义务是三层不同的权利\n\n**第一层是访问与执行权限。** Agent 能否接入商家、读取价格、提交报价、调用支付工具？这里需要身份、授权范围、撤权、审计与平台规则。它回答的是“能否做”。\n\n**第二层是经济委托。** 用户究竟追求最低价、最快交付、长期供应关系、质量稳定，还是对手方公平？允许让步的幅度、保留价格、不得透露的信息和必须回到用户审批的节点，都属于委托内容。它回答的是“为了什么、在什么边界内做”。一次笼统的“帮我买到”授权，并不足以替代这些选择。\n\n**第三层是代理责任。** 当 Agent 在授权范围内作出不合理承诺，或为了提升成交率损害委托人的长期利益时，谁应解释、赔偿、撤销或纠正？模型开发者、Agent 服务商、交易平台、商家与最终用户之间，可能需要不同的责任安排。这里借用法律上的“代理”“忠实义务”作为分析框架，并不意味着现行各国法律已一致认定 AI 本身承担受托人义务；具体责任仍取决于人类主体、合同、适用法与事实。\n\n由此出现一个比“Agent 钱包”更深的控制点：**把用户偏好和风险容忍度转译成可检查的委托边界，并让每次报价、让步与最终成交能够追溯到该边界。** 这既可能成为交易平台的协议能力，也可能被银行、商家、专业代理机构或既有企业系统吸收。它未必会形成独立的通用 Agent 法律操作系统。\n\n模型能力差异又带来分配问题。如果强模型能够系统性地取得更有利的议价结果，而用户无法观察这种差距，那么“人人都能拥有代理人”并不自动意味着市场更公平。未来竞争可能同时围绕模型能力、委托信息质量、对手方识别和交易场所规则展开。对商家而言，接受 Agent 不等于必须接受无限制的自动议价；对消费者而言，价格优势也不是唯一衡量标准。\n\n## 反论｜为什么这还不是新的成熟市场\n\n**其一，核心证据仍停留在低风险实验与媒体披露。** 图书交换不是房产、雇佣、保险理赔或企业长期采购。真实交易有信用、质量、违约、售后、隐私与法律适用问题，不能把模拟市场的成交率视为商业化证据。\n\n**其二，签署授权文件未必解决偏好表达。** 用户可能不知道自己的真实保留价格，或在谈判中改变目标。把复杂偏好压缩成合同文本，可能只是把模糊性从提示词转移到法律语言；模型误解、信息不对称和策略操纵仍会发生。\n\n**其三，责任可能由现有制度承担。** 传统代理法、消费者保护、金融监管、合同法和平台争议解决机制已有可借鉴框架。真正的新需求可能是更好的日志、审批和合约执行，而非另造一套法律身份体系。不同法域对自动订约、撤销和平台责任的规定也可能显著不同。\n\n**其四，最优议价不等于最大限度压价。** 对长期供应商关系、劳资协商或敏感服务而言，单次利益最大化可能损害信任和长期收益。研究中强硬与亲社会策略的差异提醒我们，必须明确评估目标，不能只用“成交额”或“节省金额”奖励 Agent。\n\n## 它改变 VELNAR 什么判断\n\n**强化：** Agent Commerce 的身份、支付、意图与审计层是必要基础，但不是终点。真正的委托执行需要把“用户授权”进一步拆成可检查的经济目标、可披露信息、让步规则、审批阈值与异常责任。这与企业 Agent 中的 Policy、Grounding 和可验证 Workflow 有概念上的相似性，但业务约束与法律责任并不相同。\n\n**新增：** 研究 Agent 商业化时，除成功交易数与支付成功率，还应关注委托偏差率、未经确认的让步比例、超授权承诺、纠纷撤销率、用户事后满意度，以及不同模型代理造成的利益分配差异。观察法律服务商、支付网络、商家平台与模型公司的哪一方真正拥有这些可执行证据。\n\n**不改变：** 当前 VELNAR Sales MVP 不应因此新增自动谈价、法律代理、通用授权凭证或 Agent-to-Agent 市场。现阶段仍应先把客户需求、价格证据、订单状态、库存承诺与人工确认做成可靠的真实业务闭环。\n\n## PREDICTION｜未来 6—12 个月如何证伪\n\n如果这条方向成立，我们可能看到更多真实商家或金融机构把 Agent 议价委托细分为“可查询、可报价、可接受、可支付”四类权限，并对超限让步和争议保留可审计记录；也可能出现专业行业的 Agent 谈判条款模板。反过来，如果真实用户很少愿意让 Agent 自主签约，或主要平台继续要求每笔关键交易人工确认，所谓“自主代理义务层”就可能长期停留在实验与合规咨询，而不会形成独立大市场。\n\n**值得继续讨论的问题：** 当两个 Agent 都持有合法授权，却因为模型能力和策略差异让一方持续吃亏时，平台应该追求交易自由、最低限度公平，还是要求对用户揭示代理质量差异？谁有权设定这条规则，又由谁为错误承担责任？\n\n## 证据来源\n\n[1] Financial Times，2026-10-18，*Anthropic turns to lawyers to help AI agents strike deals*（关于法律咨询与可能的用户签署委托文件的媒体报道；非已生效法律制度）。https://www.ft.com/content/f7c26ac0-f5f2-443a-86b2-39d62f7920a9\n\n[2] Freshfields，2026-04-23，*Freshfields and Anthropic Team Up to Co-Build AI Legal Workflows*（仅证实既有法律工作流合作，不证实本次谈判法律咨询的具体承办方）。https://www.freshfields.com/en/our-thinking/news/news-search/2026/04/freshfields-and-anthropic-team-up-to-co-build-ai-legal-workflows-deploying-claude-across-the-firm-globally\n\n[3] Anthropic，2026-09-24，*Project Swap: What happens when agents trade for us?*（201 名员工图书交换实验、偏好推断、模型与策略对照）。https://www.anthropic.com/research/project-swap\n\n[4] MIT Sloan，2026-06-08，*Even AI won’t tolerate a ruthless negotiator*（谈判竞赛研究摘要及局限）。https://mitsloan.mit.edu/press/even-ai-wont-tolerate-a-ruthless-negotiator\n\n[5] Chen Liang、Fasheng Xu，2026-08，*When LLM Agents Negotiate: Private Information and Dynamic Bargaining in Supply Chains*（arXiv 预印本、模拟供应链合同；未经真实市场外部验证）。https://arxiv.org/abs/2608.07538",
+  "sources": [
+    {
+      "title": "Financial Times | Anthropic turns to lawyers to help AI agents strike deals",
+      "url": "https://www.ft.com/content/f7c26ac0-f5f2-443a-86b2-39d62f7920a9",
+      "date": "2026-10-18"
+    },
+    {
+      "title": "Freshfields | Freshfields and Anthropic Team Up to Co-Build AI Legal Workflows",
+      "url": "https://www.freshfields.com/en/our-thinking/news/news-search/2026/04/freshfields-and-anthropic-team-up-to-co-build-ai-legal-workflows-deploying-claude-across-the-firm-globally",
+      "date": "2026-04-23"
+    },
+    {
+      "title": "Anthropic | Project Swap: What happens when agents trade for us?",
+      "url": "https://www.anthropic.com/research/project-swap",
+      "date": "2026-09-24"
+    },
+    {
+      "title": "MIT Sloan | Even AI won’t tolerate a ruthless negotiator",
+      "url": "https://mitsloan.mit.edu/press/even-ai-wont-tolerate-a-ruthless-negotiator",
+      "date": "2026-06-08"
+    },
+    {
+      "title": "arXiv | When LLM Agents Negotiate",
+      "url": "https://arxiv.org/abs/2608.07538",
+      "date": "2026-08-02"
+    }
+  ]
+}

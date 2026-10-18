@@ -151,6 +151,28 @@
       ],
       "deck": "BIS Innovation Hub 与加拿大、瑞士央行正在开展 Project Agenti，让多个 AI Agent 在模拟的实时全额结算系统中扮演银行，研究支付排序、流动性缓冲与连锁阻塞。新增信号不是央行允许 AI 自主转账，而是监管机构开始把 Agent 的个体决策如何累积成支付网络风险作为可实验的问题；项目仍在研究阶段，尚无真实部署、系统性风险量化结果或商业采用证据。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-18-B2",
+      "date": "2026-10-18",
+      "grade": "B",
+      "title": "Agent 议价开始触碰代理义务：比支付凭证更难的是谁有权替你让步",
+      "themes": [
+        "Agent Commerce",
+        "AI Negotiation",
+        "Delegated Authority",
+        "Principal-Agent Problem",
+        "Consumer Protection",
+        "Fiduciary Duty",
+        "Agent Identity",
+        "Contractual Mandate",
+        "Mechanism Design",
+        "Model Asymmetry",
+        "Legal Infrastructure",
+        "Control Points"
+      ],
+      "deck": "《金融时报》10 月 18 日报道 Anthropic 正向法律专家寻求 AI Agent 代表用户谈判的规则，并探讨以用户签署文件限定委托范围。结合 Anthropic 的真实物品交易实验和谈判研究，新增信号不是 Agent 已获得法律代理资格，而是交易基础设施开始面对授权之外的忠实义务、让步边界、信息不对称与争议追责；法律安排仍在探索，尚无通用执行标准。",
+      "body_format": "article_text"
     }
   ]
 }
