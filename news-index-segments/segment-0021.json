@@ -70,6 +70,28 @@
       ],
       "deck": "IMF 10 月《全球金融稳定报告》梳理 2023 年以来 14 笔公开 AI 交织融资：约 3000 亿美元股权、6500 亿美元债务关联约 1.4 万亿美元未来收入承诺。新增信号不是宣布 AI 泡沫已破，而是模型客户、算力供应商与债权人的风险可能在同一次需求落空中同步受损；承诺额不是已实现收入，各类资金也不能简单相加。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-19-B1",
+      "date": "2026-10-19",
+      "grade": "B",
+      "title": "前沿 AI 开始预留未来股权收益给公众：公益基金不等于独立治理权",
+      "themes": [
+        "Frontier AI",
+        "Anthropic",
+        "Public Benefit Fund",
+        "AI Governance",
+        "Corporate Governance",
+        "Equity Allocation",
+        "AI Economic Distribution",
+        "Public Benefit Corporation",
+        "Long-Term Benefit Trust",
+        "IPO",
+        "Social License",
+        "Control Points"
+      ],
+      "deck": "Anthropic 10 月 18 日提出，经股东批准后向全资公益基金配置 5% 公司股份，并可在估值每上涨 50% 时由董事会酌情增加 2%。新信号是前沿模型公司的社会影响开始尝试以股权收益分配机制回应，而不只停留在公益预算；但股份尚未获批、增配并非自动，基金仍由公司全资拥有，不能把经济受益安排误写成公众获得模型发布或公司治理的否决权。",
+      "body_format": "article_text"
     }
   ]
 }
