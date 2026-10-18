@@ -92,6 +92,28 @@
       ],
       "deck": "Anthropic 10 月 18 日提出，经股东批准后向全资公益基金配置 5% 公司股份，并可在估值每上涨 50% 时由董事会酌情增加 2%。新信号是前沿模型公司的社会影响开始尝试以股权收益分配机制回应，而不只停留在公益预算；但股份尚未获批、增配并非自动，基金仍由公司全资拥有，不能把经济受益安排误写成公众获得模型发布或公司治理的否决权。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-19-B2",
+      "date": "2026-10-19",
+      "grade": "B",
+      "title": "Physical AI 进入工厂的真正门槛是跨现场复制：13 座船厂的部署实验",
+      "themes": [
+        "Physical AI",
+        "Industrial AI",
+        "Shipbuilding",
+        "Fincantieri",
+        "Robotics",
+        "FDE",
+        "Manufacturing",
+        "Field Deployment",
+        "Process Integration",
+        "Digital Twin",
+        "Deployment Replicability",
+        "Control Points"
+      ],
+      "deck": "Fincantieri 10 月 14 日披露，BOOST² 已让 450 多名员工参与覆盖 13 座船厂的技术验证，部分方案已在现场运行，下一步转向跨厂复制。增量不是又有一家制造商展示机器人，而是工业 AI 正把现场需求、工艺验证与可复制部署组织成长期工程；但参与范围不等于实际部署规模，项目尚未披露生产率、停机、安全或投资回报的独立量化结果。",
+      "body_format": "article_text"
     }
   ]
 }
