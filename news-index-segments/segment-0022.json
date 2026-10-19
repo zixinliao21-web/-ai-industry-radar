@@ -70,6 +70,30 @@
       ],
       "deck": "AWS 10 月 19 日宣布将于 20 日以 Apache 2.0 开源 TorchNeuron，让现有 PyTorch 代码通过设备配置切换运行于 Trainium2/3，并推进 PyTorch 上游硬件中立化。真正的结构信号是自研芯片厂商开始争夺开发者默认软件接口，而非仅比较算力；但该技术 2025 年已处私有测试，开源尚待兑现，代码可运行也不等于性能、成本和生产迁移已被独立证明。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-20-A1",
+      "date": "2026-10-20",
+      "grade": "A",
+      "title": "算力主权不只意味着换 GPU：Tenstorrent 正把芯片设计权与服务器一起出售",
+      "themes": [
+        "AI Infrastructure",
+        "AI Chips",
+        "Tenstorrent",
+        "RISC-V",
+        "Semiconductor IP",
+        "Sovereign AI",
+        "Open Source",
+        "Hardware Ownership",
+        "Custom Silicon",
+        "AI Inference",
+        "Chiplet",
+        "CUDA Ecosystem",
+        "Control Points",
+        "AI Economics"
+      ],
+      "deck": "Tenstorrent 10 月 19 日完成 15 亿美元 E 轮融资、投后估值 62 亿美元，计划扩产 Galaxy 服务器并推进向 Samsung、LG 等客户许可的 RISC-V CPU 与 Tensix AI 核 IP。新增结构信号不是 NVIDIA 已被替代，而是 AI 算力竞争正在分化为购买计算服务、部署自有设备与获得可定制芯片设计权三种不同控制层；IP 许可不等于完全自主制造，开源软件也不保证生产级性能与经济性。",
+      "body_format": "article_text"
     }
   ]
 }
