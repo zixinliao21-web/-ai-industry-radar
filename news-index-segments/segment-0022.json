@@ -94,6 +94,28 @@
       ],
       "deck": "Tenstorrent 10 月 19 日完成 15 亿美元 E 轮融资、投后估值 62 亿美元，计划扩产 Galaxy 服务器并推进向 Samsung、LG 等客户许可的 RISC-V CPU 与 Tensix AI 核 IP。新增结构信号不是 NVIDIA 已被替代，而是 AI 算力竞争正在分化为购买计算服务、部署自有设备与获得可定制芯片设计权三种不同控制层；IP 许可不等于完全自主制造，开源软件也不保证生产级性能与经济性。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-20-A2",
+      "date": "2026-10-20",
+      "grade": "A",
+      "title": "模型来源正在成为采购否决项：美国 DeepSeek 排除令触及第三方 AI 产品",
+      "themes": [
+        "Sovereign AI",
+        "Model Provenance",
+        "AI Procurement",
+        "FASCSA",
+        "DeepSeek",
+        "Enterprise AI",
+        "Third-party AI Software",
+        "AI Supply Chain",
+        "Government IT",
+        "Model Governance",
+        "Cross-border AI",
+        "Control Points"
+      ],
+      "deck": "美国 DHS 一份 7 月签发、10 月 19 日公开的 FASCSA 命令，要求联邦民事机构排除 DeepSeek 及其关联方的采购，并移除包括使用 DeepSeek 实现开发的第三方产品与服务。新增控制点不是‘美国全面禁用中国开源模型’，而是受监管采购开始穿透应用品牌审查模型技术来源；适用范围、例外机制与本地部署风险必须分开。",
+      "body_format": "article_text"
     }
   ]
 }
