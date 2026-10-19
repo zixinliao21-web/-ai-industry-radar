@@ -22,6 +22,32 @@
       ],
       "deck": "路透社 10 月 19 日核查 NorForge 观察到的 AI Agent 攻击：一名攻击者以约 5000 美元模型调用成本，对 1200 多个网站发起尝试，报告称超过 100 个网站被入侵；9 月 Gambit 也公布另一批低成本攻击证据。新增信号不是所有 Agent 都能自动攻破企业，而是低边际成本、长时间试错与跨目标并发正改变攻防速度，迫使企业从单纯修补漏洞转向持续检测与可验证恢复。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-19-A4",
+      "date": "2026-10-19",
+      "grade": "A",
+      "title": "Agent 不只需要企业上下文，还需要知道它何时失效：Boomi 收购 Elementary 的控制点",
+      "themes": [
+        "Enterprise AI",
+        "Enterprise Context",
+        "Data Observability",
+        "Data Reliability",
+        "Boomi",
+        "Elementary Data",
+        "MCP",
+        "Data Lineage",
+        "Semantic Authority",
+        "Agent Grounding",
+        "Data Governance",
+        "iPaaS",
+        "Enterprise Software",
+        "M&A",
+        "Agent Runtime",
+        "Control Points"
+      ],
+      "deck": "Boomi 10 月 19 日宣布收购数据可观测性厂商 Elementary，将数据新鲜度、列级血缘、质量事件和 MCP 可查询健康状态纳入其企业集成平台。结合已收购的 Rivery 与 Lunar.dev，增量不是又一套 Agent，而是“数据如何流动、是否可靠、Agent 能否安全调用”开始被同一平台组织；但下载量不是付费采用，健康信号不等于语义权威或执行阻断，整合成效尚无独立验证。",
+      "body_format": "article_text"
     }
   ]
 }
