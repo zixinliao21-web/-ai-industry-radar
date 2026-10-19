@@ -136,6 +136,30 @@
       ],
       "deck": "IBM Consulting 披露约 6,000 个 Agent 已嵌入 150 多条内部工作流，平台上有 2,000 多个在运行项目、500 多项客户项目部署；但负责人也承认部分 Agent 会带来负生产率，并设实验室对比有人/无 Agent 的工作流。新证据不是服务商已实现自治运营，而是企业 AI 的竞争正在从 Agent 数量转向可归因的端到端生产率与部署复用；公开指标仍是公司口径，尚无独立审计。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-19-B4",
+      "date": "2026-10-19",
+      "grade": "B",
+      "title": "证明 Agent 背后是真人，不等于授权它转账：World 把人类凭证带进金融场景",
+      "themes": [
+        "Agent Commerce",
+        "World ID",
+        "Agent Identity",
+        "Proof of Human",
+        "Delegated Authority",
+        "Banking AI",
+        "Financial Services",
+        "AgentKit",
+        "Identity Infrastructure",
+        "Privacy",
+        "KYC",
+        "Transaction Authorization",
+        "Trust Infrastructure",
+        "Control Points"
+      ],
+      "deck": "World 10 月 18 日将 World ID、AgentKit 与 Zoom 人类验证打包面向银行及金融机构，并公布多家设计伙伴。新增的 B 级证据不是银行已经接受自主 Agent 交易，而是“背后存在唯一真人”的可验证凭证正尝试进入金融工作流；AgentKit 仍为 beta，未披露正式银行采用或独立风控成效，真人证明也不能替代交易授权、KYC 与责任归属。",
+      "body_format": "article_text"
     }
   ]
 }
