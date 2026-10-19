@@ -1,0 +1,27 @@
+{
+  "schema_version": "3.0",
+  "segment": "0022",
+  "items": [
+    {
+      "id": "2026-10-19-A3",
+      "date": "2026-10-19",
+      "grade": "A",
+      "title": "当攻击者可以用几十美元持续试错：Agent 正把网络攻防改写成吞吐量竞争",
+      "themes": [
+        "Agent Security",
+        "Cybersecurity",
+        "Autonomous Agents",
+        "Attack Economics",
+        "Enterprise Risk",
+        "Operational Resilience",
+        "Agent Harness",
+        "Runtime Governance",
+        "Security Control Points",
+        "Incident Response",
+        "AI Infrastructure"
+      ],
+      "deck": "路透社 10 月 19 日核查 NorForge 观察到的 AI Agent 攻击：一名攻击者以约 5000 美元模型调用成本，对 1200 多个网站发起尝试，报告称超过 100 个网站被入侵；9 月 Gambit 也公布另一批低成本攻击证据。新增信号不是所有 Agent 都能自动攻破企业，而是低边际成本、长时间试错与跨目标并发正改变攻防速度，迫使企业从单纯修补漏洞转向持续检测与可验证恢复。",
+      "body_format": "article_text"
+    }
+  ]
+}
