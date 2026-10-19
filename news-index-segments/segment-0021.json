@@ -114,6 +114,28 @@
       ],
       "deck": "Fincantieri 10 月 14 日披露，BOOST² 已让 450 多名员工参与覆盖 13 座船厂的技术验证，部分方案已在现场运行，下一步转向跨厂复制。增量不是又有一家制造商展示机器人，而是工业 AI 正把现场需求、工艺验证与可复制部署组织成长期工程；但参与范围不等于实际部署规模，项目尚未披露生产率、停机、安全或投资回报的独立量化结果。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-19-B3",
+      "date": "2026-10-19",
+      "grade": "B",
+      "title": "六千个 Agent 不等于生产率：IBM 把企业 AI 的验收对象移向工作流对照实验",
+      "themes": [
+        "Enterprise AI",
+        "Agent Economics",
+        "IBM Consulting",
+        "IT Services",
+        "Workflow Evaluation",
+        "FDE",
+        "Productivity Measurement",
+        "Human-Agent Collaboration",
+        "Enterprise Deployment",
+        "Services Economics",
+        "Agent Governance",
+        "Control Points"
+      ],
+      "deck": "IBM Consulting 披露约 6,000 个 Agent 已嵌入 150 多条内部工作流，平台上有 2,000 多个在运行项目、500 多项客户项目部署；但负责人也承认部分 Agent 会带来负生产率，并设实验室对比有人/无 Agent 的工作流。新证据不是服务商已实现自治运营，而是企业 AI 的竞争正在从 Agent 数量转向可归因的端到端生产率与部署复用；公开指标仍是公司口径，尚无独立审计。",
+      "body_format": "article_text"
     }
   ]
 }
