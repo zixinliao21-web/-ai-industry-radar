@@ -160,6 +160,30 @@
       ],
       "deck": "World 10 月 18 日将 World ID、AgentKit 与 Zoom 人类验证打包面向银行及金融机构，并公布多家设计伙伴。新增的 B 级证据不是银行已经接受自主 Agent 交易，而是“背后存在唯一真人”的可验证凭证正尝试进入金融工作流；AgentKit 仍为 beta，未披露正式银行采用或独立风控成效，真人证明也不能替代交易授权、KYC 与责任归属。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-19-A2",
+      "date": "2026-10-19",
+      "grade": "A",
+      "title": "模型公司开始向专业软件付费学会干活：芯片设计的验证权没有被 AI 吞掉",
+      "themes": [
+        "Vertical AI",
+        "Enterprise AI",
+        "Specialized Models",
+        "EDA",
+        "Synopsys",
+        "OpenAI",
+        "Domain Tools",
+        "Ground Truth",
+        "Verification",
+        "Semiconductor Design",
+        "Revenue Sharing",
+        "Software Control Points",
+        "Agent Harness",
+        "Engineering AI"
+      ],
+      "deck": "OpenAI 与 Synopsys 9 月 30 日签署多年合作：模型公司许可专业 EDA 工具、联合训练可操作设计软件的 GPT-Synopsys，并约定联合销售与收入分享。增量不是“AI 已能自动设计芯片”，而是高价值行业软件可能同时成为模型的训练工具、执行环境和最终验证权威；具体生产率、定价公式与客户规模尚未得到独立验证。",
+      "body_format": "article_text"
     }
   ]
 }
