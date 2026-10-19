@@ -48,6 +48,28 @@
       ],
       "deck": "Boomi 10 月 19 日宣布收购数据可观测性厂商 Elementary，将数据新鲜度、列级血缘、质量事件和 MCP 可查询健康状态纳入其企业集成平台。结合已收购的 Rivery 与 Lunar.dev，增量不是又一套 Agent，而是“数据如何流动、是否可靠、Agent 能否安全调用”开始被同一平台组织；但下载量不是付费采用，健康信号不等于语义权威或执行阻断，整合成效尚无独立验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-19-A5",
+      "date": "2026-10-19",
+      "grade": "A",
+      "title": "AI 芯片争夺正在上移到 PyTorch 接口：AWS 开放 TorchNeuron，不等于 CUDA 护城河已瓦解",
+      "themes": [
+        "AI Infrastructure",
+        "AI Chips",
+        "PyTorch",
+        "TorchNeuron",
+        "AWS Trainium",
+        "CUDA Ecosystem",
+        "Open Source",
+        "Developer Ecosystem",
+        "Hardware Portability",
+        "Cloud Control Points",
+        "AI Economics",
+        "Platform Competition"
+      ],
+      "deck": "AWS 10 月 19 日宣布将于 20 日以 Apache 2.0 开源 TorchNeuron，让现有 PyTorch 代码通过设备配置切换运行于 Trainium2/3，并推进 PyTorch 上游硬件中立化。真正的结构信号是自研芯片厂商开始争夺开发者默认软件接口，而非仅比较算力；但该技术 2025 年已处私有测试，开源尚待兑现，代码可运行也不等于性能、成本和生产迁移已被独立证明。",
+      "body_format": "article_text"
     }
   ]
 }
