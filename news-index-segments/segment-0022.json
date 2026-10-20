@@ -141,6 +141,28 @@
       ],
       "deck": "微软 10 月 19 日扩展 Project Perception，提出跨身份、数据、端点、网络与运行时的 Dynamic Agent Risk、Dynamic Permissions 和 Dynamic Conditional Access，并披露本地 Agent 发现支持扩展至 60 种。新增信号是传统企业安全栈试图把 Agent 的授权从静态配置改为持续风险驱动的行动约束；但“能发现 60 种”不等于“能实时阻断 60 种”，具体执行覆盖、产品可用性和误拦截成本仍待验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-20-B1",
+      "date": "2026-10-20",
+      "grade": "B",
+      "title": "Agent 订单不再被默认当成恶意机器人：商家风控成为 Agent Commerce 的真实准入关口",
+      "themes": [
+        "Agent Commerce",
+        "Merchant Acceptance",
+        "Fraud Decisioning",
+        "Know Your Agent",
+        "Skyfire",
+        "Forter",
+        "Jomashop",
+        "Checkout Conversion",
+        "Agent Identity",
+        "Merchant Control Points",
+        "Transaction Risk",
+        "Agent Authorization"
+      ],
+      "deck": "Skyfire 与 Forter 10 月 19 日披露，将 KYA 身份凭证接入商家既有交易风控；Jomashop 试点称 Agent 结账成功率接近 100% 且未增加拒付，Forter 网络内 Agent 订单较 8 月增长逾四倍。新增 B 级证据是实际商家准入与转化，而非又一个协议演示；样本、基数、独立审计与长期欺诈损失均未披露。",
+      "body_format": "article_text"
     }
   ]
 }
