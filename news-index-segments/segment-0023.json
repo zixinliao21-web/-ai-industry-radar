@@ -26,6 +26,30 @@
       ],
       "deck": "Salesforce 10 月 20 日签署约 56.6 亿美元企业价值的 Braze 收购协议，瞄准跨 App、网页、邮件与消息渠道的实时事件、决策和触达闭环。结构信号不是 Agent 已替代营销 SaaS，而是 CRM 平台正在收购能把客户行为转成行动并反馈结果的执行层；交易尚未完成，整合收益与 AI 增量均待验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-20-A5",
+      "date": "2026-10-20",
+      "grade": "A",
+      "title": "欧洲 AI 算力的悖论：已有 110MW 接电余量，主权竞争仍在筹建新园区",
+      "themes": [
+        "AI Infrastructure",
+        "Sovereign AI",
+        "OVHcloud",
+        "European Cloud",
+        "Power Capacity",
+        "Data Center Economics",
+        "AI Gigafactories",
+        "Cloud Utilization",
+        "Enterprise AI",
+        "Vertical AI",
+        "AI Capital Discipline",
+        "Customer Demand",
+        "Model Platform",
+        "Infrastructure Control Points"
+      ],
+      "deck": "OVHcloud 10 月 20 日披露已接入 250MW 电力容量，其中 140MW 在运营，约 110MW 留有增长空间；同期首次实现上市以来正的杠杆自由现金流，并准备把收购的垂直模型、语音与加密能力整合成企业 AI 产品。新增信号不是欧洲 GPU 供给过剩，而是 AI 主权基础设施的竞争正分化为“有电、有客户、能交付模型服务、能赚到现金”四道门槛；接电余量不能等同于可立即出售的 AI 算力。",
+      "body_format": "article_text"
     }
   ]
 }
