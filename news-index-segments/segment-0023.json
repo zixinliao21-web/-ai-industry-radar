@@ -1,0 +1,31 @@
+{
+  "schema_version": "3.0",
+  "segment": "0023",
+  "items": [
+    {
+      "id": "2026-10-20-A4",
+      "date": "2026-10-20",
+      "grade": "A",
+      "title": "Salesforce 买下实时客户行为闭环：Agent 的护城河不只在 CRM 记录里",
+      "themes": [
+        "Enterprise AI",
+        "Enterprise Software",
+        "Salesforce",
+        "Braze",
+        "Agentforce",
+        "CRM",
+        "Customer Context",
+        "Real-time Events",
+        "Customer Engagement",
+        "Marketing Automation",
+        "SaaS M&A",
+        "Workflow Execution",
+        "Agent Control Points",
+        "Data 360",
+        "Outcome Measurement"
+      ],
+      "deck": "Salesforce 10 月 20 日签署约 56.6 亿美元企业价值的 Braze 收购协议，瞄准跨 App、网页、邮件与消息渠道的实时事件、决策和触达闭环。结构信号不是 Agent 已替代营销 SaaS，而是 CRM 平台正在收购能把客户行为转成行动并反馈结果的执行层；交易尚未完成，整合收益与 AI 增量均待验证。",
+      "body_format": "article_text"
+    }
+  ]
+}
