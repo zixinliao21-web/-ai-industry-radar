@@ -163,6 +163,30 @@
       ],
       "deck": "Skyfire 与 Forter 10 月 19 日披露，将 KYA 身份凭证接入商家既有交易风控；Jomashop 试点称 Agent 结账成功率接近 100% 且未增加拒付，Forter 网络内 Agent 订单较 8 月增长逾四倍。新增 B 级证据是实际商家准入与转化，而非又一个协议演示；样本、基数、独立审计与长期欺诈损失均未披露。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-20-B2",
+      "date": "2026-10-20",
+      "grade": "B",
+      "title": "模型厂商开始吸收“可验证执行”团队：Agent 的可信证据不等于行为正确",
+      "themes": [
+        "Enterprise AI",
+        "Agent Security",
+        "Confidential Computing",
+        "Verifiable AI",
+        "Anthropic",
+        "OPAQUE",
+        "AgenTrust",
+        "Cryptographic Attestation",
+        "Trusted Execution Environment",
+        "Agent Governance",
+        "Agent Identity",
+        "Runtime Enforcement",
+        "Open Standards",
+        "Control Points"
+      ],
+      "deck": "OPAQUE 10 月 13 日宣布团队加入 Anthropic，官网随后确认公司停止运营，其 TRACE、Confidential MCP、Agent Manifest 等开放项目由独立 AgenTrust 延续。新信号不是 Anthropic 已提供端到端 Agent 安全证明，而是硬件证明、签名执行记录与模型平台的结合正在成为战略资产；公开技术报告同时明确：签名配置不证明实际执行、软件模拟不等于硬件验证，证据链也不能代替业务授权。",
+      "body_format": "article_text"
     }
   ]
 }

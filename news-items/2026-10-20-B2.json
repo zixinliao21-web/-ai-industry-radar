@@ -1,0 +1,62 @@
+{
+  "id": "2026-10-20-B2",
+  "date": "2026-10-20",
+  "grade": "B",
+  "title": "模型厂商开始吸收“可验证执行”团队：Agent 的可信证据不等于行为正确",
+  "themes": [
+    "Enterprise AI",
+    "Agent Security",
+    "Confidential Computing",
+    "Verifiable AI",
+    "Anthropic",
+    "OPAQUE",
+    "AgenTrust",
+    "Cryptographic Attestation",
+    "Trusted Execution Environment",
+    "Agent Governance",
+    "Agent Identity",
+    "Runtime Enforcement",
+    "Open Standards",
+    "Control Points"
+  ],
+  "deck": "OPAQUE 10 月 13 日宣布团队加入 Anthropic，官网随后确认公司停止运营，其 TRACE、Confidential MCP、Agent Manifest 等开放项目由独立 AgenTrust 延续。新信号不是 Anthropic 已提供端到端 Agent 安全证明，而是硬件证明、签名执行记录与模型平台的结合正在成为战略资产；公开技术报告同时明确：签名配置不证明实际执行、软件模拟不等于硬件验证，证据链也不能代替业务授权。",
+  "body_format": "article_text",
+  "article_text": "# 模型厂商开始吸收“可验证执行”团队：Agent 的可信证据不等于行为正确\n\n**核心判断｜当 Agent 从回答问题走向访问敏感数据、调用企业工具和执行交易，安全竞争不再只围绕“模型是否遵守指令”，还围绕“谁能出示可被第三方核验的执行证据”。** OPAQUE 在 2026 年 10 月 13 日确认团队加入 Anthropic；其官网随后说明公司停止运营，部分开放规范由独立的 AgenTrust 继续维护。[1][2][7] 这是一条 **B 级、值得保留的产业结构证据**：前沿模型公司开始吸收原本位于外部的机密计算与可验证执行人才和技术能力。但没有公开证据表明 Anthropic 已把这些技术完整部署到 Claude 的全部 Agent 产品，更不能把密码学证明直接理解成“Agent 的业务决策必然正确”。\n\n## 一、FACT｜变化发生在团队归属与证据技术的组织边界\n\n**第一，OPAQUE 的官方公告确认的是团队转入 Anthropic。** 10 月 13 日，OPAQUE 表示其团队将加入 Anthropic，延续从 UC Berkeley RISELab 起步的机密计算与可验证 AI 研究。[1] 公司首页进一步写明 OPAQUE Systems 正停止运营，开放项目仍继续。[2] 多家媒体将交易描述为收购或技术许可与人才吸收，但官方公告没有公布交易价格、股权收购结构、完整知识产权转移清单或 Anthropic 产品整合时间表。[1][6] 因而准确表述是“团队加入、原公司停止运营”，不能自行断言这是某一金额的完整股权并购。\n\n**第二，OPAQUE 原先试图解决两个不同的信任问题。** 机密计算（Confidential Computing）强调在数据被使用时，通过受保护的执行环境限制基础设施运营方或其他软件读取敏感内容；可验证 AI 则进一步尝试提供“哪份代码、模型、策略和工具在什么环境下运行”的证据。[1][2] 这与传统输入输出过滤器不同：过滤器试图判断内容是否危险，执行证明则试图让审计方验证某些被约定的条件是否真的满足。两者并不互相替代。\n\n**第三，开放项目没有被简单地等同于 Anthropic 私有资产。** OPAQUE 官网明确列出 Weight Custody Manifest、Agent Manifest、Confidential MCP、Confidential A2A 与 TRACE 等项目由 AgenTrust 延续，并称保留既有许可证。[2] AgenTrust 自述为独立、无单一企业出资或控制的开源项目。[7] 这是一个重要边界：人才与商业团队可以进入模型平台，而规范、验证工具和第三方实现仍可能在开放生态中发展。独立性目前主要依据项目自身的治理声明，不能当成已经完成外部审计的事实。\n\n**第四，公开技术资料主动揭示了“证据”的局限。** AgenTrust 的 cMCP 版本 2 报告描述了在 MCP 工具调用前评估策略、记录策略哈希与签名调用证据的设计，但其测试包含软件模拟，未证明完整的硬件 TEE 验证，也未证明每一次工具调用都被捕获。[3] Agent Manifest 版本 2 将模型、提示词、工具、策略等组成签名清单，却明确指出“签名清单本身不能证明运行时确实使用了这些组件”；该版本还记录过早期验证器接受伪造人工批准的问题，后续修订才增加相关检查。[4] Weight Custody Manifest 的报告同样指出特定硬件配置和特权运营者威胁模型下的保护限制。[5] 这些限制比“可信 AI 已经实现”的营销表达更有研究价值。\n\n## 二、INFERENCE｜谁在争夺 Agent 的“证据权”\n\n过去的企业 Agent 治理通常从四种能力切入：身份登记、策略定义、运行时阻断、事后日志。此次信号提示第五种竞争对象正在出现：**证据的生成与独立验证**。\n\n其因果链可以分为三层。\n\n**第一层：行为记录不能只依赖 Agent 自己的口述。** 模型可以生成一段看似合理的执行说明，但它既可能遗漏工具调用，也可能无法区分“计划调用”与“已经调用”。即使业务系统保存日志，日志完整性仍取决于记录组件的权限、部署方式与可信边界。签名收据、不可随意篡改的记录和硬件证明试图降低这种信息不对称。[3][7]\n\n**第二层：验证方需要知道自己究竟验证了什么。** 一份通过密码学验证的收据，最多能在特定信任假设下支持“某个密钥签署了某份记录”“某个受测执行环境加载了某些组件”等有限主张。它不能独立证明模型的业务理解正确、工具调用符合客户真实意图、没有绕过未被覆盖的执行路径，更不能证明合同、付款或订单在业务上应当发生。[3][4][5] 这意味着“可验证执行”与“正确执行”之间仍存在 Policy、业务事实、授权来源、完整性覆盖和事后对账的多重断层。\n\n**第三层：模型平台有动力把这些证明能力向自身集成。** 当模型公司从 API 供应商延伸到 Agent 托管、工具执行和企业工作流，它需要向高敏感行业解释数据在哪里处理、谁能读取、哪些动作可追溯。吸收 OPAQUE 团队可能缩短相关技术与产品整合的距离。[1][6] 但这里是战略动机推论，而不是 Anthropic 已经具备可跨云、跨模型、跨工具的生产级证明系统的事实。\n\n对竞争格局而言，可能出现三种不同控制权：模型供应商控制执行环境和默认验证接口；云与芯片厂商控制底层硬件证明及根信任；独立规范和审计服务争夺跨供应商可移植的证据格式。OPAQUE 人才加入 Anthropic、AgenTrust 继续开放规范，恰好把这三者的边界暴露出来。**哪一层最终掌握商业定价权，尚无证据定论。**\n\n## 三、反论｜为什么这还不足以改变行业地图\n\n**反论一：团队加入不等于产品采用。** 没有公开的 Anthropic 生产部署范围、客户案例、第三方渗透测试或可比成本数据。技术整合可能成功，也可能受延迟、兼容性、硬件依赖和客户采购流程限制。[1][6]\n\n**反论二：硬件证明本身仍有信任根。** 验证者必须信任特定硬件、固件、证书链、密钥管理与被测软件；如果被测代码有漏洞，证明它确实运行并不意味着它不会泄漏或误操作。OPAQUE 相关研究本身也列出威胁模型和硬件配置限制。[5] “无需信任任何人”的绝对化叙事不成立。\n\n**反论三：开放规范不自动产生开放市场。** 开源代码、开放格式、真实多方互操作、稳定治理和企业采购采纳是五个不同阶段。AgenTrust 的独立声明与公开研究可以降低审查门槛，但尚不能证明它已成为行业默认协议。[3][4][7]\n\n**反论四：企业客户未必愿意为每次执行购买完整证明。** 计算开销、密钥托管、证据存储、敏感信息披露、审计可用性以及责任归属都可能让部署成本高于风险收益。高风险金融或医疗场景与普通内部信息检索场景的支付意愿也不会相同。现阶段没有足够可比的商业数据证明统一的单位经济性。\n\n因此，本次不把 OPAQUE 事件评为 S 级。它强化的是既有“Agent 安全将走向可执行、可审计边界”的判断，而不是推翻现有行业地图。\n\n## 四、对 VELNAR 的有界含义\n\n**应更新的研究判断：** 未来企业 Agent 的可信能力，可能由“身份与授权 → 运行时执行控制 → 可独立核验的证据”构成逐层递进的产品链。企业软件、安全厂商、模型平台和开放协议维护者可能分别掌握不同环节。后续观察的重点应是客户是否要求独立验证、谁承担审计责任，以及证据是否真正跨供应商可用。\n\n**不应立即采取的行动：** 不能因为 Anthropic 吸收机密计算团队，就为 VELNAR 当前 Sales MVP 新建 TEE、密码学收据平台或复杂 Agent-to-Agent 安全框架。当前工程目标仍是可靠完成真实业务闭环：明确客户与 SKU、验证业务事实、执行确定性 Policy、限制工具权限、保留 Trace、写入前确认。这些基础能力不依赖此次产业信号。\n\n**需要继续观察的可验证指标：** Anthropic 是否公开具体的机密计算或可验证执行产品；是否有客户能独立检查执行收据；哪些工具调用与跨系统动作被覆盖；独立 AgenTrust 规范能否被多个模型平台或云供应商共同采用；第三方是否公布绕过率、性能开销与实际事故改进。\n\n## 五、值得继续讨论的问题\n\n如果未来企业必须对 Agent 的每一次高风险动作提供可核验的执行证据，**最终拥有客户信任关系的会是运行模型的平台、掌握业务事实与授权的企业软件，还是提供跨平台证据与审计的独立基础设施？** 更具体地说，哪一种证据可以证明“动作被正确授权”，而不仅仅证明“某段代码确实执行过”？\n\n---\n\n**证据来源（按正文编号）**\n\n[1] OPAQUE，2026-10-13，团队加入 Anthropic 的官方公告：https://www.opaque.co/resources/articles/from-berkeley-research-to-the-future-of-ai-opaques-next-chapter\n\n[2] OPAQUE，2026-10-20 查阅，公司停止运营及开放项目延续说明：https://www.opaque.co/\n\n[3] AgenTrust，2026-10-01，cMCP 技术报告 v2：https://agentrust-io.com/research/cmcp/v2/\n\n[4] AgenTrust，2026-10-01，Agent Manifest 技术报告 v2：https://agentrust-io.com/research/agent-manifest/\n\n[5] AgenTrust，2026-10-01，Weight Custody Manifest 技术报告 v2：https://agentrust-io.com/research/weight-custody-manifest/\n\n[6] SecurityWeek，2026-10-19，OPAQUE 交易及技术背景报道：https://www.securityweek.com/anthropic-acquires-confidential-ai-startup-opaque-systems/\n\n[7] AgenTrust，2026-10-20 查阅，独立开源规范项目介绍：https://agentrust-io.com/",
+  "sources": [
+    {
+      "title": "OPAQUE | From Berkeley Research to the Future of AI: OPAQUE’s Next Chapter",
+      "url": "https://www.opaque.co/resources/articles/from-berkeley-research-to-the-future-of-ai-opaques-next-chapter",
+      "date": "2026-10-13"
+    },
+    {
+      "title": "OPAQUE | Company transition and open-source continuity",
+      "url": "https://www.opaque.co/",
+      "date": "2026-10-20"
+    },
+    {
+      "title": "AgenTrust | cMCP: Verifiable Policy Enforcement for AI Agent Tool Calls, v2",
+      "url": "https://agentrust-io.com/research/cmcp/v2/",
+      "date": "2026-10-01"
+    },
+    {
+      "title": "AgenTrust | Agent Manifest: Portable, Hardware-Attestable Identity and Provenance for AI Agents, v2",
+      "url": "https://agentrust-io.com/research/agent-manifest/",
+      "date": "2026-10-01"
+    },
+    {
+      "title": "AgenTrust | Weight Custody Manifest, v2",
+      "url": "https://agentrust-io.com/research/weight-custody-manifest/",
+      "date": "2026-10-01"
+    },
+    {
+      "title": "SecurityWeek | Anthropic Acquires Confidential AI Startup Opaque Systems",
+      "url": "https://www.securityweek.com/anthropic-acquires-confidential-ai-startup-opaque-systems/",
+      "date": "2026-10-19"
+    },
+    {
+      "title": "AgenTrust | Independent open specifications for verifiable AI",
+      "url": "https://agentrust-io.com/",
+      "date": "2026-10-20"
+    }
+  ]
+}
