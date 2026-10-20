@@ -50,6 +50,30 @@
       ],
       "deck": "OVHcloud 10 月 20 日披露已接入 250MW 电力容量，其中 140MW 在运营，约 110MW 留有增长空间；同期首次实现上市以来正的杠杆自由现金流，并准备把收购的垂直模型、语音与加密能力整合成企业 AI 产品。新增信号不是欧洲 GPU 供给过剩，而是 AI 主权基础设施的竞争正分化为“有电、有客户、能交付模型服务、能赚到现金”四道门槛；接电余量不能等同于可立即出售的 AI 算力。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-21-A1",
+      "date": "2026-10-21",
+      "grade": "A",
+      "title": "大客户开始用采购额换上游股权期权：AI 算力供应链的控制点向合同分配延伸",
+      "themes": [
+        "AI Infrastructure",
+        "Supply Chain Control Points",
+        "Amazon",
+        "3M",
+        "Generac",
+        "Applied Optoelectronics",
+        "Optical Interconnects",
+        "Backup Power",
+        "Purchase-linked Warrants",
+        "Equity Incentives",
+        "Procurement Concentration",
+        "AI Capital Stack",
+        "Data Center Economics",
+        "Supplier Bargaining Power"
+      ],
+      "deck": "3M 10 月 19 日披露向亚马逊子公司授予七年期认股权证，85% 的可购股份随光连接及其他数据中心产品的累计付款归属，达到 60 亿美元付款门槛时全部归属。对照亚马逊此前与光模块商 AOI、备电设备商 Generac 的类似安排，新增信号是超大规模买家正在把采购关系、供应商激励与潜在股权收益绑定；60 亿美元不是已签最低采购承诺，认股权也不等于已取得股权或独家供货权。",
+      "body_format": "article_text"
     }
   ]
 }
