@@ -1,0 +1,48 @@
+{
+  "id": "2026-10-20-A3",
+  "date": "2026-10-20",
+  "grade": "A",
+  "title": "Agent 权限开始随风险动态收缩：微软争夺的不是又一个安全仪表盘",
+  "themes": [
+    "Enterprise AI",
+    "Agent Security",
+    "Microsoft",
+    "Project Perception",
+    "Dynamic Agent Risk",
+    "Dynamic Permissions",
+    "Conditional Access",
+    "Agent Identity",
+    "Agent Control Plane",
+    "Runtime Enforcement",
+    "Enterprise Software",
+    "Zero Trust",
+    "Security Economics",
+    "Control Points",
+    "Agent Governance"
+  ],
+  "deck": "微软 10 月 19 日扩展 Project Perception，提出跨身份、数据、端点、网络与运行时的 Dynamic Agent Risk、Dynamic Permissions 和 Dynamic Conditional Access，并披露本地 Agent 发现支持扩展至 60 种。新增信号是传统企业安全栈试图把 Agent 的授权从静态配置改为持续风险驱动的行动约束；但“能发现 60 种”不等于“能实时阻断 60 种”，具体执行覆盖、产品可用性和误拦截成本仍待验证。",
+  "body_format": "article_text",
+  "article_text": "# Agent 权限开始随风险动态收缩：微软争夺的不是又一个安全仪表盘\n\n**核心判断｜企业 Agent 的授权正在从“部署时给定一次权限”转向“任务运行期间持续计算风险、动态缩小行动范围”。** 2026 年 10 月 19 日，微软宣布扩展 Project Perception，将原本面向 AI 驱动攻击的安全体系延伸到企业内部正在执行任务的 Agent，并提出 Dynamic Agent Risk、Dynamic Permissions、Dynamic Conditional Access 和 Guardian Agents 的组合。[1][2] 它不是单独推出一个 Agent 管理后台，而是试图让现有的身份、数据安全、终端、网络和运行时产品共同决定：**某个 Agent 此刻还能读什么、写什么、调用什么，以及何时必须暂停。**\n\n**信号评级：A，重要结构性验证，而非 S 级行业定局。** 我们此前已经记录了 Agent 身份、授权凭证、执行前 Policy 和可关停性，因此“Agent 需要治理”绝不是新发现。这次真正值得补充的是两点：**授权可以随任务风险连续收缩；拥有现成安全传感器和执行点的企业软件巨头，可能比独立 Agent 平台更靠近最终阻断权。** 但微软的产品声明与跨平台、生产级的实际阻断覆盖不是同一种证据。\n\n## 一、FACT｜微软实际宣布了什么\n\n**第一，控制对象从外部攻击者扩展到企业内部 Agent。** 微软官方 10 月 19 日说明，Project Perception 于 7 月作为 AI 安全防御项目推出，此次扩展针对“agentic insider”：由企业员工或系统引入、合法获得一定资源访问权，却可能因任务变化、提示词注入、错误计划或被攻击而偏离授权意图的 Agent。[1][2] 这并不等于企业 Agent 都是恶意软件，而是说明“合法启动”无法保证“全程安全”。\n\n**第二，微软提出的是一条动态授权回路。** Dynamic Agent Risk 拟综合身份、数据、端点、云、网络、运行时和 Agent 活动信号，不只计算初始风险，还根据任务中出现的新证据持续更新。Dynamic Permissions 的原则是 Agent 有独立身份、默认不继承员工的全部常驻权限，权限按任务、时间和组织边界发放；Dynamic Conditional Access 则拟根据风险变化收紧权限、保留只读而阻止写入、缩小资源范围、要求可证明的人工审批，必要时隔离运行环境或停止执行。[1] **这是微软公开的架构与能力方向，不能未经独立测试就写成所有这些路径已经在任意企业系统内稳定执行。**\n\n**第三，Agent 的“可见性”已经出现较具体的跨厂商范围。** 微软披露本地 Agent 发现支持扩展至 60 种，包括 Claude Code、Codex 和 GitHub Copilot 等；其 Defender for Endpoint 官方支持矩阵列出不同操作系统下可被发现的 Agent 及 MCP 配置识别能力。[1][3] 这意味着企业安全厂商正尝试把第三方 Agent 纳入同一个资产清单，Agent 的创建者不再必然拥有唯一的观测入口。\n\n**但必须立刻加上关键限定：发现不等于保护。** 同一份微软支持矩阵将 discovery 与 runtime protection 分开列示，后者目前仅覆盖有限的 Agent、操作系统及检查方式，部分功能明确标为 preview；网络检查还列有证书固定与 HTTP/3 等覆盖限制。[3] 所以“能发现 60 种”绝不能改写成“已能阻断 60 种 Agent 的每一次危险操作”。这条差距正是判断控制权是否真正转移的核心证据。\n\n**第四，身份产品与完整安全功能的可用性不同。** Microsoft Learn 说明 Entra Agent ID 可面向 Entra 客户提供 Agent 身份框架，并支持部分第三方 Agent 集成；但将 Entra 安全功能扩展到 Agent 需要 Microsoft Agent 365，后者涉及单独许可或指定套件。[4] 因此，“存在身份能力”“可以发现 Agent”“已经拥有跨产品动态阻断能力”“所有客户可直接使用”是四个不同层级，不能混写为一个已全面交付的产品。\n\n## 二、INFERENCE｜竞争单位可能从 Agent 平台转向安全执行网络\n\n我们过去研究 ServiceNow AI Passport 时，关注的是**一份可签名、可核验的授权凭证能否沿任务链传递**。微软这次补上另一个不同问题：即使初始授权正确，**当外部文档、工具结果或任务上下文发生变化时，谁有权实时收回一部分行动能力？**\n\n可以把真实企业 Agent 的授权拆成四层。第一是**身份与委托**：谁创建它，代表谁，负责什么任务；第二是**业务语义**：某次动作涉及哪位客户、哪张订单、多少金额，以及业务规则是否允许；第三是**风险证据**：端点是否被入侵、工具是否越界、敏感数据是否外流、任务是否偏离原意；第四是**实际执行点**：哪个 API 网关、身份服务、沙箱、网络控制或应用本身能够拒绝副作用。\n\n微软天然掌握大量第三、第四层基础设施：Entra、Defender、Purview、网络与端点安全产品以及 Microsoft 365 组织环境。它尝试将这些既有资产连接到 Agent 365 的统一注册与治理视图。[1][4] **由此推论，Agent Control Plane 不一定是一家新创业公司从零出售的独立控制台；它也可能成为传统企业安全软件横向扩张的新产品边界。** 掌握观测信号的公司更容易计算风险，掌握强制执行点的公司更有机会让风险判断产生真实后果。\n\n但这不意味着微软拥有企业的全部业务权威。身份系统知道某人是谁，不一定知道一笔采购是否已被客户确认；端点系统看到工具调用，不一定知道这次库存预留会不会导致重复承诺。**安全风险判定与业务 Policy 判定应协作，而不是互相替代。** 对 Vertical AI 来说，长期需要保留的是准确的行业事实、状态迁移和业务权限语义；通用身份、网络、终端和数据安全可以尽量与客户已有基础设施对接。\n\n## 三、COUNTERARGUMENT｜四种容易高估的能力\n\n**其一，发现率不等于执行覆盖率。** 支持矩阵本身就把 Agent 发现与运行时保护拆开；Windows、macOS、WSL 的覆盖不同，Agent-native hooks 与网络检查也不同。[3] 一个 Agent 可以出现在目录里，却仍有工具调用路径无法被同一产品强制阻断。评估时必须按“具体 Agent × 具体操作系统 × 具体工具 × 具体动作”核对执行点。\n\n**其二，风险评分不等于正确理解用户意图。** 模型输出、任务日志和工具事件可能提供线索，但它们可能不完整、含噪或受到恶意内容污染。微软讨论将模型级信号纳入风险评估，并不意味着可以可靠读取每个第三方模型的完整内部推理，更不意味着“模型声称想做什么”可以取代实际权限检查。[1][2] 过度依赖不稳定的意图推断还可能造成误拦截。\n\n**其三，权限动态收缩也有真实经营成本。** 若安全系统在业务高峰误判并阻断发货、退款或客户服务，企业可能遭受损失；若它在外部控制面不可用时默认放行，又会留下安全缺口。需要实测撤权延迟、失败关闭策略、人工恢复时间、可审计性、跨系统一致性以及误报造成的任务失败率。当前公告没有提供足以比较不同厂商的统一生产指标。\n\n**其四，安全栈整合不必然意味着单一厂商垄断。** 身份、业务事实、工具授权和运行环境可以由不同主体拥有。已有企业也可能不愿将 Agent 发现、风险评分、授权与审计全部交给同一供应商，以免发生供应商锁定或单点故障。微软的广泛产品组合是潜在分发优势，但不是已经证明的市场份额转移或独立 Agent 安全收入。\n\n## 四、对 VELNAR 产业地图的修正\n\n**被强化的判断：** 模型提供不确定性的智能，真正决定业务后果的权限、Policy 与执行拦截必须存在于模型无法自行修改的边界之外。安全控制不能只在 Agent 上线时配置一次，还需要随着任务状态和外部风险变化而更新。\n\n**新增的区分：** 我们应分别观察 Agent Inventory（能发现谁）、Identity/Delegation（谁授权）、Risk Evidence（发生了什么）、Policy Decision（当前应允许什么）和 Enforcement（谁实际拦住了动作）。五者被包装进同一产品界面，不代表它们已经在真实环境中闭环。微软的“60 种可发现”与有限运行时保护矩阵，恰好为这种区分提供了可核验的例子。\n\n**对当前 Sales MVP 不扩大 Scope。** 订单、库存、预留、出库与跟踪的确定性闭环仍是近期唯一合理优先级。我们需要在已有业务动作上落实权限、确认和 Trace，而不是因此建设通用企业 IAM、Agent 365 替代品、动态风险评分引擎或全域安全控制台。若未来进入受监管客户，再以具体客户的权限和审计要求决定集成边界。\n\n## 五、PREDICTION｜哪些证据会改变下一次评级\n\n未来 6—18 个月，最值得观察的不是又有多少厂商宣布 Agent Control Plane，而是**第三方 Agent 的真实动作能否被跨平台阻断**：是否出现公开、可复验的“发现—识别—风险升高—权限撤销—工具拒绝—业务恢复”测试；在非微软运行环境中是否同样有效；不同 IAM 与业务系统能否互操作；客户是否为这些能力支付新增预算，还是由现有安全订阅吸收。\n\n如果跨厂商执行覆盖和客户付费得到验证，企业安全栈可能成为 Agent 时代更强的控制点；如果大多数功能长期停留在发现、告警与演示，而无法触及真正产生业务副作用的工具，则所谓“动态治理”仍主要是管理可见性，不是执行权。\n\n**值得继续讨论的问题：在一家企业同时运行多个厂商的 Agent 时，谁应拥有最终的动作否决权——行业软件中的业务 Policy、企业身份与安全平台，还是实际持有 API 凭证的执行环境？当三者意见冲突时，怎样既不让模型自我授权，也不让安全平台误判直接瘫痪业务？**\n\n---\n\n### 来源与证据边界\n\n[1] Microsoft Security Blog，Nadim Abdo，2026-10-19，*Agents are your newest insiders. Security must move at their speed.* https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/\n\n[2] Microsoft Official Blog，Hayete Gallot，2026-10-19，*Securing the agentic insider.* https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/\n\n[3] Microsoft Learn，*Microsoft Defender for Endpoint AI agent support matrix*，页面标注更新于 2026-10-09，检索于 2026-10-20。https://learn.microsoft.com/en-us/defender-endpoint/ai-agent-support-matrix\n\n[4] Microsoft Learn，*What is Microsoft Entra Agent ID?*，页面标注更新于 2026-06-24，检索于 2026-10-20。https://learn.microsoft.com/en-us/entra/agent-id/what-is-microsoft-entra-agent-id\n\n**证据状态：** 新产品方向、功能名称和 60 种发现覆盖来自微软一手披露；发现与运行时保护的范围差异来自微软官方支持矩阵。关于跨厂商真实阻断率、误报成本、市场份额和商业收益尚无独立量化证据。安全栈成为 Agent 执行控制点属于结构性推论，不是已经完成的产业结果。",
+  "sources": [
+    {
+      "title": "Microsoft Security Blog | Agents are your newest insiders",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/",
+      "date": "2026-10-19"
+    },
+    {
+      "title": "Microsoft Official Blog | Securing the agentic insider",
+      "url": "https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/",
+      "date": "2026-10-19"
+    },
+    {
+      "title": "Microsoft Learn | Defender for Endpoint AI agent support matrix",
+      "url": "https://learn.microsoft.com/en-us/defender-endpoint/ai-agent-support-matrix",
+      "date": "2026-10-09"
+    },
+    {
+      "title": "Microsoft Learn | What is Microsoft Entra Agent ID?",
+      "url": "https://learn.microsoft.com/en-us/entra/agent-id/what-is-microsoft-entra-agent-id",
+      "date": "2026-06-24"
+    }
+  ]
+}

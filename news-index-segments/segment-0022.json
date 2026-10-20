@@ -116,6 +116,31 @@
       ],
       "deck": "美国 DHS 一份 7 月签发、10 月 19 日公开的 FASCSA 命令，要求联邦民事机构排除 DeepSeek 及其关联方的采购，并移除包括使用 DeepSeek 实现开发的第三方产品与服务。新增控制点不是‘美国全面禁用中国开源模型’，而是受监管采购开始穿透应用品牌审查模型技术来源；适用范围、例外机制与本地部署风险必须分开。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-20-A3",
+      "date": "2026-10-20",
+      "grade": "A",
+      "title": "Agent 权限开始随风险动态收缩：微软争夺的不是又一个安全仪表盘",
+      "themes": [
+        "Enterprise AI",
+        "Agent Security",
+        "Microsoft",
+        "Project Perception",
+        "Dynamic Agent Risk",
+        "Dynamic Permissions",
+        "Conditional Access",
+        "Agent Identity",
+        "Agent Control Plane",
+        "Runtime Enforcement",
+        "Enterprise Software",
+        "Zero Trust",
+        "Security Economics",
+        "Control Points",
+        "Agent Governance"
+      ],
+      "deck": "微软 10 月 19 日扩展 Project Perception，提出跨身份、数据、端点、网络与运行时的 Dynamic Agent Risk、Dynamic Permissions 和 Dynamic Conditional Access，并披露本地 Agent 发现支持扩展至 60 种。新增信号是传统企业安全栈试图把 Agent 的授权从静态配置改为持续风险驱动的行动约束；但“能发现 60 种”不等于“能实时阻断 60 种”，具体执行覆盖、产品可用性和误拦截成本仍待验证。",
+      "body_format": "article_text"
     }
   ]
 }
