@@ -97,6 +97,30 @@
       ],
       "deck": "Otter.ai 10 月 20 日获得 General Catalyst Customer Value Fund 的 3.2 亿美元非股权增长融资，计划扩张企业销售与国际市场。信号不是 AI 会议工具已建立垄断，而是成熟 AI 应用开始把客户获取与产品研发分开融资；资金可偿还、不是 ARR，企业付费转化、留存及获客回收期仍未披露。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-21-B2",
+      "date": "2026-10-21",
+      "grade": "B",
+      "title": "工业 AI 的执行权仍受工艺规程约束：焊接机器人开始把 WPS 接入动作生成",
+      "themes": [
+        "Industrial AI",
+        "Physical AI",
+        "Manufacturing",
+        "Lincoln Electric",
+        "XpertLINC",
+        "Robotic Welding",
+        "Welding Procedure Specification",
+        "Semantic Authority",
+        "Process Control",
+        "Domain Expertise",
+        "Human Oversight",
+        "Operational Verification",
+        "Industrial Automation",
+        "Control Points"
+      ],
+      "deck": "林肯电气 10 月 20 日推出 XpertLINC，宣称通过扫描真实焊缝、结合客户焊接工艺规程（WPS），自动生成机器人路径与焊接参数，并对超出规格的工件提示复核。值得记录的是工业 AI 将领域工艺约束直接接入物理执行，而非又一次通用机器人演示；尚无独立良率、ROI 或跨工厂部署证据。",
+      "body_format": "article_text"
     }
   ]
 }
