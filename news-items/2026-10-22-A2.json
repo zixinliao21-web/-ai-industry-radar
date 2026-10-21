@@ -1,0 +1,52 @@
+{
+  "id": "2026-10-22-A2",
+  "date": "2026-10-22",
+  "grade": "A",
+  "title": "零售商开始为外部 Agent 建立独立授权档案：开放购物入口不等于让出交易控制权",
+  "themes": [
+    "Agent Commerce",
+    "Merchant Acceptance",
+    "Walmart",
+    "Agent Profiles",
+    "Agent Gateway",
+    "Delegated Authorization",
+    "MCP",
+    "Transaction Governance",
+    "Consumer Agent",
+    "Merchant Control Points",
+    "Policy Enforcement",
+    "Payment Boundaries",
+    "Agent Identity",
+    "Retail Platforms"
+  ],
+  "deck": "沃尔玛 10 月 21 日公布 Agent Profiles、基于 MCP 的 Agent Gateway 和专门的代理购物条款：用户可逐 Agent 设置审批、消费额度与撤权，商家保留账户、付款资料、订单与准入规则。增量不是‘AI 又能购物’，而是大型零售商把外部 Agent 的委托关系纳入自身交易系统；Profiles 尚待未来一个月推出，Gateway 仍是邀请制早期测试，缺少成交与风控效果数据。",
+  "body_format": "article_text",
+  "article_text": "# 零售商开始为外部 Agent 建立独立授权档案：开放购物入口不等于让出交易控制权\n\n**核心判断｜外部 Agent 可以成为新的购物入口，但“代表谁、能买什么、花多少钱、出了问题由谁处理”的权威未必跟着流量入口转移。** 2026 年 10 月 21 日，沃尔玛公布 Agent Profiles、Walmart Agent Gateway 和面向 AI Agent 的专门条款，尝试让第三方 Agent 通过受控接口在 Walmart 与 Sam's Club 购物。[1] 这次值得注意的不是零售商第一次宣布支持 AI 购物，而是**零售商开始为每个外部 Agent 建立可单独授权、限额、审计和撤销的账户内身份**，并把商品、支付和订单事实继续留在自己的系统里。\n\n**信号评级：A｜大型商家对“受控开放”的结构性验证，而非 Agent Commerce 已规模化的证明。** 官方明确说 Agent Profiles 将在未来一个月推出；Gateway 面向公司和开发者开放早期测试申请，官方测试页注明仅限邀请、功能可能调整。[1][2] 因而本次证据支持的是可审查的产品设计与平台策略，不支持“已大规模上线”“交易成功率已经改善”或“开放协议成为行业标准”等结论。\n\n## 一、FACT｜这次新增的是商家侧的委托身份，而非另一个聊天购物按钮\n\n**第一，Agent Profiles 将外部 Agent 从普通账户活动中区分出来。** 沃尔玛指出，当前 Agent 使用顾客账户购物时，人类购买与代理购买混在同一记录里。新方案计划让顾客为每个 Agent 连接一个专属 Profile，在沃尔玛账户内查看该 Agent 的购买记录，分别设置购买审批方式与消费上限，并随时删除 Profile。[1] 公告举出的额度包括 50、100 和 200 美元，它们是用户可选择的**示例限制**，不是统一的默认消费额度。\n\n**第二，默认规则是每笔代理购买需要用户批准，而不是默认全自动扣款。** 用户可以逐笔确认，也可以明确允许 Agent 在设定额度内购买；即便在额度内，沃尔玛仍保留要求额外批准的权利。[1] 这形成了两道不同的权限：顾客对 Agent 的委托范围，以及商家对某一笔交易是否放行的最终执行策略。所谓“允许自主购物”，在这里仍是有条件、可撤销的委托。\n\n**第三，Agent Gateway 试图用结构化接口替代脆弱的网页模拟操作。** 沃尔玛宣布通过 MCP（Model Context Protocol）连接外部 Agent，使其获取商品与履约信息、完成受控购物流程，而不必完全依赖为人设计的网页点击。公司称 Gateway 可以在不向 Agent 提供完整个人资料和购物历史的情况下，帮助其找到顾客经常购买的商品。[1] 官方测试页进一步宣传身份验证、权限限制、可观察行为、品类限制和速率限制；但这些是**平台披露的设计与能力主张**，尚非独立审计的隐私隔离或安全效果证明。[2]\n\n**第四，付款资料与商家准入仍留在零售商控制下。** 官方条款明确要求 Agent 不得超出顾客意图行动，不得接收顾客银行卡信息，不得添加或更改付款方式，只能获取完成任务所需且用户允许的信息；不遵守规则的 Agent 可能被封禁。沃尔玛既有退货流程仍适用于代理购买，即便 Agent 的行为不符合预期。[1] 这不代表商家承担所有代理失误的损失，更不意味着所有外部 Agent 都获得无条件接入权。\n\n**第五，沃尔玛此前已经拥抱 AI 购物。** 2025 年 10 月，沃尔玛就宣布与 OpenAI 合作，希望用户在 ChatGPT 内完成商品购买；其 2026 年公告也列出 Sparky、Muse、ChatGPT、Gemini 等现有购物或对话集成。[1][3] 因此不能把本次写成“沃尔玛第一次允许第三方 Agent 购物”。**真正的时间线增量是：从具体渠道合作，进一步公开独立的 Agent 授权档案、网关与通用行为规则。**\n\n## 二、INFERENCE｜购物 Agent 的身份可能由入口提供，但交易授权的权威仍由商家解释\n\n在传统电商里，平台知道哪个消费者登录、下了什么订单、用了什么支付方式；在 Agent Commerce 里，同一个消费者可能同时委托多个不同公司的 Agent。若所有 Agent 都共享消费者原账户，平台难以区分“用户自己买的”“Agent A 代买的”“Agent B 越权买的”，也难以只撤销某个 Agent 的权限。\n\n沃尔玛的设计把这些问题转化成**商家可执行的委托关系**：Agent 作为可识别主体连接用户账户，用户设置限额和审批规则，Gateway 提供机器接口，商家保存订单与交易记录，并保留拒绝执行的权力。这不只是“多一个 MCP server”，而是把 Agent 身份、用户许可、交易事实和商家 Policy 接在同一业务边界上。\n\n它还提示一个可能的产业分工：**Personal Agent 拥有需求入口，零售商拥有库存、价格、履约、售后与账户事实，支付网络和钱包提供资金授权及结算。** 谁能发起购买，不等于谁能最终批准购买；谁能展示商品，不等于谁有权解释订单、退款和交易争议。对大型零售商而言，开放 Agent 入口可以争取来自多个助手的流量，同时不必把支付关系、完整购买历史和交易裁决权交给外部模型公司。\n\n这与此前 Radar 的几条记录应当区分，而不是重复计数。Shopify 的 Shop MCP 与一次性支付凭证主要展示**跨商家支付委托**；Poppy 草案探索**跨渠道 Agent 身份和会话协议**；Skyfire/Forter 试点关注**商家反欺诈系统如何识别并放行合法 Agent 订单**。沃尔玛此次的具体增量是：**大型零售商在自己的账户、网关与订单体系里，将每个外部 Agent 作为可单独治理的购物代理主体**。这几个方案可能互补，也可能竞争，并没有证据表明它们已经统一。\n\n## 三、为什么开放与封锁会同时存在\n\n报道显示，沃尔玛选择为外部 Agent 建立受控入口时，亚马逊对部分未经授权的外部购物 Agent 采取封锁措施。[4][5] 这不能简单归纳为“沃尔玛开放、亚马逊落后”。两家公司都要权衡用户体验、欺诈与隐私、广告及搜索分发、平台议价能力。**是否允许 Agent 进入，与谁制定进入条件，是两回事。**\n\n沃尔玛所谓开放，实际上包含一组边界：Agent 要遵守平台条款、顾客要完成账户关联与授权、交易可能被再次审批、Gateway 测试资格受限。它可能提高合法 Agent 的可用性，也可能让大型商家更容易决定哪些 Agent 能获取商品数据、以何种方式展示商品和完成交易。**标准化接口既可能降低集成摩擦，也可能把平台控制权变成更清晰的机器可执行规则。**\n\n经济价值目前仍不明朗。商家可能通过开放外部 Agent 获得新增订单，也可能只是把原有自然流量转移到更昂贵的分发渠道；模型平台可能掌握消费者偏好和购买意图，但若最终购物篮、库存替代、付款审批、退款和复购记录仍在商家，交易关系不会自动被模型平台取代。现有公告没有披露订单增量、平台分成、API 费用、转化率或客户留存，不能提前给任何一方判定胜负。\n\n## 四、COUNTERARGUMENT｜这是一个重要设计，不是成熟网络\n\n**其一，关键能力尚未得到生产规模验证。** Agent Profiles 尚未正式普遍推出，Gateway 是可申请的早期邀请测试；测试页还明确保留暂停资格与调整功能的权利。[1][2] 没有公开的多 Agent 兼容率、真实订单量、错误购买率、审批放弃率、退款率或欺诈损失。产品宣布不等于市场采用。\n\n**其二，额度与授权不能证明 Agent 理解了用户。** 一个被授权花费 100 美元的 Agent 仍可能买错尺寸、忽略过敏原、误判配送时效或被商品描述中的恶意指令诱导。限额可以约束部分资金损失，无法自动保证选择正确。商家追加审批可能降低风险，也可能让所谓“自主购物”退化为高摩擦的人工确认流程。\n\n**其三，隐私隔离目前主要是平台承诺。** “不给 Agent 完整购物历史”并不等于 Agent 无法从个别推荐、订单回执或长期交互推断敏感偏好；也不等于平台自身不会进一步集中用户交易数据。需要明确数据最小化的实际接口范围、日志保留、撤权后的令牌失效和独立审计结果。\n\n**其四，平台规则可能形成新的歧视性准入。** 如果网关只向少数合作伙伴开放，或以不透明条件限制竞争 Agent，那么“官方 API”可能比网页访问更稳定，却不一定更中立。相反，若不同规模的 Agent 能在一致条件下接入、撤权与纠纷处理清晰，这套架构也可能降低信任成本。现在还没有足够证据判断方向。\n\n**其五，消费者未必愿意交出长期采购委托。** 日用品补货适合限额自动化，但高价值、审美型或不可逆商品可能持续需要人工判断。沃尔玛自己也承认代理购物并不适合所有消费者。[1] 不应把少数成功的代理购买演示推算成未来电商交易的主流比例。\n\n## 五、它改变了 VELNAR 什么判断\n\n**被强化：** Agent Commerce 的长期控制点不能只画在“用户入口—模型—支付 API”三层。还必须把**商家侧的委托身份、可执行权限、交易批准和售后事实**画出来。外部 Agent 可以负责理解意图，但商家仍可能是“这笔购买是否被允许、是否完成”的权威系统。\n\n**新增的观察对象：** 当 Agent 代表同一用户在多个商家行动时，商家本地的 Agent Profile 与跨商家钱包/身份协议之间，谁负责保存可验证的委托范围？如果每家商户都要求独立 Profile，是否会形成新的账户碎片化；如果委托凭证可移植，商家又如何独立撤权和追责？这比“哪家公司先推出购物 Agent”更值得长期跟踪。\n\n**暂时不改变：** 这不是要求 VELNAR 当前 Sales MVP 引入零售支付、跨企业 Agent 身份网络或通用控制平台的证据。对现阶段真实企业工作流，仍应优先确保业务状态、权限、确认、执行和追溯闭环。产业层的观察不等于工程范围的自动扩张。\n\n## 六、PREDICTION｜未来 6—12 个月如何检验\n\n若商家侧 Agent Profile 真能成为有价值的基础设施，应看到四类可验证数据：第一，非关联 Agent 的实际接入数量、真实完成订单和复购，而非仅有合作名单；第二，用户设置额度后逐笔审批的比例、取消率与交易失败恢复；第三，跨 Agent 的退款、争议、越权购买和欺诈损失；第四，商家是否以一致、透明的规则允许竞争 Agent 接入。\n\n如果最终绝大多数订单仍需用户逐笔手动确认，Gateway 仅供少数合作伙伴测试，或者跨商家授权无法互认，那么本次更可能只是**单一零售商的安全集成升级**，而非开放 Agent Commerce 网络的关键拐点。反过来，若受控授权与稳定机器接口在多个零售商复制，且产生可审计的真实交易改善，商家侧的 Agent Delegation / Policy Enforcement 才值得上调为更重要的产业控制点。\n\n**值得继续讨论的问题：当消费者希望一个 Personal Agent 横跨数十家商户长期购物时，委托授权应由消费者自己的 Agent/钱包持有并可移植，还是由每家商户分别保管和解释？哪种安排更可能同时保障可撤权、可审计和开放竞争？**\n\n---\n\n### 证据来源\n\n[1] Walmart，2026-10-21，Walmart Makes It Possible for Agents to Shop on Behalf of Customers, While Keeping Customers in Control：https://corporate.walmart.com/news/2026/10/Making-It-Possible-for-Agents-to-Shop-on-Behalf-of-Customers\n\n[2] Walmart Agent Gateway，官方邀请制 beta 说明（2026-10-21 访问）：https://www.walmart.com/cp/walmart-agent-gateway/1280482\n\n[3] Walmart，2025-10-14，Walmart Partners with OpenAI to Create AI-First Shopping Experiences：https://corporate.walmart.com/news/2025/10/14/walmart-partners-with-openai-to-create-ai-first-shopping-experiences\n\n[4] The Verge，2026-10-21，Walmart is inviting AI agents to shop for you：https://www.theverge.com/ai-artificial-intelligence/1015715/walmart-ai-shopping-agents\n\n[5] Axios，2026-10-21，Walmart welcomes AI agents while rival Amazon blocks Muse：https://www.axios.com/2026/10/21/walmart-amazon-agents-muse\n",
+  "sources": [
+    {
+      "title": "Walmart | Walmart Makes It Possible for Agents to Shop on Behalf of Customers, While Keeping Customers in Control",
+      "url": "https://corporate.walmart.com/news/2026/10/Making-It-Possible-for-Agents-to-Shop-on-Behalf-of-Customers",
+      "date": "2026-10-21"
+    },
+    {
+      "title": "Walmart | Walmart Agent Gateway early beta",
+      "url": "https://www.walmart.com/cp/walmart-agent-gateway/1280482",
+      "date": "2026-10-21"
+    },
+    {
+      "title": "Walmart | Walmart Partners with OpenAI to Create AI-First Shopping Experiences",
+      "url": "https://corporate.walmart.com/news/2025/10/14/walmart-partners-with-openai-to-create-ai-first-shopping-experiences",
+      "date": "2025-10-14"
+    },
+    {
+      "title": "The Verge | Walmart is inviting AI agents to shop for you",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1015715/walmart-ai-shopping-agents",
+      "date": "2026-10-21"
+    },
+    {
+      "title": "Axios | Walmart welcomes AI agents while rival Amazon blocks Muse",
+      "url": "https://www.axios.com/2026/10/21/walmart-amazon-agents-muse",
+      "date": "2026-10-21"
+    }
+  ]
+}

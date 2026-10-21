@@ -94,6 +94,30 @@
       ],
       "deck": "Legora 10 月 21 日披露 ARR 超过 2 亿美元、完成 5.5 亿美元融资并达到 88 亿美元估值；同月上线 30 多项法律系统集成和面向企业法务的 Intake。真正的新信号不是又一家 AI 创业公司融资，而是垂直 Agent 已有可观经常性收入，却仍需通过 iManage 等既有系统的权限与档案建立执行边界。收入与工作流入口的争夺正在发生，替代 System of Record 尚未得到证明。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-22-A2",
+      "date": "2026-10-22",
+      "grade": "A",
+      "title": "零售商开始为外部 Agent 建立独立授权档案：开放购物入口不等于让出交易控制权",
+      "themes": [
+        "Agent Commerce",
+        "Merchant Acceptance",
+        "Walmart",
+        "Agent Profiles",
+        "Agent Gateway",
+        "Delegated Authorization",
+        "MCP",
+        "Transaction Governance",
+        "Consumer Agent",
+        "Merchant Control Points",
+        "Policy Enforcement",
+        "Payment Boundaries",
+        "Agent Identity",
+        "Retail Platforms"
+      ],
+      "deck": "沃尔玛 10 月 21 日公布 Agent Profiles、基于 MCP 的 Agent Gateway 和专门的代理购物条款：用户可逐 Agent 设置审批、消费额度与撤权，商家保留账户、付款资料、订单与准入规则。增量不是‘AI 又能购物’，而是大型零售商把外部 Agent 的委托关系纳入自身交易系统；Profiles 尚待未来一个月推出，Gateway 仍是邀请制早期测试，缺少成交与风控效果数据。",
+      "body_format": "article_text"
     }
   ]
 }
