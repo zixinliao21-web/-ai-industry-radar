@@ -70,6 +70,30 @@
       ],
       "deck": "NVIDIA 10 月 21 日发布 OpenShell 参考架构，将 Agent 沙箱、Vera 执行与 BlueField-4 上的 Sentry 主机外安全执行组合；ServiceNow 同日公布软件策略到硅片撤权的集成方向，但 AI Passport 联合执行仍待未来版本。新信号不是硬件已保证 Agent 安全，而是“定义授权”与“失陷后仍能独立阻断”的基础设施控制点开始分离，覆盖路径与真实副作用仍需验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-22-A1",
+      "date": "2026-10-22",
+      "grade": "A",
+      "title": "法律 AI 已跨过两亿美元 ARR：Agent 工作台在上移，权威档案仍留在原系统",
+      "themes": [
+        "Vertical AI",
+        "Legal AI",
+        "Enterprise Agents",
+        "AI-native Companies",
+        "Agent Work Surface",
+        "Workflow Ownership",
+        "System of Record",
+        "Semantic Authority",
+        "iManage",
+        "Legora",
+        "Enterprise Context",
+        "Agent Economics",
+        "Vertical SaaS",
+        "Control Points"
+      ],
+      "deck": "Legora 10 月 21 日披露 ARR 超过 2 亿美元、完成 5.5 亿美元融资并达到 88 亿美元估值；同月上线 30 多项法律系统集成和面向企业法务的 Intake。真正的新信号不是又一家 AI 创业公司融资，而是垂直 Agent 已有可观经常性收入，却仍需通过 iManage 等既有系统的权限与档案建立执行边界。收入与工作流入口的争夺正在发生，替代 System of Record 尚未得到证明。",
+      "body_format": "article_text"
     }
   ]
 }
