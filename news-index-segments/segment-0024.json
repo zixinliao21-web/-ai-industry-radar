@@ -1,0 +1,29 @@
+{
+  "schema_version": "3.0",
+  "segment": "0024",
+  "items": [
+    {
+      "id": "2026-10-21-A5",
+      "date": "2026-10-21",
+      "grade": "A",
+      "title": "当算力承诺遇到客户集中度：Anthropic IPO 草案让模型公司的收入质量接受检验",
+      "themes": [
+        "Frontier AI Economics",
+        "Anthropic",
+        "IPO Draft",
+        "Customer Concentration",
+        "Compute Commitments",
+        "Accounting vs Cash Flow",
+        "Convertible Notes",
+        "AI Capital Stack",
+        "Revenue Quality",
+        "Cloud Distribution",
+        "AI Infrastructure",
+        "Control Points",
+        "AI Bubble"
+      ],
+      "deck": "Reuters 与《华尔街日报》10 月 20 日分别查阅 Anthropic IPO 草案：2026 上半年约 163 亿美元收入、807 亿美元净亏损中约 720 亿属于融资工具估值的非现金会计影响；同期算力及基础设施支出近 90 亿美元，前两大客户贡献约 20% 收入，长期算力承诺至少 5180 亿美元。新信号不是“模型公司亏掉 807 亿现金”，而是高速增长的收入、集中客户和跨十年的供给承诺终于能放在同一风险框架中核对；草案尚未公开定稿，现金流与合同可撤销性仍不明。",
+      "body_format": "article_text"
+    }
+  ]
+}
