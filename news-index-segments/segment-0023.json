@@ -169,6 +169,30 @@
       ],
       "deck": "Gartner 2026 年调查显示，只有 13% 的 CIO 认为企业已从 AI 获得显著或变革性价值；设置试点退出规则和生产停用规则的组织，更可能进入其定义的 AI 领先群体。增量不是证明“87% 的 AI 失败”，而是把企业 AI 的竞争从部署数量推进到预算约束、结果归因和及时止损；相关倍数是调查关联而非因果效应。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-21-A4",
+      "date": "2026-10-21",
+      "grade": "A",
+      "title": "社区许可成为 AI 算力的财务变量：已签约机房也可能无法计费",
+      "themes": [
+        "AI Infrastructure",
+        "Data Center Economics",
+        "NEXTDC",
+        "Grid Connection",
+        "Local Permitting",
+        "Community Consent",
+        "Contracted Capacity",
+        "Revenue Recognition",
+        "Project Delivery",
+        "Service Level Credits",
+        "AI Capital Allocation",
+        "Infrastructure Control Points",
+        "AI Bubble",
+        "Social License"
+      ],
+      "deck": "NEXTDC 10 月 21 日因墨尔本 M3 数据中心电网扩容受阻，将约 1.4 亿澳元已签约业务的预期收入及 EBITDA 从 FY27 指引中剔除；当日股价下跌 41.7%。与此前 Nscale 项目客户退出不同，本次客户合同仍在，却因地方施工许可、社区反对和供电延误而无法确定何时计费。新证据把“电力—许可—合同兑现”风险推进到上市公司财务指引层面；剔除指引不等于合同作废或已实现损失。",
+      "body_format": "article_text"
     }
   ]
 }
