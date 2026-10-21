@@ -1,0 +1,54 @@
+{
+  "id": "2026-10-21-A6",
+  "date": "2026-10-21",
+  "grade": "A",
+  "title": "当前沿模型进入竞争对手的云：企业 AI 的分发权正在向采购与治理入口移动",
+  "themes": [
+    "Enterprise AI",
+    "Model Distribution",
+    "Google Cloud",
+    "OpenAI",
+    "Hyperscalers",
+    "Cloud Marketplace",
+    "Procurement Commitments",
+    "Agent Governance",
+    "Enterprise Control Points",
+    "Multi-model",
+    "Codex"
+  ],
+  "deck": "OpenAI 与 Google Cloud 10 月 21 日宣布将前沿模型及 Codex 接入 Google Model Garden、Marketplace 与现有云消费承诺；Google 称客户可在同一治理与计费环境中选用竞争模型。但当前仍是受邀私有预览，零数据保留和 Confidential Compute 部分能力尚未上线。新增的结构信号不是模型能力趋同，而是企业 AI 的采购、身份、审计与账单入口可能比单一模型 API 更稳定地掌握分发权。",
+  "body_format": "article_text",
+  "article_text": "# 当前沿模型进入竞争对手的云：企业 AI 的分发权正在向采购与治理入口移动\n\n**核心判断｜前沿模型厂商正在把彼此竞争的云平台变成销售渠道；但客户获得更多模型选择，不代表云平台失去控制权。相反，企业已经承诺的云预算、采购合同、身份权限和审计体系，可能成为比单一模型 API 更稳定的分发入口。**\n\n2026 年 10 月 21 日，OpenAI 与 Google Cloud 分别宣布：OpenAI 前沿模型和 Codex 将进入 Google Cloud 的 Model Garden，模型购买经由 Google Cloud Marketplace，部分客户可使用既有 Google Cloud 消费承诺。Google 同时计划让这些模型进入其 Antigravity 与 Gemini Agent 工作环境。[1][2] 这是 **A 级结构性验证信号**，不是新模型发布，也不是两家竞争关系消失。\n\nRadar 已记录 HCLTech/Anthropic 的服务与软件双通道分发，以及 TCS 借交付现场争夺企业 AI 入口。这次新增的是另一层：**即使是直接竞争的前沿模型公司，也愿意让对手的云采购与治理体系成为自己的企业入口。**模型供应商、云渠道和实际业务执行权开始更清楚地分层。\n\n## 一、FACT｜交易入口与模型能力被重新组合\n\nOpenAI 官方 10 月 21 日公告明确：前沿模型与 Codex agentic workflows 将进入 Google Cloud Model Garden；企业可通过 Google Cloud Marketplace 购买，符合条件的支出可抵扣已有 Google Cloud 消费承诺；Microsoft 仍是 OpenAI 的主要云合作伙伴。[1] 这不是“OpenAI 转而由 Google 独家托管”，也不是 Microsoft 合作关系终止。\n\nGoogle Cloud 同日进一步说明，初期模型包括 GPT-6 Astra、GPT-6.1 Sol 和 GPT-6 Luna；其平台允许企业按工作负载比较模型的能力、时延与成本。Google 宣称可统一账单，并让相关模型消费计入其 Flexible Savings Plans；还提出在统一身份、审计和 VPC Service Controls 框架下运行第三方模型。[2] 这些是供应商公布的产品能力与商业安排，尚不是我们独立验证的客户部署结果。\n\n**可用性必须单独标注。**Google 说部分客户已经进入 private preview；OpenAI 的申请页面说明当前预览为邀请制，仅限获批开发与内部测试用途，不能据此写成已面向所有企业生产环境普遍可用。[3] 双方计划未来数周扩展一般可用性，计划不等于已经交付。\n\n**安全承诺也有时间边界。**Google 宣称客户提示、上下文与输出保留在指定数据边界内，不用于训练基础模型，并采用隔离网关；但其同一公告明确把 Zero Data Retention 选项及 Confidential Compute 列为“coming soon”。不能将尚未提供的功能写成已通过的合规保证。[2] 对高监管企业，实际区域、合同、子处理方、日志保留与审计证明仍需逐项核验。\n\n这一合作也不是第一次把 OpenAI 模型接入其他云。OpenAI 6 月宣布其前沿模型和 Codex 已通过 AWS 面向企业提供；同月与 Oracle 公布可使用符合条件的 OCI 消费承诺购买模型与 Codex 的路径。[4][5] Google 合作的新意，是在直接经营 Gemini 及自有 Agent 工作台的竞争者平台上，把模型选择、采购和治理入口进一步打通。\n\n## 二、INFERENCE｜模型供应商可以多归属，采购与治理关系未必同样可迁移\n\n过去常把企业 AI 的竞争理解为“哪家模型最好、哪家 API 最便宜”。这仍重要，但企业真实采购往往受另一组变量约束：预算已承诺给哪家云、供应商是否通过采购审查、谁能管理员工和 Agent 身份、日志在哪里留存、谁负责事故响应。\n\n**第一层是模型能力。**OpenAI、Google、Anthropic 等提供推理与工具使用能力。模型可比较，理论上也可被替换，但上下文格式、工具调用、行为一致性和成本并不天然兼容。\n\n**第二层是云渠道与商业承诺。**如果企业可以把既有云消费承诺用于购买竞争模型，那么新增模型的边际采购阻力可能降低；同时，采购订单、统一账单、折扣计划与云平台的企业关系仍由渠道掌握。模型厂商因此获得分发，云商则可能保留客户预算入口。这里的“控制权”是合同与采购路径上的相对优势，不是云商必然掌握模型知识产权或全部最终用户数据。\n\n**第三层是治理与运行环境。**统一身份、访问策略、网络边界、审计及模型路由可降低企业引入多个模型的操作成本，但也可能增加对特定云控制台、策略表达和日志体系的依赖。所谓“可换模型”，不等于能以相同权限语义、相同结果责任和相同成本迁出整个工作流。\n\n**第四层才是业务执行权。**企业的客户主数据、订单规则、审批权限、回滚责任和最终事实记录，并不会因 Google Marketplace 上架 OpenAI 模型就自动转移给任何一方。模型、渠道、控制面和 System of Record 必须分别判断。\n\n因此，这条新闻修正的不是“模型不重要”，而是**单一模型能力领先不足以推导其拥有企业 AI 的完整价值链**。竞争者之间的分发合作，可能正是模型差异化与企业渠道集中化同时发生的结果。\n\n## 三、COUNTERARGUMENT｜多模型云平台不必然赢得最终控制权\n\n**反论一：这也可能只是正常的渠道扩张。**AWS、Oracle 已经提供相近采购路径；Google 加入未必改变行业均衡。若企业最终仍通过 OpenAI 自有合同与工作台购买主要服务，云渠道可能只获得增量长尾需求。当前没有披露 Google 渠道新增收入、抽成比例或客户迁移数据，不能给云平台估算新增利润。\n\n**反论二：Google 的“中立选择”存在利益冲突。**Google 既经营 Gemini 模型，也控制 Model Garden、Gemini Agent 与云基础设施。平台有动机让第三方模型扩大客户覆盖，也可能在默认模型、路由、集成深度或商业条件上优待自家产品。官方所称统一选择与无架构锁定是产品主张，尚需实测迁移成本和商业条款。\n\n**反论三：企业可能刻意保持多云和直接采购。**大型客户能够同时使用多个云、直接签约模型公司，或自行构建模型网关与策略层。采购承诺能降低短期引入阻力，却未必形成不可逆锁定；合同到期、性能差距扩大或监管变化都可能重新分配流量。\n\n**反论四：合规包装不等于合规结果。**特别是当前私有预览限制、尚未推出的 ZDR/Confidential Compute 选项，以及跨区域数据与日志责任尚待验证。对于高风险业务，统一控制台的便利不能代替独立安全测试、合同审查和故障恢复。\n\n## 四、VELNAR 判断更新｜应新增观察维度，不应扩张 Sales MVP\n\n**被强化的判断：**企业 AI 的控制点不仅是模型、Agent Runtime 或 FDE 交付，还包括采购资格、云消费承诺、身份治理与审计入口。前沿模型可同时出现在竞争云上，说明“模型提供者”与“企业分发者”可以分离。\n\n**需要修正的判断：**“多模型可选就会削弱所有平台锁定”并不充分。模型替换权与工作流迁移权不同；账单、权限、运行日志和既有企业合同仍可能把客户关系锚定在云平台。\n\n**仍未改变的判断：**这些公告没有证明任何云商已取得客户的 Semantic Authority，也没有证明企业 Agent 的跨系统执行已经可靠闭环。VELNAR 当前 Sales MVP 继续以业务事实、确定性状态、权限校验、订单/库存正常路径和真实验收为优先；不因此新增通用模型路由器、Ontology 平台或多云架构。\n\n## 五、PREDICTION｜接下来应看哪些可证伪指标\n\n未来六至十二个月，优先追踪：Google 上的 OpenAI 模型何时真正 GA、哪些区域和行业可用；企业是否能在既有云承诺内完成采购并获得清晰的计费与数据处理条款；ZDR 和 Confidential Compute 是否如期交付；不同模型在同一业务流程中的替换是否保留身份、审计和工具调用语义；渠道销售占比、客户留存与云商抽成是否公开。\n\n**有界预测：**若多模型分发成为常态，模型厂商可能更依赖渠道触达大型企业，而云平台可能通过采购与治理层积累稳定关系。但若模型厂商凭独有应用、直接客户合同或更低迁移成本保留终端入口，云商的分发优势就不会自动变成执行层垄断。\n\n**值得继续讨论的问题：当一家企业可以在同一个云账单里购买相互竞争的模型时，它真正难以更换的，究竟是模型、采购关系、权限与审计控制面，还是已经嵌入真实业务的执行责任？**\n\n---\n\n## 证据来源与边界\n\n[1] OpenAI，2026-10-21，OpenAI models are coming to Google Cloud，官方合作公告：https://openai.com/index/openai-models-google-cloud/\n\n[2] Google Cloud，2026-10-21，Google Cloud expands model choice and flexibility, bringing OpenAI models to customers，官方模型范围、计费与安全声明：https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers\n\n[3] OpenAI，2026-10-21 查阅，OpenAI on Google Cloud 预览申请页，明确邀请制、开发与内部测试限制：https://openai.com/form/openai-on-google-cloud/\n\n[4] OpenAI，2026-06-01，OpenAI frontier models and Codex are now available on AWS，官方既有云分发背景：https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws/\n\n[5] OpenAI，2026-06-10（2026-08-07 更新），Access OpenAI models and Codex through your Oracle cloud commitment，官方既有采购承诺路径：https://openai.com/index/openai-on-oracle-cloud/\n\n[6] Reuters，2026-10-21，OpenAI to sell its top models on Google Cloud in latest enterprise push，独立新闻核验与竞争关系背景：https://www.reuters.com/business/retail-consumer/openai-sell-its-top-models-google-cloud-latest-enterprise-push-2026-10-21/\n\n**证据边界：**官方产品描述与商业承诺属于 FACT（公司已如此宣布），并不等于功能已经全面 GA、客户实际采用或安全性质经过独立审计；本文对控制权迁移的判断属于 INFERENCE，对未来渠道份额属于 PREDICTION。",
+  "sources": [
+    {
+      "title": "OpenAI | OpenAI models are coming to Google Cloud",
+      "url": "https://openai.com/index/openai-models-google-cloud/",
+      "date": "2026-10-21"
+    },
+    {
+      "title": "Google Cloud | Google Cloud brings OpenAI models to customers",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers",
+      "date": "2026-10-21"
+    },
+    {
+      "title": "OpenAI | Request preview access on Google Cloud",
+      "url": "https://openai.com/form/openai-on-google-cloud/",
+      "date": "2026-10-21"
+    },
+    {
+      "title": "OpenAI | Frontier models and Codex available on AWS",
+      "url": "https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws/",
+      "date": "2026-06-01"
+    },
+    {
+      "title": "OpenAI | Access models and Codex through Oracle cloud commitment",
+      "url": "https://openai.com/index/openai-on-oracle-cloud/",
+      "date": "2026-06-10"
+    },
+    {
+      "title": "Reuters | OpenAI to sell top models on Google Cloud",
+      "url": "https://www.reuters.com/business/retail-consumer/openai-sell-its-top-models-google-cloud-latest-enterprise-push-2026-10-21/",
+      "date": "2026-10-21"
+    }
+  ]
+}
