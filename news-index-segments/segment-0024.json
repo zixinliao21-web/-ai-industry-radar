@@ -45,6 +45,31 @@
       ],
       "deck": "OpenAI 与 Google Cloud 10 月 21 日宣布将前沿模型及 Codex 接入 Google Model Garden、Marketplace 与现有云消费承诺；Google 称客户可在同一治理与计费环境中选用竞争模型。但当前仍是受邀私有预览，零数据保留和 Confidential Compute 部分能力尚未上线。新增的结构信号不是模型能力趋同，而是企业 AI 的采购、身份、审计与账单入口可能比单一模型 API 更稳定地掌握分发权。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-21-A7",
+      "date": "2026-10-21",
+      "grade": "A",
+      "title": "Agent 安全开始争夺主机之外的执行权：NVIDIA 的 DPU 不是万能断路器",
+      "themes": [
+        "Enterprise Agents",
+        "Agent Security",
+        "NVIDIA",
+        "OpenShell",
+        "NVIDIA Sentry",
+        "BlueField-4",
+        "DPU",
+        "Out-of-band Enforcement",
+        "ServiceNow",
+        "AI Passport",
+        "Runtime Isolation",
+        "Agent Governance",
+        "Delegated Authorization",
+        "Security Control Plane",
+        "Control Points"
+      ],
+      "deck": "NVIDIA 10 月 21 日发布 OpenShell 参考架构，将 Agent 沙箱、Vera 执行与 BlueField-4 上的 Sentry 主机外安全执行组合；ServiceNow 同日公布软件策略到硅片撤权的集成方向，但 AI Passport 联合执行仍待未来版本。新信号不是硬件已保证 Agent 安全，而是“定义授权”与“失陷后仍能独立阻断”的基础设施控制点开始分离，覆盖路径与真实副作用仍需验证。",
+      "body_format": "article_text"
     }
   ]
 }

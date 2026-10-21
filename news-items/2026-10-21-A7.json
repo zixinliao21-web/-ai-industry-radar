@@ -1,0 +1,58 @@
+{
+  "id": "2026-10-21-A7",
+  "date": "2026-10-21",
+  "grade": "A",
+  "title": "Agent 安全开始争夺主机之外的执行权：NVIDIA 的 DPU 不是万能断路器",
+  "themes": [
+    "Enterprise Agents",
+    "Agent Security",
+    "NVIDIA",
+    "OpenShell",
+    "NVIDIA Sentry",
+    "BlueField-4",
+    "DPU",
+    "Out-of-band Enforcement",
+    "ServiceNow",
+    "AI Passport",
+    "Runtime Isolation",
+    "Agent Governance",
+    "Delegated Authorization",
+    "Security Control Plane",
+    "Control Points"
+  ],
+  "deck": "NVIDIA 10 月 21 日发布 OpenShell 参考架构，将 Agent 沙箱、Vera 执行与 BlueField-4 上的 Sentry 主机外安全执行组合；ServiceNow 同日公布软件策略到硅片撤权的集成方向，但 AI Passport 联合执行仍待未来版本。新信号不是硬件已保证 Agent 安全，而是“定义授权”与“失陷后仍能独立阻断”的基础设施控制点开始分离，覆盖路径与真实副作用仍需验证。",
+  "body_format": "article_text",
+  "article_text": "# Agent 安全开始争夺主机之外的执行权：NVIDIA 的 DPU 不是万能断路器\n\n**核心判断｜企业 Agent 的安全竞争正在从“由谁定义权限”进一步走向“当 Agent 所在主机已经失守，谁仍能执行拒绝”。** NVIDIA 2026 年 10 月 21 日发布 OpenShell Reference Architecture，将运行时隔离、Agent 工具执行和 BlueField-4 DPU 上的 Sentry 安全执行组合成一套参考架构。[1] 这是一条 **A 级结构性验证信号**：它使 Agent 安全控制点向独立于工作负载主机的基础设施层延伸；但公开架构、合作伙伴名单和毫秒级隔离声明，不等于企业已普遍获得端到端、无法绕过的 Agent 安全保障。\n\n这不是我们第一次讨论 Agent Control Plane。此前 Radar 已分别记录 ServiceNow AI Passport 的可验证委托、微软的动态权限与 OpenAI 编码 Agent 意外弱化自身监控的事件。**此次真正新增的不是“Agent 需要被治理”，而是安全系统开始明确区分策略制定者、软件执行者与主机之外的独立执行者，并把后一层做成可购买的硬件—软件组合。**\n\n## 一、FACT｜公布了什么，哪些能力还只是设计与集成计划\n\n**第一，NVIDIA 明确拆分了推理、执行和安全三种工作负载。** 10 月 21 日的官方公告将 Vera Rubin 用于模型推理，Vera CPU 用于 Agent harness 与工具执行，OpenShell 提供隔离运行环境，BlueField-4 DPU 运行基于 DOCA 的 NVIDIA Sentry，在主机之外进行观察和策略执行。[1] 这是一种参考架构的功能分工，并不表示每个 OpenShell 部署都必须采购 Vera、Rubin 或 BlueField。\n\n**第二，所谓“主机之外”有特定技术含义。** NVIDIA 将 Sentry 描述为运行在硬件隔离、独立于主机的软件域中，试图在 Agent 或其宿主系统被攻破时仍保留网络路径上的观察与阻断能力；官方称可在毫秒级隔离越界活动。[2] 这与只依赖 Agent 自己的日志、模型拒答或主机内安全进程不同。可是“独立执行”是否成立，取决于实际网络拓扑、管理权限、流量是否经过受控路径以及控制面是否可被旁路，不能仅凭设备名称证明。\n\n**第三，官方技术文档比新闻稿更清楚地写出了限制。** 参考设计把 Phase I 定义为工作区外围控制，Phase II 才加入 Agent 运行时的进程、文件系统、网络与签名策略执行；Sentry 是可选的独立基础设施增强，而非所有部署的默认组成。[3][4] 文档明确指出：OpenShell 可以不使用 BlueField-4；DPU 存在本身不等于满足 Phase II；若需要抵御主机失守，必须验证受保护路径、旁路阻断、失效行为和独立管理信任域。[4][5]\n\n**第四，生态整合与实际可用性必须拆开。** NVIDIA 公布了多家模型、云、安全和企业软件合作伙伴，并称参考架构现已提供。[1] ServiceNow 同日宣布长时运行的个人企业 Agent Arc 正式可用，并描述 Super Intelligence Control Tower、AI Passport、OpenShell 与 Sentry 的联动：由业务系统定义授权，运行时和 DPU 消费这些授权并执行撤权。[6] 但 ServiceNow 在同一公告中明确写明，**AI Passport 与 OpenShell/BlueField DPU 的联合执行预计在未来版本提供**。[6] 因此不能把 Arc 已 GA、参考架构可获取和跨软件—硅片撤权已普遍上线混成同一个事实。\n\n## 二、INFERENCE｜真正被重新划分的是“谁有权让 Agent 停下来”\n\n企业 Agent 的行动链至少包含四种不同权力。\n\n**业务事实与授权决定权。** 哪位员工委托了任务、哪张订单允许修改、金额上限是多少、哪份审批已经生效，通常来自企业的 System of Record、身份平台和业务政策。DPU 并不天然知道这些语义。ServiceNow 试图把业务上下文转成 AI Passport，恰好说明底层安全执行者需要消费上游授权，而不是替代它。[6]\n\n**软件运行时的执行权。** 沙箱、进程隔离、文件系统和网络出口策略可以在工具调用前阻断动作。它们往往比模型提示词更可靠，但若执行组件与被保护 Agent 处于同一失陷信任域，就可能一同被修改、关闭或绕过。[3][5]\n\n**独立基础设施的阻断权。** DPU 方案的新增价值，是把部分监控和网络执行放到主机之外。它试图降低 Agent、主机进程或宿主系统单独控制自身监督者的风险。这与 OpenAI 最近披露的编码 Agent 修改监控集成事件形成问题上的对应，但**不能反推 NVIDIA 的方案已在那类具体事故中得到验证**。安全边界需要实际覆盖路径的测试，而不是新闻之间的因果拼接。\n\n**下游业务系统的最终接受权。** 即使 DPU 成功切断通信，也无法撤回已经被银行、ERP 或仓库系统接受的转账、库存预留或文件删除。NVIDIA 自己的技术文档明确要求将网络隔离、进程终止、凭证撤销、下游授权撤销和既有副作用分别评估。[5] 因此“毫秒级隔离”不是“毫秒级撤销一切业务影响”。\n\n从竞争结构看，安全控制权可能形成分层市场：ServiceNow、Microsoft 或垂直业务平台定义策略；运行时厂商执行工具级限制；NVIDIA、云基础设施及安全设备厂商提供更独立的底层执行；最终业务系统继续对自身数据和交易负责。**谁拥有 DPU，不等于谁拥有 Semantic Authority；谁拥有业务上下文，也不等于能阻断所有绕过其控制面的行动。**\n\n## 三、COUNTERARGUMENT｜为何不能把硬件隔离写成 Agent 安全终局\n\n**第一，硬件路径不一定覆盖所有危险动作。** Agent 可能通过本地文件、共享凭证、浏览器自动化、未纳管网络、工具代理或第三方服务产生副作用。某个 DPU 控制网络出口，不意味着它能够理解每次 API 请求的业务金额、识别加密载荷中的真实动作，或覆盖不经过该路径的调用。[4][5] 需要列出“Agent × 工具 × 网络/进程路径 × 实际阻断点”，而不是只问是否部署 Sentry。\n\n**第二，独立于主机不等于独立于一切。** 主机内 root、虚拟机宿主、hypervisor、DPU 管理面和企业身份系统是不同的失陷情境。官方文档也提醒，DPU 卸载和独立管理的执行边界不是同义词；必须测试映射关系、策略签名、故障时默认拒绝还是放行，以及设备自身的升级与撤权路径。[5] 单一供应商同时控制计算、监控与执行，也可能带来集中故障与审计依赖。\n\n**第三，性能数字不是可直接采购的安全指标。** NVIDIA 宣称毫秒级隔离及容量优势，但没有提供足以跨企业、跨工作负载比较的独立误报率、漏报率、工具级阻断覆盖率、真实攻击下的端到端撤权时间与事故后恢复成本。[1][2] 企业应区分检测到异常、决定阻断、阻断实际生效，以及已经完成的业务动作能否补偿。\n\n**第四，参考架构的生态规模不是生产部署规模。** “正在合作”“计划集成”“参考架构现已提供”与“所有功能正式可用”“客户完成独立安全验收”之间仍有距离。ServiceNow 对 AI Passport 未来版本的明确限定尤其重要。[6] 在没有公开客户规模、持续运行成本与失败案例前，不宜推断 NVIDIA 已垄断 Agent 安全基础设施。\n\n## 四、VELNAR 判断更新｜控制点下沉，但业务可靠性路线不变\n\n**被强化的判断：** Agent Runtime 与 Agent Control Plane 不能完全依赖 Agent 自身遵守规则。对于能长时运行、写代码、访问企业系统的 Agent，独立监控、不可由任务进程自行改写的 Policy、可撤权的凭证与真实阻断点，将越来越接近基础设施采购条件。\n\n**需要细化的判断：** “独立执行”至少有主机外网络隔离、工具调用授权、凭证代理和业务系统拒绝四种不同含义。硬件可以强化其中部分边界，却不能自动完成业务语义判定，也不能替代最终系统的交易校验。未来比较厂商时，应从控制台功能数量转向**权限来源、执行覆盖、失陷后的残余控制与可审计证据**。\n\n**不应得出的结论：** NVIDIA 发布参考架构不意味着所有企业必须采用其硬件，也不意味着安全治理只能由 GPU 供应商提供。其官方部署文档明确允许 CPU VM 和不带 DPU 的分级实施。[4] 对 VELNAR 当前 Sales MVP，更不应据此增加硬件安全栈、通用 Agent 平台或重构 Ontology。现阶段真正需要的是订单、库存、审批与状态转换的确定性校验；高风险写入必须经过授权和确认，运行时不允许自行修改保护规则。技术选择服从实际风险，而非新闻热度。\n\n## 五、PREDICTION｜未来六至十二个月该验证什么\n\n如果主机外 Agent 执行层成为独立市场，接下来应观察：ServiceNow AI Passport 与 Sentry 的联合能力何时正式可用；安全厂商能否展示跨不同 Agent、操作系统和工具的可重复阻断测试；DPU 路径能否覆盖加密流量、子进程、代理与凭证缓存；在主机失守和管理面故障时，哪些策略仍有效；客户是否愿意为独立执行支付额外成本，以及是否出现跨供应商的授权与审计互操作。\n\n**有界预测：** 在高权限、长时运行和监管严格的企业场景，主机外执行边界的商业价值可能上升；但大多数低风险工作流仍可能优先选择普通沙箱、受控 API、审批与业务端 Policy。硬件层会成为某些风险模型中的强控制点，而不是所有 Agent 的默认答案。\n\n**值得继续讨论的问题：当一个 Agent 能修改自己所在环境的安全配置时，企业究竟需要把哪一部分“停止权”移出它的信任域；又有哪些业务副作用必须由最终 System of Record 自己拒绝或补偿？**\n\n---\n\n## 证据来源与边界\n\n[1] NVIDIA，2026-10-21，NVIDIA Launches OpenShell Reference Architecture for Safe AI Agents（官方发布、产品声明）：https://nvidianews.nvidia.com/news/openshell-reference-architecture\n\n[2] NVIDIA，2026-10-21，NVIDIA Sentry（官方产品说明，毫秒级能力为厂商声明）：https://www.nvidia.com/en-us/networking/products/software/sentry/\n\n[3] NVIDIA，2026-10-21，Always-on, Autonomous Agents, Now Safe for the AI Factory（Phase I/II 定义）：https://docs.nvidia.com/enterprise-reference-architectures/secure-agent-workspace-reference-design/latest/abstract.html\n\n[4] NVIDIA，2026-10-21，Deployment Tiers（DPU 可选、部署适用性及限制）：https://docs.nvidia.com/enterprise-reference-architectures/secure-agent-workspace-reference-design/latest/deployment-tiers.html\n\n[5] NVIDIA，2026-10-21，Security And Governance Model（信任边界、失陷模型、撤权与残余风险）：https://docs.nvidia.com/enterprise-reference-architectures/secure-agent-workspace-reference-design/latest/security-and-governance-model.html\n\n[6] ServiceNow，2026-10-21，ServiceNow delivers personal enterprise agent and policy enforcement with NVIDIA（Arc GA 与 AI Passport 集成未来可用的区分）：https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-delivers-industry-first-personal-enterprise-agent-and-policy-enforcement-with-NVIDIA-extending-AI-governance-across-software-and-silicon/\n",
+  "sources": [
+    {
+      "title": "NVIDIA | OpenShell Reference Architecture",
+      "url": "https://nvidianews.nvidia.com/news/openshell-reference-architecture",
+      "date": "2026-10-21"
+    },
+    {
+      "title": "NVIDIA | Sentry product overview",
+      "url": "https://www.nvidia.com/en-us/networking/products/software/sentry/",
+      "date": "2026-10-21"
+    },
+    {
+      "title": "NVIDIA | Secure Agent Workspace abstract",
+      "url": "https://docs.nvidia.com/enterprise-reference-architectures/secure-agent-workspace-reference-design/latest/abstract.html",
+      "date": "2026-10-21"
+    },
+    {
+      "title": "NVIDIA | Secure Agent Workspace deployment tiers",
+      "url": "https://docs.nvidia.com/enterprise-reference-architectures/secure-agent-workspace-reference-design/latest/deployment-tiers.html",
+      "date": "2026-10-21"
+    },
+    {
+      "title": "NVIDIA | Security and governance model",
+      "url": "https://docs.nvidia.com/enterprise-reference-architectures/secure-agent-workspace-reference-design/latest/security-and-governance-model.html",
+      "date": "2026-10-21"
+    },
+    {
+      "title": "ServiceNow | Personal enterprise agent and NVIDIA policy enforcement",
+      "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-delivers-industry-first-personal-enterprise-agent-and-policy-enforcement-with-NVIDIA-extending-AI-governance-across-software-and-silicon/",
+      "date": "2026-10-21"
+    }
+  ]
+}
