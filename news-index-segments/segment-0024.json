@@ -118,6 +118,30 @@
       ],
       "deck": "沃尔玛 10 月 21 日公布 Agent Profiles、基于 MCP 的 Agent Gateway 和专门的代理购物条款：用户可逐 Agent 设置审批、消费额度与撤权，商家保留账户、付款资料、订单与准入规则。增量不是‘AI 又能购物’，而是大型零售商把外部 Agent 的委托关系纳入自身交易系统；Profiles 尚待未来一个月推出，Gateway 仍是邀请制早期测试，缺少成交与风控效果数据。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-22-B1",
+      "date": "2026-10-22",
+      "grade": "B",
+      "title": "前沿模型开始收购行业流程本身：药物研发的控制点不止在发现新分子",
+      "themes": [
+        "Vertical AI",
+        "Life Sciences",
+        "Drug Development",
+        "OpenAI",
+        "Orchestra Bio",
+        "Rosalind",
+        "Enterprise Agents",
+        "Workflow Ownership",
+        "System of Record",
+        "Regulated Workflows",
+        "Scientific AI",
+        "Enterprise Context",
+        "Control Points",
+        "AI-native Companies"
+      ],
+      "deck": "OpenAI 10 月 20 日收购药物开发协调平台 Orchestra Bio，计划与 Rosalind 科研模型和工作台整合。增量不是模型又能做生物学问答，而是模型供应商开始购买跨研究、制造、临床阶段的项目依赖与组织执行能力；但交易规模、客户采用、实际提效和受监管记录的授权边界尚未披露。",
+      "body_format": "article_text"
     }
   ]
 }
