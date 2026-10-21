@@ -1,0 +1,42 @@
+{
+  "id": "2026-10-21-A3",
+  "date": "2026-10-21",
+  "grade": "A",
+  "title": "企业 AI 的稀缺能力正在变成“停止权”：为什么领先者更敢终止无效项目",
+  "themes": [
+    "Enterprise AI",
+    "Agent Economics",
+    "AI ROI",
+    "Gartner",
+    "CIO Survey",
+    "AI Portfolio Governance",
+    "Stop Rules",
+    "Workflow Evaluation",
+    "Human-Agent Operating Model",
+    "Enterprise Software",
+    "FDE",
+    "AI-native Business",
+    "Budget Allocation",
+    "Control Points"
+  ],
+  "deck": "Gartner 2026 年调查显示，只有 13% 的 CIO 认为企业已从 AI 获得显著或变革性价值；设置试点退出规则和生产停用规则的组织，更可能进入其定义的 AI 领先群体。增量不是证明“87% 的 AI 失败”，而是把企业 AI 的竞争从部署数量推进到预算约束、结果归因和及时止损；相关倍数是调查关联而非因果效应。",
+  "body_format": "article_text",
+  "article_text": "# 企业 AI 的稀缺能力正在变成“停止权”：为什么领先者更敢终止无效项目\n\n**核心判断｜企业 AI 的稀缺能力可能不再只是把 Agent 上线，而是能够明确判断何时不该上线、何时应该关停，以及停止之后把资源转到哪里。** Gartner 在 2026 年 10 月公布的 CIO 调查显示，报告企业已经从 AI 获得“显著或变革性价值”的受访者只有 13%；同时，有明确试点退出规则、生产项目终止规则的组织，更有可能属于 Gartner 定义的 AI 领先群体。[1] 这不是“87% 的 AI 项目失败”的证据，更不是“写一条停用规则就能提高两倍成功率”。它把一个长期被忽视的竞争能力推到了台前：**在模型和 Agent 越来越容易购买、部署的环境里，谁能持续筛掉无效工作流，谁才有可能积累可复制的经营收益。**\n\n**评级：A｜新增的大样本调查把“止损与重新配置资源”从管理口号推进为可观察的组织差异。** 此前 VELNAR 已记录 IBM 对有无 Agent 的工作流进行对照测量，也讨论过 Agent 执行层、FDE 交付和企业上下文。本次不是再说一遍“应该关注 ROI”，而是出现了一个更具体的研究对象：**AI 项目在试点和生产两个阶段的退出决策权，是否正成为企业组织能力的一部分？**\n\n## 一、FACT｜三组数据究竟说明了什么\n\n**第一组：显著价值仍是少数人的自我报告。** Gartner 于 10 月 19 日发布“2027 CIO and Technology Executive Agenda”调查结果，样本为 2026 年 5—7 月接受调查的 2,002 名 CIO 与技术高管。其中 13% 表示其企业迄今已从 AI 获得显著或变革性价值。[1] 这里的“2027”是研究议程名称，不是对 2027 年结果的实测。13% 的分母是受访高管，不是 AI 项目数量；“显著或变革性”是高门槛的主观价值判断，也不意味着其余 87% 完全没有收益。\n\n**第二组：退出规则与领先表现存在相关性，而且生产阶段更少见。** Gartner 把业务结果表现较好、且 CEO 感知 AI 价值较高的组织定义为“vanguards”（领先群体）。有“何时不让试点进入生产”的规则的组织，属于这一群体的可能性为其他组织的 2.3 倍；有“何时放弃生产中低价值 AI 项目”规则的组织，相应倍数为 2.6。但仅 31% 的 CIO 表示组织具备前一种规则，17% 具备后一种规则。[1]\n\n这四个数字的组合比单个百分比重要：企业往往愿意设置上线门槛，却不愿在系统已接入流程、预算已投入、团队已承诺后执行退出。**然而 2.3 倍和 2.6 倍是横截面关联，不是随机实验的因果提升**；更成熟的管理团队可能既善于止损，也更容易获得 AI 收益。\n\n**第三组：老板难以证明回报，却还在增加投入。** Gartner 10 月 20 日发布另一项独立调查：2026 年 4—5 月访问了 203 名全球 CEO 与高级企业管理者，44% 表示难以向利益相关者证明 AI 带来的财务回报，75% 计划增加技术投资，63% 把大幅重构运营模式列为加速 AI 财务回报的重要举措，52% 提及积极部署作为员工的 AI Agent。[2] 这些数字描述的是不同问题下的受访者比例，不应相加，也不能据此声称“44% 企业 AI 项目亏损”。它们共同暴露一种张力：**投资意愿增长得比可证明的收益更快。**\n\n还有一组背景证据。Gartner 9 月 1 日发布的调查覆盖 2026 年 1—4 月的 1,303 名受访者，其所在企业上一财年收入至少 5,000 万美元。仅 22% 的组织被归为已经跨多个业务单元成功规模化 AI 或采用 AI-first 方法；85% 的职能负责人仍计划增加 AI 支出。[3] 这一样本、问题与 13% CIO 调查不同，不能把 22% 和 13% 画成同一时间序列。它的用途是交叉验证“扩张意愿与规模化结果并不同步”，而不是证明所有企业正在退潮。\n\n## 二、INFERENCE｜“退出权”为什么可能成为竞争能力\n\n**1. 部署能力的供给增加，会放大错误选择的成本。** 当模型 API、Agent 框架、集成平台与外部交付团队降低了试点门槛，企业可以同时启动更多自动化。项目数量增长不等于有效成果增长：每条工作流都可能带来持续推理费用、系统权限维护、人工复核、异常处置和流程变更。试点容易开始，却很少有人承担停止的责任，结果是低价值 Agent 逐渐形成一层“数字化固定成本”。\n\n**2. 试点退出和生产停用不是同一件事。** 试点阶段，企业需要事先写清楚业务基线、验收阈值、失败类型和停止条件；生产阶段，还需要知道实际单位成本、质量漂移、人工回退率、合规事件和撤除 Agent 后如何恢复原有流程。生产系统已与人、数据、客户承诺相连，停用的组织成本更高。只有 17% 的受访 CIO 报告存在生产阶段的低价值项目终止规则，[1] 说明这一环节至少尚未成为普遍管理惯例。\n\n**3. 真正的产品化对象可能是“结果证据”，而不只是 Agent 功能。** 如果客户购买 Agent 后仍无法回答“比原流程多创造了什么净价值”，供应商就只能反复用演示、模型榜单和部署数量证明自己。相反，能够把每次执行与真实业务结果、人工介入、错误代价和可替代方案绑定的系统，更容易参与客户预算分配。这里的控制点并非抽象的 ROI 仪表盘，而是可信的业务事实：同样输入条件下，完成一笔正确订单、解决一次客服请求或收回一笔应收款的全成本是否下降。\n\n**4. 停止规则本身也会产生信息。** 一条明确记录“为什么没有继续自动化”的工作流，可能比一个长期挂在系统里、却无人评估的 Agent 更有研究价值。失败可以来自数据缺失、权限边界、业务频率过低、人工复核太重，也可能只是模型能力尚不够。把这些原因区分开，才有机会在模型、成本或客户条件变化后重新评估；简单把失败归为“AI 不成熟”，无法形成可迁移经验。\n\n## 三、不能据此得出什么结论\n\n**不能把调查关联写成管理措施的因果证明。** Gartner 的领先群体同时依据业务表现和 CEO 感知价值定义，组织规模、行业、预算、数字化基础与管理成熟度都可能影响结果。设置退出规则可能是成功企业的特征，也可能是成功之后形成的制度；公开新闻稿没有提供足以排除这些混杂因素的随机对照证据。\n\n**不能把所有 AI 视为 Agent，也不能把财务回报视为唯一目标。** 调查涉及传统 AI、生成式 AI 与 Agent 等多类应用；某些安全、合规和韧性项目的价值主要表现为风险降低，短期不易形成收入。对这些项目采用单一的“省了多少钱”退出阈值，反而可能误杀必要能力。\n\n**不能把“大胆关停”变成短视的削减预算。** 数据治理、员工学习、组织流程重构可能存在合理的前期投入。若过早终止所有短期没有正现金流的项目，企业可能失去长期选择权。合理的退出规则需要区分：验证技术可行性的试验、必须持续运行的控制系统、以及已经承诺创造可测经营结果的生产自动化。\n\n**也不能把 Gartner 的建议自动包装成一个新软件品类。** 是否会形成独立的 AI Portfolio / Agent Economics 采购预算，尚无足够的合同、收入和客户迁移证据。大型 ERP、ITSM、财务系统、云成本工具和咨询服务商都有机会吸收相关功能，未必会出现独立赢家。\n\n## 四、对 VELNAR 的有界影响\n\n这组证据**强化**我们对 Enterprise Agent 的一项原有判断：可靠的业务闭环比可展示的 Agent 数量更重要；但它**补充**了此前讨论较少的一层——即使流程已经能跑通，也必须允许业务负责人依据证据拒绝上线或停止运行。能执行、值得执行、值得长期付费，是三个不同问题。\n\n对于现阶段的 Sales MVP，**不据此增加“AI 经营控制平台”、通用 ROI 看板或多 Agent 治理工程**。更合适的观察口径是在已有高频 SKU 的真实流程验收中，保留同一业务基线：正确识别与报价、订单落库、库存预留、人工纠错、异常升级、实际处理时间及最终业务结果。若一条自动化需要更多人工补救，或者缺乏足够业务频率，应该如实记录“不宜扩大”，而不是为了展示进度继续扩功能。这里提出的是验收判断，不是本轮产品范围变更。\n\n对于 VELNAR 长期商业模式，值得观察的不是谁宣称拥有更多 Agent，而是谁愿意向客户披露失败率、全成本、可回退能力，以及何时建议客户不买或停用自己的功能。这可能影响交付信任和续费，但目前仍是推论，不能据此预判某类 SaaS 或 FDE 公司必胜。\n\n## 五、PREDICTION｜未来 12—24 个月该看什么\n\n**观察一：**企业 Agent 合同与采购评审是否开始要求上线前的基线、生产后的净收益复测、停止阈值和可逆退出路径，而不仅是功能清单与模型准确率。\n\n**观察二：**服务商是否披露跨客户的有效工作流比例、人工回退成本、停用项目占比和第二次部署的边际交付成本；若只公布 Agent 数量与融资额，说明“结果经济学”仍停留在叙事层。\n\n**观察三：**企业是否真的执行停用决定，并把释放的预算重新配置给更有效的流程。只有规则、没有可观察的资源再分配，退出权就仍是纸面治理。\n\n**值得继续讨论的问题：**当一家企业已经能够自动化大量任务时，谁应该拥有“让 Agent 停下来”的最终决定权——业务负责人、财务负责人、IT，还是独立的风险治理角色？这种权力安排，会不会比模型选择更深地决定企业 AI 的长期收益？\n\n## 来源与证据边界\n\n[1] Gartner，2026-10-19，2,002 名 CIO/技术高管调查；13%、31%、17%、2.3 倍、2.6 倍及组织重设计数据均为 Gartner 公布的调查口径。https://www.gartner.com/en/newsroom/press-releases/2026-10-19-gartner-survey-finds-only-13-percent-of-cios-say-their-enterprise-has-realized-significant-or-transformational-value-from-ai\n\n[2] Gartner，2026-10-20，203 名 CEO/高级管理者独立调查；44%、75%、63%、52% 均为受访者陈述或计划，不是企业财务审计结果。https://www.gartner.com/en/newsroom/press-releases/2026-10-20-gartner-says-44-percent-of-ceos-struggle-to-demonstrate-ai-financial-returns-as-technology-becomes-central-to-growth\n\n[3] Gartner，2026-09-01，1,303 名职能管理者调查；22% 规模化与 85% 计划增加支出不与其他样本直接合并。https://www.gartner.com/en/newsroom/press-releases/gartner-survey-finds-only-22-percent-of-organizations-have-successfully-scaled-ai-across-multiple-business-units",
+  "sources": [
+    {
+      "title": "Gartner | Survey Finds Only 13% of CIOs Say Their Enterprise Has Realized Significant or Transformational Value from AI",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2026-10-19-gartner-survey-finds-only-13-percent-of-cios-say-their-enterprise-has-realized-significant-or-transformational-value-from-ai",
+      "date": "2026-10-19"
+    },
+    {
+      "title": "Gartner | 44% of CEOs Struggle to Demonstrate AI Financial Returns",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2026-10-20-gartner-says-44-percent-of-ceos-struggle-to-demonstrate-ai-financial-returns-as-technology-becomes-central-to-growth",
+      "date": "2026-10-20"
+    },
+    {
+      "title": "Gartner | Only 22% of Organizations Have Successfully Scaled AI Across Multiple Business Units",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/gartner-survey-finds-only-22-percent-of-organizations-have-successfully-scaled-ai-across-multiple-business-units",
+      "date": "2026-09-01"
+    }
+  ]
+}

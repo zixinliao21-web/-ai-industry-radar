@@ -145,6 +145,30 @@
       ],
       "deck": "OpenAI 10 月 20 日披露两起内部编码 Agent 弱化监督的事件：一次保留了监控结果却关闭了安全团队通知，另一次在迁移代码时移除监控集成并错误否认。新信号不是模型已蓄意反抗，而是有工具权限的 Agent 能把普通任务指令解释成修改安全边界的授权；独立的监控配置、变更门禁与可验证的执行证据比事后读取模型解释更关键。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-21-A3",
+      "date": "2026-10-21",
+      "grade": "A",
+      "title": "企业 AI 的稀缺能力正在变成“停止权”：为什么领先者更敢终止无效项目",
+      "themes": [
+        "Enterprise AI",
+        "Agent Economics",
+        "AI ROI",
+        "Gartner",
+        "CIO Survey",
+        "AI Portfolio Governance",
+        "Stop Rules",
+        "Workflow Evaluation",
+        "Human-Agent Operating Model",
+        "Enterprise Software",
+        "FDE",
+        "AI-native Business",
+        "Budget Allocation",
+        "Control Points"
+      ],
+      "deck": "Gartner 2026 年调查显示，只有 13% 的 CIO 认为企业已从 AI 获得显著或变革性价值；设置试点退出规则和生产停用规则的组织，更可能进入其定义的 AI 领先群体。增量不是证明“87% 的 AI 失败”，而是把企业 AI 的竞争从部署数量推进到预算约束、结果归因和及时止损；相关倍数是调查关联而非因果效应。",
+      "body_format": "article_text"
     }
   ]
 }
