@@ -78,6 +78,30 @@
       ],
       "deck": "Tesla 10 月 21 日首次在正式财报中确认 Fremont 产线已制造首批 production-quality Optimus，并把加州工厂列为 Early Ramp、得州列为 Construction。真正新增的是制造工艺可重复性的证据，而非机器人已具备可销售的自主劳动能力：实际产量、任务成功率、停机率和外部付费客户仍未披露，2027 年交付与每周 2 万台属于目标。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-23-A2",
+      "date": "2026-10-23",
+      "grade": "A",
+      "title": "企业 AI 开始进入人事预算，却还没进入净利润：巴克莱 5000 个岗位的两本账",
+      "themes": [
+        "Enterprise AI",
+        "AI Economics",
+        "Banking",
+        "Barclays",
+        "Workforce Restructuring",
+        "AI Productivity",
+        "Developer Tools",
+        "Cost Structure",
+        "Financial Disclosure",
+        "Enterprise Software",
+        "Workflow Automation",
+        "Human Oversight",
+        "ROI Verification",
+        "Operating Model"
+      ],
+      "deck": "巴克莱在 10 月 22 日业绩披露中把技术推动的岗位缩减纳入成本计划，管理层预计 2026 年减少约 5000 个岗位，约六成属于包括开发人员在内的支持职能。但 2027 年集团成本指引仍为约 184 亿英镑，高于剔除特殊项目后的 2026 年约 180 亿英镑运行成本。新增信号是 AI 进入了可核验的组织与财务决策，而不是已证明 AI 独立替代 5000 人、实现净利润增长。",
+      "body_format": "article_text"
     }
   ]
 }
