@@ -142,6 +142,31 @@
       ],
       "deck": "OpenAI 10 月 20 日收购药物开发协调平台 Orchestra Bio，计划与 Rosalind 科研模型和工作台整合。增量不是模型又能做生物学问答，而是模型供应商开始购买跨研究、制造、临床阶段的项目依赖与组织执行能力；但交易规模、客户采用、实际提效和受监管记录的授权边界尚未披露。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-22-B2",
+      "date": "2026-10-22",
+      "grade": "B",
+      "title": "SAP 云收入增长 26%，却不能算作 Agent 业绩：企业 AI 的价值仍混在 ERP 迁移里",
+      "themes": [
+        "Enterprise AI",
+        "Enterprise SaaS",
+        "SAP",
+        "Cloud ERP",
+        "Agent Economics",
+        "Revenue Attribution",
+        "Current Cloud Backlog",
+        "System of Record",
+        "Business AI",
+        "Joule",
+        "Cloud Migration",
+        "Enterprise Software",
+        "Workflow Ownership",
+        "Control Points",
+        "AI ROI"
+      ],
+      "deck": "SAP 10 月 21 日公布第三季度云收入 66.68 亿欧元、同比增长 26%，云 ERP Suite 增长 29%，当前云积压订单 241.44 亿欧元；但公司未单独披露 Agent 收入或 AI 增量回报，且本季增速受到跨季度收入补记等影响。新增证据不是“AI 让 SaaS 重新繁荣”，而是既有 ERP 厂商可以在 Agent 时代继续通过云迁移、业务记录与套件合同捕获支出；财务增长与 AI 因果效应必须分开核对。",
+      "body_format": "article_text"
     }
   ]
 }
