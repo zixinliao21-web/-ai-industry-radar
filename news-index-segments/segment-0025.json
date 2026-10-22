@@ -27,6 +27,32 @@
       ],
       "deck": "NVIDIA 10 月 21 日发布开源 Isaac OS 实时运行框架，并让 Isaac Lab 3.0 正式可用，结合 GR00T、仿真数据与 Jetson Thor 把机器人开发从训练接到真实设备。新信号不是人形机器人已经规模化，而是 Physical AI 平台竞争开始同时覆盖训练接口、传感器—控制实时运行与安全验证；开源组件不等于跨硬件中立，量产可靠性、成本和认证仍待证明。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-22-A4",
+      "date": "2026-10-22",
+      "grade": "A",
+      "title": "AI 没有让专业数据失去定价权：LSEG 的 MCP 增长与 35 亿美元信用数据收购",
+      "themes": [
+        "Enterprise AI",
+        "Financial Data",
+        "Vertical AI",
+        "MCP",
+        "AI Distribution",
+        "Semantic Authority",
+        "Data Entitlements",
+        "Proprietary Data",
+        "System of Record",
+        "Agent Commerce",
+        "Control Points",
+        "LSEG",
+        "Octus",
+        "M&A",
+        "AI Monetization",
+        "Professional Workflows"
+      ],
+      "deck": "LSEG 10 月 22 日披露：前 200 大客户中 95% 使用其 AI 产品，前 50 大数据客户超过三分之二已连接 MCP，MCP 消费量环比增长五倍，80% 的 AI 相关客户协议涉及额外数据集采购；同日签约以 35.35 亿美元收购私募信贷数据与工作流公司 Octus。新增信号不是 AI 已贡献多少独立收入，而是可信、受许可约束的专业数据正在通过开放 Agent 接口获得新的分发与追加销售机会。",
+      "body_format": "article_text"
     }
   ]
 }
