@@ -1,0 +1,32 @@
+{
+  "schema_version": "3.0",
+  "segment": "0025",
+  "items": [
+    {
+      "id": "2026-10-22-A3",
+      "date": "2026-10-22",
+      "grade": "A",
+      "title": "机器人平台的控制点正在从训练走向实时执行：Isaac OS 把 NVIDIA 推向机器的运行层",
+      "themes": [
+        "Physical AI",
+        "Robotics",
+        "NVIDIA",
+        "Isaac OS",
+        "Isaac Lab 3.0",
+        "Holoscan",
+        "Robot Runtime",
+        "Deterministic Execution",
+        "Simulation-to-Real",
+        "Jetson Thor",
+        "GR00T",
+        "Industrial AI",
+        "Robot Safety",
+        "Open Source",
+        "Control Points",
+        "Robotics Infrastructure"
+      ],
+      "deck": "NVIDIA 10 月 21 日发布开源 Isaac OS 实时运行框架，并让 Isaac Lab 3.0 正式可用，结合 GR00T、仿真数据与 Jetson Thor 把机器人开发从训练接到真实设备。新信号不是人形机器人已经规模化，而是 Physical AI 平台竞争开始同时覆盖训练接口、传感器—控制实时运行与安全验证；开源组件不等于跨硬件中立，量产可靠性、成本和认证仍待证明。",
+      "body_format": "article_text"
+    }
+  ]
+}
