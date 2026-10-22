@@ -53,6 +53,31 @@
       ],
       "deck": "LSEG 10 月 22 日披露：前 200 大客户中 95% 使用其 AI 产品，前 50 大数据客户超过三分之二已连接 MCP，MCP 消费量环比增长五倍，80% 的 AI 相关客户协议涉及额外数据集采购；同日签约以 35.35 亿美元收购私募信贷数据与工作流公司 Octus。新增信号不是 AI 已贡献多少独立收入，而是可信、受许可约束的专业数据正在通过开放 Agent 接口获得新的分发与追加销售机会。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-23-A1",
+      "date": "2026-10-23",
+      "grade": "A",
+      "title": "人形机器人开始下生产线，还没有进入劳动力市场：Optimus 暴露 Physical AI 的两次量产",
+      "themes": [
+        "Physical AI",
+        "Robotics",
+        "Humanoid Robots",
+        "Tesla",
+        "Optimus",
+        "Manufacturing Ramp",
+        "Industrial AI",
+        "Robot Reliability",
+        "Robot Training Data",
+        "Unit Economics",
+        "Industrial Deployment",
+        "Task Verification",
+        "Commercialization",
+        "Control Points",
+        "Hardware-Software Integration"
+      ],
+      "deck": "Tesla 10 月 21 日首次在正式财报中确认 Fremont 产线已制造首批 production-quality Optimus，并把加州工厂列为 Early Ramp、得州列为 Construction。真正新增的是制造工艺可重复性的证据，而非机器人已具备可销售的自主劳动能力：实际产量、任务成功率、停机率和外部付费客户仍未披露，2027 年交付与每周 2 万台属于目标。",
+      "body_format": "article_text"
     }
   ]
 }
