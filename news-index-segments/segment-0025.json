@@ -154,6 +154,36 @@
       ],
       "deck": "Meta 10 月 21 日宣布设立无投票权 Class C 股票，作为未来 AI 投资、收购与员工激励的融资工具；同期第三季度自由现金流为负 21.2 亿美元、全年资本开支指引为 1350 亿至 1450 亿美元，10 月 22 日五年期 CDS 利差触及 114.79 个基点。新信号不是 Meta 已经靠新股融到钱或陷入偿债危机，而是连广告现金流强劲的巨头也开始为 AI 长周期投资重设计融资弹性与创始人控制权；融资选项、实际稀释和 AI 投资回报仍需分别验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-23-A4",
+      "date": "2026-10-23",
+      "grade": "A",
+      "title": "Agent 不再等于一台常驻虚拟机：Google 把工作状态、瞬时算力与委托权限拆开",
+      "themes": [
+        "Enterprise Agents",
+        "Agent Runtime",
+        "Agent Compute Engine",
+        "Google Cloud",
+        "Gemini",
+        "Agent Substrate",
+        "microVM",
+        "Agent Sandbox",
+        "Checkpoint Restore",
+        "Persistent Workspace",
+        "Agent Identity",
+        "Delegated Authorization",
+        "Agent Gateway",
+        "Zero Secrets",
+        "Agent Governance",
+        "Compute Density",
+        "Infrastructure Economics",
+        "Control Points",
+        "Kubernetes",
+        "Enterprise Context"
+      ],
+      "deck": "Google 10 月 22 日披露 Agent Compute Engine 的微虚拟机架构：闲置 Agent 可保留工作状态并释放活跃算力，凭证由沙箱外的 Gateway 按用户委托与工作负载身份代理；开源 Agent Substrate 则报告 20 万 Agent 压测和最高 10 倍密度。新信号不是 Google 已赢得 Agent Runtime 市场，而是规模化 Agent 的竞争正同时进入状态保存、资源调度与授权执行三种基础设施；托管服务仍待预览，性能数字尚未独立验证。",
+      "body_format": "article_text"
     }
   ]
 }

@@ -1,0 +1,53 @@
+{
+  "id": "2026-10-23-A4",
+  "date": "2026-10-23",
+  "grade": "A",
+  "title": "Agent 不再等于一台常驻虚拟机：Google 把工作状态、瞬时算力与委托权限拆开",
+  "themes": [
+    "Enterprise Agents",
+    "Agent Runtime",
+    "Agent Compute Engine",
+    "Google Cloud",
+    "Gemini",
+    "Agent Substrate",
+    "microVM",
+    "Agent Sandbox",
+    "Checkpoint Restore",
+    "Persistent Workspace",
+    "Agent Identity",
+    "Delegated Authorization",
+    "Agent Gateway",
+    "Zero Secrets",
+    "Agent Governance",
+    "Compute Density",
+    "Infrastructure Economics",
+    "Control Points",
+    "Kubernetes",
+    "Enterprise Context"
+  ],
+  "deck": "Google 10 月 22 日披露 Agent Compute Engine 的微虚拟机架构：闲置 Agent 可保留工作状态并释放活跃算力，凭证由沙箱外的 Gateway 按用户委托与工作负载身份代理；开源 Agent Substrate 则报告 20 万 Agent 压测和最高 10 倍密度。新信号不是 Google 已赢得 Agent Runtime 市场，而是规模化 Agent 的竞争正同时进入状态保存、资源调度与授权执行三种基础设施；托管服务仍待预览，性能数字尚未独立验证。",
+  "body_format": "article_text",
+  "article_text": "# Agent 不再等于一台常驻虚拟机：Google 把工作状态、瞬时算力与委托权限拆开\n\n**核心判断｜规模化 Agent 的“运行”正在被拆成三种不同的东西：可跨天保留的工作状态、只在真正执行时消耗的计算资源，以及不应交给不可信执行环境的业务授权。** 2026 年 10 月 22 日，Google Cloud 公布 Agent Compute Engine，称其已为 Gemini 的 Agent 工作负载提供底层执行环境，未来数月向外部客户开放预览；同时详细解释如何把微虚拟机、快照、身份代理和跨工作负载调度放在同一套系统里。[1][2] 这不是“又一个 Agent 框架”的新闻。它回答的是：当数十万乃至更多 Agent 同时存在、绝大部分时间却在等待模型或人类时，谁承担持续状态的成本，谁持有真正能访问企业系统的凭证，谁决定一次行动是否获准？\n\n**信号评级：A。** 这是大型云平台将内部 Agent 执行体系产品化、并公开其成本与安全分层设计的结构性验证。它还不是一个已经被第三方生产客户大规模验证的商业结果。VELNAR 此前记录过 Modal 沙箱年化收入、NVIDIA 的主机外安全执行以及企业 Agent 身份治理；本次增量是：**资源利用率、持久工作区和委托授权开始被同一个基础设施产品作为联动约束处理，而不只是三类分散功能。**\n\n## 一、FACT｜这次公开了什么\n\n**第一，托管服务与已开放的开源项目不是同一个交付状态。** Google 于 10 月 22 日宣布 Agent Compute Engine，称其服务于 Gemini 以及内部代码执行、浏览器操作、评测和强化学习工作负载，外部预览计划在未来数月启动。[1][2] 因而不能写成企业今天已能普遍采购该服务。与之相关的 Agent Substrate 则早在 9 月 15 日就宣布可在 GKE 上使用，并以开源方式面向其他 Kubernetes 环境。[3] 这两个产品的发布日、托管责任和成熟度必须分开。\n\n**第二，Google 选择把 Agent 的“脑”和“手”放在不同的信任域。** 官方技术说明将 harness 定义为调用模型、决定下一步的编排部分，将 sandbox 定义为执行 shell、代码、浏览器操作的环境。[2] 每个会话使用硬件隔离的 microVM；沙箱可有自己的内核与 root 权限，但不应因此获得云账号的长期密钥。Google 声称微虚拟机内不保存 OAuth refresh token、服务账号密钥等持久凭证；对外请求必须经过受控代理。[2] 这是一种架构与厂商实施声明，不能被当成对所有配置、所有攻击路径的独立安全认证。\n\n**第三，所谓“Agent 身份”不是单个 ID。** Google 技术说明区分了用户身份、用户授予 Agent 的 on-behalf-of 委托、微虚拟机短期工作负载身份，以及作为组织参与者的 Agent 身份。[2] 沙箱只持有范围受限、短期的工作负载身份；真正访问 Workspace 或私有后端时，由沙箱外的 Agent Gateway 核对用户委托、Agent 和运行节点的身份，再在出口处完成凭证代理。**“证明是哪台沙箱发出的请求”与“证明这个用户允许执行这件事”是两个独立命题。** 即便身份链验证成功，业务系统仍须核对订单金额、记录状态等自身规则。\n\n**第四，成本优化围绕等待状态而不是只追求更快 CPU。** Google 称 Agent 往往在模型推理、用户答复或外部系统响应期间闲置。其微虚拟机在工具执行结束后可将内存与执行状态快照化、释放活跃资源，需要时恢复；基础镜像的只读内存页采用写时复制共享，用户工作区另行持久保存。[1][2] 这里的“闲置成本接近零”指减少活跃主机资源，并不表示持久磁盘、快照存储、网络、调度和管理费用全部为零，也不保证任意后台进程都能无损暂停。\n\n**第五，性能数字有边界。** Google 宣称 Agent Substrate 在与传统计算方式的比较中最高可实现约十倍密度，并报告在 20 万 Agent 的基准验证中持续每秒 500 次激活、暂停/恢复延迟低于 500 毫秒。[1][3] 这是供应商自测，并非第三方跨云、跨工作负载的独立测量；没有统一披露的负载构成、基线硬件、尾延迟、存储成本和失败率，就不能把“十倍”直接换算为所有企业的十倍成本优势。上述指标主要针对 Substrate，不应无条件移植成尚未开放预览的托管服务 SLA。\n\n## 二、INFERENCE｜Agent 基础设施的经济单位正在改变\n\n传统应用通常以持续在线的服务实例为单位配置资源。Agent 则常常同时具备两种相反特征：它需要长期记住文件、环境、任务进度，却只在某些短暂时刻真正运行代码。若为每个等待中的 Agent 保留一整台活跃机器，闲置成本会随着“在线 Agent 数量”膨胀；若每次工具调用都销毁环境，依赖安装、文件恢复和状态重建又会损害可靠性。\n\nGoogle 的方案尝试将**持久性与活跃性解耦**：状态可以继续存在，CPU/内存不必持续占用；同一套物理资源还可以在交互式 Agent、企业办公 Agent 与弹性评测之间按不同高峰错峰调度。[2] 这意味着未来比较 Agent 基础设施时，“每小时虚拟机价格”可能不再是足够的指标。更贴近业务的指标应是每个**成功完成且可审计的任务**所消耗的活跃计算、状态存储、唤醒延迟、模型调用、失败重试与人工复核成本。\n\n另一个变化发生在授权边界。若沙箱能执行任意代码，却没有长期凭证，攻击者即使控制沙箱，也不能直接从磁盘复制出用户的全部授权令牌；请求仍要通过外部 Gateway。[2] 但这并不等于攻击者无法滥用被允许的操作：一次带有有效用户委托的错误转账、误删文件或越权订单修改，仍可能沿合法网络路径产生副作用。因此 **zero-secrets 解决的是凭证暴露的一类风险，不是业务行为正确性的证明**。这一点与此前研究的“停止权”“最终 System of Record 授权”并不冲突。\n\n## 三、控制点：谁会从中获得定价权\n\n**云平台**可能通过把执行、身份、企业网络、存储和计费整合，降低客户接入门槛，同时让企业更难只替换其中一层。Google 的优势是现有 Workspace、IAM、VPC 与 Gemini 工作负载，但这也意味着企业必须核算身份和网络策略迁移的实际成本。\n\n**独立 Agent 沙箱厂商**并没有因此失去市场。此前 Modal 披露沙箱业务已形成可观年化运行率，证明需求可以独立采购；Google 的进入则意味着云巨头会把类似能力做成平台原语。独立供应商仍可能在跨云、开发者体验、特殊执行环境、透明计价或更快迭代上形成优势。开源 Agent Substrate 的存在也说明 Google 不完全以封闭托管服务争夺采用，但开源代码可运行不等于企业身份、托管运维和商业支持可无成本迁移。\n\n**企业业务系统**继续掌握最重要的最后一道门槛：记录是否真实、权限是否适用于这笔具体交易、状态能否转换、失败能否补偿。即使基础设施能验证“谁委托了谁”，也不会天然知道“这张订单是否允许出库”。因此 Agent Runtime 的控制点增强，不等于 Ontology 或业务事实权威已经被云平台收购。\n\n## 四、COUNTERARGUMENT｜为什么不能过早宣布新一代云计算范式胜出\n\n首先，产品成熟度不足。托管 Agent Compute Engine 仍待预览，公开材料没有可独立核验的价格表、区域覆盖、长期可用性承诺、故障恢复统计与企业客户成本账单。[1][2] 其内部 Gemini 规模经验很重要，但 Google 自己的运行数据无法自动推导出外部客户的同等收益。\n\n其次，暂停执行存在真实的语义问题。若任务正在持有网络连接、文件锁、数据库事务或外部系统会话，简单快照不保证副作用一致。Google 描述的是应用感知的空闲检测，前提是能够判断没有仍在运行的命令或后台任务。[2] **“沙箱能恢复”不等于“跨多个企业系统的业务事务能恢复”。** 后者仍需要幂等、持久业务状态、超时、重试与补偿机制。\n\n再次，硬件隔离和外部凭证代理并非没有失败模式。Gateway 可能成为可用性瓶颈；错误策略可能阻断合法业务；过宽的用户委托仍可让被劫持的 Agent 发起被网关接受的危险请求。真正的安全比较应包含旁路测试、策略失效模式、审计完整性和下游系统的最终拒绝能力，而不是只看微虚拟机是否隔离。\n\n最后，成本优势取决于任务分布。如果工作负载始终高 CPU 使用、长期保持实时连接或需要大量不可共享的内存，暂停与写时复制的收益可能远低于厂商展示的基准。只有客户自己的任务完成率、P95/P99 唤醒时间、存储与网络费用，以及单位有效任务总成本，才能检验经济性。\n\n## 五、VELNAR 的判断更新：加强分层，不扩大当前工程\n\n**被强化：** Agent 的基础设施竞争不只是模型推理与工具 API。持续工作状态、执行环境生命周期、身份委托、凭证代理与调度经济学可以成为不同的采购和控制点。Google 把它们打包说明大平台希望把这套组合做成默认底座。\n\n**被修正：** 不能把“每个 Agent 有独立电脑”理解为“每个 Agent 永远占用一台活跃虚拟机”；也不能把“Agent 有身份”理解为“它天然拥有用户全部权限”。状态、计算与委托在技术上可以被分别保存、激活和撤销。\n\n**保持不变：** 对 VELNAR 当前 Sales MVP，这不构成引入 microVM、跨云调度、通用 Agent 平台或重构业务 Ontology 的理由。真实订单、库存、出库与审批闭环依然先由确定性业务规则保障。只有未来出现大量不可信代码执行、长时沙箱任务或多租户隔离的实际负载，再根据真实风险和成本评估是否采购这类运行时。\n\n## 六、PREDICTION｜接下来怎样证伪\n\n未来六至十二个月观察四项可核验指标：Agent Compute Engine 何时实际开放、价格及区域是否明确；外部客户能否公开可复现的任务级成本与恢复性能；Google Gateway 对跨云、终端和第三方身份的治理能力究竟哪些已正式可用；开源 Substrate 能否在非 Google 环境中实现接近的密度和可维护性。如果外部客户发现暂停恢复复杂、业务补偿仍高度定制、或者平台绑定成本超过计算节省，那么“统一 Agent 执行底座”可能更像云厂商的打包策略，而非新的不可替代基础设施层。\n\n**值得继续讨论的问题：当一个 Agent 可以保留几周的工作状态、只在执行时短暂占用算力，并通过外部代理获得一次性业务授权时，真正难以迁移的资产会落在工作区、执行调度、身份政策，还是企业自己的业务状态？我们应以哪一类生产证据决定它们的战略排序？**\n\n---\n\n### 证据与口径\n\n[1] Google Cloud，2026-10-22，《Introducing Agent Compute Engine and expanded agent governance》。官方产品发布、治理范围与预览时间；所有性能和安全描述均为厂商口径。https://cloud.google.com/blog/topics/ai-infrastructure/introducing-agent-compute-engine-and-expanded-agent-governance\n\n[2] Google Cloud，2026-10-22，《Inside Agent Compute Engine: Building the compute foundation for the agentic era》。一手架构详解：harness/sandbox 分离、四种身份、外部凭证代理、暂停恢复、存储与错峰调度。https://cloud.google.com/blog/topics/ai-infrastructure/agent-compute-engine-deep-dive\n\n[3] Google Cloud，2026-09-15，《Agent Substrate brings high-density, scalable, trusted infrastructure to GKE》。已开源项目的发布日、Kubernetes 支持及厂商自测性能。https://cloud.google.com/blog/products/containers-kubernetes/agent-substrate-available-on-gke\n\n[4] SiliconANGLE，2026-10-22，《Google Cloud introduces Agent Compute Engine to host AI agents》。独立新闻报道，主要基于 Google 公告，不构成独立性能审计。https://siliconangle.com/2026/10/22/google-cloud-introduces-agent-compute-engine-to-host-ai-agents/",
+  "sources": [
+    {
+      "title": "Google Cloud | Introducing Agent Compute Engine and expanded agent governance",
+      "url": "https://cloud.google.com/blog/topics/ai-infrastructure/introducing-agent-compute-engine-and-expanded-agent-governance",
+      "date": "2026-10-22"
+    },
+    {
+      "title": "Google Cloud | Inside Agent Compute Engine: Building the compute foundation for the agentic era",
+      "url": "https://cloud.google.com/blog/topics/ai-infrastructure/agent-compute-engine-deep-dive",
+      "date": "2026-10-22"
+    },
+    {
+      "title": "Google Cloud | Agent Substrate brings high-density, scalable, trusted infrastructure to GKE",
+      "url": "https://cloud.google.com/blog/products/containers-kubernetes/agent-substrate-available-on-gke",
+      "date": "2026-09-15"
+    },
+    {
+      "title": "SiliconANGLE | Google Cloud introduces Agent Compute Engine to host AI agents",
+      "url": "https://siliconangle.com/2026/10/22/google-cloud-introduces-agent-compute-engine-to-host-ai-agents/",
+      "date": "2026-10-22"
+    }
+  ]
+}
