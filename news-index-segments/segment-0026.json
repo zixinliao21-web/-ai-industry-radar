@@ -166,6 +166,35 @@
       ],
       "deck": "NVIDIA 10 月 21 日披露横跨基板、先进封装、测试和光引擎的产能安排：其产品基板产能拟在三年内扩至 2.5 倍，向 KYEC 提供 11 亿美元测试产能预付款；Amkor 同日确认新增 13 亿美元韩国协议，双方美韩多年期协议合计 30 亿美元。新增信号不是这些工厂已经投产，而是 AI 算力供应商正用前置资金和产能预留争夺未来交付权；目标产能、实际可交付量、预付款回收和竞争者可获得的余量仍未验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-24-B1",
+      "date": "2026-10-24",
+      "grade": "B",
+      "title": "绕开电网并不等于绕开供应链：燃料电池扩张的现金流与关键矿物约束",
+      "themes": [
+        "AI Infrastructure",
+        "Data Center Power",
+        "Fuel Cells",
+        "Bloom Energy",
+        "Oracle",
+        "Rystad Energy",
+        "SOFC",
+        "Scandium",
+        "Critical Minerals",
+        "Supply Chain Concentration",
+        "Manufacturing Capacity",
+        "Working Capital",
+        "Free Cash Flow",
+        "Grid Constraints",
+        "On-site Generation",
+        "Power Delivery",
+        "Capital Allocation",
+        "AI Economics",
+        "Control Points"
+      ],
+      "deck": "Bloom Energy 10 月 22 日披露第三季度营收 12.36 亿美元、同比增长 138.1%，GAAP 营业利润 2.25 亿美元，但单季经营现金流为负 2715 万美元、资本开支约 1.53 亿美元。对照 Rystad 6 月关于燃料电池订单、产能及钪供应的研究，新增 B 级证据不是燃料电池已经缺料或财务恶化，而是 AI 机房用现场发电缩短并网等待时，制造扩产、营运资金和材料集中度会成为另一组交付约束。",
+      "body_format": "article_text"
     }
   ]
 }
