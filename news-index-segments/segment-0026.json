@@ -107,6 +107,35 @@
       ],
       "deck": "美国 FCC 10 月 22 日给予 Intel 一年有限豁免，使其能够对指定半导体厂内 AGV 进行必要修改；Intel 称相关设备已使用二十余年、替代验证可能耗时数年。新证据不是先进机器人已经大规模采用 AI，而是工业自动化一旦嵌入关键工艺，设备认证、维护更新权与替代验证周期会成为长期运行的控制点；豁免只覆盖指定设备与变更，不能推断禁令已撤销。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-24-A1",
+      "date": "2026-10-24",
+      "grade": "A",
+      "title": "临床数据开始按条定价，Agent 权限按疾病划分：药企 AI 的三层合同浮出水面",
+      "themes": [
+        "Vertical AI",
+        "Life Sciences",
+        "Pharma AI",
+        "Clinical Data",
+        "Tempus AI",
+        "Pathos AI",
+        "Bristol Myers Squibb",
+        "Agentic Drug Development",
+        "Data Licensing",
+        "Data Entitlements",
+        "Semantic Authority",
+        "Enterprise Context",
+        "Control Points",
+        "Data Pricing",
+        "Exclusivity",
+        "Clinical Trials",
+        "AI Economics",
+        "Governance",
+        "System of Record"
+      ],
+      "deck": "Tempus 10 月 23 日的 SEC 8-K 披露与 BMS、Pathos 相关的约 1.925 亿美元五年期协议：肿瘤数据及服务固定付款 1.375 亿美元，神经疾病数据与 Agent 工具最高 5500 万美元，其中 50 万条记录按每条 100 美元、实际交付计费；另有领域排他和数据再许可限制。新信号是 Vertical AI 的数据权利、Agent 执行和疾病领域控制开始分别签约定价，而不是临床成功率已获证明。",
+      "body_format": "article_text"
     }
   ]
 }

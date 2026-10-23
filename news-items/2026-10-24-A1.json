@@ -1,0 +1,57 @@
+{
+  "id": "2026-10-24-A1",
+  "date": "2026-10-24",
+  "grade": "A",
+  "title": "临床数据开始按条定价，Agent 权限按疾病划分：药企 AI 的三层合同浮出水面",
+  "themes": [
+    "Vertical AI",
+    "Life Sciences",
+    "Pharma AI",
+    "Clinical Data",
+    "Tempus AI",
+    "Pathos AI",
+    "Bristol Myers Squibb",
+    "Agentic Drug Development",
+    "Data Licensing",
+    "Data Entitlements",
+    "Semantic Authority",
+    "Enterprise Context",
+    "Control Points",
+    "Data Pricing",
+    "Exclusivity",
+    "Clinical Trials",
+    "AI Economics",
+    "Governance",
+    "System of Record"
+  ],
+  "deck": "Tempus 10 月 23 日的 SEC 8-K 披露与 BMS、Pathos 相关的约 1.925 亿美元五年期协议：肿瘤数据及服务固定付款 1.375 亿美元，神经疾病数据与 Agent 工具最高 5500 万美元，其中 50 万条记录按每条 100 美元、实际交付计费；另有领域排他和数据再许可限制。新信号是 Vertical AI 的数据权利、Agent 执行和疾病领域控制开始分别签约定价，而不是临床成功率已获证明。",
+  "body_format": "article_text",
+  "article_text": "# 临床数据开始按条定价，Agent 权限按疾病划分：药企 AI 的三层合同浮出水面\n\n**核心判断｜企业 AI 的关键商业资产不一定是模型或 Agent 本身，而可能是“可合法使用的专业数据、把数据变成决策的执行系统、以及限定用途的合同权利”三者的组合。** 2026 年 10 月 23 日，Tempus AI 向美国 SEC 提交的 8-K 首次把一组与 Bristol Myers Squibb（BMS）、Pathos AI 有关的协议拆成可核对的现金条款：肿瘤数据及服务协议约 1.375 亿美元固定付款；神经疾病数据与 Agent 工具协议最高 5500 万美元；合计披露约 1.925 亿美元、跨约五年的安排。[1] 这不是一则“AI 制药公司又融资”的新闻。更重要的变化是，专业数据可以按实际交付记录计价，AI 平台使用权可以按疾病领域设排他性，而真正承担临床开发的药企仍保留最终业务责任。\n\n**信号评级：A。** 合同、定价、许可范围和关联交易审议已进入上市公司正式披露，超出产品演示和营销口号；但合同收入不等于已到账现金，AI 参与决策不等于提高临床成功率，不能因此断言“医药 Agent 已跑通结果付费”。\n\n## 一、FACT｜真正签下的不是一个“AI 平台套餐”\n\n**第一层是专业数据及分析服务的长期许可。** Tempus 的 8-K 显示，其与 BMS 于 10 月 14 日签订肿瘤领域 Statement of Work，期限至 2031 年 12 月 31 日。Tempus 向 BMS 许可部分去标识化、多模态肿瘤记录，提供 Lens 分析软件访问权及相关研究服务。BMS 也可将这些数据用于其另外向 Pathos 许可的 Foundry 药物研发平台。BMS 应在合同期限内按季度支付合计 1.375 亿美元固定款项；它可以提前 12 个月通知终止，但需支付一笔重大终止费用。[1] 这意味着“数据持有者、分析界面、药物研发 Agent”在合同上是可区分的角色，不能把 1.375 亿美元统称为模型订阅收入。\n\n**第二层是按交付记录计价的神经疾病数据。** Tempus 与 Pathos 于 10 月 22 日签订 Neuro Order Form。Tempus 承诺以商业上合理的努力，在五年内交付并许可 50 万条阿尔茨海默病或其他指定神经疾病患者的去标识化记录，计划每年交付 10 万条；Pathos 还获得用于检索和分析这些许可数据的 Tempus Agent 工具许可。协议最高现金费用 5500 万美元，其中 5000 万美元按**每实际交付记录 100 美元**计价并按月开票，另有 500 万美元用于记录更新可用性、按季度开票。[1]\n\n这里最容易误读的是“5500 万美元合同”。8-K 明确说神经疾病数据费用取决于实际交付记录数量，因而应表述为**最高约 5500 万美元、受交付影响**，不是已经确认的收入，更不是 Tempus 已经拥有并交付了 50 万条可用记录。每条 100 美元是这份特定协议的合同价格，不是全部医疗数据的市场统一单价，也不能把单价直接等同于数据的利润率或临床价值。\n\n**第三层是疾病领域、下游再许可与排他期。** Pathos 10 月 23 日披露，BMS 将在更广泛的研发组合中非排他地使用 Pathos Foundry，同时取得其神经科学开发项目的三年排他权。[2] 这与 Tempus 数据记录的排他限制不是同一回事：Tempus、Pathos、BMS 的三方 Side Letter 同意 Pathos 将许可数据和 Tempus Agent 再许可给 BMS；Tempus 对适用神经疾病记录向其他第三方再许可受到单独限制，期限从记录首次交付起，延续至“交付日期”和“2027 年 10 月 22 日”两者较晚日期之后的 18 个月。[1] **平台的领域排他、数据记录的排他、工具的再许可，是三种不同权利，不应混成一个“独家 AI 合作”。**\n\n**第四层是战略股权，而不是数据合同回款。** Pathos 同日宣布完成 2.37 亿美元 E 轮融资、投后估值约 30 亿美元，由 BMS 领投；资金用于扩充 Foundry 及推进其自身临床资产。[3] 这笔股权融资与 Tempus 的 1.925 亿美元合同现金安排属于不同交易，不可相加为“同一 AI 产品获得 4 亿多美元收入”。Tempus 8-K 还披露，因 Tempus 与 Pathos 在管理层和股权上存在重叠，神经疾病订单及三方函件依关联交易政策由无利益冲突董事特别委员会审查批准。[1] 这一治理细节同样重要：垂直 AI 的数据与平台网络越复杂，越不能忽视利益冲突和合同边界。\n\n## 二、INFERENCE｜为什么这比“AI 帮药企做研发”更值得关注\n\n**其一，数据的定价权开始出现可观察的合同颗粒度。** 过去谈医疗 AI 时，外部观察者常看到融资估值、模型能力、患者样本规模，却很少看到一条可供合同计算的边界。这里至少出现了“每条记录 100 美元、分期交付、更新另计费”的明确结构。它不证明所有数据都稀缺，却证明在某些高门槛疾病研究场景，经过整理、许可并持续更新的记录可以成为独立采购对象。拥有可持续采集、去标识化、质量控制和合法许可能力的机构，不会仅因通用模型更强就自动失去议价权。\n\n**其二，垂直 AI 的产品可能不是一套软件，而是一组分层的使用权。** Tempus 持有并许可数据及分析工具；Pathos 以 Foundry 承接跨数据的假设生成、项目监测和试验设计支持；BMS 提供疾病专业知识、研发资源与临床决策组织。BMS 既直接向 Tempus 采购肿瘤数据，也通过 Pathos 使用神经疾病数据和工具。这个网络不是“模型公司取代药企”，更像是在受监管流程中把数据权利、分析能力、Agent 工作台和业务责任分开签约。若这种结构被重复验证，企业 Agent 的竞争单位可能上移为**可授权、可审计、可持续交付的专业决策链**。\n\n**其三，排他权可以成为 AI 交易的控制点，但其范围必须精确。** BMS 获得神经科学方向的 Foundry 三年排他权，是对竞争性研发时间窗口的购买；Tempus 对指定记录的第三方许可限制，则是对底层数据分发的控制。前者偏向领域应用，后者偏向数据访问。两种权利不等于 BMS 获得所有神经疾病数据的永久所有权，也不等于 Pathos 或 Tempus 获得临床结果的最终决定权。对产业地图而言，这比单纯“谁的模型最强”更能解释为什么专业客户愿意长期付费。\n\n**其四，真实采购不等于真实效果。** BMS、Tempus 和 Pathos 之间存在已披露的合同、期限与价格，足以把它视为商业采用的证据；但 8-K 没有披露模型对照试验、候选药物成功率提升、单项目研发成本下降或经独立验证的患者获益。Pathos 关于 Foundry 以数千 Agent 持续分析项目数据、提高成功概率的描述属于公司对自身系统的主张。[2][3] 研究价值在于**合同证明有人愿意为能力和数据承担预算，不在于疗效已经得到证明**。\n\n## 三、COUNTERARGUMENT｜三个不能跳过的反证\n\n**第一，50 万条记录不等于 50 万条可直接用于临床决策的高质量样本。** 去标识化解决的是部分隐私处理与使用边界，不自动保证纵向随访完整、诊断标签一致、不同机构数据可比，或统计模型能跨人群泛化。真正有价值的不是记录数量本身，而是可追溯来源、缺失率、随访时间、样本代表性、合规许可和在特定任务上的有效性。协议中的“商业上合理的努力”也说明交付存在现实约束。[1]\n\n**第二，合同锁定可能同时是护城河与摩擦成本。** 数据记录、分析工具、Agent 平台、药企内部流程分别存在许可和审计边界。排他性可以保护先行投入，却也可能限制后续数据共享、交叉验证或其他研究团队的使用。合同金额可观，但 BMS 对肿瘤协议保留带条件的提前终止权，神经疾病费用随实际交付变化；不能把全部名义金额直接当作不可撤销的现金流。[1]\n\n**第三，资本和关联关系可能放大对外信号。** BMS 既是 Pathos 融资领投方又是合作使用者；Tempus 与 Pathos 存在已披露的管理层及股权重叠。[1][3] 这不自动否定交易的商业真实性，但提醒我们：关联生态内的协议不能简单等同于完全独立、充分竞争的市场定价。要证明可复制的行业模式，还需观察其他独立药企是否在相似条件下持续采购，以及交付后是否出现可核验的研究效率和临床结果。\n\n## 四、VELNAR 判断更新｜加强哪一条，暂不改变哪一条\n\n**被加强的判断：** Vertical AI 的长期价值可能落在“有权使用的专业事实 + 能执行的领域流程 + 可界定的责任与排他权”的组合，而非单一通用 Agent。合同展示了不同主体可以分别控制数据、工具、流程与疾病领域权益；开放接口不会自动抹平这些差异。这也给 Enterprise Context / Semantic Authority 一个更严格的含义：不仅要知道事实是什么，还要知道**谁可以在什么目的、什么时间范围内用它做什么**。\n\n**尚未改变的判断：** 这不是医药 Agent 已经独立研发出获批药物的证据，也不是所有行业都能按记录卖数据的证据。它不能直接推出“所有垂直 AI 公司都应该持有数据资产”或“企业 AI 必须建设复杂 Ontology”。对 VELNAR 当前 Sales MVP，更没有理由据此扩大架构：仍应先完成真实订单、库存和出货的可验证闭环，保证字段事实、授权和写入确认；医药行业的合同权利层级只作为长期研究参照。\n\n## 五、值得持续追踪的验证点\n\n接下来要核对的不是 Pathos 又增加了多少 Agent，而是：（1）Tempus 是否按年度交付神经疾病记录，相关合同实际确认了多少收入；（2）BMS 对 Lens、Foundry 和 Tempus Agent 的使用边界如何落到可审计的研究流程；（3）三年领域排他期内是否产生可比较的试验设计改进、项目推进速度或临床里程碑；（4）数据更新、隐私合规与跨机构质量控制的成本是否侵蚀合同经济性；（5）未来是否有独立药企以类似结构重复采购。\n\n**值得带回讨论的问题：** 如果 AI 模型与 Agent Runtime 逐步商品化，行业最难替换的控制点究竟是专业数据的合法使用权、对业务流程的持续执行权，还是对结果承担责任的组织？这三者会集中到一家“厚领域公司”，还是长期分属不同主体？\n\n## 证据与来源\n\n[1] Tempus AI，2026-10-23，Form 8-K，Item 8.01，三项协议、1.375 亿美元固定付款、神经疾病最高 5500 万美元、逐条记录计价、再许可及排他条款、关联交易审查：https://investors.tempus.com/static-files/5569416c-75d0-4733-9b1b-4bd60dd9897b\n\n[2] Pathos AI，2026-10-23，Pathos / BMS / Tempus 神经科学合作公告，Foundry 领域使用权、预期研究用途：https://www.pathos.com/pathos-ai-announces-strategic-collaborations-with-bristol-myers-squibb-and-tempus-ai-to-advance-ai-driven-drug-development-beginning-with-alzheimers-disease-and-other-neurological-conditions\n\n[3] Pathos AI，2026-10-23，2.37 亿美元 E 轮融资、估值与临床管线：https://www.pathos.com/pathos-ai-secures-237-million-in-series-e-financing-to-scale-agentic-ai-drug-development-platform-and-advance-oncology-pipeline\n\n[4] Tempus AI 投资者关系，2026-10-23，BMS 扩展肿瘤数据许可、Lens 访问与 2031 年合作安排：https://investors.tempus.com/news-releases/news-release-details/tempus-expands-strategic-collaboration-bristol-myers-squibb-0\n\n[5] Reuters，2026-10-23，三方合作及融资的独立新闻报道：https://www.reuters.com/legal/litigation/pathos-ai-teams-up-with-bristol-myers-tempus-ai-advance-drug-development-2026-10-23/\n\n**证据边界：** [1] 为正式证券披露，是合同金额、支付条件、时间和权利范围的主要依据；[2][3][4] 为交易相关公司的官方陈述；[5] 为独立报道。合同金额、已收款、已确认收入、独立客户采用和临床疗效是不同事实，本文不将其混同。",
+  "sources": [
+    {
+      "title": "Tempus AI | SEC Form 8-K, Item 8.01, agreements with BMS and Pathos",
+      "url": "https://investors.tempus.com/static-files/5569416c-75d0-4733-9b1b-4bd60dd9897b",
+      "date": "2026-10-23"
+    },
+    {
+      "title": "Pathos AI | Strategic collaborations with BMS and Tempus",
+      "url": "https://www.pathos.com/pathos-ai-announces-strategic-collaborations-with-bristol-myers-squibb-and-tempus-ai-to-advance-ai-driven-drug-development-beginning-with-alzheimers-disease-and-other-neurological-conditions",
+      "date": "2026-10-23"
+    },
+    {
+      "title": "Pathos AI | $237M Series E financing",
+      "url": "https://www.pathos.com/pathos-ai-secures-237-million-in-series-e-financing-to-scale-agentic-ai-drug-development-platform-and-advance-oncology-pipeline",
+      "date": "2026-10-23"
+    },
+    {
+      "title": "Tempus AI | Expanded BMS strategic collaboration",
+      "url": "https://investors.tempus.com/news-releases/news-release-details/tempus-expands-strategic-collaboration-bristol-myers-squibb-0",
+      "date": "2026-10-23"
+    },
+    {
+      "title": "Reuters | Pathos, BMS and Tempus collaboration",
+      "url": "https://www.reuters.com/legal/litigation/pathos-ai-teams-up-with-bristol-myers-tempus-ai-advance-drug-development-2026-10-23/",
+      "date": "2026-10-23"
+    }
+  ]
+}
