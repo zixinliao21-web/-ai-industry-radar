@@ -127,6 +127,33 @@
       ],
       "deck": "Nebius 10 月 22 日获得 Citi 提供的 35 亿美元有担保融资额度，期限仅 364 天、初始利差为 Term SOFR + 2.75%；公司同时拥有多年期算力客户合同和更长期的 GPU 资产支持贷款。新增的 B 级证据不是 AI 云已陷入偿债危机，而是短期流动性、长期建设和合同现金流需要按不同时间表衔接：额度不等于已提款，合同金额也不等于可立即还债的现金。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-23-A3",
+      "date": "2026-10-23",
+      "grade": "A",
+      "title": "AI 算力开始改写巨头股权结构：Meta 把融资权与投票权拆开",
+      "themes": [
+        "AI Infrastructure",
+        "Meta",
+        "AI Capital Stack",
+        "Capital Structure",
+        "Non-voting Shares",
+        "Class C Stock",
+        "Founder Control",
+        "Equity Financing",
+        "Free Cash Flow",
+        "Credit Default Swaps",
+        "AI Capex",
+        "AI Bubble",
+        "Hyperscalers",
+        "Corporate Governance",
+        "AI Economics",
+        "Capital Allocation",
+        "Control Points"
+      ],
+      "deck": "Meta 10 月 21 日宣布设立无投票权 Class C 股票，作为未来 AI 投资、收购与员工激励的融资工具；同期第三季度自由现金流为负 21.2 亿美元、全年资本开支指引为 1350 亿至 1450 亿美元，10 月 22 日五年期 CDS 利差触及 114.79 个基点。新信号不是 Meta 已经靠新股融到钱或陷入偿债危机，而是连广告现金流强劲的巨头也开始为 AI 长周期投资重设计融资弹性与创始人控制权；融资选项、实际稀释和 AI 投资回报仍需分别验证。",
+      "body_format": "article_text"
     }
   ]
 }
