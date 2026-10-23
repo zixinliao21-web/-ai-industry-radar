@@ -1,0 +1,31 @@
+{
+  "schema_version": "3.0",
+  "segment": "0026",
+  "items": [
+    {
+      "id": "2026-10-23-B3",
+      "date": "2026-10-23",
+      "grade": "B",
+      "title": "AI-RAN 把电信基站推向算力入口：现场证据出现，商业账本尚未建立",
+      "themes": [
+        "AI Infrastructure",
+        "AI-RAN",
+        "Telecom Edge",
+        "Nokia",
+        "NVIDIA",
+        "Deutsche Telekom",
+        "Elisa",
+        "T-Mobile",
+        "Physical AI",
+        "Distributed Inference",
+        "RAN Software",
+        "Spectrum Efficiency",
+        "Edge Economics",
+        "Control Points",
+        "Network Governance"
+      ],
+      "deck": "Nokia、NVIDIA 与运营商在 10 月 21 日披露 AI-RAN 的新现场证据：德国电信实验室中 AI 信道估计带来典型 10%–15% 的上行吞吐提升，Elisa 在现网同时运行语音、移动数据与视觉分析，T-Mobile 在商业网络完成 AI-RAN 通话。真正的新信号是运营商开始验证无线网络与边缘推理共享计算底座的可行性；但合作数量、实验通话与未来商用计划均不能替代成本、SLA 和付费需求证据。",
+      "body_format": "article_text"
+    }
+  ]
+}
