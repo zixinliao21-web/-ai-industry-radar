@@ -136,6 +136,36 @@
       ],
       "deck": "Tempus 10 月 23 日的 SEC 8-K 披露与 BMS、Pathos 相关的约 1.925 亿美元五年期协议：肿瘤数据及服务固定付款 1.375 亿美元，神经疾病数据与 Agent 工具最高 5500 万美元，其中 50 万条记录按每条 100 美元、实际交付计费；另有领域排他和数据再许可限制。新信号是 Vertical AI 的数据权利、Agent 执行和疾病领域控制开始分别签约定价，而不是临床成功率已获证明。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-24-A2",
+      "date": "2026-10-24",
+      "grade": "A",
+      "title": "NVIDIA 用预付款锁定芯片后段产能：AI 算力的控制权延伸到封装与测试",
+      "themes": [
+        "AI Infrastructure",
+        "NVIDIA",
+        "Semiconductor Supply Chain",
+        "Advanced Packaging",
+        "Substrates",
+        "Chip Testing",
+        "Capacity Reservation",
+        "Prepayments",
+        "Amkor",
+        "KYEC",
+        "IBIDEN",
+        "Unimicron",
+        "Samsung Electro-Mechanics",
+        "SPIL",
+        "Capital Allocation",
+        "Manufacturing Bottlenecks",
+        "Industrial Strategy",
+        "Control Points",
+        "Supply Chain Financing",
+        "AI Compute"
+      ],
+      "deck": "NVIDIA 10 月 21 日披露横跨基板、先进封装、测试和光引擎的产能安排：其产品基板产能拟在三年内扩至 2.5 倍，向 KYEC 提供 11 亿美元测试产能预付款；Amkor 同日确认新增 13 亿美元韩国协议，双方美韩多年期协议合计 30 亿美元。新增信号不是这些工厂已经投产，而是 AI 算力供应商正用前置资金和产能预留争夺未来交付权；目标产能、实际可交付量、预付款回收和竞争者可获得的余量仍未验证。",
+      "body_format": "article_text"
     }
   ]
 }
