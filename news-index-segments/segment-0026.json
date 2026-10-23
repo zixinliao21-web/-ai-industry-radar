@@ -26,6 +26,36 @@
       ],
       "deck": "Nokia、NVIDIA 与运营商在 10 月 21 日披露 AI-RAN 的新现场证据：德国电信实验室中 AI 信道估计带来典型 10%–15% 的上行吞吐提升，Elisa 在现网同时运行语音、移动数据与视觉分析，T-Mobile 在商业网络完成 AI-RAN 通话。真正的新信号是运营商开始验证无线网络与边缘推理共享计算底座的可行性；但合作数量、实验通话与未来商用计划均不能替代成本、SLA 和付费需求证据。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-23-A5",
+      "date": "2026-10-23",
+      "grade": "A",
+      "title": "Agent 标准开始由竞争对手共同托管：格式更开放，执行控制权却不会自动转移",
+      "themes": [
+        "Agent Infrastructure",
+        "Open Standards",
+        "Agentic AI Foundation",
+        "Agent Skills",
+        "Open Responses",
+        "OpenEnv",
+        "OpenSandbox",
+        "Anthropic",
+        "OpenAI",
+        "Hugging Face",
+        "Alibaba",
+        "AWS",
+        "Model Interoperability",
+        "Agent Runtime",
+        "Sandbox Security",
+        "Agent Governance",
+        "Developer Ecosystem",
+        "Enterprise Control Points",
+        "Semantic Authority",
+        "Portability"
+      ],
+      "deck": "10 月 22 日，Linux Foundation 旗下 AAIF 同时接收 Anthropic 的 Agent Skills、OpenAI 的 Open Responses、Hugging Face 的 OpenEnv 和阿里巴巴的 OpenSandbox，覆盖技能封装、模型接口、训练环境与隔离执行。AWS 也披露 Bedrock 已支持 Responses API。这是 Agent 基础设施从厂商自定义接口走向跨阵营治理的 A 级信号，但基金会托管、格式兼容和业务可迁移是三种不同成熟度；真正的控制点仍在实现、信任、权限与可审计的业务结果。",
+      "body_format": "article_text"
     }
   ]
 }

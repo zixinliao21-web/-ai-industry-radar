@@ -1,0 +1,58 @@
+{
+  "id": "2026-10-23-A5",
+  "date": "2026-10-23",
+  "grade": "A",
+  "title": "Agent 标准开始由竞争对手共同托管：格式更开放，执行控制权却不会自动转移",
+  "themes": [
+    "Agent Infrastructure",
+    "Open Standards",
+    "Agentic AI Foundation",
+    "Agent Skills",
+    "Open Responses",
+    "OpenEnv",
+    "OpenSandbox",
+    "Anthropic",
+    "OpenAI",
+    "Hugging Face",
+    "Alibaba",
+    "AWS",
+    "Model Interoperability",
+    "Agent Runtime",
+    "Sandbox Security",
+    "Agent Governance",
+    "Developer Ecosystem",
+    "Enterprise Control Points",
+    "Semantic Authority",
+    "Portability"
+  ],
+  "deck": "10 月 22 日，Linux Foundation 旗下 AAIF 同时接收 Anthropic 的 Agent Skills、OpenAI 的 Open Responses、Hugging Face 的 OpenEnv 和阿里巴巴的 OpenSandbox，覆盖技能封装、模型接口、训练环境与隔离执行。AWS 也披露 Bedrock 已支持 Responses API。这是 Agent 基础设施从厂商自定义接口走向跨阵营治理的 A 级信号，但基金会托管、格式兼容和业务可迁移是三种不同成熟度；真正的控制点仍在实现、信任、权限与可审计的业务结果。",
+  "body_format": "article_text",
+  "article_text": "# Agent 标准开始由竞争对手共同托管：格式更开放，执行控制权却不会自动转移\n\n**核心判断｜Agent 时代的部分基础接口正在从厂商私有产品，转向竞争者共同维护的公共技术资产。但“谁定义文件格式”与“谁能安全、可靠地执行真实工作”正在分离。** 2026 年 10 月 22 日，Linux Foundation 旗下 Agentic AI Foundation（AAIF）宣布接收四个项目：Anthropic 的 Agent Skills、OpenAI 的 Open Responses、Hugging Face 的 OpenEnv，以及阿里巴巴的 OpenSandbox。[1] 它们分别覆盖能力封装、模型交互、训练与评测环境、隔离执行。对 VELNAR 更重要的不是基金会项目数增加，而是过去被不同供应商分别塑造的 Agent 技术接口，开始被放进同一个跨厂商治理体系。\n\n**信号评级：A。** 这是标准治理与生态组织方式的结构性变化，有明确的一手公告和部分既有实施证据；但没有证明四个项目已形成完整互操作栈，更没有证明企业可以无损迁移 Agent。此前 Radar 已分别观察过开源 Agent、沙箱商业化、企业语义资产交换与模型跨云分发；**本次真正新增的是四个相邻基础层由四家竞争阵营在同一天交给同一治理机构，而非任何一项技术刚刚被发明。**\n\n## 一、FACT｜四项移交分别改变了什么\n\n**第一，AAIF 接收的是不同层级的项目，不是一个新的统一 Agent 操作系统。** 基金会 10 月 22 日公告称，四项新增后其托管项目总数达到 10 个，已有项目包括 MCP、A2A、AGENTS.md、goose、Agent Router 与 agentgateway。[1] MCP 处理模型与工具/数据连接，A2A 面向 Agent 之间的协作；本轮四项分别指向能力包、模型 API、环境交互与执行沙箱。项目共处一个基金会，不等于它们使用同一权限模型、相同版本节奏或一套端到端一致性测试。\n\n**第二，Agent Skills 的重要性在于可携带的“程序性知识”，而不是文件夹本身。** Anthropic 10 月 22 日确认，将 Agent Skills 的名称、标识、GitHub 组织与 agentskills.io 域名交由 AAIF 托管；该格式通常以 SKILL.md 配合脚本和参考材料描述可按需加载的专业任务能力。Anthropic 自述已有超过 70 个 Agent 平台集成该格式、约 100 万个 Skills 发布、接近 2.8 亿次安装。[2] 这些数字表明格式具有分发规模，但由厂商自行统计，且**安装次数不等于活跃使用者、独立可信技能或成功完成的企业任务**。Anthropic 提出的版本化发布、正式提案流程和安全指导仍属于拟议路线，不能写成已经全部落地。\n\n**第三，Open Responses 正尝试把“调用模型”从单一厂商 SDK 中抽离。** AAIF 将其定义为基于 OpenAI Responses API 的开放规范，覆盖请求/响应结构、流式事件和工具调用。[1] AWS 同日披露，其工程师参与维护该项目，Amazon Bedrock 自 2025 年 12 月起已支持 Responses API，支持多家模型供应商，并列举了会话状态、工具调用和流式输出等能力。[3] 这提供了超出基金会公告的实际实现证据；但“可用相同 API 发起请求”并不保证不同模型对工具参数、推理状态、错误、权限或最终业务动作具有相同语义。AWS 自己也明确说规范仍在演进。[3]\n\n**第四，OpenEnv 和 OpenSandbox 的成熟度与目标不同。** OpenEnv 面向强化学习与评测环境，提供类似 Gymnasium 的 step/reset/state 交互方式以及可容器化的环境服务；Hugging Face 项目页面仍明确提示其处于实验阶段，接口可能变化。[4] OpenSandbox 提供沙箱生命周期与执行 API、多个语言 SDK，以及 Docker/Kubernetes 运行方式，适用于代码 Agent、浏览器/桌面自动化、评测与训练。[1][5] 这些是项目公开的设计与功能，不是第三方对隔离强度、成本或故障恢复能力的认证。把二者都称为“Agent 沙箱”会遮蔽训练环境协议与生产执行安全的根本区别。\n\n## 二、INFERENCE｜为什么竞争对手愿意把接口交给中立机构\n\n一个接口一旦成为大量开发者共同依赖的约定，原始厂商就会面临两种相反激励：保留控制权可形成锁定，但其他厂商可能拒绝采用；让接口接受跨阵营治理，可能降低单方控制，却更容易扩大其成为事实默认格式的机会。**捐出标准不等于捐出产品优势。** 开发者仍需选择模型、运行平台、身份系统、监控与付费渠道，标准的早期设计者也仍可能在实现经验、工具生态和品牌上受益。\n\n这次四方同时加入的意义，是标准化范围不再只限“Agent 如何调用一个工具”。Agent 开发的几个可复用单元开始被分别描述：技能可以打包，模型调用可以有公共形状，训练环境可以有共同动作/观察接口，代码执行可以有沙箱生命周期协议。若这些接口逐渐稳定，企业就可能把“组织掌握的任务知识”“模型供应商”“评测环境”和“执行资源”拆开采购、替换与治理。\n\n但这里存在一个经常被忽略的非对称性：**接口越开放，真正难以迁移的资产反而可能上移。** 一个 SKILL.md 可以复制，背后的客户授权、私有数据、流程版本、责任归属与异常处理不能靠复制文件获得；一个 Responses 兼容接口可以减少 SDK 改造，企业的模型评测、成本策略、日志留存与事故响应不会自动随之迁移；一个可替换的沙箱 API 也不代表不同隔离实现拥有同等安全边界或 SLA。\n\n因此更准确的产业地图不是“开放标准取代平台”，而是：**通用格式的租金可能下降，可信执行、企业身份与审计、真实业务上下文、可验证交付的定价权仍在争夺。** 开放标准还可能使云平台和既有企业软件更容易吸纳第三方 Agent，因为它们掌握客户采购、身份目录、网络策略和生产运维。\n\n## 三、四层控制点不能混为一谈\n\n**能力层：** Agent Skills 降低技能描述的分发摩擦，但“能被加载”不是“值得信任”。企业仍需回答技能从哪里来、谁审核脚本、版本如何冻结、运行时能调用哪些工具，以及一旦被污染如何撤销。技能市场可能因格式统一而扩大，也可能让恶意技能传播更快。开放格式本身没有提供供应链审查结论。\n\n**模型接口层：** Open Responses 可能降低应用对特定请求格式的绑定。可是模型选择仍受质量、延迟、价格、数据驻留、工具调用语义和合同影响。兼容 API 不等于推理结果可互换；支持多模型的云平台也可能凭统一账单、审计和分发渠道保留新的锁定点。\n\n**训练与评测层：** OpenEnv 使环境封装和共享更容易，但评测的权威来自任务代表性、奖励函数、可复现性、外部副作用隔离和真实部署相关性。训练环境可以互换，不等于评测分数可横向比较，更不等于 Agent 已经学会安全地处理生产业务。\n\n**执行层：** OpenSandbox 的共同生命周期接口可能降低沙箱切换成本；但容器与微虚拟机的隔离、网络出口、凭证代理、数据残留、日志完整性和恢复策略仍由具体实现决定。**能在沙箱内运行任意代码，与获准代表企业修改订单、转账或删除客户记录，是两种不同权限。** 最终业务动作必须继续接受企业自身规则和 System of Record 的校验。\n\n这四层之外还有第五层：**业务事实与语义权威。** 标准可以传递“如何请求”，却不天然知道“什么记录是真实的、这个状态能否转换、谁承担出错责任”。这一层未被四个项目统一，也没有因基金会成立而消失。\n\n## 四、COUNTERARGUMENT｜开放治理不等于真正互操作\n\n**反论一：治理变化可能先于技术变化。** 四个项目此前已存在，本次核心是托管关系和共同治理安排；没有随公告给出覆盖四层的联合兼容性矩阵、端到端迁移案例、统一安全认证或生产 SLA。[1] 因此不能据此宣布 Agent 产业已完成标准收敛。\n\n**反论二：中立基金会仍有参与者利益差异。** 规范维护者来自竞争公司，技术委员会与公开提案机制有助于约束单方决定，但具体版本路线、扩展字段、认证规则和兼容性取舍仍可能发生争议。即使标准是开放的，主流实现也可能利用专有扩展、默认配置和企业采购体系重新建立切换成本。\n\n**反论三：兼容性可能停在表面。** 两家模型都接受同一 JSON，不代表同一工具调用在失败、重试、流式中断、上下文压缩和多模态输入时行为一致；两个沙箱都支持 create/execute/delete，不代表文件持久性、出口策略与审计证据等价。企业迁移必须用同一真实工作流做跨实现回归，而不是只通过“Hello World”。\n\n**反论四：开放也会扩大攻击面。** 技能越容易复制，供应链投毒、提示注入和不可信脚本越需要治理；可复用执行环境越普及，越需要限制网络、凭证和外部系统写入。Anthropic 将安全指导列入未来路线，本身说明格式传播与可信使用之间仍有工程缺口。[2]\n\n**反论五：部分组件还很早期。** OpenEnv 官方标明实验状态；OpenSandbox 的隔离能力需要按部署模式核验；Open Responses 的规范与一致性测试仍在迭代。[3][4][5] 当前缺少独立跨厂商大样本数据，无法据此估算企业迁移成本下降幅度，更不能把基金会项目数量换算成市场份额。\n\n## 五、VELNAR 判断更新：增加可迁移性测试，不扩张当前 Sales MVP\n\n**被强化的判断：** Agent 产业的竞争单位已经不只是模型。能力封装、模型接口、训练环境、执行沙箱可以分别形成公共规范；未来平台竞争将同时发生在开放接口与接口背后的托管、治理、分发、可信执行层。\n\n**需要修正的判断：** 不能简单把“厂商提供了某个基础协议”理解为其必然长期拥有该层控制权。规范可被捐出、共同维护和跨平台实现；但也不能反过来认为“标准开放”意味着 Agent 工作流、企业上下文与执行责任可以无损迁移。**格式可携带性、行为可替换性、授权可迁移性、商业可替代性，必须分别验证。**\n\n**暂不改变的判断：** 企业真正需要的是有边界、可审计、可恢复的业务闭环。当前 Sales MVP 不因此引入通用 Skills 市场、统一多模型网关、强化学习环境或跨云沙箱平台；现有业务事实、状态 Reducer、规则校验、人工确认和真实订单/库存验收仍是更直接的优先级。可观察开放标准，但不把观察自动转成工程范围。\n\n## 六、PREDICTION｜什么证据会让评级上升或下降\n\n未来六至十二个月，优先看四类可证伪证据：一是 AAIF 是否发布可追踪的版本治理、规范变更和安全指导；二是 Open Responses 是否出现跨供应商的一致性测试结果，覆盖工具调用失败、流式恢复和状态语义；三是同一企业 Skill 能否在多个平台以相近权限和审计条件完成真实任务，而不是只被解析；四是 OpenEnv/OpenSandbox 是否出现独立生产案例，披露隔离事故、恢复表现、性能和总成本。\n\n**有界预测：** 公共格式会降低部分开发与集成成本，但最先形成稳定收入的未必是格式本身，而可能是可信的企业级实现、治理服务、审计与运营。若跨实现行为持续不一致，基金会扩容也可能只形成多个并列的开放项目，而不是统一可迁移的 Agent 基础设施。\n\n**值得继续讨论的问题：当模型接口、技能格式和沙箱协议越来越开放，垂直 AI 公司真正应该拥有的不可替代资产，究竟是可复用的业务技能包，还是由真实客户授权、长期运行事实、异常处置和结果责任构成的业务执行关系？**\n\n---\n\n## 证据来源与边界\n\n[1] Linux Foundation / Agentic AI Foundation，2026-10-22，四项项目移交、AAIF 项目组合与治理公告：https://www.linuxfoundation.org/press/agentic-ai-foundation-announces-four-new-projects-agent-skills-open-responses-openenv-and-opensandbox\n\n[2] Anthropic，2026-10-22，Agent Skills 捐赠、格式定义、厂商自报采用规模及拟议治理路线：https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation\n\n[3] AWS Open Source Blog，2026-10-22，Open Responses、Bedrock 已有 API 支持及一致性规范现状：https://aws.amazon.com/blogs/opensource/open-responses-joins-aaif-with-aws-support/\n\n[4] Hugging Face OpenEnv 项目文档，访问于 2026-10-23，接口说明与实验阶段警示：https://huggingface.co/openenv\n\n[5] OpenSandbox 官方项目仓库，访问于 2026-10-23，SDK、运行方式及隔离能力说明：https://github.com/opensandbox-group/OpenSandbox\n\n**证据边界：** [1][2][3] 是相关组织的一手公开披露；采用规模、兼容性与商业效果未获独立全面审计。[4][5] 是项目维护方技术文档，不能替代第三方安全认证或企业生产 SLA。",
+  "sources": [
+    {
+      "title": "Linux Foundation | AAIF announces Agent Skills, Open Responses, OpenEnv and OpenSandbox",
+      "url": "https://www.linuxfoundation.org/press/agentic-ai-foundation-announces-four-new-projects-agent-skills-open-responses-openenv-and-opensandbox",
+      "date": "2026-10-22"
+    },
+    {
+      "title": "Anthropic | Donating Agent Skills to the Agentic AI Foundation",
+      "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+      "date": "2026-10-22"
+    },
+    {
+      "title": "AWS | Open Responses Joins AAIF with AWS Support",
+      "url": "https://aws.amazon.com/blogs/opensource/open-responses-joins-aaif-with-aws-support/",
+      "date": "2026-10-22"
+    },
+    {
+      "title": "Hugging Face | OpenEnv project documentation",
+      "url": "https://huggingface.co/openenv",
+      "date": "2026-10-23"
+    },
+    {
+      "title": "OpenSandbox | Official project repository",
+      "url": "https://github.com/opensandbox-group/OpenSandbox",
+      "date": "2026-10-23"
+    }
+  ]
+}
