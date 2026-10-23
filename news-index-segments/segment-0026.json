@@ -56,6 +56,32 @@
       ],
       "deck": "10 月 22 日，Linux Foundation 旗下 AAIF 同时接收 Anthropic 的 Agent Skills、OpenAI 的 Open Responses、Hugging Face 的 OpenEnv 和阿里巴巴的 OpenSandbox，覆盖技能封装、模型接口、训练环境与隔离执行。AWS 也披露 Bedrock 已支持 Responses API。这是 Agent 基础设施从厂商自定义接口走向跨阵营治理的 A 级信号，但基金会托管、格式兼容和业务可迁移是三种不同成熟度；真正的控制点仍在实现、信任、权限与可审计的业务结果。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-23-B4",
+      "date": "2026-10-23",
+      "grade": "B",
+      "title": "AI 存储扩产遇到股东权利：Solidigm 暂停 IPO 暴露跨境融资的治理闸门",
+      "themes": [
+        "AI Infrastructure",
+        "AI Memory",
+        "Solidigm",
+        "SK hynix",
+        "NAND",
+        "Enterprise SSD",
+        "Capital Markets",
+        "IPO",
+        "Cross-border Listing",
+        "Minority Shareholder Rights",
+        "Corporate Governance",
+        "Semiconductor Manufacturing",
+        "AI Financing",
+        "Control Points",
+        "Capital Stack",
+        "Industrial AI"
+      ],
+      "deck": "SK hynix 10 月 23 日宣布停止评估 Solidigm 的潜在美国 IPO，仍计划研究美国新增产能的融资方式；韩国监管机构此前明确要求跨境子公司上市同样履行母公司股东保护义务。新增的 B 级信号不是 AI 存储需求消失，也不能断言监管直接叫停 IPO，而是 AI 供应链扩产的资本路径还受到母公司治理、少数股东权益与上市地规则共同约束。",
+      "body_format": "article_text"
     }
   ]
 }
