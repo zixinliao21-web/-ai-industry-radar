@@ -195,6 +195,34 @@
       ],
       "deck": "Bloom Energy 10 月 22 日披露第三季度营收 12.36 亿美元、同比增长 138.1%，GAAP 营业利润 2.25 亿美元，但单季经营现金流为负 2715 万美元、资本开支约 1.53 亿美元。对照 Rystad 6 月关于燃料电池订单、产能及钪供应的研究，新增 B 级证据不是燃料电池已经缺料或财务恶化，而是 AI 机房用现场发电缩短并网等待时，制造扩产、营运资金和材料集中度会成为另一组交付约束。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-24-A3",
+      "date": "2026-10-24",
+      "grade": "A",
+      "title": "芯片竞争的入口正上移到 PyTorch：Meta 的 TPU 生产部署不等于 CUDA 护城河失效",
+      "themes": [
+        "AI Infrastructure",
+        "PyTorch",
+        "TorchTPU",
+        "Google Cloud TPU",
+        "Meta",
+        "SGLang",
+        "vLLM",
+        "RadixArk",
+        "Hardware Portability",
+        "Inference Economics",
+        "Model Serving",
+        "Compiler Stack",
+        "Open Source",
+        "AI Accelerators",
+        "CUDA Ecosystem",
+        "Compute Control Points",
+        "AI Supply Chain",
+        "Agent Infrastructure"
+      ],
+      "deck": "Google 与 Meta 10 月 20 日共同开源原生 PyTorch 的 TorchTPU，SGLang 团队明确称其 TPU 推理后端已在 Meta 生产环境运行；PyTorch 基金会 22 日同时确认 AWS TorchNeuron 路线。新信号是既有模型服务栈开始跨芯片复用，并出现大型客户生产部署，而非单纯发布新适配器。但生产占比、部署地点、全生命周期成本与长期可靠性未披露；开放框架降低迁移摩擦，不代表 NVIDIA 的 CUDA、网络、调度和供货优势已经消失。",
+      "body_format": "article_text"
     }
   ]
 }
