@@ -82,6 +82,31 @@
       ],
       "deck": "SK hynix 10 月 23 日宣布停止评估 Solidigm 的潜在美国 IPO，仍计划研究美国新增产能的融资方式；韩国监管机构此前明确要求跨境子公司上市同样履行母公司股东保护义务。新增的 B 级信号不是 AI 存储需求消失，也不能断言监管直接叫停 IPO，而是 AI 供应链扩产的资本路径还受到母公司治理、少数股东权益与上市地规则共同约束。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-23-B5",
+      "date": "2026-10-23",
+      "grade": "B",
+      "title": "工业机器人进入生产线后，监管的是持续维护权：Intel 的一年豁免揭示部署锁定",
+      "themes": [
+        "Physical AI",
+        "Industrial Robotics",
+        "Intel",
+        "FCC",
+        "Semiconductor Manufacturing",
+        "Automated Guided Vehicles",
+        "Regulatory Compliance",
+        "Equipment Authorization",
+        "Industrial Maintenance",
+        "Supply Chain Sovereignty",
+        "Manufacturing Continuity",
+        "Replacement Costs",
+        "Control Points",
+        "Robot Operations",
+        "Industrial AI"
+      ],
+      "deck": "美国 FCC 10 月 22 日给予 Intel 一年有限豁免，使其能够对指定半导体厂内 AGV 进行必要修改；Intel 称相关设备已使用二十余年、替代验证可能耗时数年。新证据不是先进机器人已经大规模采用 AI，而是工业自动化一旦嵌入关键工艺，设备认证、维护更新权与替代验证周期会成为长期运行的控制点；豁免只覆盖指定设备与变更，不能推断禁令已撤销。",
+      "body_format": "article_text"
     }
   ]
 }
