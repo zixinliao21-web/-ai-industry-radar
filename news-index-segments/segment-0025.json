@@ -102,6 +102,31 @@
       ],
       "deck": "巴克莱在 10 月 22 日业绩披露中把技术推动的岗位缩减纳入成本计划，管理层预计 2026 年减少约 5000 个岗位，约六成属于包括开发人员在内的支持职能。但 2027 年集团成本指引仍为约 184 亿英镑，高于剔除特殊项目后的 2026 年约 180 亿英镑运行成本。新增信号是 AI 进入了可核验的组织与财务决策，而不是已证明 AI 独立替代 5000 人、实现净利润增长。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-23-B1",
+      "date": "2026-10-23",
+      "grade": "B",
+      "title": "AI 算力的期限错配有了新样本：Nebius 用 364 天融资建设多年期机房",
+      "themes": [
+        "AI Infrastructure",
+        "Nebius",
+        "Citi",
+        "Neocloud",
+        "Credit Facilities",
+        "Bridge Financing",
+        "Maturity Mismatch",
+        "Data Center Economics",
+        "GPU Procurement",
+        "Asset-backed Lending",
+        "Capital Stack",
+        "Customer Contracts",
+        "Refinancing Risk",
+        "Control Points",
+        "AI Bubble"
+      ],
+      "deck": "Nebius 10 月 22 日获得 Citi 提供的 35 亿美元有担保融资额度，期限仅 364 天、初始利差为 Term SOFR + 2.75%；公司同时拥有多年期算力客户合同和更长期的 GPU 资产支持贷款。新增的 B 级证据不是 AI 云已陷入偿债危机，而是短期流动性、长期建设和合同现金流需要按不同时间表衔接：额度不等于已提款，合同金额也不等于可立即还债的现金。",
+      "body_format": "article_text"
     }
   ]
 }
