@@ -24,6 +24,30 @@
       ],
       "deck": "Formic 10 月 22 日披露累计超过 75 万小时真实生产、覆盖 100 多家工厂，机器人服务客户续约率 97%，并获得包含股权与债务的 5000 万美元融资；Physical Intelligence 的 Pi API 测试名单也包含 Formic。新增 B 级证据是机器人商业化的现场部署、维护、融资和数据反馈开始形成可观察的服务网络，而不是通用机器人已被规模验证。上述运营指标未经独立审计，融资股债比例、单位经济和通用模型的量产表现仍未披露。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-25-A1",
+      "date": "2026-10-25",
+      "grade": "A",
+      "title": "算力竞争正在把云的弹性变成长期付款义务：Meta 8100 亿美元承诺的边界",
+      "themes": [
+        "AI Infrastructure",
+        "Meta",
+        "AI Capital Stack",
+        "Cloud Capacity Commitments",
+        "Data Center Leases",
+        "Contractual Obligations",
+        "Power Infrastructure",
+        "Compute Supply",
+        "Balance Sheet",
+        "Cash Flow",
+        "Hyperscalers",
+        "Control Points",
+        "AI Economics",
+        "AI Bubble"
+      ],
+      "deck": "Meta 10 月 22 日提交的 10-Q 披露，截至 9 月末有 4545.2 亿美元不可取消合同承诺、3557.3 亿美元尚未开始的租赁义务，合计约 8102.5 亿美元；另有最高 147.2 亿美元的有条件云采购义务。仅不可取消合同中标注 2027 年到期的部分就达 1214.1 亿美元，较上一季度上升约 49%。这不是当期负债或全部 AI 支出，而是前沿算力竞争正在将原本按需采购的灵活性提前锁进多年合同、能源与融资安排。",
+      "body_format": "article_text"
     }
   ]
 }
