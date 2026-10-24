@@ -189,6 +189,32 @@
       ],
       "deck": "1Password 10 月 22 日披露超过 5 亿美元整体 ARR、开发者与 AI 安全工具的非人身份月活同比增长 500%、相关工具已覆盖 16% 企业账户。新增 B 级证据是 Agent 与机器身份治理开始出现可观察使用规模，而非新的授权概念；这些指标没有单独披露 AI Agent 付费收入、绝对身份数或净留存，不能把整体 ARR 归因于 Agent 安全。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-24-B5",
+      "date": "2026-10-24",
+      "grade": "B",
+      "title": "Agent 支付出现不改商家网页的兼容路线：秘密在网络出口解密，不等于获得交易授权",
+      "themes": [
+        "Agent Commerce",
+        "Browser Tokens",
+        "Evervault",
+        "Credential Isolation",
+        "Sensitive Data Egress",
+        "Browser Agents",
+        "Payment Infrastructure",
+        "Payment Authorization",
+        "Merchant Acceptance",
+        "Delegated Authority",
+        "PCI DSS",
+        "Agent Security",
+        "Trust Boundaries",
+        "Proxy",
+        "Control Points",
+        "Enterprise Agents"
+      ],
+      "deck": "Evervault 10 月 19 日推出 Browser Tokens：Agent 只接触格式兼容的卡号或密码替身，代理服务仅在指定商家域名、有效期内把真实值送往目的地，商家无需改造结账页面。新增 B 级信号是 Agent 支付除网络原生协议外出现了可用于旧网页的敏感数据交接路径；但商家准入、用户真实委托、金额限制、3DS 与争议责任并未因此解决，产品可用性与实际交易量也缺少独立验证。",
+      "body_format": "article_text"
     }
   ]
 }
