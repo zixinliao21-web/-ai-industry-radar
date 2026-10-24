@@ -48,6 +48,31 @@
       ],
       "deck": "Meta 10 月 22 日提交的 10-Q 披露，截至 9 月末有 4545.2 亿美元不可取消合同承诺、3557.3 亿美元尚未开始的租赁义务，合计约 8102.5 亿美元；另有最高 147.2 亿美元的有条件云采购义务。仅不可取消合同中标注 2027 年到期的部分就达 1214.1 亿美元，较上一季度上升约 49%。这不是当期负债或全部 AI 支出，而是前沿算力竞争正在将原本按需采购的灵活性提前锁进多年合同、能源与融资安排。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-25-B2",
+      "date": "2026-10-25",
+      "grade": "B",
+      "title": "Agent 付款开始跨越买卖双方系统：执行一张已批准发票，不等于拥有付款决策权",
+      "themes": [
+        "Agent Commerce",
+        "Enterprise Agent",
+        "B2B Payments",
+        "Accounts Payable",
+        "Accounts Receivable",
+        "Visa",
+        "BILL",
+        "Billtrust",
+        "Trusted Agent Protocol",
+        "Delegated Authority",
+        "Merchant Acceptance",
+        "Cross-Enterprise Execution",
+        "Payment Reconciliation",
+        "Agent Identity",
+        "Control Points"
+      ],
+      "deck": "Visa、BILL 与 Billtrust 10 月 20 日披露，获授权的付款 Agent 已在参与试点的买方与供应商门户之间处理真实的已批准发票：买方批准付款，BILL Agent 使用令牌化凭证，Billtrust 识别代理身份并按供应商规则放行。新增 B 级证据不是 Agent 自主决定花钱，而是跨企业付款执行从协议演示进入受控生产试点；交易量、失败重试、对账成本与 DSO 效果仍未披露。",
+      "body_format": "article_text"
     }
   ]
 }
