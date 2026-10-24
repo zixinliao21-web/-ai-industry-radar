@@ -110,6 +110,31 @@
       ],
       "deck": "Oracle 10 月 23 日宣布未来四年投入 10 亿美元支持伙伴生态，并扩大合格 Oracle Universal Credits 在 Marketplace 第三方方案上的可使用比例，增加联合销售、私有报价与按量计费。新增 B 级证据不是 10 亿美元已用于 AI Agent，也不是第三方 Agent 已产生规模收入，而是企业 AI 的采购预算、销售渠道与交付伙伴开始被同一平台更紧密地组织；实际转化、佣金与独立客户收益尚未披露。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-24-A7",
+      "date": "2026-10-24",
+      "grade": "A",
+      "title": "企业 AI 服务出现两本账：新收入高速增长，旧合同开始分享自动化收益",
+      "themes": [
+        "Enterprise AI",
+        "IT Services",
+        "AI Services Economics",
+        "Infosys",
+        "AI Productivity",
+        "Contract Repricing",
+        "Pricing Power",
+        "Legacy Revenue",
+        "AI-native Companies",
+        "FDE",
+        "Business Model",
+        "Margin Economics",
+        "Enterprise Procurement",
+        "Control Points",
+        "AI Commercialization"
+      ],
+      "deck": "Infosys 10 月 23 日披露 AI 收入占比升至 10.5%、环比增长 29%，但集团固定汇率同比仅增 1.5%，全年收入增速指引从 1.5%—3%下调至 1%—2%。管理层在财报电话会明确说明，客户要求分享 AI 生产率收益，部分短期合同已把这种收益计入价格。新增 A 级证据不是 AI 导致了全部增长放缓，也不是 AI 业务不赚钱，而是服务商的新增 AI 收入与旧合同重定价必须分开核算。",
+      "body_format": "article_text"
     }
   ]
 }
