@@ -135,6 +135,33 @@
       ],
       "deck": "Infosys 10 月 23 日披露 AI 收入占比升至 10.5%、环比增长 29%，但集团固定汇率同比仅增 1.5%，全年收入增速指引从 1.5%—3%下调至 1%—2%。管理层在财报电话会明确说明，客户要求分享 AI 生产率收益，部分短期合同已把这种收益计入价格。新增 A 级证据不是 AI 导致了全部增长放缓，也不是 AI 业务不赚钱，而是服务商的新增 AI 收入与旧合同重定价必须分开核算。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-24-B3",
+      "date": "2026-10-24",
+      "grade": "B",
+      "title": "实验采购不是搜索结果：Agent 交易权正在落到已签约的科研供应商网络",
+      "themes": [
+        "Vertical AI",
+        "Life Sciences",
+        "Scientist.com",
+        "R&D Procurement",
+        "Agent Commerce",
+        "Agent-to-Agent",
+        "MCP",
+        "Supplier Networks",
+        "Contracting",
+        "Enterprise Procurement",
+        "Agent Authorization",
+        "Scientific Outsourcing",
+        "Compliance",
+        "Business Network",
+        "Control Points",
+        "Workflow Ownership",
+        "Enterprise AI"
+      ],
+      "deck": "Scientist.com 10 月 22 日将实验方案解析、合格实验室匹配、报价比较与采购申请接入 Agent，并宣布通过 MCP 向外部助手开放入口；其已有超过 6000 家签约供应商的网络才是执行基础。新增 B 级证据不是科研 Agent 已能自主下单或科学发现闭环已完成，而是垂直交易的可执行性取决于合同、资质、预算与审批等既有制度基础；实际 Agent 订单量、采购效率和经济收益尚未披露。",
+      "body_format": "article_text"
     }
   ]
 }
