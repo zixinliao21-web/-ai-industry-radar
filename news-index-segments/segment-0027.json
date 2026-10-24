@@ -1,0 +1,34 @@
+{
+  "schema_version": "3.0",
+  "segment": "0027",
+  "items": [
+    {
+      "id": "2026-10-24-A4",
+      "date": "2026-10-24",
+      "grade": "A",
+      "title": "AWS 的未来两年大额算力已被预订：云平台开始分配稀缺性，而不只是出售计算",
+      "themes": [
+        "AI Infrastructure",
+        "AWS",
+        "Amazon",
+        "Cloud Capacity",
+        "Capacity Allocation",
+        "Compute Scarcity",
+        "Inference Economics",
+        "Bedrock",
+        "EC2",
+        "AI Supply Chain",
+        "Control Points",
+        "Cloud Concentration",
+        "Capital Expenditure",
+        "Customer Commitments",
+        "HBM",
+        "Demand Forecasting",
+        "AI Economics",
+        "Enterprise AI"
+      ],
+      "deck": "Amazon CEO Andy Jassy 10 月 23 日称 AWS 2026 年容量已售罄、2027 年大额容量基本预订完毕，2028 年也有相当部分承诺；但 AWS 明确保留部分 EC2 与 Bedrock 按需容量。新增 A 级信号不是全体客户无云可用，而是长期算力承诺、即时访问权与平台的客户分配权开始分层。预订不等于交付收入，约 2200 亿美元 Amazon 全公司资本开支也不等于已获得回报。",
+      "body_format": "article_text"
+    }
+  ]
+}
