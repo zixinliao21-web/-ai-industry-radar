@@ -84,6 +84,32 @@
       ],
       "deck": "Anthropic 与 Theorem 10 月 22 日披露，Claude 为 123 个开源库的 239 个测试入口生成 RISC-V 机器码层面的形式化证明，约 1.8 亿行 Rocq 证明文本；公开仓库当前仅展示 25 个库、60 个入口的可检查子集，且不保证整个库无漏洞或程序终止。新增 A 级信号是 AI 软件生产可能从“生成代码、运行测试”延伸到“生成证明、由独立检查器验收”；规格定义、机器模型和生产环境差距仍是关键控制点。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-24-B2",
+      "date": "2026-10-24",
+      "grade": "B",
+      "title": "企业 AI 的分发权开始写进采购预算：Oracle 把云承诺、伙伴交付与 Marketplace 接成一条链",
+      "themes": [
+        "Enterprise AI",
+        "Agent Distribution",
+        "AI-native Companies",
+        "Oracle",
+        "Oracle Marketplace",
+        "Universal Credits",
+        "Enterprise Procurement",
+        "Cloud Commitments",
+        "Partner Ecosystem",
+        "FDE",
+        "Systems Integrators",
+        "Go-to-Market",
+        "Enterprise Software",
+        "Control Points",
+        "AI Commercialization",
+        "Vertical AI"
+      ],
+      "deck": "Oracle 10 月 23 日宣布未来四年投入 10 亿美元支持伙伴生态，并扩大合格 Oracle Universal Credits 在 Marketplace 第三方方案上的可使用比例，增加联合销售、私有报价与按量计费。新增 B 级证据不是 10 亿美元已用于 AI Agent，也不是第三方 Agent 已产生规模收入，而是企业 AI 的采购预算、销售渠道与交付伙伴开始被同一平台更紧密地组织；实际转化、佣金与独立客户收益尚未披露。",
+      "body_format": "article_text"
     }
   ]
 }

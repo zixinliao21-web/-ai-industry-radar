@@ -1,0 +1,44 @@
+{
+  "id": "2026-10-24-B2",
+  "date": "2026-10-24",
+  "grade": "B",
+  "title": "企业 AI 的分发权开始写进采购预算：Oracle 把云承诺、伙伴交付与 Marketplace 接成一条链",
+  "themes": [
+    "Enterprise AI",
+    "Agent Distribution",
+    "AI-native Companies",
+    "Oracle",
+    "Oracle Marketplace",
+    "Universal Credits",
+    "Enterprise Procurement",
+    "Cloud Commitments",
+    "Partner Ecosystem",
+    "FDE",
+    "Systems Integrators",
+    "Go-to-Market",
+    "Enterprise Software",
+    "Control Points",
+    "AI Commercialization",
+    "Vertical AI"
+  ],
+  "deck": "Oracle 10 月 23 日宣布未来四年投入 10 亿美元支持伙伴生态，并扩大合格 Oracle Universal Credits 在 Marketplace 第三方方案上的可使用比例，增加联合销售、私有报价与按量计费。新增 B 级证据不是 10 亿美元已用于 AI Agent，也不是第三方 Agent 已产生规模收入，而是企业 AI 的采购预算、销售渠道与交付伙伴开始被同一平台更紧密地组织；实际转化、佣金与独立客户收益尚未披露。",
+  "body_format": "article_text",
+  "article_text": "# 企业 AI 的分发权开始写进采购预算：Oracle 把云承诺、伙伴交付与 Marketplace 接成一条链\n\n**核心判断｜企业 AI 的竞争可能不只发生在模型能力、Agent 功能和实施效率上，还发生在客户已经批准的预算与采购流程里。** 一家 AI-native 公司即使能够把业务做成可用产品，也不一定能独立获得大型企业的采购资格、预算、法务审查与上线资源。2026 年 10 月 23 日，Oracle 同时宣布扩大伙伴生态投入和 Marketplace 采购机制：一边计划在未来四年投入 10 亿美元支持伙伴，一边让符合条件的第三方方案更容易使用客户已有的云承诺购买。[1][2] 这不是 AI 业务的成交数据，却是一个值得留存的分发结构信号。\n\n**信号评级：B。** 此前 VELNAR 已观察到 FDE、咨询伙伴和云平台正在承接企业 Agent 的最后一公里，也记录了模型进入竞争云平台的现象。此次新增的不是“又有一个渠道合作”，而是**预算抵扣、联合销售、报价、计费和实施支持被明确连成一套可操作的商业通道**。它验证了旧企业软件的采购入口可能成为 AI-native 产品的新分发层；但仅凭厂商公告，尚不足以判断这种渠道已经产生可持续的 Agent 收入或新的行业主导者。\n\n## 一、FACT｜两份同日公告，必须拆开读\n\n**第一份公告是伙伴投入，不是已支付的 AI Agent 订单。** Oracle 于 10 月 23 日宣布对伙伴生态作出 **10 亿美元、四年期**投入承诺，覆盖培训认证、技术支持、开发和演示环境、迁移支持、联合营销、Marketplace 商业化与持续客户成功。[1] 受益对象不仅包括 AI 开发商，还包括系统集成商、ISV、托管服务商、分销商和顾问。公告没有给出各项资金的明确拆分，也没有披露已经支出多少、直接补贴了多少 Agent 项目或将产生多少净收入。因此不能将“10 亿美元投入”写成“10 亿美元 AI 采购”或“10 亿美元 Agent 市场新增需求”。\n\n**第二份公告改变了 Marketplace 的购买路径。** Oracle 表示，提高了客户现有合格 Universal Credits 云承诺中可用于购买符合条件的 Marketplace 商品的比例；但**未披露新的具体比例、适用客户数或已兑换金额**。[2] 这意味着一部分客户理论上不必先从零争取全新预算，便可能通过既有云采购安排购买第三方方案。它不意味着所有云承诺都可无条件兑换任何 AI 产品，仍受资格、条款和地区限制。\n\nMarketplace 同时增加了几类交易机制：Private Offers Co-Sell 让合格 ISV 与 Oracle 销售人员共同推进客户机会；Private Offers 允许协商价格、期限和条款；合格付费商品可采用按量计费；Multi-Party Private Offers 允许 ISV、授权经销商和客户共同形成交易。Oracle 还宣布扩大印度、日本的 Marketplace 采购覆盖，并在美国、西班牙和巴西提供多方私有报价，其他欧盟地区的扩展属于未来计划。[2] 这些机制各自解决的是**获客、商务谈判、计费与渠道合作**，并非一个已经验证完成的自主 Agent 执行系统。\n\n需要划清时间线：Oracle 早在 2026 年 6 月就宣布可通过其 Marketplace 获取 OpenAI 产品，8 月更新称美国客户已可购买模型 API、Codex 与 ChatGPT Work，并在适用条件下使用云承诺。[3] **OpenAI 上架并不是 10 月 23 日的新事件。** 本轮真正的变化是 Marketplace 对更多合格伙伴方案的预算可用性与联合销售机制的扩展，而不是某个模型首次进入企业采购系统。\n\n## 二、INFERENCE｜为什么“预算接口”可能比又一个 AI 入口更难替代\n\n企业购买软件的过程至少有四道门：**发现方案、批准供应商、支付合同、部署并承担责任**。AI-native 创业公司可能在第一步用产品效果打动业务部门，却在后面三步消耗大量销售、合规与实施成本。一个已经拥有企业账户、采购协议、账单系统和销售组织的平台，能够把部分摩擦前移到既有合同中解决。\n\n这形成一种与技术能力不同的控制点：**平台不必亲自开发最好的垂直 Agent，也可能通过控制客户预算的可使用范围、上架资格、联合销售优先级和结算规则，参与分配 Agent 的商业化机会。** 对平台而言，Marketplace 扩张可以提高云承诺的使用价值并增强生态黏性；对 ISV 而言，它可能缩短从试用到合同的路径；对客户而言，它可能减少新增供应商和预算审批的工作量。这些都是合理的经济机制推论，**不是 Oracle 已披露的效果数据**。\n\n这里还存在与 FDE 路线的联系。FDE 解决的是复杂业务系统中的最后一公里落地，而伙伴网络解决的是如何以可重复、可管理的方式把这些落地能力交付给更多客户。若一个垂直 Agent 供应商把行业知识封装为产品，平台销售与集成伙伴可能承担线索、采购和实施。但反过来，客户关系与收入分成也可能被平台和渠道重新分配。**交付可产品化，不等于分发权自动属于产品开发者。**\n\n这条信号与此前“模型进入 Google Cloud Marketplace”相邻，却并不相同：前者证明跨模型的云采购分发正在形成；本次重点是**云承诺如何转化为第三方应用的可支付预算，以及系统集成商、经销商和云销售如何参与交易**。技术可调用性、采购可用性和商业利润是三个不同层次，不能混为一谈。\n\n## 三、COUNTERARGUMENT｜渠道不是新发明，公告也不是市场验证\n\n**第一，云市场与联合销售早已存在。** Oracle 不是发明了企业采购渠道，也不能因为增加了 AI 相关表述就宣称“Agent 分发层已完成重构”。真正可观察的增量仅是 10 月 23 日明确公布的投入承诺和 Marketplace 机制扩展。\n\n**第二，预算能用不等于客户愿意买。** 已签云承诺可能提高采购便利度，也可能只是让客户重新安排原有 IT 支出。没有新增净支出、实际成交额、转化率和留存数据，就不能推断 AI-native 公司获得了新增需求。\n\n**第三，平台可能同时帮助与挤压伙伴。** 联合销售可以降低获客成本，却可能带来佣金、上架要求、价格透明度、客户关系控制和对平台账单的依赖。渠道效率提升与 ISV 长期议价能力提升并不必然同时发生。\n\n**第四，不能把“适用于部分商品”误写成普遍开放。** Universal Credits 的使用条件、可用比例、地区、合格伙伴以及多方交易的适用范围仍受限制。公告未给出完整合同经济学，更没有独立审计的 Agent 项目 ROI。\n\n**第五，客户依旧需要解决执行正确性。** 更顺畅的购买渠道无法替代企业上下文、权限控制、数据治理、业务验收和真实系统集成。平台拥有预算入口，并不等于平台已经拥有全部业务语义权威。\n\n## 四、VELNAR 的判断更新：把产品竞争与分发竞争分开观察\n\n**被强化的判断：**企业 AI 的商业化未必沿着“AI 产品直接替代传统软件公司”的单一路径发生。成熟软件与云平台可以保留采购、账单、治理和客户关系，把新 Agent 当成生态商品分发；AI-native 公司可能通过这些渠道更快进入企业，也可能为此让渡部分价值捕获权。\n\n**尚未改变的判断：**没有证据表明企业客户将统一改从 Oracle Marketplace 购买 Agent，更没有证据表明独立垂直 AI 公司失去直接销售能力。不同规模、行业和监管要求的客户会采用不同采购模式。\n\n**当前工程不行动：**这条 B 级信号不构成扩建 VELNAR Sales MVP、开发 Marketplace 适配器、建立渠道分销系统或转向大型企业客户的理由。当前更重要的仍是让真实业务链路稳定闭环，并识别哪些能力能被下一位客户重复使用。渠道选择应在有可销售、可交付的产品之后，以真实获客与交付成本判断。\n\n## 五、PREDICTION｜接下来需要什么证据才能升为 A 级\n\n未来 6—18 个月，值得观察的是：Oracle 是否披露第三方 AI/Agent 商品通过云承诺完成的**实际交易额**；伙伴获得的**净收入和续约率**是否提升；联合销售是否真正缩短采购周期；私有报价与按量计费是否扩大到更多行业和地区；以及独立 ISV 能否在多云市场之间迁移客户，而不被某一平台的预算和账单机制锁定。\n\n如果后续只看到更多合作伙伴名单和承诺资金，却看不到成交、复购和交付经济学，这仍是传统渠道的 AI 化包装。如果可验证的第三方 AI 收入、留存和跨伙伴交付效率同时改善，企业 AI 的“分发与采购控制层”才值得在产业地图上获得更高权重。\n\n**值得继续讨论的问题：一家垂直 AI 公司真正拥有客户，是因为它掌握业务执行和持续价值，还是因为它掌握采购合同、账单和分发入口？当这两种控制权分属不同公司，谁能长期保留利润？**\n\n## 证据与来源\n\n[1] Oracle，2026-10-23，Oracle Announces $1 Billion Investment to Accelerate Partner Growth and AI-Driven Modernization for Customers：https://www.oracle.com/in/news/announcement/ai-world-oracle-announces-1-billion-commitment-to-partner-ecosystem-2026-10-23/\n\n[2] Oracle，2026-10-23，Oracle Expands Marketplace to Unlock New Partner Growth Opportunities：https://www.oracle.com/nl/news/announcement/ai-world-oracle-expands-marketplace-to-unlock-new-partner-growth-opportunities-2026-10-23/\n\n[3] Oracle Marketplace，2026-06-11（2026-08-07 更新），Put Your Oracle Cloud Commitment to Work with OpenAI Models：https://blogs.oracle.com/oraclemarketplace/put-your-oracle-cloud-commitment-to-work-with-openai-models\n\n**证据边界：**[1][2] 为平台自身的投入和产品公告，未提供独立成交与效果审计；[3] 用于澄清此前已有的 OpenAI Marketplace 分发，避免把旧能力当成新发布。",
+  "sources": [
+    {
+      "title": "Oracle | $1 Billion Commitment to Partner Ecosystem",
+      "url": "https://www.oracle.com/in/news/announcement/ai-world-oracle-announces-1-billion-commitment-to-partner-ecosystem-2026-10-23/",
+      "date": "2026-10-23"
+    },
+    {
+      "title": "Oracle | Marketplace Partner Growth Enhancements",
+      "url": "https://www.oracle.com/nl/news/announcement/ai-world-oracle-expands-marketplace-to-unlock-new-partner-growth-opportunities-2026-10-23/",
+      "date": "2026-10-23"
+    },
+    {
+      "title": "Oracle Marketplace | Put Your Cloud Commitment to Work with OpenAI Models",
+      "url": "https://blogs.oracle.com/oraclemarketplace/put-your-oracle-cloud-commitment-to-work-with-openai-models",
+      "date": "2026-06-11"
+    }
+  ]
+}
