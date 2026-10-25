@@ -95,6 +95,32 @@
       ],
       "deck": "Moonshot 在 Kimi K3.1 Pro 发布说明中披露：为准备开放权重，已从中期训练与强化学习环境移除网络攻防相关数据；其内部漏洞利用评测从未过滤检查点的 90.5% 降至最终模型的 81.0%（pass@3）。这提供了模型厂商尝试在发布前调节双用途能力的量化样本，却不能证明风险已消除：结果未经独立复现，权重截至 10 月 25 日尚未公开，通用编程能力仍会迁移至安全敏感任务。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-25-B3",
+      "date": "2026-10-25",
+      "grade": "B",
+      "title": "Physical AI 的准入权开始落到城市与认证机构：法国路线图还不是无人驾驶商业化",
+      "themes": [
+        "Physical AI",
+        "Autonomous Vehicles",
+        "Robotaxi",
+        "France",
+        "EU Mobility",
+        "Vehicle Homologation",
+        "Regulatory Gate",
+        "Lifecycle Safety",
+        "Wayve",
+        "Stellantis",
+        "NVIDIA",
+        "Bolt",
+        "Public Transport",
+        "Operational Readiness",
+        "Data Sovereignty",
+        "Control Points"
+      ],
+      "deck": "法国交通部 10 月 23 日宣布拟在 2027 年上半年制定自动驾驶车辆分阶段认证指引，并强调全生命周期安全监测；大巴黎和法兰西岛分别提出 2028 年试点，Wayve、Stellantis、NVIDIA 等组成技术合作。新增 B 级证据不是欧洲已放行无人驾驶，而是 Physical AI 从模型与车辆走向城市运营时，认证、持续安全、地方服务组织和数据主权成为独立准入门槛。指引尚未发布，部分试点仍待欧盟遴选，规模经济与真实安全数据未披露。",
+      "body_format": "article_text"
     }
   ]
 }

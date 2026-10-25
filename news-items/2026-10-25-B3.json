@@ -1,0 +1,49 @@
+{
+  "id": "2026-10-25-B3",
+  "date": "2026-10-25",
+  "grade": "B",
+  "title": "Physical AI 的准入权开始落到城市与认证机构：法国路线图还不是无人驾驶商业化",
+  "themes": [
+    "Physical AI",
+    "Autonomous Vehicles",
+    "Robotaxi",
+    "France",
+    "EU Mobility",
+    "Vehicle Homologation",
+    "Regulatory Gate",
+    "Lifecycle Safety",
+    "Wayve",
+    "Stellantis",
+    "NVIDIA",
+    "Bolt",
+    "Public Transport",
+    "Operational Readiness",
+    "Data Sovereignty",
+    "Control Points"
+  ],
+  "deck": "法国交通部 10 月 23 日宣布拟在 2027 年上半年制定自动驾驶车辆分阶段认证指引，并强调全生命周期安全监测；大巴黎和法兰西岛分别提出 2028 年试点，Wayve、Stellantis、NVIDIA 等组成技术合作。新增 B 级证据不是欧洲已放行无人驾驶，而是 Physical AI 从模型与车辆走向城市运营时，认证、持续安全、地方服务组织和数据主权成为独立准入门槛。指引尚未发布，部分试点仍待欧盟遴选，规模经济与真实安全数据未披露。",
+  "body_format": "article_text",
+  "article_text": "# Physical AI 的准入权开始落到城市与认证机构：法国路线图还不是无人驾驶商业化\n\n**核心判断｜Physical AI 从演示走向公共空间，商业化门槛可能先由“模型能驾驶”转向“谁有权证明、批准并持续监督它在城市中驾驶”。** 法国交通部在 2026 年 10 月 23 日提出，计划于 2027 年上半年制定自动驾驶车辆认证指引，并强调分阶段验证与车辆全生命周期安全监测；同一天，多组公共交通和企业合作公布了面向 2028 年的试点安排。[1][2][3] 这是 **B 级制度与部署信号**，不是法国已经批准大规模 L4 无人驾驶，更不是通用机器人商业模式得到验证。\n\n对 VELNAR 真正有增量的不是“欧洲也要发展 Robotaxi”。此前我们已经讨论过机器人模型、硬件、仿真、现场运营和主权 AI；这次值得单独记录的是：**进入真实城市的 Physical AI 需要经过车辆认证、路线与场景批准、运营主体责任、持续安全监测、数据治理和公共服务采购等多个不同的闸门。** 它们不会随着模型分数提升而自动消失，也未必由模型供应商拥有。\n\n## 一、FACT｜三个不同成熟度的事实，不能合并成“法国无人驾驶落地”\n\n**第一层：国家公布的是认证工作计划，不是已经生效的统一通行证。** 法国交通部在 10 月 23 日的“自动驾驶车辆大会”公告中表示，国家车辆型式认证中心（CNRV）将牵头制定认证指引，目标时间是 **2027 年上半年**，方法包括逐步验证及车辆全生命周期的安全跟踪。[1] 官方同时回顾：法国自 2018 年开展自动化出行国家战略，已累计进行超过 200 次实验。这说明法国并非从零开始建立规则，但公告没有公布新指引全文、最终性能阈值、适用车型清单或任何车辆的新增批准决定。把“将制定指引”写成“已经完成认证”会提前兑现制度进度。\n\n**第二层：跨国协调正在组织，但协调不等于欧盟共同批准。** 法国称 2026 年 10 月 7 日启动面向交通主管部门的 Pact for Europe 合作机制；另一项简化跨境试验授权的“site-test”倡议已有 **22 个签署方**。[1] 这表明欧洲主管部门正在尝试降低各地试验规则的碎片化成本。然而签署意向与正式立法、统一技术标准、相互承认和可跨国商业运营之间仍有距离。22 是官方所称签署方数量，不应被误写为 22 个国家已经批准某类无人驾驶产品。\n\n**第三层：道路配送机器人已有一项实际许可，但行人空间仍是另一道边界。** 法国交通部指出，自 **2026 年 8 月 7 日**起，配送车辆和机器人获准在法国道路行驶；对于人行道和步行区内的小型自主机器人，政府仍准备与内政部门及地方政府进一步研究规则。[1] 这项区分说明，“自动驾驶”不是一个一次性解决的许可类别：车辆类型、道路空间、速度与人群风险会改变准入条件。公告也没有给出配送机器人的实际订单量、事故率或商业利润。\n\n**第四层：2028 年是试点目标，不是已经运营的城市车队。** 法兰西岛交通主管部门宣布拟于 **2028 年初**在 Versailles Grand Parc、Saint-Quentin-en-Yvelines 和 Paris-Saclay 一带启动公共乘客运输试点，并争取从 2030 年起逐步扩展。[1] 大巴黎都会区、Bolt 与 Stellantis 则向欧盟 ADACities 倡议提交另一项申请，计划在获得必要批准后，从 2028 年起最多在五个市镇进行实验，远期希望扩至约 30 个市镇。[3] **后者仍是申请中的项目**，不能写成欧盟已经中标、车辆已经投运或 2030 年扩张已获保障。其公告还明确提出运营安全、服务质量、社会环境影响及经济条件的评估，而非仅测模型驾驶表现。[3]\n\n**第五层：产业联盟展示了角色分工，而非一家公司包揽价值链。** Wayve、Stellantis 和 NVIDIA 同日宣布在法国合作：Stellantis 提供 L4-ready 车辆工程与制造能力，Wayve 提供 AI Driver，计划结合 NVIDIA Halos OS 与 Hyperion 计算及传感架构。[2] 另一项大巴黎申请中，Bolt 负责服务集成和部署规划，Stellantis 负责车辆平台，Pony.ai 被列为**潜在**自动驾驶技术提供者。[3] 两项合作不是同一个已签约车队，Wayve 与 Pony.ai 的角色不能混写。Wayve 与 Stellantis 早在 2026 年 5 月、6 月就已有自动驾驶合作，10 月的新信息主要是法国监管与地方部署组织的结合，不是从无到有的技术联盟。[2][4]\n\n## 二、INFERENCE｜Physical AI 的控制点在“部署许可 × 持续责任”处出现分层\n\n从这组证据可以推导一个比“机器人模型是否通用”更具体的商业问题：**谁能把可工作的自动驾驶系统，转化为地方政府、乘客、保险方和运营商都愿意持续承担责任的公共服务？**\n\n至少有五层能力需要协同。模型与传感器层负责感知和驾驶策略；车辆制造与集成层负责冗余、维护和硬件可靠性；认证层决定在什么运行设计域、什么条件下可以测试或提供服务；城市和交通主管部门决定公共空间与公共交通的接入；运营层负责调度、乘客服务、异常处置、保险和长期成本。一个参与者可以覆盖多层，但不能从拥有最强模型直接推出其拥有全部商业控制权。\n\n法国的路线图使其中两层更清晰。**认证不是一次性发布许可证**：如果最终指引落实了全生命周期监测，持续更新模型、记录安全事件、证明变更没有破坏既有安全边界，可能成为长期合规成本与供应商选择标准。**城市准入也不是全国市场准入的简单复制**：不同线路、交通组织、公共采购和地方接受度可能决定扩张速度。这里说的是潜在经济机制；在指引尚未公布前，不能断言法国已经规定某种特定的数据格式、模型审核频率或第三方审计义务。\n\n法国同时提出欧洲软件功能控制与欧洲数据留存的主权诉求。[1] 这可能使采购与运营合同不只比较驾驶性能，还比较本地可审计性、数据控制和故障时的责任归属。不过，政策表述不等于具有普遍约束力的具体采购条款，也不等于欧洲企业必然取得模型或芯片的最终控制权。Wayve、NVIDIA、Stellantis、Bolt 等不同主体共处一个部署联盟，本身就说明“欧洲本地化”与“完全本土技术栈”不能画等号。\n\n对 Physical AI 创业者而言，这里可能出现不直接训练基础模型的角色：安全证据与变更管理、车队运营软件、地方部署与系统集成、事故和接管事件记录、受监管数据接口。但**可能存在需求**不等于已经有独立高毛利市场。车辆制造商、交通平台、保险机构或政府采购体系都可能把这些功能内化，第三方服务商也可能只是重交付、低利润的承包商。\n\n## 三、反论｜最容易把政策时间表误读成产业拐点的五个地方\n\n**一，计划不是批准。** 2027 年上半年的认证指引仍属拟制定文件。最终要求、发布时间、执行机构之间的协调和实际审批周期都可能变化。欧洲既有车辆法规和法国此前的试验制度仍在运行，不能把这次公告说成“欧洲首次允许自动驾驶”。\n\n**二，试点数量不是商业化规模。** 超过 200 次历史实验不等于 200 个商业项目；2028 年路线图不等于现有付费乘客；30 个市镇是条件性远期愿景。公告未提供每公里成本、远程安全员配置、保险费、故障率、人工接管率或实际票务收入。[1][3] 这些缺口直接决定自动驾驶能否替代传统运力。\n\n**三，安全认证不自动证明更安全。** 分阶段审查和持续监测可以改善问责，但必须看具体运行设计域、测试里程、事故定义、严重事件报告与独立验证。模型演示视频、厂商安全声明和官方发展意愿都不是可比较的安全统计。\n\n**四，欧洲主权目标不等于本地独占利润。** 法国强调软件控制与数据留存，但联盟仍依赖跨国模型、芯片、车辆和运营平台。数据留在欧洲也不必然意味着地方政府拥有训练权、模型更新权或跨供应商迁移能力。合同细则可能比宏观政策口号更能决定最终控制点。\n\n**五，公共交通需求与私人 Robotaxi 市场不是同一账本。** 偏远地区接驳、公共交通补充、城市配送和商业网约车在补贴、价格、服务时间与风险承担上不同。政府愿意试点某条低密度线路，不能证明无补贴的大规模城市 Robotaxi 已具备经济性。\n\n## 四、对 VELNAR 的判断更新：观察部署制度，不据此扩大 Sales MVP\n\n**被加强的判断：** Physical AI 的商业化是“能力 + 现实工作流 + 责任主体”的系统工程。模型与硬件之外，能获得运营场景、持续维护、合规证据和真实客户关系的主体可能保留重要议价权。这与此前工厂机器人服务商的现场运营证据相呼应，但城市道路的安全与公共监管约束更强。\n\n**新增的限定：** “准入权”并非一个可以笼统收购或产品化的单一资产。车辆认证、城市路线批准、乘客服务许可、数据权利和保险责任由不同主体掌握，必须逐一研究。不能把政府路线图推导为某家企业已经建立不可替代的 AI 平台。\n\n**当前不改变的决定：** VELNAR 不因此启动自动驾驶、机器人监管或城市交通软件项目；也不把 Physical AI 的认证结构移植到正在验证正常业务闭环的 Sales MVP。产业研究记录的是未来竞争形态，不是现阶段的产品需求清单。\n\n## 五、PREDICTION｜下一步看四类兑现证据\n\n**2027 年上半年：** 法国是否如期公布完整认证指引，是否清楚区分测试、有限运营与商业化，以及安全监测和软件更新的实际要求。\n\n**2027—2028 年：** 大巴黎 ADACities 申请是否获选，法兰西岛试点是否完成车辆、路线和运营审批，公布的时间表是否发生变化。\n\n**进入真实服务后：** 是否披露按运行设计域区分的安全事件、接管率、可用率、乘客量、每公里总成本及人工监督成本，而非仅披露合作伙伴和试点城市数量。\n\n**产业控制权：** 运营数据、模型更新权、安全证明和客户关系最终由车辆厂、模型厂、城市、交通平台还是第三方服务商掌握，是否存在可迁移、可审计的合同与技术接口。\n\n**值得带回讨论的问题：** 如果 Physical AI 模型能力继续商品化，地方运营许可与可核验安全记录会成为可持续的企业护城河，还是仅仅构成每家运营商都必须支付、却无法独占定价的合规成本？\n\n---\n\n**证据来源**\n\n[1] 法国交通部，2026-10-23，《Assises du véhicule autonome》官方公告。https://www.ecologie.gouv.fr/presse/assises-du-vehicule-autonome-philippe-tabarot-presente-aux-acteurs-filiere-priorites-du\n\n[2] Wayve，2026-10-23，《Wayve, Stellantis, and NVIDIA Collaborate to Advance Safe and Responsible Autonomous Vehicle Deployment Across France》。https://wayve.ai/press/wayve-stellantis-nvidia-collaborate-on-deployment-across-france/\n\n[3] Stellantis Media，2026-10-23，《Métropole du Grand Paris, Bolt and Stellantis ... from 2028》。https://www.media.stellantis.com/em-en/corporate/press/metropole-du-grand-paris-bolt-and-stellantis-together-aim-to-bring-autonomous-vehicles-by-experimentation-to-greater-paris-from-2028\n\n[4] Stellantis，2026-06-17，《Stellantis, Wayve, and Uber Partner to Scale Robotaxis Globally》。https://www.stellantis.com/en/news/press-releases/2026/june/stellantis-wayve-and-uber-partner-to-scale-robotaxis-globally",
+  "sources": [
+    {
+      "title": "France Ministry of Transport | Assises du véhicule autonome",
+      "url": "https://www.ecologie.gouv.fr/presse/assises-du-vehicule-autonome-philippe-tabarot-presente-aux-acteurs-filiere-priorites-du",
+      "date": "2026-10-23"
+    },
+    {
+      "title": "Wayve | Wayve, Stellantis, and NVIDIA collaborate on autonomous vehicle deployment across France",
+      "url": "https://wayve.ai/press/wayve-stellantis-nvidia-collaborate-on-deployment-across-france/",
+      "date": "2026-10-23"
+    },
+    {
+      "title": "Stellantis Media | Greater Paris, Bolt and Stellantis autonomous mobility pilot proposal",
+      "url": "https://www.media.stellantis.com/em-en/corporate/press/metropole-du-grand-paris-bolt-and-stellantis-together-aim-to-bring-autonomous-vehicles-by-experimentation-to-greater-paris-from-2028",
+      "date": "2026-10-23"
+    },
+    {
+      "title": "Stellantis | Stellantis, Wayve, and Uber Partner to Scale Robotaxis Globally",
+      "url": "https://www.stellantis.com/en/news/press-releases/2026/june/stellantis-wayve-and-uber-partner-to-scale-robotaxis-globally",
+      "date": "2026-06-17"
+    }
+  ]
+}
