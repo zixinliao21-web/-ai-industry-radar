@@ -73,6 +73,28 @@
       ],
       "deck": "Visa、BILL 与 Billtrust 10 月 20 日披露，获授权的付款 Agent 已在参与试点的买方与供应商门户之间处理真实的已批准发票：买方批准付款，BILL Agent 使用令牌化凭证，Billtrust 识别代理身份并按供应商规则放行。新增 B 级证据不是 Agent 自主决定花钱，而是跨企业付款执行从协议演示进入受控生产试点；交易量、失败重试、对账成本与 DSO 效果仍未披露。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-25-A2",
+      "date": "2026-10-25",
+      "grade": "A",
+      "title": "开放权重的安全控制正在前移到训练阶段：Kimi 的 9.5 个百分点不是安全保证",
+      "themes": [
+        "Open-Weight Models",
+        "AI Safety",
+        "Model Release Governance",
+        "Dual-Use Capability",
+        "Cybersecurity",
+        "Post-Training",
+        "Reinforcement Learning",
+        "Capability Evaluation",
+        "Open Models",
+        "Control Points",
+        "Model Platforms",
+        "AI Infrastructure"
+      ],
+      "deck": "Moonshot 在 Kimi K3.1 Pro 发布说明中披露：为准备开放权重，已从中期训练与强化学习环境移除网络攻防相关数据；其内部漏洞利用评测从未过滤检查点的 90.5% 降至最终模型的 81.0%（pass@3）。这提供了模型厂商尝试在发布前调节双用途能力的量化样本，却不能证明风险已消除：结果未经独立复现，权重截至 10 月 25 日尚未公开，通用编程能力仍会迁移至安全敏感任务。",
+      "body_format": "article_text"
     }
   ]
 }
