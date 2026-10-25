@@ -1,0 +1,31 @@
+{
+  "schema_version": "3.0",
+  "segment": "0029",
+  "items": [
+    {
+      "id": "2026-10-26-A2",
+      "date": "2026-10-26",
+      "grade": "A",
+      "title": "当算力融资借用卫星业务的信用：SpaceX 的 400 亿美元不等于 GPU 已交付",
+      "themes": [
+        "AI Infrastructure",
+        "SpaceX",
+        "GPU Financing",
+        "AI Capital Stack",
+        "Credit Quality",
+        "Cross-Segment Cash Flow",
+        "Starlink",
+        "NVIDIA",
+        "Capital Expenditure",
+        "Debt Financing",
+        "Compute Delivery",
+        "AI Economics",
+        "Control Points",
+        "Infrastructure Concentration",
+        "AI Bubble"
+      ],
+      "deck": "10月25日马斯克称 SpaceX 已完成约400亿美元 GPU 相关债务融资，主要支持2027年上半年到货；此前10月6日仍只是融资谈判。公司9月末总债务本金为380.06亿美元，第三季度 AI/SI 资本开支164.44亿美元、经营利润4.31亿美元，而通信业务经营利润23.67亿美元。新增 A 级信号是算力建设开始利用多业务集团的信用与现金流组织资本，但管理层融资声明不等于400亿美元已提款、GPU 已交付，跨业务现金流支持也不等于已披露法定担保。",
+      "body_format": "article_text"
+    }
+  ]
+}
