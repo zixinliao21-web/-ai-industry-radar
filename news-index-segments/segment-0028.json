@@ -121,6 +121,28 @@
       ],
       "deck": "法国交通部 10 月 23 日宣布拟在 2027 年上半年制定自动驾驶车辆分阶段认证指引，并强调全生命周期安全监测；大巴黎和法兰西岛分别提出 2028 年试点，Wayve、Stellantis、NVIDIA 等组成技术合作。新增 B 级证据不是欧洲已放行无人驾驶，而是 Physical AI 从模型与车辆走向城市运营时，认证、持续安全、地方服务组织和数据主权成为独立准入门槛。指引尚未发布，部分试点仍待欧盟遴选，规模经济与真实安全数据未披露。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-25-A3",
+      "date": "2026-10-25",
+      "grade": "A",
+      "title": "AI 的跨境边界正在从技术出口延伸到资本进入：美国拟将特定 AI 投资从申报改为禁止",
+      "themes": [
+        "AI Industry",
+        "Cross-Border Investment",
+        "AI Sovereignty",
+        "Outbound Investment",
+        "COINS Act",
+        "Capital Access",
+        "AI-native Companies",
+        "Investment Governance",
+        "Regulation",
+        "Control Points",
+        "Financing",
+        "International Competition"
+      ],
+      "deck": "美国财政部10月22日公布对外投资规则草案，拟将对受覆盖外国主体开发AI系统的部分美国投资从现行申报或有限禁止扩大为禁止，同时覆盖受控境外实体及部分股权、可转股债务、合资和基金交易。这是资本与治理权进入AI产业主权边界的A类制度信号，但草案尚未生效、例外众多，也不等于禁止一切中美AI投资或技术服务。",
+      "body_format": "article_text"
     }
   ]
 }
