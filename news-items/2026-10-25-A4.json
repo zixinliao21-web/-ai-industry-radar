@@ -1,0 +1,54 @@
+{
+  "id": "2026-10-25-A4",
+  "date": "2026-10-25",
+  "grade": "A",
+  "title": "Agent 的风险开始写进银行合同：用户授权之后，谁为越权行动买单？",
+  "themes": [
+    "Agent Commerce",
+    "Banking",
+    "Wells Fargo",
+    "AI Agent Liability",
+    "Delegated Authority",
+    "Financial Regulation",
+    "Regulation E",
+    "Agent Identity",
+    "Account Access",
+    "Revocation",
+    "Consumer Protection",
+    "Financial Services",
+    "Contractual Risk",
+    "Trust Infrastructure",
+    "Agent Governance",
+    "Control Points"
+  ],
+  "deck": "富国银行已公布拟于11月24日生效的在线访问协议，专设第三方 AI Agent 条款：在适用法律允许范围内，将用户授予凭证或权限后的代理指令视作用户授权，并将监督、撤权和越权后果责任指向用户；银行同时保留限制代理访问的权利。与此前银行拒绝外部 Agent 的动作不同，这是一份可直接核验的责任分配合同。但条款尚未生效，也不能凌驾美国 Regulation E 的消费者保护，不能将其误写成所有 Agent 错误均由客户无条件承担。",
+  "article_text": "# Agent 的风险开始写进银行合同：用户授权之后，谁为越权行动买单？\n\n**核心判断｜当个人 Agent 开始代表用户进入金融账户，风险分配正在从“银行允不允许它进来”，延伸到“进来以后发生了什么，法律上算谁做的”。** 富国银行（Wells Fargo）官网已经公开一份标明 **2026 年 11 月 24 日生效**的新版在线访问协议，新增完整的“第三方人工智能代理”第 15 节。条款在适用法律允许的范围内，将用户提供凭证或授权后的 Agent 指令视作用户自己的指令，并将监督、撤权、越权和意外行动的责任大幅指向账户持有人；同时，银行保留注册、限权和封禁 Agent 的权利。[1]\n\n这是一条 **A 级结构信号**。我们 10 月 17 日已记录 JPMorgan、Citi、Schwab 对未经批准的外部 Agent 划定账户访问边界；本次新增的不是“银行仍然担心 Agent”，而是**有银行开始用正式合同预先定义机器代理的责任归属**。合同仍是将来生效的版本，并不证明银行已普遍允许外部 Agent 交易，更不意味着它能覆盖消费者依法享有的全部争议权利。新旧协议对照、监管规则与报道事实必须分开。[1][2][3]\n\n## 一、FACT｜新合同到底写了什么\n\n**第一，生效时间与许可前提非常关键。** Wells Fargo 官网同时提供 2026 年 5 月 21 日生效的现行协议和 11 月 24 日才生效的即将实施版本。新版首页将 AI Agent 的责任列为新增事项，第 15 节标题为“Third-Party Artificial Intelligence Agents or Agentic AI”。其适用对象包括自主、半自主或非自主地代表他人行动的软件。条款也明确保留银行决定是否允许、限制或禁止代理访问的权力。因此，不能从合同出现就推断“Wells Fargo 已开放所有 Agent 访问账户”。[1][2]\n\n**第二，合同试图把代理行为归属给授权者。** 第 15(d) 节称，如果客户将登录凭证交给 Agent，或以其他方式授权 Agent 行动，那么在法律或监管没有另行规定时，银行可以把 Agent 发起的指令、行动或交易视为客户直接发起并授权，且无须对每条指令再调查代理的实际权限范围。这是在定义银行可依赖何种“授权表象”，而不是一份可独立验证的用户意图证明。[1]\n\n**第三，责任不仅覆盖付款，还覆盖监督、信息与撤权。** 第 15(b)—(f) 节分别规定：银行不审查第三方 Agent 的数据处理实践；用户允许 Agent 进入即涉及向其披露账户及个人信息；用户需要监督代理是否在授权范围内行动，并负责及时撤销授权、保存撤权证据以及通知银行。合同明确谈及误解指令、意外操作、输入受操纵和超越授权等情形，但多处附有“除非法律或监管另有规定”的限制。[1]\n\n**第四，银行同时保留平台控制权。** 第 15(g) 节允许银行要求登记 Agent，调整 API 或其他访问方式，限制某些动作，或者阻止、暂停、终止代理访问。也就是说，合同并非把账户执行权交给用户代理后退出治理；相反，**账户持有人承担监督义务，而银行继续掌握实际接入与最终执行闸门**。[1]\n\n**第五，这不等于“所有银行都发现 Agent 偷偷转账”。** 10 月 22 日 Reuters 转述 Axios 对多家银行遭遇未经批准 Agent 活动的报道，并说明其当时无法独立核实相关指控；报道也指出，一些所谓未经授权访问实际源于客户主动共享凭证。是否违反银行接入规则、是否违反用户具体指令、是否构成法律意义上的未经授权电子转账，是三个不同判断。[5]\n\n## 二、最重要的法律边界｜合同不能单方面废除 Regulation E\n\n如果只读合同中“由你承担责任”的句子，很容易得出一个过度结论：Agent 只要拿到密码，任何错误转账都自动由消费者赔付。这不准确。\n\n美国消费者金融保护局（CFPB）的 Regulation E 对适用的消费者电子资金转账设有独立保护。其第 1005.6 条官方解释明确：**银行与消费者之间的协议不能把依法属于“未经授权转账”的消费者责任提高到法定上限以上**。CFPB 的 FAQ 同时指出，若消费者主动把访问工具交给某个人并赋予其转账权，该人超出授权范围的转账在特定条件下可能不属于 Regulation E 所定义的“未经授权”；但通过欺诈、盗窃取得凭证的情形不能简单等同。[3][4]\n\n关键的不确定性在于：**软件 Agent 的行为、用户对软件的具体授权、软件供应商与账户持有人之间的法律关系，能否在不同情境下被视为法规所说的“向某个人交付访问工具并授权其转账”**。不同账户类型、支付工具、事实经过和适用法规会影响结果。现有材料不能替监管机关或法院作出统一判定；商业账户也不能不加区分地套用消费者 Regulation E。\n\n因此本次能确认的事实是：银行**在合同层面尝试将代理风险明确归属和分配**；不能确认的是：该条款对所有未来 Agent 争议均具有可执行性，更不能宣称消费者保护已经被取消。[1][3][4]\n\n## 三、INFERENCE｜Agent Commerce 的新控制点是“谁能解释一次行动的授权”\n\n此前 VELNAR 观察过代理身份、支付令牌、商家准入，以及跨企业已批准发票的受控执行。银行合同揭示更难的一层：**认证证明某个请求从哪里来，不等于证明用户当时允许它做这件事；技术上执行成功，不等于事后责任已经清楚。**\n\n想象用户只授权 Agent “检查账户并提醒我哪笔账单到期”。若 Agent 误解为“替我付款”，仅凭一次账号登录无法回答五个问题：授权的原始内容是什么、允许哪些动作、何时过期、是否需要逐笔确认、撤权何时对银行生效。银行可能看到的是一个持有正确凭证的请求；用户看到的却可能是越权付款；模型提供商可能认为自己只提供软件。**同一条机器动作，在技术、合同与法律层面可能有三套不同的解释。**\n\n这让 Agent 信任基础设施的潜在竞争点进一步细化为：可表达的授权范围、受托身份、交易级意图凭证、时效与撤权传播、独立执行日志、争议证据，以及最终承担损失的规则。并非每个场景都需要一套新协议；现有银行开放接口、支付网络、身份服务和账户系统也可能逐步提供这些能力。**控制权可能由现有金融机构与基础设施网络共同持有，而不是自然归属于最聪明的个人助手。**\n\n对银行，预先写入合同可降低责任不确定性，但若责任被过度推给客户，也可能削弱消费者采用意愿。对 Agent 平台，能够“拿到密码并操作网页”不再足以形成可持续商业渠道；必须解决银行是否接受其代理身份、是否认可用户委托、是否能留存足够的可审计证据。对消费者，是否愿意长期授权 Agent，取决于可见、可限额、可撤销和可追责，而不只是模型任务完成率。\n\n## 四、反论｜这也可能只是防御性法律措辞\n\n**第一，合同尚未生效，真实执行规则未公开。** 我们不知道银行将允许哪些外部 Agent、采用何种身份协议、提供多少只读或交易权限，也不知道有多少客户实际使用。不能把法律准备等同于产品上线。[1]\n\n**第二，责任条款未必意味着 Agent 平台出现新的商业机会。** 银行可能长期限制外部代理，消费者可能拒绝交出凭证，支付网络也可能只开放低风险动作。缺乏交易规模、损失率和争议结果时，不能据此给“Agent 责任基础设施”计算市场规模。\n\n**第三，现有法律可能比合同更强。** 若相关电子转账依法被认定为未经授权，Regulation E 仍可能保护消费者；若客户自愿授权的代理执行了不合意的交易，事实和法律归类又可能不同。**银行想如何分配责任**与**法院、监管机关最终认可何种责任**不能混写。[3][4]\n\n**第四，平台不一定完全封闭。** 银行保留准入权，也可能为了满足客户需求而发展可认证、只读或逐笔确认的第三方接口。用户授权与银行控制不是非此即彼；真正的竞争会发生在“什么条件下可以执行、谁有权拒绝、拒绝是否合理”之间。\n\n## 五、对 VELNAR 判断的实际增量\n\n**被加强的判断：** Agent 的长期控制点不是模型会不会点击按钮，而是外部业务系统是否承认代理的身份、授权与行动结果。尤其在资金等高风险领域，资源持有者能够通过接口、合同和法律责任保留强大的最终执行权。\n\n**需要修正的判断：** 我们不能把“用户愿意委托”直接等同于“平台应当允许执行”，也不能把“银行已授权 Agent”直接等同于“每次行为都符合用户意图”。**委托关系必须能在具体动作层面被证明，并在争议时重建。**\n\n**仍然不应行动的部分：** 这是一条长期 Agent Commerce / Trust Infrastructure 研究信号，不是当前化妆品包材 Sales MVP 的扩容依据。Sales MVP 仍应聚焦真实订单、库存、出货与月结等既有业务闭环，不需要因为银行合同增加金融协议、通用 Agent 身份系统或跨企业支付模块。\n\n## 六、PREDICTION｜下一轮应看“责任条款”能否变成可操作的委托机制\n\n未来 6—12 个月，值得观察三个可验证变化：一，银行是否公布可供第三方申请的 Agent 准入标准，明确只读、建议、发起、执行各层权限；二，是否出现可验证的逐笔授权、限额、撤权回执和争议处理机制，并公布真实使用与异常率；三，监管机关、仲裁或法院是否开始明确区分 Agent 自主越权、用户明确授权、凭证被盗三类情形。如果只有更严格的免责声明，却没有可执行的委托技术与真实交易数据，那么本次变化主要仍是**风险防御**，而不是新的开放 Agent 商业网络。\n\n**值得继续讨论的问题：当用户给 Agent 一项长期目标，但没有批准每个中间动作时，谁有权把“完成目标所需”解释为“已获授权”？若银行拒绝一次 Agent 行动，它应只提供拒绝结果，还是还要给出可供用户和监管方审查的理由？**\n\n---\n\n### 证据来源与时间边界\n\n[1] Wells Fargo，Upcoming Online Access Agreement，标明 2026-11-24 生效，第 15 节（2026-10-25 可公开访问；不将生效日期误作发布日期）：https://www.wellsfargo.com/online-banking/online-access-agreement/upcoming/\n\n[2] Wells Fargo，Online Access Agreement，现行版本自 2026-05-21 生效（用于比较新旧条款）：https://www.wellsfargo.com/online-banking/online-access-agreement/\n\n[3] CFPB，Regulation E，12 CFR §1005.6，消费者对未经授权电子资金转账的责任限制及官方解释：https://www.consumerfinance.gov/rules-policy/regulations/1005/6/\n\n[4] CFPB，Electronic Fund Transfers FAQs，关于主动交付凭证、欺诈取得凭证、合同不得削弱法定保护的解释：https://www.consumerfinance.gov/compliance/compliance-resources/deposit-accounts-resources/electronic-fund-transfers/electronic-fund-transfers-faqs/\n\n[5] Reuters，2026-10-22，关于美国银行限制第三方 Agent 的报道；其中部分事件转述 Axios，Reuters 明示未独立核实：https://www.reuters.com/legal/government/us-banks-detect-unauthorized-ai-agents-customer-accounts-axios-reports-2026-10-22/\n",
+  "sources": [
+    {
+      "title": "Wells Fargo — Upcoming Online Access Agreement, Section 15 (effective 2026-11-24)",
+      "url": "https://www.wellsfargo.com/online-banking/online-access-agreement/upcoming/",
+      "date": "2026-11-24"
+    },
+    {
+      "title": "Wells Fargo — Current Online Access Agreement (effective 2026-05-21)",
+      "url": "https://www.wellsfargo.com/online-banking/online-access-agreement/",
+      "date": "2026-05-21"
+    },
+    {
+      "title": "CFPB — Regulation E, 12 CFR 1005.6 (current)",
+      "url": "https://www.consumerfinance.gov/rules-policy/regulations/1005/6/",
+      "date": "2026-10-25"
+    },
+    {
+      "title": "CFPB — Electronic Fund Transfers FAQs, Unauthorized EFTs",
+      "url": "https://www.consumerfinance.gov/compliance/compliance-resources/deposit-accounts-resources/electronic-fund-transfers/electronic-fund-transfers-faqs/",
+      "date": "2026-10-25"
+    },
+    {
+      "title": "Reuters — US banks detect unauthorized AI agents in customer accounts, citing Axios",
+      "url": "https://www.reuters.com/legal/government/us-banks-detect-unauthorized-ai-agents-customer-accounts-axios-reports-2026-10-22/",
+      "date": "2026-10-22"
+    }
+  ],
+  "body_format": "article_text"
+}

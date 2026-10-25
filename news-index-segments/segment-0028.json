@@ -143,6 +143,32 @@
       ],
       "deck": "美国财政部10月22日公布对外投资规则草案，拟将对受覆盖外国主体开发AI系统的部分美国投资从现行申报或有限禁止扩大为禁止，同时覆盖受控境外实体及部分股权、可转股债务、合资和基金交易。这是资本与治理权进入AI产业主权边界的A类制度信号，但草案尚未生效、例外众多，也不等于禁止一切中美AI投资或技术服务。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-25-A4",
+      "date": "2026-10-25",
+      "grade": "A",
+      "title": "Agent 的风险开始写进银行合同：用户授权之后，谁为越权行动买单？",
+      "themes": [
+        "Agent Commerce",
+        "Banking",
+        "Wells Fargo",
+        "AI Agent Liability",
+        "Delegated Authority",
+        "Financial Regulation",
+        "Regulation E",
+        "Agent Identity",
+        "Account Access",
+        "Revocation",
+        "Consumer Protection",
+        "Financial Services",
+        "Contractual Risk",
+        "Trust Infrastructure",
+        "Agent Governance",
+        "Control Points"
+      ],
+      "deck": "富国银行已公布拟于11月24日生效的在线访问协议，专设第三方 AI Agent 条款：在适用法律允许范围内，将用户授予凭证或权限后的代理指令视作用户授权，并将监督、撤权和越权后果责任指向用户；银行同时保留限制代理访问的权利。与此前银行拒绝外部 Agent 的动作不同，这是一份可直接核验的责任分配合同。但条款尚未生效，也不能凌驾美国 Regulation E 的消费者保护，不能将其误写成所有 Agent 错误均由客户无条件承担。",
+      "body_format": "article_text"
     }
   ]
 }
