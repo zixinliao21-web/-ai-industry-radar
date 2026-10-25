@@ -169,6 +169,31 @@
       ],
       "deck": "富国银行已公布拟于11月24日生效的在线访问协议，专设第三方 AI Agent 条款：在适用法律允许范围内，将用户授予凭证或权限后的代理指令视作用户授权，并将监督、撤权和越权后果责任指向用户；银行同时保留限制代理访问的权利。与此前银行拒绝外部 Agent 的动作不同，这是一份可直接核验的责任分配合同。但条款尚未生效，也不能凌驾美国 Regulation E 的消费者保护，不能将其误写成所有 Agent 错误均由客户无条件承担。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-26-A1",
+      "date": "2026-10-26",
+      "grade": "A",
+      "title": "英国把 AI 主权拆成采购、评测与产业能力：六亿英镑不是自主可控的完成证明",
+      "themes": [
+        "Sovereign AI",
+        "UK AI Policy",
+        "Enterprise AI",
+        "AI Procurement",
+        "Public Sector AI",
+        "Industrial AI",
+        "Physical AI",
+        "AI Security Institute",
+        "AI Biosecurity",
+        "AI Governance",
+        "AI-native Companies",
+        "Government as Customer",
+        "Industrial Policy",
+        "Control Points",
+        "AI Economics"
+      ],
+      "deck": "英国财政部10月24日公布约六亿英镑AI相关预算安排：增加AI安全评测、网络与生物安全投入，分别为Sovereign AI投资与研发采购追加6000万英镑，并将Physical/Industrial AI纳入投资方向。真正的A类增量不是英国突然拥有前沿模型，而是政府同时以早期客户、风险评测者、产业投资者和公共能力建设者身份组织AI市场。预算承诺、实物模型额度与已发生采购不能相加；项目尚未证明商业扩散或独立监管权。",
+      "body_format": "article_text"
     }
   ]
 }
