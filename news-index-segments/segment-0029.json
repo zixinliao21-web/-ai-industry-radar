@@ -154,6 +154,34 @@
       ],
       "deck": "Anthropic 10 月 26 日公开 S-1：2026 年上半年约 48% 收入来自 AWS、Google Cloud、Microsoft 等云 Marketplace，2023 年这一比例约 11%；相关渠道销售还占 6 月末应收款约 58%。新增 A 级证据不是模型收入已被云商拿走一半，而是前沿模型公司在高速增长时越来越依赖同时充当算力供应商、投资者及竞争者的企业采购渠道。正式文件还披露 11,900 多家年消费超 10 万美元客户，但渠道毛利、续约质量和真实终端控制权仍未完整公开。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-27-A1",
+      "date": "2026-10-27",
+      "grade": "A",
+      "title": "垂直 AI 的学习权开始落到专业软件手里：Cadence 用工程验证结果训练模型",
+      "themes": [
+        "Vertical AI",
+        "Enterprise AI",
+        "Cadence",
+        "Synopsys",
+        "NVIDIA",
+        "Domain-Specialized Models",
+        "EDA",
+        "SDA",
+        "Agentic Engineering",
+        "Deterministic Solvers",
+        "Reinforcement Learning",
+        "Evaluation Harness",
+        "Semantic Authority",
+        "Model Distribution",
+        "On-Premises AI",
+        "Industry Control Points",
+        "AI-native Companies",
+        "Domain Feedback Loops"
+      ],
+      "deck": "Cadence 10月26日发布 Maestro 专用模型组合，把领域后训练模型、决策模型、Agent、EDA/SDA 确定性求解器和强化学习反馈接成一条链，并支持客户本地部署。与 Synopsys—OpenAI 的联合开发及云托管路线相比，新增 A 级信号是专业软件厂商开始尝试把工程验证结果变成持续训练的奖励来源，争夺的不只是 Agent 工具接口，还有领域模型的迭代权。但30%质量提升与5倍 token 效率是公司初步结果，早期客户尚未构成独立商业验收，两条路线也并非互斥。",
+      "body_format": "article_text"
     }
   ]
 }
