@@ -26,6 +26,32 @@
       ],
       "deck": "10月25日马斯克称 SpaceX 已完成约400亿美元 GPU 相关债务融资，主要支持2027年上半年到货；此前10月6日仍只是融资谈判。公司9月末总债务本金为380.06亿美元，第三季度 AI/SI 资本开支164.44亿美元、经营利润4.31亿美元，而通信业务经营利润23.67亿美元。新增 A 级信号是算力建设开始利用多业务集团的信用与现金流组织资本，但管理层融资声明不等于400亿美元已提款、GPU 已交付，跨业务现金流支持也不等于已披露法定担保。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-26-B1",
+      "date": "2026-10-26",
+      "grade": "B",
+      "title": "Physical AI 的安全层开始独立变现：1.95 万个部署单元不是人形机器人的安全通行证",
+      "themes": [
+        "Physical AI",
+        "Robotics Safety",
+        "FORT Robotics",
+        "Agility Robotics",
+        "Safety Certification",
+        "Independent Safety Layer",
+        "Industrial Robotics",
+        "Humanoid Robots",
+        "Functional Safety",
+        "EHS",
+        "Robot Operations",
+        "Robot Deployment",
+        "Enterprise Control Points",
+        "Hardware-Software Economics",
+        "SPAC",
+        "AI Commercialization"
+      ],
+      "deck": "FORT Robotics 10 月 22 日新增约 2000 万美元融资承诺，其中约一半属于拟议 SPAC 合并时才交割的 PIPE；其既有披露显示安全产品部署超过 1.95 万个单元、覆盖 600 多名客户，2025 年收入约 1160 万美元且仍亏损。Agility 的 SEC 披露把厂外感知与独立停机系统列为 Digit 5 走出围栏的关键环节。新增 B 级证据是跨机器人厂商的安全基础设施已经有可观察的客户与财务账本，但单个组件认证、部署量、融资承诺均不等于人形机器人整机获证或商业化成熟。",
+      "body_format": "article_text"
     }
   ]
 }
