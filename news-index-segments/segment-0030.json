@@ -1,0 +1,36 @@
+{
+  "schema_version": "3.0",
+  "segment": "0030",
+  "items": [
+    {
+      "id": "2026-10-27-A3",
+      "date": "2026-10-27",
+      "grade": "A",
+      "title": "芯片厂商开始为加速器残值背书：630 亿美元融资把折旧风险推回供应商",
+      "themes": [
+        "AI Infrastructure",
+        "Broadcom",
+        "Anthropic",
+        "AI Capital Stack",
+        "Asset-backed Financing",
+        "Residual Value Support",
+        "XPU",
+        "Special Purpose Vehicle",
+        "First-lien Debt",
+        "Second-lien Debt",
+        "Blackstone",
+        "Bank of America",
+        "Citi",
+        "Morgan Stanley",
+        "Chip Depreciation",
+        "Supplier Credit Support",
+        "AI Economics",
+        "Infrastructure Concentration",
+        "Control Points",
+        "AI Bubble"
+      ],
+      "deck": "10 月 26 日，博通与美银、花旗、摩根士丹利、黑石宣布为 Anthropic 组织 630 亿美元 XPU 与网络设备融资：新设 SPV 采购设备并出租给 Anthropic，博通为相当于第一顺位融资金额的设备残值提供支持。相比此前 350 亿美元算力融资平台，新增 A 级证据不是又一笔债务，而是芯片供应商开始直接参与硬件资产的信用增强与残值风险分配；第一顺位金额、担保条件、租约和设备交付尚未披露，不能将 630 亿美元写成已投产算力或无条件全额担保。",
+      "body_format": "article_text"
+    }
+  ]
+}
