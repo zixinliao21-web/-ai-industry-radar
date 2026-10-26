@@ -76,6 +76,30 @@
       ],
       "deck": "10月26日，Honeywell 宣布在 Dangote 炼油厂启动 Forge Plant Cognition，按初步估算提出每桶超过0.29美元、满负荷时每年超过6000万美元的毛运营收益。新增 B 级证据是工业 Agent 的价值开始被映射到可核算的产量与利润变量；但这不是已实现的净收益、软件收入或自动控制系统已通过生产验收，工业现场的工艺权威与安全审批仍是独立边界。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-26-B3",
+      "date": "2026-10-26",
+      "grade": "B",
+      "title": "银行从模型客户走向所有者：5.89 亿美元收购不等于金融 AI 已规模化",
+      "themes": [
+        "Vertical AI",
+        "Enterprise AI",
+        "AI-native Companies",
+        "Banking AI",
+        "Financial Services",
+        "Itaú Unibanco",
+        "NeoSpace AI",
+        "Strategic M&A",
+        "Industry Model Ownership",
+        "Domain Context",
+        "Distribution Control",
+        "AI Economics",
+        "Governance",
+        "Enterprise Control Points"
+      ],
+      "deck": "10月26日，Itaú 同意以29.25亿雷亚尔（约5.89亿美元）收购金融专用模型公司 NeoSpace 的全部股份；2025年银行已投入1500万美元取得15%股权并联合开发产品。新增B级证据是行业客户可能沿“试用/共建→投资→全面收购”吸收垂直AI能力；但交易尚待监管批准、余款分五年支付，未披露NeoSpace独立收入或银行实际AI收益，不能把并购价当作模型商业化验收。",
+      "body_format": "article_text"
     }
   ]
 }
