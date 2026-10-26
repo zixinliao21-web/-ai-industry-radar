@@ -100,6 +100,33 @@
       ],
       "deck": "10月26日，Itaú 同意以29.25亿雷亚尔（约5.89亿美元）收购金融专用模型公司 NeoSpace 的全部股份；2025年银行已投入1500万美元取得15%股权并联合开发产品。新增B级证据是行业客户可能沿“试用/共建→投资→全面收购”吸收垂直AI能力；但交易尚待监管批准、余款分五年支付，未披露NeoSpace独立收入或银行实际AI收益，不能把并购价当作模型商业化验收。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-26-A3",
+      "date": "2026-10-26",
+      "grade": "A",
+      "title": "企业软件的实施知识开始成为可执行资产：Oracle 的 Skill Registry 仍不是交付验收",
+      "themes": [
+        "Enterprise AI",
+        "FDE",
+        "Oracle",
+        "Fusion Setup and Configuration Registry",
+        "Agent Skills",
+        "Implementation Knowledge",
+        "Systems Integrators",
+        "Enterprise Software",
+        "ERP",
+        "AI-native Companies",
+        "Vertical AI",
+        "Configuration Governance",
+        "Semantic Authority",
+        "Deployment Economics",
+        "Workflow Ownership",
+        "Agent Security",
+        "Control Points"
+      ],
+      "deck": "Oracle 10 月 26 日发布 Fusion Setup and Configuration Registry，把 ERP/HCM/SCM/CX 配置知识组织为可供 Agent 使用的技能、依赖和实施状态；公开仓库真实存在，包含脚本与技能，但 README 明确称其为样例与参考材料、非受产品支持的 Fusion 功能。新增 A 级信号是软件厂商开始把重复实施知识产品化并持续维护，可能改变 FDE/系统集成商的分工；但尚无独立实施周期、故障率或 ROI 证据。",
+      "body_format": "article_text"
     }
   ]
 }
