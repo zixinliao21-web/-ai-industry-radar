@@ -127,6 +127,33 @@
       ],
       "deck": "Oracle 10 月 26 日发布 Fusion Setup and Configuration Registry，把 ERP/HCM/SCM/CX 配置知识组织为可供 Agent 使用的技能、依赖和实施状态；公开仓库真实存在，包含脚本与技能，但 README 明确称其为样例与参考材料、非受产品支持的 Fusion 功能。新增 A 级信号是软件厂商开始把重复实施知识产品化并持续维护，可能改变 FDE/系统集成商的分工；但尚无独立实施周期、故障率或 ROI 证据。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-26-A4",
+      "date": "2026-10-26",
+      "grade": "A",
+      "title": "前沿模型近半收入经由云商销售：Anthropic 的增长正在验证谁掌握企业采购入口",
+      "themes": [
+        "Enterprise AI",
+        "Frontier Models",
+        "Anthropic",
+        "Cloud Marketplace",
+        "Model Distribution",
+        "Enterprise Procurement",
+        "Cloud Platforms",
+        "AWS",
+        "Google Cloud",
+        "Microsoft Azure",
+        "Revenue Channels",
+        "Customer Relationships",
+        "Enterprise Control Points",
+        "AI Economics",
+        "Channel Dependence",
+        "Model Platforms",
+        "IPO Disclosure"
+      ],
+      "deck": "Anthropic 10 月 26 日公开 S-1：2026 年上半年约 48% 收入来自 AWS、Google Cloud、Microsoft 等云 Marketplace，2023 年这一比例约 11%；相关渠道销售还占 6 月末应收款约 58%。新增 A 级证据不是模型收入已被云商拿走一半，而是前沿模型公司在高速增长时越来越依赖同时充当算力供应商、投资者及竞争者的企业采购渠道。正式文件还披露 11,900 多家年消费超 10 万美元客户，但渠道毛利、续约质量和真实终端控制权仍未完整公开。",
+      "body_format": "article_text"
     }
   ]
 }
