@@ -31,6 +31,35 @@
       ],
       "deck": "10 月 26 日，博通与美银、花旗、摩根士丹利、黑石宣布为 Anthropic 组织 630 亿美元 XPU 与网络设备融资：新设 SPV 采购设备并出租给 Anthropic，博通为相当于第一顺位融资金额的设备残值提供支持。相比此前 350 亿美元算力融资平台，新增 A 级证据不是又一笔债务，而是芯片供应商开始直接参与硬件资产的信用增强与残值风险分配；第一顺位金额、担保条件、租约和设备交付尚未披露，不能将 630 亿美元写成已投产算力或无条件全额担保。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-27-A4",
+      "date": "2026-10-27",
+      "grade": "A",
+      "title": "中国 AI 股票回撤正在检验融资通道：市值缩水不等于技术退潮",
+      "themes": [
+        "AI Industry",
+        "China AI",
+        "Capital Markets",
+        "AI Valuation",
+        "Equity Financing",
+        "STAR 50",
+        "AI Bubble",
+        "IPO",
+        "Semiconductors",
+        "Robotics",
+        "AI Infrastructure",
+        "AI-native Companies",
+        "Financing Conditions",
+        "Capital Access",
+        "Geopolitical Risk",
+        "Technology vs Valuation",
+        "AI Economics",
+        "Industry Consolidation",
+        "Control Points"
+      ],
+      "deck": "路透 10 月 26 日统计，科创 50 指数较 7 月高点回撤约 40%，对应约 4800 亿美元市值缩水，市盈率仍约 100 倍；上交所 9 月月报已记录该指数从 7 月高点 2255.25 点降至 9 月末 1530.01 点。新增 A 级信号不是中国 AI 技术失败，而是高估值股权融资窗口与真实技术进展开始分离，可能改变芯片、机器人与模型企业的资本获取条件。IPO 受阻仍是风险判断而非已证实的全面停摆；高盛同时观察到中国半导体产能和开源模型进展，不能用指数跌幅替代商业验收。",
+      "body_format": "article_text"
     }
   ]
 }
