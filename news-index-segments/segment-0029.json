@@ -52,6 +52,30 @@
       ],
       "deck": "FORT Robotics 10 月 22 日新增约 2000 万美元融资承诺，其中约一半属于拟议 SPAC 合并时才交割的 PIPE；其既有披露显示安全产品部署超过 1.95 万个单元、覆盖 600 多名客户，2025 年收入约 1160 万美元且仍亏损。Agility 的 SEC 披露把厂外感知与独立停机系统列为 Digit 5 走出围栏的关键环节。新增 B 级证据是跨机器人厂商的安全基础设施已经有可观察的客户与财务账本，但单个组件认证、部署量、融资承诺均不等于人形机器人整机获证或商业化成熟。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-26-B2",
+      "date": "2026-10-26",
+      "grade": "B",
+      "title": "工业 Agent 开始按每桶收益接受检验：6000 万美元仍只是毛收益估算",
+      "themes": [
+        "Industrial AI",
+        "Manufacturing AI",
+        "Physical AI",
+        "Vertical AI",
+        "Honeywell",
+        "Dangote Refinery",
+        "Process Automation",
+        "Industrial Agents",
+        "Digital Twin",
+        "Unit Economics",
+        "Industrial Context",
+        "OT",
+        "Enterprise Control Points",
+        "ROI Validation"
+      ],
+      "deck": "10月26日，Honeywell 宣布在 Dangote 炼油厂启动 Forge Plant Cognition，按初步估算提出每桶超过0.29美元、满负荷时每年超过6000万美元的毛运营收益。新增 B 级证据是工业 Agent 的价值开始被映射到可核算的产量与利润变量；但这不是已实现的净收益、软件收入或自动控制系统已通过生产验收，工业现场的工艺权威与安全审批仍是独立边界。",
+      "body_format": "article_text"
     }
   ]
 }
