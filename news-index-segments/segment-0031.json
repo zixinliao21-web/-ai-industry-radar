@@ -1,0 +1,34 @@
+{
+  "schema_version": "3.0",
+  "segment": "0031",
+  "items": [
+    {
+      "id": "2026-10-28-A1",
+      "date": "2026-10-28",
+      "grade": "A",
+      "title": "垂直 AI 的并购价值开始落到决策层：保险核心系统商买下核保工作流",
+      "themes": [
+        "Vertical AI",
+        "Enterprise AI",
+        "Insurance Technology",
+        "Guidewire",
+        "hyperexponential",
+        "Agentic Underwriting",
+        "Insurance Pricing",
+        "Decision Infrastructure",
+        "System of Record",
+        "Workflow Ownership",
+        "Enterprise Context",
+        "Domain Models",
+        "AI-native Companies",
+        "M&A",
+        "Distribution",
+        "Control Points",
+        "Insurance Risk",
+        "Agent Governance"
+      ],
+      "deck": "Guidewire 10 月 27 日签约以 17 亿美元现金基础对价、最高另付 4 亿美元业绩对价收购 hyperexponential。新增 A 级信号不是 Agent 已独立承保，而是掌握保单系统与保险客户网络的成熟软件商开始用大额并购获取核保定价、风险判断和组合反馈的垂直决策层。hx 所涉每年逾 750 亿美元保费不是其收入；交易尚未交割，客户 ROI、Agent 自主权限和整合效果仍待验证。",
+      "body_format": "article_text"
+    }
+  ]
+}
