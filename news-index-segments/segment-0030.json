@@ -188,6 +188,32 @@
       ],
       "deck": "10 月 27 日，隐私组织 noyb 在法国、意大利、荷兰和奥地利针对 Scale AI 的 Outlier 平台提交五份 GDPR 投诉，涉及第三方追踪、重复生物识别与个人数据访问请求。DiPLab 10 月 15 日研究为投诉提供了工作者访谈和技术分析。新增 B 级证据不是 Scale AI 已被认定违法，而是模型后训练依赖的人工数据生产网络开始受到跨境隐私与劳动数据治理的正式检验；样本不能代表全部 90 多万名平台工作者，追踪数据是否用于模型训练也未获证实。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-27-B3",
+      "date": "2026-10-27",
+      "grade": "B",
+      "title": "代码贡献增长 45 倍，不等于交付增长 45 倍：AI-native 工程组织的两本账",
+      "themes": [
+        "AI-native Companies",
+        "Enterprise AI",
+        "Coding Agents",
+        "Anthropic",
+        "Claude Code",
+        "Software Engineering",
+        "Developer Productivity",
+        "Engineering Economics",
+        "Human-in-the-loop",
+        "Code Review",
+        "Verification Bottleneck",
+        "Organizational Leverage",
+        "FDE",
+        "AI Workforce",
+        "Production Throughput",
+        "Control Points"
+      ],
+      "deck": "Anthropic 10 月 26 日公开 S-1 披露，9 月 Claude 编写了公司代码库当月超过 90% 的贡献，第三季度工程师日均代码贡献量为 2024 年平均水平的 45 倍以上；同期公司总员工数较 2024 年末增长超过五倍。新增 B 级证据是前沿 AI 公司已将 Agent 编码变成核心生产方式，但代码数量不等于上线功能、质量或单位经济。哈佛研究对 718 家企业发现 Agent 提高代码产出却未带来统计显著的已完成任务增长，说明验证与交付仍可能是约束；两组样本不可直接换算。",
+      "body_format": "article_text"
     }
   ]
 }
