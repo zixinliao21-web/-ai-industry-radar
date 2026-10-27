@@ -136,6 +136,33 @@
       ],
       "deck": "Oracle 10 月 26 日推出 Fusion Companion 与 Fusion Agentic Home，宣称员工可通过 ChatGPT 等受支持 AI 客户端提出业务目标，由 Fusion 根据企业上下文、权限和审批选择事务、流程与 Agent 并执行。相较 9 月已有的 Fusion Claw 和 10 月的实施知识注册表，新增 A 级信号不是又多了 25 个 Agent，而是 ERP 厂商开始明确允许外部 AI 入口，同时把业务授权、系统记录与结果责任保留在自身执行层。两项新体验尚未披露独立 GA 日期、定价及可核验客户效果，不能把架构宣称写成跨平台互操作已经完成。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-27-A7",
+      "date": "2026-10-27",
+      "grade": "A",
+      "title": "身份登记不是行动授权：IBM 把 Agent 委托链接入企业凭证系统",
+      "themes": [
+        "Enterprise AI",
+        "Agent Identity",
+        "Agent Governance",
+        "IBM",
+        "HashiCorp Vault",
+        "IBM Verify",
+        "watsonx Orchestrate",
+        "Delegated Authority",
+        "Short-lived Credentials",
+        "Secrets Management",
+        "Agent Control Plane",
+        "Runtime Enforcement",
+        "NVIDIA OpenShell",
+        "Enterprise Security",
+        "IAM",
+        "Cross-platform Agents",
+        "Control Points"
+      ],
+      "deck": "IBM 10 月 27 日宣布 Agent Identity 与 Vault 2.2 正式可用，将 Agent 身份、用户委托、短期凭证和下游审计连成产品路径；跨 AWS、微软、Google 的 Agent 发现及隔离仍处技术预览。相较 9 月已有的 IBM 公测与 10 月 Vault 2.1 Agentic IAM，新增 A 级证据不是“首次出现身份治理”，而是传统 IAM/Secrets 平台正把控制点推进到真实凭证发放与撤权。尚无独立跨平台阻断率或生产 ROI，不能把 GA 误写为完整控制平面已验收。",
+      "body_format": "article_text"
     }
   ]
 }
