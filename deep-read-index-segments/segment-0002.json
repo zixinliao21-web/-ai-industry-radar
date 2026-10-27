@@ -133,6 +133,33 @@
         "note": "公开部分可阅读，完整研究与图表需订阅"
       },
       "content_status": "published_verbatim"
+    },
+    {
+      "id": "DR-2026-015",
+      "added_date": "2026-10-27",
+      "title": "Cognitive Mercantilism",
+      "author": [
+        "Venkatesh Rao"
+      ],
+      "publication": "Contraptions",
+      "source_type": "essay",
+      "source_url": "https://contraptions.venkateshrao.com/p/cognitive-mercantilism",
+      "original_publish_date": "2026-10-25",
+      "estimated_reading_time": "约 25–35 分钟（篇幅估算）",
+      "topic": "AI 经济学与需求创造",
+      "themes": [
+        "AI Economics",
+        "Cognitive Mercantilism",
+        "Demand Creation",
+        "创业战略",
+        "组织能力",
+        "劳动市场",
+        "长期趋势"
+      ],
+      "access": {
+        "type": "free"
+      },
+      "content_status": "published_verbatim"
     }
   ]
 }
