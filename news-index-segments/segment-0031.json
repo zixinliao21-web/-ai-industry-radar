@@ -56,6 +56,35 @@
       ],
       "deck": "德意志银行称，2026 年夏季上线的 AI 项目已将部分简单企业贷款决策从数周压缩至数分钟，复杂跨国企业的部分决策也从数月缩至数周；但这是管理层描述的部分场景，尚无独立样本、违约率或端到端自动审批证据。与内部 Agent 治理平台 ADA 一起看，真正值得记录的是受监管企业把“缩短决策周期”和“保留执行与风险控制权”同时推进。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-28-A2",
+      "date": "2026-10-28",
+      "grade": "A",
+      "title": "工业 AI 的控制点正在回到生产执行层：设备商收购覆盖 300 个现场的 MES",
+      "themes": [
+        "Industrial AI",
+        "Manufacturing AI",
+        "Physical AI",
+        "Vertical AI",
+        "Valmet",
+        "Tieto",
+        "TIPS MES",
+        "Manufacturing Execution Systems",
+        "Order to Cash",
+        "Process Automation",
+        "System of Record",
+        "Enterprise Context",
+        "Workflow Ownership",
+        "Industrial Control Points",
+        "AI-native Companies",
+        "M&A",
+        "Industrial Software",
+        "Operational Technology",
+        "Agent Governance"
+      ],
+      "deck": "Valmet 10 月 27 日签约收购 Tieto 的 TIPS MES 与造纸行业 Order-to-Cash 业务，目标是把客户需求、生产计划、现场执行和过程控制连接起来；TIPS 覆盖约 300 个生产现场，2025 年收入约 3200 万欧元。新增 A 级结构信号不是工厂已经实现自主 Agent，而是拥有工业设备与过程控制能力的厂商开始直接吸收生产执行软件。交易尚未交割，AI 增量价值、跨系统集成和客户收益未被验证。",
+      "body_format": "article_text"
     }
   ]
 }
