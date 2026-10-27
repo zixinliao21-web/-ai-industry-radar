@@ -1,0 +1,48 @@
+{
+  "id": "2026-10-27-B2",
+  "date": "2026-10-27",
+  "grade": "B",
+  "title": "后训练数据工厂也有数据权利边界：五份 GDPR 投诉开始追问谁在监控标注者",
+  "themes": [
+    "AI Data Supply Chain",
+    "Human Feedback",
+    "Post-training",
+    "Scale AI",
+    "Outlier",
+    "GDPR",
+    "Data Annotation",
+    "Platform Labor",
+    "Worker Privacy",
+    "Biometric Verification",
+    "Data Provenance",
+    "AI Governance",
+    "Enterprise AI",
+    "Data Rights",
+    "Control Points"
+  ],
+  "deck": "10 月 27 日，隐私组织 noyb 在法国、意大利、荷兰和奥地利针对 Scale AI 的 Outlier 平台提交五份 GDPR 投诉，涉及第三方追踪、重复生物识别与个人数据访问请求。DiPLab 10 月 15 日研究为投诉提供了工作者访谈和技术分析。新增 B 级证据不是 Scale AI 已被认定违法，而是模型后训练依赖的人工数据生产网络开始受到跨境隐私与劳动数据治理的正式检验；样本不能代表全部 90 多万名平台工作者，追踪数据是否用于模型训练也未获证实。",
+  "body_format": "article_text",
+  "article_text": "# 后训练数据工厂也有数据权利边界：五份 GDPR 投诉开始追问谁在监控标注者\n\n**核心判断｜模型后训练的“数据工厂”不仅要证明标注结果可用，还可能需要证明生产这些结果时，工作者的身份、行为和个人数据是如何被采集、使用与保护的。** 2026 年 10 月 27 日，欧洲隐私组织 noyb 联合研究与公益机构，在法国、意大利、荷兰、奥地利就 Scale AI 旗下 Outlier 平台提交五份 GDPR 投诉。投诉关注的不只是模型训练数据的版权或客户隐私，而是**为模型提供判断、评估和标注的人，其工作过程本身是否被不当转化为另一类数据资产**。[1]\n\n**信号评级：B。** 这是一个正式进入监管程序、值得长期留存的供应链治理样本，但目前只是投诉与研究证据，不是监管机构的违法裁定，更不是整个后训练产业链已经被认定不可持续。VELNAR 已经记录过专家数据、可验证训练环境及数据生产平台的价值；本次新增的不是“人类标注仍然重要”，而是**标注生产过程的合法性和数据来源证明，可能成为与数据质量并列的采购约束**。\n\n## 一、FACT｜真正发生了什么\n\n**第一，五份投诉已经提交，处罚尚未发生。** noyb 于 10 月 27 日公布，针对 Outlier 在四个欧洲国家提交五份投诉，涉及第三方追踪器、个人数据最小化、重复身份与人脸视频核验，以及数据主体访问请求未获回应等问题。noyb 请求监管机构调查并考虑处罚；公开材料没有证明监管机构已经确认违法或开出罚单。[1][3]\n\n**第二，研究在投诉之前已经公开。** DiPLab 与 Reversing.Works 等机构于 10 月 15 日发布《Surveillance at Scale》，研究 Outlier 平台对 AI 数据工作者的个人信息、网络行为和生物识别信息的收集方式。研究结合访谈、网络日志和平台工作指引，指出存在第三方追踪与身份验证相关风险。[2] 媒体对研究方法的报道提及来自多个欧洲国家的 35 名受访者，以及部分工作者提供的浏览器日志。这样的证据足以形成需要核查的问题，却不足以推断每位平台工作者都经历了同样的追踪。[4]\n\n**第三，必须区分三种数据。** Outlier 工作任务产生的提示、回答比较和质量评价，是模型后训练所需的任务数据；为核验工作者身份而收集的证件、人脸视频，是身份数据；记录鼠标、键盘、页面访问和设备标识的信息，则属于工作过程数据。三者用途不同，不能因为“平台需要高质量训练数据”就推导出其可以无限制地收集另两类数据。[1][2]\n\n**第四，追踪技术的存在与违法结论不是一回事。** noyb 指出，工作者在 Outlier 页面操作时，TikTok、LinkedIn、Facebook 等第三方相关追踪组件可能收到设备标识、页面和其他信息。Reuters 对投诉的报道提及最多 19 种追踪器，并描述部分操作记录可能被重建为工作会话；不同材料对追踪器的统计口径并不完全一致。[1][3] 这不是证明所有追踪器都持续录制每一名工作者的屏幕，更不能证明这些行为记录已经被用来训练某个特定模型。后两项需要独立证据。\n\n**第五，规模和样本不能混为一谈。** noyb 称 Outlier 有超过 90 万名自由职业工作者，并列举多家模型公司及政府客户。[1] 这个平台总体规模不能作为投诉覆盖人数；研究中的访谈和技术样本也不能直接外推到全部工作者。Scale AI 在 Reuters 发稿时尚未立即回应相关询问；在没有完整企业答辩和监管裁决之前，必须保留其可能提出合法性、必要性及反欺诈理由的空间。[3]\n\n## 二、INFERENCE｜为什么这不是普通的隐私新闻\n\n**第一层变化：后训练的数据质量与数据生产过程开始被拆开审视。** 模型公司采购高质量人类反馈时，通常首先关心任务准确率、专家资质、覆盖率、成本和交付速度。但如果数据由大规模平台组织生产，采购方还可能需要了解工作者的身份核验依据、第三方数据流向、留存期限和访问请求处理方式。高质量标注结果并不能自动证明其生产流程合规。\n\n**第二层变化：数据工厂拥有的“上下文”未必都属于训练资产。** 工作者为了完成任务所形成的专业判断，和平台为了监督工作者而记录的个人行为轨迹，存在不同的权利边界。把这两者混为“可利用数据”，可能在短期提高管理可见性，却把隐私、劳动关系与跨境传输风险集中到数据供应商身上。研究者对追踪行为提出的质疑，恰好暴露了这一边界。[2]\n\n**第三层变化：控制点可能从数据产量扩展到可审计的来源链。** 如果大型模型客户或监管机构开始要求供应商解释数据收集的合法基础、分包关系、工作者权利和删除机制，具备清晰审计记录的供应商可能获得采购优势；缺少这些能力的供应商则可能面临整改成本。但这仍是条件性推论：目前没有证据显示五份投诉已改变 Scale AI 的客户合同、训练产能或市场份额。\n\n**第四层变化：这不是 Ontology 或 Agent Runtime 的新架构证据。** 它属于 AI 训练供给链的劳动与隐私治理问题。把它直接转译成“所有企业 Agent 都必须建立统一数据血缘平台”，会把行业观察错误地扩大为工程指令。\n\n## 三、反论｜哪些解释同样需要认真对待\n\n**反论一：身份核验可能有正当目的。** 训练平台需要防止代工、虚假账户、泄题、恶意数据污染及支付欺诈。身份验证本身并不必然不合法；真正需要审查的是是否有适当法律依据、是否必要且合比例、是否存在侵入性更低的替代方案，以及工作者是否得到充分告知。不能仅凭使用人脸视频就断言所有验证都违规。\n\n**反论二：第三方追踪器不等于数据已被商业化出售。** 浏览器分析、反欺诈与产品监控工具可能服务于不同目的。研究与投诉提示了潜在的数据流转风险，但未证明全部接收方都进行了广告画像，也未证明数据已经被重新用于模型训练。[1][2]\n\n**反论三：五份投诉不等于监管趋势已经形成。** 诉讼和行政投诉可能被驳回、部分支持或以整改解决；GDPR 在具体雇佣、合同、同意及合法利益场景中的适用需要逐案判断。即使未来产生罚款，也不必然意味着人工反馈行业的商业模式失效。\n\n**反论四：研究样本具有选择偏差风险。** 愿意接受访谈、保存日志的工作者可能更关注平台争议；不同国家、项目和时期的工作界面也可能不同。应关注独立复现、监管调查记录和平台的具体回应，而不是用一组受访者代表整个市场。\n\n## 四、对 VELNAR 产业判断的有限修正\n\n**被加强的判断：** 专家反馈、数据生产和评测环境确实是模型能力增长背后的独立供给层，但其长期价值不能只用“数据量 × 单价”衡量。可验证质量、可追溯来源与合规生产条件可能共同决定企业采购资格。\n\n**需要新增的限定：** “掌握更多人类工作过程数据”不天然等于护城河。如果数据权利、用途授权和劳动关系无法被清楚说明，越细致的行为监控反而可能积累越大的监管敞口。\n\n**没有改变的判断：** 企业 Agent 的核心商业化仍需通过真实工作流、授权边界、可靠执行和可核验收益证明价值。这起针对数据标注平台的投诉，不构成调整 VELNAR 当前 Sales MVP 技术架构或扩大功能范围的依据。\n\n## 五、PREDICTION｜后续观察什么，才能升级信号等级\n\n这条 B 级信号未来只有出现更强的独立证据，才值得升级：其一，监管机构正式立案、作出有事实认定的决定，或提出具有行业外溢性的整改要求；其二，主要模型客户在采购合同中新增针对工作者数据采集、第三方追踪或生物识别的可审计条款；其三，数据供应商公开披露整改成本、客户流失、数据生产效率变化，或出现可重复验证的替代生产方式。\n\n**值得继续讨论的问题：** 当模型公司越来越依赖专业人士提供训练和评测反馈时，真正有定价权的是拥有专家网络的平台、掌握可验证数据质量的方法，还是能够向采购方证明整个生产过程合法且可审计的基础设施？三者可能互补，也可能由不同公司分别掌握。\n\n---\n\n**证据来源**\n\n[1] noyb，2026-10-27，*AI training platform Outlier illegally surveils European platform workers*（组织的投诉陈述，法律定性尚未经监管裁决）：https://noyb.eu/en/ai-training-platform-outlier-illegally-surveils-european-platform-workers\n\n[2] DiPLab / Reversing.Works，2026-10-15，*Surveillance at Scale: How AI Training Platforms Gather Personal Data from European Workers*（研究方原始发布）：https://diplab.eu/report-new-diplab-report-surveillance-at-scale/\n\n[3] Reuters，2026-10-27，*Privacy group files complaints against Scale AI over alleged worker surveillance*（独立报道与公司回应状态）：https://www.reuters.com/business/privacy-group-files-complaints-against-scale-ai-over-alleged-worker-surveillance-2026-10-27/\n\n[4] El País，2026-10-15，*Los trabajadores europeos que entrenan las IA*（研究访谈与技术方法的独立报道）：https://elpais.com/tecnologia/2026-10-15/los-trabajadores-europeos-que-entrenan-las-ia-ya-sabia-que-me-metia-en-unas-condiciones-que-no-eran-las-mejores.html\n",
+  "sources": [
+    {
+      "title": "noyb | AI training platform Outlier illegally surveils European platform workers",
+      "url": "https://noyb.eu/en/ai-training-platform-outlier-illegally-surveils-european-platform-workers",
+      "date": "2026-10-27"
+    },
+    {
+      "title": "DiPLab | Surveillance at Scale report",
+      "url": "https://diplab.eu/report-new-diplab-report-surveillance-at-scale/",
+      "date": "2026-10-15"
+    },
+    {
+      "title": "Reuters | Privacy group files complaints against Scale AI",
+      "url": "https://www.reuters.com/business/privacy-group-files-complaints-against-scale-ai-over-alleged-worker-surveillance-2026-10-27/",
+      "date": "2026-10-27"
+    },
+    {
+      "title": "El País | Los trabajadores europeos que entrenan las IA",
+      "url": "https://elpais.com/tecnologia/2026-10-15/los-trabajadores-europeos-que-entrenan-las-ia-ya-sabia-que-me-metia-en-unas-condiciones-que-no-eran-las-mejores.html",
+      "date": "2026-10-15"
+    }
+  ]
+}

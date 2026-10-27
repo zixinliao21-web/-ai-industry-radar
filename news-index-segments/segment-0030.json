@@ -163,6 +163,31 @@
       ],
       "deck": "IBM 10 月 27 日宣布 Agent Identity 与 Vault 2.2 正式可用，将 Agent 身份、用户委托、短期凭证和下游审计连成产品路径；跨 AWS、微软、Google 的 Agent 发现及隔离仍处技术预览。相较 9 月已有的 IBM 公测与 10 月 Vault 2.1 Agentic IAM，新增 A 级证据不是“首次出现身份治理”，而是传统 IAM/Secrets 平台正把控制点推进到真实凭证发放与撤权。尚无独立跨平台阻断率或生产 ROI，不能把 GA 误写为完整控制平面已验收。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-27-B2",
+      "date": "2026-10-27",
+      "grade": "B",
+      "title": "后训练数据工厂也有数据权利边界：五份 GDPR 投诉开始追问谁在监控标注者",
+      "themes": [
+        "AI Data Supply Chain",
+        "Human Feedback",
+        "Post-training",
+        "Scale AI",
+        "Outlier",
+        "GDPR",
+        "Data Annotation",
+        "Platform Labor",
+        "Worker Privacy",
+        "Biometric Verification",
+        "Data Provenance",
+        "AI Governance",
+        "Enterprise AI",
+        "Data Rights",
+        "Control Points"
+      ],
+      "deck": "10 月 27 日，隐私组织 noyb 在法国、意大利、荷兰和奥地利针对 Scale AI 的 Outlier 平台提交五份 GDPR 投诉，涉及第三方追踪、重复生物识别与个人数据访问请求。DiPLab 10 月 15 日研究为投诉提供了工作者访谈和技术分析。新增 B 级证据不是 Scale AI 已被认定违法，而是模型后训练依赖的人工数据生产网络开始受到跨境隐私与劳动数据治理的正式检验；样本不能代表全部 90 多万名平台工作者，追踪数据是否用于模型训练也未获证实。",
+      "body_format": "article_text"
     }
   ]
 }
