@@ -84,6 +84,28 @@
       ],
       "deck": "10 月 26 日，Applied Materials 签署协议，拟将其对荷兰先进封装设备商 Besi 的持股由约 9% 提高至约 20%，仍不谋求董事席位，交割需等待美国 HSR 审查期届满或终止。Besi 最新季度披露混合键合订单显著增长。新的 A 级信号是前道材料工艺与后道芯粒键合的联合研发关系进一步叠加少数股权绑定，而非已取得控制权、独家产能或证明 AI 芯片封装瓶颈已经解决。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-27-B1",
+      "date": "2026-10-27",
+      "grade": "B",
+      "title": "模型公司的安全封禁开始进入收入账本：Anthropic 的 5%—7% 不是已确认欺诈损失",
+      "themes": [
+        "Frontier AI",
+        "Anthropic",
+        "AI Revenue Quality",
+        "Usage Policy Enforcement",
+        "Model Governance",
+        "Customer Compliance",
+        "Revenue Recognition",
+        "Model Distribution",
+        "AI Safety Economics",
+        "Enterprise AI",
+        "Trust and Safety",
+        "Control Points"
+      ],
+      "deck": "Anthropic 10 月 26 日公开的 S-1 披露：2026 年前九个月约 5%—7% 的收入来自其事后认定违反使用政策或商业条款的客户；公司在提供服务时确认收入，后续才可能限制访问。这不是 5%—7% 的坏账、欺诈金额或已确定流失收入。新的 B 级信号是模型厂商的安全与合规执行速度开始成为可观察的收入质量变量，必须同时区分检测滞后、真实需求与未来留存。",
+      "body_format": "article_text"
     }
   ]
 }
