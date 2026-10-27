@@ -85,6 +85,35 @@
       ],
       "deck": "Valmet 10 月 27 日签约收购 Tieto 的 TIPS MES 与造纸行业 Order-to-Cash 业务，目标是把客户需求、生产计划、现场执行和过程控制连接起来；TIPS 覆盖约 300 个生产现场，2025 年收入约 3200 万欧元。新增 A 级结构信号不是工厂已经实现自主 Agent，而是拥有工业设备与过程控制能力的厂商开始直接吸收生产执行软件。交易尚未交割，AI 增量价值、跨系统集成和客户收益未被验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-28-B2",
+      "date": "2026-10-28",
+      "grade": "B",
+      "title": "合规企业 AI 的价值先在审阅环节兑现：1,061 页药品批记录的 9.4 倍实验",
+      "themes": [
+        "Enterprise AI",
+        "Vertical AI",
+        "Pharmaceutical Manufacturing",
+        "Enveda",
+        "Anthropic",
+        "AI Agent",
+        "Quality Assurance",
+        "GMP",
+        "Document Review",
+        "Grounding",
+        "Evidence Validation",
+        "Deterministic Workflow",
+        "Human Oversight",
+        "Agent Governance",
+        "Workflow Ownership",
+        "Enterprise Context",
+        "System of Record",
+        "Evaluation",
+        "ROI"
+      ],
+      "deck": "Enveda 10 月 27 日公开一项四份药品生产批记录、共 1,061 页的探索性对照：AI 辅助质量审阅用时 166 分钟，人工独立审阅用时 1,553 分钟；系统发现人工提出的 11 项可行动问题，并另外提出 7 项经内部裁定的可行动问题。但样本仅来自一次临床生产活动，系统未获 GMP 计算机化系统验证，且批次放行权始终由质量部门掌握。真正的信号是有边界的证据审阅可以产生可量化收益，而非 Agent 已取得药品放行权。",
+      "body_format": "article_text"
     }
   ]
 }
