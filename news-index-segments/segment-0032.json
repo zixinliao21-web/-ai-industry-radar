@@ -24,6 +24,32 @@
       ],
       "deck": "特拉华州拟让 AI Agent 管理一种新型公司，国会随即追问其责任豁免与政策制定透明度。新信号不是 AI 已获得法律人格，而是 Agent Commerce 的信任边界可能从身份、支付凭证扩展到法人、资本金、行为记录和可终止权；法案尚未通过，监管沙盒也尚未开始。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-28-A6",
+      "date": "2026-10-28",
+      "grade": "A",
+      "title": "AI 内存从现货周期转向产能预约：锁住未来供给，不等于锁住价格和利润",
+      "themes": [
+        "AI Infrastructure",
+        "AI Memory",
+        "SK hynix",
+        "HBM4",
+        "DRAM",
+        "Long-term Supply Agreements",
+        "Capacity Allocation",
+        "Supply Chain Control Points",
+        "Memory Economics",
+        "Cloud Procurement",
+        "Semiconductor Manufacturing",
+        "AI Capital Stack",
+        "Infrastructure Concentration",
+        "AI Bubble",
+        "Pricing Power",
+        "Enterprise AI"
+      ],
+      "deck": "SK 海力士 10 月 28 日披露，已与 14 家主要客户签订长期供应协议，覆盖 2027、2028 年总产能的 50% 以上，价格仍在约定区间内随市场调整。三季度营业利润率达 80%，但不能把它全部归因于 HBM，也不能将管理层所说的 2029 年需求预订视为全部已签合同。新增 A 级信号是 AI 内存的稀缺性开始通过多年产能分配合同提前交易；供给优先权、价格、交付和已确认收入仍是四种不同权利与事实。",
+      "body_format": "article_text"
     }
   ]
 }
