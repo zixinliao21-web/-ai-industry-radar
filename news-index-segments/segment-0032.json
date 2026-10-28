@@ -161,6 +161,31 @@
       ],
       "deck": "微软 10 月 28 日首次按 Agents and Infra 新分部披露财报：该分部季度收入 767.95 亿美元，占总收入约 83%，Azure 单独披露 331.65 亿美元、同比增长 48%。这验证企业软件、云与 Agent 被放进同一经营和资本配置体系，但 83% 不是 Agent 收入占比，6770 亿美元商业剩余履约义务也不是已实现的 AI 收入。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-29-A3",
+      "date": "2026-10-29",
+      "grade": "A",
+      "title": "Google Cloud 收入翻倍、自由现金流转负：TPU 系统销售正在改写云的经济账",
+      "themes": [
+        "AI Infrastructure",
+        "Google Cloud",
+        "Alphabet",
+        "TPU",
+        "Cloud Economics",
+        "AI Capital Stack",
+        "Hardware Sales",
+        "Cash Flow",
+        "Inventory",
+        "Financial Reporting",
+        "Enterprise AI",
+        "Cloud Distribution",
+        "AI Control Points",
+        "Infrastructure Concentration",
+        "Return on Invested Capital"
+      ],
+      "deck": "Alphabet 10 月 28 日财报显示 Google Cloud 季度收入 307.09 亿美元、同比增长 103%，其中 TPU 系统销售已是有意义的贡献；但公司本季经营现金流 422.90 亿美元、资本开支 513.55 亿美元，自由现金流为负 90.65 亿美元。新 A 级信号不是 AI 云不赚钱，而是自研加速器从内部成本中心变成对外产品后，云服务收入、硬件交付、存货占款和长期资本投入必须分开核算；云分部利润也不等于全栈 AI 投资回报。",
+      "body_format": "article_text"
     }
   ]
 }
