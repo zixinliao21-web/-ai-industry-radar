@@ -198,6 +198,34 @@
       ],
       "deck": "KDDI 与 ELYZA 10 月 27 日宣布新公司 ELYZA Robotics 已于 10 月 1 日运营，计划到 2030 财年投入 300 亿日元研发、建设 300 人以上专业组织并争取在真实现场部署超过 1,000 台机器人。值得记录的不是这些目标已实现，而是电信运营商尝试用网络、算力、远程监控、跨硬件集成与现场数据，取得 Physical AI 的持续运营入口。演示与 PoC 尚不能证明单位经济、可靠性或规模复制。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-28-B4",
+      "date": "2026-10-28",
+      "grade": "B",
+      "title": "千倍能效尚未兑现：新型 AI 芯片公司先买下推理系统工程能力",
+      "themes": [
+        "AI Infrastructure",
+        "AI Accelerators",
+        "Unconventional AI",
+        "NeuReality",
+        "Inference Economics",
+        "Physical Computing",
+        "Dynamical Systems",
+        "Silicon Engineering",
+        "AI-CPU",
+        "System Co-design",
+        "Hardware-Software Co-design",
+        "Data Movement",
+        "Energy Efficiency",
+        "Semiconductor M&A",
+        "Productionization",
+        "Compute Control Points",
+        "AI Capital Stack",
+        "Model-Hardware Co-design"
+      ],
+      "deck": "Unconventional AI 10 月 26 日签约收购 NeuReality，获得已有推理芯片、系统软件和数据中心工程经验的团队。新增 B 级信号不是其宣称的千倍能效已实现，而是试图改变计算物理机制的初创公司，仍需补齐从实验模型、芯片到网络调度与客户生产环境的整套工程链。首颗测试芯片和拟并购属于阶段证据，交易未交割、独立能效与商业单位成本均未验证。",
+      "body_format": "article_text"
     }
   ]
 }
