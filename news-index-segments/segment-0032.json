@@ -78,6 +78,34 @@
       ],
       "deck": "日立 10 月 28 日明确将 GlobalLogic 与 Hitachi Digital Services 合并后的新品牌 Hitachi Digital 定于 2027 年 4 月启动，披露约 3.5 万名专业人员、27 国及 880 多个活跃客户，并把 FDE 置于现场交付组织的中心。新增 B 级证据是工业 AI 的价值捕获正被传统工程与运维服务集团组织化承接；整合计划早在 1 月提出，3.5 万人并非 FDE 人数，46% 协同收入增长也不是 AI 投资回报。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-29-B1",
+      "date": "2026-10-29",
+      "grade": "B",
+      "title": "政府开始统一采购模型能力：价格折扣、云渠道与安全授权成为同一张谈判桌",
+      "themes": [
+        "Enterprise AI",
+        "Government AI",
+        "Public Procurement",
+        "GSA",
+        "OneGov",
+        "Anthropic",
+        "OpenAI",
+        "Claude for Government",
+        "Model Distribution",
+        "Cloud Marketplaces",
+        "FedRAMP",
+        "Usage-based Pricing",
+        "AI Economics",
+        "Enterprise Adoption",
+        "Enterprise Context",
+        "Governance",
+        "Control Points",
+        "Procurement Power"
+      ],
+      "deck": "美国 GSA 10 月 27 日扩展 Anthropic OneGov 协议，提供 Claude 政府产品与 API 的 40% 使用量折扣、无最低采购额，并将覆盖范围扩展至州与地方等政府。此前 GSA 已与 OpenAI 达成 50% 折扣的 27 个月协议。新增 B 级信号不是两种模型可直接按折扣率比较，而是政府采购方正把价格、直接/云分发、合规准入和实施支持集中谈判；Anthropic 披露约 500 个政府组织使用 Claude，但缺少可审计的成本与业务结果。",
+      "body_format": "article_text"
     }
   ]
 }
