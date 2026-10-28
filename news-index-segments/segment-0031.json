@@ -141,6 +141,34 @@
       ],
       "deck": "Oracle 与 Google 10 月 27 日宣布，2027 年起将在 OCI 部署 Google TPU，使 OCI 成为 Google 之外首家提供 TPU 的超大规模云平台。新增 A 级信号不是 TPU 已交付或 NVIDIA 已失去优势，而是芯片设计、物理机房与企业客户分发可以跨公司组合；Google 保留 TPU 技术生态，Oracle 提供供电、冷却、网络和企业系统邻近性。部署量、价格、客户单位成本和融资安排尚未披露。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-28-A4",
+      "date": "2026-10-28",
+      "grade": "A",
+      "title": "AI 不只是卖软件：机构资本开始买下旧企业，再用 AI 改写经营账本",
+      "themes": [
+        "AI-native Companies",
+        "Vertical AI",
+        "AI Buy-and-Build",
+        "Private Equity",
+        "Lightspeed Venture Partners",
+        "AI Renaissance Fund",
+        "Enterprise AI",
+        "Business Services",
+        "Workflow Ownership",
+        "FDE",
+        "Operating Model",
+        "Capital Allocation",
+        "Value Capture",
+        "Institutional Capital",
+        "M&A",
+        "Business Process Transformation",
+        "Control Points",
+        "Enterprise Context"
+      ],
+      "deck": "Lightspeed 的 AI Renaissance Fund 与联合投资载体据 10 月 27 日公开会议披露已合计募得逾 7.5 亿美元，计划收购既有企业并用 AI 改造经营；美国公共养老金亦披露了投资承诺。相较此前 FDE 绑定股权的单一案例，新信号是传统风投与机构资金开始把“买下业务、改造现金流”设为明确资本配置策略。但募资与投资承诺不是已实现收益，尚无该基金收购组合的独立经营成果。",
+      "body_format": "article_text"
     }
   ]
 }
