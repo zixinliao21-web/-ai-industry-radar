@@ -1,0 +1,29 @@
+{
+  "schema_version": "3.0",
+  "segment": "0032",
+  "items": [
+    {
+      "id": "2026-10-28-A5",
+      "date": "2026-10-28",
+      "grade": "A",
+      "title": "当 Agent 有了公司外壳：交易责任的控制点正在从 API 走向法人治理",
+      "themes": [
+        "Agent Commerce",
+        "AI-native Company",
+        "Corporate Governance",
+        "AI Legal Entity",
+        "Delaware AIC",
+        "Liability",
+        "Agent Identity",
+        "Legal Infrastructure",
+        "Regulatory Sandbox",
+        "Enterprise Control Points",
+        "Authorization",
+        "Audit Trail",
+        "AI Policy"
+      ],
+      "deck": "特拉华州拟让 AI Agent 管理一种新型公司，国会随即追问其责任豁免与政策制定透明度。新信号不是 AI 已获得法律人格，而是 Agent Commerce 的信任边界可能从身份、支付凭证扩展到法人、资本金、行为记录和可终止权；法案尚未通过，监管沙盒也尚未开始。",
+      "body_format": "article_text"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "2026-10-28-A5",
+  "date": "2026-10-28",
+  "grade": "A",
+  "title": "当 Agent 有了公司外壳：交易责任的控制点正在从 API 走向法人治理",
+  "themes": [
+    "Agent Commerce",
+    "AI-native Company",
+    "Corporate Governance",
+    "AI Legal Entity",
+    "Delaware AIC",
+    "Liability",
+    "Agent Identity",
+    "Legal Infrastructure",
+    "Regulatory Sandbox",
+    "Enterprise Control Points",
+    "Authorization",
+    "Audit Trail",
+    "AI Policy"
+  ],
+  "deck": "特拉华州拟让 AI Agent 管理一种新型公司，国会随即追问其责任豁免与政策制定透明度。新信号不是 AI 已获得法律人格，而是 Agent Commerce 的信任边界可能从身份、支付凭证扩展到法人、资本金、行为记录和可终止权；法案尚未通过，监管沙盒也尚未开始。",
+  "body_format": "article_text",
+  "article_text": "# 当 Agent 有了公司外壳：交易责任的控制点正在从 API 走向法人治理\n\n**核心判断｜当 AI Agent 被允许持续代表一家公司签约、持有资产和承担义务，产业竞争就不再只有“模型能否行动”和“API 是否允许行动”，还会出现第三层：谁能为这些行动提供可被交易对手、法院和监管机构识别的责任主体。** 美国特拉华州提出的 Artificial Intelligence Company（AIC）法律实体方案，2026 年 10 月 26 日受到美国众议院监督委员会正式质询。[4][5] 这一事件的价值，不是宣告“AI 已经获得法律人格”，而是让 Agent Commerce 中长期悬而未决的责任归属进入可检验的公司法设计。\n\n**评级：A｜结构性监管实验进入公开争议，但远非生效法律或成熟商业模式。** VELNAR 已研究过 Agent 身份、交易授权、商家准入、支付凭证与银行的风险分配。AIC 新增的不是另一种支付协议，而是**把 Agent 的连续经营行为装进独立法人、资本约束、交易披露、行为留痕和退出机制**。如果这种安排最终获得法律承认，它可能改变自动化经营的准入和信任成本；如果责任豁免设计失衡，也可能制造新的风险转嫁工具。\n\n## 一、FACT｜从州级沙盒决议，到国会要求解释责任豁免\n\n**第一，特拉华州确有制度探索，但不能写成“已经允许 AI 自主注册公司”。** 2025 年 7 月 23 日，州政府宣布签署联合决议，要求围绕 agentic AI 建立监管沙盒框架。官方当时明确说，沙盒要真正运行仍需要后续立法。[1] 2026 年 7 月 14 日，州务卿 Charuni Patibanda-Sanchez 与 Norm Ai 创始人 John Nay 联合发表署名评论，提出一种由 AI Agent 管理日常事务的独立 AIC 法人形式。[2] 这属于政策倡议和立法草案，不是已颁布的普遍公司制度。\n\n**第二，草案试图把“技术代理人”和“法律责任主体”拆开。** 按提案描述，AIC 可以以公司名义持有财产、承担债务、起诉或被诉；AI Agent 负责管理日常经营，但 AIC 仍有一个人类或既有法人作为唯一成员，负责出资和维持资本充足。成员可能享有有限责任保护，但在资本不足、欺诈、故意违法等条件下存在例外。[2][3] **获得法律主体地位的是拟设立的公司，不是模型权重或 Agent 软件本身。** 不能将两者混为一谈。\n\n**第三，拟议沙盒并非无条件放行。** 发起人描述的设计包括：由包含州务卿、总检察长、州最高法院首席大法官及其他成员的委员会审核准入；对交易对手披露 AIC 身份、试验性质和投诉渠道；保留行动记录；允许监管方暂停或撤销资格；禁止银行业务；计划以 30 个月为沙盒期限。[2] 特拉华公司法期刊 10 月 15 日对草案的法律分析还指出，草案要求管理 Agent 对行动形成签署记录、成员负有一定受托义务，并区分单个参与者的试验期限与整个沙盒期限。[3] 这些是**拟议约束**，尚不能当作已经实施的监管效果。\n\n**第四，争议焦点是责任如何落地，而非 Agent 能否写代码。** 10 月 26 日，美国众议院监督与政府改革委员会主席 James Comer 致函州长 Matt Meyer，要求在 11 月 9 日前提交有关 AIC 制度制定、外部参与者、伦理安排、风险评估和草案版本的材料。[4] 委员会公开担忧，AIC 可能成为技术公司及投资者隔离潜在损害责任的工具，也质疑政策制定过程的透明度。[5] 这些是监督方提出的风险与调查要求，**并不等于已经证实存在违法利益输送，或国会已否决该法案**。\n\n## 二、INFERENCE｜Agent Commerce 缺少的可能是“可以被追责的交易对手”\n\n今天讨论 Agent Commerce，通常会把链路拆成用户意图、身份认证、权限委托、商家接入、支付与审计。它们解决了“谁发起了动作、系统能否接受动作、钱怎样结算”，却未必回答一个更难的问题：**如果 Agent 连续经营三个月，签错合同、侵犯第三方权利或无力偿债，究竟由谁承担可执行的民事责任？**\n\n现有企业完全可以雇佣员工、部署自动化软件和使用 Agent，因此 AIC 的潜在新意不是“公司第一次可以使用 AI”。真正的边界变化，是拟将 AI 指定为公司日常经营管理者，并以一套专门的实体与沙盒规则容纳较高程度的自主经营。它可能让部分自动化商业活动从“某个自然人随时逐笔操作”转向“受法定边界约束的持续经营主体”。\n\n这可以拆成三层控制权。**技术执行层**决定 Agent 实际能调用哪些工具、接触哪些数据；**组织授权层**决定成员、管理者和董事或其他监督者如何界定目的、预算和停机权；**法律交易层**决定合同相对人面对的是谁、谁拥有资产、怎样追偿和如何清算。前两层的工程控制不能自动替代第三层的法律可执行性；反过来，成立一个公司也不能自动保证 Agent 不会越权。\n\n如果监管实验最终证明这些层次可以协调运行，那么可复用的合规记录、授权证明、资本核验、保险、争议处理和审计接口，可能成为独立于模型和 Agent Runtime 的商业基础设施。但目前没有证据证明这些服务会形成一个统一平台，更不能把特拉华的草案直接推断成全球法律标准。\n\n## 三、为什么国会的质询反而让信号更值得研究\n\n支持者的逻辑是：AI 自动经营迟早发生，把它放进可识别的法人、有限资本和监管沙盒，比让匿名自动化系统在法律边缘活动更容易监管。[2] 这是一个可讨论的制度假设，而非已经被实验验证的结论。\n\n批评者关注的是另一面：如果人类投资者通过一个资本规模很小的 AIC 获得较宽的责任隔离，受损客户可能只剩下一个无法充分赔偿的公司壳。日志能帮助还原行为，却不等于受害人一定能获得赔偿；监管有权关闭系统，也不意味着此前的损失会消失。特拉华草案虽设置资本与披露要求，**最低资本如何确定、跨境债权如何执行、技术事故由谁证明、实际控制人何时承担责任**，仍需严肃检验。[3][4]\n\n因此，10 月 26 日的国会行动不只是一般性的政治争论。它将“AI-native 公司”从效率和组织结构话题，推入公司法、监管竞争和责任分配领域。对产业地图的新增信息，是**自动化经营的成本函数可能包含法律责任资本、合规证据和被监管接受的治理结构**，而不仅是推理 Token、人工监督和软件费用。\n\n## 四、反论｜为什么这还不能证明 AI 公司时代已经到来\n\n**草案尚未成为法律。** 现有材料描述的是决议、政策倡议、草案和国会监督。没有依据认定 AIC 已经普遍注册运营，更没有可靠的违约率、投诉量、资本损失率或经营绩效可用于证明制度成功。\n\n**法律壳不能补齐模型可靠性。** 即使 AIC 未来可以签合同，也无法凭法人登记解决幻觉、工具越权、数据泄漏、模型更新后行为漂移和长周期任务失控。要让记录具有证据价值，还需证明身份、时间、权限、输入输出及关键决策链没有被随意篡改。\n\n**有限责任不是 Agent 独有的发明。** 传统 LLC 和公司本来就隔离部分投资者责任；AIC 的制度增量必须在现有公司法、委托代理和自动化合同框架之外得到证明，否则它可能只是新的包装和监管套利空间。\n\n**监督争议不是判决。** 国会委员会的公开信提出严重质疑，但并未完成事实认定；发起方提出的沙盒安全机制也没有经过实地验证。把任一方的立场直接写成既定事实，都不符合研究标准。\n\n## 五、VELNAR 应改变与不应改变的判断\n\n**需要更新：** 在 Agent Commerce 和 AI-native Company 的产业地图中，增加“法人责任与自动化经营治理”这一观察维度。未来评估 Agent 商业平台时，不仅看身份、授权和支付成功率，还要看合同责任主体、赔付能力、行为记录可采信性、撤销权限、争议解决及监管可接受性。\n\n**暂不改变：** 这不是 VELNAR 应当立即开发 AIC 注册、自动经营或跨境合规产品的信号。当前化妆品包材 Sales MVP 仍以订单、库存、预留、出库、状态证据与受控执行闭环为优先级。一个美国州的拟议法律制度，不能成为扩大当前项目范围或重构 Agent 架构的理由。\n\n**PREDICTION｜条件性观察。** 未来 6—12 个月应跟踪：特拉华是否正式提交并通过相关法案；最终文本如何规定最低资本、成员责任、可审计日志、监管暂停权；国会监督是否导致更严格的州际或联邦约束；是否出现真实参与者与可核验的经营和风险数据。只有出现法律生效、真实交易及可执行责任案例，才有理由把这一层从“潜在制度控制点”上调为“实际商业基础设施”。\n\n**值得继续讨论的问题：** 如果一个 Agent 能完成全部业务操作，但合同责任、赔偿能力与停止权仍必须落在人类组织上，那么 AI-native 公司真正减少的是人类劳动，还是只是改变了人类监督和承担风险的位置？在什么条件下，新的法人形式比既有公司加严格 Agent 授权更有价值？\n\n---\n\n### 来源与证据边界\n\n[1] State of Delaware，2025-07-23，州政府关于 AI 沙盒决议的公告；明确沙盒仍需立法。https://news.delaware.gov/2025/07/23/delaware-launches-bold-ai-sandbox-initiative-cementing-its-role-as-a-national-leader-in-responsible-tech-innovation/\n\n[2] John Nay、Charuni Patibanda-Sanchez，Fortune 署名评论，2026-07-14，发起方关于 AIC 结构、资本、披露、30 个月沙盒及禁止银行业务的政策主张；非现行法律。https://fortune.com/2026/07/14/exclusive-delaware-ai-agents-legal-entity-proposal-llc-pbc/\n\n[3] Delaware Journal of Corporate Law Blogs，Shuo Li，2026-10-15，独立法律分析，对草案成员责任、日志、沙盒期限和监督机制的梳理；讨论的是草案文本。https://djclblogs.org/2026/10/15/delawares-proposed-ai-company-a-new-entity-new-questions-for-counsel/\n\n[4] U.S. House Committee on Oversight and Government Reform，2026-10-26，Comer 致特拉华州长正式函件，列出质疑与 11 月 9 日资料提交期限；函件是监督请求，不是违法认定。https://oversight.house.gov/wp-content/uploads/2026/10/Letter-to-Delaware-re-AIC_10.26.26.pdf\n\n[5] U.S. House Committee on Oversight and Government Reform，2026-10-26，相关调查公告；用于核对委员会公开立场。https://oversight.house.gov/release/comer-investigates-potential-for-harm-lack-of-transparency-in-delaware-initiative-to-create-new-artificial-intelligence-companies/",
+  "sources": [
+    {
+      "title": "State of Delaware | AI Sandbox Initiative",
+      "url": "https://news.delaware.gov/2025/07/23/delaware-launches-bold-ai-sandbox-initiative-cementing-its-role-as-a-national-leader-in-responsible-tech-innovation/",
+      "date": "2025-07-23"
+    },
+    {
+      "title": "John Nay & Charuni Patibanda-Sanchez | Delaware AIC proposal, Fortune commentary",
+      "url": "https://fortune.com/2026/07/14/exclusive-delaware-ai-agents-legal-entity-proposal-llc-pbc/",
+      "date": "2026-07-14"
+    },
+    {
+      "title": "Delaware Journal of Corporate Law | Analysis of draft AIC legislation",
+      "url": "https://djclblogs.org/2026/10/15/delawares-proposed-ai-company-a-new-entity-new-questions-for-counsel/",
+      "date": "2026-10-15"
+    },
+    {
+      "title": "US House Oversight Committee | Letter to Delaware Governor",
+      "url": "https://oversight.house.gov/wp-content/uploads/2026/10/Letter-to-Delaware-re-AIC_10.26.26.pdf",
+      "date": "2026-10-26"
+    },
+    {
+      "title": "US House Oversight Committee | AIC investigation press release",
+      "url": "https://oversight.house.gov/release/comer-investigates-potential-for-harm-lack-of-transparency-in-delaware-initiative-to-create-new-artificial-intelligence-companies/",
+      "date": "2026-10-26"
+    }
+  ]
+}
