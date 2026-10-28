@@ -114,6 +114,33 @@
       ],
       "deck": "Enveda 10 月 27 日公开一项四份药品生产批记录、共 1,061 页的探索性对照：AI 辅助质量审阅用时 166 分钟，人工独立审阅用时 1,553 分钟；系统发现人工提出的 11 项可行动问题，并另外提出 7 项经内部裁定的可行动问题。但样本仅来自一次临床生产活动，系统未获 GMP 计算机化系统验证，且批次放行权始终由质量部门掌握。真正的信号是有边界的证据审阅可以产生可量化收益，而非 Agent 已取得药品放行权。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-28-A3",
+      "date": "2026-10-28",
+      "grade": "A",
+      "title": "自研 AI 芯片开始跨云销售：Google 把 TPU 交给 Oracle，算力控制权却未必分散",
+      "themes": [
+        "AI Infrastructure",
+        "Google TPU",
+        "Oracle Cloud Infrastructure",
+        "Multi-cloud",
+        "AI Accelerators",
+        "Hardware Portability",
+        "TorchTPU",
+        "NVIDIA",
+        "Cerebras",
+        "SambaNova",
+        "AI Inference",
+        "Compute Economics",
+        "Enterprise Context",
+        "Cloud Distribution",
+        "Control Points",
+        "AI Capital Stack",
+        "Infrastructure Concentration"
+      ],
+      "deck": "Oracle 与 Google 10 月 27 日宣布，2027 年起将在 OCI 部署 Google TPU，使 OCI 成为 Google 之外首家提供 TPU 的超大规模云平台。新增 A 级信号不是 TPU 已交付或 NVIDIA 已失去优势，而是芯片设计、物理机房与企业客户分发可以跨公司组合；Google 保留 TPU 技术生态，Oracle 提供供电、冷却、网络和企业系统邻近性。部署量、价格、客户单位成本和融资安排尚未披露。",
+      "body_format": "article_text"
     }
   ]
 }
