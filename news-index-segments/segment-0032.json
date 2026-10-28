@@ -135,6 +135,32 @@
       ],
       "deck": "路透社 10 月 28 日援引两名知情人士称，美国司法部正在询问 NVIDIA 拟收购 Hugging Face 是否会使其掌握 AI 的关键模型分发入口。这不是违法认定，也不是并购已被阻止；但相较 9 月的收购公告，新的 A 级证据是监管审视已从 GPU 市场延伸至模型发现、评测和部署的跨层控制权。NVIDIA 已承诺维持多芯片、多云开放，实际能否保持非歧视性仍待验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-29-A2",
+      "date": "2026-10-29",
+      "grade": "A",
+      "title": "微软把八成收入放进 Agents and Infra：财务分部不是 Agent 商业化收入",
+      "themes": [
+        "Enterprise AI",
+        "Microsoft",
+        "Agents and Infra",
+        "Enterprise Software",
+        "Financial Reporting",
+        "Azure",
+        "Microsoft 365",
+        "Agent Economics",
+        "Commercial RPO",
+        "AI Infrastructure",
+        "Enterprise Context",
+        "Workflow Ownership",
+        "AI Monetization",
+        "Capital Expenditure",
+        "AI Industry Control Points",
+        "SaaS"
+      ],
+      "deck": "微软 10 月 28 日首次按 Agents and Infra 新分部披露财报：该分部季度收入 767.95 亿美元，占总收入约 83%，Azure 单独披露 331.65 亿美元、同比增长 48%。这验证企业软件、云与 Agent 被放进同一经营和资本配置体系，但 83% 不是 Agent 收入占比，6770 亿美元商业剩余履约义务也不是已实现的 AI 收入。",
+      "body_format": "article_text"
     }
   ]
 }
