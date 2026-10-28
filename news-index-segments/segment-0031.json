@@ -169,6 +169,35 @@
       ],
       "deck": "Lightspeed 的 AI Renaissance Fund 与联合投资载体据 10 月 27 日公开会议披露已合计募得逾 7.5 亿美元，计划收购既有企业并用 AI 改造经营；美国公共养老金亦披露了投资承诺。相较此前 FDE 绑定股权的单一案例，新信号是传统风投与机构资金开始把“买下业务、改造现金流”设为明确资本配置策略。但募资与投资承诺不是已实现收益，尚无该基金收购组合的独立经营成果。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-28-B3",
+      "date": "2026-10-28",
+      "grade": "B",
+      "title": "机器人运营商未必制造机器人：KDDI 正把通信、现场与远程监控组合成交付层",
+      "themes": [
+        "Physical AI",
+        "Robotics",
+        "KDDI",
+        "ELYZA Robotics",
+        "Telecommunications",
+        "Robot Operations",
+        "Managed Services",
+        "Remote Monitoring",
+        "Fleet Management",
+        "Vision-Language-Action",
+        "Edge AI",
+        "Industrial AI",
+        "Retail Automation",
+        "Warehouse Automation",
+        "Workflow Ownership",
+        "Control Points",
+        "Enterprise Context",
+        "Robotics Data",
+        "Safety Governance"
+      ],
+      "deck": "KDDI 与 ELYZA 10 月 27 日宣布新公司 ELYZA Robotics 已于 10 月 1 日运营，计划到 2030 财年投入 300 亿日元研发、建设 300 人以上专业组织并争取在真实现场部署超过 1,000 台机器人。值得记录的不是这些目标已实现，而是电信运营商尝试用网络、算力、远程监控、跨硬件集成与现场数据，取得 Physical AI 的持续运营入口。演示与 PoC 尚不能证明单位经济、可靠性或规模复制。",
+      "body_format": "article_text"
     }
   ]
 }
