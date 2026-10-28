@@ -106,6 +106,35 @@
       ],
       "deck": "美国 GSA 10 月 27 日扩展 Anthropic OneGov 协议，提供 Claude 政府产品与 API 的 40% 使用量折扣、无最低采购额，并将覆盖范围扩展至州与地方等政府。此前 GSA 已与 OpenAI 达成 50% 折扣的 27 个月协议。新增 B 级信号不是两种模型可直接按折扣率比较，而是政府采购方正把价格、直接/云分发、合规准入和实施支持集中谈判；Anthropic 披露约 500 个政府组织使用 Claude，但缺少可审计的成本与业务结果。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-29-A1",
+      "date": "2026-10-29",
+      "grade": "A",
+      "title": "反垄断开始审视 AI 模型分发入口：开放承诺不等于控制权中立",
+      "themes": [
+        "AI Infrastructure",
+        "NVIDIA",
+        "Hugging Face",
+        "Antitrust",
+        "US Department of Justice",
+        "Developer Distribution",
+        "Open Model Ecosystem",
+        "Model Discovery",
+        "AI Control Points",
+        "Cross-layer Integration",
+        "Platform Neutrality",
+        "Cloud Portability",
+        "Accelerator Competition",
+        "CUDA",
+        "Enterprise AI",
+        "AI Governance",
+        "M&A",
+        "Market Power",
+        "AI Industry Structure"
+      ],
+      "deck": "路透社 10 月 28 日援引两名知情人士称，美国司法部正在询问 NVIDIA 拟收购 Hugging Face 是否会使其掌握 AI 的关键模型分发入口。这不是违法认定，也不是并购已被阻止；但相较 9 月的收购公告，新的 A 级证据是监管审视已从 GPU 市场延伸至模型发现、评测和部署的跨层控制权。NVIDIA 已承诺维持多芯片、多云开放，实际能否保持非歧视性仍待验证。",
+      "body_format": "article_text"
     }
   ]
 }
