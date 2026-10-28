@@ -50,6 +50,34 @@
       ],
       "deck": "SK 海力士 10 月 28 日披露，已与 14 家主要客户签订长期供应协议，覆盖 2027、2028 年总产能的 50% 以上，价格仍在约定区间内随市场调整。三季度营业利润率达 80%，但不能把它全部归因于 HBM，也不能将管理层所说的 2029 年需求预订视为全部已签合同。新增 A 级信号是 AI 内存的稀缺性开始通过多年产能分配合同提前交易；供给优先权、价格、交付和已确认收入仍是四种不同权利与事实。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-28-B5",
+      "date": "2026-10-28",
+      "grade": "B",
+      "title": "日立把 FDE 放进三万五千人的交付组织：工业 AI 的竞争不只在模型与软件",
+      "themes": [
+        "Enterprise AI",
+        "FDE",
+        "Hitachi Digital",
+        "GlobalLogic",
+        "Hitachi Digital Services",
+        "Physical AI",
+        "Industrial AI",
+        "IT OT Convergence",
+        "Systems Integration",
+        "Managed Services",
+        "Enterprise Context",
+        "Workflow Ownership",
+        "Deployment Economics",
+        "AI-native Companies",
+        "HMAX",
+        "Lumada 3.0",
+        "AI Delivery",
+        "Control Points"
+      ],
+      "deck": "日立 10 月 28 日明确将 GlobalLogic 与 Hitachi Digital Services 合并后的新品牌 Hitachi Digital 定于 2027 年 4 月启动，披露约 3.5 万名专业人员、27 国及 880 多个活跃客户，并把 FDE 置于现场交付组织的中心。新增 B 级证据是工业 AI 的价值捕获正被传统工程与运维服务集团组织化承接；整合计划早在 1 月提出，3.5 万人并非 FDE 人数，46% 协同收入增长也不是 AI 投资回报。",
+      "body_format": "article_text"
     }
   ]
 }
