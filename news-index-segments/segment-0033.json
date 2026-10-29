@@ -83,6 +83,31 @@
       ],
       "deck": "Equinix 10 月 28 日财报披露，第三季度互连收入 4.65 亿美元、同比约增 10%，Fabric 收入同比增长 24%，新增净互连 6,900 条；但其推理交换产品 9 月已宣布、预计 2027 年第一季度才可用。新的 B 级证据是连接多云、数据和推理节点的中立互连网络已有独立收入基础，而不是 AI 推理本身贡献了这 24% 增长；AI 专属需求、产品采用和资本回报仍待验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-29-B5",
+      "date": "2026-10-29",
+      "grade": "B",
+      "title": "Physical AI 开始承担工厂资产：卖合格产能比卖机器人更难验证",
+      "themes": [
+        "Physical AI",
+        "Industrial AI",
+        "Foundry Robotics",
+        "Manufacturing-as-a-Service",
+        "AI-native Company",
+        "Factory Operations",
+        "Robotics",
+        "Contract Manufacturing",
+        "Factory Utilization",
+        "Unit Economics",
+        "Industrial Software",
+        "FoundryOS",
+        "Production Traceability",
+        "Capital Intensity",
+        "AI Control Points"
+      ],
+      "deck": "Foundry Robotics 10 月 28 日宣布完成 1 亿美元 A 轮融资，并展示位于加州 Emeryville 的 13 万平方英尺自有制造设施，计划用机器人装配单元、FoundryOS 和工程人员向客户出售制造服务。新增 B 级信号是 Physical AI 创业公司尝试直接持有工厂、交付成品并吸收产能风险；但订单规模、稼动率、良率、人工占比和现金回收尚未披露，不能把融资与厂房面积当作自动化单位经济成立。",
+      "body_format": "article_text"
     }
   ]
 }
