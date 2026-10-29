@@ -1,0 +1,35 @@
+{
+  "schema_version": "3.0",
+  "segment": "0034",
+  "items": [
+    {
+      "id": "2026-10-30-A2",
+      "date": "2026-10-30",
+      "grade": "A",
+      "title": "主权 AI 从补贴走向附条件股权：国家开始为模型选择权承担资本风险",
+      "themes": [
+        "Sovereign AI",
+        "AI Industrial Policy",
+        "Government Equity Investment",
+        "Cohere",
+        "Canada",
+        "Aleph Alpha",
+        "Schwarz Group",
+        "STACKIT",
+        "Enterprise AI",
+        "Model Competition",
+        "Enterprise Context",
+        "Capital Allocation",
+        "AI Infrastructure",
+        "Data Sovereignty",
+        "AI Industry Control Points",
+        "Vertical AI",
+        "Regulated Industries",
+        "AI Governance",
+        "Commercialization"
+      ],
+      "deck": "加拿大政府10月29日宣布拟分阶段向Cohere进行最高16亿加元股权投资，并绑定2030年前本土算力、就业和总部承诺；Cohere同期启动目标70亿加元的Series E并完成首轮交割。新信号不是主权AI概念再次升温，而是国家从政策与采购支持走向持股并分享风险收益。但融资目标不等于到账、国家持股不等于拥有模型控制权，商业回报与跨境部署仍未获验证。",
+      "body_format": "article_text"
+    }
+  ]
+}
