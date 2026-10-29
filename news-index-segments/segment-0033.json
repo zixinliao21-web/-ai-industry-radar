@@ -28,6 +28,33 @@
       ],
       "deck": "宇树科技上市后首份季报披露，第三季度收入同比增长69.93%至6.65亿元，归母净利润却下降17.37%，研发投入同比增长249.58%；前三季度扣非净利润下降18.78%、经营现金流下降54.69%。新的 B 级证据是机器人整机公司开始同时披露收入、研发、毛利与现金流，而不是人形机器人的自主劳动价值已获证明。四足、人形及零部件的收入结构、付费场景、现场可靠性和单位经济仍需分开核验。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-29-B3",
+      "date": "2026-10-29",
+      "grade": "B",
+      "title": "企业语义层开始随 BI 产品一起交付：Zoho 的预览版还不是业务真相",
+      "themes": [
+        "Enterprise AI",
+        "Zoho Analytics",
+        "Business Intelligence",
+        "Semantic Layer",
+        "Ontology",
+        "Enterprise Context",
+        "Semantic Authority",
+        "Agentic Analytics",
+        "Ask Zia",
+        "MCP",
+        "Headless BI",
+        "Data Governance",
+        "SMB",
+        "Enterprise Software",
+        "Workflow Ownership",
+        "AI Control Points",
+        "Agent Evaluation"
+      ],
+      "deck": "Zoho 10 月 28 日将语义模型、业务本体、六类分析 Agent、MCP 与治理工具纳入 Zoho Analytics 7.0。新增 B 级证据不是 Ontology 首次出现，而是既有 BI 厂商尝试把业务定义与 Agent 一起交付给缺少独立数据团队的企业；但 Ontology 与 Semantic Model 仍处 Preview、预计未来 4—8 周分批推出，尚无跨系统准确率、配置成本或客户 ROI 证据。",
+      "body_format": "article_text"
     }
   ]
 }
