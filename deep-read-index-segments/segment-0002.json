@@ -160,6 +160,37 @@
         "type": "free"
       },
       "content_status": "published_verbatim"
+    },
+    {
+      "id": "DR-2026-016",
+      "added_date": "2026-10-29",
+      "title": "How AI agents shape experts’ judgment calls",
+      "author": [
+        "Amaç Herdağdelen",
+        "Hailey Joren",
+        "Alex Tamkin"
+      ],
+      "publication": "Anthropic Research",
+      "institution": "Anthropic",
+      "source_type": "research_paper",
+      "source_url": "https://www.anthropic.com/research/agents-judgment-calls",
+      "original_publish_date": "2026-10-27",
+      "estimated_reading_time": "约 45–60 分钟（29页研究论文，估算）",
+      "topic": "Agent 决策权与组织判断",
+      "themes": [
+        "AI Agent",
+        "Human-in-the-loop",
+        "Judgment",
+        "Decision Authority",
+        "组织治理",
+        "领导力",
+        "AI-native Team",
+        "Evaluation"
+      ],
+      "access": {
+        "type": "free"
+      },
+      "content_status": "published_verbatim"
     }
   ]
 }
