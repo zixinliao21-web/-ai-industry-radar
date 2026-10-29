@@ -30,6 +30,34 @@
       ],
       "deck": "加拿大政府10月29日宣布拟分阶段向Cohere进行最高16亿加元股权投资，并绑定2030年前本土算力、就业和总部承诺；Cohere同期启动目标70亿加元的Series E并完成首轮交割。新信号不是主权AI概念再次升温，而是国家从政策与采购支持走向持股并分享风险收益。但融资目标不等于到账、国家持股不等于拥有模型控制权，商业回报与跨境部署仍未获验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-30-A3",
+      "date": "2026-10-30",
+      "grade": "A",
+      "title": "Physical AI 的大合同开始绑定客户治理权：60 亿美元采购承诺不是已兑现收入",
+      "themes": [
+        "Physical AI",
+        "Industrial AI",
+        "Warehouse Automation",
+        "Symbotic",
+        "Walmart",
+        "AI Robotics",
+        "Enterprise Contract",
+        "Customer Concentration",
+        "Corporate Governance",
+        "Workflow Ownership",
+        "Robotics Commercialization",
+        "AI-native Infrastructure",
+        "Supply Chain",
+        "Automation Economics",
+        "Industrial Software",
+        "R&D Co-development",
+        "Enterprise AI",
+        "AI Industry Control Points"
+      ],
+      "deck": "沃尔玛与 Symbotic 10 月 29 日签署新主自动化协议，追加约 60 亿美元多年采购与研发承诺，涉及 25 座美国区域配送中心的进一步自动化；其中 1.25 亿美元用于下一代仓储系统研发。SEC 8-K 还披露条件性的董事提名建议权、非投票观察员权及销售限制。增量是成熟客户把机器人部署、持续服务、研发和治理绑定成长期合同，而不是 60 亿美元已到账、25 座新建仓库或通用机器人单位经济获证。",
+      "body_format": "article_text"
     }
   ]
 }
