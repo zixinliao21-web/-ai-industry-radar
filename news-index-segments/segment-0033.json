@@ -187,6 +187,34 @@
       ],
       "deck": "Serval 10 月 29 日宣布 1.5 亿美元融资，并称一家汽车制造商在 45 天内完成覆盖 ITSM、CMDB 和资产管理的 ServiceNow 替换；CEO 向路透确认客户为 Lucid。公司同时计划招聘超过 100 名现场自动化工程师。新的 B 级证据是 AI-native 平台开始用记录系统、受控工作流与现场交付共同争夺旧软件预算；但迁移效果主要为供应商自报，长期可靠性、真实节省及交付毛利尚未验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-30-A1",
+      "date": "2026-10-30",
+      "grade": "A",
+      "title": "AI 控股式改造进入百亿美元交易：买下服务网络，不等于买到了 AI 生产率",
+      "themes": [
+        "AI-native Company",
+        "Enterprise AI",
+        "AI Business Model",
+        "Thrive Holdings",
+        "ADT",
+        "OpenAI",
+        "Transformation Equity",
+        "Private Equity",
+        "Buy-and-Build",
+        "Vertical AI",
+        "Workflow Ownership",
+        "Physical AI",
+        "Field Services",
+        "Recurring Revenue",
+        "Operating Control",
+        "AI Industry Control Points",
+        "Capital Allocation",
+        "Privacy and Trust"
+      ],
+      "deck": "Thrive Holdings 10 月 29 日签约拟以约 76 亿美元股权价值、153 亿美元含债务企业价值收购 ADT，目标取得安保监控的客户关系、经常性收入与现场履约网络；这使“先拥有业务、再部署 AI”的路径从基金募资走向大型上市公司私有化交易。但交割仍待审批，ADT 2026 年二季度收入仅增长 2%，尚无交易后 AI 生产率、客户留存或风险调整后回报证据。",
+      "body_format": "article_text"
     }
   ]
 }
