@@ -1,0 +1,33 @@
+{
+  "schema_version": "3.0",
+  "segment": "0033",
+  "items": [
+    {
+      "id": "2026-10-29-B2",
+      "date": "2026-10-29",
+      "grade": "B",
+      "title": "机器人公司开始交出财务账本：宇树的增长不等于通用具身智能已被验收",
+      "themes": [
+        "Physical AI",
+        "Robotics",
+        "Unitree",
+        "Embodied Intelligence",
+        "Humanoid Robots",
+        "Quadruped Robots",
+        "Robotics Economics",
+        "Financial Reporting",
+        "Research and Development",
+        "Cash Flow",
+        "Hardware Economics",
+        "Commercialization Evidence",
+        "Unit Economics",
+        "Industrial AI",
+        "AI Industry Control Points",
+        "AI Bubble",
+        "Manufacturing"
+      ],
+      "deck": "宇树科技上市后首份季报披露，第三季度收入同比增长69.93%至6.65亿元，归母净利润却下降17.37%，研发投入同比增长249.58%；前三季度扣非净利润下降18.78%、经营现金流下降54.69%。新的 B 级证据是机器人整机公司开始同时披露收入、研发、毛利与现金流，而不是人形机器人的自主劳动价值已获证明。四足、人形及零部件的收入结构、付费场景、现场可靠性和单位经济仍需分开核验。",
+      "body_format": "article_text"
+    }
+  ]
+}

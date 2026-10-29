@@ -1,8 +1,8 @@
 {
   "schema_version": "3.0",
   "storage": "segmented_index",
-  "updated_at": "2026-10-29T01:32:08.575Z",
-  "item_count": 256,
+  "updated_at": "2026-10-29T03:33:00.000Z",
+  "item_count": 257,
   "segment_size": 8,
   "segments": [
     {
@@ -196,6 +196,12 @@
       "path": "news-index-segments/segment-0032.json",
       "count": 8,
       "sealed": true
+    },
+    {
+      "id": "0033",
+      "path": "news-index-segments/segment-0033.json",
+      "count": 1,
+      "sealed": false
     }
   ]
 }
