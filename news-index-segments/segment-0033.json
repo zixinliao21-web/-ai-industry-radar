@@ -134,6 +134,33 @@
       ],
       "deck": "微软 10 月 28 日将跨 Copilot 产品共用的多模型执行 Harness 以 Foundry Agent Service 公测形式开放，并公布 12 月起对沙箱 CPU 与内存单独计费。增量不是又一种 Agent 框架，而是模型之外的执行循环、工作上下文、工具权限与沙箱开始成为云平台托管且可计价的基础设施；但公测限制、迁移能力与独立 ROI 尚待验证，不能把多模型兼容等同于退出平台的自由。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-29-B6",
+      "date": "2026-10-29",
+      "grade": "B",
+      "title": "AI 辅助代码过半，员工仍增万人：IT 服务商的效率账不能只看裁员",
+      "themes": [
+        "Enterprise AI",
+        "IT Services",
+        "Cognizant",
+        "AI Productivity",
+        "FDE",
+        "AI Builder",
+        "Workforce Economics",
+        "Project Leap",
+        "Enterprise Software",
+        "AI-assisted Coding",
+        "Delivery Economics",
+        "Contract Pricing",
+        "Business Model",
+        "Enterprise AI Commercialization",
+        "AI-native Company",
+        "Workflow Ownership",
+        "ROI Evidence"
+      ],
+      "deck": "Cognizant 10 月 29 日披露，超过 50% 的代码已有 AI 辅助，但员工数同比仍增加 10,100 人至 359,900 人；Project Leap 预计 2026 年节省约 2 亿美元，主要用于再投资，同时包含 1.5 亿—2 亿美元人员相关重组成本。新增 B 级证据是大型 IT 服务商将 AI 效率、人员重配和交付能力建设放在同一经营账本中，而非证明 AI 导致净增员、节省额已经实现或服务合同已摆脱价格压力。",
+      "body_format": "article_text"
     }
   ]
 }
