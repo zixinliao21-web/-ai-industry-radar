@@ -108,6 +108,32 @@
       ],
       "deck": "Foundry Robotics 10 月 28 日宣布完成 1 亿美元 A 轮融资，并展示位于加州 Emeryville 的 13 万平方英尺自有制造设施，计划用机器人装配单元、FoundryOS 和工程人员向客户出售制造服务。新增 B 级信号是 Physical AI 创业公司尝试直接持有工厂、交付成品并吸收产能风险；但订单规模、稼动率、良率、人工占比和现金回收尚未披露，不能把融资与厂房面积当作自动化单位经济成立。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-29-A5",
+      "date": "2026-10-29",
+      "grade": "A",
+      "title": "Agent Harness 正变成可计费的云执行层：模型可选，不等于控制权可迁移",
+      "themes": [
+        "Enterprise Agent",
+        "Agent Harness",
+        "Agent Runtime",
+        "Microsoft Copilot",
+        "Microsoft Foundry",
+        "GitHub Copilot",
+        "Multi-model Orchestration",
+        "Durable Execution",
+        "Agent Control Plane",
+        "Cloud Infrastructure",
+        "Agent Economics",
+        "Model Choice",
+        "Vendor Lock-in",
+        "Enterprise Software",
+        "Workflow Ownership",
+        "AI Industry Control Points"
+      ],
+      "deck": "微软 10 月 28 日将跨 Copilot 产品共用的多模型执行 Harness 以 Foundry Agent Service 公测形式开放，并公布 12 月起对沙箱 CPU 与内存单独计费。增量不是又一种 Agent 框架，而是模型之外的执行循环、工作上下文、工具权限与沙箱开始成为云平台托管且可计价的基础设施；但公测限制、迁移能力与独立 ROI 尚待验证，不能把多模型兼容等同于退出平台的自由。",
+      "body_format": "article_text"
     }
   ]
 }

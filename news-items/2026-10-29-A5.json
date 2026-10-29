@@ -1,0 +1,44 @@
+{
+  "id": "2026-10-29-A5",
+  "date": "2026-10-29",
+  "grade": "A",
+  "title": "Agent Harness 正变成可计费的云执行层：模型可选，不等于控制权可迁移",
+  "themes": [
+    "Enterprise Agent",
+    "Agent Harness",
+    "Agent Runtime",
+    "Microsoft Copilot",
+    "Microsoft Foundry",
+    "GitHub Copilot",
+    "Multi-model Orchestration",
+    "Durable Execution",
+    "Agent Control Plane",
+    "Cloud Infrastructure",
+    "Agent Economics",
+    "Model Choice",
+    "Vendor Lock-in",
+    "Enterprise Software",
+    "Workflow Ownership",
+    "AI Industry Control Points"
+  ],
+  "deck": "微软 10 月 28 日将跨 Copilot 产品共用的多模型执行 Harness 以 Foundry Agent Service 公测形式开放，并公布 12 月起对沙箱 CPU 与内存单独计费。增量不是又一种 Agent 框架，而是模型之外的执行循环、工作上下文、工具权限与沙箱开始成为云平台托管且可计价的基础设施；但公测限制、迁移能力与独立 ROI 尚待验证，不能把多模型兼容等同于退出平台的自由。",
+  "body_format": "article_text",
+  "article_text": "# Agent Harness 正变成可计费的云执行层：模型可选，不等于控制权可迁移\n\n**核心判断｜Agent 的“模型之外”正在形成一项独立的云服务：平台替开发者托管执行循环、上下文、工具调用和沙箱，并开始对这部分计算资源明确收费。** 微软在 2026 年 10 月 28 日将 Microsoft Copilot harness 引入 Foundry Agent Service 公共预览，同时公开了 12 月起的沙箱资源计费口径。[1][2] 这不是 Agent Harness 概念第一次出现，也不是微软第一次让企业构建 Agent。值得 VELNAR 记录的新增证据，是一个覆盖多个成熟产品的执行底座被进一步外售为可选的云运行层，开发者开始能够分别购买模型推理和模型之外的执行环境。\n\n**信号评级：A｜既有平台将跨产品执行技术转化为独立云交付与计费对象；商业替代率、可移植性和实际成本仍待检验。** 此前我们已观察到 Agent Runtime、Durable Execution、Control Plane 等层次的产品化。此次不是重复“模型不是 Agent”的常识，而是把产业地图中的 Harness 从工程实现进一步定位为**平台可规模复用、可托管、可收费、可能产生迁移成本**的竞争单元。\n\n## 一、FACT｜微软究竟发布了什么\n\n**跨产品统一的执行底座。** 微软称，最初由 GitHub 工程团队开发的多模型 Harness 已用于 Copilot Code、Copilot Studio、GitHub Copilot 应用、CLI、VS Code 等多个产品，并正在以 Microsoft Copilot harness 名义统一提供。公司声称支持 20 多种前沿模型及自带密钥配置，并可在不同模型之间选择执行路径；这些是微软公布的产品能力，不能据此认定所有模型、地区和工作负载都具有相同可用性。[1]\n\n**Foundry 中新增的是托管选择，不是所有 Agent 自动迁移。** 10 月 28 日的 Foundry 技术公告将其明确标为 **public preview**：开发者可声明 Agent、技能与工具，由平台运行 Agent loop、管理工作上下文和沙箱，支持 MCP 工具、认证及审批配置、文件与代码执行，以及受约束的子任务委托。[2] 公告同时明确，现有 Agent 不受影响，预览阶段创建后尚不能直接切换 Harness，CPU、内存和空闲设置由 Foundry 管理。由此不能写成“现有企业 Agent 已统一迁入新运行时”。\n\n**可选的三种抽象层次。** 微软区分了不使用 Copilot harness 的 Prompt Agent、使用托管 Harness 的 Prompt Agent，以及由开发者保留框架和执行逻辑控制权的 Hosted Agent。[2] 这一产品划分很重要：平台不是宣称所有业务都必须交给一个通用执行器，而是在不同控制程度与运维责任之间提供选项。\n\n**另一项独立发布是长任务恢复能力。** Foundry 同日宣布 Hosted Agents 的 long-running resilience 达到一般可用（GA）。平台可在中断后以原始输入重启，**但应用代码仍需自行保存进度、识别已完成步骤，并对外部写操作做防重复保护**。[2] 不能把这项 GA 误写为“Copilot harness 预览版所有长任务天然具备事务级恢复”，更不能把重试等同于业务上的 exactly-once 执行。\n\n**价格第一次让执行层的成本更加可见。** 官方称，Foundry 中 Copilot harness 的运行时费用将从 **2026 年 12 月 1 日**开始计收；此前 Harness runtime 免费，但模型推理和单独收费的工具、连接服务仍需按其规则付费。公布的沙箱价格为每 vCPU 小时 **0.0994 美元**、每 GiB 内存小时 **0.0118 美元**，因地区及合同可能不同。[2] 这不是 Agent 任务的完整总价：还需考虑模型调用、工具、存储、外部服务及真实执行时长。\n\n## 二、INFERENCE｜执行层为什么会成为新的平台控制点\n\n把一个 Agent 系统拆开，可以看到至少四种不同的供给：**模型推理**负责语言与推断，**业务事实与权限**决定什么可以被信任和执行，**Harness/Runtime**管理多步循环、工具和环境，**企业工作流与验收**决定最终业务结果。微软此次直接商业化的是第三层的一大部分，而不是替客户自动拥有第二、第四层。\n\n这会改变开发团队的成本结构。过去开发者为上下文管理、工具重试、隔离环境、文件处理和模型路由编写大量基础设施代码；托管 Harness 可以减少重复工程。平台通过在多个自有产品上运行同一底座，获得更广泛的性能反馈、故障经验与开发者分发渠道，再把改进回流给云端客户。**如果这种反馈循环真正有效，Harness 的竞争就不只是 API 功能数量，而是持续可靠性、单位任务成本和跨场景维护能力。**\n\n但它也可能创造新的锁定。模型选择权与执行权不是同一件事：一个系统可以允许用户从模型 A 换到模型 B，同时仍由同一平台决定沙箱、上下文装配、审批、工具接入、日志、重试和资源计费。**“多模型兼容”降低的是模型层面的切换成本，不自动保证整个 Agent 能原样迁移到另一家 Harness。** 迁移还要核对技能格式、工具身份、状态持久化、审批语义、可观测性、故障恢复与成本模型。\n\n这里的竞争位置与传统 SaaS 不完全相同。SaaS 常把业务数据和工作界面作为主要粘性；Harness 可能把开发者运行依赖和执行行为规范作为粘性。它也不等于业务权威系统：企业仍要回答“哪个客户、哪张订单、什么库存、谁批准了动作、哪些结果已核实”，这些不能因为执行循环被托管而自动正确。\n\n## 三、成本与责任｜为什么“托管执行”不等于“托管结果”\n\n按官方公布的单价，仅为理解计费量纲，可以计算一个**假设**：若某任务的沙箱持续使用 4 vCPU 与 16 GiB 内存整整一小时，其 CPU 与内存成本约为 **0.5868 美元**（4×0.0994 + 16×0.0118），**未包含模型推理、工具、其他服务及任何地区差异**。这不是微软公布的典型任务价格，也不是对真实企业工作负载的测量。\n\n由此出现三个可检验问题。\n\n**其一，托管节省的工程人力是否超过新增运行费用？** 对低频、复杂、长时间任务，减少维护 Harness 的固定投入可能很有价值；对高频、短时、可确定性处理的业务，持续沙箱成本与模型路由开销可能让托管方案不划算。没有按真实任务口径的总拥有成本对照，不能判断哪一种更便宜。\n\n**其二，失败恢复是否具备业务语义？** 平台重新运行一次任务，不知道上一次是否已经扣款、预留库存或向客户发送确认。要实现可靠恢复，业务系统仍需要幂等键、持久状态、动作回执、权限边界与 Trace。微软自己的技术说明也强调由应用负责保存检查点及防止重复外部操作。[2] 这恰恰证明 Harness 可以承担基础设施责任，却不能代替业务状态机。\n\n**其三，谁承担安全事故和执行错误？** MCP、技能、认证和审批机制提供的是配置与执行接口，不是所有接入工具天然安全。权限范围、敏感动作确认、外部数据的指令注入、模型输出与实际动作的一致性，仍要按场景验证。托管执行不等于将客户的合规责任全部转移给云平台。\n\n## 四、COUNTERARGUMENT｜为什么现在还不能宣布 Harness 市场胜负\n\n**这是产品预览，而不是独立业务的财务验证。** 微软披露了架构、适用方式与未来价格，但没有公开可核验的 Foundry Harness 付费客户数量、净收入、留存、跨平台迁移率或对照实验。两位客户在官方文章中的评价可作为早期采用线索，不能替代独立生产数据。[2]\n\n**统一产品底座未必等于统一可迁移的标准。** MCP、技能等开放接口有利于互操作，但并未标准化全部上下文、执行状态、授权、恢复与计费行为。预览阶段不能切换 Harness 本身就是一项需要跟踪的实际限制。[2]\n\n**企业未必愿意让平台掌握所有执行环节。** 对受监管、高权限或需要定制中间件的任务，自建 Harness 或 Hosted Agent 可能更适合。微软保留三种路线，反而说明“托管程度越高越好”不是普适规律。部分企业甚至可能只使用确定性 Workflow 和小范围模型能力，而不需要通用多步 Agent。\n\n**现有巨头具备分发优势，不代表新进入者没有机会。** 专用 Runtime、开源执行框架和垂直领域的工作流平台仍可凭可审计性、低成本、部署主权或行业特定权限模型竞争。但创业公司若只把通用循环、工具调用和文件沙箱包装成产品，面对微软这样的跨产品复用者，差异化压力会增加。这是竞争推论，而非已经发生的市场淘汰。\n\n## 五、VELNAR 的判断更新与边界\n\n**需要更新的产业地图：** 在“模型—Agent 应用”之间，更明确地区分可商业化的 **Harness/Execution Cloud** 与掌握业务事实的 **Semantic Authority / System of Record**。前者可以由大平台托管，后者通常仍需要企业数据、规则、合同和权限。观察下一代 Agent 平台时，除了模型能力，还要追踪 Harness 的资源计费、任务成功率、恢复能力、迁移出口与治理控制权。\n\n**需要保留的竞争假设：** 基础 Harness 越标准化，垂直 AI 公司的长期价值越可能来自独有的业务流程、真实失败样本、客户关系、领域数据使用权与可验证结果，而非自研一套通用 Agent loop。但这仍是条件性推论：若托管 Harness 的价格、合规性或可定制性不合适，企业仍可能保留自建执行层。\n\n**不触发的当前行动：** VELNAR 化妆品包材 Sales MVP 不应因微软发布托管 Harness 而立即迁移技术栈、引入多 Agent 或扩大模块。现阶段的优先级仍是订单、库存、预留、出库与事实校验闭环。可以把微软的产品边界当作长期架构比较样本，但没有当前项目的成本、准确率和恢复测试，就没有重构依据。\n\n**PREDICTION｜未来 3—9 个月的可证伪观察。** 关注 12 月正式计费后真实任务成本是否透明；客户能否跨 Harness 迁移技能、状态与工具权限；托管与自建方案在相同任务上的完成率、人工接管率、恢复正确率和总成本；以及微软是否公布非自家产品客户的规模化生产采用证据。如果开放模型选择最终伴随高度封闭的执行状态，Harness 将更像新型云锁定层；如果跨平台状态与治理契约成熟，其价值则更可能转向规模效率与服务质量。\n\n## 六、值得继续讨论的问题\n\n**当通用 Harness 被大型云平台以资源用量出售后，一家垂直 Agent 创业公司究竟应该自建哪部分执行能力，才能形成壁垒，而不是长期为可替代的基础设施付费？** 需要区分“为可靠性必须自己控制的业务规则”与“可以购买、且不改变业务事实权威的通用运行能力”。\n\n---\n\n### 来源与证据边界\n\n[1] Microsoft Official Blog，Tina Schuchman 与 Vladimir Fedorov，2026-10-28，《Introducing the Microsoft Copilot harness: Unlocking the potential of truly multi-model agentic work》。用于核对跨产品底座、模型选择、SDK 与托管定位；性能和用户规模属于厂商自述。https://blogs.microsoft.com/blog/2026/10/28/introducing-the-microsoft-copilot-harness-unlocking-the-potential-of-truly-multi-model-agentic-work/\n\n[2] Microsoft Foundry Blog，Jeff Hollan、Viswa Balaji、Anthony Chu，2026-10-28，《Introducing the Microsoft Copilot harness in Foundry Agent Service》。用于核对 public preview、技能/MCP/沙箱、三种开发路径、Hosted Agents 的 long-running resilience GA、预览限制与 12 月计费口径。https://devblogs.microsoft.com/foundry/microsoft-copilot-harness-in-foundry/\n\n[3] Visual Studio Magazine，David Ramel，2026-10-28，《Microsoft Opens GitHub-Built Copilot Harness to Developers Through Foundry》。独立技术媒体对公告的梳理；并未提供第三方成本或迁移实验。https://visualstudiomagazine.com/articles/2026/10/28/microsoft-opens-github-built-copilot-harness-to-developers-through-foundry.aspx\n\n**证据等级说明：** 发布内容与定价有厂商一手公告，独立媒体能够交叉确认“已宣布”的事实；尚无第三方生产基准、实际付费转化、退出成本或企业 ROI。文中 FACT、INFERENCE、COUNTERARGUMENT、PREDICTION 分开处理。",
+  "sources": [
+    {
+      "title": "Microsoft | Introducing the Microsoft Copilot harness",
+      "url": "https://blogs.microsoft.com/blog/2026/10/28/introducing-the-microsoft-copilot-harness-unlocking-the-potential-of-truly-multi-model-agentic-work/",
+      "date": "2026-10-28"
+    },
+    {
+      "title": "Microsoft Foundry | Introducing the Microsoft Copilot harness in Foundry Agent Service",
+      "url": "https://devblogs.microsoft.com/foundry/microsoft-copilot-harness-in-foundry/",
+      "date": "2026-10-28"
+    },
+    {
+      "title": "Visual Studio Magazine | Microsoft Opens GitHub-Built Copilot Harness",
+      "url": "https://visualstudiomagazine.com/articles/2026/10/28/microsoft-opens-github-built-copilot-harness-to-developers-through-foundry.aspx",
+      "date": "2026-10-28"
+    }
+  ]
+}
