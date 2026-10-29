@@ -26,3 +26,9 @@
 .industry-md th{background:var(--soft);font-weight:650}
 .industry-md tbody tr:last-child td{border-bottom:0}
 @media(max-width:600px){.industry-md h2{margin-top:29px}.industry-md pre{padding:13px}.industry-md th,.industry-md td{padding:9px 11px}}
+
+/* Source URLs can be longer than the mobile viewport. Wrap only the source label;
+   leave horizontal scrolling in the TOC, code blocks and Markdown tables intact. */
+.article .sources{min-width:0}
+.article .sources a{min-width:0;max-width:100%}
+.article .sources a span:last-child{min-width:0;overflow-wrap:anywhere}
