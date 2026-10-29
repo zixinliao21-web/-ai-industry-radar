@@ -161,6 +161,32 @@
       ],
       "deck": "Cognizant 10 月 29 日披露，超过 50% 的代码已有 AI 辅助，但员工数同比仍增加 10,100 人至 359,900 人；Project Leap 预计 2026 年节省约 2 亿美元，主要用于再投资，同时包含 1.5 亿—2 亿美元人员相关重组成本。新增 B 级证据是大型 IT 服务商将 AI 效率、人员重配和交付能力建设放在同一经营账本中，而非证明 AI 导致净增员、节省额已经实现或服务合同已摆脱价格压力。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-30-B1",
+      "date": "2026-10-30",
+      "grade": "B",
+      "title": "AI-native 企业软件开始替换权威记录系统：45 天迁移还不是 SaaS 终局",
+      "themes": [
+        "Enterprise AI",
+        "AI-native Company",
+        "Serval",
+        "ServiceNow",
+        "ITSM",
+        "System of Record",
+        "Workflow Ownership",
+        "Agent Automation",
+        "Deterministic Workflow",
+        "Enterprise Context",
+        "FDE",
+        "Professional Services",
+        "Software Displacement",
+        "Migration Economics",
+        "Agent Governance",
+        "AI Business Model"
+      ],
+      "deck": "Serval 10 月 29 日宣布 1.5 亿美元融资，并称一家汽车制造商在 45 天内完成覆盖 ITSM、CMDB 和资产管理的 ServiceNow 替换；CEO 向路透确认客户为 Lucid。公司同时计划招聘超过 100 名现场自动化工程师。新的 B 级证据是 AI-native 平台开始用记录系统、受控工作流与现场交付共同争夺旧软件预算；但迁移效果主要为供应商自报，长期可靠性、真实节省及交付毛利尚未验证。",
+      "body_format": "article_text"
     }
   ]
 }
