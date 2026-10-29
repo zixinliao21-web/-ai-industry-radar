@@ -186,6 +186,31 @@
       ],
       "deck": "Alphabet 10 月 28 日财报显示 Google Cloud 季度收入 307.09 亿美元、同比增长 103%，其中 TPU 系统销售已是有意义的贡献；但公司本季经营现金流 422.90 亿美元、资本开支 513.55 亿美元，自由现金流为负 90.65 亿美元。新 A 级信号不是 AI 云不赚钱，而是自研加速器从内部成本中心变成对外产品后，云服务收入、硬件交付、存货占款和长期资本投入必须分开核算；云分部利润也不等于全栈 AI 投资回报。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-29-A4",
+      "date": "2026-10-29",
+      "grade": "A",
+      "title": "企业 Agent 开始有生产用量证据：ServiceNow 的 13 倍增长仍不是 AI 收入",
+      "themes": [
+        "Enterprise AI",
+        "ServiceNow",
+        "Agentic AI",
+        "Production Consumption",
+        "AI Net New ACV",
+        "Enterprise Software",
+        "Workflow Ownership",
+        "Agent Control Plane",
+        "Enterprise Context",
+        "AI Monetization",
+        "Financial Reporting",
+        "SaaS",
+        "Capital Efficiency",
+        "Governed Execution",
+        "AI Control Points"
+      ],
+      "deck": "ServiceNow 10 月 28 日财报披露，生产环境中 Agentic AI 年初至今消费量同比增长超过 13 倍，2026 年 AI 净新增 ACV 目标上调至 17 亿美元；同期订阅收入为 39.88 亿美元，cRPO 为 136.5 亿美元。新 A 级信号是企业 Agent 正同时出现生产使用与商业合同两类可追踪证据，但用量、合同目标、已确认收入、客户 ROI 和平台利润仍不能混为一谈。",
+      "body_format": "article_text"
     }
   ]
 }
