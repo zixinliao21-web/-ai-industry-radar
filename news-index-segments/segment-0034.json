@@ -86,6 +86,34 @@
       ],
       "deck": "Deepgram 10 月 29 日宣布收购实时音视频基础设施商 Daily，后者维护开源语音 Agent 框架 Pipecat；双方承诺维持 BSD-2-Clause 许可并筹建独立基金会，同时提出跨模型传递音频语境的 RCS。新的 B 级信号是语音模型厂商开始把编排、实时网络和上下文协议一起纳入商业平台，但收购未披露价格、基金会治理尚待落实，开源代码也不等于托管服务、流量入口或协议话语权中立。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-30-A4",
+      "date": "2026-10-30",
+      "grade": "A",
+      "title": "Agent 执行云开始交出规模证据：17 倍 Token 不是 17 倍收入",
+      "themes": [
+        "Enterprise Agent",
+        "Amazon AWS",
+        "Amazon Bedrock",
+        "Bedrock AgentCore",
+        "Agent Runtime",
+        "Agent Harness",
+        "Production Adoption",
+        "Cloud Infrastructure",
+        "AI Monetization",
+        "Token Economics",
+        "Enterprise AI",
+        "Execution Control Plane",
+        "Multi-model",
+        "Workflow Ownership",
+        "AI Capital Expenditure",
+        "Free Cash Flow",
+        "Enterprise Context",
+        "AI Industry Control Points"
+      ],
+      "deck": "Amazon 10 月 29 日披露 Bedrock Token 量同比近 17 倍、财富 500 强客户相关支出近 7 倍，AgentCore 已有数万客户使用，第三季度部署 Agent 数是此前三个季度合计的两倍。新增 A 级信号是模型推理与托管 Agent 执行层同时出现可观察的规模指标，而非 Agent 收入、业务完成率或利润已获证明；AWS 整体收入与利润不能归因于 Agent，Amazon 过去十二个月自由现金流仍为负 424 亿美元。",
+      "body_format": "article_text"
     }
   ]
 }
