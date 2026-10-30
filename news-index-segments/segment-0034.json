@@ -58,6 +58,34 @@
       ],
       "deck": "沃尔玛与 Symbotic 10 月 29 日签署新主自动化协议，追加约 60 亿美元多年采购与研发承诺，涉及 25 座美国区域配送中心的进一步自动化；其中 1.25 亿美元用于下一代仓储系统研发。SEC 8-K 还披露条件性的董事提名建议权、非投票观察员权及销售限制。增量是成熟客户把机器人部署、持续服务、研发和治理绑定成长期合同，而不是 60 亿美元已到账、25 座新建仓库或通用机器人单位经济获证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-30-B2",
+      "date": "2026-10-30",
+      "grade": "B",
+      "title": "语音 Agent 的开源编排层被模型商收购：代码中立不等于执行入口中立",
+      "themes": [
+        "Enterprise Agent",
+        "Voice AI",
+        "Deepgram",
+        "Daily",
+        "Pipecat",
+        "Open Source",
+        "Agent Orchestration",
+        "Real-Time Context Standard",
+        "Realtime Infrastructure",
+        "Agent Runtime",
+        "AI Control Points",
+        "Protocol Governance",
+        "Platform Consolidation",
+        "Vendor Neutrality",
+        "Enterprise Context",
+        "Workflow Ownership",
+        "Voice Agent Economics",
+        "Model Interoperability"
+      ],
+      "deck": "Deepgram 10 月 29 日宣布收购实时音视频基础设施商 Daily，后者维护开源语音 Agent 框架 Pipecat；双方承诺维持 BSD-2-Clause 许可并筹建独立基金会，同时提出跨模型传递音频语境的 RCS。新的 B 级信号是语音模型厂商开始把编排、实时网络和上下文协议一起纳入商业平台，但收购未披露价格、基金会治理尚待落实，开源代码也不等于托管服务、流量入口或协议话语权中立。",
+      "body_format": "article_text"
     }
   ]
 }
