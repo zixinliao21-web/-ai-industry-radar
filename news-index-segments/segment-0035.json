@@ -85,6 +85,34 @@
       ],
       "deck": "Agility Robotics 与 Churchill XI 10 月 30 日披露，拟议 SPAC 合并及相关融资预计筹得约 4.65 亿美元（税费前），其中仅 1.64 亿美元来自赎回期后的信托账户，另有 2.01 亿美元 PIPE 承诺及此前已收到的 1 亿美元。10 月 13 日无赎回情形下的信托金额约 4.24 亿美元。其逾 3 亿美元 Digit 5 订单涉及 1,000 台机器人、三年 RaaS 合同和按部署归属的认股权证，并非当期收入。新增 B 级证据让 Physical AI 的资本、条件性订单与真实生产表现可以分账审计，而不是把融资或订单视为商业化完成。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-31-A2",
+      "date": "2026-10-31",
+      "grade": "A",
+      "title": "AI-native 公司破产后，人才、技术许可与用户上下文被分开定价",
+      "themes": [
+        "AI-native Companies",
+        "AI Industry Consolidation",
+        "Character.AI",
+        "Disney",
+        "Acqui-hire",
+        "Bankruptcy",
+        "AI Business Model",
+        "AI Companion",
+        "Enterprise Context",
+        "Personal Context",
+        "Data Rights",
+        "AI Governance",
+        "Model Licensing",
+        "Talent Economics",
+        "AI Industry Control Points",
+        "Trust and Safety",
+        "Unit Economics",
+        "Capital Allocation"
+      ],
+      "deck": "Character.AI 10月30日获准推进破产资产竞价程序：Disney 拟以2000万美元取得部分技术的非独家永久许可，却另计划三年向66名转入员工支付约1.8亿美元；平台和用户聊天记录不在该许可范围。法院只批准竞价程序，尚未批准资产出售或责任豁免。新增A级信号是AI-native公司的价值与责任在危机中被拆成三种权利，用户规模既不能证明可持续经济，也不能让敏感上下文自由转让。",
+      "body_format": "article_text"
     }
   ]
 }

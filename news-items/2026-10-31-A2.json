@@ -1,0 +1,56 @@
+{
+  "id": "2026-10-31-A2",
+  "date": "2026-10-31",
+  "grade": "A",
+  "title": "AI-native 公司破产后，人才、技术许可与用户上下文被分开定价",
+  "themes": [
+    "AI-native Companies",
+    "AI Industry Consolidation",
+    "Character.AI",
+    "Disney",
+    "Acqui-hire",
+    "Bankruptcy",
+    "AI Business Model",
+    "AI Companion",
+    "Enterprise Context",
+    "Personal Context",
+    "Data Rights",
+    "AI Governance",
+    "Model Licensing",
+    "Talent Economics",
+    "AI Industry Control Points",
+    "Trust and Safety",
+    "Unit Economics",
+    "Capital Allocation"
+  ],
+  "deck": "Character.AI 10月30日获准推进破产资产竞价程序：Disney 拟以2000万美元取得部分技术的非独家永久许可，却另计划三年向66名转入员工支付约1.8亿美元；平台和用户聊天记录不在该许可范围。法院只批准竞价程序，尚未批准资产出售或责任豁免。新增A级信号是AI-native公司的价值与责任在危机中被拆成三种权利，用户规模既不能证明可持续经济，也不能让敏感上下文自由转让。",
+  "body_format": "article_text",
+  "article_text": "# AI-native 公司破产后，人才、技术许可与用户上下文被分开定价\n\n**核心判断｜一家 AI-native 公司失败时，最有价值的东西未必以同一种方式出售：人才可以先被聘走，技术可以按非独家许可交易，用户关系与敏感上下文却留在受法律约束的经营实体中。** Character.AI 的破产程序把这三种权利摆到了同一张桌上。2026 年 10 月 30 日，美国破产法院允许其继续推进资产竞价程序；但**批准竞价规则不等于批准出售，更不等于 Disney 买下了用户数据或整个产品**。[1][2]\n\n这是 A 级产业信号，不是因为“又一家 AI 公司倒下”，而是因为资产拆分、资金流向和责任归属第一次在这一案例中如此清楚地形成对照。它修正了一个容易偷换的判断：拥有用户、模型与高水平工程师，不代表三者必然组成可持续、可整体转让的企业资产。\n\n## 一、FACT｜三种价值并未一起成交\n\n**第一本账：技术许可。** Character Technologies 于 10 月 12 日申请美国 Chapter 11 破产保护，计划在法院监督下出售全部或大部分资产。公司公告披露，Disney Worldwide Services 拟以 **2,000 万美元**及过渡服务安排，取得部分知识产权和相关权利的**永久、非独家许可**，作为竞价程序的起始报价方（stalking horse）。交易仍允许更高或更优报价。[2][3] 这不是对 Character.AI 全公司估值 2,000 万美元，也不是 Disney 已买断基础模型、产品和数据。\n\n**第二本账：人才与组织能力。** 路透社 10 月 30 日报道，Disney 在破产申请前已聘用 Character.AI 原有 86 名员工中的 66 名，包括前 CEO，并预计未来三年向这些员工支付约 **1.8 亿美元**。[1] 这一数字是预计的三年人员支出，不是已经付清的收购对价；它也不能与 2,000 万美元许可价格直接相加，得到某种“企业总售价”。但二者的数量级差异揭示，买方对可在自身业务中使用的工程团队与技术使用权采用了不同的交易工具。\n\n**第三本账：用户关系、聊天历史与运营责任。** 路透社明确指出，Disney 的拟议许可不包括 Character.AI 聊天平台或用户数据、聊天历史。[1] 纽约州总检察长办公室 10 月 14 日发布的声明则说明，多州检察长关注破产出售中用户私密对话、年龄信息和其他敏感记录可能如何被转移，要求对未成年人安全、用户同意、删除权及后续使用施加保护。[4] 这意味着“用户数据没有卖给 Disney”与“用户数据已经获得最终保护”是两件不同的事；未来其他资产买家和法院裁定仍有待观察。\n\n**第四个事实：10 月 30 日的法律进展有明确边界。** 法官 Brendan Shannon 批准的是竞价程序，认为公司需要及时寻找买家；他没有在该听证会上批准针对 Disney 和相关员工的责任豁免。关于敏感聊天记录，法官表示可能任命隐私监察员，**但这不等于已正式任命**。公司预计 11 月 30 日再寻求资产出售批准。[1] 不应把程序性批准写成交易完成或州检察长所有异议已被实质驳回。\n\n**第五个事实：经营规模与可持续盈利出现断裂。** 据路透社援引破产材料，公司在广告和用户付费收入不足以覆盖人员、算力等支出时，每月亏损约 **800万—900万美元**。[1][5] 用户规模的公开口径并不完全一致：纽约州检察长公告称月度用户超过 2,000 万，另一篇路透社报道采用约 1,200 万活跃用户口径。[4][5] 两者统计定义、时间点可能不同，不能拼接计算付费率、单用户收入或获客效率。可以确认的只有：广泛使用没有自动转化为足以覆盖经营成本的现金流。\n\n## 二、INFERENCE｜破产程序暴露 AI 价值链的三个不同控制点\n\n**其一，技术能力与技术所有权不等价。** 买方可以通过非独家许可使用某些技术，不必买下全部产品、模型权利和历史责任。对模型及 Agent 创业公司而言，“技术有价值”不必然意味着原公司的股东、债权人或用户都能分享同一价值。技术许可可保留多买家可能性，也可能削弱剩余业务的独占性；真正影响交易价值的还包括许可范围、排他性、可转让性、维护能力和知识产权瑕疵。\n\n**其二，人才的可迁移性可能高于业务的可迁移性。** 大型平台可把熟悉模型、推理基础设施、产品工程和安全系统的人直接嵌入既有组织，绕过维持独立消费平台的获客、合规与算力支出。反过来，员工被大量聘走后，留在破产实体中的服务能否持续运营、是否仍有完整交付能力，也会成为其他买家必须评估的折价因素。这里不能简单断言“人才比产品值钱”：1.8 亿美元是跨三年的薪酬承诺，2,000 万美元是特定许可报价，现金流、交易标的与法律风险完全不同。\n\n**其三，用户上下文并不是可以自由搬运的训练燃料。** AI 伴侣产品的价值来自持续对话、个性化关系、用户信任与历史记录；但记录越敏感，越需要解释原始收集目的、合法使用范围、用户删除与退出权、未成年人保护，以及买家接手后的责任。即使数据技术上可复制，也不代表法律上、伦理上和商业上可无摩擦转移。对于任何宣称拥有“长期 Memory”的产品，**数据托管权、模型使用权、用户授权与产品持续服务责任**都应被分开审视。\n\n这三个控制点与 VELNAR 过去研究的 Enterprise Context / Semantic Authority 相邻，但不能直接等同。企业业务事实通常还涉及合同、数据控制者、审批链和操作授权；消费者私密聊天则面临不同的同意与安全约束。二者共同提示的是权利边界，而不是“所有 Context 都应该被资产化出售”。\n\n## 三、COUNTERARGUMENT｜为什么不能把这次破产写成 AI 伴侣或 AI-native 模式失败\n\n**第一，失败是多因素的。** 公司官方声明把压力归于法律、监管和运营环境，路透社则记录了算力、人才、营收及融资困难。[2][5] 不能仅凭一家企业的亏损断言 AI 陪伴需求不存在，也不能在没有分业务成本和收入明细的情况下证明推理成本是唯一根因。\n\n**第二，破产不意味着技术无用。** Disney 对部分技术提出报价并聘用团队，至少说明这些资产对特定买家存在潜在用途。但许可报价不是技术公允价值的完整测量，三年人员支出也不是产品价值的市场成交价。\n\n**第三，法律争议不能简化为既定司法事实。** 多州检察长对儿童安全、专业身份冒充、隐私保护提出严重指控和调查结论；这些应严肃对待，但不同诉讼与调查仍有各自的程序和举证标准。[4] 10 月 30 日法院准许推进竞价，并未裁定所有相关民事责任，也未消除潜在买家面临的监管约束。\n\n**第四，尚未看到最终资产买家和实际交割。** Disney 目前只拟取得有限范围的许可；可能还有其他买家竞争平台、其他知识产权或资产。若出现愿意承担合规成本并继续运营的买方，最终结果可能不同于“产品消失、人才被吸收”的简单叙事。[1][2]\n\n**第五，不能用用户数推断网络效应。** 对话产品的高频使用可能增加留存，也可能同步增加推理成本。是否形成网络效应，需证明用户增长会提高其他用户的价值、降低获客成本或改善单位经济，而不是仅看到长时使用或角色数量。\n\n## 四、VELNAR 的产业地图应该怎样更新\n\n**加强的判断：** AI-native 企业的资产不能只按“模型能力 × 用户量”理解。团队、可许可的技术、运营系统、用户关系、历史上下文、合规义务和未决诉讼具有不同的可转让性与价值捕获机制。资本市场在压力情境下会强迫这些差异显性化。\n\n**需要新增的观察维度：** 在研究 AI 公司并购或破产时，应分开记录四个问题：谁买走人才？谁取得什么范围的技术许可？谁继续履行客户与用户服务？谁有权处理历史数据并承担后续责任？如果只写“某巨头收购了某 AI 公司”，可能连交易对象都没有描述准确。\n\n**不改变的工程判断：** 这不要求 VELNAR 当前 Sales MVP 改做消费者伴侣、企业记忆交易平台或大型数据治理套件。对现有订单—库存—出库—跟踪链路，更现实的启发是继续明确业务事实来源、客户数据使用权限、操作授权、审计轨迹与退出/迁移责任。行业研究提供的是长期治理视角，不是新增功能清单。\n\n## 五、PREDICTION｜哪些后续证据会改变这项判断\n\n未来一至三个季度应跟踪：一是 11 月底前后是否出现真正购买并持续运营平台的竞标者，及最终获批的标的与金额；二是隐私监察员是否被任命、用户数据的删除和转移规则是否在法院文件中落实；三是 Disney 团队在新组织中的实际产品成果，能否与原 Character.AI 资产分开核验；四是其他 AI-native 企业是否出现类似“人才先迁移、技术按许可分拆、用户数据留在原主体”的可重复案例。\n\n**若这些交易结构反复出现，AI 产业的整合单位可能越来越不是完整创业公司，而是可以独立交易的人才、技术权利和运营入口。** 若后续有买方以可持续经济维持平台，也应修正对独立 AI 产品商业模式的悲观判断。两种结果目前都未得到证明。\n\n**值得继续讨论的问题：当一家 AI 产品的用户关系很深、数据却不能自由转让，投资者和收购方究竟该如何衡量“用户上下文”的价值，同时把信任、安全与持续服务义务计入成本？**\n\n---\n\n### 来源与证据边界\n\n[1] Reuters，2026-10-30，Character.AI moves ahead with asset sale over states' objections；法庭听证、竞价程序、员工转入、拟议许可范围、月度亏损及后续时间表。https://www.reuters.com/legal/litigation/characterai-moves-ahead-with-asset-sale-over-states-objections-2026-10-30/\n\n[2] Character.AI 官方博客，2026-10-12，An Update on Character.ai；Chapter 11、平台继续运营与可能终止的公司声明。https://blog.character.ai/an-update-on-character-ai/\n\n[3] Character Technologies / Business Wire，2026-10-12，Character.ai Initiates Voluntary Chapter 11 Proceeding to Facilitate Value-Maximizing Sale Process；2,000 万美元拟议非独家永久许可与法院监督的竞价安排。https://www.businesswire.com/news/home/20261012656385/en/Character.ai-Initiates-Voluntary-Chapter-11-Proceeding-to-Facilitate-Value-Maximizing-Sale-Process\n\n[4] New York Attorney General，2026-10-14，Attorney General James Urges Court to Protect Children and Consumers in Character.AI Bankruptcy；多州检察长对未成年人安全、用户聊天数据与出售条件的正式立场，属监管方陈述，不等于最终司法裁决。https://ag.ny.gov/press-release/2026/attorney-general-james-urges-court-protect-children-and-consumers-characterai\n\n[5] Reuters，2026-10-13，Character.AI files for bankruptcy, to sell some assets to Disney for $20 million；破产背景、运营成本与活跃用户统计口径。https://www.reuters.com/legal/litigation/characterai-files-bankruptcy-agrees-sell-some-assets-disney-20-million-2026-10-13/",
+  "sources": [
+    {
+      "title": "Reuters | Character.AI moves ahead with asset sale over states' objections",
+      "url": "https://www.reuters.com/legal/litigation/characterai-moves-ahead-with-asset-sale-over-states-objections-2026-10-30/",
+      "date": "2026-10-30"
+    },
+    {
+      "title": "Character.AI | An Update on Character.ai",
+      "url": "https://blog.character.ai/an-update-on-character-ai/",
+      "date": "2026-10-12"
+    },
+    {
+      "title": "Character Technologies | Chapter 11 sale process announcement",
+      "url": "https://www.businesswire.com/news/home/20261012656385/en/Character.ai-Initiates-Voluntary-Chapter-11-Proceeding-to-Facilitate-Value-Maximizing-Sale-Process",
+      "date": "2026-10-12"
+    },
+    {
+      "title": "New York Attorney General | Character.AI bankruptcy and consumer protections",
+      "url": "https://ag.ny.gov/press-release/2026/attorney-general-james-urges-court-protect-children-and-consumers-characterai",
+      "date": "2026-10-14"
+    },
+    {
+      "title": "Reuters | Character.AI files for bankruptcy",
+      "url": "https://www.reuters.com/legal/litigation/characterai-files-bankruptcy-agrees-sell-some-assets-disney-20-million-2026-10-13/",
+      "date": "2026-10-13"
+    }
+  ]
+}
