@@ -1,0 +1,32 @@
+{
+  "schema_version": "3.0",
+  "segment": "0035",
+  "items": [
+    {
+      "id": "2026-10-30-B7",
+      "date": "2026-10-30",
+      "grade": "B",
+      "title": "模型厂商开始持股企业交付渠道：FDE 生态从培训合作走向资本绑定",
+      "themes": [
+        "Enterprise Agent",
+        "FDE",
+        "Anthropic",
+        "phData",
+        "Gryphon Investors",
+        "Claude Partner Network",
+        "Enterprise AI Distribution",
+        "AI-native Services",
+        "Enterprise Context",
+        "Semantic Layer",
+        "Capital Allocation",
+        "Implementation Partners",
+        "Model Platform",
+        "Workflow Ownership",
+        "Vertical AI",
+        "AI Industry Control Points"
+      ],
+      "deck": "phData 10 月 28 日宣布获得原控股投资方 Gryphon 的新融资，Anthropic 参与投资，计划新增超过 300 名数据与 AI 专家。相较培训 FDE 或签署渠道合作，模型供应商开始用资本参与企业部署服务网络；但金额、估值、持股、排他条款、交付利润与客户结果均未披露。新增 B 级证据指向企业 AI 分发的资本绑定，而非服务已获得软件规模经济。",
+      "body_format": "article_text"
+    }
+  ]
+}
