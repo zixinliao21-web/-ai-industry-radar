@@ -114,6 +114,32 @@
       ],
       "deck": "Amazon 10 月 29 日披露 Bedrock Token 量同比近 17 倍、财富 500 强客户相关支出近 7 倍，AgentCore 已有数万客户使用，第三季度部署 Agent 数是此前三个季度合计的两倍。新增 A 级信号是模型推理与托管 Agent 执行层同时出现可观察的规模指标，而非 Agent 收入、业务完成率或利润已获证明；AWS 整体收入与利润不能归因于 Agent，Amazon 过去十二个月自由现金流仍为负 424 亿美元。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-30-B3",
+      "date": "2026-10-30",
+      "grade": "B",
+      "title": "Agent 购物的商品事实正在被收购：搜索平台开始向源头属性补全延伸",
+      "themes": [
+        "Agent Commerce",
+        "Product Data",
+        "Product Information Management",
+        "Enterprise Search",
+        "Coveo",
+        "Anglera",
+        "Enterprise Context",
+        "Semantic Authority",
+        "Vertical AI",
+        "B2B Commerce",
+        "AI-native Acquisition",
+        "Data Provenance",
+        "Catalog Enrichment",
+        "Manufacturing",
+        "Enterprise AI",
+        "Workflow Ownership"
+      ],
+      "deck": "Coveo 10 月 29 日完成收购 Anglera，把带来源引用的商品属性抽取、标准化与验证接入企业电商搜索；它同时披露季度 SaaS 订阅收入 3910 万美元、同比增 9%。新的 B 级信号是 Agent Commerce 的竞争不只在购物入口和支付授权，还在商品尺寸、材质、兼容性等可追溯事实的生产与更新。但交易金额未披露，300 个 SKU 的自报 A/B 测试不能证明销售额、利润或外部 Agent 交易已经规模化。",
+      "body_format": "article_text"
     }
   ]
 }
