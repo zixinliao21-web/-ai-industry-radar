@@ -165,6 +165,32 @@
       ],
       "deck": "Blue Owl、Ares 与 Blackstone 在 10 月下旬财报和采访中强调，以 12—20 年长期租约、投资级超大规模云商和租金递增条款承接 AI 数据中心资产。Blue Owl 披露的 130 多个运营或在建中心与近 14GW 容量并非已全部上电；其季度 126 亿美元募资也不是 AI 专属资金。新增 B 级证据是 AI 算力资本栈里“拥有机房并收租”的风险层正被大型另类资产管理机构组织化，而租约并不能消除建设、供电、客户集中和终端需求风险。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-30-B5",
+      "date": "2026-10-30",
+      "grade": "B",
+      "title": "已运营 GPU 开始再融资：AI 算力的资本循环从采购走向资产回收",
+      "themes": [
+        "AI Infrastructure",
+        "GPU Financing",
+        "IREN",
+        "Wingspire",
+        "Equipment Refinancing",
+        "Asset-backed Lending",
+        "AI Cloud",
+        "GPU Residual Value",
+        "Contracted Cash Flow",
+        "Capital Recycling",
+        "Private Credit",
+        "Blue Owl",
+        "AI Infrastructure Economics",
+        "Counterparty Risk",
+        "Hardware Depreciation",
+        "AI Industry Control Points"
+      ],
+      "deck": "IREN 与 Wingspire 10 月 28 日宣布完成 3.63 亿美元设备再融资，以已部署、产生收入的 GPU 服务器及网络设备为主要担保，并由多年客户合同支持。增量不是 AI 算力首次获得贷款，而是资金可以在设备投入运营后回流，再投入扩张；但公告未披露利率、期限、抵押成数与违约条款，不能据此认定 GPU 残值稳定、贷款便宜或行业已形成低风险融资循环。",
+      "body_format": "article_text"
     }
   ]
 }
