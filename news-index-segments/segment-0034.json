@@ -140,6 +140,31 @@
       ],
       "deck": "Coveo 10 月 29 日完成收购 Anglera，把带来源引用的商品属性抽取、标准化与验证接入企业电商搜索；它同时披露季度 SaaS 订阅收入 3910 万美元、同比增 9%。新的 B 级信号是 Agent Commerce 的竞争不只在购物入口和支付授权，还在商品尺寸、材质、兼容性等可追溯事实的生产与更新。但交易金额未披露，300 个 SKU 的自报 A/B 测试不能证明销售额、利润或外部 Agent 交易已经规模化。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-30-B4",
+      "date": "2026-10-30",
+      "grade": "B",
+      "title": "AI 算力融资出现“长期房东”：15—20 年租约锁住付款人，却锁不住交付风险",
+      "themes": [
+        "AI Infrastructure",
+        "Data Centers",
+        "Blue Owl",
+        "Ares Management",
+        "Blackstone",
+        "Long-term Leases",
+        "Private Credit",
+        "Real Assets",
+        "Hyperscalers",
+        "Counterparty Risk",
+        "Power Delivery",
+        "Capital Stack",
+        "AI Infrastructure Economics",
+        "Concentration Risk",
+        "AI Industry Control Points"
+      ],
+      "deck": "Blue Owl、Ares 与 Blackstone 在 10 月下旬财报和采访中强调，以 12—20 年长期租约、投资级超大规模云商和租金递增条款承接 AI 数据中心资产。Blue Owl 披露的 130 多个运营或在建中心与近 14GW 容量并非已全部上电；其季度 126 亿美元募资也不是 AI 专属资金。新增 B 级证据是 AI 算力资本栈里“拥有机房并收租”的风险层正被大型另类资产管理机构组织化，而租约并不能消除建设、供电、客户集中和终端需求风险。",
+      "body_format": "article_text"
     }
   ]
 }
