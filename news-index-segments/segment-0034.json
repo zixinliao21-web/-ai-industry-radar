@@ -191,6 +191,31 @@
       ],
       "deck": "IREN 与 Wingspire 10 月 28 日宣布完成 3.63 亿美元设备再融资，以已部署、产生收入的 GPU 服务器及网络设备为主要担保，并由多年客户合同支持。增量不是 AI 算力首次获得贷款，而是资金可以在设备投入运营后回流，再投入扩张；但公告未披露利率、期限、抵押成数与违约条款，不能据此认定 GPU 残值稳定、贷款便宜或行业已形成低风险融资循环。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-30-B6",
+      "date": "2026-10-30",
+      "grade": "B",
+      "title": "语音 AI 仅约占通话分钟数 1%：基础设施收入增长不能等同 Agent 普及",
+      "themes": [
+        "Enterprise AI",
+        "Voice Agent",
+        "Twilio",
+        "Contact Center",
+        "AI Adoption",
+        "AI Monetization",
+        "Enterprise Software",
+        "Communications Infrastructure",
+        "Workflow Ownership",
+        "AI-native Companies",
+        "Customer Support",
+        "Agent Economics",
+        "Production Evidence",
+        "Enterprise Context",
+        "Agent Governance"
+      ],
+      "deck": "Twilio 10 月 29 日财报显示第三季度收入 15.60 亿美元、同比增长 20%，管理层称语音业务增长超过 20%，但电话会议同时估计 Voice AI 仅占其所讨论的可用语音分钟数约 1%。客户案例已有七至八位数合同和部分来电自动化，说明局部生产落地与总体渗透率低可以并存；1% 不是全球行业统计，语音收入也不能全部归因于 AI。",
+      "body_format": "article_text"
     }
   ]
 }
