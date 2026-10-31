@@ -56,6 +56,33 @@
       ],
       "deck": "MoonPay 10 月 29 日宣布 Whop 接入 PayBox Markets，宣称一个市场级连接即可让兼容 Agent 搜索、准备订单并按用户授权付款，原有 Whop 商家无需逐一改造。其权限模型区分逐笔审批、额度审批与受限自主执行；但数十万商家是潜在覆盖范围而非实际 Agent 成交商家数，交易量、支付成功率和争议率未披露，且 PayBox 由不受相同监管保护的集团实体提供。新增 B 级证据是 Agent Commerce 可能出现跨模型与商家网络的市场级接入/授权聚合层，而非自动购物已规模化。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-31-B4",
+      "date": "2026-10-31",
+      "grade": "B",
+      "title": "算力建设开始接受电费选票审查：谁承担电网成本正在成为新的交付闸门",
+      "themes": [
+        "AI Infrastructure",
+        "Data Centers",
+        "Grid Economics",
+        "Utility Regulation",
+        "Ratepayer Protection",
+        "Cost Allocation",
+        "Electricity Affordability",
+        "AI Capital Stack",
+        "Energy Policy",
+        "Public Utility Commissions",
+        "Capital Recovery",
+        "Political Risk",
+        "Infrastructure Concentration",
+        "Social License",
+        "AI Industry Control Points",
+        "Power Delivery",
+        "United States"
+      ],
+      "deck": "美国2026年中期选举前，36州州长选举及9州公用事业监管委员选举将电费负担推上政治议程；PowerLines梳理的74名州长候选人中有20人承诺保护居民免于承担数据中心相关电网成本。同期美国能源公用事业企业2026—2030年约1.295万亿美元资本开支预测与前三季度231亿美元费率上调申请形成张力。新增B级证据是AI算力园区的交付不只受电力容量、许可和融资约束，还取决于监管机构如何分配新增负荷成本及允许的投资回报；竞选承诺尚非生效政策，电价上涨也不能全部归因于AI。",
+      "body_format": "article_text"
     }
   ]
 }
