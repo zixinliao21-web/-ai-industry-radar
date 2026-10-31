@@ -196,6 +196,34 @@
       ],
       "deck": "SAP CFO 10月28日向路透确认，已在部分产品中用满足任务标准的低成本模型替换昂贵模型；公司使用70多种模型，并预计相关措施将帮助实现未来两年逾20亿欧元的AI驱动效率收益。SAP官方定价又显示，2026年标准Joule Agents按每次动作0.02 AI Units计量，而非按底层Token或整项业务结果收费。新增A级信号是企业软件商正在将模型采购与动作计费之间的成本差纳入利润管理；但20亿欧元不是模型替换单独贡献的已实现利润，模型也不能在数据主权、质量和合规限制下任意互换。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-31-A5",
+      "date": "2026-10-31",
+      "grade": "A",
+      "title": "内容被 AI 使用，不再保证用户被送回来源：Reddit 暴露搜索分发权的断层",
+      "themes": [
+        "AI Industry Control Points",
+        "AI Search",
+        "Distribution",
+        "Reddit",
+        "Google",
+        "Data Licensing",
+        "Content Rights",
+        "Traffic Referral",
+        "AI-native Platforms",
+        "Personal Context",
+        "Platform Economics",
+        "Open Web",
+        "Search Monetization",
+        "User Relationship",
+        "AI Business Model",
+        "Data Access",
+        "Enterprise Context",
+        "Information Supply Chain"
+      ],
+      "deck": "Reddit 10 月 29 日向 SEC 提交的股东信披露：10 月搜索引荐流量平均每周减少逾 100 万次，若趋势持续，第四季度日活独立用户数可能从约 1.30 亿基数下降低双位数百分比；但其第三季度收入仍增长 53%。对照 Reddit 与 Google 既有数据 API 合作，新增 A 级证据是内容供给、AI 使用、搜索分发与用户关系不再天然绑定。下降原因尚不能全部归于 AI 搜索，数据许可收入也不能与流量损失直接抵销。",
+      "body_format": "article_text"
     }
   ]
 }
