@@ -83,6 +83,33 @@
       ],
       "deck": "美国2026年中期选举前，36州州长选举及9州公用事业监管委员选举将电费负担推上政治议程；PowerLines梳理的74名州长候选人中有20人承诺保护居民免于承担数据中心相关电网成本。同期美国能源公用事业企业2026—2030年约1.295万亿美元资本开支预测与前三季度231亿美元费率上调申请形成张力。新增B级证据是AI算力园区的交付不只受电力容量、许可和融资约束，还取决于监管机构如何分配新增负荷成本及允许的投资回报；竞选承诺尚非生效政策，电价上涨也不能全部归因于AI。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-31-B5",
+      "date": "2026-10-31",
+      "grade": "B",
+      "title": "企业 Agent 治理层开始交出真实调用量：250 万次调用不等于 250 万个自主任务",
+      "themes": [
+        "Enterprise Agent",
+        "Agent Identity",
+        "MCP Gateway",
+        "Agent Control Plane",
+        "Mintive",
+        "Enterprise Security",
+        "Delegated Authorization",
+        "Least Privilege",
+        "Audit Trail",
+        "Enterprise Context",
+        "Tool Access",
+        "Agent Monitoring",
+        "Enterprise AI Adoption",
+        "Workflow Ownership",
+        "AI Infrastructure",
+        "AI Business Model",
+        "Governance"
+      ],
+      "deck": "Mintive 10月29日披露，已服务50多家付费企业客户，日处理超过250万次Agent调用、七个月累计超过2亿次，并获700万美元新融资。Modern Treasury案例显示受治理的MCP网关可将跨系统排查缩短为几分钟初稿，但仍保留人工复核。新增B级证据是独立于模型的身份、工具授权与审计网关已出现付费采用和调用量；调用次数并不代表独立Agent数量、端到端任务完成率、营收或安全有效性。",
+      "body_format": "article_text"
     }
   ]
 }
