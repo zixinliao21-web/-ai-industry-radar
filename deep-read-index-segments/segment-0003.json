@@ -1,0 +1,38 @@
+{
+  "schema_version": "3.0",
+  "segment": "0003",
+  "items": [
+    {
+      "id": "DR-2026-017",
+      "added_date": "2026-10-31",
+      "title": "How employment is changing at Anthropic",
+      "author": [
+        "Nathan Wilmers",
+        "Regina Catipon",
+        "Maxim Massenkoff",
+        "Peter McCrory"
+      ],
+      "publication": "The Anthropic Institute",
+      "institution": "Anthropic",
+      "source_type": "research_report",
+      "source_url": "https://www.anthropic.com/research/employment-at-anthropic",
+      "original_publish_date": "2026-10-16",
+      "estimated_reading_time": "约 30–45 分钟（正文与图表精读估算）",
+      "topic": "AI-native 组织与劳动生产率",
+      "themes": [
+        "AI Agent",
+        "组织设计",
+        "劳动经济学",
+        "团队管理",
+        "招聘",
+        "判断力",
+        "企业案例",
+        "人才培养"
+      ],
+      "access": {
+        "type": "free"
+      },
+      "content_status": "published_verbatim"
+    }
+  ]
+}
