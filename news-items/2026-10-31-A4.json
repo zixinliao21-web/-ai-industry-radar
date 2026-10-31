@@ -1,0 +1,51 @@
+{
+  "id": "2026-10-31-A4",
+  "date": "2026-10-31",
+  "grade": "A",
+  "title": "企业 AI 的模型采购权开始变成利润控制点：SAP 的 70 多个模型并非同质商品",
+  "themes": [
+    "Enterprise AI",
+    "SAP",
+    "Model Routing",
+    "Model Economics",
+    "Agent Unit Economics",
+    "AI Units",
+    "Joule Agents",
+    "Enterprise Software",
+    "Multi-model",
+    "Cost Optimization",
+    "Model Procurement",
+    "Agent Pricing",
+    "Workflow Ownership",
+    "AI Industry Control Points",
+    "AI Governance",
+    "Data Sovereignty",
+    "Enterprise Context",
+    "Margin Structure"
+  ],
+  "deck": "SAP CFO 10月28日向路透确认，已在部分产品中用满足任务标准的低成本模型替换昂贵模型；公司使用70多种模型，并预计相关措施将帮助实现未来两年逾20亿欧元的AI驱动效率收益。SAP官方定价又显示，2026年标准Joule Agents按每次动作0.02 AI Units计量，而非按底层Token或整项业务结果收费。新增A级信号是企业软件商正在将模型采购与动作计费之间的成本差纳入利润管理；但20亿欧元不是模型替换单独贡献的已实现利润，模型也不能在数据主权、质量和合规限制下任意互换。",
+  "body_format": "article_text",
+  "article_text": "# 企业 AI 的模型采购权开始变成利润控制点：SAP 的 70 多个模型并非同质商品\n\n**核心判断｜当企业软件不再把每一次 AI 调用的原始 Token 成本直接传给客户，模型选择就会从工程参数变成毛利管理能力。** SAP CFO Dominik Asam 于 2026 年 10 月 28 日向路透社确认：公司已经在部分产品中，把成本较高的模型替换为能达到相应任务质量要求的低成本方案；SAP 使用的模型超过 70 种，供应方包括 OpenAI、Anthropic 与 Google。[1] 同时，SAP 对自家交付的 Joule Agents 采用按动作消耗 AI Units 的商业计量方式，而非直接把每百万 Token 的底层价格呈现给客户。[2]\n\n这不是「便宜模型已经打败前沿模型」，也不是「企业 AI 的 ROI 已经被证明」。**新增的产业证据在于：一家拥有真实企业工作流、采购入口和计费权的大型软件公司，开始公开把跨模型选型与经营利润联系起来。** 它强化了我们对应用层价值捕获的判断，但仍不足以证明模型完全商品化。本期定为 **A 级**：重要结构验证，而非产业地图彻底重写。\n\n## 一、FACT｜先把模型数量、效率目标与商业计量拆开\n\n**第一，模型替换是已经发生的经营动作，不只是未来产品路线。** 路透社 10 月 28 日采访中，Asam 表示 SAP 已将包括内部咨询助手在内的部分产品中的昂贵模型换成更便宜、但仍符合所需性能的替代模型。公司越来越倾向于为具体任务选择达到标准的最低成本模型。这里没有公布被替换的模型清单、评测集、生产错误率、合同折扣或单次任务节省额。[1] 因此「70 多个模型」表示供应与选型范围，不表示 70 个模型在任一业务任务上都可无损互换。\n\n**第二，逾 20 亿欧元是未来两年的 AI 驱动效率收益预期，不是模型替换独自创造的已实现利润。** 路透社对报道做过明确更正：这项替换措施预计是*帮助*公司实现相关收益，而非单独生成全部收益。[1] 不能将该目标写成已到账现金、已审计节省额、模型调用费下降 20 亿欧元，或对所有 SAP 客户可复制的 ROI。SAP 还表示，随着 AI 使用量增长，其总体 AI 支出预计仍会增加；目标是在规模扩大时保持健康利润率，而不是绝对减少 AI 支出。[1]\n\n**第三，客户计费单位与模型供应商的成本单位并不相同。** SAP 公开的 2026 年商业条款将自家交付的自治企业 Agent 定为每次 Agent action 消耗 0.02 AI Units；一次业务任务可以包含多个 action。基础 AI 能力可包含在云订阅中，Premium AI 主要按 AI Units 使用量收费，Joule for Consultants 仍保留按用户的特殊计费方式；自建 Agent 的生产运行时又可能按计算、存储、交易和 Token 等资源计费。[2] 所以更精确的说法是：**SAP 对部分成品 Agent 采取按动作计费，不是对所有 AI 产品统一按「完成一项业务结果」收费。** 动作、成功任务、业务价值、利润是四种不同指标。\n\n**第四，模型来源是采购约束，而不是仅有价格的竞赛。** Asam 表示，政府与受监管行业客户会对模型来源提出明确要求，部分客户排除特定来源；欧洲客户对本地方案的需求也在增长。[1] 因此真正的最低成本选择，必须先满足数据驻留、许可、隐私、安全和任务质量门槛。一个 Token 报价更低却不符合采购政策的模型，实际可选成本并不是「更便宜」，而是「不可用」。\n\n## 二、INFERENCE｜模型成本下降，利润未必回到模型公司\n\n从价值链看，至少存在三种不同权利。\n\n**模型供应方**提供推理能力，决定可获得的质量、延迟、能力上限与基础价格。更强模型可能以更少步骤完成任务，也可能在高风险流程里不可替代。模型市场并非同质商品池。\n\n**企业软件平台**掌握任务定义、客户关系、商业计量、模型选择和实际工作流的执行入口。如果它能在保持成功率的前提下更换底层模型，客户付费单位又不与 Token 成本逐项同步，那么采购成本下降可能先体现为平台的毛利空间，而不是自动传导为客户降价。SAP 的披露为这种机制提供了现实例子；但没有按 Agent 的收入与成本明细，仍不能量化实际毛利增幅。[1][2]\n\n**企业客户**保留业务事实、授权与验收权。SAP 可以替换某个推理模型，却不能因为替换成功就自动证明一笔付款、库存调整或财务结账是正确的。尤其在涉及客户、供应商和产品主数据的业务里，实体身份、审批链、异常处理和可追溯证据仍决定任务能否被正式接受。SAP 在 10 月 29 日 TechEd 材料中强调 Business Data Cloud、主数据统一和业务语义的作用，也说明模型选择权依赖上下文基础设施，而不是脱离业务数据单独运行。[4]\n\n由此可提出一个有边界的产业判断：**当模型能力趋于多来源可采购，拥有客户工作流与验收入口的平台可能获得更强的模型议价权；但议价权并不等于模型供应方失去差异化。** 具体价值分配还取决于客户合同是否锁定价格、模型调用量是否增加、推理质量是否稳定以及监管是否允许替换。\n\n## 三、与 VELNAR 已有判断的真正增量\n\n9 月的研究（2026-09-22-A8）已经讨论过：模型在相同任务上减少 Token、步骤和工具调用，可能降低每次成功任务的总成本。那是**模型能力与执行效率曲线**的变化。\n\n本次证据不同：**模型购买者已经在真实企业软件产品中做成本替换，并公开将其纳入经营利润逻辑。** 竞争单位从「哪款模型在基准上更划算」推进到「谁有权定义合格任务、选择供应商、向客户计量并承担结果责任」。如果同一个企业 Agent 能按任务质量门槛在多个模型之间迁移，那么模型可替换性本身就成为平台的采购筹码；反过来，真正稀缺的专业模型仍能收取溢价。\n\n这也修正了一个容易发生的误读：**按动作计费不是按结果付费。** 若一个 Agent 为完成同一业务任务需要更多动作、失败重试或人工复核，客户 AI Units 账单与平台推理成本都可能上升，而业务成果并未同比增长。按动作的透明计量可以改善收费与使用的对应关系，却不能单独证明客户 ROI。\n\n## 四、反论｜为什么不能宣布「模型已经商品化」\n\n**反论一：不同任务对模型的最低合格标准不同。** 高风险财务判断、跨系统异常处理、长上下文推理和多语种合规任务，可能需要特定能力。低成本替换能在部分场景成立，不代表所有场景均可迁移。没有对照实验，就不能声称质量完全等价。\n\n**反论二：平台有成本优化权，不代表有无限定价权。** 大客户可以要求折扣、最低服务水平、数据主权和模型供应商清单，也可能自行采购模型并构建执行层。节省下来的成本会在平台、客户、云商与模型供应商之间重新分配，不能预先假定全部归 SAP。\n\n**反论三：20 亿欧元预期不是可拆分的模型采购损益表。** 路透报道没有给出模型替换对该目标的贡献比例，也没有公开 SAP 成品 Agent 的收入、毛利率、错误赔付或人力复核成本。[1] 目前只能证明公司正在采取该措施，不能证明它已建立高利润的独立 Agent 业务。\n\n**反论四：多模型可能增加治理复杂度。** 每增加一种供应方，就可能引入新的数据处理条款、日志策略、可用性、模型版本漂移和审计要求。真正的「最便宜合格模型」应比较风险调整后的端到端成本，而不是公开 Token 单价。\n\n## 五、对 VELNAR 的有界意义\n\n**产业地图得到加强的部分：** 企业 Agent 的控制点除了 Semantic Authority、Workflow、Runtime 和客户分发，还包括**可验证的模型采购与切换权**。谁定义质量门槛、掌握真实业务结果、保有供应商替换自由，谁更可能在模型成本下降时保留价值。\n\n**不应得出的结论：** VELNAR 现在就必须自建多模型路由器、推出按动作计费或重构 Sales MVP。SAP 拥有成熟的企业客户、采购合同、财务数据和多产品工作流；小型项目尚未达到同样的流量规模与成本结构。过早引入动态路由反而可能扩大错误归因和评测复杂度。\n\n**当前工程不变：** 化妆品包材 Sales MVP 仍以订单、库存、证据验证、确定性 State/Policy、受控执行与可核验结果为主。未来只有当真实任务的质量基线稳定、成本有显著规模、供应商替换可回归验证时，才有必要把模型成本优化列入独立决策。\n\n## 六、PREDICTION｜接下来该观察什么\n\n若这条机制继续成立，更多企业软件商可能开始披露按任务/动作的计量单位、模型选择策略、跨模型评测门槛和单位执行毛利，而不只披露 AI 功能数量或 Token 消耗。若模型替换带来质量下降、人工复核上升或客户拒绝跨供应商切换，则「模型采购权提升利润率」的推论必须收缩。\n\n**值得带回 GPT 讨论的问题：** 在企业 Agent 中，真正可以持续收费的单位应是 Token、Agent action、成功业务任务，还是可审计的业务结果？如果我们选择「成功业务任务」，应由谁定义成功、失败重试由谁承担，以及什么证据能够阻止供应商用更多动作冒充更高价值？\n\n---\n\n### 来源与证据边界\n\n[1] Reuters，2026-10-28，SAP CFO 对模型替换、70 多个模型、效率收益目标与模型来源限制的采访；注意原报道已更正「帮助产生」而非「单独产生」效率收益：https://www.reuters.com/world/china/sap-swaps-costly-ai-models-cheaper-alternatives-targets-over-2-bln-gains-2026-10-28/\n\n[2] SAP 官方 Business AI Pricing，访问于 2026-10-31，2026 年 Joule Agents 按 action 消耗 AI Units、不同产品计费边界：https://www.sap.com/mena/products/artificial-intelligence/pricing.html\n\n[3] Reuters，2026-07-23，SAP CFO 此前对企业 AI 应进入核心流程、按任务质量与成本选工具的表述（背景而非本次新事实）：https://www.reuters.com/business/sap-cfo-says-ai-must-move-beyond-chatbot-low-hanging-fruit-before-seeing-returns-2026-07-23/\n\n[4] SAP News Center，2026-10-29，SAP TechEd 关于 Business Data Cloud、SAP Reltio 与企业业务上下文的官方说明：https://news.sap.com/2026/10/sap-lakehouse-new-data-fabric-innovations-sap-bdc-autonomous-enterprise/\n\n**证据说明：** SAP 官方商业定价与技术公告属于厂商披露；模型替换与 20 亿欧元目标来自路透社对 CFO 的采访，未见按模型/任务拆分的审计利润数据。事实、产业推论和预测在正文中分别标识。",
+  "sources": [
+    {
+      "title": "Reuters | SAP swaps costly AI models for cheaper alternatives, targets over €2 bln in gains",
+      "url": "https://www.reuters.com/world/china/sap-swaps-costly-ai-models-cheaper-alternatives-targets-over-2-bln-gains-2026-10-28/",
+      "date": "2026-10-28"
+    },
+    {
+      "title": "SAP | SAP AI plans and pricing",
+      "url": "https://www.sap.com/mena/products/artificial-intelligence/pricing.html",
+      "date": "2026-10-31"
+    },
+    {
+      "title": "Reuters | SAP CFO says AI must move beyond chatbot low-hanging fruit",
+      "url": "https://www.reuters.com/business/sap-cfo-says-ai-must-move-beyond-chatbot-low-hanging-fruit-before-seeing-returns-2026-07-23/",
+      "date": "2026-07-23"
+    },
+    {
+      "title": "SAP News Center | Advancing SAP Lakehouse and New Data Fabric Innovations",
+      "url": "https://news.sap.com/2026/10/sap-lakehouse-new-data-fabric-innovations-sap-bdc-autonomous-enterprise/",
+      "date": "2026-10-29"
+    }
+  ]
+}
