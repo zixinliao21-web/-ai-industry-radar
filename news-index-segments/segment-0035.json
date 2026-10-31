@@ -113,6 +113,33 @@
       ],
       "deck": "Character.AI 10月30日获准推进破产资产竞价程序：Disney 拟以2000万美元取得部分技术的非独家永久许可，却另计划三年向66名转入员工支付约1.8亿美元；平台和用户聊天记录不在该许可范围。法院只批准竞价程序，尚未批准资产出售或责任豁免。新增A级信号是AI-native公司的价值与责任在危机中被拆成三种权利，用户规模既不能证明可持续经济，也不能让敏感上下文自由转让。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-31-B2",
+      "date": "2026-10-31",
+      "grade": "B",
+      "title": "实验机器人装机量不是自主科研规模：真正稀缺的是可验证的物理实验反馈",
+      "themes": [
+        "AI for Science",
+        "Physical AI",
+        "Laboratory Robotics",
+        "Opentrons",
+        "Autonomous Laboratories",
+        "Experimental Data",
+        "Scientific Workflow",
+        "Agent Execution",
+        "Protocol Validation",
+        "Domain Grounding",
+        "Execution Trace",
+        "Reproducibility",
+        "Enterprise Context",
+        "Data Rights",
+        "Vertical AI",
+        "Robotics Economics",
+        "AI Industry Control Points"
+      ],
+      "deck": "Opentrons 10月29日宣布4000万美元E轮融资，称全球部署超过1.1万台实验机器人、覆盖80多个国家，并将资金投向AI实验执行和数据基础设施。新增B级证据不是1.1万台机器人已在自主科研，而是成熟设备网络正被组织成“实验计划→受控执行→可复核数据→模型反馈”的潜在平台。公司未披露AI闭环活跃台数、数据使用权或科研产出；独立论文显示协议验证与物理故障检测仍是实质性瓶颈。",
+      "body_format": "article_text"
     }
   ]
 }
