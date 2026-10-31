@@ -29,6 +29,33 @@
       ],
       "deck": "快手10月30日港交所公告确认，可灵AI业务承接主体北京可灵完成约198.02亿元增资交割；两笔未按期付款的剩余认购合计约6.45亿元被终止。交割及激励计划额度全额使用的假设下，Lucky Labs持66.68%股权、52.45%表决权，CEO盖坤以3.02%股权对应23.72%表决权。7月协议已赋予投资者特定条件下按本金加年化8%单利要求回购的权利。新增A级证据不是AI视频已经盈利，而是大额AI业务剥离融资同时配置了现金、控制权与有条件退出保障，必须分开衡量。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-31-B3",
+      "date": "2026-10-31",
+      "grade": "B",
+      "title": "商家不必逐个对接 Agent：交易聚合层开始争夺市场级入口",
+      "themes": [
+        "Agent Commerce",
+        "MoonPay",
+        "PayBox Markets",
+        "Whop",
+        "Marketplace Aggregation",
+        "Merchant Distribution",
+        "Agent Authorization",
+        "Delegated Authority",
+        "Payment Control Plane",
+        "Agent Identity",
+        "Agent Commerce Infrastructure",
+        "Commerce Distribution",
+        "Merchant Acceptance",
+        "Payment Risk",
+        "AI Industry Control Points",
+        "Personal Agent",
+        "Platform Economics"
+      ],
+      "deck": "MoonPay 10 月 29 日宣布 Whop 接入 PayBox Markets，宣称一个市场级连接即可让兼容 Agent 搜索、准备订单并按用户授权付款，原有 Whop 商家无需逐一改造。其权限模型区分逐笔审批、额度审批与受限自主执行；但数十万商家是潜在覆盖范围而非实际 Agent 成交商家数，交易量、支付成功率和争议率未披露，且 PayBox 由不受相同监管保护的集团实体提供。新增 B 级证据是 Agent Commerce 可能出现跨模型与商家网络的市场级接入/授权聚合层，而非自动购物已规模化。",
+      "body_format": "article_text"
     }
   ]
 }
