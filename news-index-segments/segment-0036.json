@@ -110,6 +110,33 @@
       ],
       "deck": "Mintive 10月29日披露，已服务50多家付费企业客户，日处理超过250万次Agent调用、七个月累计超过2亿次，并获700万美元新融资。Modern Treasury案例显示受治理的MCP网关可将跨系统排查缩短为几分钟初稿，但仍保留人工复核。新增B级证据是独立于模型的身份、工具授权与审计网关已出现付费采用和调用量；调用次数并不代表独立Agent数量、端到端任务完成率、营收或安全有效性。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-10-31-B6",
+      "date": "2026-10-31",
+      "grade": "B",
+      "title": "训练退出不等于退出 AI 答案：网页内容使用权开始被拆成独立协议",
+      "themes": [
+        "AI Industry Control Points",
+        "AI Training",
+        "AI Grounding",
+        "AI Search",
+        "Content Rights",
+        "Publisher Choice",
+        "IETF",
+        "Web Standards",
+        "Robots.txt",
+        "OpenAI",
+        "Google",
+        "Microsoft",
+        "Anthropic",
+        "Data Licensing",
+        "Search Distribution",
+        "Platform Economics",
+        "Enterprise Context"
+      ],
+      "deck": "10月30日，IETF出现跨厂商AI训练偏好令牌草案，OpenAI、Google和Microsoft公开承诺支持；微软另将AI回答的grounding与训练分开管理，并给出2027年迁移时间表。新增B级证据是内容供给方的训练偏好正在获得可复用接口，而不是已获得强制执行、内容收费或搜索流量回流。训练、回答引用、搜索收录和商业授权仍是不同权利。",
+      "body_format": "article_text"
     }
   ]
 }

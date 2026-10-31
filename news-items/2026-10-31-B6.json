@@ -1,0 +1,50 @@
+{
+  "id": "2026-10-31-B6",
+  "date": "2026-10-31",
+  "grade": "B",
+  "title": "训练退出不等于退出 AI 答案：网页内容使用权开始被拆成独立协议",
+  "themes": [
+    "AI Industry Control Points",
+    "AI Training",
+    "AI Grounding",
+    "AI Search",
+    "Content Rights",
+    "Publisher Choice",
+    "IETF",
+    "Web Standards",
+    "Robots.txt",
+    "OpenAI",
+    "Google",
+    "Microsoft",
+    "Anthropic",
+    "Data Licensing",
+    "Search Distribution",
+    "Platform Economics",
+    "Enterprise Context"
+  ],
+  "deck": "10月30日，IETF出现跨厂商AI训练偏好令牌草案，OpenAI、Google和Microsoft公开承诺支持；微软另将AI回答的grounding与训练分开管理，并给出2027年迁移时间表。新增B级证据是内容供给方的训练偏好正在获得可复用接口，而不是已获得强制执行、内容收费或搜索流量回流。训练、回答引用、搜索收录和商业授权仍是不同权利。",
+  "body_format": "article_text",
+  "article_text": "# 训练退出不等于退出 AI 答案：网页内容使用权开始被拆成独立协议\n\n**核心判断｜AI 时代的网页内容控制权，正在从“让不让机器人抓取”拆成“能否用于训练、能否用于生成答案、能否进入搜索、是否获得商业许可”几套相互独立的关系。** 2026 年 10 月 30 日，Anthropic 的 Kevin Kelley 提交了一份 IETF Internet-Draft，提出在 robots.txt 中用共同的“AI 训练偏好令牌”表达网站对生成式模型训练的选择。[1] 同日，OpenAI、Google 和 Microsoft 分别公开支持该方向；Microsoft 进一步提出与训练独立的 AI grounding（用于生成答案的检索参考）控制。[2][3][4]\n\n**本条评级 B。** 这是一个有一手标准草案、跨厂商表态和具体实施时间表的结构性增量，却不是已经生效的行业法律或统一许可制度。它也不意味着模型公司会为内容付费，或内容网站的搜索流量会自动恢复。与 VELNAR 10 月 31 日对 Reddit“内容被 AI 使用不等于用户回访”的观察不同，本次新增的是**内容提供者开始获得跨厂商表达部分使用偏好的共同接口，但不同用途的实际解释权仍分散在平台手里**。\n\n## 一、FACT｜共同令牌只管训练偏好，不是一把万能退出键\n\n**第一，草案提出的是一种偏好表达方式，而非新的爬虫拦截技术。** IETF 10 月 30 日发布的《Machine-Readable Training Preference Signal》草案定义令牌“__usage_ai-training”。网站可在 robots.txt 里给该令牌设置 Disallow 和 Allow，并继续使用已有的路径匹配规则；例如对全站表达不愿用于训练的偏好，再对某个公开目录设置例外。[1] 它没有发明新的 robots.txt 指令，也没有改变既有爬虫的访问规则。\n\n更重要的是，**这个令牌表达的是“内容用途”偏好，而不是“机器人是否可以访问”**。草案明确将流量管理与内容用途区分：即便一个网站不希望内容进入生成式模型训练，也不等于阻止正常爬取、传统搜索收录或实时检索引用。草案采用的“AI training”定义聚焦于使用内容修改生成式模型的学习参数；其他模型用途不能被自动纳入。该文件目前是个人提交的 Internet-Draft，仍在标准讨论中，预计 2027 年 5 月 3 日到期，**不是已获 IETF 正式批准的标准**。[1]\n\n**第二，三家平台的公开承诺具有不同实施进度。** OpenAI 10 月 30 日表示将尊重共同训练信号，目标是在未来数月实现，同时继续保留现有独立爬虫控制。[3] Google 同日宣布计划在 **2027 年**支持共同信号：如果网站通过共同令牌拒绝训练、又没有明确设置 Google-Extended，Google 计划按拒绝 Google-Extended 来解释；如果网站另行明确设置 Google-Extended，则保留个别厂商选择权。[2] 这表明共同接口不是消灭厂商差异，而是在厂商私有规则之上增加一个可复用的默认偏好层。\n\n**第三，Microsoft 把“训练”与“回答引用”明确分开。** Bing 10 月 30 日公告称，从 **2027 年 2 月 1 日**开始随爬取逐步执行新偏好。训练偏好可在 robots.txt 或单页表达；AI grounding 偏好则在单页表达，可允许、拒绝，或选择 DisallowExtended——只允许 Microsoft 自有 AI 体验使用内容来支撑生成答案，不允许其向第三方提供的 grounding 服务使用。[4] Microsoft 还明确说，这些选择不改变网页进入传统 Bing 搜索结果的资格；没有相应偏好时，两类用途默认允许。这里的 grounding 指内容参与生成答案，不等同于模型参数训练。\n\nMicrosoft 的时间表也带来实际迁移成本：原来使用 NoArchive、NoCache 表达相关限制的网站，需要按其新规则迁移；**2027 年 3 月 1 日**之后，旧标记不再被当作训练或 grounding 偏好读取。部分旧站点还需在 Bing Webmaster Tools 记录临时 grounding 选择，以覆盖页面尚未重新爬取的空档。[4] 这是一项未来实施安排，而非 2026 年 10 月已经完成的全网切换。\n\n## 二、INFERENCE｜标准化的是“表达”，不是“授权、分发与收益”\n\n这次事件让我们更容易区分四种此前常被混称为“AI 抓取权”的关系。\n\n**训练权**关心内容是否进入未来模型参数更新。共同令牌的价值是降低网站逐一配置不同模型厂商规则的维护成本。**Grounding 使用权**关心已有网页是否在一次 AI 答案生成中成为检索或参考材料；Microsoft 的独立选项证明训练拒绝与实时回答引用可以有不同处理。**搜索发现与分发权**关心网页能否被索引、呈现并带来点击；即使内容允许被检索，也不保证用户会回到来源。**许可与收益权**则关心商业使用是否有合同、费用或分成；本轮草案没有创设收费机制。[1][2][4]\n\n由此出现一个值得观察的产业控制点：**谁解释内容提供者的偏好，谁就可能在“训练、回答、搜索和第三方 API”之间配置内容流动的边界。** 标准化可以减少多厂商配置摩擦，但 Microsoft 的自有服务与第三方 grounding 分层、Google 的个别 Google-Extended 规则都说明，跨厂商令牌并未消除平台级的具体解释、产品边界和实施节奏。[2][4]\n\n这不是说内容提供者已经失去全部谈判权。相反，当训练偏好可以跨平台表达，内容提供者在规则维护上可能获得更清晰的起点；但其真正的议价能力还取决于内容稀缺性、合同安排、爬虫遵守情况和分发依赖。**可读的偏好信号与可执行的权利保障，属于两种不同的基础设施。**\n\n## 三、COUNTERARGUMENT｜为什么不能把共同信号称为“内容主权胜利”\n\n**反论一：草案不是强制法律。** Internet-Draft 可被修改或废弃；平台承诺尊重偏好不等于对所有抓取者有约束力。robots.txt 本身也不是身份认证、访问控制或法律授权的替代品。尚无本轮证据证明各平台的真实训练数据流水线已全面执行新令牌。[1][3]\n\n**反论二：实施尚未同步完成。** OpenAI 的时间表是“未来数月”，Google 是 2027 年，Microsoft 则有明确的 2027 年 2 月和 3 月迁移节点。不能把支持声明直接写成全网已生效，也不能推断对过去训练过的模型具有追溯删除效果。[2][3][4]\n\n**反论三：用途分离不等于收益增加。** Microsoft 明确提示，允许 grounding 并不保证展示、流量或支付；拒绝 grounding 反而可能降低 AI 答案中的品牌可见性。[4] 内容网站可能面对真实权衡：限制 AI 使用，还是接受某些引用以争取发现机会。它没有消除 Reddit 所暴露的“被使用与获得回访流量脱钩”问题。\n\n**反论四：规则复杂度可能从“每家一套”转向“用途和优先级组合”。** 共同训练令牌与厂商私有偏好并存，单页设置、robots.txt、旧规则迁移和爬取时点可能产生不同结果。标准化减少了重复书写，却不必然减少运营人员理解权利边界和核验执行的工作。\n\n## 四、PREDICTION｜下一阶段需要验证什么\n\n**观察一：承诺能否变成可审计的实际执行。** 2027 年应追踪 Google、OpenAI、Microsoft 是否如期上线，如何处理共同令牌与厂商私有规则冲突，是否提供可核验的解释文档或遵循证据。若只有声明而缺乏执行反馈，令牌更多是行业协调语言，而非可信治理层。\n\n**观察二：训练与 grounding 是否出现真正可迁移的跨厂商规则。** 目前共同信号针对训练，Microsoft 的 grounding 控制仍有自有产品边界。若未来跨平台也能表达、核验不同用途偏好，内容使用政策才可能形成更完整的公共接口；若各家继续自行解释，平台控制权仍会很强。\n\n**观察三：内容提供者是否因此获得更好的经济结果。** 应分开观察训练许可合同、AI 答案引用、传统搜索引荐、用户回访和内容变现。任何单一指标改善都不足以证明“内容价值被重新分配”；只有合同和实际流量、收入证据才能检验这一推论。\n\n## 五、对 VELNAR 的判断更新\n\n**更新的判断：** 在 AI 内容产业链中，除了“谁拥有内容、谁掌握搜索入口”，还应持续观察“谁定义和执行内容用途偏好”。共同令牌显示一部分表达接口正在标准化；Microsoft 的用途拆分同时提醒我们，统一格式不等于统一控制权。这与企业 Agent 中“身份声明、业务授权、实际执行和审计必须分离”的逻辑有可比性，但两者不是同一种技术或市场。\n\n**暂不更新的判断：** 本次没有证据表明内容许可经济已经成熟、AI 搜索引荐将恢复，或标准本身构成独立的高利润生意。更不应因此修改 VELNAR 当前 Sales MVP 的架构，也不应未经独立产品评审去调整 VELNAR Research 网站的 robots.txt。\n\n**值得继续讨论的问题：** 当一个网页允许 AI 实时引用，却拒绝被用于训练，且希望保留传统搜索流量时，未来真正的控制点是公开的偏好格式，还是能证明各家平台按偏好执行、并把引用与经济回报关联起来的核验机制？\n\n---\n\n### 来源与证据边界\n\n[1] IETF Datatracker，2026-10-30，Kevin Kelley，《Machine-Readable Training Preference Signal》个人 Internet-Draft（尚非正式标准）：https://datatracker.ietf.org/doc/html/draft-kelley-aipref-training-preference-signal-00\n\n[2] Google Search Central，2026-10-30，《Supporting a shared AI training control for websites》；Google-Extended 优先级与 2027 年实施目标：https://developers.google.com/search/blog/2026/10/ai-training-control\n\n[3] OpenAI，2026-10-30，《Making it easier for websites to express AI training preferences》；共同信号承诺与现有爬虫规则并存：https://openai.com/index/helping-websites-express-ai-training-preferences/\n\n[4] Microsoft Bing Blog，2026-10-30，《Your content, your choice: clearer preferences for training and grounding》；训练与 grounding 独立控制、迁移时间表和适用限制：https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/",
+  "sources": [
+    {
+      "title": "IETF | Machine-Readable Training Preference Signal (Internet-Draft)",
+      "url": "https://datatracker.ietf.org/doc/html/draft-kelley-aipref-training-preference-signal-00",
+      "date": "2026-10-30"
+    },
+    {
+      "title": "Google Search Central | Supporting a shared AI training control for websites",
+      "url": "https://developers.google.com/search/blog/2026/10/ai-training-control",
+      "date": "2026-10-30"
+    },
+    {
+      "title": "OpenAI | Making it easier for websites to express AI training preferences",
+      "url": "https://openai.com/index/helping-websites-express-ai-training-preferences/",
+      "date": "2026-10-30"
+    },
+    {
+      "title": "Microsoft Bing | Your content, your choice: clearer preferences for training and grounding",
+      "url": "https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/",
+      "date": "2026-10-30"
+    }
+  ]
+}
