@@ -1,0 +1,20 @@
+{
+  "schema_version": "3.0",
+  "segment": "0037",
+  "items": [
+    {
+      "id": "2026-11-01-A2",
+      "date": "2026-11-01",
+      "grade": "A",
+      "title": "算力平台开始为机房、供电与芯片残值提供信用：Alphabet 的三层或有义务",
+      "themes": [
+        "AI Infrastructure Capital Stack",
+        "Compute Credit Support",
+        "Data Center Financing",
+        "TPU Residual Risk"
+      ],
+      "deck": "Alphabet 10月29日提交的10-Q披露，截至9月末有757亿美元数据中心相关信用支持安排，其中480亿美元已签并按信用衍生工具核算；另有228亿美元金融保证，分别涉及162亿美元能源设备采购与66亿美元已售TPU回购。新增A级证据不是谷歌已发生985亿美元损失，而是超大规模平台正在同时为机房付款、能源长周期设备和自研芯片残值提供有条件的信用支持；这些上限、会计公允价值、未来付款及实际交付不能混同。",
+      "body_format": "article_text"
+    }
+  ]
+}
