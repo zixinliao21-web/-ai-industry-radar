@@ -105,6 +105,24 @@
       ],
       "deck": "DeepSeek Harness 团队10月31日公开 dsh-superagent 研究原型：GitHub/飞书事件先经过准入和评估，再生成带不可变授权范围的 Ticket，由独立执行会话处理并返回原线程；未经请求的主动工作默认只观察、不执行。新增B级证据是长期Agent的触发、授权、任务生命周期与人类注意力成本被实现为明确对象，而非仅靠模型提示词。项目仅为单仓库实验原型，执行器默认拥有宿主OS用户权限，缺乏独立可靠性、商业采用和单位经济数据。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-02-B1",
+      "date": "2026-11-02",
+      "grade": "B",
+      "title": "最有现金的云商也开始借四十年的钱：微软发债定价不是 AI 资金断裂",
+      "themes": [
+        "AI Infrastructure Capital Stack",
+        "Microsoft",
+        "Hyperscaler Financing",
+        "Bond Market",
+        "Debt Duration",
+        "Free Cash Flow",
+        "Capital Allocation",
+        "AI Industry Control Points"
+      ],
+      "deck": "微软10月29日为250亿美元十档无担保债券定价，其中230亿美元固定利率债券延伸至2066年；截至11月2日，官方预计11月4日完成交割，不能写成资金已到账。微软上一季仍有580亿美元经营现金流、约186亿美元按现金购建口径计算的自由现金流。新增B级证据不是云商已经缺钱，而是即便现金流强劲，AI扩建时期的资本配置也开始主动使用长久期债务；一般公司用途、融资成本、资产寿命与最终AI回报必须分开判断。",
+      "body_format": "article_text"
     }
   ]
 }
