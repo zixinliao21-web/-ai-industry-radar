@@ -33,6 +33,29 @@
       ],
       "deck": "KB 国民银行 11 月 1 日宣布取得 Brookfield—NAVER Cloud AI 基础设施项目的主办融资安排权：总项目约 12.6 万亿韩元，拟由银团贷款筹措 10.7 万亿韩元。新增的 B 级证据不是又一笔已到账算力投资，而是韩国银行体系开始把 GPU 长期供应合同组织成项目融资；融资安排、贷款提款、设备交付、算力利用率和最终收入仍是五件不同的事。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-01-B4",
+      "date": "2026-11-01",
+      "grade": "B",
+      "title": "AI 开发工具的信任边界落在扩展商店：官方名称不等于官方代码",
+      "themes": [
+        "Enterprise AI",
+        "Coding Agents",
+        "Software Supply Chain",
+        "Cursor",
+        "Claude Code",
+        "Extension Marketplace",
+        "Artifact Provenance",
+        "Developer Security",
+        "Agent Toolchain",
+        "Enterprise Context",
+        "Execution Permissions",
+        "Agent Governance",
+        "AI Industry Control Points"
+      ],
+      "deck": "Cursor 10 月 29 日披露，其扩展商店曾在约 11 小时内分发被篡改的 Claude Code 扩展，受影响版本为 2.1.312 / 2.1.313，潜在接触用户上限约 5,000 人。攻击代码在扩展加载时即运行，尝试植入 SSH 后门；多数终端的权限限制和恶意代码缺陷阻碍了远程接入，但未消除持久化文件与主机信息收集风险。新增 B 级证据指向企业 AI 工具链的发行渠道、构件来源与本地执行权限这一独立信任边界；事件不证明 5,000 台设备失陷，也不等于 Claude 模型或 Anthropic 官方发布系统被攻破。",
+      "body_format": "article_text"
     }
   ]
 }
