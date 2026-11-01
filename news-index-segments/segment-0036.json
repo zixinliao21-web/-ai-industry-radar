@@ -186,6 +186,32 @@
       ],
       "deck": "Google 10 月 28 日开放 Connected Apps Platform 预览，让开发者用远程 MCP 或 Android AppFunctions 一次接入 Search 与 Gemini，并通过 Connected Console 测试、选择渠道、提交审核。Google 称两入口合计已有 50 多个 Connected Apps，但未披露调用量、任务完成率或交易转化。新增 B 级证据不是 Agent 应用商店已成熟，而是开放工具协议之上正在形成由平台控制的注册、审核、发现与分发层。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-01-B2",
+      "date": "2026-11-01",
+      "grade": "B",
+      "title": "芯片供应商可能为机房建设借出信用：NVIDIA 与 Nscale 的谈判尚不是已签担保",
+      "themes": [
+        "AI Infrastructure",
+        "NVIDIA",
+        "Nscale",
+        "Anthropic",
+        "Credit Guarantees",
+        "Project Finance",
+        "Neocloud",
+        "Data Center Construction",
+        "Power Infrastructure",
+        "AI Capital Stack",
+        "Contingent Liabilities",
+        "AI Industry Control Points",
+        "Customer Concentration",
+        "Contracted Backlog",
+        "Financing Risk",
+        "AI Bubble"
+      ],
+      "deck": "10月29日《The Information》称NVIDIA正讨论为Nscale服务Anthropic的西弗吉尼亚机房提供数十亿美元级信用支持，路透10月30日转述并强调尚未签约。Nscale此前S-1披露446亿美元合同上限但截至9月18日缺少相关融资的约束性承诺，NVIDIA已为其另一得州设施提供最高8.6034亿美元租赁担保。新增B级信号是芯片供应商信用可能从设备销售和残值支持延伸到机房电力、建设融资；谈判额度、条款、交付和实际损失均不能提前确认。",
+      "body_format": "article_text"
     }
   ]
 }
