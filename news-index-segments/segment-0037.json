@@ -146,6 +146,32 @@
       ],
       "deck": "巴林主权财富基金 Mumtalakat 与 ARP Group 11 月 1 日宣布筹建 AI-native、区块链支持的批发银行，并称已获巴林央行原则性批准；最终牌照、资本规模、客户与实际经营数据尚未披露。新增 B 级证据不是 AI 已自主经营银行，而是创业者开始尝试把 AI、API 和可编程金融服务写入持牌机构的初始设计；真正的执行权仍受银行牌照、资产负债表、交易记录与风险责任约束。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-02-B3",
+      "date": "2026-11-02",
+      "grade": "B",
+      "title": "1GW 接电合同与 3.2GW 愿景之间：AI 机房真正稀缺的是可交付的电网位置",
+      "themes": [
+        "AI Infrastructure",
+        "Data Centers",
+        "Grid Connection",
+        "National Grid",
+        "Tees Dock",
+        "Teesside",
+        "United Kingdom",
+        "Power Delivery",
+        "Grid Queue Reform",
+        "Gate 2",
+        "Ofgem",
+        "Site Control",
+        "AI Industry Control Points",
+        "Physical Infrastructure",
+        "Infrastructure Execution",
+        "Capital Allocation"
+      ],
+      "deck": "英国 National Grid 在 Teesside 为新变电站取得逾70英亩土地协议；其项目文件确认的是拟建400kV设施超过1GW的签约接入容量，地方官员提及的3.2GW并非同一已交付口径。更有研究价值的是：项目需通过Gate 2成熟度筛选、Ofgem投资审查、土地取得、规划和施工，且为了避免12—24个月征地延迟，业主选择了成本略高但占地更小的GIS方案。新增B级证据表明，AI算力园区的稀缺资产不是纸面GW，而是可以按时交付的电网接入权与工程路径；土地协议不等于已通电或数据中心已签客户。",
+      "body_format": "article_text"
     }
   ]
 }
