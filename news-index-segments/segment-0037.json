@@ -123,6 +123,29 @@
       ],
       "deck": "微软10月29日为250亿美元十档无担保债券定价，其中230亿美元固定利率债券延伸至2066年；截至11月2日，官方预计11月4日完成交割，不能写成资金已到账。微软上一季仍有580亿美元经营现金流、约186亿美元按现金购建口径计算的自由现金流。新增B级证据不是云商已经缺钱，而是即便现金流强劲，AI扩建时期的资本配置也开始主动使用长久期债务；一般公司用途、融资成本、资产寿命与最终AI回报必须分开判断。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-02-B2",
+      "date": "2026-11-02",
+      "grade": "B",
+      "title": "AI-native 银行先拿到原则性批准：金融 Agent 的控制点仍是牌照、账本与责任",
+      "themes": [
+        "AI-native Companies",
+        "Enterprise AI",
+        "Financial Infrastructure",
+        "Banking Regulation",
+        "Bahrain",
+        "Mumtalakat",
+        "ARP Group",
+        "Workflow Ownership",
+        "Agent Governance",
+        "Financial Services",
+        "Institutional Control Points",
+        "API Banking",
+        "AI Business Model"
+      ],
+      "deck": "巴林主权财富基金 Mumtalakat 与 ARP Group 11 月 1 日宣布筹建 AI-native、区块链支持的批发银行，并称已获巴林央行原则性批准；最终牌照、资本规模、客户与实际经营数据尚未披露。新增 B 级证据不是 AI 已自主经营银行，而是创业者开始尝试把 AI、API 和可编程金融服务写入持牌机构的初始设计；真正的执行权仍受银行牌照、资产负债表、交易记录与风险责任约束。",
+      "body_format": "article_text"
     }
   ]
 }
