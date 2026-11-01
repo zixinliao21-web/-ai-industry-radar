@@ -1,0 +1,56 @@
+{
+  "id": "2026-11-01-B6",
+  "date": "2026-11-01",
+  "grade": "B",
+  "title": "持续运行的 Agent 开始把授权变成工单资产：DeepSeek 原型验证的是治理结构，不是自主员工",
+  "themes": [
+    "Enterprise Agent",
+    "Agent Runtime",
+    "DeepSeek Harness",
+    "Policy",
+    "Delegated Authority",
+    "Durable Execution",
+    "Task State",
+    "Agent Governance",
+    "Coding Agents",
+    "Human Attention",
+    "AI Industry Control Points",
+    "Workflow Ownership",
+    "AI-native Companies"
+  ],
+  "deck": "DeepSeek Harness 团队10月31日公开 dsh-superagent 研究原型：GitHub/飞书事件先经过准入和评估，再生成带不可变授权范围的 Ticket，由独立执行会话处理并返回原线程；未经请求的主动工作默认只观察、不执行。新增B级证据是长期Agent的触发、授权、任务生命周期与人类注意力成本被实现为明确对象，而非仅靠模型提示词。项目仅为单仓库实验原型，执行器默认拥有宿主OS用户权限，缺乏独立可靠性、商业采用和单位经济数据。",
+  "body_format": "article_text",
+  "article_text": "# 持续运行的 Agent 开始把授权变成工单资产：DeepSeek 原型验证的是治理结构，不是自主员工\n\n**核心判断｜长期运行的 Agent 不是把一次对话无限延长，而是把“谁可以要求它做什么、何时开始、工作如何延续、何时必须打扰人”变成可追踪、可限制的系统对象。** DeepSeek Harness 团队在 2026 年 10 月 31 日公开了 dsh-superagent 研究原型：它监听一个 GitHub 仓库及可选的飞书消息，将合规请求转成 Ticket（工单），再交给独立执行会话处理。这个原型最值得研究的不是“DeepSeek 发布了一个更强的编程 Agent”，而是**授权、工作状态与人的注意力不再只藏在模型的对话历史里**。[1][2]\n\n**评级：B。** 这是一份可以直接检查代码和设计文档的架构证据，强化了 VELNAR 对 Agent Runtime、Policy、State 与受控执行的判断；但它既没有独立生产效果评测，也没有企业客户与收入证据，不能升级成“持续自主 Agent 已商业成熟”的 A/S 级结论。此前 Radar 已研究过 Durable Execution、Agent 控制平面、身份与执行边界；本次真正的增量是**这些原则在一个面向团队协作的开源原型中被组织成了具体的工作对象和权限生命周期**。\n\n## 一、FACT｜公开的是研究原型，而不是已经上线的企业产品\n\nDeepSeek 官方 GitHub 组织在 10 月 31 日提交了 dsh-superagent-prototype。README 明确标注其为供参考的研究原型，**不是官方正式产品，也不是生产就绪的软件**；公开版本与团队内部版本及相关设计文章并不完全相同，部分设想尚未实现。项目以 MIT 许可开放，作为 DeepSeek Harness 的插件运行，服务范围是一个 GitHub 仓库，可选接入飞书。它需要单独的 Harness 配置、模型提供方和代理账户，而非开箱即用的托管服务。[1][6]\n\n它的正常路径是：Source 接收 GitHub/飞书 Trigger（事件）→ Eval 判断是否应建立工作 → 接受后生成带 Mandate（授权依据与范围）的 Ticket → Assignment 将工单交给 Executor 会话 → 结果通过原来的评论或消息线程返回，必要时由人审查。Ticket 能订阅后续评论、CI 状态与相关线程；这些事件可作为上下文，但**收到上下文并不等于获得新的行动权限**。[2][3]\n\n在这里，Source、Trigger、Thread、Policy、Eval、Mandate、Ticket、Assignment 并不是为了让架构图显得复杂而取的名词。它们分别回答不同的问题：事件从哪里来；哪些消息属于同一工作；谁有权发起；一次判断为何接受；允许的工作范围是什么；哪项工作仍在等待；谁正在执行。官方领域模型还约定同一事件重复接受不应生成两张工单，并为来源保留读取位置，降低重启后重复处理的风险。[2]\n\n这与“把所有聊天记录塞进 Prompt，让模型决定下一步”存在实质差异：**模型可以参与理解和评估，但任务身份、权限依据、执行状态和事件去重由系统显式承载**。这是一项设计选择，不等于其实现已经经过外部可靠性审计。\n\n## 二、FACT｜主动性被关进可配置的授权边界\n\n官方授权文档把请求分成明确的发起请求与推断出的主动工作。允许名单中的人直接呼叫 Agent，可以形成显式请求；机器人消息不能冒充人的显式授权。推断出的主动任务必须匹配团队写下的规则，并接受评估。默认的 \\`observe\\` 模式只记录“本来会接受什么”，**不自动执行这些推断任务**；切换到 \\`auto\\` 后才可能按规则执行。[3]\n\n一次接受会生成 Mandate，记录 Policy 版本、发起人及工作范围。扩大任务范围不能仅靠后续聊天“顺便加一句”完成，而应重新形成授权。一个 Ticket 订阅的线程可以不断收到新上下文，但这些消息本身不会扩大 Mandate。策略更新会使正在评估的任务重审，并向受影响的工单发送变更通知；**策略更新不意味着所有运行中的旧授权被即时撤销**，恢复工作时仍需按相应条件重新验证。[3]\n\n这个细节很重要。一个“看起来能主动工作”的 Agent，若没有独立的授权依据、撤权与重验机制，就容易把看到一条消息误当成得到一个命令。原型提供了可检查的设计思路，但安全性仍取决于身份核验、宿主权限、执行环境以及实际实现是否遵守设计。\n\n## 三、FACT｜工作完成与通知人被拆成两个状态问题\n\n官方执行文档将 Ticket 区分为排队、执行中、等待新事件、等待答复、等待审查、阻塞或失败等状态。每个 Ticket 有自己的执行会话与目录；长命令可转入后台，执行槽位与任务状态分别管理。若一个任务已经产出待审查结果，它可以释放执行槽位，不必持续占用计算资源等待人类回复。一个执行回合结束后，后台 shell 作业通常有 30 分钟上限，超时会终止并留下报告；这不是无限持续运行的保证。[4]\n\n其设计哲学将**人类注意力**视为稀缺资源：不该为每一步状态变化都发送消息，只有人必须决定、结果可以使用或确实无法继续时才提醒。面板优先显示“现在需要我做什么”，再显示健康状态和历史过程。[5]\n\n这使我们可以区分三个经常被混为一谈的指标：Agent 启动了多少次、Agent 完成了多少可验收任务、Agent 为完成这些任务消耗了多少人类监督与返工。前者是活动量，后两者才更接近真实生产价值。**原型提出了降低注意力成本的设计目标，但没有公开可验证的“每任务人工干预分钟数”或端到端完成率**，因此还不能证明它已经实现这一目标。\n\n## 四、INFERENCE｜Agent 的竞争单位可能从“一个会话”转向“受治理的工作队列”\n\n如果这类设计被生产验证，持续 Agent 的关键资产可能不再是单次聊天的长度，而是跨事件保存的任务状态、授权记录、上下文归属、失败恢复和可审查结果。一个团队能让多个 Agent 会话反复启动和退出，却仍能知道每项工作由谁发起、依据什么权限、卡在何处，这才有机会把 Agent 当作可管理的执行能力，而非不透明的对话窗口。\n\n这也给 Enterprise Agent 的控制点提供了一个更细的划分：**模型负责提出候选判断，Policy 决定允许的行动，Ticket/State 保存持续事实，Executor 在受限环境中执行，外部系统与人负责验收。** 哪一层有独立经济价值，取决于客户是否愿意为审计、恢复、权限与交付结果付费，而不是因为一个开源项目把这些层命名了就成立。\n\n对 VELNAR 而言，最有价值的映射不是复制 DeepSeek 的 GitHub/飞书界面，而是反过来检查自身系统：用户语言观察是否会被误当作业务授权？新消息是否可能偷偷扩大原任务？任务恢复时是否重新检查事实与权限？失败后是重复执行还是沿着原工单恢复？这些问题与既有 Sales MVP 的证据校验、State Reducer、ActionPlan 和受控工具执行方向相符。**它们不构成扩大当前 Sales MVP 功能范围或重构架构的理由。**\n\n## 五、反论｜“授权模型完整”与“执行边界安全”之间仍有巨大缺口\n\n**第一，宿主机权限是明确的风险。** 官方部署文档指出，Router 和 Worker 使用 \\`danger-full-access\\` 预设，以操作者的操作系统用户身份执行；代理 GitHub 账户的 CLI 包装只选择默认凭据，并不形成操作系统隔离。Worker 仍可能通过绝对路径调用程序、访问用户主目录。官方建议使用只含 Agent 凭据的独立 OS 账户。[6] 因而不可把 Mandate、blocked commands 或独立工作目录误写成强沙箱。**逻辑授权与操作系统强制隔离不是一回事。**\n\n**第二，开源不等于生产可靠。** README 明确提醒可能存在缺陷；本次未独立安装、运行、审计代码或执行长时故障注入。未见可信的任务完成率、重启后重复执行率、权限绕过率、人工审查时间、模型调用成本或企业付费数据。GitHub 关注度不能替代这些指标。[1]\n\n**第三，工作队列不是新发明。** 事件驱动、工单、状态机、幂等与权限控制长期存在于企业软件中。真正待证明的是：把它们与 LLM 结合后，能否在复杂且不断变化的真实任务中，显著降低人工协调成本，而不是只把原有工程复杂度搬到另一个管理界面。既有工作流引擎、CI 系统和企业 ITSM 平台也可能吸收相同能力，独立 Agent 框架未必因此拥有持续定价权。\n\n**第四，主动性越强，错误的外部性越大。** 错误接纳一次任务、未及时撤销权限、重复执行一次副作用动作，都可能比错误回答一句话更昂贵。设计上的 \\`observe\\` 默认值体现了对这类风险的克制，但尚无证据证明它能消除风险。\n\n## 六、结论与后续观察\n\n**FACT：** 2026 年 10 月 31 日，DeepSeek Harness 团队公开了一套将事件、授权、工单、执行会话与人工注意力分开的 Agent 研究原型；它不是正式商业产品。[1][2][3]\n\n**INFERENCE：** 长期 Agent 的重要竞争变量可能从“模型是否愿意持续做事”转向“系统能否持续证明每一步行动有权、有状态、可恢复、可验收”。这强化既有判断，不是新产业地图的颠覆。\n\n**PREDICTION（有条件）：** 如果未来出现跨多个真实企业、数月持续运行的数据，证明这类系统同时降低人工干预、重复执行和失败恢复成本，那么“任务授权与恢复控制层”才可能获得独立预算；否则它更可能被吸收到已有开发平台、ITSM 或工作流产品中。\n\n**值得继续讨论的问题：** 对一个长期运行的企业 Agent，我们应优先衡量“每项已验收业务结果所需的人工注意力”，还是“因授权、恢复与事实校验而避免的错误成本”？怎样用同一套真实任务对照实验把两者分开，而不是把通知变少误认为价值变大？\n\n## 主要来源\n\n[1] DeepSeek Harness Team，dsh-superagent-prototype README，2026-10-31：https://github.com/deepseek-ai/dsh-superagent-prototype\n\n[2] DeepSeek Harness Team，001 Domain model，2026-10-31：https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/001-domain.md\n\n[3] DeepSeek Harness Team，002 Authorization，2026-10-31：https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/002-authorization.md\n\n[4] DeepSeek Harness Team，003 Execution，2026-10-31：https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/003-execution.md\n\n[5] DeepSeek Harness Team，000 Philosophy / 005 Panel，2026-10-31：https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/000-philosophy.md\n\n[6] DeepSeek Harness Team，006 Deployment，2026-10-31：https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/006-deployment.md",
+  "sources": [
+    {
+      "title": "DeepSeek Harness Team | dsh-superagent research prototype",
+      "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+      "date": "2026-10-31"
+    },
+    {
+      "title": "DeepSeek Harness Team | 001 Domain model",
+      "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/001-domain.md",
+      "date": "2026-10-31"
+    },
+    {
+      "title": "DeepSeek Harness Team | 002 Authorization",
+      "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/002-authorization.md",
+      "date": "2026-10-31"
+    },
+    {
+      "title": "DeepSeek Harness Team | 003 Execution",
+      "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/003-execution.md",
+      "date": "2026-10-31"
+    },
+    {
+      "title": "DeepSeek Harness Team | 000 Philosophy",
+      "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/000-philosophy.md",
+      "date": "2026-10-31"
+    },
+    {
+      "title": "DeepSeek Harness Team | 006 Deployment",
+      "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/006-deployment.md",
+      "date": "2026-10-31"
+    }
+  ]
+}

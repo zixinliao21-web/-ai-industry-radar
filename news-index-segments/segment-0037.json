@@ -82,6 +82,29 @@
       ],
       "deck": "Perion 11 月 1 日同意以约 4.2 亿美元股权价值由 Affle 现金收购；其二季度 Outmax AI Agent 所管理投放额同比增长 136%，但集团收入下降 5%、调整后 EBITDA 从 710 万美元降至 280 万美元。新增 B 级证据不是 AI 广告 Agent 失败，而是 Agent 使用、广告渠道规模、企业利润和股东退出价格必须分账；买方看重的还包括移动、CTV、零售媒体与户外媒体的跨渠道组合，交易尚待审批。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-01-B6",
+      "date": "2026-11-01",
+      "grade": "B",
+      "title": "持续运行的 Agent 开始把授权变成工单资产：DeepSeek 原型验证的是治理结构，不是自主员工",
+      "themes": [
+        "Enterprise Agent",
+        "Agent Runtime",
+        "DeepSeek Harness",
+        "Policy",
+        "Delegated Authority",
+        "Durable Execution",
+        "Task State",
+        "Agent Governance",
+        "Coding Agents",
+        "Human Attention",
+        "AI Industry Control Points",
+        "Workflow Ownership",
+        "AI-native Companies"
+      ],
+      "deck": "DeepSeek Harness 团队10月31日公开 dsh-superagent 研究原型：GitHub/飞书事件先经过准入和评估，再生成带不可变授权范围的 Ticket，由独立执行会话处理并返回原线程；未经请求的主动工作默认只观察、不执行。新增B级证据是长期Agent的触发、授权、任务生命周期与人类注意力成本被实现为明确对象，而非仅靠模型提示词。项目仅为单仓库实验原型，执行器默认拥有宿主OS用户权限，缺乏独立可靠性、商业采用和单位经济数据。",
+      "body_format": "article_text"
     }
   ]
 }
