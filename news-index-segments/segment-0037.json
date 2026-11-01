@@ -56,6 +56,32 @@
       ],
       "deck": "Cursor 10 月 29 日披露，其扩展商店曾在约 11 小时内分发被篡改的 Claude Code 扩展，受影响版本为 2.1.312 / 2.1.313，潜在接触用户上限约 5,000 人。攻击代码在扩展加载时即运行，尝试植入 SSH 后门；多数终端的权限限制和恶意代码缺陷阻碍了远程接入，但未消除持久化文件与主机信息收集风险。新增 B 级证据指向企业 AI 工具链的发行渠道、构件来源与本地执行权限这一独立信任边界；事件不证明 5,000 台设备失陷，也不等于 Claude 模型或 Anthropic 官方发布系统被攻破。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-01-B5",
+      "date": "2026-11-01",
+      "grade": "B",
+      "title": "AI Agent 投放额增长不等于独立定价权：一家广告技术公司的现金出售",
+      "themes": [
+        "Enterprise AI",
+        "Advertising Technology",
+        "AI-native Companies",
+        "Perion",
+        "Affle",
+        "Outmax AI",
+        "Agent Economics",
+        "Marketing AI",
+        "Digital Advertising",
+        "Mergers and Acquisitions",
+        "AI Industry Consolidation",
+        "Distribution Control",
+        "Workflow Ownership",
+        "Revenue Quality",
+        "Capital Markets",
+        "AI Business Model"
+      ],
+      "deck": "Perion 11 月 1 日同意以约 4.2 亿美元股权价值由 Affle 现金收购；其二季度 Outmax AI Agent 所管理投放额同比增长 136%，但集团收入下降 5%、调整后 EBITDA 从 710 万美元降至 280 万美元。新增 B 级证据不是 AI 广告 Agent 失败，而是 Agent 使用、广告渠道规模、企业利润和股东退出价格必须分账；买方看重的还包括移动、CTV、零售媒体与户外媒体的跨渠道组合，交易尚待审批。",
+      "body_format": "article_text"
     }
   ]
 }
