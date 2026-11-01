@@ -1,0 +1,53 @@
+{
+  "id": "2026-11-01-B1",
+  "date": "2026-11-01",
+  "grade": "B",
+  "title": "搜索正在成为 Agent 应用的分发闸门：MCP 开放接口不等于开放上架权",
+  "themes": [
+    "AI Industry Control Points",
+    "Agent Distribution",
+    "Connected Apps Platform",
+    "Google Search",
+    "Gemini",
+    "MCP",
+    "Android MCP",
+    "AppFunctions",
+    "Tool Discovery",
+    "Platform Governance",
+    "Agent Commerce",
+    "Agent Ecosystem",
+    "Developer Distribution",
+    "Authorization",
+    "Enterprise Agent"
+  ],
+  "deck": "Google 10 月 28 日开放 Connected Apps Platform 预览，让开发者用远程 MCP 或 Android AppFunctions 一次接入 Search 与 Gemini，并通过 Connected Console 测试、选择渠道、提交审核。Google 称两入口合计已有 50 多个 Connected Apps，但未披露调用量、任务完成率或交易转化。新增 B 级证据不是 Agent 应用商店已成熟，而是开放工具协议之上正在形成由平台控制的注册、审核、发现与分发层。",
+  "body_format": "article_text",
+  "article_text": "# 搜索正在成为 Agent 应用的分发闸门：MCP 开放接口不等于开放上架权\n\n**核心判断｜当搜索框开始代替用户调用第三方服务，新的产业控制点可能不是谁拥有最多 MCP 工具，而是谁决定哪些工具能进入高频入口、在什么条件下被调用，以及调用结果如何被验证。** Google 2026 年 10 月 28 日宣布 Connected Apps Platform 预览版，把 Search 与 Gemini 的第三方应用接入放进一个开发者入口：开发者可以用远程 MCP 或 Android AppFunctions 提供能力，再通过 Google Connected Console 注册、测试、选择展示渠道并提交审核。[1][2]\n\n这是一条 **B 级结构证据**，不是 S 级平台更替。它让一个原本容易混淆的判断更清楚：**技术协议开放，和平台分发权开放，是两件不同的事。** 但预览计划、既有合作伙伴数量和实际完成的用户任务不能画等号；Google 也没有公布可供独立核验的 Connected Apps 调用量、成交额、留存率或跨渠道转化率。\n\n## 一、FACT｜新增的是统一上架与运营入口，不是 MCP 刚刚诞生\n\n**第一，Search 和 Gemini 的接入流程开始合并。** Google 10 月 28 日宣布，开发者可在一个 Connected Apps Platform 中构建和管理面向 Search 与 Gemini app 的第三方能力。开发者需要提供云端 MCP server，或使用 Android MCP 的 AppFunctions 接口；随后在 Connected Console 中注册、测试、选择 Search、Gemini 或两者，并提交审核。上线后可查看流量、延迟与错误率等运营指标。[1][2][3] 这不是“所有开发者已经可以无门槛上架”：官方明确称目前是 **preview**，按阶段开放，并计划逐步增加开发者、地区和产品入口。\n\n**第二，Google 声称已有 50 多个 Connected Apps，但统计边界必须保留。** 官方说法是 Search 与 Gemini **合计**已推出 50 多个连接应用，覆盖生产力、活动票务、健康健身等类别；Adobe、Experian、Localiza 和 Peloton 等当时已在 Gemini 提供连接能力，部分计划在随后几周进入 Search，Calm 也属于未来接入计划。[1] 因此，50 多个不是“两个入口各有 50 个”，也不是“50 个已完成规模化交易的 Agent 商家”，更不是本次预览计划新增的开发者数量。\n\n**第三，开放协议之上仍有平台审核。** Google 的开发者文档明确区分远程 MCP 与 Android MCP：远程 MCP 是跨 Android、iOS 和 Web 的推荐默认路径；AppFunctions 更适合与 Android 本地应用状态和系统界面深度结合的功能。[2][4] Connected Console 管理工具注册、测试者、版本、提交审核和发布。[3] 这意味着服务商可以拥有自己的后端与执行逻辑，但进入 Google 搜索/助手入口并非只需发布一个公开 MCP 地址。\n\n**第四，平台规则把工具描述和行为本身纳入治理。** Google 的 Connected Apps 政策要求工具声明准确、功能可用、数据最小化、权限与副作用透明；禁止用夸大或欺骗性的工具描述诱导模型优先选择某个应用，也禁止通过集成投放第三方广告内容，并保留拒绝、下架或暂停应用的权力。[5] 该政策页面标注的最后更新时间为 **2026 年 9 月 28 日**，因此不能把这些规则误写成 10 月 28 日刚刚出台。真正新增的是统一接入预览，使这些既有治理规则有了更明确的跨入口应用场景。\n\n## 二、INFERENCE｜从搜索结果排名，走向“可执行服务的准入与选择”\n\n传统搜索主要决定用户先看到哪些页面，用户再跳转到商家网站或 App 完成动作。Connected Apps 的路径不同：用户可能在 Search 或 Gemini 中表达任务，模型识别需要外部能力，平台选择或调用已连接的工具，商家系统负责返回数据或执行动作。**信息分发与行动分发开始重叠，但没有合并成同一件事。**\n\n至少出现四层不同的控制权：\n\n- **接入权：**谁可以注册、审核通过并保持可用。协议兼容只是技术条件，不等于平台保证分发。\n- **发现与路由权：**用户说出需求时，哪个服务有机会被提出或调用。Google 文档支持以应用名称或 @ 提及显式触发，但没有披露一套可以独立验证的普遍工具排序规则。[4]\n- **授权与执行权：**用户是否连接账户、授权哪些数据与动作；真正的订单、日历记录或其他业务状态仍需在相应服务的权限和执行系统中成立。\n- **归因与经济权：**谁获得用户关系、品牌曝光、交易利润和后续复购。Google 提供部分流量与运行指标，不等于已经证明商家能够获得稳定的新增收入。\n\n这说明 **MCP 降低“能被调用”的接口摩擦，却不会自动降低“被选中、被信任、被允许持续执行”的分发摩擦**。开放接口可能扩大服务供给，同时把审核、工具选择、账户连接和入口流量集中到少数平台。两种力量可以同时存在，不能简单用“协议开放”推出“生态去中心化”。\n\n这里还有一个与传统应用商店不同的经济问题：工具不是靠图标吸引点击，而是靠模型在特定任务中理解它的适用边界、参数和风险。Google 政策甚至禁止开发者用欺骗性工具描述影响选择。[5] **工具 Schema、授权流程、错误率和真实任务完成率，可能逐渐成为应用分发的基础质量资产。** 但这只是机制推论；目前缺少平台公布的调用成功率与开发者收入数据。\n\n## 三、它修正 VELNAR 哪一项判断\n\nVELNAR 既有研究已分别讨论 Agent Commerce 的商家准入权、跨商家市场级接入层、Agent 标准的基金会治理，以及模型平台与专业软件之间的分发关系。此次不是重新介绍 MCP，也不是重复“商家允许 Agent 访问”的命题。\n\n**新增的观察对象是搜索平台自己成为第三方 Agent 能力的注册、审核和跨入口分发组织者。** 过去我们容易把 Agent 生态理解为“模型入口—开放工具协议—业务系统”三层；现在有理由单独观察其间的 **Distribution Admission / Tool Discovery**：即使商家拥有数据、接口与执行能力，仍可能需要争取在高频智能入口中被发现、被授权、被持续调用的资格。\n\n这对 Enterprise Agent 与 Consumer Agent 的含义不同。消费级搜索具有高频意图和跨商家发现优势；企业内部则还受组织身份、数据边界、采购合同、审计和业务权威系统约束。不能把 Google 的消费者连接应用预览，直接推演成企业 ERP、CRM 或工业 Agent 的控制权已被搜索平台接管。\n\n## 四、COUNTERARGUMENT｜为什么现在不能宣布“搜索取代应用商店”\n\n**反论一：预览不是大规模采用。** 官方并未披露 Connected Apps 的活跃用户、每周调用量、成功任务比例、商家收入或接入申请通过率。50 多个既有连接应用只能说明一定的供给覆盖，不能证明用户习惯已从原生 App 或网站转移。\n\n**反论二：开放上架也不等于自动推荐。** 开发者可以选择目标 Google 产品并提交审核，不代表获得默认展示、搜索排名、模型优先调用或跨入口一致的流量。用户显式连接与提及服务仍可能是重要触发方式。[3][4]\n\n**反论三：平台治理既是壁垒，也有正当安全功能。** 账户授权、最小数据交换、禁止未披露副作用和对欺骗性工具描述的约束，可能减少越权调用与低质量工具对用户造成的损害。不能仅因为审核集中就认定它必然反竞争；也不能因为有政策就认定执行已安全。\n\n**反论四：原业务系统并未失去全部控制权。** 商家仍能管理自己的库存、履约、支付确认、客户数据和服务条款；用户仍可直接使用其 App 或网站。入口可能获得更多意图和分发权，但实际业务事实的权威来源与责任归属不会因一次 MCP 调用自动转移。\n\n**反论五：Google 并非唯一可能的 Agent 入口。** 其他模型助手、操作系统、浏览器、垂直工作台和商家自有渠道仍可能争夺相同任务。开放协议也可能帮助商家多平台接入，削弱单一入口锁定。谁能真正获得经济租金，需要未来的跨平台流量和收入证据，而不是由平台声明推导。\n\n## 五、PREDICTION｜三个可证伪的观察点\n\n**观察一：预览能否转为可重复的上架与使用。** 后续应跟踪开发者开放范围、审核周期、拒绝/下架规则、Search 与 Gemini 各自的真实可用连接数，而非仅统计公告合作伙伴。\n\n**观察二：平台能否披露从意图到完成的任务指标。** 需要区分工具被发现、账户成功授权、调用成功、业务动作完成和用户确认的结果。只有后几项形成可重复的业务价值，才可能证明 Agent 分发不只是新的曝光渠道。\n\n**观察三：商家是否因跨入口连接获得增量客户，还是只把原有客户行为迁移进平台。** 如果可验证的新增转化与复购出现，连接应用可能成为新的商业分发层；如果主要是已连接用户在不同界面调用旧服务，则更像用户界面迁移，平台控制权的经济含义会小得多。\n\n这些均为待观察条件，不是已经兑现的行业趋势。\n\n## 六、结论与讨论问题\n\n**更新产业地图：**在“Agent 接入协议”和“真实业务执行系统”之间，明确加入“入口分发准入与工具发现”这一潜在控制点。Google Connected Apps Platform 是一个可核验的早期样本，证明大平台正在把第三方能力的注册、审核、可观测性与 Search/Gemini 分发组合起来；尚不能证明它已经形成新的赢家通吃市场。\n\n**不更新当前工程范围：**这条 B 级证据不要求 VELNAR 当前 Sales MVP 增加 MCP 商店、移动端 Agent 或多入口分发架构。当前项目仍应优先完成确定性业务事实、权限、状态与真实工作流闭环。\n\n**值得继续讨论的问题：**当工具协议越来越开放，未来垂直 AI 企业更难复制的资产，究竟是自己的业务数据和执行结果，还是进入少数高频 Agent 入口并持续被选中的分发资格？两者发生冲突时，谁拥有议价权？\n\n---\n\n### 来源与证据边界\n\n[1] Google 官方博客，2026-10-28，Connected Apps Platform 预览公告、跨 Search/Gemini 入口与 50 多个连接应用的合并口径：https://blog.google/innovation-and-ai/technology/developers-tools/connected-apps-one-place/\n\n[2] Google for Developers，Connected Apps Platform 官方总览（访问于 2026-11-01）：https://developers.google.com/connected-apps\n\n[3] Google for Developers，Google Connected Console 开发者文档，页面标注最后更新 2026-10-27：https://developers.google.com/connected-apps/gpc\n\n[4] Google for Developers，Connected Apps Platform MCP server 开发者指南，页面标注最后更新 2026-10-27：https://developers.google.com/connected-apps/mcp\n\n[5] Google for Developers，Connected Apps Platform Policy，页面标注最后更新 2026-09-28；这是现有规则的证据，不是 10 月 28 日新政策：https://developers.google.com/connected-apps/connected-apps-policy",
+  "sources": [
+    {
+      "title": "Google | Build and manage Connected Apps in one place",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/connected-apps-one-place/",
+      "date": "2026-10-28"
+    },
+    {
+      "title": "Google Developers | Connected Apps Platform overview",
+      "url": "https://developers.google.com/connected-apps",
+      "date": "2026-11-01"
+    },
+    {
+      "title": "Google Developers | Google Connected Console",
+      "url": "https://developers.google.com/connected-apps/gpc",
+      "date": "2026-10-27"
+    },
+    {
+      "title": "Google Developers | MCP server developer guide",
+      "url": "https://developers.google.com/connected-apps/mcp",
+      "date": "2026-10-27"
+    },
+    {
+      "title": "Google Developers | Connected Apps Platform policy",
+      "url": "https://developers.google.com/connected-apps/connected-apps-policy",
+      "date": "2026-09-28"
+    }
+  ]
+}

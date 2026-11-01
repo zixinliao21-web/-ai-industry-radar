@@ -161,6 +161,31 @@
       ],
       "deck": "Anthropic 10月26日公开 S-1 将上市后治理结构写入法律文件：创始人 LLC 的单一 Class F 股固定掌握一般股东事项 50.1% 投票权，独立长期公益信托持 Class T 股选任董事会多数，拟上市 Class A 投资者主要获得经济敞口。信托对达到能力门槛的模型控制权转移享有提前通知而非一票否决。新增 A 级信号是前沿模型公司正把资本供给、股东表决、董事任命与重大模型资产处置的监督接口明确拆开；这不是安全治理已被独立验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-01-B1",
+      "date": "2026-11-01",
+      "grade": "B",
+      "title": "搜索正在成为 Agent 应用的分发闸门：MCP 开放接口不等于开放上架权",
+      "themes": [
+        "AI Industry Control Points",
+        "Agent Distribution",
+        "Connected Apps Platform",
+        "Google Search",
+        "Gemini",
+        "MCP",
+        "Android MCP",
+        "AppFunctions",
+        "Tool Discovery",
+        "Platform Governance",
+        "Agent Commerce",
+        "Agent Ecosystem",
+        "Developer Distribution",
+        "Authorization",
+        "Enterprise Agent"
+      ],
+      "deck": "Google 10 月 28 日开放 Connected Apps Platform 预览，让开发者用远程 MCP 或 Android AppFunctions 一次接入 Search 与 Gemini，并通过 Connected Console 测试、选择渠道、提交审核。Google 称两入口合计已有 50 多个 Connected Apps，但未披露调用量、任务完成率或交易转化。新增 B 级证据不是 Agent 应用商店已成熟，而是开放工具协议之上正在形成由平台控制的注册、审核、发现与分发层。",
+      "body_format": "article_text"
     }
   ]
 }
