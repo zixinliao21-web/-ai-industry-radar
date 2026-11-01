@@ -15,6 +15,24 @@
       ],
       "deck": "Alphabet 10月29日提交的10-Q披露，截至9月末有757亿美元数据中心相关信用支持安排，其中480亿美元已签并按信用衍生工具核算；另有228亿美元金融保证，分别涉及162亿美元能源设备采购与66亿美元已售TPU回购。新增A级证据不是谷歌已发生985亿美元损失，而是超大规模平台正在同时为机房付款、能源长周期设备和自研芯片残值提供有条件的信用支持；这些上限、会计公允价值、未来付款及实际交付不能混同。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-01-B3",
+      "date": "2026-11-01",
+      "grade": "B",
+      "title": "银行开始为 GPU 长期现金流组团放贷：10.7 万亿韩元不是已放款",
+      "themes": [
+        "AI Infrastructure Capital Stack",
+        "GPU Financing",
+        "Syndicated Lending",
+        "Brookfield",
+        "NAVER Cloud",
+        "South Korea",
+        "Credit Risk",
+        "Sovereign AI"
+      ],
+      "deck": "KB 国民银行 11 月 1 日宣布取得 Brookfield—NAVER Cloud AI 基础设施项目的主办融资安排权：总项目约 12.6 万亿韩元，拟由银团贷款筹措 10.7 万亿韩元。新增的 B 级证据不是又一笔已到账算力投资，而是韩国银行体系开始把 GPU 长期供应合同组织成项目融资；融资安排、贷款提款、设备交付、算力利用率和最终收入仍是五件不同的事。",
+      "body_format": "article_text"
     }
   ]
 }
