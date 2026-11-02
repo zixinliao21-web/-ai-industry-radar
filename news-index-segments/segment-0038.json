@@ -123,6 +123,30 @@
       ],
       "deck": "Oracle在10月28日把截至FY2030新增资本市场融资上限设为200亿美元（股权与新增债务各100亿美元），11月2日据监管申报启动相应股债发行程序，六档债券到期年覆盖2029—2046年，具体定价与交割尚未完成。新增B级证据不是又一条AI缺钱新闻，而是云商试图以明确的外部融资额度、供应商融资、客户预付款和未来现金流转正时间表约束算力扩建；资本市场上限不等于总建设成本上限，订单积压、募集资金和实际可计费算力必须分账。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-03-A1",
+      "date": "2026-11-03",
+      "grade": "A",
+      "title": "工业 Agent 正从单点优化走向跨资产决策：ADNOC 的油井到市场闭环仍待验收",
+      "themes": [
+        "Industrial AI",
+        "Enterprise Agent",
+        "ADNOC",
+        "OpenAI Frontier",
+        "G42",
+        "Energy",
+        "Decision Intelligence",
+        "Enterprise Context",
+        "Semantic Authority",
+        "Ontology",
+        "Sovereign AI",
+        "Human Oversight",
+        "Industrial Workflows",
+        "AI Industry Control Points"
+      ],
+      "deck": "ADNOC 11月2日与 OpenAI、G42 签订多年合作，拟以 Frontier 将油藏、设施、资本预算和销售交易联成两类跨系统决策：全油田开发规划与每桶原油的价值评估。新增 A 级信号不是工业 Agent 已经自主经营油田，而是大型能源企业把专业模型、企业上下文、主权算力和人工决策权组织成一个跨资产协调层；“数月变数小时”、97%员工采用率及200多个AI应用均不能替代新系统的生产验收、经济回报和责任边界。",
+      "body_format": "article_text"
     }
   ]
 }
