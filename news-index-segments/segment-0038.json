@@ -49,6 +49,33 @@
       ],
       "deck": "香港金管局11月2日正式启动Project SAGE、成立跨界别专家小组，并就银行使用Agent的治理发表讨论文件，明确将跨Agent互通、责任安排、可信Agent中央登记册与Know Your Agent标准列为研究问题。新增B级证据不是香港已经实施Agent牌照或行业登记义务，而是金融监管正尝试把机器行动主体的身份、委托与责任从银行内部控制延伸到跨机构协作；10月15日既有ART监管框架与本次项目启动必须分开，实际规则、试验结果和采用规模仍待验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-02-B5",
+      "date": "2026-11-02",
+      "grade": "B",
+      "title": "主权 AI 从投资清单走向资产合并：石油资本入股不等于 3GW 算力已交付",
+      "themes": [
+        "Sovereign AI",
+        "AI Infrastructure",
+        "HUMAIN",
+        "Saudi Aramco",
+        "PIF",
+        "Industrial AI",
+        "Energy and Compute",
+        "Capital Allocation",
+        "AI Industry Control Points",
+        "Enterprise AI",
+        "Asset Consolidation",
+        "AI Data Centers",
+        "Corporate Governance",
+        "AI Business Model",
+        "Project Finance",
+        "Data Center Delivery",
+        "AI Industry Consolidation"
+      ],
+      "deck": "沙特阿美与PIF于11月1日确认完成HUMAIN股权交易：PIF保留51%，阿美以AI及数字资产转入并在2026年贡献约99亿里亚尔（26亿美元）现金取得49%。相较2025年仅有非约束性条款，本次新增B级证据是国家基金与能源企业把资本、既有数字资产及潜在工业需求放入同一AI平台；但资产作价、实际现金缴付进度、董事会权利、收入和3GW项目交付均未披露，不能据现金额倒推估值或把远期产能当作已融资、已接电的算力。",
+      "body_format": "article_text"
     }
   ]
 }
