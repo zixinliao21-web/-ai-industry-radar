@@ -99,6 +99,30 @@
       ],
       "deck": "Marvell与Lumentum于11月2日签署全股票收购协议，披露Lumentum隐含企业价值约1150亿美元，预计2028年上半年完成。相较10月已记录的光器件产能预订与NVIDIA投资，本次新增A级信号是电互连、定制芯片、激光器与光学制造能力可能被整合到同一企业治理和联合设计体系；但交易未交割、5500亿美元市场空间和10亿美元协同均属公司预期，不能据此认定光互连已经被垄断或AI资本回报已经兑现。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-02-B6",
+      "date": "2026-11-02",
+      "grade": "B",
+      "title": "融资上限开始接受股债双重定价：Oracle 的200亿美元还不是可交付算力",
+      "themes": [
+        "AI Infrastructure Capital Stack",
+        "Oracle",
+        "Debt Financing",
+        "Equity Dilution",
+        "Cloud Infrastructure",
+        "Capital Markets",
+        "Free Cash Flow",
+        "Vendor Financing",
+        "Customer Prepayments",
+        "AI Industry Control Points",
+        "AI Business Model",
+        "Credit Risk",
+        "Capital Allocation",
+        "Hyperscaler Financing"
+      ],
+      "deck": "Oracle在10月28日把截至FY2030新增资本市场融资上限设为200亿美元（股权与新增债务各100亿美元），11月2日据监管申报启动相应股债发行程序，六档债券到期年覆盖2029—2046年，具体定价与交割尚未完成。新增B级证据不是又一条AI缺钱新闻，而是云商试图以明确的外部融资额度、供应商融资、客户预付款和未来现金流转正时间表约束算力扩建；资本市场上限不等于总建设成本上限，订单积压、募集资金和实际可计费算力必须分账。",
+      "body_format": "article_text"
     }
   ]
 }
