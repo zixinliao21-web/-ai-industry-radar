@@ -147,6 +147,34 @@
       ],
       "deck": "ADNOC 11月2日与 OpenAI、G42 签订多年合作，拟以 Frontier 将油藏、设施、资本预算和销售交易联成两类跨系统决策：全油田开发规划与每桶原油的价值评估。新增 A 级信号不是工业 Agent 已经自主经营油田，而是大型能源企业把专业模型、企业上下文、主权算力和人工决策权组织成一个跨资产协调层；“数月变数小时”、97%员工采用率及200多个AI应用均不能替代新系统的生产验收、经济回报和责任边界。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-03-B1",
+      "date": "2026-11-03",
+      "grade": "B",
+      "title": "AI 改造专业服务的入口可能是收购客户关系：低估值并购交割不等于自动化利润兑现",
+      "themes": [
+        "Enterprise AI",
+        "Vertical AI",
+        "AI Industry Consolidation",
+        "RWS",
+        "Acolad",
+        "Acogroup",
+        "Language Services",
+        "Professional Services",
+        "AI-native Business Model",
+        "Enterprise Distribution",
+        "Regulated Industries",
+        "Human-in-the-loop",
+        "Workflow Ownership",
+        "Customer Relationships",
+        "AI Industry Control Points",
+        "Mergers and Acquisitions",
+        "AI Commercialization",
+        "Service Economics"
+      ],
+      "deck": "RWS 11月2日完成对 Acolad 母公司 Acogroup 的收购，8月公告对应企业价值仅约2240万英镑，而标的2025年收入为1.82亿英镑。新增B级事实是拥有专业语言AI平台的企业正式取得一批受监管行业客户、交付人员和跨国服务渠道；但低企业价值不能直接证明AI压垮传统翻译业，客户交叉销售、服务自动化、利润改善及合并后现金流仍待检验。",
+      "body_format": "article_text"
     }
   ]
 }
