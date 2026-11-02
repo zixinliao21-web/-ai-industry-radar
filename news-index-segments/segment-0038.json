@@ -175,6 +175,31 @@
       ],
       "deck": "RWS 11月2日完成对 Acolad 母公司 Acogroup 的收购，8月公告对应企业价值仅约2240万英镑，而标的2025年收入为1.82亿英镑。新增B级事实是拥有专业语言AI平台的企业正式取得一批受监管行业客户、交付人员和跨国服务渠道；但低企业价值不能直接证明AI压垮传统翻译业，客户交叉销售、服务自动化、利润改善及合并后现金流仍待检验。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-03-B2",
+      "date": "2026-11-03",
+      "grade": "B",
+      "title": "推理芯片的商业分水岭不是跑分：量产、云分发和软件适配开始接受同一场检验",
+      "themes": [
+        "AI Infrastructure",
+        "Inference Accelerators",
+        "FuriosaAI",
+        "RNGD",
+        "Samsung SDS",
+        "NPU-as-a-Service",
+        "AI Chip Commercialization",
+        "Semiconductor Manufacturing",
+        "Inference Economics",
+        "Cloud Distribution",
+        "Sovereign AI",
+        "Software Ecosystem",
+        "Broadcom",
+        "AI Industry Control Points",
+        "Production Evidence"
+      ],
+      "deck": "FuriosaAI 10月28日披露完成6.2亿美元D轮、投后估值约29亿美元，并称RNGD已量产、计划2026年生产2万张加速卡；三星SDS早在7月独立确认已上线基于RNGD的NPUaaS。新增B级证据不是NVIDIA优势已被颠覆，而是专用推理芯片开始同时具备制造、云分发与软件适配的可检查路径。计划产量不是已出货量，厂商能效测试不是客户实际TCO，服务上线也不等于规模化收入。",
+      "body_format": "article_text"
     }
   ]
 }
