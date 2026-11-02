@@ -1,0 +1,30 @@
+{
+  "schema_version": "3.0",
+  "segment": "0038",
+  "items": [
+    {
+      "id": "2026-11-02-A1",
+      "date": "2026-11-02",
+      "grade": "A",
+      "title": "电网接入权开始变成附条件的国家资源：英国把社区回报写进算力加速通道",
+      "themes": [
+        "AI Infrastructure",
+        "Data Centres",
+        "UK Data Centre Covenant",
+        "Grid Allocation",
+        "Sovereign AI",
+        "Industrial Policy",
+        "Power Delivery",
+        "Community Benefit",
+        "Energy Regulation",
+        "Social License",
+        "Infrastructure Control Points",
+        "National Grid",
+        "Ofgem",
+        "Capital Allocation"
+      ],
+      "deck": "英国财政部10月28日发布Data Centre Covenant：战略数据中心若希望获得政府加速接电、规划协调及特殊临时供电支持，须回应电力成本、社区收益、环境、就业与本土AI硬件、安全五类要求；政府拟通过部长级协调机制保留、重新分配或转移部分接电容量。新增A级信号不是英国已交付6GW算力，而是国家开始以稀缺电网排队权交换可审查的公共与主权回报。政策仍需具体项目、规则和真实送电验证，纸面优先级不能替代变电站。",
+      "body_format": "article_text"
+    }
+  ]
+}
