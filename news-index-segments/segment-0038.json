@@ -76,6 +76,29 @@
       ],
       "deck": "沙特阿美与PIF于11月1日确认完成HUMAIN股权交易：PIF保留51%，阿美以AI及数字资产转入并在2026年贡献约99亿里亚尔（26亿美元）现金取得49%。相较2025年仅有非约束性条款，本次新增B级证据是国家基金与能源企业把资本、既有数字资产及潜在工业需求放入同一AI平台；但资产作价、实际现金缴付进度、董事会权利、收入和3GW项目交付均未披露，不能据现金额倒推估值或把远期产能当作已融资、已接电的算力。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-02-A2",
+      "date": "2026-11-02",
+      "grade": "A",
+      "title": "光互连从预订产能走向整合所有权：1150亿美元交易尚未造就垄断",
+      "themes": [
+        "AI Infrastructure",
+        "Optical Interconnects",
+        "Marvell",
+        "Lumentum",
+        "Mergers and Acquisitions",
+        "Silicon Photonics",
+        "AI Industry Control Points",
+        "Vertical Integration",
+        "Semiconductor Supply Chain",
+        "NVIDIA",
+        "Capital Allocation",
+        "Competition",
+        "AI Industry Consolidation"
+      ],
+      "deck": "Marvell与Lumentum于11月2日签署全股票收购协议，披露Lumentum隐含企业价值约1150亿美元，预计2028年上半年完成。相较10月已记录的光器件产能预订与NVIDIA投资，本次新增A级信号是电互连、定制芯片、激光器与光学制造能力可能被整合到同一企业治理和联合设计体系；但交易未交割、5500亿美元市场空间和10亿美元协同均属公司预期，不能据此认定光互连已经被垄断或AI资本回报已经兑现。",
+      "body_format": "article_text"
     }
   ]
 }
