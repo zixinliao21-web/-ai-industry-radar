@@ -1,0 +1,30 @@
+{
+  "schema_version": "3.0",
+  "segment": "0039",
+  "items": [
+    {
+      "id": "2026-11-03-A2",
+      "date": "2026-11-03",
+      "grade": "A",
+      "title": "前沿模型开始披露算力承诺的到期表：8954亿美元不是已花掉的钱",
+      "themes": [
+        "AI Infrastructure Capital Stack",
+        "Anthropic",
+        "Frontier Models",
+        "Compute Commitments",
+        "Contractual Obligations",
+        "Cash Flow",
+        "IPO Disclosure",
+        "Capital Allocation",
+        "AI Economics",
+        "Compute Delivery",
+        "Contingent Contracts",
+        "AI Industry Control Points",
+        "Infrastructure Concentration",
+        "Enterprise AI"
+      ],
+      "deck": "Anthropic 11月2日的S-1/A首次填实此前招股文件留白的算力承诺：约8954亿美元跨多年采购与租赁安排，约698亿美元在未来12个月到期，其中约2138亿美元涉及可行使终止权或尚待满足的条件。同期前三季度经营现金流转正至65.69亿美元，但融资现金流达1107.35亿美元、第三季度算力费用环比增长约77%。新增A级证据不是“模型公司已经花掉8954亿美元”，而是收入增长、经营现金流、外部融资和分期履约风险第一次可以用同一份公开文件逐项核对；现金流转正不等于长期资本回收已获验证。",
+      "body_format": "article_text"
+    }
+  ]
+}
