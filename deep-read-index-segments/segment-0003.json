@@ -33,6 +33,34 @@
         "type": "free"
       },
       "content_status": "published_verbatim"
+    },
+    {
+      "id": "DR-2026-018",
+      "added_date": "2026-11-03",
+      "title": "Red-Teaming OpenAI's Internal Agent Monitoring Systems",
+      "author": [
+        "David Rein",
+        "Adam Kaufman"
+      ],
+      "publication": "METR",
+      "institution": "METR / Redwood Research",
+      "source_type": "research_report",
+      "source_url": "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/",
+      "original_publish_date": "2026-10-22",
+      "estimated_reading_time": "公开原文约 10–15 分钟；结合深度分析约 35–45 分钟",
+      "topic": "Agent 治理与企业安全架构",
+      "themes": [
+        "Agent Monitoring",
+        "Red Team",
+        "权限隔离",
+        "企业治理",
+        "可审计执行",
+        "组织责任"
+      ],
+      "access": {
+        "type": "free"
+      },
+      "content_status": "published_verbatim"
     }
   ]
 }
