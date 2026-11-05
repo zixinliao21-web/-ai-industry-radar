@@ -61,6 +61,35 @@
         "type": "free"
       },
       "content_status": "published_verbatim"
+    },
+    {
+      "id": "DR-2026-019",
+      "added_date": "2026-11-05",
+      "title": "Early progress on accelerating drug development with Claude",
+      "author": [
+        "Anthropic Science Team"
+      ],
+      "publication": "Anthropic Research",
+      "institution": "Anthropic",
+      "source_type": "research_case_study",
+      "source_url": "https://www.anthropic.com/research/early-progress-drug-development",
+      "original_publish_date": "2026-10-27",
+      "estimated_reading_time": "主报告约 20–30 分钟；含技术报告约 40–60 分钟（估算）",
+      "topic": "AI-native 公司与组织边界",
+      "themes": [
+        "AI-native Company",
+        "Agent",
+        "组织设计",
+        "创业",
+        "生物医药",
+        "产业案例",
+        "团队管理",
+        "Workflow"
+      ],
+      "access": {
+        "type": "free"
+      },
+      "content_status": "published_verbatim"
     }
   ]
 }
