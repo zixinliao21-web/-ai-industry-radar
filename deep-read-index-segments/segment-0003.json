@@ -90,6 +90,42 @@
         "type": "free"
       },
       "content_status": "published_verbatim"
+    },
+    {
+      "id": "DR-2026-020",
+      "added_date": "2026-11-07",
+      "title": "AI for scientific discovery: How researchers use Claude",
+      "author": [
+        "Johannes Hermle",
+        "Ben Jones",
+        "Lukas Althoff",
+        "Ryan Heller",
+        "Thomas Lyttelton",
+        "Carolyn Stein",
+        "Nathan Wilmers",
+        "Maxim Massenkoff",
+        "Peter McCrory"
+      ],
+      "publication": "The Anthropic Institute",
+      "institution": "Anthropic",
+      "source_type": "research_report",
+      "source_url": "https://www.anthropic.com/research/how-researchers-use-claude",
+      "original_publish_date": "2026-11-05",
+      "estimated_reading_time": "报告及附录精读约 45–70 分钟（估算）",
+      "topic": "AI 科研生产率与组织瓶颈",
+      "themes": [
+        "AI for Science",
+        "Agent",
+        "生产率",
+        "组织设计",
+        "技术扩散",
+        "创业战略",
+        "研发经济学"
+      ],
+      "access": {
+        "type": "free"
+      },
+      "content_status": "published_verbatim"
     }
   ]
 }
