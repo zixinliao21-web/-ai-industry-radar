@@ -25,6 +25,30 @@
       ],
       "deck": "Anthropic 11月2日的S-1/A首次填实此前招股文件留白的算力承诺：约8954亿美元跨多年采购与租赁安排，约698亿美元在未来12个月到期，其中约2138亿美元涉及可行使终止权或尚待满足的条件。同期前三季度经营现金流转正至65.69亿美元，但融资现金流达1107.35亿美元、第三季度算力费用环比增长约77%。新增A级证据不是“模型公司已经花掉8954亿美元”，而是收入增长、经营现金流、外部融资和分期履约风险第一次可以用同一份公开文件逐项核对；现金流转正不等于长期资本回收已获验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-10-A1",
+      "date": "2026-11-10",
+      "grade": "A",
+      "title": "FDE 的价值不在替银行训练一个 Agent：两周半到三天的关键是业务规则进入交付链",
+      "themes": [
+        "FDE",
+        "Forward Deployed Engineering",
+        "Enterprise AI Deployment",
+        "Northern Trust",
+        "Microsoft Frontier Company",
+        "Financial Services",
+        "Vertical AI",
+        "Business Rules",
+        "Human-in-the-loop",
+        "Enterprise Context",
+        "Onboarding",
+        "Workflow Ownership",
+        "Production Evidence",
+        "Delivery Economics"
+      ],
+      "deck": "Northern Trust 与微软11月9日披露，双方FDE及金融专家联合建设的机构客户接入Agent，将真实客户数据准备流程从约两周半缩短至三天，包含人工复核、异常处理和最终验证；96.5% F1则来自七组匿名历史数据的受控测试。新增A级证据是FDE把领域术语、可复用规则、人工复核与企业系统接入组织成可运行流程，而非证明AI已自主完成开户或FDE交付经济学已经成立。",
+      "body_format": "article_text"
     }
   ]
 }
