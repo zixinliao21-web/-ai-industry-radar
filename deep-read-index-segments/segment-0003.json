@@ -126,6 +126,34 @@
         "type": "free"
       },
       "content_status": "published_verbatim"
+    },
+    {
+      "id": "DR-2026-021",
+      "added_date": "2026-11-10",
+      "title": "The components of agent memory",
+      "author": [
+        "Lance Martin"
+      ],
+      "publication": "Anthropic Engineering",
+      "institution": "Anthropic",
+      "source_type": "engineering_research",
+      "source_url": "https://www.anthropic.com/research/components-of-agent-memory",
+      "original_publish_date": "2026-11-06",
+      "estimated_reading_time": "原文与图表约 25–40 分钟；结合深读约 45–60 分钟（估算）",
+      "topic": "Agent 长期记忆与企业知识治理",
+      "themes": [
+        "Agent Memory",
+        "Context Engineering",
+        "Dreaming",
+        "Knowledge Governance",
+        "Enterprise Agent",
+        "Evaluation",
+        "组织管理"
+      ],
+      "access": {
+        "type": "free"
+      },
+      "content_status": "published_verbatim"
     }
   ]
 }
