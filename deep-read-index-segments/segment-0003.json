@@ -154,6 +154,38 @@
         "type": "free"
       },
       "content_status": "published_verbatim"
+    },
+    {
+      "id": "DR-2026-022",
+      "added_date": "2026-11-12",
+      "title": "2026: The State of Enterprise AI",
+      "author": [
+        "Tim Tully",
+        "Joff Redfern",
+        "Deedy Das",
+        "Derek Xiao"
+      ],
+      "publication": "Menlo Ventures",
+      "institution": "Menlo Ventures",
+      "source_type": "industry_research_report",
+      "source_url": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/",
+      "original_publish_date": "2026-11-03",
+      "estimated_reading_time": "原文及图表约 40–60 分钟（估算）",
+      "topic": "企业 Agent 市场结构与 AI-native 创业战略",
+      "themes": [
+        "Enterprise AI",
+        "Agent Economics",
+        "AI-native Startups",
+        "Vertical AI",
+        "FDE",
+        "Business Models",
+        "System of Record",
+        "组织管理"
+      ],
+      "access": {
+        "type": "free"
+      },
+      "content_status": "published_verbatim"
     }
   ]
 }
