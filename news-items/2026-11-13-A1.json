@@ -1,0 +1,50 @@
+{
+  "id": "2026-11-13-A1",
+  "date": "2026-11-13",
+  "grade": "A",
+  "title": "软件座席不再是收费单位：Zendesk 把“完成工作”写进合同，但结果定价仍有边界",
+  "themes": [
+    "Enterprise AI",
+    "AI-native Enterprise Software",
+    "Zendesk",
+    "Outcome-based Pricing",
+    "SaaS Business Model",
+    "Enterprise Workflow",
+    "AI Commercialization",
+    "Vertical AI",
+    "Workflow Ownership",
+    "Outcome Verification",
+    "Enterprise Software Control Points",
+    "FDE"
+  ],
+  "deck": "Zendesk 11月10日推出早期访问的Outcome AI Platform计划：新计划不限座席，结合平台费用、成果预算和符合定义的对话或运营成果计费；官方文件披露对话成果起价0.99美元、最低预算与超额收费机制。新增A级信号不是全行业已改为按ROI分成，而是传统SaaS厂商开始把可核验的工作事件写入商业计量体系；真实客户迁移、利润率、账单争议和长期续约尚未验证。",
+  "body_format": "article_text",
+  "article_text": "# 软件座席不再是收费单位：Zendesk 把“完成工作”写进合同，但结果定价仍有边界\n\n**核心判断｜企业 AI 对传统 SaaS 的冲击，正在从“软件中增加 Agent 功能”进入“重新定义什么工作可以收费”。** 2026 年 11 月 10 日，Zendesk 公布 Outcome AI Platform 与 Zendesk Unlimited：在新计划中取消按座席逐人收费，改以平台计划、Outcome Budget 和符合规则的对话或运营成果组合计费。11 月 11 日更新的产品说明及服务条款进一步明确了计量对象、最低承诺、超额付费和预算失效机制。这比泛泛宣布“按效果付费”更有研究价值，因为它提供了可核对的商业合同结构；但目前属于 Early Access Program（EAP），不是整个客户群已完成迁移，更不是经审计的收入结构转型。\n\n## 一、真正发生的变化：人可以无限进入系统，工作结果不能无限免费\n\n传统客服 SaaS 以坐席数作为重要收入单位：企业增加客服人员或跨部门访问权限，通常需要增加许可证。随着 AI 自动完成部分任务，软件供应商可能面临一个矛盾：客户所需人工座席减少，平台创造的自动化价值增加，但按座席收费的收入基础反而收缩。\n\nZendesk 11 月 10 日的公告提出另一种组合：Outcome AI Platform Plans 提供不限座席数量的访问权，按不同计划包含 AI Agents、Copilot、分析、质量控制和自定义 Agent 等功能；客户设立 Outcome Budget，符合定义的对话成果和运营成果会消耗预算。11 月 11 日的官方产品说明写明，对话成果起价为每项 0.99 美元，但不同成果类型的实际费率及合同条款可能不同。**这不是所有使用都按 0.99 美元收费，也不是“完全没有固定订阅费”。**\n\n官方文档区分两类成果。Conversational outcome 是客户问题经对话得到解决；同一问题即使经历多条消息、渠道或人工与 AI 协作，原则上只计一次。Operational outcome 则包括某些脱离对话的独立 Agent 工作流或分析任务，具体按适用计划和费率表定义。它们将“可收费的单位”从人的访问权限移动到可识别的工作事件。\n\n但该结构并非纯粹的按结果付费。官方文档披露：Essentials 计划不收平台基础费，却要求每年最低 600 美元的成果预算支出；Business、Enterprise、Enterprise Plus 计划分别包含每年 720、3,000 和 7,500 美元的成果预算，其他平台费用和附加组件另计。语音通信费用有独立预算。合同条款还规定，预算用尽后可按实际超额使用收费，未使用预算通常到期失效且不可退款。**“无限座席”并不等于无限使用或成本封顶。**\n\n## 二、为什么值得注意：传统软件厂商开始主动削弱自己的旧计价锚点\n\nOutcome-based pricing 并非 Zendesk 首创。Sierra 等 AI-native 客服公司此前已将成功解决问题作为收费基础，传统软件商也长期尝试用量和混合计费。**本次新增信号不在于发明了一种新定价方式，而在于一家拥有成熟客服平台、既有客户关系和人工客服工作台的 incumbent，公开提供一个不再按人数扩张的商业计划。**\n\n这使“传统 SaaS 必然被 AI-native Agent 取代”的叙事变得过于简单。原有厂商可以利用历史工单、知识库、渠道、管理员权限、审计和客户分发渠道，将 AI 的工作成果直接映射到已有业务记录，再调整自己的收费方式。创业公司的竞争对象不仅是旧的每座席许可证，还可能是已经改用结果计费的成熟工作流平台。\n\n更深的控制点是**谁定义、记录、验证和争议处理一个 outcome**。若“已解决问题”的认定、重复计数、人工升级、退款和质量标准都由平台的业务对象与审计体系决定，平台便不仅提供模型执行能力，还掌握商业计量权。企业购买的不只是一次推理，而是能够进入账单、复核和管理报表的工作结果。Zendesk 声称对成果质量和完整性进行评估，但公开材料尚不足以证明争议率、误计费率或客户独立核验机制的长期效果。\n\n## 三、它修正了哪一条产业判断\n\n**得到加强的判断：** 企业软件价值捕获的单位可能从 seat/license 向“有业务定义的完成事件”迁移，尤其适用于高频、边界清楚、可计数、可审查的服务流程。这里出现了具体的合同对象、预算对象和可追踪的成果事件，而不只是营销概念。\n\n**需要修正的判断：** AI-native 公司并不天然独占结果计费的优势。成熟 SaaS 供应商可以利用既有工作流入口和客户数据，把自己的许可证模式改造成平台基础费、预算承诺、结果收费及附加服务的组合。它可能牺牲某些座席扩张逻辑，却保留或增强对流程和分发的控制。\n\n**尚未改变的判断：** 结果计费不是自动成立的“按客户真正 ROI 分成”。一个工单被标记为解决，不等于客户获得了对应金额的利润，也不意味着供应商承担全部服务责任。若成果定义过宽，客户可能为低质量的表面完成付费；若定义过窄，供应商可能不愿处理复杂异常。不同业务的成果可测性差异很大。\n\n## 四、反论：从定价方案到商业模式验证，还缺四类证据\n\n第一，**可购买不等于已规模化采用**。官方帮助中心将新计划明确标为 EAP，需联系销售确认资格。公开信息没有披露实际签约客户数、从旧座席合同迁移的比例、年度经常性收入影响、续约表现和客户预算消耗分布。不能把产品发布等同于企业软件行业已经整体切换定价。\n\n第二，**计费结果不等于净经济收益**。客服问题被解决，仍可能有后续重开、客户流失、人工升级和错误赔付。需要将首次解决率、复开率、人工工时、客户满意度、争议退款及总服务成本共同衡量，才可能判断客户是否真的比座席模式更划算。Zendesk 在公告中提出最高可自动化 84% 请求的能力说法，但未给出适用于所有客户的独立审计口径，不能据此推断平均 ROI。\n\n第三，**“无座席费”背后仍有固定承诺和使用风险**。平台基础费、最低预算、按成果收费、独立语音费用、附加功能与超额账单同时存在。供应商可以把收入从座席数迁移到工作量，却不一定让企业采购预算更可预测。预算未用完到期失效与超额继续计费尤其需要进入 TCO 计算。\n\n第四，**结果定义本身会引发激励冲突**。供应商可能优化易计费的解决事件，客户则希望减少误报、重复计数和不必要的自动化。一个平台若同时执行任务、判断成功并开具账单，独立抽样、申诉、事件追踪和合同边界就比“模型有多聪明”更重要。\n\n## 五、对 FDE、Vertical AI 与 VELNAR 的启示\n\n对 FDE 而言，这不是“以后不需要工程师”的证据。恰恰相反，若交付者希望对结果收费，就必须先与客户明确业务事件、证据来源、异常处理、人工审批、责任分界及结果归属。工程交付可能从“把 Agent 接入系统”进一步变成“把可核验的业务完成事件接入系统”。但公开资料没有证明 Zendesk 的新计费模式降低了 FDE 人天、部署周期或售后运维成本。\n\n对 Vertical AI 而言，真正可能形成壁垒的不是把一个行业任务自动化，而是掌握该行业**什么叫完成、什么叫失败、谁能签核、何时可收费**的业务语义与流程记录。客服工单具有相对标准化的结束事件；制造排产、供应链异常协商、财务核销和受监管审批则更复杂，不能机械复制“每完成一次收一笔钱”。\n\n对 VELNAR 的长期战略，这提供了一个值得持续验证的商业模式假设：可复制的企业 AI 产品或服务，可能围绕可审计工作结果形成定价权，而不是永远按账号、Token 或一次性项目收费。但它**不构成当前 Sales MVP 扩大功能范围或立即改为结果计费的理由**。先把真实业务工作流、异常、验收与成本测量做扎实，才有资格讨论结果承担与收费机制。\n\n**结论｜A级结构信号，不是S级行业拐点。** Zendesk 已把取消座席计费、定义成果事件和成果预算写入公开产品与合同文件，这是 incumbent 主动调整软件价值捕获机制的可验证进展。尚未证明大规模客户愿意迁移、结果计费优于座席收费，或企业软件利润池已经重分配。后续应重点追踪 EAP 转正式商用、客户迁移率、每千个解决事件的实际 TCO、账单争议与净收入留存，而不是只追踪“有多少家公司宣布按结果收费”。\n\n## 一手来源\n\n1. Zendesk，2026-11-10，Outcome AI Platform / Unlimited 官方公告：https://www.zendesk.com/dk/newsroom/articles/zendesk-upends-enterprise-service-with-outcomeai-platform-unlimited-seats/\n2. Zendesk，2026-11-11，Introducing Zendesk Unlimited: AI-First Pricing：https://www.zendesk.com/au/blog/product-news/outcome-ai-platform/\n3. Zendesk Help，2026-11-11 更新，Announcing Zendesk Unlimited (EAP)：https://support.zendesk.com/hc/en-us/articles/11443724675098-Announcing-Zendesk-Unlimited-EAP\n4. Zendesk Help，Outcome AI Platform plans (EAP)：https://support.zendesk.com/hc/en-us/articles/11212432066330-About-Outcome-AI-Platform-plans-EAP\n5. Zendesk，2026-11-10 生效的新客户服务补充条款：https://support.zendesk.com/hc/en-us/articles/4408831944730-Supplemental-terms-Zendesk-s-service-specific-terms",
+  "sources": [
+    {
+      "title": "Zendesk Upends Enterprise Service with Outcome AI Platform, Unlimited Seats",
+      "url": "https://www.zendesk.com/dk/newsroom/articles/zendesk-upends-enterprise-service-with-outcomeai-platform-unlimited-seats/",
+      "date": "2026-11-10"
+    },
+    {
+      "title": "Introducing Zendesk Unlimited: AI-First Pricing",
+      "url": "https://www.zendesk.com/au/blog/product-news/outcome-ai-platform/",
+      "date": "2026-11-11"
+    },
+    {
+      "title": "Announcing Zendesk Unlimited (EAP)",
+      "url": "https://support.zendesk.com/hc/en-us/articles/11443724675098-Announcing-Zendesk-Unlimited-EAP",
+      "date": "2026-11-11"
+    },
+    {
+      "title": "About Outcome AI Platform plans (EAP)",
+      "url": "https://support.zendesk.com/hc/en-us/articles/11212432066330-About-Outcome-AI-Platform-plans-EAP",
+      "date": "2026-11-11"
+    },
+    {
+      "title": "Supplemental terms: Zendesk service-specific terms",
+      "url": "https://support.zendesk.com/hc/en-us/articles/4408831944730-Supplemental-terms-Zendesk-s-service-specific-terms",
+      "date": "2026-11-10"
+    }
+  ]
+}

@@ -49,6 +49,28 @@
       ],
       "deck": "Northern Trust 与微软11月9日披露，双方FDE及金融专家联合建设的机构客户接入Agent，将真实客户数据准备流程从约两周半缩短至三天，包含人工复核、异常处理和最终验证；96.5% F1则来自七组匿名历史数据的受控测试。新增A级证据是FDE把领域术语、可复用规则、人工复核与企业系统接入组织成可运行流程，而非证明AI已自主完成开户或FDE交付经济学已经成立。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-13-A1",
+      "date": "2026-11-13",
+      "grade": "A",
+      "title": "软件座席不再是收费单位：Zendesk 把“完成工作”写进合同，但结果定价仍有边界",
+      "themes": [
+        "Enterprise AI",
+        "AI-native Enterprise Software",
+        "Zendesk",
+        "Outcome-based Pricing",
+        "SaaS Business Model",
+        "Enterprise Workflow",
+        "AI Commercialization",
+        "Vertical AI",
+        "Workflow Ownership",
+        "Outcome Verification",
+        "Enterprise Software Control Points",
+        "FDE"
+      ],
+      "deck": "Zendesk 11月10日推出早期访问的Outcome AI Platform计划：新计划不限座席，结合平台费用、成果预算和符合定义的对话或运营成果计费；官方文件披露对话成果起价0.99美元、最低预算与超额收费机制。新增A级信号不是全行业已改为按ROI分成，而是传统SaaS厂商开始把可核验的工作事件写入商业计量体系；真实客户迁移、利润率、账单争议和长期续约尚未验证。",
+      "body_format": "article_text"
     }
   ]
 }
