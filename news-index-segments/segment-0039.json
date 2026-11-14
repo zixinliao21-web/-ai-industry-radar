@@ -71,6 +71,29 @@
       ],
       "deck": "Zendesk 11月10日推出早期访问的Outcome AI Platform计划：新计划不限座席，结合平台费用、成果预算和符合定义的对话或运营成果计费；官方文件披露对话成果起价0.99美元、最低预算与超额收费机制。新增A级信号不是全行业已改为按ROI分成，而是传统SaaS厂商开始把可核验的工作事件写入商业计量体系；真实客户迁移、利润率、账单争议和长期续约尚未验证。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-14-A1",
+      "date": "2026-11-14",
+      "grade": "A",
+      "title": "企业 AI 的缺口不是又一个 Agent：谁对上线后的完整结果负责？",
+      "themes": [
+        "FDE",
+        "Enterprise AI Deployment",
+        "Services-as-Software",
+        "AI Operating Model",
+        "HFS Research",
+        "Rackspace",
+        "Production Governance",
+        "Unit Economics",
+        "Repeatability",
+        "Vertical AI",
+        "Outcome-based Pricing",
+        "Enterprise Context",
+        "Workflow Ownership"
+      ],
+      "deck": "HFS 与 Rackspace 11月12日公布502名企业AI决策者调查：仅33%称最大AI项目达到原商业目标，44%缺少统一生产运营安排；38%的外部AI支出仍以工时或固定项目为主，按成果计费占14%。新增A级信号是交付后运营责任、跨部门复用与成本可见性开始被同一调查量化；但样本限AI活跃企业，供应商赞助研究不能证明统一运营商模式已产生更高ROI。",
+      "body_format": "article_text"
     }
   ]
 }
