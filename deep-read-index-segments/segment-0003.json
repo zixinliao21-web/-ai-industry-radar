@@ -186,6 +186,44 @@
         "type": "free"
       },
       "content_status": "published_verbatim"
+    },
+    {
+      "id": "DR-2026-023",
+      "added_date": "2026-11-14",
+      "title": "Global Banking Annual Review 2026: The AI disruption dividend",
+      "author": [
+        "Akshay Kapoor",
+        "Brian Ledbetter",
+        "Javier Martinez Arroyo",
+        "Klaus Dallerup",
+        "Marco Vettori",
+        "Marti Riba",
+        "Miklós Dietz",
+        "Saptarshi Ganguly",
+        "Sid Tiwari",
+        "Vik Sohoni"
+      ],
+      "publication": "McKinsey & Company",
+      "institution": "McKinsey Banking Practice",
+      "source_type": "industry_research_report",
+      "source_url": "https://www.mckinsey.com/industries/financial-services/our-insights/global-banking-annual-review",
+      "original_publish_date": "2026-11-10",
+      "estimated_reading_time": "报告与图表精读约 40–60 分钟（估算）",
+      "topic": "企业 Agent 生产率与组织经营收益的断层",
+      "themes": [
+        "Enterprise Agent",
+        "Workflow Redesign",
+        "Agent Economics",
+        "Organizational Design",
+        "Institutional Intelligence",
+        "FDE",
+        "Banking",
+        "Governance"
+      ],
+      "access": {
+        "type": "free"
+      },
+      "content_status": "published_verbatim"
     }
   ]
 }
