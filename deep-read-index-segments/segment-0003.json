@@ -224,6 +224,36 @@
         "type": "free"
       },
       "content_status": "published_verbatim"
+    },
+    {
+      "id": "DR-2026-024",
+      "added_date": "2026-11-17",
+      "title": "Measuring alignment eval tells",
+      "author": [
+        "Uzay Girit",
+        "Kaivu Hariharan",
+        "Leni Shor"
+      ],
+      "publication": "METR",
+      "institution": "Model Evaluation & Threat Research",
+      "source_type": "research_note",
+      "source_url": "https://metr.org/notes/2026-11-16-measuring-alignment-eval-tells/",
+      "original_publish_date": "2026-11-16",
+      "estimated_reading_time": "原文、图表与附录精读约 30–45 分钟（估算）",
+      "topic": "Agent 评估真实性与企业安全验证",
+      "themes": [
+        "Agent Evaluation",
+        "Alignment",
+        "Reward Hacking",
+        "Enterprise Agent",
+        "Evaluation Design",
+        "Governance",
+        "Safety"
+      ],
+      "access": {
+        "type": "free"
+      },
+      "content_status": "published_verbatim"
     }
   ]
 }
