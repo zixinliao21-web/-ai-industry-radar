@@ -94,6 +94,28 @@
       ],
       "deck": "HFS 与 Rackspace 11月12日公布502名企业AI决策者调查：仅33%称最大AI项目达到原商业目标，44%缺少统一生产运营安排；38%的外部AI支出仍以工时或固定项目为主，按成果计费占14%。新增A级信号是交付后运营责任、跨部门复用与成本可见性开始被同一调查量化；但样本限AI活跃企业，供应商赞助研究不能证明统一运营商模式已产生更高ROI。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-17-A1",
+      "date": "2026-11-17",
+      "grade": "A",
+      "title": "AI+BPO 毛利率翻四倍，企业却陷入亏损：服务自动化的两本账",
+      "themes": [
+        "Enterprise AI",
+        "Vertical AI",
+        "AI+BPO",
+        "Helport AI",
+        "Service Economics",
+        "FDE Productization",
+        "AI-native Enterprise Software",
+        "Gross Margin",
+        "Human-in-the-loop",
+        "Workflow Ownership",
+        "Enterprise Deployment",
+        "Unit Economics"
+      ],
+      "deck": "Helport AI 11月16日提交的FY2026 20-F显示，AI+BPO收入从约21万美元增至144万美元、毛利率从11.84%升至46.83%，但集团收入下滑36.8%、整体毛利率从54.87%降至36.14%，净亏损2615万美元。新增A级证据是人机混合交付的分业务毛利改善与公司层面的研发、客户迁移及固定成本压力可以同时核对；它既不证明自主AI劳动力已盈利，也不证明FDE或AI+BPO模式普遍失败。",
+      "body_format": "article_text"
     }
   ]
 }
