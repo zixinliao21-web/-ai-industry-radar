@@ -116,6 +116,25 @@
       ],
       "deck": "Helport AI 11月16日提交的FY2026 20-F显示，AI+BPO收入从约21万美元增至144万美元、毛利率从11.84%升至46.83%，但集团收入下滑36.8%、整体毛利率从54.87%降至36.14%，净亏损2615万美元。新增A级证据是人机混合交付的分业务毛利改善与公司层面的研发、客户迁移及固定成本压力可以同时核对；它既不证明自主AI劳动力已盈利，也不证明FDE或AI+BPO模式普遍失败。",
       "body_format": "article_text"
+    },
+    {
+      "id": "2026-11-19-A1",
+      "date": "2026-11-19",
+      "grade": "A",
+      "title": "企业AI交付商做到一亿美元年化收入：FDE需求被验证，规模经济仍未被证明",
+      "themes": [
+        "FDE",
+        "Enterprise AI",
+        "Enterprise Deployment",
+        "AI-native Company",
+        "Service Economics",
+        "Forward Deployed Engineering",
+        "Unit Economics",
+        "Vertical AI",
+        "Production AI"
+      ],
+      "deck": "Tribe AI披露1亿美元年化收入、3.8倍同比增长及约80%前线工程师占比，显示企业愿意为生产部署持续付费；但公司自报收入与盈利缺少独立审计，人员扩张尚不能证明FDE交付已经产品化。",
+      "body_format": "article_text"
     }
   ]
 }
