@@ -1,0 +1,47 @@
+{
+  "schema_version": "3.0",
+  "segment": "0004",
+  "items": [
+    {
+      "id": "DR-2026-025",
+      "added_date": "2026-11-19",
+      "title": "AI Goes Mainstream: The Scaling Era and the Rise of Generative AI",
+      "author": [
+        "Michael Wooldridge",
+        "Peter Asaro",
+        "Lucie Flek",
+        "Iryna Gurevych",
+        "Sara Hooker",
+        "Gina Neff",
+        "Peter Norvig",
+        "Raymond Perrault",
+        "Iyad Rahwan",
+        "Samantha Shorey",
+        "Toby Walsh",
+        "Luke Zettlemoyer"
+      ],
+      "publication": "Stanford AI100",
+      "institution": "Stanford University",
+      "source_type": "long_form_research_report",
+      "source_url": "https://ai100.stanford.edu/2026-report",
+      "original_publish_date": "2026-11-10",
+      "estimated_reading_time": "完整报告约 3–5 小时（按百余页报告估算）",
+      "topic": "AI 规模化时代的创业机会、组织边界与长期产业结构",
+      "themes": [
+        "AI100",
+        "Scaling",
+        "Inference",
+        "Enterprise Agent",
+        "创业战略",
+        "组织管理",
+        "AI Economics",
+        "Governance",
+        "Long-term Trends"
+      ],
+      "access": {
+        "type": "free"
+      },
+      "content_status": "published_verbatim"
+    }
+  ]
+}
