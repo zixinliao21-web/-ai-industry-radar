@@ -1,8 +1,8 @@
 {
   "schema_version": "3.0",
   "storage": "segmented_index",
-  "updated_at": "2026-11-19",
-  "item_count": 25,
+  "updated_at": "2026-11-21",
+  "item_count": 26,
   "segment_size": 8,
   "segments": [
     {
@@ -26,7 +26,7 @@
     {
       "id": "0004",
       "path": "deep-read-index-segments/segment-0004.json",
-      "count": 1,
+      "count": 2,
       "sealed": false
     }
   ]

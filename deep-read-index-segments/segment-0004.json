@@ -42,6 +42,44 @@
         "type": "free"
       },
       "content_status": "published_verbatim"
+    },
+    {
+      "id": "DR-2026-026",
+      "added_date": "2026-11-21",
+      "title": "AI R&D-relevant model capabilities are improving rapidly and are getting harder to measure",
+      "author": [
+        "Megan Kinniment",
+        "Manish Shetty",
+        "Brian Goodrich",
+        "Matt Putz",
+        "Spruce Bondera",
+        "Rowan Huang",
+        "Nikola Jurkovic",
+        "Jonathan Gabor",
+        "Oscar Sykes",
+        "Rif A. Saurous",
+        "Beth Barnes"
+      ],
+      "publication": "METR",
+      "institution": "Model Evaluation & Threat Research",
+      "source_type": "long_form_research_report",
+      "source_url": "https://metr.org/blog/2026-11-20-q4-2026-capability-update/",
+      "original_publish_date": "2026-11-20",
+      "estimated_reading_time": "约 50–75 分钟（根据正文与附录估算）",
+      "topic": "Agent 能力增长与评估瓶颈：可验证性、专家判断和企业部署",
+      "themes": [
+        "Agent Evaluation",
+        "AI R&D",
+        "Time Horizon",
+        "Judgment",
+        "Enterprise Agent",
+        "创业战略",
+        "组织管理"
+      ],
+      "access": {
+        "type": "free"
+      },
+      "content_status": "published_verbatim"
     }
   ]
 }
