@@ -7,13 +7,13 @@ const root = path.resolve(__dirname, '..');
 const fail = [];
 
 const htmlFiles = [
-  'index.html','article.html','consumer-radar.html','consumer-article.html','deep-read.html','deep-read-article.html'
+  'index.html','article.html','consumer-radar.html','consumer-article.html','deep-read.html','deep-read-article.html','agent-engineering.html','engineering-article.html'
 ];
 const jsFiles = [
   'assets/radar-runtime.js','assets/state-sync.js','assets/continue-reading.js',
   'assets/article-reader.js','assets/article-completion.js',
   'assets/research-discussion-bridge.js','assets/collection-discussion-bridge.js',
-  'assets/share-export-fix.js','service-worker.js'
+  'assets/share-export-fix.js','assets/engineering.js','service-worker.js'
 ];
 
 function read(file) {
@@ -45,7 +45,9 @@ const requiredRefs = {
   'deep-read.html':['assets/radar-runtime.js','assets/state-sync.js','assets/continue-reading.js'],
   'article.html':['assets/radar-runtime.js','assets/state-sync.js','assets/article-reader.js','assets/article-completion.js'],
   'consumer-article.html':['assets/radar-runtime.js','assets/state-sync.js','assets/article-reader.js','assets/article-completion.js'],
-  'deep-read-article.html':['assets/radar-runtime.js','assets/state-sync.js','assets/article-reader.js','assets/article-completion.js']
+  'deep-read-article.html':['assets/radar-runtime.js','assets/state-sync.js','assets/article-reader.js','assets/article-completion.js'],
+  'agent-engineering.html':['assets/engineering.js','assets/engineering.css'],
+  'engineering-article.html':['assets/engineering.js','assets/engineering.css']
 };
 for (const [file, refs] of Object.entries(requiredRefs)) {
   const html = read(file);
