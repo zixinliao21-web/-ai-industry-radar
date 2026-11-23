@@ -219,7 +219,7 @@ function checkAgentEngineering(){
       if(!nonEmpty(item.article_text)||!Array.isArray(item.sources)||item.sources.length===0)fail.push('Agent Engineering missing canonical text or sources');
       if(!['EXPERIMENTAL','PRODUCTION_VALIDATED'].includes(item.evidence_maturity))fail.push('Agent Engineering evidence not publication eligible');
       const q=item.quality_score;if(!q||!Number.isInteger(q.total)||q.total<55)fail.push('Agent Engineering insufficient quality score');
-      if(q&&q.total>=85&&meta.grade==='S'&&(!Number.isInteger(q.evidence)||q.evidence<20||!Number.isInteger(q.mechanism)||q.mechanism<16))fail.push('Agent Engineering S-grade evidence/mechanism threshold');
+      if(q){const threshold=meta.grade==='S'?85:meta.grade==='A'?70:55;const evidenceFloor=meta.grade==='S'?20:meta.grade==='A'?15:10;if(q.total<threshold||!Number.isInteger(q.evidence)||q.evidence<evidenceFloor)fail.push('Agent Engineering grade/score/evidence threshold mismatch');if(meta.grade==='S'&&(!Number.isInteger(q.mechanism)||q.mechanism<16))fail.push('Agent Engineering S-grade mechanism threshold');}
       count++;
     }
   }
