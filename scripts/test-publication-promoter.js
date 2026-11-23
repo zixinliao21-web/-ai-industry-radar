@@ -25,7 +25,8 @@ try {
   for (const [branch, file, kind] of [
     ['radar/publish-test', 'news-items/test.json', 'industry'],
     ['consumer/publish-test', 'consumer-radar.json', 'consumer'],
-    ['deep-read/publish-test', 'deep-read-items/test.json', 'deep_read']
+    ['deep-read/publish-test', 'deep-read-items/test.json', 'deep_read'],
+    ['engineering/publish-test', 'engineering-items/test.json', 'agent_engineering']
   ]) {
     git('reset', '--hard', base);
     const candidate = commit(file, '{}');
@@ -39,6 +40,11 @@ try {
   assert.equal(collection('radar/publish-2026-10-04-A1-1883c63'), 'industry'); tests++;
   assert.equal(collection('consumer/publish-2026-10-04-C1-ABC1234'), 'consumer'); tests++;
   assert.equal(collection('deep-read/publish-DR-2026-013-ABC1234'), 'deep_read'); tests++;
+  assert.equal(collection('engineering/publish-AE-2026-001'), 'agent_engineering'); tests++;
+  for (const file of ['scripts/evil.js','news-items/foreign.json','engineering-items/../bad.json']) {
+    git('reset','--hard',base);
+    assert.throws(() => check('engineering/publish-test',base,commit(file,'{}'))); tests++;
+  }
   assert.throws(() => collection('radar/publish-test/evil')); tests++;
   git('reset', '--hard', base);
   const candidate = commit('news-items/test.json', '{}');
