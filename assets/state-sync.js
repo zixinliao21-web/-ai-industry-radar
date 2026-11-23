@@ -8,10 +8,11 @@
   const READER_PROGRESS_KEY='velnar-reader-progress-v1';
   const READER_RATE_KEY='velnar-reader-rate-v1';
   const READER_VOICE_KEY='velnar-reader-voice-v1';
-  const READ_KEYS={industry:'ai-industry-radar-read-v1',consumer:'velnar-consumer-radar-read-v1',deep:'velnar-deep-read-read-v1'};
+  const READ_KEYS={industry:'ai-industry-radar-read-v1',consumer:'velnar-consumer-radar-read-v1',deep:'velnar-deep-read-read-v1',engineering:'velnar-agent-engineering-read-v1'};
   const path=location.pathname;
   const collection=path.endsWith('/consumer-radar.html')||path.endsWith('/consumer-article.html')?'consumer':
     path.endsWith('/deep-read.html')||path.endsWith('/deep-read-article.html')?'deep':
+    path.endsWith('/agent-engineering.html')||path.endsWith('/engineering-article.html')?'engineering':
     (path.endsWith('/')||path.endsWith('/index.html')||path.endsWith('/article.html'))?'industry':null;
   const isArticle=/\/(?:article|consumer-article|deep-read-article)\.html$/.test(path);
   let syncTimer=null,syncing=false,articleKey='',restoreDone=false,scrollTimer=null,localState=null,resumePrompt=null;
@@ -26,11 +27,11 @@
   function writeJson(key,value){try{localStorage.setItem(key,JSON.stringify(value));return true}catch{return false}}
   function readString(key){try{return localStorage.getItem(key)||''}catch{return''}}
   function writeString(key,value){try{if(value==null||value==='')localStorage.removeItem(key);else localStorage.setItem(key,String(value));return true}catch{return false}}
-  function emptyState(){return{version:1,updated_at:'',read:{industry:{},consumer:{},deep:{}},recent:null,reading:{},reader:{progress:{},rate:null,voice:null}}}
+  function emptyState(){return{version:1,updated_at:'',read:{industry:{},consumer:{},deep:{},engineering:{}},recent:null,reading:{},reader:{progress:{},rate:null,voice:null}}}
   function normalizeState(raw){
     const s=emptyState();
     if(!raw||typeof raw!=='object')return s;
-    ['industry','consumer','deep'].forEach(c=>{
+    ['industry','consumer','deep','engineering'].forEach(c=>{
       const src=raw.read&&raw.read[c];
       if(src&&typeof src==='object'&&!Array.isArray(src))Object.entries(src).forEach(([id,v])=>{if(v&&typeof v==='object')s.read[c][id]={value:!!v.value,updated_at:String(v.updated_at||'')}});
     });
@@ -100,7 +101,7 @@
   }
   function scheduleSync(delay){if(!getConfig())return;clearTimeout(syncTimer);syncTimer=setTimeout(()=>syncNow(false),typeof delay==='number'?delay:1400)}
   function setRead(c,id,value){
-    if(!c||!id)return;const s=normalizeState(localState||initializeState());
+    if(!c||!id||!READ_KEYS[c])return;const s=normalizeState(localState||initializeState());
     s.read[c][String(id)]={value:!!value,updated_at:now()};persistState(s);scheduleSync();
   }
   function markOpened(c,id){
