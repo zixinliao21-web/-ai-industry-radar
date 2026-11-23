@@ -28,6 +28,11 @@ function checkSyntax(code, file, suffix='') {
 }
 
 for (const file of jsFiles) checkSyntax(read(file), file);
+// Ensure the Engineering archive loader is wired to the current unread/read markup.
+const engineeringPage=read('agent-engineering.html');
+const engineeringScript=read('assets/engineering.js');
+for(const id of ['unreadList','readList','stats','status'])if(!engineeringPage.includes('id="'+id+'"'))fail.push('Engineering archive missing '+id);
+if(!engineeringScript.includes("if($('unreadList')&&$('readList'))"))fail.push('Engineering archive loader not wired to unread/read sections');
 
 for (const file of htmlFiles) {
   const html = read(file);
