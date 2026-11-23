@@ -54,7 +54,7 @@ for (const [file, refs] of Object.entries(requiredRefs)) {
   for (const ref of refs) if (!html.includes(ref)) fail.push(`${file}: missing required runtime reference ${ref}`);
 }
 
-for(const page of htmlFiles){if(!read(page).includes('agent-engineering.html'))fail.push(page+': fourth-column navigation missing')}
+if (!read('assets/radar-runtime.js').includes("href:'./agent-engineering.html'")) fail.push('collection picker missing Agent Engineering');
 const sw = read('service-worker.js');
 for (const route of ['article.html','consumer-radar.html','consumer-article.html','deep-read.html','deep-read-article.html','agent-engineering.html','engineering-article.html']) {
   if (!sw.includes(route)) fail.push(`service-worker.js: missing route/fallback reference ${route}`);

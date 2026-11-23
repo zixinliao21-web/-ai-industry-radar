@@ -46,7 +46,8 @@
     return[
       {href:'./',label:'AI 产业雷达',short:'AI 产业雷达',active:path.endsWith('/')||path.endsWith('/index.html')||path.endsWith('/article.html')},
       {href:'./consumer-radar.html',label:'AI C 端产业雷达',short:'C 端产业雷达',active:path.endsWith('/consumer-radar.html')||path.endsWith('/consumer-article.html')},
-      {href:'./deep-read.html',label:'Weekly Deep Read',short:'Deep Read',active:path.endsWith('/deep-read.html')||path.endsWith('/deep-read-article.html')}
+      {href:'./deep-read.html',label:'Weekly Deep Read',short:'Deep Read',active:path.endsWith('/deep-read.html')||path.endsWith('/deep-read-article.html')},
+      {href:'./agent-engineering.html',label:'Agent Engineering',short:'Agent Engineering',active:path.endsWith('/agent-engineering.html')||path.endsWith('/engineering-article.html')}
     ];
   }
   function mountCollectionNav(){
