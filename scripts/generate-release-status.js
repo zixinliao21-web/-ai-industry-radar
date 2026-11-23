@@ -14,6 +14,7 @@ function arg(name) {
 const industry = readJson('news-index.json');
 const consumer = readJson('consumer-radar.json');
 const deep = readJson('deep-read-index.json');
+const engineering = readJson('engineering-index.json');
 const commit = arg('--commit') || process.env.RELEASE_SHA || process.env.GITHUB_SHA || null;
 
 const status = {
@@ -37,6 +38,13 @@ const status = {
       status: 'healthy',
       last_update: consumer.updated_at || null,
       item_count: Array.isArray(consumer.items) ? consumer.items.length : 0
+    },
+    agent_engineering: {
+      status: 'healthy',
+      last_update: engineering.updated_at || null,
+      item_count: Number(engineering.item_count || 0),
+      storage: engineering.storage || null,
+      segment_count: Array.isArray(engineering.segments) ? engineering.segments.length : 0
     },
     deep_read: {
       status: 'healthy',
