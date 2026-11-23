@@ -101,7 +101,7 @@ self.addEventListener('fetch',event=>{
     return;
   }
 
-  const engineeringData=/\/engineering-(?:items\/[A-Za-z0-9_-]+|index-segments\/segment-\d{4})\.json$/.test(url.pathname);
+  const engineeringData=/\/(?:engineering-items\/[A-Za-z0-9_-]+|engineering-index-segments\/segment-\d{4})\.json$/.test(url.pathname);
   if(engineeringData){event.respondWith((async()=>{const cache=await caches.open(CACHE);try{const fresh=await fetch(new Request(req,{cache:'no-store',credentials:'same-origin'}));if(fresh.ok){await cache.put(req,fresh.clone());return fresh}return (await cache.match(req))||fresh}catch{return (await cache.match(req))||new Response('{}',{status:503,headers:{'Content-Type':'application/json'}})}})());return;}
   const indexSegment=industryIndexSegmentFor(url.pathname);
   if(indexSegment){
