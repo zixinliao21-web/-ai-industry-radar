@@ -1,8 +1,0 @@
-{
-  "schema_version": "1.0",
-  "collection": "agent_engineering",
-  "storage": "segmented_index",
-  "item_count": 0,
-  "segments": [],
-  "updated_at": null
-}
