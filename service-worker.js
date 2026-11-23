@@ -8,7 +8,7 @@ const SHELL=[
   './assets/velnar-symbol.svg','./assets/radar-qr.svg',
   './assets/qrcode.min.js','./assets/qrcodejs.LICENSE.txt',
   './assets/share-export-fix.js','./assets/radar-runtime.css','./assets/radar-runtime.js','./assets/state-sync.js','./assets/continue-reading.js','./assets/article-reader.js','./assets/article-completion.js','./assets/research-discussion-bridge.js','./assets/collection-discussion-bridge.js',
-  './news-index.json','./consumer-radar.json','./deep-read-index.json','./engineering-index.json'
+  './news-index.json','./consumer-radar.json','./deep-read-index.json'
 ];
 const DATA_FILES=['news-index.json','consumer-radar.json','deep-read-index.json','engineering-index.json'];
 const NETWORK_FIRST_ASSETS=['/assets/radar-runtime.js','/assets/state-sync.js','/assets/continue-reading.js','/assets/article-reader.js','/assets/article-completion.js','/assets/research-discussion-bridge.js','/assets/collection-discussion-bridge.js','/assets/engineering.js','/assets/engineering.css'];
