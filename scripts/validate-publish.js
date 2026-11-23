@@ -198,10 +198,40 @@ function checkReleaseLock() {
   if (lock.status !== 'idle') fail.push(`release-lock must be idle before production deployment; current status: ${lock.status}`);
 }
 
+function checkAgentEngineering(){
+  const m=readJson('engineering-index.json',false);
+  if(!m)return {count:0,updated_at:null};
+  if(m.schema_version!=='1.0'||m.collection!=='agent_engineering'||m.storage!=='segmented_index')fail.push('Agent Engineering manifest schema mismatch');
+  if(!Number.isInteger(m.item_count)||m.item_count<0||!Array.isArray(m.segments))fail.push('Agent Engineering manifest invalid counts/segments');
+  const ids=new Set(),paths=new Set();let count=0;
+  for(const [i,d] of (Array.isArray(m.segments)?m.segments:[]).entries()){
+    if(!/^\\d{4}$/.test(String(d.id))||d.path!==`engineering-index-segments/segment-${d.id}.json`)fail.push('Agent Engineering invalid segment path');
+    if(paths.has(d.path))fail.push('Agent Engineering duplicate segment');paths.add(d.path);
+    if(i<m.segments.length-1&&d.sealed!==true)fail.push('Agent Engineering historical segment unsealed');
+    const segment=readJson(d.path);if(!segment)continue;
+    if(String(segment.segment)!==String(d.id)||!Array.isArray(segment.items)||segment.items.length!==d.count)fail.push('Agent Engineering segment integrity mismatch');
+    for(const meta of (Array.isArray(segment.items)?segment.items:[])){
+      if(!/^[A-Za-z0-9_-]{1,100}$/.test(meta.id||'')||ids.has(meta.id))fail.push('Agent Engineering invalid/duplicate id');ids.add(meta.id);
+      if(!['S','A','B'].includes(meta.grade))fail.push('Agent Engineering invalid grade');
+      if(!['architecture','memory-context','knowledge-data','evaluation-reliability','development','infrastructure'].includes(meta.topic))fail.push('Agent Engineering invalid topic');
+      const item=readJson('engineering-items/'+meta.id+'.json');if(!item)continue;
+      if(item.id!==meta.id||item.title!==meta.title||item.grade!==meta.grade||item.topic!==meta.topic)fail.push('Agent Engineering canonical metadata mismatch');
+      if(!nonEmpty(item.article_text)||!Array.isArray(item.sources)||item.sources.length===0)fail.push('Agent Engineering missing canonical text or sources');
+      if(!['EXPERIMENTAL','PRODUCTION_VALIDATED'].includes(item.evidence_maturity))fail.push('Agent Engineering evidence not publication eligible');
+      const q=item.quality_score;if(!q||!Number.isInteger(q.total)||q.total<55)fail.push('Agent Engineering insufficient quality score');
+      if(q){const threshold=meta.grade==='S'?85:meta.grade==='A'?70:55;const evidenceFloor=meta.grade==='S'?20:meta.grade==='A'?15:10;if(q.total<threshold||!Number.isInteger(q.evidence)||q.evidence<evidenceFloor)fail.push('Agent Engineering grade/score/evidence threshold mismatch');if(meta.grade==='S'&&(!Number.isInteger(q.mechanism)||q.mechanism<16))fail.push('Agent Engineering S-grade mechanism threshold');}
+      count++;
+    }
+  }
+  if(count!==m.item_count)fail.push('Agent Engineering manifest item count mismatch');
+  return {count,updated_at:m.updated_at||null};
+}
+
 const summary = {
   industry: checkIndustry(),
   consumer: checkConsumer(),
-  deep_read: checkDeepRead()
+  deep_read: checkDeepRead(),
+  agent_engineering: checkAgentEngineering()
 };
 checkReleaseLock();
 
