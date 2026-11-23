@@ -10,10 +10,12 @@ function collection(branch) {
   if (/^radar\/publish-[A-Za-z0-9][A-Za-z0-9-]*$/.test(branch)) return 'industry';
   if (/^consumer\/publish-[A-Za-z0-9][A-Za-z0-9-]*$/.test(branch)) return 'consumer';
   if (/^deep-read\/publish-[A-Za-z0-9][A-Za-z0-9-]*$/.test(branch)) return 'deep_read';
+  if (/^engineering\/publish-[A-Za-z0-9][A-Za-z0-9-]*$/.test(branch)) return 'agent_engineering';
   throw new Error('Branch is not an allowed publication branch');
 }
 function allowed(file, kind) {
   if (kind === 'consumer') return file === 'consumer-radar.json';
+  if (kind === 'agent_engineering') return file === 'engineering-index.json' || /^engineering-index-segments\/segment-[0-9]{4}\.json$/.test(file) || /^engineering-items\/[A-Za-z0-9][A-Za-z0-9_-]*\.json$/.test(file);
   const prefix = kind === 'industry' ? 'news' : 'deep-read';
   return file === prefix + '-index.json' ||
     new RegExp('^' + prefix + '-index-segments/segment-[0-9]{4}\\.json$').test(file) ||
