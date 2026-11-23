@@ -14,7 +14,7 @@ function arg(name) {
 const industry = readJson('news-index.json');
 const consumer = readJson('consumer-radar.json');
 const deep = readJson('deep-read-index.json');
-const engineering = readJson('engineering-index.json');
+const engineering = fs.existsSync(path.join(root,'engineering-index.json')) ? readJson('engineering-index.json') : {item_count:0,segments:[],updated_at:null,storage:'segmented_index'};
 const commit = arg('--commit') || process.env.RELEASE_SHA || process.env.GITHUB_SHA || null;
 
 const status = {
