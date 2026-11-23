@@ -54,11 +54,12 @@ for (const [file, refs] of Object.entries(requiredRefs)) {
   for (const ref of refs) if (!html.includes(ref)) fail.push(`${file}: missing required runtime reference ${ref}`);
 }
 
+for(const page of htmlFiles){if(!read(page).includes('agent-engineering.html'))fail.push(page+': fourth-column navigation missing')}
 const sw = read('service-worker.js');
-for (const route of ['article.html','consumer-radar.html','consumer-article.html','deep-read.html','deep-read-article.html']) {
+for (const route of ['article.html','consumer-radar.html','consumer-article.html','deep-read.html','deep-read-article.html','agent-engineering.html','engineering-article.html']) {
   if (!sw.includes(route)) fail.push(`service-worker.js: missing route/fallback reference ${route}`);
 }
-for (const store of ['news-index.json','consumer-radar.json','deep-read-index.json','news-index-segments','deep-read-index-segments','deep-read-items']) {
+for (const store of ['news-index.json','consumer-radar.json','deep-read-index.json','news-index-segments','deep-read-index-segments','deep-read-items','engineering-index-segments','engineering-items']) {
   if (!sw.includes(store)) fail.push(`service-worker.js: missing network-first content reference ${store}`);
 }
 
