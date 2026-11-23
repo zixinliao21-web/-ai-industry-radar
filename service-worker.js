@@ -1,16 +1,17 @@
-const CACHE='velnar-radar-v53';
+const CACHE='velnar-radar-v54';
 const SHELL=[
   './','./index.html','./article.html',
   './consumer-radar.html','./consumer-article.html',
   './deep-read.html','./deep-read-article.html',
+  './agent-engineering.html','./engineering-article.html','./assets/engineering.css','./assets/engineering.js',
   './manifest.webmanifest',
   './assets/velnar-symbol.svg','./assets/radar-qr.svg',
   './assets/qrcode.min.js','./assets/qrcodejs.LICENSE.txt',
   './assets/share-export-fix.js','./assets/radar-runtime.css','./assets/radar-runtime.js','./assets/state-sync.js','./assets/continue-reading.js','./assets/article-reader.js','./assets/article-completion.js','./assets/research-discussion-bridge.js','./assets/collection-discussion-bridge.js',
-  './news-index.json','./consumer-radar.json','./deep-read-index.json'
+  './news-index.json','./consumer-radar.json','./deep-read-index.json','./engineering-index.json'
 ];
-const DATA_FILES=['news-index.json','consumer-radar.json','deep-read-index.json'];
-const NETWORK_FIRST_ASSETS=['/assets/radar-runtime.js','/assets/state-sync.js','/assets/continue-reading.js','/assets/article-reader.js','/assets/article-completion.js','/assets/research-discussion-bridge.js','/assets/collection-discussion-bridge.js'];
+const DATA_FILES=['news-index.json','consumer-radar.json','deep-read-index.json','engineering-index.json'];
+const NETWORK_FIRST_ASSETS=['/assets/radar-runtime.js','/assets/state-sync.js','/assets/continue-reading.js','/assets/article-reader.js','/assets/article-completion.js','/assets/research-discussion-bridge.js','/assets/collection-discussion-bridge.js','/assets/engineering.js','/assets/engineering.css'];
 const SHARE_EXPORT_LOADER="\n;(function(){if(document.querySelector('script[data-velnar-share-export]'))return;var s=document.createElement('script');s.src='./assets/share-export-fix.js';s.async=false;s.setAttribute('data-velnar-share-export','1');document.head.appendChild(s)})();";
 const THEME_META='<meta name="color-scheme" content="light dark"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f4f7"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111318">';
 const RUNTIME_CSS='<link rel="stylesheet" href="./assets/radar-runtime.css">';
@@ -52,6 +53,8 @@ function industryIndexSegmentFor(pathname){const m=pathname.match(/\/news-index-
 function deepReadIndexSegmentFor(pathname){const m=pathname.match(/\/deep-read-index-segments\/(segment-\d+\.json)$/);return m?('deep-read-index-segments/'+m[1]):null}
 function isDeepReadItem(pathname){return /\/deep-read-items\/[^/]+\.json$/.test(pathname)}
 function fallbackFor(pathname){
+  if(pathname.endsWith('/engineering-article.html'))return './engineering-article.html';
+  if(pathname.endsWith('/agent-engineering.html'))return './agent-engineering.html';
   if(pathname.endsWith('/article.html'))return './article.html';
   if(pathname.endsWith('/consumer-article.html'))return './consumer-article.html';
   if(pathname.endsWith('/consumer-radar.html'))return './consumer-radar.html';
@@ -98,6 +101,8 @@ self.addEventListener('fetch',event=>{
     return;
   }
 
+  const engineeringData=/\/engineering-(?:items\/[A-Za-z0-9_-]+|index-segments\/segment-\d{4})\.json$/.test(url.pathname);
+  if(engineeringData){event.respondWith((async()=>{const cache=await caches.open(CACHE);try{const fresh=await fetch(new Request(req,{cache:'no-store',credentials:'same-origin'}));if(fresh.ok){await cache.put(req,fresh.clone());return fresh}return (await cache.match(req))||fresh}catch{return (await cache.match(req))||new Response('{}',{status:503,headers:{'Content-Type':'application/json'}})}})());return;}
   const indexSegment=industryIndexSegmentFor(url.pathname);
   if(indexSegment){
     event.respondWith((async()=>{

@@ -21,6 +21,7 @@ function collection(file){
   if(file==='news-index.json'||file.startsWith('news-index-segments/')||file.startsWith('news-items/'))return'industry';
   if(file==='consumer-radar.json')return'consumer';
   if(file==='deep-read-index.json'||file.startsWith('deep-read-index-segments/')||file.startsWith('deep-read-items/'))return'deep_read';
+  if(file==='engineering-index.json'||file.startsWith('engineering-index-segments/')||file.startsWith('engineering-items/'))return'agent_engineering';
   return null;
 }
 const contentChanges=files.map(file=>({file,collection:collection(file)})).filter(x=>x.collection);
