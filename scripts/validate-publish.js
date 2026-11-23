@@ -199,7 +199,7 @@ function checkReleaseLock() {
 }
 
 function checkAgentEngineering(){
-  const m=readJson('engineering-index.json');
+  const m=readJson('engineering-index.json',false);
   if(!m)return {count:0,updated_at:null};
   if(m.schema_version!=='1.0'||m.collection!=='agent_engineering'||m.storage!=='segmented_index')fail.push('Agent Engineering manifest schema mismatch');
   if(!Number.isInteger(m.item_count)||m.item_count<0||!Array.isArray(m.segments))fail.push('Agent Engineering manifest invalid counts/segments');
