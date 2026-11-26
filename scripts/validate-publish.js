@@ -205,8 +205,7 @@ function checkAgentEngineering(){
   if(!Number.isInteger(m.item_count)||m.item_count<0||!Array.isArray(m.segments))fail.push('Agent Engineering manifest invalid counts/segments');
   const ids=new Set(),paths=new Set();let count=0;
   for(const [i,d] of (Array.isArray(m.segments)?m.segments:[]).entries()){
-    if(!/^\d{4}$/.test(String(d.id))||d.path!==`engineering-index-segments/segment-${d.id}.json`)fail.push('Agent Engineering invalid segment path');
-    if(!/^\d{4}$/.test(String(d.id))||d.path!==`engineering-index-segments/segment-${d.id}.json`)continue;
+    if(!d||typeof d.id!=='string'||!/^\d{4}$/.test(d.id)||d.path!==`engineering-index-segments/segment-${d.id}.json`){fail.push('Agent Engineering invalid segment path');continue;}
     if(paths.has(d.path))fail.push('Agent Engineering duplicate segment');paths.add(d.path);
     if(i<m.segments.length-1&&d.sealed!==true)fail.push('Agent Engineering historical segment unsealed');
     const segment=readJson(d.path);if(!segment)continue;
