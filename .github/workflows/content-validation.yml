@@ -69,6 +69,8 @@ jobs:
         run: |
           node scripts/test-publication-promoter.js
           node scripts/test-validation-proof.js
+          node scripts/test-engineering-validation.js
+          node scripts/validate-engineering.js
 
       - name: Validate publication change scope
         env:
