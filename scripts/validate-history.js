@@ -88,7 +88,8 @@ const base=arg('--base')||process.env.BASE_SHA;
 if(!base){console.error('VELNAR history validation requires --base <sha> or BASE_SHA');process.exit(2)}
 checkSegmented(base,{name:'Industry',manifest:'news-index.json',itemDir:'news-items',bodyField:'article_text'});
 checkConsumer(base);
-if(fs.existsSync(path.join(root,'engineering-index.json'))){
+if(!fs.existsSync(path.join(root,'engineering-index.json')))fail.push('Agent Engineering manifest missing');
+else {
   const baseline=gitShow(base,'engineering-index.json',false);
   if(baseline!==null)checkSegmented(base,{name:'Agent Engineering',manifest:'engineering-index.json',itemDir:'engineering-items',bodyField:'article_text'});
 }
