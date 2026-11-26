@@ -123,11 +123,17 @@
     menu.addEventListener('click',e=>{
       const theme=e.target.closest('[data-theme-mode]');if(theme){try{localStorage.setItem(KEY,theme.dataset.themeMode)}catch{}apply(theme.dataset.themeMode);updateTheme();return}
       const action=e.target.closest('[data-action]')?.dataset.action;
-      if(action==='share'){document.getElementById('mobileOpenBtn')?.click();close()}
+      if(action==='share'){close();const articleButton=document.getElementById('shareBtn'),mobileButton=document.getElementById('mobileOpenBtn');if(articleButton){articleButton.click();return}if(mobileButton){mobileButton.click();return}shareCurrentPage()}
       if(action==='sync'){const syncBtn=document.getElementById('vssButton');if(syncBtn)syncBtn.click();else window.dispatchEvent(new CustomEvent('velnar:open-sync'));close()}
     });
     document.addEventListener('click',e=>{if(!menu.contains(e.target)&&e.target!==btn)close()});
     window.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+  }
+  async function shareCurrentPage(){
+    const url=location.href.split('#')[0];
+    if(typeof navigator.share==='function'){try{await navigator.share({title:document.title,url});return}catch(err){if(err?.name==='AbortError')return}}
+    try{await navigator.clipboard.writeText(url);window.showToast('页面地址已复制');return}catch{}
+    window.prompt('请复制当前页面链接',url);
   }
   function ensureToast(){
     if(typeof window.showToast==='function')return;
