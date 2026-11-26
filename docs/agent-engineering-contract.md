@@ -27,3 +27,7 @@ Each candidate may modify canonical content of only one collection; runtime and 
 ## Integration blockers
 
 This feature branch adds frontend and initial canonical validator, but DOES NOT YET alter existing shared validation, Promoter, Service Worker, Pages release verification or global navigation. The branch must not be merged until these are implemented and tested.
+
+
+## Research presentation
+Use concrete input/output examples and mechanism diagrams when they materially aid comprehension. Separate hypothetical examples from observed evidence. Optional `explanation` contains `figures` (title, caption, after heading, steps with label/detail/optional warn) and `examples` (title, text, after heading). Render as text-only DOM/SVG, no external scripts. Historical canonical body remains immutable; explanatory supplements must be explicitly distinguished from original evidence.
