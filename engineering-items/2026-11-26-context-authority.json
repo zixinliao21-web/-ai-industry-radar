@@ -1,0 +1,90 @@
+{
+  "id": "2026-11-26-context-authority",
+  "title": "为什么 Agent 记住了，却仍然会做错：Context 与业务事实的边界",
+  "date": "2026-11-26",
+  "grade": "A",
+  "topic": "memory-context",
+  "evidence_maturity": "EXPERIMENTAL",
+  "quality_score": {
+    "total": 78,
+    "impact": 23,
+    "evidence": 18,
+    "mechanism": 16,
+    "applicability": 12,
+    "tradeoffs": 7,
+    "novelty": 2
+  },
+  "sources": [
+    {
+      "title": "Effective context engineering for AI agents",
+      "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents"
+    },
+    {
+      "title": "Effective harnesses for long-running agents",
+      "url": "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents"
+    }
+  ],
+  "article_text": "# 为什么 Agent 记住了，却仍然会做错：Context 与业务事实的边界\n\n## 核心判断\nContext 是模型此次推理能够看到的信息，Memory 是跨任务保存并可重新取用的信息，业务 State 则是系统承认的当前事实。三者可能包含相同文字，却不能共享相同的事实权威。\n\n## 工程问题\n假设客户第一次要求采购 1000 个喷头，随后改为 2000 个，并要求改用另一型号。如果长对话被压缩成“客户正在采购喷头”，信息虽然仍在记忆中，最终数量和型号却可能丢失。如果摘要保留旧数量，模型甚至可能生成看似合理但错误的报价。\n\n## 技术机制\nAnthropic 2025 年 9 月的 Context Engineering 工程文章介绍了上下文压缩、按需检索、结构化笔记与子 Agent 隔离。其设计目标是控制推理所需信息，而非证明压缩文本具备事务一致性。[1]\n同年 11 月的长周期 Agent Harness 文章进一步讨论了跨会话接续：初始化阶段建立环境，后续执行者利用持久化产物继续推进。[2]\n本文由此提出一项独立设计建议：将语言理解所需上下文与业务事实管理分离。模型摘要只能协助恢复语义；已确认数量、实体 ID、权限与价格版本，应来自独立可校验的状态。\n\n## 架构设计\n第一步，保存原始消息及操作事件。第二步，将模型识别出的字段变化作为候选观察。第三步，由确定性规则验证证据并更新状态版本。第四步，根据当前任务构造模型上下文，仅注入必要事实和检索结果。第五步，执行工具前重新核验状态版本及业务前提。\n\n## 实例与反例\n假设订单状态 v1 包含 quantity=1000，客户明确改为 2000 后生成 v2。旧摘要仍写着 1000 时，模型可用它理解对话背景，但不得覆盖 v2。若随后用户说“换另一款”，系统需要确认新实体；不能仅凭旧记忆选择产品。若价格依赖数量或产品，旧报价必须失效并重新查询。\n反例是将所有历史摘要直接拼入系统提示词，并允许模型输出完整订单 JSON 覆盖当前记录。这样无法区分字段纠正、模型猜测和已确认事实。\n\n## 方案权衡\n全量历史简单但成本随对话增加；压缩可减少输入，却存在遗漏与错误传播；结构化状态提高可审计性，但需要字段定义、状态变更规则和版本管理。低风险问答不一定需要完整事件模型；涉及订单、库存、付款等外部副作用时，明确事实权威更重要。\n\n## 验证方案\n构造金标会话：数量纠正、产品切换、跨任务别名、旧摘要冲突及缺失证据。比较全历史、仅摘要、摘要加权威状态三种策略。记录字段准确率、过期事实使用率、错误写入率、输入 token 和延迟。这里是拟议对照实验，不是实测结果。\n\n## 对 VELNAR 的启示\n将 Memory 用于检索历史偏好与别名候选，将 Grounding 用于确认实体，将 Reducer 用于确定性状态变更。无需因为上下文工程概念而重构现有销售 MVP；先用现有金标数据验证摘要冲突及派生字段失效。\n\n## 证据边界\n公开工程实践支持上下文管理及跨会话接续的可行性，但本文提出的业务字段权威架构和实验尚未独立验证。评级 A，证据成熟度 EXPERIMENTAL。\n\n## 来源\n[1] https://www.anthropic.com/research/effective-context-engineering-for-ai-agents\n[2] https://www.anthropic.com/research/effective-harnesses-for-long-running-agents\n",
+  "explanation": {
+    "figures": [
+      {
+        "after": "工程问题",
+        "title": "图 1 · 摘要为什么不能充当订单状态",
+        "caption": "假设性案例：旧摘要与最新确认发生冲突。",
+        "steps": [
+          {
+            "label": "客户首次需求",
+            "detail": "数量 1000"
+          },
+          {
+            "label": "客户明确纠正",
+            "detail": "数量 2000 → 状态 v2"
+          },
+          {
+            "label": "上下文压缩",
+            "detail": "旧摘要仍保留 1000",
+            "warn": true
+          },
+          {
+            "label": "执行前读取权威状态",
+            "detail": "采用 v2，禁止旧摘要覆盖"
+          }
+        ]
+      },
+      {
+        "after": "架构设计",
+        "title": "图 2 · 信息与事实的分层",
+        "caption": "本文建议的设计，并非 Anthropic 产品内部架构。",
+        "steps": [
+          {
+            "label": "原始消息与事件",
+            "detail": "保留可追溯证据"
+          },
+          {
+            "label": "LLM 语言理解",
+            "detail": "提取候选观察"
+          },
+          {
+            "label": "规则验证与 Reducer",
+            "detail": "生成权威状态版本"
+          },
+          {
+            "label": "Context 构造",
+            "detail": "按需注入状态及 Memory"
+          },
+          {
+            "label": "工具执行前核验",
+            "detail": "检查版本、权限及事实"
+          }
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "after": "实例与反例",
+        "title": "实例 · 旧报价如何失效",
+        "text": "假设 1000 件报价为每件 1 元，数量改为 2000 后，不应直接沿用旧单价。系统标记旧报价失效，按新数量与产品重新查询；若客户未确认新报价，则不得创建订单。价格仅为示例。"
+      }
+    ]
+  }
+}
