@@ -1,0 +1,32 @@
+{
+  "id": "2026-11-26-durable-execution",
+  "title": "从可运行到可恢复：Agent Durable Execution 的架构边界",
+  "date": "2026-11-26",
+  "grade": "A",
+  "topic": "architecture",
+  "evidence_maturity": "EXPERIMENTAL",
+  "quality_score": {
+    "total": 81,
+    "impact": 23,
+    "evidence": 20,
+    "mechanism": 17,
+    "applicability": 12,
+    "tradeoffs": 7,
+    "novelty": 2
+  },
+  "sources": [
+    {
+      "title": "Long-horizon agents and durable execution",
+      "url": "https://martinfowler.com/articles/durable-execution-agents.html"
+    },
+    {
+      "title": "Temporal Workflow Definition",
+      "url": "https://docs.temporal.io/workflow-definition"
+    },
+    {
+      "title": "Pydantic AI Durable Execution with Temporal",
+      "url": "https://pydantic.dev/docs/ai/capabilities/durable_execution/temporal/"
+    }
+  ],
+  "article_text": "# 从可运行到可恢复：Agent Durable Execution 的架构边界\n\n## 核心判断\nAgent 保存了会话状态，并不意味着它能够安全地从故障中恢复。生产系统需要分别处理进度恢复、外部副作用一致性和业务事实有效性。本文将 Durable Execution 视为执行层能力，而非业务正确性的替代品。\n\n## 工程问题\n设想一个报价 Agent 已获得客户确认，调用订单接口后连接中断。数据库里可能已经创建订单，但 Agent 没收到响应。重新运行整段对话可能产生第二张订单；仅恢复最后一条消息也无法判定首次写入是否成功。这里最难的不是生成下一句话，而是辨别已经发生的业务事实。\n\n## 技术机制与证据\nTemporal 的 Workflow Definition 文档说明，工作流重放必须与既有事件历史匹配，已完成 Activity 的结果可以从历史取得，而外部 I/O 应放在 Activity 内。Pydantic AI 的 Temporal 集成文档展示了将模型调用、工具调用和 MCP 通信移入 Activity 的具体实现，且只有在 Temporal Workflow 内执行才具备该机制。两份文档证明实现路径存在，不代表本文已经进行了生产压测。[2][3]\n\n2026 年 11 月 10 日，Kiran Prakash 在 Martin Fowler 网站发表长周期 Agent 的工程分析，将等待外部事件、故障恢复与业务正确性放在同一问题框架中。[1] 这是一项架构论证，并非可直接外推的生产性能基准。\n\n## 建议的系统边界\n- 状态层：保存任务身份、业务实体引用、版本与已确认事实。\n- 决策层：将模型输出作为待验证的观察或行动建议；保存已接受的结构化结果，避免恢复时重新推断历史决策。\n- 执行层：为每项外部写入分配稳定操作 ID，记录请求、回执和未知结果；重试必须复用操作 ID。\n- 业务事实层：以订单系统、库存台账等权威来源核实写入效果；无法确认时转人工对账，而非自行认定失败。\n- 审批层：将确认绑定到对象版本、数量、价格、权限及有效期限；恢复后重新验证必要前提。\n\n这些是本文提出的工程设计建议，并非来源所证明的通用产品保证。\n\n## 失败模式与权衡\n网络超时不是业务失败的证明。如果服务端不支持幂等键，也没有可靠的查询接口，执行引擎无法独自保证外部写入恰好一次。可控数据库内可考虑唯一约束与事务性 outbox；跨组织接口则可能需要对账及补偿流程。\n\n历史重放与业务重执行必须分开：恢复旧决策是为了还原过去，而重新检查库存和价格是为了判断现在是否仍能继续。不能用历史库存快照直接批准当前出库。\n\n长周期任务还需要代码版本兼容策略、历史容量管理及数据保留制度。高频短查询引入完整工作流平台可能增加部署、序列化、故障排查和运维成本。轻量状态机、事务表与任务队列在较简单的场景可以满足相同的基本需求。\n\n## 验证方案\n建议在隔离测试环境实施以下故障注入，而非直接在生产订单上实验：\n- 在外部订单提交成功而本地回执未保存时终止 Worker；恢复后核对订单唯一性。\n- 在审批等待过程中修改库存或价格版本；恢复后应重新校验并阻止失效授权。\n- 注入重复消息、乱序消息和暂时不可用的接口；检查事件去重、任务状态与最终结果。\n- 使用新工作流代码重放旧历史；检查兼容性并建立发布前回归测试。\n- 记录恢复成功率、重复副作用数量、未知结果比例、恢复延迟与每任务成本；由业务风险确定阈值，关键订单测试要求零重复创建。\n\n以上均为拟议实验，并非已经测得的结果。\n\n## 对 VELNAR 的启示\n优先保留现有 Observation、Evidence、Reducer、Policy 与 Grounding 的责任划分。为写入工具补充稳定操作身份、未知结果状态与对账能力；将长周期审批和异常恢复作为独立验收场景。短期不建议因为新的 Runtime 概念而重构现有销售 MVP。只有在等待跨日事件、跨服务恢复及运维负担成为可测量瓶颈后，才比较 Temporal 与轻量事务方案。\n\n## 结论与局限\nDurable Execution 能降低进度丢失风险，但不能保证模型决策正确，也不能替代业务权限、事实校验和外部系统一致性。本研究依据公开技术文档和工程分析，未独立部署或完成故障注入，因此证据成熟度为 EXPERIMENTAL，评级为 A。\n\n## 来源\n[1] https://martinfowler.com/articles/durable-execution-agents.html\n[2] https://docs.temporal.io/workflow-definition\n[3] https://pydantic.dev/docs/ai/capabilities/durable_execution/temporal/\n"
+}

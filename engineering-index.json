@@ -2,7 +2,14 @@
   "schema_version": "1.0",
   "collection": "agent_engineering",
   "storage": "segmented_index",
-  "item_count": 0,
-  "segments": [],
-  "updated_at": null
+  "item_count": 1,
+  "segments": [
+    {
+      "id": "0001",
+      "path": "engineering-index-segments/segment-0001.json",
+      "count": 1,
+      "sealed": false
+    }
+  ],
+  "updated_at": "2026-11-26"
 }

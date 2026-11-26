@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "segment": "0001",
+  "items": [
+    {
+      "id": "2026-11-26-durable-execution",
+      "title": "从可运行到可恢复：Agent Durable Execution 的架构边界",
+      "date": "2026-11-26",
+      "grade": "A",
+      "topic": "architecture"
+    }
+  ]
+}
